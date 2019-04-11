@@ -2,3 +2,8 @@ C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\BibliotecaClase\bin\Debug\B
 C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\BibliotecaClase\bin\Debug\BibliotecaClase.pdb
 C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\BibliotecaClase\obj\Debug\BibliotecaClase.dll
 C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\BibliotecaClase\obj\Debug\BibliotecaClase.pdb
+D:\UnBreakable\BibliotecaClase\bin\Debug\BibliotecaClase.dll
+D:\UnBreakable\BibliotecaClase\bin\Debug\BibliotecaClase.pdb
+D:\UnBreakable\BibliotecaClase\obj\Debug\BibliotecaClases.csprojResolveAssemblyReference.cache
+D:\UnBreakable\BibliotecaClase\obj\Debug\BibliotecaClase.dll
+D:\UnBreakable\BibliotecaClase\obj\Debug\BibliotecaClase.pdb
