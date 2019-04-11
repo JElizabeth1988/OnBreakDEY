@@ -10,8 +10,8 @@
                       
         xmlns:local="clr-namespace:Vista"
         mc:Ignorable="d"
-        Title="OnBreak - Crear Contrato" Height="702.085" Width="602.128" WindowStartupLocation="CenterScreen">
-    <Grid Margin="0,0,2.333,0" Background="#FF84D9E8" Height="672" VerticalAlignment="Top">
+        Title="OnBreak - Crear Contrato" Height="630.085" Width="602.128" WindowStartupLocation="CenterScreen">
+    <Grid Margin="0,0,2.333,0" Background="#FF84D9E8" Height="603" VerticalAlignment="Top">
         <Label x:Name="label" Content="Creación :" HorizontalAlignment="Left" Height="36" Margin="39,62,0,0" VerticalAlignment="Top" Width="118"/>
         <Label x:Name="label_Copy" Content="Termino :" HorizontalAlignment="Left" Height="36" Margin="270,62,0,0" VerticalAlignment="Top" Width="118"/>
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="125,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
@@ -21,22 +21,22 @@
         <Label x:Name="label2" Content="Fecha:" HorizontalAlignment="Left" Margin="47,158,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label3" Content="hora:" HorizontalAlignment="Left" Margin="292,155,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="23" Margin="367,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="label4" Content="Dirección:" HorizontalAlignment="Left" Margin="38,408,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBox4" HorizontalAlignment="Left" Height="23" Margin="105,408,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="355"/>
+        <Label x:Name="label4" Content="Dirección:" HorizontalAlignment="Left" Margin="38,329,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBox4" HorizontalAlignment="Left" Height="23" Margin="105,329,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="355"/>
         <Separator HorizontalAlignment="Left" Height="100" Margin="47,256,0,0" VerticalAlignment="Top" Width="485" RenderTransformOrigin="-0.522,0.157"/>
-        <Label x:Name="label5" Content="Vigente:" HorizontalAlignment="Left" Margin="38,457,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="radioButton" Content="&#xA;" HorizontalAlignment="Left" Margin="105,456,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label6" Content="Tipo:" HorizontalAlignment="Left" Margin="217,457,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="285,456,0,0" VerticalAlignment="Top" Width="120"/>
-        <ContentControl Content="Observaciones:" HorizontalAlignment="Left" Margin="39,510,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label5" Content="Vigente:" HorizontalAlignment="Left" Margin="38,378,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="radioButton" Content="&#xA;" HorizontalAlignment="Left" Margin="105,377,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label6" Content="Tipo:" HorizontalAlignment="Left" Margin="217,378,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="285,377,0,0" VerticalAlignment="Top" Width="120"/>
+        <ContentControl Content="Observaciones:" HorizontalAlignment="Left" Margin="39,431,0,0" VerticalAlignment="Top"/>
         <DatePicker HorizontalAlignment="Left" Margin="103,156,0,0" VerticalAlignment="Top" Width="157"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="223,591,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="101" Margin="148,505,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="384"/>
+        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="101" Margin="148,427,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="384"/>
         <Label x:Name="label_Copy1" Content="Número:" HorizontalAlignment="Left" Height="36" Margin="39,12,0,0" VerticalAlignment="Top" Width="118"/>
         <TextBox x:Name="textBox_Copy" HorizontalAlignment="Left" Height="23" Margin="125,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="button" Content="Buscar" HorizontalAlignment="Left" Margin="330,10,0,0" VerticalAlignment="Top" Width="75"/>
         <Button x:Name="button1" Content="?" HorizontalAlignment="Left" Margin="259,12,0,0" VerticalAlignment="Top" Width="37" Height="26"/>
-        <Button x:Name="button2" Content="Crear" HorizontalAlignment="Left" Margin="256,631,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="button2" Content="Crear" HorizontalAlignment="Left" Margin="256,552,0,0" VerticalAlignment="Top" Width="75"/>
         <Label x:Name="label_Copy2" Content="Nombre:" HorizontalAlignment="Left" Height="36" Margin="39,256,0,0" VerticalAlignment="Top" Width="118"/>
         <Label x:Name="label_Copy3" Content="Apellidos:" HorizontalAlignment="Left" Height="36" Margin="267,256,0,0" VerticalAlignment="Top" Width="118"/>
         <TextBox x:Name="textBox_Copy1" HorizontalAlignment="Left" Height="23" Margin="122,256,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
