@@ -84,7 +84,7 @@ namespace Vista {
             case 2:
             
             #line 25 "..\..\MainWindow.xaml"
-            ((MahApps.Metro.Controls.Tile)(target)).Click += new System.Windows.RoutedEventHandler(this.Tile_Click);
+            ((MahApps.Metro.Controls.Tile)(target)).Click += new System.Windows.RoutedEventHandler(this.Tile_Click_2);
             
             #line default
             #line hidden
@@ -92,7 +92,7 @@ namespace Vista {
             case 3:
             
             #line 31 "..\..\MainWindow.xaml"
-            ((MahApps.Metro.Controls.Tile)(target)).Click += new System.Windows.RoutedEventHandler(this.Tile_Click);
+            ((MahApps.Metro.Controls.Tile)(target)).Click += new System.Windows.RoutedEventHandler(this.Tile_Click_3);
             
             #line default
             #line hidden
@@ -100,7 +100,7 @@ namespace Vista {
             case 4:
             
             #line 37 "..\..\MainWindow.xaml"
-            ((MahApps.Metro.Controls.Tile)(target)).Click += new System.Windows.RoutedEventHandler(this.Tile_Click);
+            ((MahApps.Metro.Controls.Tile)(target)).Click += new System.Windows.RoutedEventHandler(this.Tile_Click_4);
             
             #line default
             #line hidden

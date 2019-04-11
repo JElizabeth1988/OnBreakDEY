@@ -28,5 +28,12 @@ namespace Vista
         {
             InitializeComponent();
         }
+
+        //BOTON ADMINISTRACION CLIENTE
+        private void Tile_Click(object sender, RoutedEventArgs e)
+        {
+            WpfCliente cliente = new WpfCliente();
+            cliente.Show();
+        }
     }
 }
