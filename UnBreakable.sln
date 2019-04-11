@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vista", "Vista\Vista.csproj", "{D30AC9F0-926E-4D69-84EE-8AAAE9F095D5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BibliotecaClases", "BibliotecaClase\BibliotecaClases.csproj", "{C44072F2-9415-4243-819C-A664B0744639}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{D30AC9F0-926E-4D69-84EE-8AAAE9F095D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D30AC9F0-926E-4D69-84EE-8AAAE9F095D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D30AC9F0-926E-4D69-84EE-8AAAE9F095D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C44072F2-9415-4243-819C-A664B0744639}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C44072F2-9415-4243-819C-A664B0744639}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C44072F2-9415-4243-819C-A664B0744639}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C44072F2-9415-4243-819C-A664B0744639}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
