@@ -10,7 +10,6 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 using MahApps.Metro.Controls;
@@ -20,13 +19,18 @@ using MahApps.Metro.Behaviours;
 namespace Vista
 {
     /// <summary>
-    /// Lógica de interacción para MainWindow.xaml
+    /// Lógica de interacción para ListarContrato.xaml
     /// </summary>
-    public partial class MainWindow : MetroWindow
+    public partial class ListarContrato : MetroWindow
     {
-        public MainWindow()
+        public ListarContrato()
         {
             InitializeComponent();
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }
