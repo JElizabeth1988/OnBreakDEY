@@ -18,8 +18,9 @@
             <ColumnDefinition Width="62*"/>
             <ColumnDefinition Width="35*"/>
         </Grid.ColumnDefinitions>
-        <Grid HorizontalAlignment="Left" Height="280" Margin="44,44,0,0" VerticalAlignment="Top" Width="331" Grid.ColumnSpan="4" Background="White"/>
-        <Button x:Name="button" Content="Pasar" HorizontalAlignment="Left" Margin="182,345,0,0" VerticalAlignment="Top" Width="75" Grid.ColumnSpan="2" Background="#FFCACACA" FontWeight="Normal"/>
+        <Button x:Name="button" Content="Pasar" HorizontalAlignment="Left" Margin="99,304,0,0" VerticalAlignment="Top" Width="75" Background="#FFCACACA" FontWeight="Normal"/>
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="70,57,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="209" Width="295"/>
+        <Button x:Name="button_Copy" Content="Salir" HorizontalAlignment="Left" Margin="40.667,304,0,0" VerticalAlignment="Top" Width="75" Background="#FFCACACA" FontWeight="Normal" Grid.ColumnSpan="2" Grid.Column="1"/>
 
     </Grid>
 </Controls:MetroWindow>

@@ -36,6 +36,8 @@
             <ComboBox x:Name="cbTipo" HorizontalAlignment="Left" Margin="187,263,0,0" VerticalAlignment="Top" Width="170"/>
             <Button x:Name="btnGuardar" Content="Guardar" HorizontalAlignment="Left" Margin="147,340,0,0" VerticalAlignment="Top" Width="75" Cursor="Arrow" FontWeight="Normal" Controls:ButtonHelper.PreserveTextCase="True"/>
             <Button x:Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="337,340,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal"/>
+            <Button x:Name="button" Content="?" HorizontalAlignment="Left" Margin="354,29,0,0" VerticalAlignment="Top" Width="33" Background="#FFCACACA" FontWeight="Normal" Height="25"/>
+            <Button x:Name="button_Copy" Content="Buscar" HorizontalAlignment="Left" Margin="408,29,0,0" VerticalAlignment="Top" Width="74" Background="#FFCACACA" FontWeight="Normal" Height="25"/>
         </Grid>
 
     </Grid>
