@@ -23,3 +23,5 @@ C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\Vista.Properties.Re
 C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\Vista.csproj.GenerateResource.Cache
 C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\Vista.exe
 C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\Vista.pdb
+D:\UnBreakable\Vista\obj\Debug\Vista.exe
+D:\UnBreakable\Vista\obj\Debug\Vista.pdb
