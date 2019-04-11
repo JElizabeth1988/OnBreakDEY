@@ -67,6 +67,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="WpfCliente.xaml.cs">
+      <DependentUpon>WpfCliente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WpfListadoCliente.xaml.cs">
+      <DependentUpon>WpfListadoCliente.xaml</DependentUpon>
+    </Compile>
     <Page Include="CrearContrato.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -100,6 +106,14 @@
     <Page Include="Resources\IconsNonShared.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WpfCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WpfListadoCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
@@ -136,6 +150,21 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Entypo-license.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BibliotecaClase\BibliotecaClases.csproj">
+      <Project>{c44072f2-9415-4243-819c-a664b0744639}</Project>
+      <Name>BibliotecaClases</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\white_logo_color_background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\1.png" />
+    <Resource Include="Imagenes\2.png" />
+    <Resource Include="Imagenes\4.png" />
+    <Resource Include="Imagenes\5.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

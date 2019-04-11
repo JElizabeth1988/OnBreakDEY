@@ -10,8 +10,8 @@
                       
         xmlns:local="clr-namespace:Vista"
         mc:Ignorable="d"
-        Title="On Break - Crear Contrato" Height="618.085" Width="602.128">
-    <Grid Margin="0,0,2,-7" Background="White">
+        Title="OnBreak - Crear Contrato" Height="618.085" Width="602.128">
+    <Grid Margin="0,0,2,-7" Background="#FF84D9E8">
         <Label x:Name="label" Content="Creación :" HorizontalAlignment="Left" Height="36" Margin="38,58,0,0" VerticalAlignment="Top" Width="118"/>
         <Label x:Name="label_Copy" Content="Termino :" HorizontalAlignment="Left" Height="36" Margin="269,58,0,0" VerticalAlignment="Top" Width="118"/>
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="124,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
