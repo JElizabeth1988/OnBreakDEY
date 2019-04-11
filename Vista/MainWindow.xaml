@@ -18,7 +18,7 @@
         
         <Controls:Tile Click="Tile_Click" Margin="9,11,365.4,180.8" Height="Auto" Width="Auto" >
             <Grid Width="220">
-                <Image Source="imagenes/1.png" Margin="0,0,65,9.8"/>
+                <Image Source="imagenes/1.png" Margin="-8,0,-11,-15"/>
                 <Label HorizontalAlignment="Center" Content="Administracion Clientes" Margin="40,0,38.8,89.8"></Label>
             </Grid>
         </Controls:Tile>

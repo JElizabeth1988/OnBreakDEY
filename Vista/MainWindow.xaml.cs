@@ -35,5 +35,24 @@ namespace Vista
             WpfCliente cliente = new WpfCliente();
             cliente.Show();
         }
+
+        //boton listar cliente
+        private void Tile_Click_2(object sender, RoutedEventArgs e)
+        {
+            wpfListadoCliente listCliente = new wpfListadoCliente();
+            listCliente.Show();
+        }
+        //boton administracion contrato
+        private void Tile_Click_4(object sender, RoutedEventArgs e)
+        {
+            Crear_Contrato contrato = new Crear_Contrato();
+            contrato.Show();
+        }
+        //boton listar contrato
+        private void Tile_Click_3(object sender, RoutedEventArgs e)
+        {
+            ListarContrato listContrato = new ListarContrato();
+            listContrato.Show();
+        }
     }
 }

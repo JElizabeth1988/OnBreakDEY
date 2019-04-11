@@ -13,11 +13,11 @@
         Title="OnBreak - Agregar Cliente" Height="436.667" Width="521.333" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Cursor="Arrow" FontWeight="Bold" WindowTitleBrush="Black" Background="#FF84D9E8">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="515*"/>
+            <ColumnDefinition Width="257*"/>
             <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
-        <Grid HorizontalAlignment="Left" Height="409" VerticalAlignment="Top" Width="516" Margin="-1,0,0,-1.8" Grid.ColumnSpan="3">
+        <Grid HorizontalAlignment="Left" Height="409" VerticalAlignment="Top" Width="516" Margin="-1,0,0,-0.333" Grid.ColumnSpan="2">
             <Label x:Name="label" Content="Rut:" HorizontalAlignment="Left" Margin="18,28,0,0" VerticalAlignment="Top"/>
             <Label x:Name="label_Copy" Content="Razón Social:" HorizontalAlignment="Left" Margin="18,60,0,0" VerticalAlignment="Top"/>
             <Label x:Name="label_Copy1" Content="Nombre de Contacto:" HorizontalAlignment="Left" Margin="18,91,0,0" VerticalAlignment="Top"/>
