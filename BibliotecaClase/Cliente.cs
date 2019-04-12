@@ -14,7 +14,7 @@ namespace BibliotecaClase
 
     public enum TipoEmpresa
     {
-        Spa, Eirl, Limitada, SociedadAnonima
+        SPA, EIRL, Limitada, SociedadAnónima
     }
     public class Cliente
     {

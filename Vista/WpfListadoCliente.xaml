@@ -10,7 +10,7 @@
                       
         xmlns:local="clr-namespace:Vista"
         mc:Ignorable="d"
-        Title="OnBreak - Lista de Clientes" Height="422" Width="432" WindowTitleBrush="Black" WindowStyle="ToolWindow" Background="#FF9FE7F7" FontWeight="Bold" WindowStartupLocation="CenterScreen" Icon="Imagenes/1.png">
+        Title="OnBreak - Lista de Clientes" Height="422" Width="432" WindowTitleBrush="Black" WindowStyle="ToolWindow" Background="#FF9FE7F7" FontWeight="Bold" WindowStartupLocation="CenterScreen" Icon="Imagenes/white_logo_dark_background.jpg">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="158*"/>

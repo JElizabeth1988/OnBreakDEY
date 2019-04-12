@@ -10,7 +10,7 @@
                       
         xmlns:local="clr-namespace:Vista"
         mc:Ignorable="d"    
-        Title="OnBreak - Administrar Cliente" Height="436.667" Width="521.333" WindowStartupLocation="CenterScreen" Cursor="Arrow" FontWeight="Bold" WindowTitleBrush="Black" Background="#FF84D9E8">
+        Title="OnBreak - Administrar Cliente" Height="436.667" Width="521.333" WindowStartupLocation="CenterScreen" Cursor="Arrow" FontWeight="Bold" WindowTitleBrush="Black" Background="#FF84D9E8" Icon="Imagenes/white_logo_dark_background.jpg">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="257*"/>
@@ -32,8 +32,8 @@
             <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Controls:TextBoxHelper.Watermark="Ingrese Email" Height="8" Margin="187,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="186" FontWeight="Normal"/>
             <TextBox x:Name="txtDireccion" HorizontalAlignment="Left" Controls:TextBoxHelper.Watermark="Ingrese Dirección" Height="8" Margin="187,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="186" FontWeight="Normal"/>
             <TextBox x:Name="txtTelefono" HorizontalAlignment="Left" Controls:TextBoxHelper.Watermark="Ingrese Teléfono" Height="8" Margin="187,186,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" FontWeight="Normal"/>
-            <ComboBox x:Name="cbActividad" HorizontalAlignment="Left" Margin="187,224,0,0" VerticalAlignment="Top" Width="170"/>
-            <ComboBox x:Name="cbTipo" HorizontalAlignment="Left" Margin="187,263,0,0" VerticalAlignment="Top" Width="170"/>
+            <ComboBox x:Name="cbActividad" HorizontalAlignment="Left" Margin="187,224,0,0" VerticalAlignment="Top" Width="170" FontWeight="Normal"/>
+            <ComboBox x:Name="cbTipo" HorizontalAlignment="Left" Margin="187,263,0,0" VerticalAlignment="Top" Width="170" FontWeight="Normal"/>
             <Button x:Name="btnGuardar" Content="Guardar" HorizontalAlignment="Left" Margin="104,340,0,0" VerticalAlignment="Top" Width="75" Cursor="Arrow" FontWeight="Normal" Controls:ButtonHelper.PreserveTextCase="True"/>
             <Button x:Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="354,340,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal"/>
             <Button x:Name="btnPregunta" Content="?" HorizontalAlignment="Left" Margin="354,29,0,0" VerticalAlignment="Top" Width="33" Background="#FFCACACA" FontWeight="Normal" Height="25"/>
