@@ -26,11 +26,25 @@ namespace Vista
         public ListarContrato()
         {
             InitializeComponent();
+            button1.Visibility = Visibility.Hidden;
+        }
+
+        public ListarContrato(MainWindow origen)
+        {
+            InitializeComponent();
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            //this.Close();
+            if (button1.Visibility == Visibility.Hidden)
+            {
+                button1.Visibility = Visibility.Visible;
+            }
+            else {
+                button1.Visibility = Visibility.Hidden;
+            }
+            
         }
     }
 }
