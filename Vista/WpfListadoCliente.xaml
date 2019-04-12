@@ -10,7 +10,7 @@
                       
         xmlns:local="clr-namespace:Vista"
         mc:Ignorable="d"
-        Title="OnBreak - Lista de Clientes" Height="422" Width="432" WindowTitleBrush="Black" WindowStyle="ToolWindow" Background="#FF9FE7F7" FontWeight="Bold" WindowStartupLocation="CenterScreen">
+        Title="OnBreak - Lista de Clientes" Height="422" Width="432" WindowTitleBrush="Black" WindowStyle="ToolWindow" Background="#FF9FE7F7" FontWeight="Bold" WindowStartupLocation="CenterScreen" Icon="Imagenes/1.png">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="158*"/>
@@ -18,9 +18,9 @@
             <ColumnDefinition Width="62*"/>
             <ColumnDefinition Width="35*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="button" Content="Pasar" HorizontalAlignment="Left" Margin="99,304,0,0" VerticalAlignment="Top" Width="75" Background="#FFCACACA" FontWeight="Normal"/>
-        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="70,57,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="209" Width="295"/>
-        <Button x:Name="button_Copy" Content="Salir" HorizontalAlignment="Left" Margin="40.667,304,0,0" VerticalAlignment="Top" Width="75" Background="#FFCACACA" FontWeight="Normal" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <Button x:Name="btnPasar" Content="Traspasar" HorizontalAlignment="Left" Margin="70,304,0,0" VerticalAlignment="Top" Width="89" Background="#FFCACACA" FontWeight="Normal"/>
+        <DataGrid x:Name="dgLista" HorizontalAlignment="Left" Margin="70,57,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="209" Width="295"/>
+        <Button x:Name="btnSalir" Content="Salir" HorizontalAlignment="Left" Margin="5.333,304,0,0" VerticalAlignment="Top" Width="75" Background="#FFCACACA" FontWeight="Normal" Grid.Column="2"/>
 
     </Grid>
 </Controls:MetroWindow>

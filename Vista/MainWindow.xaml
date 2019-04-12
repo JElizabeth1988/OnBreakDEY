@@ -10,7 +10,7 @@
         
         xmlns:local="clr-namespace:Vista"
         mc:Ignorable="d"
-        Title="OnBreak - Bienvenida" Height="350" Width="525" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="OnBreak - Bienvenida" Height="350" Width="525" WindowStartupLocation="Manual" WindowState="Maximized">
 
 
     <Grid Background="#1393cb">
