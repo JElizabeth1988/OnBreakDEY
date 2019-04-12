@@ -40,12 +40,14 @@ namespace Vista
             int horaInicio = int.Parse(txtHora.Text);
             int minutoInicio = int.Parse(txtMinuto.Text);
             String direccion = txtDireccion1.Text;
-            //vigente???
+            //vigente bool ???
             String fechaCreacion = dpCreacion.Text;
             String fechaTermino = dpTermino.Text;
-            
-            
+            String tipoEvento = txtTipo.Text;
+            String observaciones = txtObservaciones.Text;
 
-     
-    }
+
+
+
+        }
 }
