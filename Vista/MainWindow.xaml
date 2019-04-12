@@ -10,7 +10,7 @@
         
         xmlns:local="clr-namespace:Vista"
         mc:Ignorable="d"
-        Title="OnBreak - Bienvenida" Height="350" Width="525" WindowStartupLocation="CenterScreen">
+        Title="Bienvedo a OnBreak" Height="350" Width="525" WindowStartupLocation="CenterScreen">
 
 
     <Grid Background="#1393cb">
