@@ -38,15 +38,11 @@ C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\bin\Debug\MahApps.Met
 C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\Vista.csprojResolveAssemblyReference.cache
 C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\Resources\Icons.baml
 C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\Resources\IconsNonShared.baml
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\CrearContrato.g.cs
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\ListarContrato.g.cs
 C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\MainWindow.g.cs
 C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\App.g.cs
 C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\Vista_MarkupCompile.cache
 C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\Vista_MarkupCompile.lref
 C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\App.baml
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\CrearContrato.baml
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\ListarContrato.baml
 C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\MainWindow.baml
 C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\Vista.g.resources
 C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\Vista.Properties.Resources.resources
@@ -127,3 +123,13 @@ C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\obj\Debug\WpfListadoC
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\obj\Debug\Vista.g.resources
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\obj\Debug\Vista.Properties.Resources.resources
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\obj\Debug\Vista.csproj.GenerateResource.Cache
+C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\bin\Debug\BibliotecaClase.dll
+C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\bin\Debug\BibliotecaClase.pdb
+C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\WPFCrearContrato.g.cs
+C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\WPFListarContrato.g.cs
+C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\WpfCliente.g.cs
+C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\WpfListadoCliente.g.cs
+C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\WPFCrearContrato.baml
+C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\WPFListarContrato.baml
+C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\WpfCliente.baml
+C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\WpfListadoCliente.baml
