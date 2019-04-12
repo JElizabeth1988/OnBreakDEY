@@ -26,6 +26,8 @@ namespace Vista
         public Crear_Contrato()
         {
             InitializeComponent();
+            cbEstado.ItemsSource = Enum.GetValues(typeof(TipoEstado));
+            cbEstado.SelectedIndex = 0;
         }
 
         private void txtNumero_TextChanged(object sender, TextChangedEventArgs e)
@@ -40,7 +42,7 @@ namespace Vista
             int horaInicio = int.Parse(txtHora.Text);
             int minutoInicio = int.Parse(txtMinuto.Text);
             String direccion = txtDireccion1.Text;
-            //vigente bool ???
+            TipoEstado estado = (TipoEstado)cbEstado.SelectedItem;
             String fechaCreacion = dpCreacion.Text;
             String fechaTermino = dpTermino.Text;
             String tipoEvento = txtTipo.Text;
