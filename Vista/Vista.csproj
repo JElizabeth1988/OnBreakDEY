@@ -67,18 +67,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Contrato.cs" />
     <Compile Include="WpfCliente.xaml.cs">
       <DependentUpon>WpfCliente.xaml</DependentUpon>
     </Compile>
     <Compile Include="WpfListadoCliente.xaml.cs">
       <DependentUpon>WpfListadoCliente.xaml</DependentUpon>
     </Compile>
-    <Page Include="CrearContrato.xaml">
+    <Page Include="WPFCrearContrato.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ListarContrato.xaml">
+    <Page Include="WPFListarContrato.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -90,11 +89,11 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="CrearContrato.xaml.cs">
-      <DependentUpon>CrearContrato.xaml</DependentUpon>
+    <Compile Include="WPFCrearContrato.xaml.cs">
+      <DependentUpon>WPFCrearContrato.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ListarContrato.xaml.cs">
-      <DependentUpon>ListarContrato.xaml</DependentUpon>
+    <Compile Include="WPFListarContrato.xaml.cs">
+      <DependentUpon>WPFListarContrato.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
