@@ -25,7 +25,7 @@ namespace BibliotecaClase
             get { return _rut; }
             set
             {
-                if (_rut != null)
+                if (value != null)
                 {
                     _rut = value;
                 }
@@ -43,7 +43,7 @@ namespace BibliotecaClase
             get { return _razonSocial; }
             set
             {
-                if (_razonSocial != null)
+                if (value != null)
                 {
                     _razonSocial = value;
                 }
@@ -62,7 +62,7 @@ namespace BibliotecaClase
             get { return _nombreContacto; }
             set
             {
-                if (_nombreContacto != null)
+                if (value != null)
                 {
                     _nombreContacto = value;
                 }
@@ -81,7 +81,7 @@ namespace BibliotecaClase
             get { return _mailContacto; }
             set
             {
-                if (_mailContacto != null)
+                if (value != null)
                 {
                     _mailContacto = value;
                 }
@@ -99,7 +99,7 @@ namespace BibliotecaClase
             get { return _direccion; }
             set
             {
-                if (_direccion != null)
+                if (value != null)
                 {
                     _direccion = value;
                 }
@@ -117,7 +117,7 @@ namespace BibliotecaClase
             get { return _telefono; }
             set
             {
-                if (_telefono != 0)
+                if (value != 0)
                 {
                     _telefono = value;
                 }
