@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace Vista
 {
+    public enum TipoEstado
+    {
+            Vigente, NoVigente
+    }
 
     public class Contrato
     {
@@ -18,7 +22,7 @@ namespace Vista
 
         private String _fechaTermino;
         private String _direccion;
-        private bool  _vigente;
+        private String _estado;
         private String _tipoEvento;
         private String  _observaciones;
 
@@ -117,11 +121,7 @@ namespace Vista
             }
         }
 
-        public bool Vigente
-        {
-            get { return _vigente; }
-            set { _vigente = value; }
-        }
+        public TipoEstado Estado { get; set; }
 
         //EVENTO----------------------------------------
 
@@ -193,10 +193,10 @@ namespace Vista
 
 
         public Contrato(String numero,String fechaInicio,int horaInicio,int minutoInicio,String direccion,
-                        bool vigente,String fechaCreacion,String fechaTermino,String tipoEvento,String observaciones)
+                        TipoEstado estado,String fechaCreacion,String fechaTermino,String tipoEvento,String observaciones)
         {
             Numero = numero; FechaInicio = fechaInicio; HoraInicio = horaInicio; MinutoInicio = minutoInicio;
-            Direccion = direccion; Vigente = vigente; FechaCreacion = fechaCreacion;
+            Direccion = direccion; Estado = estado; FechaCreacion = fechaCreacion;
             FechaTermino = fechaTermino; TipoEvento = tipoEvento; 
 
 
