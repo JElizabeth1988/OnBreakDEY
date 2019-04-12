@@ -6,20 +6,21 @@ using System.Threading.Tasks;
 
 namespace Vista
 {
+
     public class Contrato
     {
         private String _numero;
         private String _fechaCreacion;
         private String _fechaInicio;
-        private String _horaInicio;
-        private String _minutoInicio;
+        private int _horaInicio;
+        private int _minutoInicio;
 
 
         private String _fechaTermino;
         private String _direccion;
-        private String  _estado;
+        private bool  _vigente;
         private String _tipoEvento;
-        private String _observaciones;
+        private String  _observaciones;
 
         public String Numero
         {
@@ -61,11 +62,11 @@ namespace Vista
         }
 
 
-        public String HoraInicio
+        public int HoraInicio
         {
             get { return _horaInicio; }
             set {
-                if (value != null)
+                if (value != 0)
                 {
                     _horaInicio = value;
 
@@ -78,12 +79,12 @@ namespace Vista
                 }
         }
 
-        public String MinutoInicio
+        public int MinutoInicio
         {
             get { return _minutoInicio; }
             set
             {
-                if (value != null)
+                if (value != 0)
                 {
                     _minutoInicio = value;
                 }
@@ -114,6 +115,12 @@ namespace Vista
                     throw new ArgumentException("ERROR: Campo Direccion no puede estar Vacío");
                 }
             }
+        }
+
+        public bool Vigente
+        {
+            get { return _vigente; }
+            set { _vigente = value; }
         }
 
         //EVENTO----------------------------------------
@@ -151,21 +158,7 @@ namespace Vista
             }
         }
 
-        public String Estado
-        {
-            get { return _estado; }
-            set {
-
-                if (value != null)
-                {
-                    _estado = value;
-                }
-                else
-                {
-                    throw new ArgumentException("ERROR: Campo Estado no puede estar Vacío");
-                }
-            }
-        }
+       
 
         public String TipoEvento
         {
@@ -199,7 +192,28 @@ namespace Vista
         }
 
 
-    }
+        public Contrato(String numero,String fechaInicio,int horaInicio,int minutoInicio,String direccion,
+                        bool vigente,String fechaCreacion,String fechaTermino,String tipoEvento,String observaciones)
+        {
+            Numero = numero; FechaInicio = fechaInicio; HoraInicio = horaInicio; MinutoInicio = minutoInicio;
+            Direccion = direccion; Vigente = vigente; FechaCreacion = fechaCreacion;
+            FechaTermino = fechaTermino; TipoEvento = tipoEvento; 
 
+
+        }
+
+
+        public Contrato()
+        {
+
+        }
+
+
+
+
+
+
+    }
+    
 }
 

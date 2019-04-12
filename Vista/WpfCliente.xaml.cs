@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+using BibliotecaClase;
+
 using MahApps.Metro.Controls;
 using MahApps.Metro.Controls.Dialogs;
 using MahApps.Metro.Behaviours;
@@ -27,6 +29,14 @@ namespace Vista
         public WpfCliente()
         {
             InitializeComponent();
+
+            cbActividad.ItemsSource = Enum.GetValues(typeof
+                (ActividadEmpresa));
+            cbActividad.SelectedIndex = 0;
+
+            cbTipo.ItemsSource = Enum.GetValues(typeof
+                (TipoEmpresa));
+            cbTipo.SelectedIndex = 0;
         }
 
     }

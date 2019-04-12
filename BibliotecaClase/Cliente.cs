@@ -6,6 +6,16 @@ using System.Threading.Tasks;
 
 namespace BibliotecaClase
 {
+    public enum ActividadEmpresa
+    {
+        Agropecuaria, Mineria, Manufactura, Comercio, Hoteleria,
+        Alimentos, Transporte, Servicios
+    }
+
+    public enum TipoEmpresa
+    {
+        Spa, Eirl, Limitada, SociedadAnonima
+    }
     public class Cliente
     {
         private String _rut;
@@ -15,7 +25,7 @@ namespace BibliotecaClase
             get { return _rut; }
             set
             {
-                if (true)
+                if (value != null)
                 {
                     _rut = value;
                 }
@@ -33,7 +43,7 @@ namespace BibliotecaClase
             get { return _razonSocial; }
             set
             {
-                if (true)
+                if (value != null)
                 {
                     _razonSocial = value;
                 }
@@ -52,7 +62,7 @@ namespace BibliotecaClase
             get { return _nombreContacto; }
             set
             {
-                if (true)
+                if (value != null)
                 {
                     _nombreContacto = value;
                 }
@@ -71,7 +81,7 @@ namespace BibliotecaClase
             get { return _mailContacto; }
             set
             {
-                if (true)
+                if (value != null)
                 {
                     _mailContacto = value;
                 }
@@ -89,7 +99,7 @@ namespace BibliotecaClase
             get { return _direccion; }
             set
             {
-                if (_direccion != null)
+                if (value != null)
                 {
                     _direccion = value;
                 }
@@ -107,7 +117,7 @@ namespace BibliotecaClase
             get { return _telefono; }
             set
             {
-                if (_telefono != 0)
+                if (value != 0)
                 {
                     _telefono = value;
                 }
@@ -119,21 +129,39 @@ namespace BibliotecaClase
             }
         }
 
-        /* private String _actividad;
+        private TipoEmpresa _emp;
 
-         public String Actividad
-         {
-             get { return _actividad; }
-             set { _actividad = value; }
-         }
+        public TipoEmpresa Empresa
+        {
+            get { return _emp; }
+            set { _emp = value; }
+        }
 
-         private bool _tipo;//boleean??
+        private ActividadEmpresa _act;
 
-         public bool Tipo
-         {
-             get { return _tipo; }
-             set { _tipo = value; }
-         }*/
+        public ActividadEmpresa Actividad
+        {
+            get { return _act; }
+            set { _act = value; }
+        }
+
+        public Cliente()
+        {
+
+        }
+
+        public Cliente(string rut, string razonSocial, string nombreContacto, string mail, string direccion, int telefono, TipoEmpresa empresa, ActividadEmpresa actividad)
+        {
+            Rut = rut;
+            RazonSocial = razonSocial;
+            NombreContacto = nombreContacto;
+            Mail = mail;
+            Direccion = direccion;
+            Telefono = telefono;
+            Actividad = actividad;
+            Empresa = empresa;
+        }
+
 
     }
 }
