@@ -14,7 +14,7 @@ namespace BibliotecaClase
 
     public enum TipoEmpresa
     {
-        Spa, Eirl, Limitada, SociedadAnonima
+        SPA, EIRL, Limitada, SociedadAnonima
     }
     public class Cliente
     {
@@ -31,7 +31,7 @@ namespace BibliotecaClase
                 }
                 else
                 {
-                    throw new ArgumentException("Todos los campos son Obligatorios");
+                    throw new ArgumentException("ERROR: Campo Rut no puede estar Vacío");
                 }
             }
         }
@@ -49,7 +49,7 @@ namespace BibliotecaClase
                 }
                 else
                 {
-                    throw new ArgumentException("Todos los campos son Obligatorios");
+                    throw new ArgumentException("ERROR: Campo RazónSocial no puede estar Vacío");
                 }
 
             }
@@ -68,7 +68,7 @@ namespace BibliotecaClase
                 }
                 else
                 {
-                    throw new ArgumentException("Todos los campos son Obligatorios");
+                    throw new ArgumentException("ERROR: Campo Nombre Contrato no puede estar Vacío");
                 }
 
             }
@@ -87,7 +87,7 @@ namespace BibliotecaClase
                 }
                 else
                 {
-                    throw new ArgumentException("Todos los campos son Obligatorios");
+                    throw new ArgumentException("ERROR: Campo Email no puede estar Vacío");
                 }
             }
         }
@@ -105,7 +105,7 @@ namespace BibliotecaClase
                 }
                 else
                 {
-                    throw new ArgumentException("Todos los campos son Obligatorios");
+                    throw new ArgumentException("ERROR: Campo Dirección no puede estar Vacío");
                 }
             }
         }
@@ -123,7 +123,7 @@ namespace BibliotecaClase
                 }
                 else
                 {
-                    throw new ArgumentException("Todos los campos son Obligatorios");
+                    throw new ArgumentException("ERROR: Campo Teléfono no puede estar Vacío");
                 }
 
             }
