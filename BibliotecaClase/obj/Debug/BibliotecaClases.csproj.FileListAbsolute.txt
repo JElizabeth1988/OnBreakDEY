@@ -7,3 +7,8 @@ D:\UnBreakable\BibliotecaClase\bin\Debug\BibliotecaClase.pdb
 D:\UnBreakable\BibliotecaClase\obj\Debug\BibliotecaClases.csprojResolveAssemblyReference.cache
 D:\UnBreakable\BibliotecaClase\obj\Debug\BibliotecaClase.dll
 D:\UnBreakable\BibliotecaClase\obj\Debug\BibliotecaClase.pdb
+C:\Users\chida\Desktop\Duplicado\UnBreakable\BibliotecaClase\bin\Debug\BibliotecaClase.dll
+C:\Users\chida\Desktop\Duplicado\UnBreakable\BibliotecaClase\bin\Debug\BibliotecaClase.pdb
+C:\Users\chida\Desktop\Duplicado\UnBreakable\BibliotecaClase\obj\Debug\BibliotecaClases.csprojResolveAssemblyReference.cache
+C:\Users\chida\Desktop\Duplicado\UnBreakable\BibliotecaClase\obj\Debug\BibliotecaClase.dll
+C:\Users\chida\Desktop\Duplicado\UnBreakable\BibliotecaClase\obj\Debug\BibliotecaClase.pdb

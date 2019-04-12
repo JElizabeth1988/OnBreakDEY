@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\UnBreakable\Vista\obj\Debug\
+C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\
 Vista
 none
 false
 DEBUG;TRACE
-D:\UnBreakable\Vista\App.xaml
-71192877476
+C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\App.xaml
+7-719384433
 
-14-500560228
-17-2085642094
-CrearContrato.xaml;ListarContrato.xaml;MainWindow.xaml;Resources\Icons.xaml;Resources\IconsNonShared.xaml;WpfCliente.xaml;WpfListadoCliente.xaml;
+131030594589
+17-1342859510
+WPFCrearContrato.xaml;WPFListarContrato.xaml;MainWindow.xaml;Resources\Icons.xaml;Resources\IconsNonShared.xaml;WpfCliente.xaml;WpfListadoCliente.xaml;
 
 False
 

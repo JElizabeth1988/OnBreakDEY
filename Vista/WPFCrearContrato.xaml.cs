@@ -27,5 +27,17 @@ namespace Vista
         {
             InitializeComponent();
         }
+
+        private void txtNumero_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void btnCrear_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+      
     }
 }
