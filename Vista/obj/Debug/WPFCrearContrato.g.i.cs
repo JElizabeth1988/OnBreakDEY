@@ -190,22 +190,6 @@ namespace Vista {
         
         #line 53 "..\..\WPFCrearContrato.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Label label1;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 54 "..\..\WPFCrearContrato.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.DatePicker dpTermino;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 55 "..\..\WPFCrearContrato.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnAgregarEvento;
         
         #line default
@@ -326,15 +310,9 @@ namespace Vista {
             #line hidden
             return;
             case 19:
-            this.label1 = ((System.Windows.Controls.Label)(target));
-            return;
-            case 20:
-            this.dpTermino = ((System.Windows.Controls.DatePicker)(target));
-            return;
-            case 21:
             this.btnAgregarEvento = ((System.Windows.Controls.Button)(target));
             
-            #line 55 "..\..\WPFCrearContrato.xaml"
+            #line 53 "..\..\WPFCrearContrato.xaml"
             this.btnAgregarEvento.Click += new System.Windows.RoutedEventHandler(this.btnAgregarEvento_Click);
             
             #line default
