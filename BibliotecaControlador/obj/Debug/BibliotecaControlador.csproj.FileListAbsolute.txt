@@ -1,0 +1,7 @@
+C:\Users\chida\Desktop\Duplicado\UnBreakable\BibliotecaControlador\bin\Debug\BibliotecaControlador.dll
+C:\Users\chida\Desktop\Duplicado\UnBreakable\BibliotecaControlador\bin\Debug\BibliotecaControlador.pdb
+C:\Users\chida\Desktop\Duplicado\UnBreakable\BibliotecaControlador\bin\Debug\BibliotecaClase.dll
+C:\Users\chida\Desktop\Duplicado\UnBreakable\BibliotecaControlador\bin\Debug\BibliotecaClase.pdb
+C:\Users\chida\Desktop\Duplicado\UnBreakable\BibliotecaControlador\obj\Debug\BibliotecaControlador.csprojResolveAssemblyReference.cache
+C:\Users\chida\Desktop\Duplicado\UnBreakable\BibliotecaControlador\obj\Debug\BibliotecaControlador.dll
+C:\Users\chida\Desktop\Duplicado\UnBreakable\BibliotecaControlador\obj\Debug\BibliotecaControlador.pdb
