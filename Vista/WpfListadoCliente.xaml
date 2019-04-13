@@ -18,9 +18,9 @@
             <ColumnDefinition Width="62*"/>
             <ColumnDefinition Width="35*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="btnPasar" Content="Traspasar" HorizontalAlignment="Left" Margin="70,304,0,0" VerticalAlignment="Top" Width="89" Background="#FFCACACA" FontWeight="Normal"/>
+        <Button x:Name="btnPasar" Content="Traspasar" HorizontalAlignment="Left" Margin="70,304,0,0" VerticalAlignment="Top" Width="89" Background="#FFCACACA" FontWeight="Normal" Click="btnPasar_Click"/>
         <DataGrid x:Name="dgLista" HorizontalAlignment="Left" Margin="70,57,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="209" Width="295"/>
-        <Button x:Name="btnSalir" Content="Salir" HorizontalAlignment="Left" Margin="5.333,304,0,0" VerticalAlignment="Top" Width="75" Background="#FFCACACA" FontWeight="Normal" Grid.Column="2"/>
+        <Button x:Name="btnSalir" Content="Salir" HorizontalAlignment="Left" Margin="5.333,304,0,0" VerticalAlignment="Top" Width="75" Background="#FFCACACA" FontWeight="Normal" Grid.Column="2" Click="btnSalir_Click"/>
 
     </Grid>
 </Controls:MetroWindow>
