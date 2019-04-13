@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vista
+namespace BibliotecaClase
 {
 
     public class Contrato
@@ -23,7 +23,7 @@ namespace Vista
 
                 if (value != null)
                 {
-                    _numero = value;
+                    _numero = DateTime.Now.ToString("yyyyMMddHHmm");
                 }
                 else
                 {
