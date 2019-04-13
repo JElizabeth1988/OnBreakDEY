@@ -26,12 +26,14 @@ namespace Vista
     /// </summary>
     public partial class Crear_Contrato : MetroWindow
     {
+        DaoContrato dao;
         public RoutedEventHandler btnBuscarContrato_Click { get; private set; }
 
         public Crear_Contrato()
         {
 
             InitializeComponent();
+            dao = new DaoContrato();
         }
 
 
@@ -64,16 +66,15 @@ namespace Vista
                 };
 
                 //METODO AGREGAR DEVUELVE BOOLEAN POR ESO SE CREA VARIABLE BOOLEANA resp
-                //bool resp =  //meter persona en dao
-               // MessageBox.Show(resp ? "Grabado" : "No Grabado");
-                //si respuesta es verdadera grabo si no, no grabo
-                //es un if de una línea
+                bool resp = dao.Agregar(con);
+                 MessageBox.Show(resp ? "Guardado" : "No Guardado");
+                
 
             }
             catch (Exception ex)
             {
 
-                throw;
+                MessageBox.Show("Error de ingreso de datos");
             }
 
 
