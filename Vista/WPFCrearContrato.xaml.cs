@@ -64,7 +64,16 @@ namespace Vista
 
         private void btnListadoNum_Click(object sender, RoutedEventArgs e)
         {
+            ListarContrato con = new ListarContrato(this);
+            con.Show();
             
+        }
+
+        private void btnListadoCliente_Click(object sender, RoutedEventArgs e)
+        {
+            wpfListadoCliente cli = new wpfListadoCliente();
+            cli.Show();
+
         }
     }
 }

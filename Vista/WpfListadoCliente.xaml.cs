@@ -25,6 +25,8 @@ namespace Vista
     public partial class wpfListadoCliente : MetroWindow
     {
         WpfCliente cl;//recibir a cliente
+        private Crear_Contrato crear_Contrato;
+
         public wpfListadoCliente()
         {
             InitializeComponent();
@@ -36,6 +38,11 @@ namespace Vista
             InitializeComponent();
             cl = origen;
         
+        }
+
+        public wpfListadoCliente(Crear_Contrato crear_Contrato)
+        {
+            this.crear_Contrato = crear_Contrato;
         }
 
         private void btnSalir_Click(object sender, RoutedEventArgs e)

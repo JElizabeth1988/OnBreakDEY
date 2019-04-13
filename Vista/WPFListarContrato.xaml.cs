@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using BibliotecaClase;
 
 using MahApps.Metro.Controls;
 using MahApps.Metro.Controls.Dialogs;
@@ -24,6 +25,8 @@ namespace Vista
     public partial class ListarContrato : MetroWindow
     {
         Crear_Contrato cc;//recibir a crear contrato
+
+
         public ListarContrato()
         {
             InitializeComponent();
@@ -33,6 +36,7 @@ namespace Vista
         public ListarContrato(Crear_Contrato origen)
         {
             InitializeComponent();
+            cc = origen;
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
