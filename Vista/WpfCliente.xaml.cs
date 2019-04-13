@@ -71,7 +71,7 @@ namespace Vista
         //Botón Cancelar/Cerrar
         private void btnCancelar_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         //Botón Guardar
@@ -100,7 +100,7 @@ namespace Vista
 
                 };
                 bool resp = dao.Agregar(c);
-                MessageBox.Show(resp ? "Grabo" : "NoGrabo");
+                MessageBox.Show(resp ? "Guardado" : "No Guardado");
 
             }
             catch (Exception ex)
@@ -111,6 +111,11 @@ namespace Vista
         }
 
         private void btnEliminar_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void btnBuscar_Click(object sender, RoutedEventArgs e)
         {
 
         }
