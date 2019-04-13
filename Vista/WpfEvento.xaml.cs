@@ -12,21 +12,25 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+
+using MahApps.Metro.Controls;
+using MahApps.Metro.Controls.Dialogs;
+using MahApps.Metro.Behaviours;
 namespace Vista
 {
     /// <summary>
     /// Lógica de interacción para WpfEvento.xaml
     /// </summary>
-    public partial class WpfEvento : Window
+    public partial class WpfEvento : MetroWindow
     {
         public WpfEvento()
         {
             InitializeComponent();
         }
 
-        internal void Show()
-        {
-            throw new NotImplementedException();
-        }
+        public RoutedEventHandler button_Click { get; private set; }
+        public TextChangedEventHandler txtHoraInicio_TextChanged { get; private set; }
+
+        
     }
 }

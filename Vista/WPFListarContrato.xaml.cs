@@ -23,13 +23,14 @@ namespace Vista
     /// </summary>
     public partial class ListarContrato : MetroWindow
     {
+        Crear_Contrato cc;//recibir a crear contrato
         public ListarContrato()
         {
             InitializeComponent();
             button1.Visibility = Visibility.Hidden;
         }
 
-        public ListarContrato(MainWindow origen)
+        public ListarContrato(Crear_Contrato origen)
         {
             InitializeComponent();
         }

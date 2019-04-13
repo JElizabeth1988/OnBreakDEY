@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+
 using MahApps.Metro.Controls;
 using MahApps.Metro.Controls.Dialogs;
 using MahApps.Metro.Behaviours;
@@ -23,15 +24,15 @@ namespace Vista
     /// </summary>
     public partial class Crear_Contrato : MetroWindow
     {
+        public RoutedEventHandler btnBuscarContrato_Click { get; private set; }
+        public RoutedEventHandler checkBox1_Checked { get; private set; }
+
         public Crear_Contrato()
         {
-          
+
+            InitializeComponent();
         }
 
-        private void txtNumero_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
 
         private void btnCrear_Click(object sender, RoutedEventArgs e)
         {

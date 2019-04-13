@@ -29,13 +29,13 @@
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="233,398,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="3" Height="16" Width="0"/>
         <TextBox x:Name="txtObservaciones"  HorizontalAlignment="Left" Height="100" Margin="170,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="282" Grid.Row="3"/>
         <Label x:Name="label_Copy1" Content="Número:" HorizontalAlignment="Left" Height="36" Margin="62,68,0,0" VerticalAlignment="Top" Width="118"/>
-        <TextBox x:Name="txtNumero" Controls:TextBoxHelper.Watermark ="Ingrese Número Contrato" HorizontalAlignment="Left" Height="26" Margin="166,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" TextChanged="txtNumero_TextChanged"/>
-        <Button x:Name="btnBuscarContrato" Content="Buscar" HorizontalAlignment="Left" Margin="421,65,0,0" VerticalAlignment="Top" Width="74" Height="29" Click="btnBuscarContrato_Click" FontWeight="Normal"/>
+        <TextBox x:Name="txtNumero" Controls:TextBoxHelper.Watermark ="Ingrese Número Contrato" HorizontalAlignment="Left" Height="26" Margin="166,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166"/>
+        <Button x:Name="btnBuscarContrato" Content="Buscar" HorizontalAlignment="Left" Margin="421,65,0,0" VerticalAlignment="Top" Width="74" Height="29" />
         <Button x:Name="button1" Content="?" HorizontalAlignment="Left" Margin="352,65,0,0" VerticalAlignment="Top" Width="38" Height="26"/>
         <Label x:Name="label_Copy2" Content="Nombre:" HorizontalAlignment="Left" Height="36" Margin="62,10,0,0" VerticalAlignment="Top" Width="118" Grid.Row="1"/>
         <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Height="26" Margin="166,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="288" IsEnabled="False" Grid.Row="1"/>
         <Label x:Name="label_Copy4" Content="Rut Cliente:" HorizontalAlignment="Left" Height="36" Margin="62,130,0,0" VerticalAlignment="Top" Width="118"/>
-        <TextBox x:Name="txtBuscarCliente" Controls:TextBoxHelper.Watermark ="Ingrese rut" HorizontalAlignment="Left" Height="26" Margin="166,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" TextChanged="txtBuscarCliente_TextChanged"/>
+        <TextBox x:Name="txtBuscarCliente" Controls:TextBoxHelper.Watermark ="Ingrese rut" HorizontalAlignment="Left" Height="26" Margin="166,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" />
         <Button x:Name="btnBuscarCliente" Content="Buscar" HorizontalAlignment="Left" Margin="421,130,0,0" VerticalAlignment="Top" Width="74" Height="29" FontWeight="Normal"/>
         <Button x:Name="button1_Copy" Content="?" HorizontalAlignment="Left" Margin="352,132,0,0" VerticalAlignment="Top" Width="38" Height="26" RenderTransformOrigin="0.5,0.5">
             <Button.RenderTransform>
