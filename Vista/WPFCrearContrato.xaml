@@ -10,7 +10,7 @@
                       
         xmlns:local="clr-namespace:Vista"
         mc:Ignorable="d"
-        Title="OnBreak - Crear Contrato" Height="846.335" Width="718.128" WindowStartupLocation="CenterScreen">
+        Title="OnBreak - Crear Contrato" Height="846.335" Width="718.128" WindowStartupLocation="CenterScreen" FontWeight="Bold" WindowTitleBrush="Black" Icon="Imagenes/white_logo_dark_background.jpg">
     <Grid Margin="0,0,2,-104" Background="#FF84D9E8" Height="818" VerticalAlignment="Top">
         <Grid.RowDefinitions>
             <RowDefinition Height="119*"/>
