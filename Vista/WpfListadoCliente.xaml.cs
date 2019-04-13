@@ -24,11 +24,35 @@ namespace Vista
     /// </summary>
     public partial class wpfListadoCliente : MetroWindow
     {
+        WpfCliente cl;//recibir a cliente
         public wpfListadoCliente()
         {
             InitializeComponent();
+            btnPasar.Visibility = Visibility.Hidden;
+        }//llamado desde menu principal, el btn traspasar no se ve
+
+        public wpfListadoCliente(WpfCliente origen)
+        {
+            InitializeComponent();
+            cl = origen;
+        
         }
 
-       
+        private void btnSalir_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnPasar_Click(object sender, RoutedEventArgs e)
+        {
+            if (btnPasar.Visibility == Visibility.Hidden)
+            {
+                btnPasar.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                btnPasar.Visibility = Visibility.Hidden;
+            }
+        }
     }
 }

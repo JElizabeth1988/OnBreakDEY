@@ -39,5 +39,30 @@ namespace Vista
             cbTipo.SelectedIndex = 0;
         }
 
+        private void btnLimpiar_Click(object sender, RoutedEventArgs e)
+        {
+            txtRut.Clear();
+            txtRazon.Clear();
+            txtNombre.Clear();
+            txtEmail.Clear();
+            txtDireccion.Clear();
+            txtTelefono.Clear();
+            cbActividad.SelectedIndex = 0;
+            cbTipo.SelectedIndex = 0;//Para que en el ComboBox no quede seleccionado nada
+            txtRut.Focus();//Mover el cursor a la poscición Rut
+
+        }
+
+        private void btnPregunta_Click(object sender, RoutedEventArgs e)
+        {
+            wpfListadoCliente lis = new wpfListadoCliente(this);
+            lis.Show();
+
+        }
+
+        private void btnCancelar_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
