@@ -34,7 +34,7 @@
             <TextBox x:Name="txtTelefono" HorizontalAlignment="Left" Controls:TextBoxHelper.Watermark="Ingrese Teléfono" Height="8" Margin="187,186,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" FontWeight="Normal"/>
             <ComboBox x:Name="cbActividad" HorizontalAlignment="Left" Margin="187,224,0,0" VerticalAlignment="Top" Width="170" FontWeight="Normal"/>
             <ComboBox x:Name="cbTipo" HorizontalAlignment="Left" Margin="187,263,0,0" VerticalAlignment="Top" Width="170" FontWeight="Normal"/>
-            <Button x:Name="btnGuardar" Content="Guardar" HorizontalAlignment="Left" Margin="50,341,0,0" VerticalAlignment="Top" Width="75" Cursor="Arrow" FontWeight="Normal" Controls:ButtonHelper.PreserveTextCase="True"/>
+            <Button x:Name="btnGuardar" Content="Guardar" HorizontalAlignment="Left" Margin="50,341,0,0" VerticalAlignment="Top" Width="75" Cursor="Arrow" FontWeight="Normal" Controls:ButtonHelper.PreserveTextCase="True" Click="btnGuardar_Click"/>
             <Button x:Name="btnCancelar" Content="Salir" HorizontalAlignment="Left" Margin="397,389,0,-8" VerticalAlignment="Top" Width="75" FontWeight="Normal" Click="btnCancelar_Click"/>
             <Button x:Name="btnPregunta" Content="?" HorizontalAlignment="Left" Margin="354,29,0,0" VerticalAlignment="Top" Width="33" Background="#FFCACACA" FontWeight="Normal" Height="25" Click="btnPregunta_Click"/>
             <Button x:Name="btnBuscar" Content="Buscar" HorizontalAlignment="Left" Margin="408,29,0,0" VerticalAlignment="Top" Width="74" Background="#FFCACACA" FontWeight="Normal" Height="25"/>

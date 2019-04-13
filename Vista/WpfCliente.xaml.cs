@@ -14,6 +14,7 @@ using System.Windows.Shapes;
 
 using BibliotecaClase;
 
+
 using MahApps.Metro.Controls;
 using MahApps.Metro.Controls.Dialogs;
 using MahApps.Metro.Behaviours;
@@ -63,6 +64,11 @@ namespace Vista
         private void btnCancelar_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void btnGuardar_Click(object sender, RoutedEventArgs e)
+        {
+           
         }
     }
 }
