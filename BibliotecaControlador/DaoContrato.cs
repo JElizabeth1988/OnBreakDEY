@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using BibliotecaClase;
 
+
 namespace BibliotecaControlador
 {
     public class DaoContrato
@@ -16,14 +17,17 @@ namespace BibliotecaControlador
         {
 
             if (contratos == null)
+            {
                 contratos = new List<Contrato>();
+            }
+               
         }
 
         //metodos crud
         //método guardar
         public bool Agregar(Contrato con)
         {
-            if (ExistePersona(con.Numero) == false)
+            if (ExisteContrato(con.Numero) == false)
             {
                 contratos.Add(con); return true;
             }
@@ -31,7 +35,7 @@ namespace BibliotecaControlador
 
         }
 
-        private bool ExistePersona(string num)
+        private bool ExisteContrato(string num)
         {
             foreach (Contrato item in contratos)
             {

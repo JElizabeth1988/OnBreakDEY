@@ -37,7 +37,44 @@ namespace Vista
 
         private void btnCrear_Click(object sender, RoutedEventArgs e)
         {
-          
+            try
+            {
+                String numero = DateTime.Now.ToString("yyyyMMddHHmm");
+                String fechaCreacion = dpCreacion.Text;
+                string vigente;
+                if (rbSi.IsChecked == true)
+                {
+                   vigente = "Sí";
+                }
+                else
+                {
+                    vigente = "No";
+                }
+               
+                String observaciones = txtObservaciones.Text;
+
+                Contrato con = new Contrato() 
+                {
+                    
+                    Numero = numero,
+                    FechaCreacion = fechaCreacion,
+                    Vigente = vigente,
+                    Observaciones = observaciones
+                    
+                };
+
+                //METODO AGREGAR DEVUELVE BOOLEAN POR ESO SE CREA VARIABLE BOOLEANA resp
+                //bool resp =  //meter persona en dao
+               // MessageBox.Show(resp ? "Grabado" : "No Grabado");
+                //si respuesta es verdadera grabo si no, no grabo
+                //es un if de una línea
+
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
 
 
 

@@ -11,7 +11,7 @@ namespace BibliotecaClase
     {
         private String _numero;
         private String _fechaCreacion;
-        private bool   _vigente;
+        private String  _vigente;
         private String _fechaTermino;
         private String _observaciones;
        
@@ -23,7 +23,7 @@ namespace BibliotecaClase
 
                 if (value != null)
                 {
-                    _numero = DateTime.Now.ToString("yyyyMMddHHmm");
+                    _numero =value;
                 }
                 else
                 {
@@ -51,7 +51,7 @@ namespace BibliotecaClase
         }
 
 
-        public bool Vigente
+        public String Vigente
         {
             get { return _vigente; }
             set { _vigente = value; }
@@ -93,7 +93,7 @@ namespace BibliotecaClase
 
 
 
-        public Contrato(String numero,String fechaCreacion ,bool vigente,String fechaTermino,String observaciones)
+        public Contrato(String numero,String fechaCreacion ,String vigente,String fechaTermino,String observaciones)
         {
             Numero = numero;FechaCreacion = fechaCreacion;Vigente = vigente;FechaTermino = fechaCreacion;
             Observaciones = observaciones;

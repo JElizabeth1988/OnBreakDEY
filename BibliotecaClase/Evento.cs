@@ -32,56 +32,132 @@ namespace BibliotecaClase
         public String FechaInicio
         {
             get { return _fechaInicio; }
-            set { _fechaInicio = value; }
+            set {
+
+                if (value != null)
+                {
+                    _fechaInicio = value;
+                }
+                else
+                {
+                    throw new ArgumentException("ERROR: Campo Fecha Inicio no puede estar Vacío");
+                }
+            }
         }
 
         public int HoraInicio
         {
             get { return _horaInicio; }
-            set { _horaInicio = value; }
+            set {
+
+                if (value != 0)
+                {
+                    _horaInicio = value;
+                }
+                else
+                {
+                    throw new ArgumentException("ERROR: Campo Hora Inicio no puede estar Vacío");
+                }
+            }
         }
 
         public int MinutoInicio
         {
             get { return _minutoInicio; }
-            set { _minutoInicio = value; }
+            set {
+                if (value != 0)
+                {
+                    _minutoInicio = value;
+                }
+                else
+                {
+                    throw new ArgumentException("ERROR: Campo Minuto Inicio no puede estar Vacío");
+                }
+            }
         }
 
         public String FechaTermino
         {
             get { return _fechaTermino; }
-            set { _fechaTermino = value; }
+            set {
+                if (value != null)
+                {
+                    _fechaTermino = value;
+                }
+                else
+                {
+                    throw new ArgumentException("ERROR: Campo Fecha Termino no puede estar Vacío");
+                }
+
+            }
         }
 
         public int HoraTermino
         {
             get { return _horaTermino; }
-            set { _horaTermino = value; }
+            set {
+                if (value != 0)
+                {
+                    _horaTermino = value;
+                }
+                else
+                {
+                    throw new ArgumentException("ERROR: Campo Hora Termino no puede estar Vacío");
+                }
+
+            }
         }
 
         public int MinutoTermino
         {
             get { return _minutoTermino; }
-            set { _minutoTermino = value; }
+            set { 
+                if (value != 0)
+                {
+                    _minutoTermino = value;
+                }
+                else
+                {
+                    throw new ArgumentException("ERROR: Campo Hora Termino no puede estar Vacío");
+                }
+            }
         }
 
         public String Direccion
         {
             get { return _direccion; }
-            set { _direccion = value; }
+            set { 
+                if (value != null)
+                {
+                    _direccion = value;
+                }
+                else
+                {
+                    throw new ArgumentException("ERROR: Campo Dirección no puede estar Vacío");
+                }
+            }
         }
 
 
         public int NumeroAsistentes
         {
             get { return _numeroAsistentes; }
-            set { _numeroAsistentes = value; }
+            set {
+                if (value != 0)
+                {
+                    _numeroAsistentes = value;
+                }
+                else
+                {
+                    throw new ArgumentException("ERROR: Campo Dirección no puede estar Vacío");
+                }
+            }
         }
 
         public String TipoEvento
         {
             get { return _tipoEvento; }
-            set { _tipoEvento = value; }
+            set { _tipoEvento = value;}
         }
 
         //Cálculo valor Contrato
