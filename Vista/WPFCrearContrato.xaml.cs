@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+using BibliotecaClase;
+using BibliotecaControlador;
 
 using MahApps.Metro.Controls;
 using MahApps.Metro.Controls.Dialogs;
@@ -46,6 +48,32 @@ namespace Vista
         {
             WpfEvento evento = new WpfEvento();
             evento.Show();
+        }
+
+        private void btnLimpiar_Click(object sender, RoutedEventArgs e)
+        {
+            txtNumero.Clear();
+            txtBuscarCliente.Clear();
+            txtNombre.Clear();
+            txtObservaciones.Clear();
+            txtNumero.Focus();
+
+
+
+        }
+
+        private void btnListadoNum_Click(object sender, RoutedEventArgs e)
+        {
+            ListarContrato con = new ListarContrato(this);
+            con.Show();
+            
+        }
+
+        private void btnListadoCliente_Click(object sender, RoutedEventArgs e)
+        {
+            wpfListadoCliente cli = new wpfListadoCliente();
+            cli.Show();
+
         }
     }
 }
