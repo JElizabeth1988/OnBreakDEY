@@ -49,7 +49,7 @@
         </Button>
         <Button x:Name="btnCrear" Content="Crear" HorizontalAlignment="Left" Margin="361,328,0,0" Grid.Row="3" VerticalAlignment="Top" Width="74" Click="btnCrear_Click" FontWeight="Normal"/>
         <CheckBox x:Name="chbSi" Content="Sí" HorizontalAlignment="Left" Margin="170,50,0,0" Grid.Row="3" VerticalAlignment="Top" IsChecked="True" ClickMode="Press"/>
-        <CheckBox x:Name="chbNo" Content="No" HorizontalAlignment="Left" Margin="234,50,0,0" Grid.Row="3" VerticalAlignment="Top" Checked="checkBox1_Checked" ClickMode="Press"/>
+        <CheckBox x:Name="chbNo" Content="No" HorizontalAlignment="Left" Margin="234,50,0,0" Grid.Row="3" VerticalAlignment="Top" IsChecked="True" ClickMode="Press"/>
         <Button x:Name="btnAgregarEvento" Content="Agregar Evento" HorizontalAlignment="Left" Margin="170,328,0,0" Grid.Row="3" VerticalAlignment="Top" Width="126" Click="btnAgregarEvento_Click"/>
 
     </Grid>

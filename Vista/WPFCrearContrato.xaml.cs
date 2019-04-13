@@ -25,7 +25,6 @@ namespace Vista
     public partial class Crear_Contrato : MetroWindow
     {
         public RoutedEventHandler btnBuscarContrato_Click { get; private set; }
-        public RoutedEventHandler checkBox1_Checked { get; private set; }
 
         public Crear_Contrato()
         {
