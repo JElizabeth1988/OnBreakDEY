@@ -33,6 +33,7 @@ namespace Vista
         {
             InitializeComponent();
 
+            //llenar el combo box con los datos del enumerador
             cbActividad.ItemsSource = Enum.GetValues(typeof
                 (ActividadEmpresa));
             cbActividad.SelectedIndex = 0;
@@ -40,8 +41,11 @@ namespace Vista
             cbTipo.ItemsSource = Enum.GetValues(typeof
                 (TipoEmpresa));
             cbTipo.SelectedIndex = 0;
+
+            dao = new DaoCliente();
         }
 
+        //-botón limpiar
         private void btnLimpiar_Click(object sender, RoutedEventArgs e)
         {
             txtRut.Clear();
@@ -56,6 +60,7 @@ namespace Vista
 
         }
 
+        //Botón '?'
         private void btnPregunta_Click(object sender, RoutedEventArgs e)
         {
             wpfListadoCliente lis = new wpfListadoCliente(this);
@@ -63,11 +68,13 @@ namespace Vista
 
         }
 
+        //Botón Cancelar/Cerrar
         private void btnCancelar_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
 
+        //Botón Guardar
         private void btnGuardar_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -96,16 +103,16 @@ namespace Vista
                 MessageBox.Show(resp ? "Grabo" : "NoGrabo");
 
             }
-            catch (ArgumentException exa)
-            {
-                MessageBox.Show(exa.Message);
-            }
             catch (Exception ex)
             {
                 MessageBox.Show("Error de ingreso de datos");
 
-                throw;
             }
+        }
+
+        private void btnEliminar_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
