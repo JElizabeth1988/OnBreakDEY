@@ -39,7 +39,7 @@
             <Button x:Name="btnPregunta" Content="?" HorizontalAlignment="Left" Margin="354,29,0,0" VerticalAlignment="Top" Width="33" Background="#FFCACACA" FontWeight="Normal" Height="25" Click="btnPregunta_Click"/>
             <Button x:Name="btnBuscar" Content="Buscar" HorizontalAlignment="Left" Margin="408,29,0,0" VerticalAlignment="Top" Width="74" Background="#FFCACACA" FontWeight="Normal" Height="25"/>
             <Button x:Name="btnLimpiar" Content="Limpiar" HorizontalAlignment="Left" Margin="282,341,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Click="btnLimpiar_Click"/>
-            <Button x:Name="btnEliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="397,341,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" BorderBrush="#FF707070"/>
+            <Button x:Name="btnEliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="397,341,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" BorderBrush="#FF707070" Click="btnEliminar_Click"/>
             <Button x:Name="btnModificar" Content="Modificar" HorizontalAlignment="Left" Margin="162,341,0,0" VerticalAlignment="Top" Width="85" FontWeight="Normal" BorderBrush="#FF707070"/>
         </Grid>
 
