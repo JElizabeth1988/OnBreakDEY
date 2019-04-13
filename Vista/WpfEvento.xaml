@@ -10,7 +10,7 @@
                       
         xmlns:local="clr-namespace:Vista"
         mc:Ignorable="d"
-        Title="On Break - Guardar Evento" Height="567.237" Width="685.632">
+        Title="On Break - Guardar Evento" Height="567.237" Width="685.632" WindowTitleBrush="Black" Icon="Imagenes/white_logo_dark_background.jpg">
     <Grid Margin="0,0,0,1" Background="#FF84D9E8" RenderTransformOrigin="0.5,0.5">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -38,10 +38,10 @@
         <Label x:Name="label_Copy" Content="Termino" HorizontalAlignment="Left" Height="36" Margin="28,28,0,0" VerticalAlignment="Top" Width="118" FontWeight="Bold" FontSize="14" Grid.Row="1"/>
         <Label x:Name="label6" Content="Tipo Evento:" HorizontalAlignment="Left" Margin="65,206,0,0" VerticalAlignment="Top" Height="26" Width="82" Grid.Row="2"/>
         <DatePicker x:Name="dpCreacion" HorizontalAlignment="Left" Margin="162,82,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.744,0.428"/>
-        <Button x:Name="button" Content="Guardar" HorizontalAlignment="Left" Margin="305,283,0,0" VerticalAlignment="Top" Width="75" Click="button_Click" Grid.Row="2"/>
+        <Button x:Name="button" Content="Guardar" HorizontalAlignment="Left" Margin="305,283,0,0" VerticalAlignment="Top" Width="75" />
         <Label x:Name="label1" Content="Inicio" HorizontalAlignment="Left" Margin="28,25,0,0" VerticalAlignment="Top" Width="48" FontWeight="Bold" FontSize="14"/>
         <Label x:Name="label2" Content="Hora:" HorizontalAlignment="Left" Margin="337,82,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.101,0.5" Height="26" Width="43"/>
-        <TextBox x:Name="txtHoraInicio" Controls:TextBoxHelper.Watermark ="HR" HorizontalAlignment="Left" Height="23" Margin="389,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="34" TextChanged="txtHoraInicio_TextChanged"/>
+        <TextBox x:Name="txtHoraInicio" Controls:TextBoxHelper.Watermark ="HR" HorizontalAlignment="Left" Height="23" Margin="389,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="34" />
         <Label x:Name="label3" Content=":" HorizontalAlignment="Left" Margin="428,79,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtMinutoHora" Controls:TextBoxHelper.Watermark ="MN" HorizontalAlignment="Left" Height="23" Margin="445,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="39" RenderTransformOrigin="1.749,0.662">
             <TextBox.RenderTransform>
@@ -67,7 +67,7 @@
         <Label x:Name="label_Copy1" Content="Fecha:" HorizontalAlignment="Left" Height="36" Margin="65,27,0,0" VerticalAlignment="Top" Width="118" Grid.Row="2"/>
         <DatePicker x:Name="dpCreacion_Copy" HorizontalAlignment="Left" Margin="162,27,0,0" VerticalAlignment="Top" Grid.Row="2"/>
         <Label x:Name="label2_Copy" Content="Hora:" HorizontalAlignment="Left" Margin="333,89,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.101,0.5" Grid.Row="1" Grid.RowSpan="2"/>
-        <TextBox x:Name="txtHoraTermino" Controls:TextBoxHelper.Watermark ="HR" HorizontalAlignment="Left" Height="23" Margin="389,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="34" TextChanged="txtHoraInicio_TextChanged" Grid.Row="2"/>
+        <TextBox x:Name="txtHoraTermino" Controls:TextBoxHelper.Watermark ="HR" HorizontalAlignment="Left" Height="23" Margin="389,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="34" Grid.Row="2"/>
         <Label x:Name="label3_Copy" Content=":" HorizontalAlignment="Left" Margin="428,25,0,0" VerticalAlignment="Top" Grid.Row="2"/>
         <TextBox x:Name="txtMinutoTermino" Controls:TextBoxHelper.Watermark ="MN" HorizontalAlignment="Left" Height="23" Margin="446,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="36" RenderTransformOrigin="1.749,0.662" Grid.Row="2">
             <TextBox.RenderTransform>
