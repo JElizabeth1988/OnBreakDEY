@@ -133,3 +133,4 @@ C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\WPFCrearCon
 C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\WPFListarContrato.baml
 C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\WpfCliente.baml
 C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\WpfListadoCliente.baml
+C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\WpfEvento.g.cs

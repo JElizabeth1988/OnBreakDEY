@@ -25,9 +25,7 @@ namespace Vista
     {
         public Crear_Contrato()
         {
-            InitializeComponent();
-            cbEstado.ItemsSource = Enum.GetValues(typeof(TipoEstado));
-            cbEstado.SelectedIndex = 0;
+          
         }
 
         private void txtNumero_TextChanged(object sender, TextChangedEventArgs e)
@@ -37,20 +35,17 @@ namespace Vista
 
         private void btnCrear_Click(object sender, RoutedEventArgs e)
         {
-            String numero = txtNumero.Text;
-            String fechaInicio = dpFecha.Text;
-            int horaInicio = int.Parse(txtHora.Text);
-            int minutoInicio = int.Parse(txtMinuto.Text);
-            String direccion = txtDireccion1.Text;
-            TipoEstado estado = (TipoEstado)cbEstado.SelectedItem;
-            String fechaCreacion = dpCreacion.Text;
-            String fechaTermino = dpTermino.Text;
-            String tipoEvento = txtTipo.Text;
-            String observaciones = txtObservaciones.Text;
+          
 
 
 
 
+        }
+
+        private void btnAgregarEvento_Click(object sender, RoutedEventArgs e)
+        {
+            WpfEvento evento = new WpfEvento();
+            evento.Show();
         }
     }
 }

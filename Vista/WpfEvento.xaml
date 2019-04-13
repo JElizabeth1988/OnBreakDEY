@@ -1,0 +1,87 @@
+﻿<Controls:MetroWindow x:Class="Vista.WpfEvento"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        
+          xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+          xmlns:behaviours="clr-namespace:MahApps.Metro.Behaviours;assembly=MahApps.Metro"
+          xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"    
+                      
+        xmlns:local="clr-namespace:Vista"
+        mc:Ignorable="d"
+        Title="On Break - Guardar Evento" Height="500.237" Width="628.632">
+    <Grid Margin="0,0,0,1" Background="#FF84D9E8" RenderTransformOrigin="0.5,0.5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="0.071"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
+        <Label x:Name="label" Content="Fecha:" HorizontalAlignment="Left" Height="36" Margin="86,82,0,0" VerticalAlignment="Top" Width="118" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.005"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.005"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label x:Name="label_Copy" Content="Termino" HorizontalAlignment="Left" Height="36" Margin="28,28,0,0" VerticalAlignment="Top" Width="118" FontWeight="Bold" FontSize="14" Grid.Row="1"/>
+        <Label x:Name="label6" Content="Tipo Evento:" HorizontalAlignment="Left" Margin="65,137,0,0" VerticalAlignment="Top" Height="26" Width="82" Grid.Row="2"/>
+        <DatePicker x:Name="dpCreacion" HorizontalAlignment="Left" Margin="162,82,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.744,0.428"/>
+        <Button x:Name="button" Content="Guardar" HorizontalAlignment="Left" Margin="245,213,0,0" VerticalAlignment="Top" Width="75" Click="button_Click" Grid.Row="2"/>
+        <Label x:Name="label1" Content="Inicio" HorizontalAlignment="Left" Margin="28,25,0,0" VerticalAlignment="Top" Width="48" FontWeight="Bold" FontSize="14"/>
+        <Label x:Name="label2" Content="Hora:" HorizontalAlignment="Left" Margin="337,82,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.101,0.5" Height="26" Width="43"/>
+        <TextBox x:Name="txtHoraInicio" Controls:TextBoxHelper.Watermark ="HR" HorizontalAlignment="Left" Height="23" Margin="389,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="34" TextChanged="txtHoraInicio_TextChanged"/>
+        <Label x:Name="label3" Content=":" HorizontalAlignment="Left" Margin="428,79,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtMinutoHora" Controls:TextBoxHelper.Watermark ="MN" HorizontalAlignment="Left" Height="23" Margin="445,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="39" RenderTransformOrigin="1.749,0.662">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="1.184"/>
+                    <TranslateTransform X="-0.124" Y="0.676"/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <Separator HorizontalAlignment="Left" Height="100" Margin="79,6,0,0" VerticalAlignment="Top" Width="443" RenderTransformOrigin="0.5,0.5">
+            <Separator.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-0.576"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-0.503"/>
+                </TransformGroup>
+            </Separator.RenderTransform>
+        </Separator>
+        <Separator HorizontalAlignment="Left" Height="100" Margin="95,15,0,0" VerticalAlignment="Top" Width="435" Grid.RowSpan="2" Grid.Row="1"/>
+        <Label x:Name="label_Copy1" Content="Fecha:" HorizontalAlignment="Left" Height="36" Margin="65,27,0,0" VerticalAlignment="Top" Width="118" Grid.Row="2"/>
+        <DatePicker x:Name="dpCreacion_Copy" HorizontalAlignment="Left" Margin="162,27,0,0" VerticalAlignment="Top" Grid.Row="2"/>
+        <Label x:Name="label2_Copy" Content="Hora:" HorizontalAlignment="Left" Margin="333,89,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.101,0.5" Grid.Row="1" Grid.RowSpan="2"/>
+        <TextBox x:Name="txtHoraTermino" Controls:TextBoxHelper.Watermark ="HR" HorizontalAlignment="Left" Height="23" Margin="389,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="34" TextChanged="txtHoraInicio_TextChanged" Grid.Row="2"/>
+        <Label x:Name="label3_Copy" Content=":" HorizontalAlignment="Left" Margin="428,25,0,0" VerticalAlignment="Top" Grid.Row="2"/>
+        <TextBox x:Name="txtMinutoTermino" Controls:TextBoxHelper.Watermark ="MN" HorizontalAlignment="Left" Height="23" Margin="446,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="36" RenderTransformOrigin="1.749,0.662" Grid.Row="2">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="1.558"/>
+                    <TranslateTransform X="-0.124" Y="0.676"/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <ComboBox x:Name="cboTipo" HorizontalAlignment="Left" Margin="162,137,0,0" Grid.Row="2" VerticalAlignment="Top" Width="145"/>
+        <Label x:Name="label4" Content="Dirección:" HorizontalAlignment="Left" Margin="65,84,0,0" VerticalAlignment="Top" Grid.Row="2" Height="26" Width="69"/>
+        <TextBox x:Name="txtDireccion1" Controls:TextBoxHelper.Watermark ="Ingrese dirección" HorizontalAlignment="Left" Height="26" Margin="162,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="282" Grid.Row="2" />
+
+    </Grid>
+</Controls:MetroWindow>

@@ -22,7 +22,7 @@ namespace Vista
 
         private String _fechaTermino;
         private String _direccion;
-        private String _estado;
+        private char _vigente;
         private String _tipoEvento;
         private String  _observaciones;
 
@@ -121,7 +121,7 @@ namespace Vista
             }
         }
 
-        public TipoEstado Estado { get; set; }
+        
 
         //EVENTO----------------------------------------
 
@@ -191,12 +191,18 @@ namespace Vista
             }
         }
 
+        public char Vigente
+        {
+            get { return _vigente; }
+            set { _vigente = value; }
+        }
+
 
         public Contrato(String numero,String fechaInicio,int horaInicio,int minutoInicio,String direccion,
-                        TipoEstado estado,String fechaCreacion,String fechaTermino,String tipoEvento,String observaciones)
+                        char vigente,String fechaCreacion,String fechaTermino,String tipoEvento,String observaciones)
         {
             Numero = numero; FechaInicio = fechaInicio; HoraInicio = horaInicio; MinutoInicio = minutoInicio;
-            Direccion = direccion; Estado = estado; FechaCreacion = fechaCreacion;
+            Direccion = direccion; Vigente = vigente; FechaCreacion = fechaCreacion;
             FechaTermino = fechaTermino; TipoEvento = tipoEvento; 
 
 
