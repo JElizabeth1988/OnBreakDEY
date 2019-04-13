@@ -38,7 +38,7 @@
         <Label x:Name="label_Copy" Content="Termino" HorizontalAlignment="Left" Height="36" Margin="28,28,0,0" VerticalAlignment="Top" Width="118" FontWeight="Bold" FontSize="14" Grid.Row="1"/>
         <Label x:Name="label6" Content="Tipo Evento:" HorizontalAlignment="Left" Margin="65,206,0,0" VerticalAlignment="Top" Height="26" Width="82" Grid.Row="2"/>
         <DatePicker x:Name="dpCreacion" HorizontalAlignment="Left" Margin="162,82,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.744,0.428"/>
-        <Button x:Name="button" Content="Guardar" HorizontalAlignment="Left" Margin="305,283,0,0" VerticalAlignment="Top" Width="75" />
+        <Button x:Name="button" Content="Guardar" HorizontalAlignment="Left" Margin="275,278,0,0" VerticalAlignment="Top" Width="75" Grid.Row="2" />
         <Label x:Name="label1" Content="Inicio" HorizontalAlignment="Left" Margin="28,25,0,0" VerticalAlignment="Top" Width="48" FontWeight="Bold" FontSize="14"/>
         <Label x:Name="label2" Content="Hora:" HorizontalAlignment="Left" Margin="337,82,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.101,0.5" Height="26" Width="43"/>
         <TextBox x:Name="txtHoraInicio" Controls:TextBoxHelper.Watermark ="HR" HorizontalAlignment="Left" Height="23" Margin="389,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="34" />
