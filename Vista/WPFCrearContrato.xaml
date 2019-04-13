@@ -10,8 +10,8 @@
                       
         xmlns:local="clr-namespace:Vista"
         mc:Ignorable="d"
-        Title="OnBreak - Crear Contrato" Height="751.835" Width="728.628" WindowStartupLocation="CenterScreen" FontWeight="Bold" WindowTitleBrush="Black" Icon="Imagenes/white_logo_dark_background.jpg">
-    <Grid Margin="0,0,2,-1" Background="#FF84D9E8" Height="722" VerticalAlignment="Top">
+        Title="OnBreak - Administrar Contrato" Height="656.835" Width="692.628" WindowStartupLocation="CenterScreen" FontWeight="Bold" WindowTitleBrush="Black" Icon="Imagenes/white_logo_dark_background.jpg">
+    <Grid Margin="0,0,-8,-3" Background="#FF84D9E8" Height="658" VerticalAlignment="Top">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="574*"/>
             <ColumnDefinition Width="135*"/>
@@ -47,10 +47,19 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="btnCrear" Content="Crear" HorizontalAlignment="Left" Margin="361,328,0,0" Grid.Row="3" VerticalAlignment="Top" Width="74" Click="btnCrear_Click" FontWeight="Normal"/>
-        <CheckBox x:Name="chbSi" Content="Sí" HorizontalAlignment="Left" Margin="170,50,0,0" Grid.Row="3" VerticalAlignment="Top" IsChecked="True" ClickMode="Press"/>
-        <CheckBox x:Name="chbNo" Content="No" HorizontalAlignment="Left" Margin="234,50,0,0" Grid.Row="3" VerticalAlignment="Top" IsChecked="True" ClickMode="Press"/>
-        <Button x:Name="btnAgregarEvento" Content="Agregar Evento" HorizontalAlignment="Left" Margin="170,328,0,0" Grid.Row="3" VerticalAlignment="Top" Width="126" Click="btnAgregarEvento_Click"/>
+        <Button x:Name="btnCrear" Content="Crear" HorizontalAlignment="Left" Margin="369,266,0,0" Grid.Row="3" VerticalAlignment="Top" Width="74" Click="btnCrear_Click" FontWeight="Normal"/>
+        <Button x:Name="btnAgregarEvento" Content="Agregar Evento" HorizontalAlignment="Left" Margin="171,264,0,0" Grid.Row="3" VerticalAlignment="Top" Width="126" Click="btnAgregarEvento_Click" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="1.848"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0.468"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <RadioButton x:Name="rbSi" Content="Sí" HorizontalAlignment="Left" Margin="170,54,0,0" Grid.Row="3" VerticalAlignment="Top" IsChecked="True"/>
+        <RadioButton x:Name="rbNo" Content="No" HorizontalAlignment="Left" Margin="233,54,0,0" Grid.Row="3" VerticalAlignment="Top"/>
 
     </Grid>
 </Controls:MetroWindow>

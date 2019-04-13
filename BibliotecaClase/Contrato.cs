@@ -11,7 +11,7 @@ namespace Vista
     {
         private String _numero;
         private String _fechaCreacion;
-        private char   _vigente;
+        private bool   _vigente;
         private String _fechaTermino;
         private String _observaciones;
        
@@ -51,7 +51,7 @@ namespace Vista
         }
 
 
-        public char Vigente
+        public bool Vigente
         {
             get { return _vigente; }
             set { _vigente = value; }
@@ -93,7 +93,7 @@ namespace Vista
 
 
 
-        public Contrato(String numero,String fechaCreacion ,char vigente,String fechaTermino,String observaciones)
+        public Contrato(String numero,String fechaCreacion ,bool vigente,String fechaTermino,String observaciones)
         {
             Numero = numero;FechaCreacion = fechaCreacion;Vigente = vigente;FechaTermino = fechaCreacion;
             Observaciones = observaciones;
