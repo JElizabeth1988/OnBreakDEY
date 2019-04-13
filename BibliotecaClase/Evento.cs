@@ -18,7 +18,10 @@ namespace BibliotecaClase
         private String _direccion;
         private int _numeroAsistentes;
         private String _tipoEvento;
+        private int _valorBase;
+        private int _personalBase;
 
+ 
 
         public int Id
         {
@@ -81,14 +84,28 @@ namespace BibliotecaClase
             set { _tipoEvento = value; }
         }
 
+        //Cálculo valor Contrato
+
+        public int ValorBase
+        {
+            get { return _valorBase; }
+            set { _valorBase = value; }
+        }
+
+        public int PersonalBase
+        {
+            get { return _personalBase; }
+            set { _personalBase = value; }
+        }
 
         public Evento(int id,String fechaInicio,int horaInicio,int minutoInicio,String fechaTermino,
                        int horaTermino,int minutoTermino,String direccion,int numeroAsistentes,
-                       String tipoEvento)
+                       String tipoEvento,int valorBase,int personalBase)
         {
             Id = id;FechaInicio = fechaInicio;HoraInicio = horaInicio;MinutoInicio = minutoInicio;
             FechaTermino = fechaTermino;HoraTermino = horaTermino;MinutoTermino = MinutoTermino;
             Direccion = direccion;NumeroAsistentes = numeroAsistentes;TipoEvento = tipoEvento;
+            ValorBase = valorBase;PersonalBase = personalBase;
         }
 
         public Evento()
