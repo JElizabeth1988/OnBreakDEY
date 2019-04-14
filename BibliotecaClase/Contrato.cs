@@ -61,16 +61,9 @@ namespace BibliotecaClase
         public String FechaTermino
         {
             get { return _fechaTermino; }
-            set { 
-
-                if (value != null)
-                {
-                    _fechaTermino = value;
-                }
-                else
-                {
-                    throw new ArgumentException("ERROR: Campo Fecha Término no puede estar Vacío");
-                }
+            set
+            {
+                _fechaTermino = value;
             }
         }
 

@@ -42,7 +42,7 @@ namespace Vista
             catch (Exception ex)
             {
 
-                MessageBox.Show("Error al Listar");
+                MessageBox.Show("Error al Listar"+ex.Message);
             }
         }
 

@@ -44,23 +44,28 @@ namespace Vista
                 String numero = DateTime.Now.ToString("yyyyMMddHHmm");
                 String fechaCreacion = dpCreacion.Text;
                 string vigente;
+                String fechaTermino;
                 if (rbSi.IsChecked == true)
                 {
                    vigente = "Sí";
+                      fechaTermino= DateTime.Now.ToString("DD/MM/YYYY");
                 }
                 else
                 {
                     vigente = "No";
+                    fechaTermino = "Aún vigente";
+
                 }
                
                 String observaciones = txtObservaciones.Text;
 
-                Contrato con = new Contrato() 
+                Contrato con = new Contrato()
                 {
-                    
+
                     Numero = numero,
                     FechaCreacion = fechaCreacion,
                     Vigente = vigente,
+                    FechaTermino = fechaTermino,
                     Observaciones = observaciones
                     
                 };
@@ -71,10 +76,14 @@ namespace Vista
                 
 
             }
+            catch (ArgumentException exa) //catch excepciones hechas por el usuario
+            {
+                MessageBox.Show(exa.Message); 
+            }
             catch (Exception ex)
             {
 
-                MessageBox.Show("Error de ingreso de datos");
+                MessageBox.Show(ex.Message);
             }
 
 
