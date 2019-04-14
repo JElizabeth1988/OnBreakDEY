@@ -28,7 +28,7 @@ namespace BibliotecaClase
             set { _personalBase = value; }
         }
 
-        public Evento(,int valorBase,int personalBase)
+        public Evento(int valorBase,int personalBase)
         {
             ValorBase = valorBase;PersonalBase = personalBase;
         }
