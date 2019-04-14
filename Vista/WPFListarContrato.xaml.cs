@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using BibliotecaClase;
+using BibliotecaControlador;
 
 using MahApps.Metro.Controls;
 using MahApps.Metro.Controls.Dialogs;
@@ -31,6 +32,18 @@ namespace Vista
         {
             InitializeComponent();
             button1.Visibility = Visibility.Hidden;
+            try
+            {
+                DaoContrato dao = new DaoContrato(); 
+                dgvLista.ItemsSource = dao.Listar(); 
+                dgvLista.Items.Refresh(); 
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error al Listar");
+            }
         }
 
         public ListarContrato(Crear_Contrato origen)

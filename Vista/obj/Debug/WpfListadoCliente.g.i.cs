@@ -108,12 +108,6 @@ namespace Vista {
             return;
             case 2:
             this.dgLista = ((System.Windows.Controls.DataGrid)(target));
-            
-            #line 22 "..\..\WpfListadoCliente.xaml"
-            this.dgLista.SelectionChanged += new System.Windows.Controls.SelectionChangedEventHandler(this.dgLista_SelectionChanged);
-            
-            #line default
-            #line hidden
             return;
             case 3:
             this.btnSalir = ((System.Windows.Controls.Button)(target));
