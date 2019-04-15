@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using BibliotecaClase;
+using BibliotecaControlador;
 
 using MahApps.Metro.Controls;
 using MahApps.Metro.Controls.Dialogs;
@@ -31,6 +32,19 @@ namespace Vista
         {
             InitializeComponent();
             btnPasar.Visibility = Visibility.Hidden;
+
+            try
+            {
+                DaoCliente dao = new DaoCliente();
+                dgLista.ItemsSource = dao.Listar();
+                dgLista.Items.Refresh();
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error!" + ex.Message);
+            }
         }//llamado desde menu principal, el btn traspasar no se ve
 
         public wpfListadoCliente(WpfCliente origen)
@@ -47,7 +61,7 @@ namespace Vista
 
         private void btnSalir_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void btnPasar_Click(object sender, RoutedEventArgs e)
