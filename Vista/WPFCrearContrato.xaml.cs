@@ -51,12 +51,13 @@ namespace Vista
                 if (rbSi.IsChecked == true)
                 {
                     vigente = "Sí";
-                    fechaTermino = DateTime.Now.ToString("DD/MM/YYYY");
+                    fechaTermino = DateTime.Now.ToString("dd/MM/yyyy");
                 }
                 else
                 {
                     vigente = "No";
-                    fechaTermino = "Aún vigente";
+                    fechaTermino = " ";
+                    
 
                 }
 
@@ -67,7 +68,7 @@ namespace Vista
                 int horaInicio = int.Parse(txtHoraInicio.Text);
                 int minutoInicio = int.Parse(txtMinutoInicio.Text);
                 //termino
-                String fechaTerminoEvento = dpFechaTerminoEvento.Text;
+                String fechaFinEvento = dpFechaFinEvento.Text;
                 int horaTermino = int.Parse(txtHoraTermino.Text);
                 int minutoTermino = int.Parse(txtMinutoTermino.Text);
                 String direccion = txtDireccion.Text;
@@ -87,7 +88,7 @@ namespace Vista
                     FechaInicioEvento = fechaInicioEvento,
                     HoraInicio = horaInicio,
                     MinutoInicio = minutoInicio,
-                    FechaTerminoEvento = fechaTerminoEvento,
+                    FechaFinEvento = fechaFinEvento,
                     HoraTermino = horaTermino,
                     MinutoTermino = minutoTermino,
                     Direccion = direccion,

@@ -11,8 +11,9 @@ namespace BibliotecaControlador
 {
     public class DaoContrato
     {
-        private List<Contrato> contratos;
+        private static List<Contrato> contratos;
 
+        //PATRON SINGLETON
         public DaoContrato()
         {
 
@@ -23,8 +24,9 @@ namespace BibliotecaControlador
                
         }
 
-        //metodos crud
-        //método guardar
+        //METODOS CRUD
+
+        //METODO GUARDAR
         public bool Agregar(Contrato con)
         {
             if (ExisteContrato(con.Numero) == false)
@@ -47,7 +49,7 @@ namespace BibliotecaControlador
             return false;
         }
 
-        //método listar
+        //METODO LISTAR
         public List<Contrato> Listar()
         {
             return contratos;

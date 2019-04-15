@@ -13,6 +13,7 @@ namespace BibliotecaClase
 
     public class Contrato
     {
+        
         private String _numero;
         private String _fechaCreacion;
         private String  _vigente;
@@ -20,7 +21,7 @@ namespace BibliotecaClase
         private String _fechaInicioEvento;
         private int _horaInicio;
         private int _minutoInicio;
-        private String _fechaTerminoEvento;
+        private String _fechaFinEvento;
         private int _horaTermino;
         private int _minutoTermino;
         private String _direccion;
@@ -30,6 +31,8 @@ namespace BibliotecaClase
         
 //COLABORACIÓN
         Evento even = new Evento();
+
+//PROPIEDADES
 
         public String Numero
         {
@@ -132,14 +135,14 @@ namespace BibliotecaClase
             }
         }
 
-        public String FechaTerminoEvento
+        public String FechaFinEvento
         {
             get { return _fechaTermino; }
             set
             {
                 if (value != null)
                 {
-                    _fechaTerminoEvento = value;
+                    _fechaFinEvento = value;
                 }
                 else
                 {
@@ -234,10 +237,16 @@ namespace BibliotecaClase
         }
 
 
+        public Contrato()
+        {
+
+        }
+
+
 
         public Contrato(String numero,String fechaCreacion ,String vigente,String fechaTermino,
                         String fechaInicioEvento, int horaInicio, int minutoInicio,
-                        String fechaTerminoEvento,int horaTermino, int minutoTermino, 
+                        String fechaFinEvento,int horaTermino, int minutoTermino, 
                         String direccion, int numeroAsistentes,TipoEvento evento,String observaciones)
         {
             Numero = numero;
@@ -247,7 +256,7 @@ namespace BibliotecaClase
             FechaInicioEvento = fechaInicioEvento;
             HoraInicio = horaInicio;
             MinutoInicio = minutoInicio;
-            FechaTerminoEvento = fechaTerminoEvento;
+            FechaFinEvento = fechaFinEvento;
             HoraTermino = horaTermino;
             MinutoTermino = minutoTermino;
             Direccion = direccion;
@@ -258,10 +267,7 @@ namespace BibliotecaClase
         }
 
 
-        public Contrato()
-        {
-
-        }
+       
 
 
 

@@ -100,7 +100,6 @@
         <Label x:Name="label3" Content=":" HorizontalAlignment="Left" Margin="136,55,0,0" VerticalAlignment="Top" Grid.Row="3" Height="26" Width="13" Grid.Column="1"/>
         <Separator HorizontalAlignment="Left" Height="100" Margin="102,283,0,0" VerticalAlignment="Top" Width="664" Grid.RowSpan="4" Grid.ColumnSpan="2"/>
         <Label x:Name="label_Copy3" Content="Fecha:" HorizontalAlignment="Left" Height="36" Margin="133,141,0,0" VerticalAlignment="Top" Width="118" Grid.Row="3"/>
-        <DatePicker x:Name="dpFechaTerminoEvento" HorizontalAlignment="Left" Margin="240,141,0,0" VerticalAlignment="Top" Grid.Row="3" Height="26" Width="151"/>
         <Label x:Name="label2_Copy1" Content="Hora:" HorizontalAlignment="Left" Margin="34,55,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.101,0.5" Grid.Row="3" Height="26" Width="41" Grid.Column="1"/>
         <TextBox x:Name="txtHoraTermino" Controls:TextBoxHelper.Watermark ="HR" HorizontalAlignment="Left" Height="26" Margin="98,145,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="34" Grid.Row="3" Grid.Column="1"/>
         <Label x:Name="label3_Copy" Content=":" HorizontalAlignment="Left" Margin="136,141,0,0" VerticalAlignment="Top" Grid.Row="3" Height="26" Width="13" Grid.Column="1"/>
@@ -116,5 +115,6 @@
         <TextBox x:Name="txtMinutoTermino"  Controls:TextBoxHelper.Watermark ="MN" HorizontalAlignment="Left" Height="26" Margin="154,145,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="39" Grid.Column="1"/>
         <Label x:Name="label2_Copy2" Content="Hora:" HorizontalAlignment="Left" Margin="34,145,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.101,0.5" Grid.Row="3" Height="26" Width="41" Grid.Column="1"/>
         <Label x:Name="label9" Content="Buscar" HorizontalAlignment="Left" Margin="44,10,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="#FF5F6566"/>
+        <DatePicker x:Name="dpFechaFinEvento" HorizontalAlignment="Left" Margin="240,146,0,0" Grid.Row="3" VerticalAlignment="Top"/>
     </Grid>
 </Controls:MetroWindow>
