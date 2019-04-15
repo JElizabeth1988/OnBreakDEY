@@ -50,5 +50,12 @@ namespace BibliotecaControlador
             return clientes;
         }
 
+        //Eliminar
+       /* public bool Eliminar( String rut)
+        {
+
+
+        }*/
+
     }
 }
