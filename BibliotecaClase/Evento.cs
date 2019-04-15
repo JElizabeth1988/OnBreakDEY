@@ -11,8 +11,9 @@ namespace BibliotecaClase
        
         private int _valorBase;
         private int _personalBase;
+        private int _personalAdicional;
 
- 
+
 
         //Cálculo valor Contrato
 
@@ -33,6 +34,12 @@ namespace BibliotecaClase
             ValorBase = valorBase;PersonalBase = personalBase;
         }
 
+        public int PersonalAdicional
+        {
+            get { return _personalAdicional; }
+            set { _personalAdicional = value; }
+        }
+    
         public Evento()
         {
 

@@ -237,11 +237,20 @@ namespace BibliotecaClase
                         String fechaTerminoEvento,int horaTermino, int minutoTermino, 
                         String direccion, int numeroAsistentes,TipoEvento evento,String observaciones)
         {
-            Numero = numero;FechaCreacion = fechaCreacion;Vigente = vigente;
-            FechaTermino = fechaTermino ;FechaInicioEvento = fechaInicioEvento;
-            HoraInicio = horaInicio;MinutoInicio = minutoInicio;FechaTerminoEvento = fechaTerminoEvento;
-            HoraTermino = horaTermino; MinutoTermino = minutoTermino;Direccion = direccion;
-            NumeroAsistentes = numeroAsistentes;Evento = evento; Observaciones = observaciones;
+            Numero = numero;
+            FechaCreacion = fechaCreacion;
+            Vigente = vigente;
+            FechaTermino = fechaTermino ;
+            FechaInicioEvento = fechaInicioEvento;
+            HoraInicio = horaInicio;
+            MinutoInicio = minutoInicio;
+            FechaTerminoEvento = fechaTerminoEvento;
+            HoraTermino = horaTermino;
+            MinutoTermino = minutoTermino;
+            Direccion = direccion;
+            NumeroAsistentes = numeroAsistentes;
+            Evento = evento;
+            Observaciones = observaciones;
 
         }
 
