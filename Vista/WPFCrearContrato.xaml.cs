@@ -33,6 +33,9 @@ namespace Vista
         {
 
             InitializeComponent();
+            cboTipo.ItemsSource = Enum.GetValues(typeof(TipoEvento));
+            cboTipo.SelectedIndex = 0;
+
             dao = new DaoContrato();
         }
 
@@ -43,12 +46,12 @@ namespace Vista
             {
                 String numero = DateTime.Now.ToString("yyyyMMddHHmm");
                 String fechaCreacion = dpCreacion.Text;
-                string vigente;
+                String vigente;
                 String fechaTermino;
                 if (rbSi.IsChecked == true)
                 {
-                   vigente = "Sí";
-                      fechaTermino= DateTime.Now.ToString("DD/MM/YYYY");
+                    vigente = "Sí";
+                    fechaTermino = DateTime.Now.ToString("DD/MM/YYYY");
                 }
                 else
                 {
@@ -56,7 +59,22 @@ namespace Vista
                     fechaTermino = "Aún vigente";
 
                 }
-               
+
+                //EVENTO
+
+                //inicio
+                String fechaInicioEvento = dpFechaInicio.Text;
+                int horaInicio = int.Parse(txtHoraInicio.Text);
+                int minutoInicio = int.Parse(txtMinutoInicio.Text);
+                //termino
+                String fechaTerminoEvento = dpFechaTerminoEvento.Text;
+                int horaTermino = int.Parse(txtHoraTermino.Text);
+                int minutoTermino = int.Parse(txtMinutoTermino.Text);
+                String direccion = txtDireccion.Text;
+                int numeroAsistentes = int.Parse(txtNumeroAsistentes.Text);
+                TipoEvento evento = (TipoEvento)cboTipo.SelectedItem;
+
+
                 String observaciones = txtObservaciones.Text;
 
                 Contrato con = new Contrato()
@@ -66,24 +84,33 @@ namespace Vista
                     FechaCreacion = fechaCreacion,
                     Vigente = vigente,
                     FechaTermino = fechaTermino,
+                    FechaInicioEvento = fechaInicioEvento,
+                    HoraInicio = horaInicio,
+                    MinutoInicio = minutoInicio,
+                    FechaTerminoEvento = fechaTerminoEvento,
+                    HoraTermino = horaTermino,
+                    MinutoTermino = minutoTermino,
+                    Direccion = direccion,
+                    NumeroAsistentes = numeroAsistentes,
+                    Evento = evento,
                     Observaciones = observaciones
-                    
+
                 };
 
                 //METODO AGREGAR DEVUELVE BOOLEAN POR ESO SE CREA VARIABLE BOOLEANA resp
                 bool resp = dao.Agregar(con);
-                 MessageBox.Show(resp ? "Guardado" : "No Guardado");
-                
+                MessageBox.Show(resp ? "Guardado" : "No Guardado");
+
 
             }
             catch (ArgumentException exa) //catch excepciones hechas por el usuario
             {
-                MessageBox.Show(exa.Message); 
+                MessageBox.Show(exa.Message);
             }
             catch (Exception ex)
             {
 
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Todos los campos son obligatorios");
             }
 
 
@@ -123,6 +150,9 @@ namespace Vista
 
         }
 
-      
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

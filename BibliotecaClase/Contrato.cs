@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace BibliotecaClase
 {
+    public enum TipoEvento
+    {
+        Matrimonio,Cumpleaños,Bautizo,Graduacion,Gala,Aniversario,BabyShower
+    }
 
     public class Contrato
     {
@@ -21,7 +25,6 @@ namespace BibliotecaClase
         private int _minutoTermino;
         private String _direccion;
         private int _numeroAsistentes;
-        private String _tipoEvento;
         private String _observaciones;
 
 
@@ -209,11 +212,7 @@ namespace BibliotecaClase
             }
         }
 
-        public String TipoEvento
-        {
-            get { return _tipoEvento; }
-            set { _tipoEvento = value; }
-        }
+        public TipoEvento Evento { get; set; }
 
 
         public String Observaciones
@@ -236,13 +235,13 @@ namespace BibliotecaClase
         public Contrato(String numero,String fechaCreacion ,String vigente,String fechaTermino,
                         String fechaInicioEvento, int horaInicio, int minutoInicio,
                         String fechaTerminoEvento,int horaTermino, int minutoTermino, 
-                        String direccion, int numeroAsistentes,String tipoEvento,String observaciones)
+                        String direccion, int numeroAsistentes,TipoEvento evento,String observaciones)
         {
             Numero = numero;FechaCreacion = fechaCreacion;Vigente = vigente;
             FechaTermino = fechaTermino ;FechaInicioEvento = fechaInicioEvento;
             HoraInicio = horaInicio;MinutoInicio = minutoInicio;FechaTerminoEvento = fechaTerminoEvento;
-            HoraTermino = horaTermino;MinutoTermino = minutoTermino;Direccion = direccion;
-            NumeroAsistentes = numeroAsistentes;TipoEvento = tipoEvento; Observaciones = observaciones;
+            HoraTermino = horaTermino; MinutoTermino = minutoTermino;Direccion = direccion;
+            NumeroAsistentes = numeroAsistentes;Evento = evento; Observaciones = observaciones;
 
         }
 
