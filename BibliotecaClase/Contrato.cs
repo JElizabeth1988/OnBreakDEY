@@ -137,7 +137,7 @@ namespace BibliotecaClase
 
         public String FechaFinEvento
         {
-            get { return _fechaTermino; }
+            get { return _fechaFinEvento; }
             set
             {
                 if (value != null)

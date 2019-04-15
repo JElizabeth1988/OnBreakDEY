@@ -45,19 +45,21 @@ namespace Vista
             try
             {
                 String numero = DateTime.Now.ToString("yyyyMMddHHmm");
-                String fechaCreacion = dpCreacion.Text;
+                String fechaCreacion = DateTime.Now.ToString("dd/MM/yyyy");
                 String vigente;
                 String fechaTermino;
                 if (rbSi.IsChecked == true)
                 {
                     vigente = "Sí";
-                    fechaTermino = DateTime.Now.ToString("dd/MM/yyyy");
+                    fechaTermino = "Aún Vigente";
+                   
                 }
                 else
                 {
                     vigente = "No";
-                    fechaTermino = " ";
-                    
+                    fechaTermino = DateTime.Now.ToString("dd/MM/yyyy");
+
+
 
                 }
 
