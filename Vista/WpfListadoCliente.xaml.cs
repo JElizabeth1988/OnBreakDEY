@@ -51,7 +51,20 @@ namespace Vista
         {
             InitializeComponent();
             cl = origen;
-        
+
+            try
+            {
+                DaoCliente dao = new DaoCliente();
+                dgLista.ItemsSource = dao.Listar();
+                dgLista.Items.Refresh();
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error!" + ex.Message);
+            }
+
         }
 
         public wpfListadoCliente(Crear_Contrato crear_Contrato)
@@ -69,11 +82,13 @@ namespace Vista
             if (btnPasar.Visibility == Visibility.Hidden)
             {
                 btnPasar.Visibility = Visibility.Hidden;
+
             }
             else
             {
                 btnPasar.Visibility = Visibility.Hidden;
             }
+            
         }
     }
 }

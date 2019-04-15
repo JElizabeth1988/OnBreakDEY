@@ -103,6 +103,10 @@ namespace Vista
                 MessageBox.Show(resp ? "Guardado" : "No Guardado");
 
             }
+            catch (ArgumentException exa)//mensajes de reglas de negocios
+            {
+                MessageBox.Show(exa.Message);
+            }
             catch (Exception ex)
             {
                 MessageBox.Show("Error de ingreso de datos");
@@ -113,11 +117,14 @@ namespace Vista
         private void btnEliminar_Click(object sender, RoutedEventArgs e)
         {
             
-        }
+        
+         }
 
         private void btnBuscar_Click(object sender, RoutedEventArgs e)
         {
 
         }
+
+
     }
 }

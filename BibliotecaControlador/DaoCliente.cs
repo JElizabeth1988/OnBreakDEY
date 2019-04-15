@@ -28,6 +28,7 @@ namespace BibliotecaControlador
                 clientes.Add(cli); return true;
             }
             return false;
+           
 
         }
 
@@ -51,8 +52,17 @@ namespace BibliotecaControlador
         }
 
         //Eliminar
-       /* public bool Eliminar( String rut)
+       /*public bool Eliminar( String rut)
         {
+            foreach (Cliente item in clientes)
+            {
+                if (item.Rut.Equals(rut))
+                {
+                    clientes.Remove(item);
+                    return true;
+                }
+            }
+            return false;
 
 
         }*/
