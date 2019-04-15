@@ -31,12 +31,12 @@ namespace Vista
         public ListarContrato()
         {
             InitializeComponent();
-            button1.Visibility = Visibility.Hidden;
+           
             try
             {
                 DaoContrato dao = new DaoContrato(); 
                 dgvLista.ItemsSource = dao.Listar(); 
-                dgvLista.Items.Refresh(); 
+                //dgvLista.Items.Refresh(); 
 
             }
             catch (Exception ex)
@@ -44,6 +44,7 @@ namespace Vista
 
                 MessageBox.Show("Error al Listar"+ex.Message);
             }
+            button1.Visibility = Visibility.Hidden;
         }
 
         public ListarContrato(Crear_Contrato origen)
@@ -63,6 +64,11 @@ namespace Vista
                 button1.Visibility = Visibility.Hidden;
             }
             
+        }
+
+        private void dgvLista_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

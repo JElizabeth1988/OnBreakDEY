@@ -240,7 +240,7 @@ namespace BibliotecaClase
             Numero = numero;FechaCreacion = fechaCreacion;Vigente = vigente;
             FechaTermino = fechaTermino ;FechaInicioEvento = fechaInicioEvento;
             HoraInicio = horaInicio;MinutoInicio = minutoInicio;FechaTerminoEvento = fechaTerminoEvento;
-            HoraTermino = horaTermino;MinutoTermino = minutoTermino;Direccion = direccion;
+            HoraTermino = horaTermino; MinutoTermino = minutoTermino;Direccion = direccion;
             NumeroAsistentes = numeroAsistentes;Evento = evento; Observaciones = observaciones;
 
         }
