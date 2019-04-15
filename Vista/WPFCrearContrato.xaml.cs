@@ -33,6 +33,9 @@ namespace Vista
         {
 
             InitializeComponent();
+            cboTipo.ItemsSource = Enum.GetValues(typeof(TipoEvento));
+            cboTipo.SelectedIndex = 0;
+
             dao = new DaoContrato();
         }
 
