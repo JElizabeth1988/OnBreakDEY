@@ -30,13 +30,13 @@
         <DatePicker x:Name="dpCreacion" HorizontalAlignment="Left" Margin="211,192,0,0" VerticalAlignment="Top" Width="156" Height="26"/>
         <Label x:Name="label_Copy1" Content="Número:" HorizontalAlignment="Left" Height="36" Margin="109,27,0,0" VerticalAlignment="Top" Width="118"/>
         <TextBox x:Name="txtNumero" Controls:TextBoxHelper.Watermark ="Ingrese Número Contrato" HorizontalAlignment="Left" Height="26" Margin="206,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166"/>
-        <Button x:Name="btnBuscarContrato" Content="Buscar" HorizontalAlignment="Left" Margin="87,25,0,0" VerticalAlignment="Top" Width="74" Height="29" FontWeight="Normal" Grid.Column="1" />
+        <Button x:Name="btnBuscarContrato" Content="Buscar" HorizontalAlignment="Left" Margin="34,24,0,0" VerticalAlignment="Top" Width="74" Height="29" FontWeight="Normal" Grid.Column="1" />
         <Button x:Name="btnListadoNum" Content="?" HorizontalAlignment="Left" Margin="392,25,0,0" VerticalAlignment="Top" Width="38" Height="26" Click="btnListadoNum_Click" Grid.ColumnSpan="2"/>
         <Label x:Name="label_Copy2" Content="Nombre:" HorizontalAlignment="Left" Height="36" Margin="107,140,0,0" VerticalAlignment="Top" Width="118"/>
         <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Height="26" Margin="211,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="288" IsEnabled="False" Background="#FFD5D5D5" Grid.ColumnSpan="2"/>
         <Label x:Name="label_Copy4" Content="Rut Cliente:" HorizontalAlignment="Left" Height="36" Margin="109,82,0,0" VerticalAlignment="Top" Width="118"/>
         <TextBox x:Name="txtBuscarCliente" Controls:TextBoxHelper.Watermark ="Ingrese Rut" HorizontalAlignment="Left" Height="26" Margin="206,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" />
-        <Button x:Name="btnBuscarCliente" Content="Buscar" HorizontalAlignment="Left" Margin="87,90,0,0" VerticalAlignment="Top" Width="74" Height="29" FontWeight="Normal" Grid.Column="1"/>
+        <Button x:Name="btnBuscarCliente" Content="Buscar" HorizontalAlignment="Left" Margin="34,89,0,0" VerticalAlignment="Top" Width="74" Height="29" FontWeight="Normal" Grid.Column="1"/>
         <Button x:Name="btnListadoCliente" Content="?" HorizontalAlignment="Left" Margin="393,93,0,0" VerticalAlignment="Top" Width="38" Height="26" RenderTransformOrigin="0.5,0.5" Click="btnListadoCliente_Click" Grid.ColumnSpan="2">
             <Button.RenderTransform>
                 <TransformGroup>
