@@ -118,11 +118,7 @@ namespace Vista
 
         }
 
-        private void btnAgregarEvento_Click(object sender, RoutedEventArgs e)
-        {
-            WpfEvento evento = new WpfEvento();
-            evento.Show();
-        }
+       
 
         private void btnLimpiar_Click(object sender, RoutedEventArgs e)
         {

@@ -54,7 +54,6 @@ C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\Vista.csprojResolve
 C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\Resources\Icons.baml
 C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\Resources\IconsNonShared.baml
 C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\WPFCrearContrato.g.cs
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\WpfEvento.g.cs
 C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\WPFListarContrato.g.cs
 C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\MainWindow.g.cs
 C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\WpfCliente.g.cs
@@ -64,7 +63,6 @@ C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\Vista_MarkupCompile
 C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\Vista_MarkupCompile.lref
 C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\App.baml
 C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\WPFCrearContrato.baml
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\WpfEvento.baml
 C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\WPFListarContrato.baml
 C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\MainWindow.baml
 C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\WpfCliente.baml

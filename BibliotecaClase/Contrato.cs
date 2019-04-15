@@ -27,6 +27,9 @@ namespace BibliotecaClase
         private int _numeroAsistentes;
         private String _observaciones;
 
+        
+//COLABORACIÓN
+        Evento even = new Evento();
 
         public String Numero
         {
