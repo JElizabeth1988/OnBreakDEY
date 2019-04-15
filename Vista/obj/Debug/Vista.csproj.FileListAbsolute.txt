@@ -1,102 +1,21 @@
-D:\UnBreakable\Vista\bin\Debug\Vista.exe.config
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\bin\Debug\Vista.exe.config
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\bin\Debug\Vista.exe
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\bin\Debug\Vista.pdb
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\bin\Debug\ControlzEx.dll
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\bin\Debug\MahApps.Metro.dll
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\bin\Debug\System.Windows.Interactivity.dll
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\bin\Debug\ControlzEx.pdb
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\bin\Debug\MahApps.Metro.pdb
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\bin\Debug\MahApps.Metro.xml
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\Vista.csprojResolveAssemblyReference.cache
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\Resources\Icons.baml
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\Resources\IconsNonShared.baml
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\MainWindow.g.cs
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\App.g.cs
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\Vista_MarkupCompile.cache
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\Vista_MarkupCompile.lref
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\MainWindow.baml
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\Vista.g.resources
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\Vista.Properties.Resources.resources
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\Vista.csproj.GenerateResource.Cache
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\Vista.exe
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\Vista.pdb
-D:\UnBreakable\Vista\obj\Debug\Vista.exe
-D:\UnBreakable\Vista\obj\Debug\Vista.pdb
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\App.baml
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\bin\Debug\Vista.exe.config
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\Vista.exe
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\Vista.pdb
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\bin\Debug\Vista.exe
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\bin\Debug\Vista.pdb
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\bin\Debug\ControlzEx.dll
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\bin\Debug\MahApps.Metro.dll
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\bin\Debug\System.Windows.Interactivity.dll
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\bin\Debug\ControlzEx.pdb
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\bin\Debug\MahApps.Metro.pdb
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\bin\Debug\MahApps.Metro.xml
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\Vista.csprojResolveAssemblyReference.cache
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\Resources\Icons.baml
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\Resources\IconsNonShared.baml
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\MainWindow.g.cs
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\App.g.cs
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\Vista_MarkupCompile.cache
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\Vista_MarkupCompile.lref
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\App.baml
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\MainWindow.baml
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\Vista.g.resources
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\Vista.Properties.Resources.resources
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\Vista.csproj.GenerateResource.Cache
-D:\UnBreakable\Vista\bin\Debug\Vista.exe
-D:\UnBreakable\Vista\bin\Debug\Vista.pdb
-D:\UnBreakable\Vista\bin\Debug\BibliotecaClase.dll
-D:\UnBreakable\Vista\bin\Debug\ControlzEx.dll
-D:\UnBreakable\Vista\bin\Debug\MahApps.Metro.dll
-D:\UnBreakable\Vista\bin\Debug\System.Windows.Interactivity.dll
-D:\UnBreakable\Vista\bin\Debug\BibliotecaClase.pdb
-D:\UnBreakable\Vista\bin\Debug\ControlzEx.pdb
-D:\UnBreakable\Vista\bin\Debug\MahApps.Metro.pdb
-D:\UnBreakable\Vista\bin\Debug\MahApps.Metro.xml
-D:\UnBreakable\Vista\obj\Debug\Vista.csprojResolveAssemblyReference.cache
-D:\UnBreakable\Vista\obj\Debug\Resources\Icons.baml
-D:\UnBreakable\Vista\obj\Debug\Resources\IconsNonShared.baml
-D:\UnBreakable\Vista\obj\Debug\CrearContrato.g.cs
-D:\UnBreakable\Vista\obj\Debug\ListarContrato.g.cs
-D:\UnBreakable\Vista\obj\Debug\MainWindow.g.cs
-D:\UnBreakable\Vista\obj\Debug\WpfCliente.g.cs
-D:\UnBreakable\Vista\obj\Debug\WpfListadoCliente.g.cs
-D:\UnBreakable\Vista\obj\Debug\App.g.cs
-D:\UnBreakable\Vista\obj\Debug\Vista_MarkupCompile.cache
-D:\UnBreakable\Vista\obj\Debug\Vista_MarkupCompile.lref
-D:\UnBreakable\Vista\obj\Debug\App.baml
-D:\UnBreakable\Vista\obj\Debug\CrearContrato.baml
-D:\UnBreakable\Vista\obj\Debug\ListarContrato.baml
-D:\UnBreakable\Vista\obj\Debug\MainWindow.baml
-D:\UnBreakable\Vista\obj\Debug\WpfCliente.baml
-D:\UnBreakable\Vista\obj\Debug\WpfListadoCliente.baml
-D:\UnBreakable\Vista\obj\Debug\Vista.g.resources
-D:\UnBreakable\Vista\obj\Debug\Vista.Properties.Resources.resources
-D:\UnBreakable\Vista\obj\Debug\Vista.csproj.GenerateResource.Cache
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\bin\Debug\BibliotecaClase.dll
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\bin\Debug\BibliotecaClase.pdb
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\WpfCliente.g.cs
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\WpfListadoCliente.g.cs
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\WpfCliente.baml
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\WpfListadoCliente.baml
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\WPFCrearContrato.g.cs
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\WPFListarContrato.g.cs
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\WPFCrearContrato.baml
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\WPFListarContrato.baml
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\bin\Debug\Vista.exe.config
-C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\obj\Debug\Vista.exe
-C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\obj\Debug\Vista.pdb
-C:\Users\chida\Desktop\hoho\Duplicado\UnBreakable\Vista\bin\Debug\Vista.exe.config
-C:\Users\chida\Desktop\hoho\Duplicado\UnBreakable\Vista\obj\Debug\Vista.exe
-C:\Users\chida\Desktop\hoho\Duplicado\UnBreakable\Vista\obj\Debug\Vista.pdb
+C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\bin\Debug\Vista.exe
+C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\bin\Debug\Vista.pdb
+C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\bin\Debug\BibliotecaClase.dll
+C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\bin\Debug\BibliotecaControlador.dll
+C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\bin\Debug\ControlzEx.dll
+C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\bin\Debug\MahApps.Metro.dll
+C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\bin\Debug\BibliotecaClase.pdb
+C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\bin\Debug\BibliotecaControlador.pdb
+C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\bin\Debug\ControlzEx.pdb
+C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\bin\Debug\MahApps.Metro.pdb
+C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\bin\Debug\MahApps.Metro.xml
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\obj\Debug\Vista.csprojResolveAssemblyReference.cache
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\obj\Debug\Resources\Icons.baml
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\obj\Debug\Resources\IconsNonShared.baml
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\obj\Debug\WPFCrearContrato.g.cs
+C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\obj\Debug\WpfEvento.g.cs
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\obj\Debug\WPFListarContrato.g.cs
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\obj\Debug\MainWindow.g.cs
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\obj\Debug\WpfCliente.g.cs
@@ -104,18 +23,9 @@ C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\obj\Debug\WpfListadoC
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\obj\Debug\App.g.cs
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\obj\Debug\Vista_MarkupCompile.cache
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\obj\Debug\Vista_MarkupCompile.lref
-C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\bin\Debug\Vista.exe
-C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\bin\Debug\Vista.pdb
-C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\bin\Debug\BibliotecaClase.dll
-C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\bin\Debug\ControlzEx.dll
-C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\bin\Debug\MahApps.Metro.dll
-C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\bin\Debug\System.Windows.Interactivity.dll
-C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\bin\Debug\BibliotecaClase.pdb
-C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\bin\Debug\ControlzEx.pdb
-C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\bin\Debug\MahApps.Metro.pdb
-C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\bin\Debug\MahApps.Metro.xml
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\obj\Debug\App.baml
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\obj\Debug\WPFCrearContrato.baml
+C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\obj\Debug\WpfEvento.baml
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\obj\Debug\WPFListarContrato.baml
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\obj\Debug\MainWindow.baml
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\obj\Debug\WpfCliente.baml
@@ -123,13 +33,45 @@ C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\obj\Debug\WpfListadoC
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\obj\Debug\Vista.g.resources
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\obj\Debug\Vista.Properties.Resources.resources
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\obj\Debug\Vista.csproj.GenerateResource.Cache
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\bin\Debug\BibliotecaClase.dll
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\bin\Debug\BibliotecaClase.pdb
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\WPFCrearContrato.g.cs
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\WPFListarContrato.g.cs
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\WpfCliente.g.cs
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\WpfListadoCliente.g.cs
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\WPFCrearContrato.baml
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\WPFListarContrato.baml
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\WpfCliente.baml
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\WpfListadoCliente.baml
+C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\obj\Debug\Vista.exe
+C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\obj\Debug\Vista.pdb
+C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\bin\Debug\Vista.exe.config
+C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\Vista.exe
+C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\Vista.pdb
+C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\bin\Debug\Vista.exe
+C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\bin\Debug\Vista.pdb
+C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\bin\Debug\BibliotecaClase.dll
+C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\bin\Debug\BibliotecaControlador.dll
+C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\bin\Debug\ControlzEx.dll
+C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\bin\Debug\MahApps.Metro.dll
+C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\bin\Debug\BibliotecaClase.pdb
+C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\bin\Debug\BibliotecaControlador.pdb
+C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\bin\Debug\ControlzEx.pdb
+C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\bin\Debug\MahApps.Metro.pdb
+C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\bin\Debug\MahApps.Metro.xml
+C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\Vista.csprojResolveAssemblyReference.cache
+C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\Resources\Icons.baml
+C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\Resources\IconsNonShared.baml
+C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\WPFCrearContrato.g.cs
+C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\WpfEvento.g.cs
+C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\WPFListarContrato.g.cs
+C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\MainWindow.g.cs
+C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\WpfCliente.g.cs
+C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\WpfListadoCliente.g.cs
+C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\App.g.cs
+C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\Vista_MarkupCompile.cache
+C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\Vista_MarkupCompile.lref
+C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\App.baml
+C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\WPFCrearContrato.baml
+C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\WpfEvento.baml
+C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\WPFListarContrato.baml
+C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\MainWindow.baml
+C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\WpfCliente.baml
+C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\WpfListadoCliente.baml
+C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\Vista.g.resources
+C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\Vista.Properties.Resources.resources
+C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\Vista.csproj.GenerateResource.Cache
+D:\UnBreakable\Vista\bin\Debug\Vista.exe.config
+D:\UnBreakable\Vista\obj\Debug\Vista.exe
+D:\UnBreakable\Vista\obj\Debug\Vista.pdb

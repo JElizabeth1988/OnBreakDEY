@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using BibliotecaClase;
+using BibliotecaControlador;
 
 using MahApps.Metro.Controls;
 using MahApps.Metro.Controls.Dialogs;
@@ -23,15 +25,32 @@ namespace Vista
     /// </summary>
     public partial class ListarContrato : MetroWindow
     {
+        Crear_Contrato cc;//recibir a crear contrato
+
+
         public ListarContrato()
         {
             InitializeComponent();
+           
+            try
+            {
+                DaoContrato dao = new DaoContrato(); 
+                dgvLista.ItemsSource = dao.Listar(); 
+                //dgvLista.Items.Refresh(); 
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error al Listar"+ex.Message);
+            }
             button1.Visibility = Visibility.Hidden;
         }
 
-        public ListarContrato(MainWindow origen)
+        public ListarContrato(Crear_Contrato origen)
         {
             InitializeComponent();
+            cc = origen;
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
@@ -45,6 +64,11 @@ namespace Vista
                 button1.Visibility = Visibility.Hidden;
             }
             
+        }
+
+        private void dgvLista_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

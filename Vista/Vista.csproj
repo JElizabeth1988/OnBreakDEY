@@ -70,10 +70,17 @@
     <Compile Include="WpfCliente.xaml.cs">
       <DependentUpon>WpfCliente.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WpfEvento.xaml.cs">
+      <DependentUpon>WpfEvento.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WpfListadoCliente.xaml.cs">
       <DependentUpon>WpfListadoCliente.xaml</DependentUpon>
     </Compile>
     <Page Include="WPFCrearContrato.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WpfEvento.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -155,6 +162,10 @@
     <ProjectReference Include="..\BibliotecaClase\BibliotecaClases.csproj">
       <Project>{c44072f2-9415-4243-819c-a664b0744639}</Project>
       <Name>BibliotecaClases</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BibliotecaControlador\BibliotecaControlador.csproj">
+      <Project>{5f5241b3-dbf9-4b09-b205-3efa19c66622}</Project>
+      <Name>BibliotecaControlador</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

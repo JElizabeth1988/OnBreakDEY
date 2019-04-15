@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using BibliotecaClase;
+using BibliotecaControlador;
 
 using MahApps.Metro.Controls;
 using MahApps.Metro.Controls.Dialogs;
@@ -24,11 +25,55 @@ namespace Vista
     /// </summary>
     public partial class wpfListadoCliente : MetroWindow
     {
+        WpfCliente cl;//recibir a cliente
+        private Crear_Contrato crear_Contrato;
+
         public wpfListadoCliente()
         {
             InitializeComponent();
+            btnPasar.Visibility = Visibility.Hidden;
+
+            try
+            {
+                DaoCliente dao = new DaoCliente();
+                dgLista.ItemsSource = dao.Listar();
+                dgLista.Items.Refresh();
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error!" + ex.Message);
+            }
+        }//llamado desde menu principal, el btn traspasar no se ve
+
+        public wpfListadoCliente(WpfCliente origen)
+        {
+            InitializeComponent();
+            cl = origen;
+        
         }
 
-       
+        public wpfListadoCliente(Crear_Contrato crear_Contrato)
+        {
+            this.crear_Contrato = crear_Contrato;
+        }
+
+        private void btnSalir_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void btnPasar_Click(object sender, RoutedEventArgs e)
+        {
+            if (btnPasar.Visibility == Visibility.Hidden)
+            {
+                btnPasar.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                btnPasar.Visibility = Visibility.Hidden;
+            }
+        }
     }
 }

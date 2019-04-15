@@ -45,6 +45,7 @@ namespace Vista
         //boton administracion contrato
         private void Tile_Click_4(object sender, RoutedEventArgs e)
         {
+
             Crear_Contrato contrato = new Crear_Contrato();
             contrato.Show();
         }
