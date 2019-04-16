@@ -15,7 +15,6 @@ namespace BibliotecaClase
         private int _personalAdicional;
 
 
-
         //Cálculo valor Contrato
 
         public int ValorBase
@@ -51,7 +50,7 @@ namespace BibliotecaClase
         {
 
         }
-
+       
 
 
     }

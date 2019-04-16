@@ -26,17 +26,18 @@ namespace Vista
     public partial class ListarContrato : MetroWindow
     {
         Crear_Contrato cc;//recibir a crear contrato
-
+        private WpfCliente cli = new WpfCliente();
 
         public ListarContrato()
         {
             InitializeComponent();
+            btnPasar.Visibility = Visibility.Hidden;
            
             try
             {
                 DaoContrato dao = new DaoContrato(); 
                 dgvLista.ItemsSource = dao.Listar(); 
-                //dgvLista.Items.Refresh(); 
+                dgvLista.Items.Refresh(); 
 
             }
             catch (Exception ex)
@@ -44,27 +45,56 @@ namespace Vista
 
                 MessageBox.Show("Error al Listar"+ex.Message);
             }
-            button1.Visibility = Visibility.Hidden;
+            
         }
 
+        //Llamado Ventana Principal
         public ListarContrato(Crear_Contrato origen)
         {
             InitializeComponent();
             cc = origen;
+
+            try
+            {
+
+                DaoContrato dao = new DaoContrato();
+                dgvLista.ItemsSource = dao.Listar();
+                dgvLista.Items.Refresh();
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error al Listar" + ex.Message);
+            }
+        }
+
+        //THIS
+        public ListarContrato(WpfCliente cli)
+        {
+            this.cli = cli;
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            //this.Close();
-            if (button1.Visibility == Visibility.Hidden)
+            Close();
+        }
+
+        private void btnPasar_Click(object sender, RoutedEventArgs e)
+        {
+           
+            if (btnPasar.Visibility == Visibility.Hidden)
             {
-                button1.Visibility = Visibility.Visible;
+                btnPasar.Visibility = Visibility.Visible;
             }
             else {
-                button1.Visibility = Visibility.Hidden;
+                btnPasar.Visibility = Visibility.Hidden;
             }
             
         }
+
+
+        
 
         private void dgvLista_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
