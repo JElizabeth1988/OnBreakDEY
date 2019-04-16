@@ -10,7 +10,7 @@
                       
         xmlns:local="clr-namespace:Vista"
         mc:Ignorable="d"
-        Title="OnBreak - Lista de Clientes" Height="452.333" Width="511.334" WindowTitleBrush="Black" WindowStyle="ToolWindow" Background="#FF9FE7F7" FontWeight="Bold" WindowStartupLocation="CenterScreen" Icon="Imagenes/white_logo_dark_background.jpg">
+        Title="OnBreak - Lista de Clientes" Height="452.333" Width="511.334" WindowTitleBrush="Black" WindowStyle="ToolWindow" Background="#FF9FE7F7" FontWeight="Bold" WindowStartupLocation="CenterOwner" Icon="Imagenes/white_logo_dark_background.jpg">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="158*"/>
@@ -21,12 +21,12 @@
         <Button x:Name="btnPasar" Content="Traspasar" HorizontalAlignment="Left" Margin="68,364,0,0" VerticalAlignment="Top" Width="89" Background="#FFCACACA" FontWeight="Normal" Click="btnPasar_Click"/>
         <DataGrid x:Name="dgLista" HorizontalAlignment="Left" Margin="68,171,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="173" Width="376"/>
         <Button x:Name="btnSalir" Content="Salir" HorizontalAlignment="Left" Margin="21.667,364,0,0" VerticalAlignment="Top" Width="75" Background="#FFCACACA" FontWeight="Normal" Grid.Column="2" Click="btnSalir_Click"/>
-        <GroupBox x:Name="gbFiltrar" Header="Filtro" HorizontalAlignment="Left" Margin="68,10,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="144" Width="376">
+        <GroupBox x:Name="gbFiltrar" Header="Filtrar Información" HorizontalAlignment="Left" Margin="68,10,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="144" Width="376">
             <Grid HorizontalAlignment="Left" Height="110" Margin="10,4,0,-34" VerticalAlignment="Top" Width="351">
                 <Label x:Name="label" Content="Rut" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,1,0,0"/>
                 <Label x:Name="label1" Content="Tipo de Empresa" HorizontalAlignment="Left" Margin="0,32,0,0" VerticalAlignment="Top"/>
                 <Label x:Name="label2" Content="Actividad" HorizontalAlignment="Left" Margin="0,71,0,0" VerticalAlignment="Top"/>
-                <TextBox x:Name="txtFiltroRut" HorizontalAlignment="Left" Height="23" Margin="113,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                <TextBox x:Name="txtFiltroRut"  Controls:TextBoxHelper.Watermark="Ingrese Rut" HorizontalAlignment="Left" Height="23" Margin="113,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontWeight="Normal"/>
                 <ComboBox x:Name="cbTipoEmp" HorizontalAlignment="Left" Margin="113,34,0,0" VerticalAlignment="Top" Width="120" Height="26"/>
                 <ComboBox x:Name="cbActiv" HorizontalAlignment="Left" Margin="113,71,0,0" VerticalAlignment="Top" Width="120"/>
                 <Button x:Name="btnFiltrar" Content="Filtrar" HorizontalAlignment="Left" Margin="254,35,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Click="btnFiltrar_Click"/>

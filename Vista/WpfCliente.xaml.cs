@@ -33,6 +33,8 @@ namespace Vista
         {
             InitializeComponent();
 
+            btnModificar.Visibility = Visibility.Hidden;//el botón Modificar no se ve
+
             //llenar el combo box con los datos del enumerador
             cbActividad.ItemsSource = Enum.GetValues(typeof
                 (ActividadEmpresa));
@@ -115,14 +117,15 @@ namespace Vista
             }
         }
 
-        //Eliminar
+        //Botón Eliminar
         private void btnEliminar_Click(object sender, RoutedEventArgs e)
         {
+            //falta validar que no tenga contratos asociados!!!!
             wpfListadoCliente lis = new wpfListadoCliente();
             Cliente cli = (Cliente)lis.dgLista.SelectedItem;
             MessageBoxResult respuesta =
                 MessageBox.Show(
-                    "Desea eliminar?",
+                    "¿Desea eliminar al Cliente?",
                     "Eliminar",
                     MessageBoxButton.YesNo,
                     MessageBoxImage.Warning);
@@ -131,18 +134,18 @@ namespace Vista
                 bool resp = new DaoCliente().Eliminar(cli.Rut);
                 if (resp)
                 {
-                    MessageBox.Show("elimino");
+                    MessageBox.Show("Cliente eliminado");
                     lis.dgLista.ItemsSource =
                         new DaoCliente().Listar();
                 }
                 else
                 {
-                    MessageBox.Show("no elimino");
+                    MessageBox.Show("No se eliminó al Cliente");
                 }
             }
             else
             {
-                MessageBox.Show("cancelo operacion");
+                MessageBox.Show("Operación Cancelada");
             }
 
         }
@@ -212,6 +215,9 @@ namespace Vista
             }
         }
 
+        private void btnModificar_Click(object sender, RoutedEventArgs e)
+        {
 
+        }
     }
 }
