@@ -153,5 +153,122 @@ namespace Vista
         {
             this.Close();
         }
+
+
+        //BUSCAR CONTRATO---------------------------------------------------------------------
+
+
+        public void BuscarContrato()
+        {
+            try
+            {
+                Contrato c = new DaoContrato().
+                    BuscarContrato(txtNumero.Text);
+                if (c != null)
+                {
+                    dpFechaInicio.Text = c.FechaInicioEvento;
+                    txtHoraInicio.Text = c.HoraInicio.ToString();
+                    txtMinutoInicio.Text = c.MinutoInicio.ToString();
+                    txtHoraTermino.Text = c.HoraTermino.ToString();
+                    txtMinutoTermino.Text = c.MinutoTermino.ToString();
+                    txtDireccion.Text = c.Direccion;
+                    txtNumeroAsistentes.Text = c.NumeroAsistentes.ToString();
+                    cboTipo.Text = c.Evento.ToString();
+                    txtObservaciones.Text = c.Observaciones;
+                }
+                else
+                {
+                    MessageBox.Show("Contrato No encontrado");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al buscar");
+                //Logger.Mensaje(ex.Message);
+
+            }
+        }
+
+       
+        //BOTON
+        private void btnBuscarContrato_Click_2(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Contrato c = new DaoContrato().
+                    BuscarContrato(txtNumero.Text);
+                if (c != null)
+                {
+                    dpFechaInicio.Text = c.FechaInicioEvento;
+                    txtHoraInicio.Text = c.HoraInicio.ToString();
+                    txtMinutoInicio.Text = c.MinutoInicio.ToString();
+                    txtHoraTermino.Text = c.HoraTermino.ToString();
+                    txtMinutoTermino.Text = c.MinutoTermino.ToString();
+                    txtDireccion.Text = c.Direccion;
+                    txtNumeroAsistentes.Text = c.NumeroAsistentes.ToString();
+                    cboTipo.Text = c.Evento.ToString();
+                    txtObservaciones.Text = c.Observaciones;
+                }
+                else
+                {
+                    MessageBox.Show("Contrato no Encontrado");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al buscar");
+                //Logger.Mensaje(ex.Message);
+
+            }
+
+        }
+
+        //BUSCAR CLIENTE
+        public void BuscarCliente()
+        {
+            try
+            {
+                Cliente c = new DaoCliente().
+                    BuscarCliente(txtBuscarCliente.Text);
+                if (c != null)
+                {
+                    txtNombre.Text = c.NombreContacto;
+                }
+                else
+                {
+                    MessageBox.Show("Cliente no encontrado");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al buscar");
+                //Logger.Mensaje(ex.Message);
+
+            }
+        }
+
+
+        private void btnCliente_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Cliente c = new DaoCliente().
+                    BuscarCliente(txtBuscarCliente.Text);
+                if (c != null)
+                {
+                    txtNombre.Text = c.NombreContacto;
+                }
+                else
+                {
+                    MessageBox.Show("Cliente no Encontrado");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al buscar");
+                //Logger.Mensaje(ex.Message);
+
+            }
+        }
     }
 }

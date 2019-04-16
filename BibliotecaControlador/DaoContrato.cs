@@ -57,7 +57,7 @@ namespace BibliotecaControlador
         }
 
         //BUSCAR----------------------------------
-        public Contrato Buscar(string numero)
+        public Contrato BuscarContrato(string numero)
         {
             foreach (Contrato item in contratos)
             {

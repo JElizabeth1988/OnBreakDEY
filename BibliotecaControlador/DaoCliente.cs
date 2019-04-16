@@ -119,7 +119,18 @@ namespace BibliotecaControlador
             return false;
         }
 
-
+        //BUSCAR CLIENTE (CAMILA - CREAR CONTRATO)
+        public Cliente BuscarCliente(string rut)
+        {
+            foreach (Cliente item in clientes)
+            {
+                if (item.Rut.Equals(rut))
+                {
+                    return item;
+                }
+            }
+            return null;
+        }
 
 
     }
