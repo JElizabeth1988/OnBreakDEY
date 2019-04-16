@@ -10,7 +10,7 @@
                       
         xmlns:local="clr-namespace:Vista"
         mc:Ignorable="d"
-        Title="OnBreak - Administrar Contrato" Height="610.835" Width="995.628" WindowStartupLocation="CenterScreen" FontWeight="Bold" WindowTitleBrush="Black" Icon="Imagenes/white_logo_dark_background.jpg">
+        Title="OnBreak - Administrar Contrato" Height="583.835" Width="985.128" WindowStartupLocation="CenterScreen" FontWeight="Bold" WindowTitleBrush="Black" Icon="Imagenes/white_logo_dark_background.jpg">
     <Grid Margin="0,0,-8,-1" Background="#FF84D9E8" Height="798" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
         <Grid.RenderTransform>
             <TransformGroup>
@@ -34,8 +34,8 @@
             <RowDefinition Height="Auto" MinHeight="27"/>
             <RowDefinition Height="571*"/>
         </Grid.RowDefinitions>
-        <Rectangle Grid.Column="3" Fill="#FF99AEB2" HorizontalAlignment="Left" Height="29" Margin="88,7,0,0" Stroke="#FFA0A0A0" VerticalAlignment="Top" Width="217"/>
-        <Rectangle HorizontalAlignment="Left" Height="174" Margin="108,10,0,0" Stroke="#FFA0A0A0" VerticalAlignment="Top" Width="640" Grid.ColumnSpan="4" Fill="#FF84D9E8"/>
+        <Rectangle Grid.Column="3" Fill="#CC119EDA" HorizontalAlignment="Left" Height="29" Margin="92,3,0,0" Stroke="#FFA0A0A0" VerticalAlignment="Top" Width="211"/>
+        <Rectangle HorizontalAlignment="Left" Height="174" Margin="108,10,0,0" Stroke="#CC119EDA" VerticalAlignment="Top" Width="640" Grid.ColumnSpan="4" Fill="#FF84D9E8"/>
         <Label x:Name="label_Copy1" Content="Número:" HorizontalAlignment="Left" Height="36" Margin="142,26,0,0" VerticalAlignment="Top" Width="118"/>
         <TextBox x:Name="txtNumero" Controls:TextBoxHelper.Watermark ="Ingrese Número Contrato" HorizontalAlignment="Left" Height="26" Margin="244,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166"/>
         <Button x:Name="btnBuscarContrato" Content="Buscar" HorizontalAlignment="Left" Margin="49,26,0,0" VerticalAlignment="Top" Width="74" Height="28" FontWeight="Normal" Grid.Column="1" Click="btnBuscarContrato_Click_2" />
@@ -85,7 +85,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="button" Content="Cerrar" HorizontalAlignment="Left" Margin="0,201,0,0" Grid.Row="3" VerticalAlignment="Top" Width="76" FontWeight="Normal" Grid.Column="3" Height="28" Click="button_Click"/>
+        <Button x:Name="button" Content="Cerrar" HorizontalAlignment="Left" Margin="145,239,0,0" Grid.Row="3" VerticalAlignment="Top" Width="76" FontWeight="Normal" Grid.Column="3" Height="28" Click="button_Click"/>
         <Label x:Name="label6" Content="Tipo Evento:" HorizontalAlignment="Left" Margin="136,60,0,0" VerticalAlignment="Top" Height="26" Width="82" Grid.Row="3"/>
         <ComboBox x:Name="cboTipo" HorizontalAlignment="Left" Margin="243,60,0,0" VerticalAlignment="Top" Width="145" AutomationProperties.IsOffscreenBehavior="Onscreen" Height="26" Grid.Row="3"/>
         <Label x:Name="label4" Content="Dirección:" HorizontalAlignment="Left" Margin="136,0,0,0" VerticalAlignment="Top" Height="26" Width="69" Grid.Row="1" Grid.RowSpan="2"/>
@@ -94,10 +94,10 @@
         <TextBox x:Name="txtNumeroAsistentes" HorizontalAlignment="Left" Height="26" Margin="243,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="36" Grid.Row="3"/>
         <Label x:Name="label7" Content="Observaciones:" HorizontalAlignment="Left" Margin="134,106,0,0" Grid.Row="3" VerticalAlignment="Top" Height="26" Width="95"/>
         <TextBox x:Name="txtObservaciones" HorizontalAlignment="Left" Height="36" Margin="243,112,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="163"/>
-        <Label x:Name="label9" Content="Buscar" HorizontalAlignment="Left" Margin="44,10,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="#FF5F6566" Height="26" Width="47"/>
-        <Label x:Name="label5" Content="Contrato Vigente:" HorizontalAlignment="Left" Margin="88,10,0,0" VerticalAlignment="Top" Height="26" Width="118" Grid.Column="3"/>
-        <RadioButton x:Name="rbSi" Content="Sí" HorizontalAlignment="Left" Margin="203,14,0,0" VerticalAlignment="Top" IsChecked="True" Height="18" Width="34" GroupName="vigente" Grid.Column="3"/>
-        <RadioButton x:Name="rbNo" Content="No" HorizontalAlignment="Left" Margin="253,14,0,0" VerticalAlignment="Top" Height="18" Width="52" GroupName="vigente" Grid.Column="3"/>
-        <Button x:Name="btnCliente" Content="Buscar" Grid.Column="1" HorizontalAlignment="Left" Margin="49,83,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Click="btnCliente_Click" Height="29"/>
+        <Label x:Name="label9" Content="Buscar" HorizontalAlignment="Left" Margin="108,6,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="Black" Height="26" Width="56" FontSize="14"/>
+        <Label x:Name="label5" Content="Contrato Vigente:" HorizontalAlignment="Left" Margin="92,3,0,0" VerticalAlignment="Top" Height="26" Width="118" Grid.Column="3"/>
+        <RadioButton x:Name="rbSi" Content="Sí" HorizontalAlignment="Left" Margin="207,10,0,0" VerticalAlignment="Top" IsChecked="True" Height="18" Width="34" GroupName="vigente" Grid.Column="3"/>
+        <RadioButton x:Name="rbNo" Content="No" HorizontalAlignment="Left" Margin="257,10,0,0" VerticalAlignment="Top" Height="18" Width="52" GroupName="vigente" Grid.Column="3"/>
+        <Button x:Name="btnCliente" Content="Buscar" Grid.Column="1" HorizontalAlignment="Left" Margin="49,79,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Click="btnCliente_Click" Height="29"/>
     </Grid>
 </Controls:MetroWindow>

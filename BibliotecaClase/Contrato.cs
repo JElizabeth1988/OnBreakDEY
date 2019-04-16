@@ -23,8 +23,7 @@ namespace BibliotecaClase
         private String _observaciones;
 
 
-
-//PROPIEDADES
+        //PROPIEDADES
 
         public String Numero
         {
@@ -130,6 +129,7 @@ namespace BibliotecaClase
                 }
             }
         }
+
 
 
         public Contrato()
