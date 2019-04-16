@@ -45,7 +45,7 @@ namespace Vista
             try
             {
                 String numero = DateTime.Now.ToString("yyyyMMddHHmm");
-                String fechaCreacion = DateTime.Now.ToString("dd/MM/yyyy");
+                String fechaCreacion = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
                 String vigente;
                 String fechaTermino;
                 if (rbSi.IsChecked == true)
@@ -57,7 +57,7 @@ namespace Vista
                 else
                 {
                     vigente = "No";
-                    fechaTermino = DateTime.Now.ToString("dd/MM/yyyy");
+                    fechaTermino = DateTime.Now.ToString("dd/MM/yyyy HH:mm"); ;
 
 
 
@@ -66,13 +66,7 @@ namespace Vista
                 //EVENTO
 
                 //inicio
-                String fechaInicioEvento = dpFechaInicio.Text;
-                int horaInicio = int.Parse(txtHoraInicio.Text);
-                int minutoInicio = int.Parse(txtMinutoInicio.Text);
                 //termino
-                String fechaFinEvento = dpFechaFinEvento.Text;
-                int horaTermino = int.Parse(txtHoraTermino.Text);
-                int minutoTermino = int.Parse(txtMinutoTermino.Text);
                 String direccion = txtDireccion.Text;
                 int numeroAsistentes = int.Parse(txtNumeroAsistentes.Text);
                 TipoEvento evento = (TipoEvento)cboTipo.SelectedItem;
@@ -87,12 +81,6 @@ namespace Vista
                     FechaCreacion = fechaCreacion,
                     Vigente = vigente,
                     FechaTermino = fechaTermino,
-                    FechaInicioEvento = fechaInicioEvento,
-                    HoraInicio = horaInicio,
-                    MinutoInicio = minutoInicio,
-                    FechaFinEvento = fechaFinEvento,
-                    HoraTermino = horaTermino,
-                    MinutoTermino = minutoTermino,
                     Direccion = direccion,
                     NumeroAsistentes = numeroAsistentes,
                     Evento = evento,
@@ -113,7 +101,7 @@ namespace Vista
             catch (Exception ex)
             {
 
-                MessageBox.Show("Todos los campos son obligatorios");
+                MessageBox.Show(":(");
             }
 
 
@@ -166,11 +154,6 @@ namespace Vista
                     BuscarContrato(txtNumero.Text);
                 if (c != null)
                 {
-                    dpFechaInicio.Text = c.FechaInicioEvento;
-                    txtHoraInicio.Text = c.HoraInicio.ToString();
-                    txtMinutoInicio.Text = c.MinutoInicio.ToString();
-                    txtHoraTermino.Text = c.HoraTermino.ToString();
-                    txtMinutoTermino.Text = c.MinutoTermino.ToString();
                     txtDireccion.Text = c.Direccion;
                     txtNumeroAsistentes.Text = c.NumeroAsistentes.ToString();
                     cboTipo.Text = c.Evento.ToString();
@@ -199,11 +182,7 @@ namespace Vista
                     BuscarContrato(txtNumero.Text);
                 if (c != null)
                 {
-                    dpFechaInicio.Text = c.FechaInicioEvento;
-                    txtHoraInicio.Text = c.HoraInicio.ToString();
-                    txtMinutoInicio.Text = c.MinutoInicio.ToString();
-                    txtHoraTermino.Text = c.HoraTermino.ToString();
-                    txtMinutoTermino.Text = c.MinutoTermino.ToString();
+                  
                     txtDireccion.Text = c.Direccion;
                     txtNumeroAsistentes.Text = c.NumeroAsistentes.ToString();
                     cboTipo.Text = c.Evento.ToString();
@@ -269,6 +248,11 @@ namespace Vista
                 //Logger.Mensaje(ex.Message);
 
             }
+        }
+
+        private void btnModificar_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

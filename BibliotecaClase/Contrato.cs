@@ -18,19 +18,11 @@ namespace BibliotecaClase
         private String _fechaCreacion;
         private String  _vigente;
         private String _fechaTermino;
-        private String _fechaInicioEvento;
-        private int _horaInicio;
-        private int _minutoInicio;
-        private String _fechaFinEvento;
-        private int _horaTermino;
-        private int _minutoTermino;
         private String _direccion;
         private int _numeroAsistentes;
         private String _observaciones;
 
-        
-//COLABORACIÓN
-        Evento even = new Evento();
+
 
 //PROPIEDADES
 
@@ -85,105 +77,8 @@ namespace BibliotecaClase
             }
         }
 
-        public String FechaInicioEvento
-        {
-            get { return _fechaInicioEvento; }
-            set
-            {
 
-                if (value != null)
-                {
-                    _fechaInicioEvento = value;
-                }
-                else
-                {
-                    throw new ArgumentException("ERROR: Campo Fecha Inicio no puede estar Vacío");
-                }
-            }
-        }
-
-        public int HoraInicio
-        {
-            get { return _horaInicio; }
-            set
-            {
-
-                if (value != 0)
-                {
-                    _horaInicio = value;
-                }
-                else
-                {
-                    throw new ArgumentException("ERROR: Campo Hora Inicio no puede estar Vacío");
-                }
-            }
-        }
-
-        public int MinutoInicio
-        {
-            get { return _minutoInicio; }
-            set
-            {
-                if (value != 0)
-                {
-                    _minutoInicio = value;
-                }
-                else
-                {
-                    throw new ArgumentException("ERROR: Campo Minuto Inicio no puede estar Vacío");
-                }
-            }
-        }
-
-        public String FechaFinEvento
-        {
-            get { return _fechaFinEvento; }
-            set
-            {
-                if (value != null)
-                {
-                    _fechaFinEvento = value;
-                }
-                else
-                {
-                    throw new ArgumentException("ERROR: Campo Fecha Termino no puede estar Vacío");
-                }
-
-            }
-        }
-
-        public int HoraTermino
-        {
-            get { return _horaTermino; }
-            set
-            {
-                if (value != 0)
-                {
-                    _horaTermino = value;
-                }
-                else
-                {
-                    throw new ArgumentException("ERROR: Campo Hora Termino no puede estar Vacío");
-                }
-
-            }
-        }
-
-        public int MinutoTermino
-        {
-            get { return _minutoTermino; }
-            set
-            {
-                if (value != 0)
-                {
-                    _minutoTermino = value;
-                }
-                else
-                {
-                    throw new ArgumentException("ERROR: Campo Hora Termino no puede estar Vacío");
-                }
-            }
-        }
+     
 
         public String Direccion
         {
@@ -245,20 +140,12 @@ namespace BibliotecaClase
 
 
         public Contrato(String numero,String fechaCreacion ,String vigente,String fechaTermino,
-                        String fechaInicioEvento, int horaInicio, int minutoInicio,
-                        String fechaFinEvento,int horaTermino, int minutoTermino, 
                         String direccion, int numeroAsistentes,TipoEvento evento,String observaciones)
         {
             Numero = numero;
             FechaCreacion = fechaCreacion;
             Vigente = vigente;
             FechaTermino = fechaTermino ;
-            FechaInicioEvento = fechaInicioEvento;
-            HoraInicio = horaInicio;
-            MinutoInicio = minutoInicio;
-            FechaFinEvento = fechaFinEvento;
-            HoraTermino = horaTermino;
-            MinutoTermino = minutoTermino;
             Direccion = direccion;
             NumeroAsistentes = numeroAsistentes;
             Evento = evento;
