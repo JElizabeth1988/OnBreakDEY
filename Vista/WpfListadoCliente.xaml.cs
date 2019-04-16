@@ -124,7 +124,7 @@ namespace Vista
             try
             {
                 Cliente cli = new Cliente();
-                string rut = cl.txtRut.Text;
+                string rut = txtFiltroRut.Text;
                     
                 List<Cliente> lc = new DaoCliente()
                     .Filtro(rut);

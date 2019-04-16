@@ -251,7 +251,7 @@ namespace Vista
 
                 };
                 bool resp = dao.Modificar(c);
-                MessageBox.Show(resp ? "Actualizado" : "No Actualizado");
+                MessageBox.Show(resp ? "Actualizado" : "No Actualizado, (El rut no se debe modificar)");
 
             }
             catch (ArgumentException exa)//mensajes de reglas de negocios
