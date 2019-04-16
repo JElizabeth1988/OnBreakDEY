@@ -32,7 +32,13 @@ namespace Vista
         {
             InitializeComponent();
             btnPasar.Visibility = Visibility.Hidden;
-           
+
+            //COMBOBOX
+            cboTipoContrato.ItemsSource = Enum.GetValues(typeof
+                (TipoEvento));
+            cboTipoContrato.SelectedIndex = 0;
+
+
             try
             {
                 DaoContrato dao = new DaoContrato(); 
@@ -53,6 +59,11 @@ namespace Vista
         {
             InitializeComponent();
             cc = origen;
+
+            //COMBO BOX
+            cboTipoContrato.ItemsSource = Enum.GetValues(typeof
+                (TipoEvento));
+            cboTipoContrato.SelectedIndex = 0;
 
             try
             {
