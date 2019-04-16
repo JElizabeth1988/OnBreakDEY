@@ -112,11 +112,6 @@ namespace Vista
                 btnPasar.Visibility = Visibility.Hidden;//hacer que vuelva a desaparecer, en este caso no lo necesitamos
             }*/
             
-            if (cl.btnModificar.Visibility == Visibility.Hidden)
-            {
-                cl.btnModificar.Visibility = Visibility.Hidden;//hacer visible el botón
-
-            }
             Cliente cli = (Cliente)dgLista.SelectedItem;
             cl.txtRut.Text = cli.Rut;
             cl.Buscar();

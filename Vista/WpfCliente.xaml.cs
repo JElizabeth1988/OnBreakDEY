@@ -33,7 +33,7 @@ namespace Vista
         {
             InitializeComponent();
 
-            btnModificar.Visibility = Visibility.Hidden;//el botón Modificar no se ve
+            //btnModificar.Visibility = Visibility.Hidden;//el botón Modificar no se ve
 
             //llenar el combo box con los datos del enumerador
             cbActividad.ItemsSource = Enum.GetValues(typeof
@@ -178,7 +178,7 @@ namespace Vista
             catch (Exception ex)
             {
                 MessageBox.Show("error al buscar");
-                //Logger.Mensaje(ex.Message);
+                
 
             }
         }
@@ -215,9 +215,54 @@ namespace Vista
             }
         }
 
+        //Botón modificar
         private void btnModificar_Click(object sender, RoutedEventArgs e)
         {
+            /*if (btnModificar.Visibility == Visibility.Hidden)
+            {
+                btnModificar.Visibility = Visibility.Hidden;//hacer visible el botón
 
+            }
+            else
+            {
+                btnModificar.Visibility = Visibility.Hidden;//hacer que vuelva a desaparecer, en este caso no lo necesitamos
+            }*/
+
+            try
+            {
+                String rut = txtRut.Text;
+                String razonSocial = txtRazon.Text;
+                String nombreContacto = txtNombre.Text;
+                String mail = txtEmail.Text;
+                String direccion = txtDireccion.Text;
+                int telefono = int.Parse(txtTelefono.Text);
+                ActividadEmpresa actividad = (ActividadEmpresa)cbActividad.SelectedItem;
+                TipoEmpresa empresa = (TipoEmpresa)cbTipo.SelectedItem;
+                Cliente c = new Cliente()
+                {
+                    Rut = rut,
+                    RazonSocial = razonSocial,
+                    NombreContacto = nombreContacto,
+                    Mail = mail,
+                    Direccion = direccion,
+                    Telefono = telefono,
+                    Actividad = actividad,
+                    Empresa = empresa
+
+                };
+                bool resp = dao.Modificar(c);
+                MessageBox.Show(resp ? "Actualizado" : "No Actualizado");
+
+            }
+            catch (ArgumentException exa)//mensajes de reglas de negocios
+            {
+                MessageBox.Show(exa.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al Actualizar");
+
+            }
         }
     }
 }
