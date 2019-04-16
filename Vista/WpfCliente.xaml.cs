@@ -63,8 +63,8 @@ namespace Vista
         //Botón '?'
         private void btnPregunta_Click(object sender, RoutedEventArgs e)
         {
-            wpfListadoCliente lis = new wpfListadoCliente(this);
-            lis.Show();
+            wpfListadoCliente list = new wpfListadoCliente(this);
+            list.Show();
 
         }
 
