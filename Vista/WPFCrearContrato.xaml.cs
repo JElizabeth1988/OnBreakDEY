@@ -45,31 +45,28 @@ namespace Vista
             try
             {
                 String numero = DateTime.Now.ToString("yyyyMMddHHmm");
-                String fechaCreacion = dpCreacion.Text;
+                String fechaCreacion = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
                 String vigente;
                 String fechaTermino;
                 if (rbSi.IsChecked == true)
                 {
                     vigente = "Sí";
-                    fechaTermino = DateTime.Now.ToString("DD/MM/YYYY");
+                    fechaTermino = "Aún Vigente";
+                   
                 }
                 else
                 {
                     vigente = "No";
-                    fechaTermino = "Aún vigente";
+                    fechaTermino = DateTime.Now.ToString("dd/MM/yyyy HH:mm"); ;
+
+
 
                 }
 
                 //EVENTO
 
                 //inicio
-                String fechaInicioEvento = dpFechaInicio.Text;
-                int horaInicio = int.Parse(txtHoraInicio.Text);
-                int minutoInicio = int.Parse(txtMinutoInicio.Text);
                 //termino
-                String fechaTerminoEvento = dpFechaTerminoEvento.Text;
-                int horaTermino = int.Parse(txtHoraTermino.Text);
-                int minutoTermino = int.Parse(txtMinutoTermino.Text);
                 String direccion = txtDireccion.Text;
                 int numeroAsistentes = int.Parse(txtNumeroAsistentes.Text);
                 TipoEvento evento = (TipoEvento)cboTipo.SelectedItem;
@@ -84,12 +81,6 @@ namespace Vista
                     FechaCreacion = fechaCreacion,
                     Vigente = vigente,
                     FechaTermino = fechaTermino,
-                    FechaInicioEvento = fechaInicioEvento,
-                    HoraInicio = horaInicio,
-                    MinutoInicio = minutoInicio,
-                    FechaTerminoEvento = fechaTerminoEvento,
-                    HoraTermino = horaTermino,
-                    MinutoTermino = minutoTermino,
                     Direccion = direccion,
                     NumeroAsistentes = numeroAsistentes,
                     Evento = evento,
@@ -110,7 +101,7 @@ namespace Vista
             catch (Exception ex)
             {
 
-                MessageBox.Show("Todos los campos son obligatorios");
+                MessageBox.Show(":(");
             }
 
 
@@ -118,11 +109,7 @@ namespace Vista
 
         }
 
-        private void btnAgregarEvento_Click(object sender, RoutedEventArgs e)
-        {
-            WpfEvento evento = new WpfEvento();
-            evento.Show();
-        }
+       
 
         private void btnLimpiar_Click(object sender, RoutedEventArgs e)
         {
@@ -145,7 +132,7 @@ namespace Vista
 
         private void btnListadoCliente_Click(object sender, RoutedEventArgs e)
         {
-            wpfListadoCliente cli = new wpfListadoCliente();
+            wpfListadoCliente cli = new wpfListadoCliente(this);
             cli.Show();
 
         }
@@ -153,6 +140,119 @@ namespace Vista
         private void button_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+
+        //BUSCAR CONTRATO---------------------------------------------------------------------
+
+
+        public void BuscarContrato()
+        {
+            try
+            {
+                Contrato c = new DaoContrato().
+                    BuscarContrato(txtNumero.Text);
+                if (c != null)
+                {
+                    txtDireccion.Text = c.Direccion;
+                    txtNumeroAsistentes.Text = c.NumeroAsistentes.ToString();
+                    cboTipo.Text = c.Evento.ToString();
+                    txtObservaciones.Text = c.Observaciones;
+                }
+                else
+                {
+                    MessageBox.Show("Contrato No encontrado");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al buscar");
+                //Logger.Mensaje(ex.Message);
+
+            }
+        }
+
+       
+        //BOTON
+        private void btnBuscarContrato_Click_2(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Contrato c = new DaoContrato().
+                    BuscarContrato(txtNumero.Text);
+                if (c != null)
+                {
+                  
+                    txtDireccion.Text = c.Direccion;
+                    txtNumeroAsistentes.Text = c.NumeroAsistentes.ToString();
+                    cboTipo.Text = c.Evento.ToString();
+                    txtObservaciones.Text = c.Observaciones;
+                }
+                else
+                {
+                    MessageBox.Show("Contrato no Encontrado");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al buscar");
+                //Logger.Mensaje(ex.Message);
+
+            }
+
+        }
+
+        //BUSCAR CLIENTE
+        public void BuscarCliente()
+        {
+            try
+            {
+                Cliente c = new DaoCliente().
+                    BuscarCliente(txtBuscarCliente.Text);
+                if (c != null)
+                {
+                    txtNombre.Text = c.NombreContacto;
+                }
+                else
+                {
+                    MessageBox.Show("Cliente no encontrado");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al buscar");
+                //Logger.Mensaje(ex.Message);
+
+            }
+        }
+
+
+        private void btnCliente_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Cliente c = new DaoCliente().
+                    BuscarCliente(txtBuscarCliente.Text);
+                if (c != null)
+                {
+                    txtNombre.Text = c.NombreContacto;
+                }
+                else
+                {
+                    MessageBox.Show("Cliente no Encontrado");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al buscar");
+                //Logger.Mensaje(ex.Message);
+
+            }
+        }
+
+        private void btnModificar_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

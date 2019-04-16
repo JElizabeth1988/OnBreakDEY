@@ -28,10 +28,21 @@ namespace Vista
         WpfCliente cl;//recibir a cliente
         private Crear_Contrato crear_Contrato;
 
+        //Llamado desde menú principal
         public wpfListadoCliente()
         {
             InitializeComponent();
-            btnPasar.Visibility = Visibility.Hidden;
+
+            btnPasar.Visibility = Visibility.Hidden;//el botón traspasar no se ve
+
+            //llenar el combo box con los datos del enumerador
+            cbActiv.ItemsSource = Enum.GetValues(typeof
+                (ActividadEmpresa));
+            cbActiv.SelectedIndex = 0;
+
+            cbTipoEmp.ItemsSource = Enum.GetValues(typeof
+                (TipoEmpresa));
+            cbTipoEmp.SelectedIndex = 0;
 
             try
             {
@@ -45,13 +56,36 @@ namespace Vista
 
                 MessageBox.Show("Error!" + ex.Message);
             }
-        }//llamado desde menu principal, el btn traspasar no se ve
+        }
 
+        //Llamado desde el modulo administrar Cliente
         public wpfListadoCliente(WpfCliente origen)
         {
             InitializeComponent();
             cl = origen;
-        
+
+            //llenar el combo box con los datos del enumerador
+            cbActiv.ItemsSource = Enum.GetValues(typeof
+                (ActividadEmpresa));
+            cbActiv.SelectedIndex = 0;
+
+            cbTipoEmp.ItemsSource = Enum.GetValues(typeof
+                (TipoEmpresa));
+            cbTipoEmp.SelectedIndex = 0;
+
+            try
+            {
+                DaoCliente dao = new DaoCliente();
+                dgLista.ItemsSource = dao.Listar();
+                dgLista.Items.Refresh();
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error al Listar!" + ex.Message);
+            }
+
         }
 
         public wpfListadoCliente(Crear_Contrato crear_Contrato)
@@ -59,21 +93,50 @@ namespace Vista
             this.crear_Contrato = crear_Contrato;
         }
 
+        //Botón Salir
         private void btnSalir_Click(object sender, RoutedEventArgs e)
         {
             Close();
         }
 
+        //Botón Pasar
         private void btnPasar_Click(object sender, RoutedEventArgs e)
         {
             if (btnPasar.Visibility == Visibility.Hidden)
             {
-                btnPasar.Visibility = Visibility.Hidden;
+                btnPasar.Visibility = Visibility.Hidden;//hacer visible el botón
+
             }
-            else
+            /*else
             {
-                btnPasar.Visibility = Visibility.Hidden;
+                btnPasar.Visibility = Visibility.Hidden;//hacer que vuelva a desaparecer, en este caso no lo necesitamos
+            }*/
+            
+            Cliente cli = (Cliente)dgLista.SelectedItem;
+            cl.txtRut.Text = cli.Rut;
+            cl.Buscar();
+
+        }
+
+        //Botón Filtrar
+        private void btnFiltrar_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Cliente cli = new Cliente();
+                string rut = txtFiltroRut.Text;
+                    
+                List<Cliente> lc = new DaoCliente()
+                    .Filtro(rut);
+                dgLista.ItemsSource = lc;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("error al Filtrar Información");
             }
         }
+
+        
+
     }
 }

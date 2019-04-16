@@ -8,11 +8,12 @@ namespace BibliotecaClase
 {
     public class Evento
     {
-       
+        private int _id;
+
         private int _valorBase;
         private int _personalBase;
+        private int _personalAdicional;
 
- 
 
         //Cálculo valor Contrato
 
@@ -33,11 +34,23 @@ namespace BibliotecaClase
             ValorBase = valorBase;PersonalBase = personalBase;
         }
 
+        public int PersonalAdicional
+        {
+            get { return _personalAdicional; }
+            set { _personalAdicional = value; }
+        }
+
+        public int Id
+        {
+            get { return _id; }
+            set { _id = value; }
+        }
+
         public Evento()
         {
 
         }
-
+       
 
 
     }

@@ -20,7 +20,8 @@ namespace BibliotecaControlador
             }
         }
 
-        //CRUD
+        //metodos customer C.R.U.D.
+        // Agregar
         public bool Agregar(Cliente cli)
         {
             if (ExisteCliente(cli.Rut) == false)
@@ -28,6 +29,7 @@ namespace BibliotecaControlador
                 clientes.Add(cli); return true;
             }
             return false;
+           
 
         }
 
@@ -51,11 +53,85 @@ namespace BibliotecaControlador
         }
 
         //Eliminar
-       /* public bool Eliminar( String rut)
+       public bool Eliminar( String rut)
         {
+            foreach (Cliente item in clientes)
+            {
+                if (item.Rut.Equals(rut))
+                {
+                    clientes.Remove(item);
+                    return true;
+                }
+            }
+            return false;
 
+         }
 
-        }*/
+        //Buscar
+        public Cliente Buscar(string rut)
+        {
+            foreach (Cliente item in clientes)
+            {
+                if (item.Rut.Equals(rut))
+                {
+                    return item;
+                }
+            }
+            return null;
+        }
+
+        //Filtrar por rut 
+        public List<Cliente> Filtro(string rut)
+        {
+            List<Cliente> cl = clientes.Where(x => x.Rut == rut).
+                ToList();
+            return cl;
+        }
+
+        //Filtrar por tipo de empresa
+        public List<Cliente> Filtro(TipoEmpresa tipo)
+        {
+            List<Cliente> cl = clientes.Where(x => x.Empresa == tipo).
+                ToList();
+            return cl;
+        }
+
+        //Filtrar por Actividad de la empresa
+        public List<Cliente> Filtro(ActividadEmpresa act)
+        {
+            List<Cliente> cl = clientes.Where(x => x.Actividad == act).
+                ToList();
+            return cl;
+        }
+
+        //Modificar
+        public bool Modificar(Cliente nuevoCliente)
+        {
+            foreach (Cliente item in clientes)
+            {
+                if (item.Rut.Equals(nuevoCliente.Rut))
+                {
+                    clientes.Remove(item);//remueve el cliente
+                    clientes.Add(nuevoCliente);//agrega los nuevos datos
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        //BUSCAR CLIENTE (CAMILA - CREAR CONTRATO)
+        public Cliente BuscarCliente(string rut)
+        {
+            foreach (Cliente item in clientes)
+            {
+                if (item.Rut.Equals(rut))
+                {
+                    return item;
+                }
+            }
+            return null;
+        }
+
 
     }
 }

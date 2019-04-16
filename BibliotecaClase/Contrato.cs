@@ -13,20 +13,17 @@ namespace BibliotecaClase
 
     public class Contrato
     {
+        
         private String _numero;
         private String _fechaCreacion;
         private String  _vigente;
         private String _fechaTermino;
-        private String _fechaInicioEvento;
-        private int _horaInicio;
-        private int _minutoInicio;
-        private String _fechaTerminoEvento;
-        private int _horaTermino;
-        private int _minutoTermino;
         private String _direccion;
         private int _numeroAsistentes;
         private String _observaciones;
 
+
+        //PROPIEDADES
 
         public String Numero
         {
@@ -79,105 +76,8 @@ namespace BibliotecaClase
             }
         }
 
-        public String FechaInicioEvento
-        {
-            get { return _fechaInicioEvento; }
-            set
-            {
 
-                if (value != null)
-                {
-                    _fechaInicioEvento = value;
-                }
-                else
-                {
-                    throw new ArgumentException("ERROR: Campo Fecha Inicio no puede estar Vacío");
-                }
-            }
-        }
-
-        public int HoraInicio
-        {
-            get { return _horaInicio; }
-            set
-            {
-
-                if (value != 0)
-                {
-                    _horaInicio = value;
-                }
-                else
-                {
-                    throw new ArgumentException("ERROR: Campo Hora Inicio no puede estar Vacío");
-                }
-            }
-        }
-
-        public int MinutoInicio
-        {
-            get { return _minutoInicio; }
-            set
-            {
-                if (value != 0)
-                {
-                    _minutoInicio = value;
-                }
-                else
-                {
-                    throw new ArgumentException("ERROR: Campo Minuto Inicio no puede estar Vacío");
-                }
-            }
-        }
-
-        public String FechaTerminoEvento
-        {
-            get { return _fechaTermino; }
-            set
-            {
-                if (value != null)
-                {
-                    _fechaTerminoEvento = value;
-                }
-                else
-                {
-                    throw new ArgumentException("ERROR: Campo Fecha Termino no puede estar Vacío");
-                }
-
-            }
-        }
-
-        public int HoraTermino
-        {
-            get { return _horaTermino; }
-            set
-            {
-                if (value != 0)
-                {
-                    _horaTermino = value;
-                }
-                else
-                {
-                    throw new ArgumentException("ERROR: Campo Hora Termino no puede estar Vacío");
-                }
-
-            }
-        }
-
-        public int MinutoTermino
-        {
-            get { return _minutoTermino; }
-            set
-            {
-                if (value != 0)
-                {
-                    _minutoTermino = value;
-                }
-                else
-                {
-                    throw new ArgumentException("ERROR: Campo Hora Termino no puede estar Vacío");
-                }
-            }
-        }
+     
 
         public String Direccion
         {
@@ -232,24 +132,29 @@ namespace BibliotecaClase
 
 
 
-        public Contrato(String numero,String fechaCreacion ,String vigente,String fechaTermino,
-                        String fechaInicioEvento, int horaInicio, int minutoInicio,
-                        String fechaTerminoEvento,int horaTermino, int minutoTermino, 
-                        String direccion, int numeroAsistentes,TipoEvento evento,String observaciones)
-        {
-            Numero = numero;FechaCreacion = fechaCreacion;Vigente = vigente;
-            FechaTermino = fechaTermino ;FechaInicioEvento = fechaInicioEvento;
-            HoraInicio = horaInicio;MinutoInicio = minutoInicio;FechaTerminoEvento = fechaTerminoEvento;
-            HoraTermino = horaTermino; MinutoTermino = minutoTermino;Direccion = direccion;
-            NumeroAsistentes = numeroAsistentes;Evento = evento; Observaciones = observaciones;
-
-        }
-
-
         public Contrato()
         {
 
         }
+
+
+
+        public Contrato(String numero,String fechaCreacion ,String vigente,String fechaTermino,
+                        String direccion, int numeroAsistentes,TipoEvento evento,String observaciones)
+        {
+            Numero = numero;
+            FechaCreacion = fechaCreacion;
+            Vigente = vigente;
+            FechaTermino = fechaTermino ;
+            Direccion = direccion;
+            NumeroAsistentes = numeroAsistentes;
+            Evento = evento;
+            Observaciones = observaciones;
+
+        }
+
+
+       
 
 
 
