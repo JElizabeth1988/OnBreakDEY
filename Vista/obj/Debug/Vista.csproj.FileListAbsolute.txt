@@ -15,7 +15,6 @@ C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\obj\Debug\Vista.cspro
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\obj\Debug\Resources\Icons.baml
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\obj\Debug\Resources\IconsNonShared.baml
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\obj\Debug\WPFCrearContrato.g.cs
-C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\obj\Debug\WpfEvento.g.cs
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\obj\Debug\WPFListarContrato.g.cs
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\obj\Debug\MainWindow.g.cs
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\obj\Debug\WpfCliente.g.cs
@@ -25,7 +24,6 @@ C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\obj\Debug\Vista_Marku
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\obj\Debug\Vista_MarkupCompile.lref
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\obj\Debug\App.baml
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\obj\Debug\WPFCrearContrato.baml
-C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\obj\Debug\WpfEvento.baml
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\obj\Debug\WPFListarContrato.baml
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\obj\Debug\MainWindow.baml
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\obj\Debug\WpfCliente.baml

@@ -45,7 +45,7 @@ namespace Vista
             dao = new DaoCliente();
         }
 
-        //-botón limpiar
+        //Botón limpiar
         private void btnLimpiar_Click(object sender, RoutedEventArgs e)
         {
             txtRut.Clear();
@@ -61,6 +61,7 @@ namespace Vista
         }
 
         //Botón '?'
+        //llama el listado de clientes
         private void btnPregunta_Click(object sender, RoutedEventArgs e)
         {
             wpfListadoCliente lis = new wpfListadoCliente(this);
@@ -114,15 +115,101 @@ namespace Vista
             }
         }
 
+        //Eliminar
         private void btnEliminar_Click(object sender, RoutedEventArgs e)
         {
-            
-        
-         }
+            wpfListadoCliente lis = new wpfListadoCliente();
+            Cliente cli = (Cliente)lis.dgLista.SelectedItem;
+            MessageBoxResult respuesta =
+                MessageBox.Show(
+                    "Desea eliminar?",
+                    "Eliminar",
+                    MessageBoxButton.YesNo,
+                    MessageBoxImage.Warning);
+            if (respuesta == MessageBoxResult.Yes)
+            {
+                bool resp = new DaoCliente().Eliminar(cli.Rut);
+                if (resp)
+                {
+                    MessageBox.Show("elimino");
+                    lis.dgLista.ItemsSource =
+                        new DaoCliente().Listar();
+                }
+                else
+                {
+                    MessageBox.Show("no elimino");
+                }
+            }
+            else
+            {
+                MessageBox.Show("cancelo operacion");
+            }
 
+        }
+
+
+        //buscar (método void Singleton)
+        public void Buscar()
+        {
+            try
+            {
+                Cliente c = new DaoCliente().
+                    Buscar(txtRut.Text);
+                if (c != null)
+                {
+                    txtRut.Text = c.Rut;
+                    txtRazon.Text = c.RazonSocial;
+                    txtNombre.Text = c.NombreContacto;
+                    txtEmail.Text = c.Mail;
+                    txtDireccion.Text = c.Direccion;
+                    txtTelefono.Text = c.Telefono.ToString();
+                    cbActividad.Text = c.Actividad.ToString();
+                    cbTipo.Text = c.Empresa.ToString();
+
+                }
+                else
+                {
+                    MessageBox.Show("No se encontraron resultados!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("error al buscar");
+                //Logger.Mensaje(ex.Message);
+
+            }
+        }
+
+        //Botón Buscar
         private void btnBuscar_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                Cliente c = new DaoCliente().
+                    Buscar(txtRut.Text);
+                if (c != null)
+                {
+                    txtRut.Text = c.Rut;
+                    txtRazon.Text = c.RazonSocial;
+                    txtNombre.Text = c.NombreContacto;
+                    txtEmail.Text = c.Mail;
+                    txtDireccion.Text = c.Direccion;
+                    txtTelefono.Text = c.Telefono.ToString();
+                    cbActividad.Text = c.Actividad.ToString();
+                    cbTipo.Text = c.Empresa.ToString();
 
+                }
+                else
+                {
+                    MessageBox.Show("No se encontraron resultados!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("error al buscar");
+                //Logger.Mensaje(ex.Message);
+
+            }
         }
 
 

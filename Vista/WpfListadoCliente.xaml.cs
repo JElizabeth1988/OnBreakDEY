@@ -28,10 +28,21 @@ namespace Vista
         WpfCliente cl;//recibir a cliente
         private Crear_Contrato crear_Contrato;
 
+        //llamado desde menu principal
         public wpfListadoCliente()
         {
             InitializeComponent();
-            btnPasar.Visibility = Visibility.Hidden;
+
+            btnPasar.Visibility = Visibility.Hidden;//el botón traspasar no se ve
+
+            //llenar el combo box con los datos del enumerador
+            cbActiv.ItemsSource = Enum.GetValues(typeof
+                (ActividadEmpresa));
+            cbActiv.SelectedIndex = 0;
+
+            cbTipoEmp.ItemsSource = Enum.GetValues(typeof
+                (TipoEmpresa));
+            cbTipoEmp.SelectedIndex = 0;
 
             try
             {
@@ -45,13 +56,23 @@ namespace Vista
 
                 MessageBox.Show("Error!" + ex.Message);
             }
-        }//llamado desde menu principal, el btn traspasar no se ve
+        }
 
+        //llamado desde el modulo administrar Cliente
         public wpfListadoCliente(WpfCliente origen)
         {
             InitializeComponent();
             cl = origen;
 
+            //llenar el combo box con los datos del enumerador
+            cbActiv.ItemsSource = Enum.GetValues(typeof
+                (ActividadEmpresa));
+            cbActiv.SelectedIndex = 0;
+
+            cbTipoEmp.ItemsSource = Enum.GetValues(typeof
+                (TipoEmpresa));
+            cbTipoEmp.SelectedIndex = 0;
+
             try
             {
                 DaoCliente dao = new DaoCliente();
@@ -62,7 +83,7 @@ namespace Vista
             catch (Exception ex)
             {
 
-                MessageBox.Show("Error!" + ex.Message);
+                MessageBox.Show("Error al Listar!" + ex.Message);
             }
 
         }
@@ -72,6 +93,7 @@ namespace Vista
             this.crear_Contrato = crear_Contrato;
         }
 
+        //Botón Salir
         private void btnSalir_Click(object sender, RoutedEventArgs e)
         {
             Close();
@@ -81,14 +103,17 @@ namespace Vista
         {
             if (btnPasar.Visibility == Visibility.Hidden)
             {
-                btnPasar.Visibility = Visibility.Hidden;
+                btnPasar.Visibility = Visibility.Hidden;//hacer visible el botón
 
             }
-            else
+            /*else
             {
-                btnPasar.Visibility = Visibility.Hidden;
-            }
-            
+                btnPasar.Visibility = Visibility.Hidden;//hacer que vuelva a desaparecer, en este caso no lo necesitamos
+            }*/
+            Cliente cli = (Cliente)dgLista.SelectedItem;
+            cl.txtRut.Text = cli.Rut;
+            cl.Buscar();
+
         }
     }
 }

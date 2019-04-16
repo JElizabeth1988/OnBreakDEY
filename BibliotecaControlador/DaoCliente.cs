@@ -20,7 +20,8 @@ namespace BibliotecaControlador
             }
         }
 
-        //CRUD
+        //metodos customer C.R.U.D.
+        // Agregar
         public bool Agregar(Cliente cli)
         {
             if (ExisteCliente(cli.Rut) == false)
@@ -52,7 +53,7 @@ namespace BibliotecaControlador
         }
 
         //Eliminar
-       /*public bool Eliminar( String rut)
+       public bool Eliminar( String rut)
         {
             foreach (Cliente item in clientes)
             {
@@ -64,8 +65,22 @@ namespace BibliotecaControlador
             }
             return false;
 
+         }
 
-        }*/
+        //Buscar
+        public Cliente Buscar(string rut)
+        {
+            foreach (Cliente item in clientes)
+            {
+                if (item.Rut.Equals(rut))
+                {
+                    return item;
+                }
+            }
+            return null;
+        }
+
+
 
     }
 }
