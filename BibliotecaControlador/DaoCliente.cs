@@ -80,6 +80,46 @@ namespace BibliotecaControlador
             return null;
         }
 
+        //Filtrar por rut 
+        public List<Cliente> Filtro(string rut)
+        {
+            List<Cliente> cl = clientes.Where(x => x.Rut == rut).
+                ToList();
+            return cl;
+        }
+
+        //Filtrar por tipo de empresa
+        public List<Cliente> Filtro(TipoEmpresa tipo)
+        {
+            List<Cliente> cl = clientes.Where(x => x.Empresa == tipo).
+                ToList();
+            return cl;
+        }
+
+        //Filtrar por Actividad de la empresa
+        public List<Cliente> Filtro(ActividadEmpresa act)
+        {
+            List<Cliente> cl = clientes.Where(x => x.Actividad == act).
+                ToList();
+            return cl;
+        }
+
+        //Modificar
+        public bool Modificar(Cliente nuevoCliente)
+        {
+            foreach (Cliente item in clientes)
+            {
+                if (item.Rut.Equals(nuevoCliente.Rut))
+                {
+                    clientes.Remove(item);//remueve el cliente
+                    clientes.Add(nuevoCliente);//agrega los nuevos datos
+                    return true;
+                }
+            }
+            return false;
+        }
+
+
 
 
     }

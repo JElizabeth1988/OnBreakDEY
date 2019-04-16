@@ -28,7 +28,7 @@ namespace Vista
         WpfCliente cl;//recibir a cliente
         private Crear_Contrato crear_Contrato;
 
-        //llamado desde menu principal
+        //Llamado desde menú principal
         public wpfListadoCliente()
         {
             InitializeComponent();
@@ -58,7 +58,7 @@ namespace Vista
             }
         }
 
-        //llamado desde el modulo administrar Cliente
+        //Llamado desde el modulo administrar Cliente
         public wpfListadoCliente(WpfCliente origen)
         {
             InitializeComponent();
@@ -99,6 +99,7 @@ namespace Vista
             Close();
         }
 
+        //Botón Pasar
         private void btnPasar_Click(object sender, RoutedEventArgs e)
         {
             if (btnPasar.Visibility == Visibility.Hidden)
@@ -115,5 +116,26 @@ namespace Vista
             cl.Buscar();
 
         }
+
+        //Botón Filtrar
+        private void btnFiltrar_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Cliente cli = new Cliente();
+                string rut = cl.txtRut.Text;
+                    
+                List<Cliente> lc = new DaoCliente()
+                    .Filtro(rut);
+                dgLista.ItemsSource = lc;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("error al Filtrar Información");
+            }
+        }
+
+        
+
     }
 }
