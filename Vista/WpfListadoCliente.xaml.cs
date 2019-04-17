@@ -115,13 +115,13 @@ namespace Vista
 
         }
 
-        //Botón Filtrar
+        //Botón Filtrar rut
         private void btnFiltrar_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                Cliente cli = new Cliente();
-                string rut = cl.txtRut.Text;
+                
+                string rut = txtFiltroRut.Text;
 
                 List<Cliente> lc = new DaoCliente()
                     .Filtro(rut);
@@ -132,8 +132,39 @@ namespace Vista
                 MessageBox.Show("error al Filtrar Información");
             }
         }
+        //Botón filtrar tipo
+        private void btnFiltrarTipo_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Cliente cli = new Cliente();
+                TipoEmpresa tipo = (TipoEmpresa)cbTipoEmp.SelectedItem;
+                List<Cliente> lf = new DaoCliente()
+                    .Filtro(tipo);
+                dgLista.ItemsSource = lf;
+            }
+            catch (Exception)
+            {
 
+            }
+        }
 
+        //Botón filtrar tipo
+        private void btnFiltrarAct_Click(object sender, RoutedEventArgs e)
+        {
+           try
+            {
+                Cliente cli = new Cliente();
+                ActividadEmpresa act = (ActividadEmpresa)cbActiv.SelectedItem;
+                List<Cliente> lf = new DaoCliente()
+                    .Filtro(act);
+                dgLista.ItemsSource = lf;
+            }
+            catch (Exception)
+            {
 
+            }
+
+        }
     }
 }

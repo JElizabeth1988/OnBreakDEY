@@ -20,12 +20,12 @@
                 <Label x:Name="label" Content="Número Contrato" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,1,0,0" FontWeight="Bold"/>
                 <Label x:Name="label1" Content="Rut Cliente" HorizontalAlignment="Left" Margin="0,35,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
                 <Label x:Name="label2" Content="Tipo Contrato" HorizontalAlignment="Left" Margin="0,71,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-                <TextBox x:Name="txtNumero"  Controls:TextBoxHelper.Watermark="Ingrese Número" HorizontalAlignment="Left" Height="23" Margin="113,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontWeight="Normal"/>
-                <ComboBox x:Name="cboTipoContrato" HorizontalAlignment="Left" Margin="113,71,0,0" VerticalAlignment="Top" Width="120"/>
+                <TextBox x:Name="txtfiltroNumero"  Controls:TextBoxHelper.Watermark="Ingrese Número" HorizontalAlignment="Left" Height="23" Margin="113,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontWeight="Normal"/>
+                <ComboBox x:Name="cbofilTipoContrato" HorizontalAlignment="Left" Margin="113,71,0,0" VerticalAlignment="Top" Width="120"/>
                 <Button x:Name="btnFiltrar" Content="Filtrar" HorizontalAlignment="Left" Margin="254,35,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Click="btnFiltrar_Click" />
             </Grid>
         </GroupBox>
-        <TextBox x:Name="txtRut" Controls:TextBoxHelper.Watermark="Ingrese Rut" HorizontalAlignment="Left" Height="23" Margin="197,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtfiltroRut" Controls:TextBoxHelper.Watermark="Ingrese Rut" HorizontalAlignment="Left" Height="23" Margin="197,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
 
     </Grid>
 </Controls:MetroWindow>
