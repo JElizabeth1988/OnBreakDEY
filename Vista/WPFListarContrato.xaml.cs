@@ -36,9 +36,9 @@ namespace Vista
             btnPasar.Visibility = Visibility.Hidden;
 
             //COMBOBOX
-            cbofilTipoContrato.ItemsSource = Enum.GetValues(typeof
+            cboTipoContrato.ItemsSource = Enum.GetValues(typeof
                 (TipoEvento));
-            cbofilTipoContrato.SelectedIndex = 0;
+            cboTipoContrato.SelectedIndex = 0;
 
 
             try
@@ -63,9 +63,9 @@ namespace Vista
             cc = origen;
 
             //COMBO BOX
-            cbofilTipoContrato.ItemsSource = Enum.GetValues(typeof
+            cboTipoContrato.ItemsSource = Enum.GetValues(typeof
                 (TipoEvento));
-            cbofilTipoContrato.SelectedIndex = 0;
+            cboTipoContrato.SelectedIndex = 0;
 
             try
             {
@@ -142,7 +142,7 @@ namespace Vista
 
                 //TIPOEVENTO
                 Cliente cl = new Cliente();
-                TipoEvento tipoE = (TipoEvento)cbofilTipoContrato.SelectedItem;
+                TipoEvento tipoE = (TipoEvento)cboTipoContrato.SelectedItem;
                 List<Contrato> lf = new DaoContrato()
                     .FiltroCon(tipoE);
                 dgvLista.ItemsSource = lf;
