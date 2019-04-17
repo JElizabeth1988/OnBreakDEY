@@ -17,11 +17,38 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
+
         <Image Source="imagenes/white_logo_color_background.jpg" Margin="153,52,154,66"/>
-        <Image x:Name="image" HorizontalAlignment="Left" Height="254" Margin="722,10,0,0" VerticalAlignment="Top" Width="261"/>
-        <Image x:Name="image_Copy" HorizontalAlignment="Left" Height="254" Margin="10,10,0,0" VerticalAlignment="Top" Width="261"/>
-        <Image x:Name="image_Copy1" HorizontalAlignment="Left" Height="254" Margin="10,357,0,0" VerticalAlignment="Top" Width="261"/>
-        <Image x:Name="image_Copy2" HorizontalAlignment="Left" Height="254" Margin="722,357,0,0" VerticalAlignment="Top" Width="261"/>
+
+        <Controls:Tile Click="Tile_Click" Margin="10,10,0,0" HorizontalAlignment="Left" Height="225" Width="228"  VerticalAlignment="Top"  >
+            <Grid Width="220">
+                <Image x:Name="imgAdCli" Source="Imagenes/administrar clientes 2.png"/>
+                <Label x:Name="label" Content="Administrar Cliente" HorizontalAlignment="Left" Margin="54,0,0,0" VerticalAlignment="Top" FontSize="16"/>
+            </Grid>
+        </Controls:Tile>
+
+        <Controls:Tile Click="Tile_Click_2" Margin="10,386,0,0" HorizontalAlignment="Left" Height="225" Width="228"  VerticalAlignment="Top"  >
+            <Grid Width="220">
+                <Image x:Name="imLisCli" Source="Imagenes/p3.png"/>
+                <Label x:Name="lisCli" Content="Listado de Clientes" HorizontalAlignment="Left" Margin="30,173,0,0" VerticalAlignment="Top" FontSize="16"/>
+            </Grid>
+        </Controls:Tile>
+
+        <Controls:Tile Click="Tile_Click_3" Margin="755,386,0,0" HorizontalAlignment="Left" Height="225" Width="228"  VerticalAlignment="Top"  >
+            <Grid Width="220">
+                <Image x:Name="imgLiCon" Source="Imagenes/p7.png"/>
+                <Label x:Name="lisCli_Copy" Content="Listado de Contratos" HorizontalAlignment="Left" Margin="35,186,0,-0.333" VerticalAlignment="Top" FontSize="16"/>
+
+            </Grid>
+        </Controls:Tile>
+
+        <Controls:Tile Click="Tile_Click_4" Margin="745,10,0,0" HorizontalAlignment="Left" Height="225" Width="228"  VerticalAlignment="Top"  >
+            <Grid Width="220">
+                <Image x:Name="imgAdmCont" Source="Imagenes/p6.png"/>
+                <Label x:Name="label_Copy" Content="Administrar Contrato" HorizontalAlignment="Left" Margin="41,0,0,0" VerticalAlignment="Top" FontSize="16"/>
+
+            </Grid>
+        </Controls:Tile>
 
 
     </Grid>
