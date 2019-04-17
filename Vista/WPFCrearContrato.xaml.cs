@@ -73,6 +73,7 @@ namespace Vista
 
 
                 String observaciones = txtObservaciones.Text;
+                String rutCliente = txtBuscarCliente.Text;
 
                 Contrato con = new Contrato()
                 {
@@ -84,8 +85,8 @@ namespace Vista
                     Direccion = direccion,
                     NumeroAsistentes = numeroAsistentes,
                     Evento = evento,
-                    Observaciones = observaciones
-
+                    Observaciones = observaciones,
+                    RutCliente = rutCliente
                 };
 
                 //METODO AGREGAR DEVUELVE BOOLEAN POR ESO SE CREA VARIABLE BOOLEANA resp

@@ -21,6 +21,9 @@ namespace BibliotecaClase
         private String _direccion;
         private int _numeroAsistentes;
         private String _observaciones;
+        private String _rutCliente;
+
+     
 
 
         //PROPIEDADES
@@ -130,7 +133,11 @@ namespace BibliotecaClase
             }
         }
 
-
+        public String RutCliente
+        {
+            get { return _rutCliente; }
+            set { _rutCliente = value; }
+        }
 
         public Contrato()
         {
@@ -140,7 +147,8 @@ namespace BibliotecaClase
 
 
         public Contrato(String numero,String fechaCreacion ,String vigente,String fechaTermino,
-                        String direccion, int numeroAsistentes,TipoEvento evento,String observaciones)
+                        String direccion, int numeroAsistentes,TipoEvento evento,String observaciones,
+                        String rutCliente)
         {
             Numero = numero;
             FechaCreacion = fechaCreacion;
@@ -150,7 +158,7 @@ namespace BibliotecaClase
             NumeroAsistentes = numeroAsistentes;
             Evento = evento;
             Observaciones = observaciones;
-
+            RutCliente = rutCliente;
         }
 
 
