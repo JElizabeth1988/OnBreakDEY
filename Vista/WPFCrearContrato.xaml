@@ -108,13 +108,13 @@
         <Label x:Name="lblAsistentes" Content="" HorizontalAlignment="Left" Margin="905,355,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblPersonalAdicional" Content="" HorizontalAlignment="Left" Margin="905,386,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblTotal" Content="" HorizontalAlignment="Left" Margin="905,435,0,0" VerticalAlignment="Top" Width="81" Grid.RowSpan="2"/>
-        <Label x:Name="label_Copy7" Content="Fecha Inicio:" HorizontalAlignment="Left" Height="36" Margin="60,272,0,0" VerticalAlignment="Top" Width="122" RenderTransformOrigin="0.5,0.5">
+        <Label x:Name="label_Copy7" Content="Fecha Inicio:" HorizontalAlignment="Left" Height="36" Margin="66,275,0,0" VerticalAlignment="Top" Width="122" RenderTransformOrigin="0.707,0.45">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform AngleY="-0.005"/>
                     <RotateTransform/>
-                    <TranslateTransform Y="-0.005"/>
+                    <TranslateTransform Y="-0.006"/>
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
