@@ -12,3 +12,10 @@ C:\Users\chida\Desktop\Duplicado\UnBreakable\BibliotecaControlador\bin\Debug\Bib
 C:\Users\chida\Desktop\Duplicado\UnBreakable\BibliotecaControlador\obj\Debug\BibliotecaControlador.csprojResolveAssemblyReference.cache
 C:\Users\chida\Desktop\Duplicado\UnBreakable\BibliotecaControlador\obj\Debug\BibliotecaControlador.dll
 C:\Users\chida\Desktop\Duplicado\UnBreakable\BibliotecaControlador\obj\Debug\BibliotecaControlador.pdb
+C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\BibliotecaControlador\bin\Debug\BibliotecaControlador.dll
+C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\BibliotecaControlador\bin\Debug\BibliotecaControlador.pdb
+C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\BibliotecaControlador\bin\Debug\BibliotecaClase.dll
+C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\BibliotecaControlador\bin\Debug\BibliotecaClase.pdb
+C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\BibliotecaControlador\obj\Debug\BibliotecaControlador.csprojResolveAssemblyReference.cache
+C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\BibliotecaControlador\obj\Debug\BibliotecaControlador.dll
+C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\BibliotecaControlador\obj\Debug\BibliotecaControlador.pdb
