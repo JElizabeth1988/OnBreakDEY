@@ -153,5 +153,7 @@ namespace Vista
                 MessageBox.Show("error al Filtrar Información");
             }
         }
+
+ 
     }
 }
