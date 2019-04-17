@@ -94,8 +94,8 @@
         <Button x:Name="btnCliente" Content="Buscar" HorizontalAlignment="Left" Margin="479,79,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Click="btnCliente_Click" Height="29"/>
         <Label x:Name="lblNombreCliente" Content="" HorizontalAlignment="Left" Margin="244,140,0,0" VerticalAlignment="Top" Width="310"/>
         <Label x:Name="label9_Copy" Content="Datos Evento" HorizontalAlignment="Left" Margin="38,189,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="Black" Height="34" Width="121" FontSize="16" FontFamily="Segoe UI Historic" FontWeight="Bold"/>
-        <Label x:Name="label5_Copy2" Content="N° Personal Adicional:" HorizontalAlignment="Left" Margin="295,410,0,0" VerticalAlignment="Top" Height="26" Width="136"/>
-        <TextBox x:Name="txtPersonalAdicional" HorizontalAlignment="Left" Height="23" Margin="458,410,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" TextChanged="txtPersonalAdicional_TextChanged_1"/>
+        <Label x:Name="label5_Copy2" Content="N° Personal Adicional:" HorizontalAlignment="Left" Margin="366,409,0,0" VerticalAlignment="Top" Height="26" Width="136"/>
+        <TextBox x:Name="txtPersonalAdicional" HorizontalAlignment="Left" Height="23" Margin="513,410,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="41" TextChanged="txtPersonalAdicional_TextChanged_1" RenderTransformOrigin="0.481,0.026"/>
         <Label x:Name="label" Content="SubTotal :" HorizontalAlignment="Left" Margin="716,324,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label_Copy" Content="Asistentes :" HorizontalAlignment="Left" Margin="716,355,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label_Copy3" Content="Personal Adicional :" HorizontalAlignment="Left" Margin="716,386,0,0" VerticalAlignment="Top"/>
