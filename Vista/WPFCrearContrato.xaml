@@ -82,7 +82,7 @@
         <Label x:Name="label6" Content="Tipo Evento:" HorizontalAlignment="Left" Margin="66,366,0,0" VerticalAlignment="Top" Height="26" Width="82"/>
         <ComboBox x:Name="cboTipo" HorizontalAlignment="Left" Margin="180,366,0,0" VerticalAlignment="Top" Width="145" AutomationProperties.IsOffscreenBehavior="Onscreen" Height="26"/>
         <Label x:Name="label4" Content="Dirección:" HorizontalAlignment="Left" Margin="66,231,0,0" VerticalAlignment="Top" Height="26" Width="69"/>
-        <TextBox x:Name="txtDireccion" Controls:TextBoxHelper.Watermark ="Ingrese dirección" HorizontalAlignment="Left" Height="26" Margin="157,235,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="292" />
+        <TextBox x:Name="txtDireccion" Controls:TextBoxHelper.Watermark ="Ingrese dirección" HorizontalAlignment="Left" Height="26" Margin="181,232,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="292" />
         <Label x:Name="label5_Copy" Content="N° Asistentes:" HorizontalAlignment="Left" Margin="66,409,0,0" VerticalAlignment="Top" Height="26" Width="88"/>
         <TextBox x:Name="txtNumeroAsistentes" HorizontalAlignment="Left" Height="26" Margin="181,410,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="36" TextChanged="txtNumeroAsistentes_TextChanged_1"/>
         <Label x:Name="label7" Content="Observaciones:" HorizontalAlignment="Left" Margin="66,14.693,0,0" VerticalAlignment="Top" Height="26" Width="95" Grid.Row="1"/>
@@ -118,7 +118,7 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <DatePicker x:Name="dpFechaInicio" HorizontalAlignment="Left" Margin="170,274,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.744,0.428" Height="26" Width="151"/>
+        <DatePicker x:Name="dpFechaInicio" HorizontalAlignment="Left" Margin="180,278,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.744,0.428" Height="26" Width="151"/>
         <TextBox x:Name="txtHoraInicio" Controls:TextBoxHelper.Watermark ="HR" HorizontalAlignment="Left" Height="26" Margin="488,278,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="34" />
         <Label x:Name="label3" Content=":" HorizontalAlignment="Left" Margin="526,278,0,0" VerticalAlignment="Top" Height="26" Width="13"/>
         <Label x:Name="label_Copy9" Content="Fecha Termino:" HorizontalAlignment="Left" Height="36" Margin="66,323,0,0" VerticalAlignment="Top" Width="118"/>
@@ -128,6 +128,6 @@
         <TextBox x:Name="txtMinutoInicio" Controls:TextBoxHelper.Watermark ="MN" HorizontalAlignment="Left" Height="26" Margin="544,278,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="39"/>
         <TextBox x:Name="txtMinutoTermino"  Controls:TextBoxHelper.Watermark ="MN" HorizontalAlignment="Left" Height="26" Margin="543,324,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="39"/>
         <Label x:Name="label2_Copy2" Content="Hora Termino:" HorizontalAlignment="Left" Margin="372,324,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.101,0.5" Height="26" Width="92"/>
-        <DatePicker x:Name="dpFechaFinEvento" HorizontalAlignment="Left" Margin="170,324,0,0" VerticalAlignment="Top" Height="26" Width="151"/>
+        <DatePicker x:Name="dpFechaFinEvento" HorizontalAlignment="Left" Margin="180,324,0,0" VerticalAlignment="Top" Height="26" Width="151"/>
     </Grid>
 </Controls:MetroWindow>

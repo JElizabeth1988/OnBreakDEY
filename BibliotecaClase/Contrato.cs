@@ -247,7 +247,7 @@ namespace BibliotecaClase
         public Contrato(String numero,String fechaCreacion ,String vigente,String fechaTermino,
                         String fechaInicioEvento, int horaInicio, int minutoInicio,
                         String fechaFinEvento, int horaTermino, int minutoTermino,
-                        String direccion, int numeroAsistentes,TipoEvento evento,String observaciones,
+                        String direccion, int numeroAsistentes,int personalAdicional,TipoEvento evento,String observaciones,
                         String rutCliente)
         {
 
@@ -263,6 +263,7 @@ namespace BibliotecaClase
             MinutoTermino = minutoTermino;
             Direccion = direccion;
             NumeroAsistentes = numeroAsistentes;
+            Persona
             Evento = evento;
             Observaciones = observaciones;
             RutCliente = rutCliente;
