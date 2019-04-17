@@ -55,7 +55,7 @@
             </Button.RenderTransform>
         </Button>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="281,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="16" Width="0" Grid.Row="1" Grid.RowSpan="2"/>
-        <Button x:Name="btnCrear" Content="Crear" HorizontalAlignment="Left" Margin="249,197,0,0" VerticalAlignment="Top" Width="73" Click="btnCrear_Click" FontWeight="Normal" RenderTransformOrigin="0.5,0.5" Height="28" Grid.Row="3">
+        <Button x:Name="btnCrear" Content="Crear" HorizontalAlignment="Left" Margin="258,197,0,0" VerticalAlignment="Top" Width="73" Click="btnCrear_Click" FontWeight="Normal" RenderTransformOrigin="0.5,0.5" Height="28" Grid.Row="3">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
