@@ -146,3 +146,9 @@ C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\bin\Debug\Newtonsoft.
 C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\bin\Debug\Servicios.pdb
 C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\bin\Debug\Newtonsoft.Json.pdb
 C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\bin\Debug\Newtonsoft.Json.xml
+C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\bin\Debug\ApplicationInsights.config
+C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\bin\Debug\Servicios.dll
+C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\bin\Debug\Newtonsoft.Json.dll
+C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\bin\Debug\Servicios.pdb
+C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\bin\Debug\Newtonsoft.Json.xml

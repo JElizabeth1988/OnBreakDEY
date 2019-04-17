@@ -27,8 +27,8 @@
                 <Label x:Name="label1" Content="Tipo de Empresa" HorizontalAlignment="Left" Margin="0,32,0,0" VerticalAlignment="Top"/>
                 <Label x:Name="label2" Content="Actividad" HorizontalAlignment="Left" Margin="0,71,0,0" VerticalAlignment="Top"/>
                 <TextBox x:Name="txtFiltroRut"  Controls:TextBoxHelper.Watermark="Ingrese Rut" HorizontalAlignment="Left" Height="23" Margin="113,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontWeight="Normal"/>
-                <ComboBox x:Name="cbTipoEmp" HorizontalAlignment="Left" Margin="113,34,0,0" VerticalAlignment="Top" Width="120" Height="26"/>
-                <ComboBox x:Name="cbActiv" HorizontalAlignment="Left" Margin="113,71,0,0" VerticalAlignment="Top" Width="120"/>
+                <ComboBox x:Name="cbTipoEmp" HorizontalAlignment="Left" Margin="111,34,0,0" VerticalAlignment="Top" Width="120" Height="26" FontWeight="Bold"/>
+                <ComboBox x:Name="cbActiv" HorizontalAlignment="Left" Margin="112,71,0,0" VerticalAlignment="Top" Width="120" FontWeight="Normal"/>
                 <Button x:Name="btnFiltrar" Content="Filtrar" HorizontalAlignment="Left" Margin="254,35,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Click="btnFiltrar_Click"/>
             </Grid>
         </GroupBox>
