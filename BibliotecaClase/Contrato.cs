@@ -22,7 +22,7 @@ namespace BibliotecaClase
         private int _numeroAsistentes;
         private String _observaciones;
         private String _rutCliente;
-        public int _personalAdicional { get; set; }
+        public int _personalAdicional { get; set; } //vicky
 
 
 
