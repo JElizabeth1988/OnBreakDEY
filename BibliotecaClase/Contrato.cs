@@ -263,7 +263,6 @@ namespace BibliotecaClase
             MinutoTermino = minutoTermino;
             Direccion = direccion;
             NumeroAsistentes = numeroAsistentes;
-            Persona
             Evento = evento;
             Observaciones = observaciones;
             RutCliente = rutCliente;
