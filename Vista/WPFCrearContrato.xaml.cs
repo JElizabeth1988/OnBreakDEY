@@ -79,6 +79,7 @@ namespace Vista
                 //////
                 String direccion = txtDireccion.Text;
                 int numeroAsistentes = int.Parse(txtNumeroAsistentes.Text);
+                int personalAdicional = int.Parse(txtPersonalAdicional.Text);
                 TipoEvento evento = (TipoEvento)cboTipo.SelectedItem;
 
 
@@ -100,6 +101,7 @@ namespace Vista
                     MinutoTermino = minutoTermino,
                     Direccion = direccion,
                     NumeroAsistentes = numeroAsistentes,
+                    PersonalAdicional=personalAdicional,
                     Evento = evento,
                     Observaciones = observaciones,
                     RutCliente = rutCliente
@@ -181,6 +183,7 @@ namespace Vista
                     txtHoraTermino.Text = c.HoraTermino.ToString();
                     txtMinutoTermino.Text = c.MinutoTermino.ToString();
                     txtNumeroAsistentes.Text = c.NumeroAsistentes.ToString();
+                    txtPersonalAdicional.Text = c.PersonalAdicional.ToString();
                     cboTipo.Text = c.Evento.ToString();
                     txtObservaciones.Text = c.Observaciones;
                 }
@@ -262,6 +265,7 @@ namespace Vista
                 //////
                 String direccion = txtDireccion.Text;
                 int numeroAsistentes = int.Parse(txtNumeroAsistentes.Text);
+                int personalAdicional = int.Parse(txtPersonalAdicional.Text);
                 TipoEvento evento = (TipoEvento)cboTipo.SelectedItem;
 
 
@@ -283,6 +287,7 @@ namespace Vista
                     MinutoTermino = minutoTermino,
                     Direccion = direccion,
                     NumeroAsistentes = numeroAsistentes,
+                    PersonalAdicional = personalAdicional,
                     Evento = evento,
                     Observaciones = observaciones,
                     RutCliente = rutCliente

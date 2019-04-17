@@ -28,7 +28,8 @@ namespace BibliotecaClase
         private int _numeroAsistentes;
         private String _observaciones;
         private String _rutCliente;
-        public int _personalAdicional { get; set; } //vicky
+        private int _personalAdicional;
+
 
 
 
@@ -215,6 +216,13 @@ namespace BibliotecaClase
             }
         }
 
+        public int PersonalAdicional
+        {
+            get { return _personalAdicional; }
+            set { _personalAdicional = value; }
+        }
+
+
         public TipoEvento Evento { get; set; }
 
         public String Observaciones
@@ -263,6 +271,7 @@ namespace BibliotecaClase
             MinutoTermino = minutoTermino;
             Direccion = direccion;
             NumeroAsistentes = numeroAsistentes;
+            PersonalAdicional = personalAdicional;
             Evento = evento;
             Observaciones = observaciones;
             RutCliente = rutCliente;
