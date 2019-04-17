@@ -9,11 +9,31 @@ namespace BibliotecaClase
     public class Evento
     {
         private int _id;
-
+        private string _nombreTipoEvento; //vicky
         private int _valorBase;
         private int _personalBase;
-        private int _personalAdicional;
 
+
+        public int Id
+        {
+            get { return _id; }
+            set { _id = value; }
+        }
+        public string NombreTipoEvento
+        {
+            get { return _nombreTipoEvento; }
+            set
+            {
+                if (value != null)
+                {
+                    _nombreTipoEvento = value;
+                }
+                else
+                {
+                    throw new ArgumentException("ERROR: Campo Nombre Evento no puede estar Vacío");
+                }
+            }
+        } //vicky
 
         //Cálculo valor Contrato
 
@@ -29,21 +49,12 @@ namespace BibliotecaClase
             set { _personalBase = value; }
         }
 
+
+
         public Evento(int valorBase,int personalBase)
         {
-            ValorBase = valorBase;PersonalBase = personalBase;
-        }
-
-        public int PersonalAdicional
-        {
-            get { return _personalAdicional; }
-            set { _personalAdicional = value; }
-        }
-
-        public int Id
-        {
-            get { return _id; }
-            set { _id = value; }
+            ValorBase = valorBase;
+            PersonalBase = personalBase;
         }
 
         public Evento()

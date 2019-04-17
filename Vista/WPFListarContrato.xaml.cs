@@ -26,6 +26,8 @@ namespace Vista
     public partial class ListarContrato : MetroWindow
     {
         Crear_Contrato cc;//recibir a crear contrato
+        WpfCliente cl;
+
         private WpfCliente cli = new WpfCliente();
 
         public ListarContrato()
@@ -110,6 +112,40 @@ namespace Vista
         private void dgvLista_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+
+        private void btnFiltrar_Click(object sender, RoutedEventArgs e)
+        {
+
+
+            try
+            {
+
+                //NUMERO
+                Contrato con = new Contrato();
+                string numero = cc.txtNumero.Text;
+
+                List<Contrato> lcon = new DaoContrato()
+                    .FiltroNum(numero);
+                dgvLista.ItemsSource = lcon;
+
+
+                //CLIENTE
+                Cliente cli = new Cliente();
+                string rut = cl.txtRut.Text;
+
+                List<Cliente> lc = new DaoCliente()
+                    .Filtro(rut);
+                dgvLista.ItemsSource = lc;
+
+
+                //TIPOEVENTO
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("error al Filtrar Información");
+            }
         }
     }
 }

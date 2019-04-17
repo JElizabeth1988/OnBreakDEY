@@ -21,6 +21,10 @@ namespace BibliotecaClase
         private String _direccion;
         private int _numeroAsistentes;
         private String _observaciones;
+        private String _rutCliente;
+        public int _personalAdicional { get; set; }
+
+
 
 
         //PROPIEDADES
@@ -41,8 +45,6 @@ namespace BibliotecaClase
             }
         }
 
-
-
         public String FechaCreacion
         {
             get { return _fechaCreacion; }
@@ -57,15 +59,13 @@ namespace BibliotecaClase
                     throw new ArgumentException("ERROR: Campo Fecha Creación no puede estar Vacío");
                 }
         }
-        }
-
+        }//hacerlo automatico
 
         public String Vigente
         {
             get { return _vigente; }
             set { _vigente = value; }
         }
-
 
         public String FechaTermino
         {
@@ -74,10 +74,7 @@ namespace BibliotecaClase
             {
                 _fechaTermino = value;
             }
-        }
-
-
-     
+        }//hacerlo automatico
 
         public String Direccion
         {
@@ -95,7 +92,6 @@ namespace BibliotecaClase
             }
         }
 
-
         public int NumeroAsistentes
         {
             get { return _numeroAsistentes; }
@@ -107,13 +103,12 @@ namespace BibliotecaClase
                 }
                 else
                 {
-                    throw new ArgumentException("ERROR: Campo Dirección no puede estar Vacío");
+                    throw new ArgumentException("ERROR: Campo Numero de Asistentes no puede estar Vacío");
                 }
             }
         }
 
         public TipoEvento Evento { get; set; }
-
 
         public String Observaciones
         {
@@ -130,6 +125,11 @@ namespace BibliotecaClase
             }
         }
 
+        public String RutCliente
+        {
+            get { return _rutCliente; }
+            set { _rutCliente = value; }
+        }
 
 
         public Contrato()
@@ -137,10 +137,9 @@ namespace BibliotecaClase
 
         }
 
-
-
         public Contrato(String numero,String fechaCreacion ,String vigente,String fechaTermino,
-                        String direccion, int numeroAsistentes,TipoEvento evento,String observaciones)
+                        String direccion, int numeroAsistentes,TipoEvento evento,String observaciones,
+                        String rutCliente)
         {
             Numero = numero;
             FechaCreacion = fechaCreacion;
@@ -150,16 +149,11 @@ namespace BibliotecaClase
             NumeroAsistentes = numeroAsistentes;
             Evento = evento;
             Observaciones = observaciones;
-
+            RutCliente = rutCliente;
         }
 
 
        
-
-
-
-
-
 
     }
     
