@@ -132,7 +132,7 @@ namespace Vista
 
         private void btnListadoCliente_Click(object sender, RoutedEventArgs e)
         {
-            wpfListadoCliente cli = new wpfListadoCliente(this);
+            wpfListadoCliente cli = new wpfListadoCliente();
             cli.Show();
 
         }
