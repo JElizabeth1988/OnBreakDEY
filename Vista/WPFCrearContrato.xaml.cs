@@ -65,10 +65,21 @@ namespace Vista
 
                 //EVENTO
 
+                //EVENTO
+
                 //inicio
+                String fechaInicioEvento = dpFechaInicio.Text;
+                int horaInicio = int.Parse(txtHoraInicio.Text);
+                int minutoInicio = int.Parse(txtMinutoInicio.Text);
                 //termino
+                String fechaFinEvento = dpFechaFinEvento.Text;
+                int horaTermino = int.Parse(txtHoraTermino.Text);
+                int minutoTermino = int.Parse(txtMinutoTermino.Text);
+                
+                //////
                 String direccion = txtDireccion.Text;
                 int numeroAsistentes = int.Parse(txtNumeroAsistentes.Text);
+                int personalAdicional = int.Parse(txtPersonalAdicional.Text);
                 TipoEvento evento = (TipoEvento)cboTipo.SelectedItem;
 
 
@@ -82,8 +93,15 @@ namespace Vista
                     FechaCreacion = fechaCreacion,
                     Vigente = vigente,
                     FechaTermino = fechaTermino,
+                    FechaInicioEvento = fechaInicioEvento,
+                    HoraInicio = horaInicio,
+                    MinutoInicio = minutoInicio,
+                    FechaFinEvento = fechaFinEvento,
+                    HoraTermino = horaTermino,
+                    MinutoTermino = minutoTermino,
                     Direccion = direccion,
                     NumeroAsistentes = numeroAsistentes,
+                    PersonalAdicional=personalAdicional,
                     Evento = evento,
                     Observaciones = observaciones,
                     RutCliente = rutCliente
@@ -159,7 +177,13 @@ namespace Vista
                 {
                   
                     txtDireccion.Text = c.Direccion;
+                    dpFechaInicio.Text = c.FechaInicioEvento;
+                    txtHoraInicio.Text = c.HoraInicio.ToString();
+                    txtMinutoInicio.Text = c.MinutoInicio.ToString();
+                    txtHoraTermino.Text = c.HoraTermino.ToString();
+                    txtMinutoTermino.Text = c.MinutoTermino.ToString();
                     txtNumeroAsistentes.Text = c.NumeroAsistentes.ToString();
+                    txtPersonalAdicional.Text = c.PersonalAdicional.ToString();
                     cboTipo.Text = c.Evento.ToString();
                     txtObservaciones.Text = c.Observaciones;
                 }
@@ -201,7 +225,7 @@ namespace Vista
             }
         }
 
-        //VIGENTE - NO VIGENTE
+        //MODIFICAR
         private void btnModificar_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -225,28 +249,50 @@ namespace Vista
 
                 }
 
+                //EVENTO
 
+                //EVENTO
+
+                //inicio
+                String fechaInicioEvento = dpFechaInicio.Text;
+                int horaInicio = int.Parse(txtHoraInicio.Text);
+                int minutoInicio = int.Parse(txtMinutoInicio.Text);
+                //termino
+                String fechaFinEvento = dpFechaFinEvento.Text;
+                int horaTermino = int.Parse(txtHoraTermino.Text);
+                int minutoTermino = int.Parse(txtMinutoTermino.Text);
+
+                //////
                 String direccion = txtDireccion.Text;
                 int numeroAsistentes = int.Parse(txtNumeroAsistentes.Text);
+                int personalAdicional = int.Parse(txtPersonalAdicional.Text);
                 TipoEvento evento = (TipoEvento)cboTipo.SelectedItem;
 
 
                 String observaciones = txtObservaciones.Text;
+                String rutCliente = txtBuscarCliente.Text;
 
                 Contrato nuevo_con = new Contrato()
                 {
-
 
                     Numero = numero,
                     FechaCreacion = fechaCreacion,
                     Vigente = vigente,
                     FechaTermino = fechaTermino,
+                    FechaInicioEvento = fechaInicioEvento,
+                    HoraInicio = horaInicio,
+                    MinutoInicio = minutoInicio,
+                    FechaFinEvento = fechaFinEvento,
+                    HoraTermino = horaTermino,
+                    MinutoTermino = minutoTermino,
                     Direccion = direccion,
                     NumeroAsistentes = numeroAsistentes,
+                    PersonalAdicional = personalAdicional,
                     Evento = evento,
-                    Observaciones = observaciones
-
+                    Observaciones = observaciones,
+                    RutCliente = rutCliente
                 };
+
 
                 //METODO AGREGAR DEVUELVE BOOLEAN POR ESO SE CREA VARIABLE BOOLEANA resp
                 bool resp = dao.Modificar(nuevo_con);
@@ -340,6 +386,7 @@ namespace Vista
                 lblPersonalAdicional.Content = v.ToString();
             }
         }
+
 
 
         //valor total
