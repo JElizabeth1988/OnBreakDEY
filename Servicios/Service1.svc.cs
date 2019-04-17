@@ -22,8 +22,7 @@ namespace Servicios
         {
             /////
             ClDatos datos;
-            HttpWebRequest request =
-                (HttpWebRequest)WebRequest.Create(@"https://mindicador.cl/api/uf"); //crear peticion
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(@"https://mindicador.cl/api/uf"); //crear peticion
             HttpWebResponse response = (HttpWebResponse)request.GetResponse(); //recupera la respuesta
             Stream stream = response.GetResponseStream(); //recivo esa respuesta
             StreamReader stream_reader = new StreamReader(stream); //leo esa respuesta
@@ -40,8 +39,8 @@ namespace Servicios
                 //fecha = item.fecha;
             }
             uf = uf.Replace('.', ',');
-
             double valor_uf = double.Parse(uf); //ahora se puede usar para calculo!!!!!!!!!!!!!!!!!!
+
             return valor_uf;
         }
     }

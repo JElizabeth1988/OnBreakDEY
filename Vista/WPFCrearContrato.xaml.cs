@@ -39,7 +39,7 @@ namespace Vista
             dao = new DaoContrato();
         }
 
-
+        //crear contrato
         private void btnCrear_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -112,7 +112,7 @@ namespace Vista
         }
 
        
-
+        //limpiar
         private void btnLimpiar_Click(object sender, RoutedEventArgs e)
         {
             txtNumero.Clear();
@@ -124,6 +124,7 @@ namespace Vista
 
         }
 
+        //listar numero contrato
         private void btnListadoNum_Click(object sender, RoutedEventArgs e)
         {
             ListarContrato con = new ListarContrato(this);
@@ -131,13 +132,15 @@ namespace Vista
             
         }
 
+        //listar cliente
         private void btnListadoCliente_Click(object sender, RoutedEventArgs e)
         {
             wpfListadoCliente cli = new wpfListadoCliente();
             cli.Show();
 
         }
-
+        
+        //salir
         private void button_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
@@ -198,6 +201,7 @@ namespace Vista
             }
         }
 
+        //VIGENTE - NO VIGENTE
         private void btnModificar_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -263,6 +267,81 @@ namespace Vista
 
         }
 
-      
+
+        //MOSTRAR VALORES EVENTO
+
+            //valor evento base
+
+            //Valor asistentes
+        private void txtNumeroAsistentes_TextChanged_1(object sender, TextChangedEventArgs e)
+        {
+            if (txtNumeroAsistentes.Text != null)
+            {
+                Servicios.Service1 WS = new Servicios.Service1();
+                double uf = WS.Uf();
+                int asi = int.Parse(txtNumeroAsistentes.Text);
+                int n = 0;
+
+                if (asi >= 1 && asi <= 20)
+                {
+                    n = 3;
+                }
+                if (asi >= 21 && asi <= 50)
+                {
+                    n = 5;
+                }
+                if (asi > 50)
+                {
+                    int c = asi - 50;
+                    n = 5;
+                    int r = (c / 20);
+                    n = n + r;
+
+                }
+                int v = (int)(n * uf);
+                lblAsistentes.Content = v.ToString();
+            }
+        }
+
+            //valor personal adicional
+        private void txtPersonalAdicional_TextChanged_1(object sender, TextChangedEventArgs e)
+        {
+            if (txtPersonalAdicional.Text != null)
+            {
+                Servicios.Service1 WS = new Servicios.Service1();
+                double uf = WS.Uf();
+                int personal = int.Parse(txtPersonalAdicional.Text);
+                double cant_uf = 0;
+
+
+                if (personal == 2)
+                {
+                    cant_uf = 2;
+                }
+                if (personal == 3)
+                {
+                    cant_uf = 3;
+                }
+                if (personal == 4)
+                {
+                    cant_uf = 3.5;
+                }
+                if (personal > 4)
+                {
+                    int cantidad = personal - 4;
+                    cant_uf = 3.5;
+
+                    double extra = (cantidad * 0.5);
+                    cant_uf = cant_uf + extra;
+
+                }
+
+                int v = (int)(cant_uf * uf);
+                lblPersonalAdicional.Content = v.ToString();
+            }
+        }
+
+
+        //valor total
     }
 }

@@ -160,6 +160,10 @@
       <Project>{5f5241b3-dbf9-4b09-b205-3efa19c66622}</Project>
       <Name>BibliotecaControlador</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Servicios\Servicios.csproj">
+      <Project>{900483e1-95ce-4e70-9f1d-e69c1bd828e3}</Project>
+      <Name>Servicios</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Imagenes\white_logo_color_background.jpg" />
