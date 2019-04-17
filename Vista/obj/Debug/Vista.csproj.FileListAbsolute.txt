@@ -146,9 +146,18 @@ C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\bin\Debug\Newtonsoft.
 C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\bin\Debug\Servicios.pdb
 C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\bin\Debug\Newtonsoft.Json.pdb
 C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\bin\Debug\Newtonsoft.Json.xml
+<<<<<<< HEAD
+C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\bin\Debug\ApplicationInsights.config
+C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\bin\Debug\Servicios.dll
+C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\bin\Debug\Newtonsoft.Json.dll
+C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\bin\Debug\Servicios.pdb
+C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\bin\Debug\Newtonsoft.Json.xml
+=======
 C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\bin\Debug\ApplicationInsights.config
 C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\bin\Debug\Servicios.dll
 C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\bin\Debug\Newtonsoft.Json.dll
 C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\bin\Debug\Servicios.pdb
 C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\bin\Debug\Newtonsoft.Json.pdb
 C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\bin\Debug\Newtonsoft.Json.xml
+>>>>>>> 22dd38caa39c1acb2211ed786263fb79613ef095

@@ -4,16 +4,40 @@
 winexe
 C#
 .cs
+<<<<<<< HEAD
+<<<<<<< HEAD
+C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\obj\Debug\
+=======
+C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\
+>>>>>>> 22dd38caa39c1acb2211ed786263fb79613ef095
+=======
 C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\
+>>>>>>> c8a3405873c12418644def717497f36ff4a13c40
 Vista
 none
 false
 DEBUG;TRACE
+<<<<<<< HEAD
+<<<<<<< HEAD
+C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\App.xaml
+7-719384433
+
+13920178053
+19-612553177
+=======
+C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\App.xaml
+7-719384433
+
+131030594589
+19-247716884
+>>>>>>> 22dd38caa39c1acb2211ed786263fb79613ef095
+=======
 C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\App.xaml
 7-719384433
 
 13-1171456254
 19353974236
+>>>>>>> c8a3405873c12418644def717497f36ff4a13c40
 WPFCrearContrato.xaml;WPFListarContrato.xaml;MainWindow.xaml;Resources\Icons.xaml;Resources\IconsNonShared.xaml;WpfCliente.xaml;WpfListadoCliente.xaml;
 
 False
