@@ -35,6 +35,8 @@ namespace BibliotecaClase
             }
         } //vicky
 
+        //conectar nombre que se guarde AQUI al combobox de CONTRATO
+
         //Cálculo valor Contrato
 
         public int ValorBase

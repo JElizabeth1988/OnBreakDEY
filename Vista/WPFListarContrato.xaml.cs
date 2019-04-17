@@ -88,6 +88,7 @@ namespace Vista
             this.cli = cli;
         }
 
+        //salir
         private void button_Click(object sender, RoutedEventArgs e)
         {
             Close();

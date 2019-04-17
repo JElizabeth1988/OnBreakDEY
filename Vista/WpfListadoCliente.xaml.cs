@@ -26,7 +26,7 @@ namespace Vista
     public partial class wpfListadoCliente : MetroWindow
     {
         WpfCliente cl;//recibir a cliente
-        private Crear_Contrato crear_Contrato;
+        Crear_Contrato cc;
 
         //Llamado desde menú principal
         public wpfListadoCliente()
