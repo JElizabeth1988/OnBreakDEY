@@ -387,6 +387,11 @@ namespace Vista
             }
         }
 
+        private void txtTotal_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            txtTotal.Text = 1000000 +;
+        }
+
 
 
         //valor total

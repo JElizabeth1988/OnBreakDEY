@@ -358,21 +358,13 @@ namespace Vista {
         
         #line 110 "..\..\WPFCrearContrato.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Label lblTotal;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 111 "..\..\WPFCrearContrato.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label label_Copy7;
         
         #line default
         #line hidden
         
         
-        #line 121 "..\..\WPFCrearContrato.xaml"
+        #line 120 "..\..\WPFCrearContrato.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.DatePicker dpFechaInicio;
         
@@ -380,7 +372,7 @@ namespace Vista {
         #line hidden
         
         
-        #line 122 "..\..\WPFCrearContrato.xaml"
+        #line 121 "..\..\WPFCrearContrato.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox txtHoraInicio;
         
@@ -388,7 +380,7 @@ namespace Vista {
         #line hidden
         
         
-        #line 123 "..\..\WPFCrearContrato.xaml"
+        #line 122 "..\..\WPFCrearContrato.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label label3;
         
@@ -396,7 +388,7 @@ namespace Vista {
         #line hidden
         
         
-        #line 124 "..\..\WPFCrearContrato.xaml"
+        #line 123 "..\..\WPFCrearContrato.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label label_Copy9;
         
@@ -404,7 +396,7 @@ namespace Vista {
         #line hidden
         
         
-        #line 125 "..\..\WPFCrearContrato.xaml"
+        #line 124 "..\..\WPFCrearContrato.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label label2_Copy1;
         
@@ -412,7 +404,7 @@ namespace Vista {
         #line hidden
         
         
-        #line 126 "..\..\WPFCrearContrato.xaml"
+        #line 125 "..\..\WPFCrearContrato.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox txtHoraTermino;
         
@@ -420,7 +412,7 @@ namespace Vista {
         #line hidden
         
         
-        #line 127 "..\..\WPFCrearContrato.xaml"
+        #line 126 "..\..\WPFCrearContrato.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label label3_Copy;
         
@@ -428,7 +420,7 @@ namespace Vista {
         #line hidden
         
         
-        #line 128 "..\..\WPFCrearContrato.xaml"
+        #line 127 "..\..\WPFCrearContrato.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox txtMinutoInicio;
         
@@ -436,7 +428,7 @@ namespace Vista {
         #line hidden
         
         
-        #line 129 "..\..\WPFCrearContrato.xaml"
+        #line 128 "..\..\WPFCrearContrato.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox txtMinutoTermino;
         
@@ -444,7 +436,7 @@ namespace Vista {
         #line hidden
         
         
-        #line 130 "..\..\WPFCrearContrato.xaml"
+        #line 129 "..\..\WPFCrearContrato.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label label2_Copy2;
         
@@ -452,9 +444,17 @@ namespace Vista {
         #line hidden
         
         
-        #line 131 "..\..\WPFCrearContrato.xaml"
+        #line 130 "..\..\WPFCrearContrato.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.DatePicker dpFechaFinEvento;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 131 "..\..\WPFCrearContrato.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.TextBox txtTotal;
         
         #line default
         #line hidden
@@ -667,43 +667,49 @@ namespace Vista {
             this.lblPersonalAdicional = ((System.Windows.Controls.Label)(target));
             return;
             case 40:
-            this.lblTotal = ((System.Windows.Controls.Label)(target));
-            return;
-            case 41:
             this.label_Copy7 = ((System.Windows.Controls.Label)(target));
             return;
-            case 42:
+            case 41:
             this.dpFechaInicio = ((System.Windows.Controls.DatePicker)(target));
             return;
-            case 43:
+            case 42:
             this.txtHoraInicio = ((System.Windows.Controls.TextBox)(target));
             return;
-            case 44:
+            case 43:
             this.label3 = ((System.Windows.Controls.Label)(target));
             return;
-            case 45:
+            case 44:
             this.label_Copy9 = ((System.Windows.Controls.Label)(target));
             return;
-            case 46:
+            case 45:
             this.label2_Copy1 = ((System.Windows.Controls.Label)(target));
             return;
-            case 47:
+            case 46:
             this.txtHoraTermino = ((System.Windows.Controls.TextBox)(target));
             return;
-            case 48:
+            case 47:
             this.label3_Copy = ((System.Windows.Controls.Label)(target));
             return;
-            case 49:
+            case 48:
             this.txtMinutoInicio = ((System.Windows.Controls.TextBox)(target));
             return;
-            case 50:
+            case 49:
             this.txtMinutoTermino = ((System.Windows.Controls.TextBox)(target));
             return;
-            case 51:
+            case 50:
             this.label2_Copy2 = ((System.Windows.Controls.Label)(target));
             return;
-            case 52:
+            case 51:
             this.dpFechaFinEvento = ((System.Windows.Controls.DatePicker)(target));
+            return;
+            case 52:
+            this.txtTotal = ((System.Windows.Controls.TextBox)(target));
+            
+            #line 131 "..\..\WPFCrearContrato.xaml"
+            this.txtTotal.TextChanged += new System.Windows.Controls.TextChangedEventHandler(this.txtTotal_TextChanged);
+            
+            #line default
+            #line hidden
             return;
             }
             this._contentLoaded = true;
