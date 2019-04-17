@@ -252,6 +252,65 @@ namespace Vista
 
         private void btnModificar_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                String numero = DateTime.Now.ToString("yyyyMMddHHmm");
+                String fechaCreacion = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
+                String vigente;
+                String fechaTermino;
+                if (rbSi.IsChecked == true)
+                {
+                    vigente = "Sí";
+                    fechaTermino = "Aún Vigente";
+
+                }
+                else
+                {
+                    vigente = "No";
+                    fechaTermino = DateTime.Now.ToString("dd/MM/yyyy HH:mm"); ;
+
+
+
+                }
+
+
+                String direccion = txtDireccion.Text;
+                int numeroAsistentes = int.Parse(txtNumeroAsistentes.Text);
+                TipoEvento evento = (TipoEvento)cboTipo.SelectedItem;
+
+
+                String observaciones = txtObservaciones.Text;
+
+                Contrato nuevo_con = new Contrato()
+                {
+
+
+                    Numero = numero,
+                    FechaCreacion = fechaCreacion,
+                    Vigente = vigente,
+                    FechaTermino = fechaTermino,
+                    Direccion = direccion,
+                    NumeroAsistentes = numeroAsistentes,
+                    Evento = evento,
+                    Observaciones = observaciones
+
+                };
+
+                //METODO AGREGAR DEVUELVE BOOLEAN POR ESO SE CREA VARIABLE BOOLEANA resp
+                bool resp = dao.Modificar(nuevo_con);
+                MessageBox.Show(resp ? "Contrato Modificado" : "Contrato No Modificado");
+
+
+            }
+            catch (ArgumentException exa) //catch excepciones hechas por el usuario
+            {
+                MessageBox.Show(exa.Message);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error");
+            }
 
         }
     }
