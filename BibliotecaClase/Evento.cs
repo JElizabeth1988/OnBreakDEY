@@ -31,7 +31,8 @@ namespace BibliotecaClase
 
         public Evento(int valorBase,int personalBase)
         {
-            ValorBase = valorBase;PersonalBase = personalBase;
+            ValorBase = valorBase;
+            PersonalBase = personalBase;
         }
 
         public int PersonalAdicional

@@ -44,8 +44,6 @@ namespace BibliotecaClase
             }
         }
 
-
-
         public String FechaCreacion
         {
             get { return _fechaCreacion; }
@@ -62,13 +60,11 @@ namespace BibliotecaClase
         }
         }
 
-
         public String Vigente
         {
             get { return _vigente; }
             set { _vigente = value; }
         }
-
 
         public String FechaTermino
         {
@@ -78,9 +74,6 @@ namespace BibliotecaClase
                 _fechaTermino = value;
             }
         }
-
-
-     
 
         public String Direccion
         {
@@ -97,7 +90,6 @@ namespace BibliotecaClase
                 }
             }
         }
-
 
         public int NumeroAsistentes
         {
@@ -116,7 +108,6 @@ namespace BibliotecaClase
         }
 
         public TipoEvento Evento { get; set; }
-
 
         public String Observaciones
         {
@@ -139,12 +130,11 @@ namespace BibliotecaClase
             set { _rutCliente = value; }
         }
 
+
         public Contrato()
         {
 
         }
-
-
 
         public Contrato(String numero,String fechaCreacion ,String vigente,String fechaTermino,
                         String direccion, int numeroAsistentes,TipoEvento evento,String observaciones,
@@ -163,11 +153,6 @@ namespace BibliotecaClase
 
 
        
-
-
-
-
-
 
     }
     
