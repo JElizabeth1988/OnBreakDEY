@@ -113,6 +113,7 @@ namespace Vista
             catch (Exception ex)
             {
                 MessageBox.Show("Error de ingreso de datos");
+                Logger.Mensaje(ex.Message);
 
             }
         }
@@ -178,7 +179,8 @@ namespace Vista
             catch (Exception ex)
             {
                 MessageBox.Show("error al buscar");
-                
+                Logger.Mensaje(ex.Message);
+
 
             }
         }
@@ -210,7 +212,7 @@ namespace Vista
             catch (Exception ex)
             {
                 MessageBox.Show("error al buscar");
-                //Logger.Mensaje(ex.Message);
+                Logger.Mensaje(ex.Message);
 
             }
         }
@@ -261,6 +263,7 @@ namespace Vista
             catch (Exception ex)
             {
                 MessageBox.Show("Error al Actualizar");
+                Logger.Mensaje(ex.Message);
 
             }
         }

@@ -102,7 +102,8 @@ namespace Vista
             catch (Exception ex)
             {
 
-                MessageBox.Show(":(");
+                MessageBox.Show("Error de ingreso de datos");
+                Logger.Mensaje(ex.Message);
             }
 
 
@@ -116,7 +117,6 @@ namespace Vista
         {
             txtNumero.Clear();
             txtBuscarCliente.Clear();
-            txtNombre.Clear();
             txtObservaciones.Clear();
             txtNumero.Focus();
 
@@ -144,37 +144,8 @@ namespace Vista
         }
 
 
-        //BUSCAR CONTRATO---------------------------------------------------------------------
-
-
-        public void BuscarContrato()
-        {
-            try
-            {
-                Contrato c = new DaoContrato().
-                    BuscarContrato(txtNumero.Text);
-                if (c != null)
-                {
-                    txtDireccion.Text = c.Direccion;
-                    txtNumeroAsistentes.Text = c.NumeroAsistentes.ToString();
-                    cboTipo.Text = c.Evento.ToString();
-                    txtObservaciones.Text = c.Observaciones;
-                }
-                else
-                {
-                    MessageBox.Show("Contrato No encontrado");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al buscar");
-                //Logger.Mensaje(ex.Message);
-
-            }
-        }
-
-       
-        //BOTON
+   
+        //BUSCAR CONTRATO
         private void btnBuscarContrato_Click_2(object sender, RoutedEventArgs e)
         {
             try
@@ -197,37 +168,13 @@ namespace Vista
             catch (Exception ex)
             {
                 MessageBox.Show("Error al buscar");
-                //Logger.Mensaje(ex.Message);
+                Logger.Mensaje(ex.Message);
 
             }
 
         }
 
         //BUSCAR CLIENTE
-        public void BuscarCliente()
-        {
-            try
-            {
-                Cliente c = new DaoCliente().
-                    BuscarCliente(txtBuscarCliente.Text);
-                if (c != null)
-                {
-                    txtNombre.Text = c.NombreContacto;
-                }
-                else
-                {
-                    MessageBox.Show("Cliente no encontrado");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al buscar");
-                //Logger.Mensaje(ex.Message);
-
-            }
-        }
-
-
         private void btnCliente_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -236,7 +183,7 @@ namespace Vista
                     BuscarCliente(txtBuscarCliente.Text);
                 if (c != null)
                 {
-                    txtNombre.Text = c.NombreContacto;
+                    lblNombreCliente.Content = c.NombreContacto;
                 }
                 else
                 {
@@ -246,7 +193,7 @@ namespace Vista
             catch (Exception ex)
             {
                 MessageBox.Show("Error al buscar");
-                //Logger.Mensaje(ex.Message);
+                Logger.Mensaje(ex.Message);
 
             }
         }
@@ -311,6 +258,7 @@ namespace Vista
             {
 
                 MessageBox.Show("Error");
+                Logger.Mensaje(ex.Message);
             }
 
         }

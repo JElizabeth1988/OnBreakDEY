@@ -13,6 +13,7 @@ namespace BibliotecaControlador
     {
         private static List<Contrato> contratos;
         private static List<Cliente> clientes;
+       
 
         //PATRON SINGLETON
         public DaoContrato()
