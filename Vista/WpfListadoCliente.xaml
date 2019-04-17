@@ -29,7 +29,9 @@
                 <TextBox x:Name="txtFiltroRut"  Controls:TextBoxHelper.Watermark="Ingrese Rut" HorizontalAlignment="Left" Height="23" Margin="113,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontWeight="Normal"/>
                 <ComboBox x:Name="cbTipoEmp" HorizontalAlignment="Left" Margin="111,34,0,0" VerticalAlignment="Top" Width="120" Height="26" FontWeight="Normal"/>
                 <ComboBox x:Name="cbActiv" HorizontalAlignment="Left" Margin="112,71,0,0" VerticalAlignment="Top" Width="120" FontWeight="Normal"/>
-                <Button x:Name="btnFiltrar" Content="Filtrar" HorizontalAlignment="Left" Margin="254,35,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Click="btnFiltrar_Click"/>
+                <Button x:Name="btnFiltrarRut" Content="Filtrar" HorizontalAlignment="Left" Margin="255,0,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Click="btnFiltrar_Click"/>
+                <Button x:Name="btnFiltrarTipo" Content="Filtrar" HorizontalAlignment="Left" Margin="255,34,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Click="btnFiltrarTipo_Click"/>
+                <Button x:Name="btnFiltrarAct" Content="Filtrar" HorizontalAlignment="Left" Margin="255,69,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Click="btnFiltrarAct_Click"/>
             </Grid>
         </GroupBox>
 
