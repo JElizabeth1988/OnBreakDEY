@@ -1,78 +1,25 @@
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Servicios\obj\Debug\Servicios.csprojResolveAssemblyReference.cache
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Servicios\bin\ApplicationInsights.config
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Servicios\bin\Servicios.dll.config
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Servicios\bin\Servicios.dll
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Servicios\bin\Servicios.pdb
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Servicios\bin\Microsoft.AI.Agent.Intercept.dll
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Servicios\bin\Microsoft.AI.DependencyCollector.dll
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Servicios\bin\Microsoft.AI.PerfCounterCollector.dll
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Servicios\bin\Microsoft.AI.ServerTelemetryChannel.dll
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Servicios\bin\Microsoft.AI.Web.dll
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Servicios\bin\Microsoft.AI.WindowsServer.dll
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Servicios\bin\Microsoft.ApplicationInsights.dll
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Servicios\bin\Newtonsoft.Json.dll
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Servicios\bin\System.Net.Http.Formatting.dll
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Servicios\bin\WebApiRestService.WebApiClient.dll
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Servicios\bin\Microsoft.AI.DependencyCollector.xml
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Servicios\bin\Microsoft.AI.ServerTelemetryChannel.xml
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Servicios\bin\Microsoft.AI.Web.xml
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Servicios\bin\Microsoft.AI.WindowsServer.xml
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Servicios\bin\Microsoft.ApplicationInsights.xml
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Servicios\bin\Newtonsoft.Json.xml
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Servicios\bin\System.Net.Http.Formatting.xml
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Servicios\bin\WebApiRestService.WebApiClient.xml
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Servicios\obj\Debug\Servicios.dll
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Servicios\obj\Debug\Servicios.pdb
-<<<<<<< HEAD
-C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Servicios\bin\ApplicationInsights.config
-C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Servicios\bin\Servicios.dll.config
-C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Servicios\bin\Servicios.dll
-C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Servicios\bin\Servicios.pdb
-C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Servicios\bin\Microsoft.AI.Agent.Intercept.dll
-C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Servicios\bin\Microsoft.AI.DependencyCollector.dll
-C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Servicios\bin\Microsoft.AI.PerfCounterCollector.dll
-C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Servicios\bin\Microsoft.AI.ServerTelemetryChannel.dll
-C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Servicios\bin\Microsoft.AI.Web.dll
-C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Servicios\bin\Microsoft.AI.WindowsServer.dll
-C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Servicios\bin\Microsoft.ApplicationInsights.dll
-C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Servicios\bin\Newtonsoft.Json.dll
-C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Servicios\bin\System.Net.Http.Formatting.dll
-C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Servicios\bin\WebApiRestService.WebApiClient.dll
-C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Servicios\bin\Microsoft.AI.DependencyCollector.xml
-C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Servicios\bin\Microsoft.AI.ServerTelemetryChannel.xml
-C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Servicios\bin\Microsoft.AI.Web.xml
-C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Servicios\bin\Microsoft.AI.WindowsServer.xml
-C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Servicios\bin\Microsoft.ApplicationInsights.xml
-C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Servicios\bin\Newtonsoft.Json.xml
-C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Servicios\bin\System.Net.Http.Formatting.xml
-C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Servicios\bin\WebApiRestService.WebApiClient.xml
-C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Servicios\obj\Debug\Servicios.csprojResolveAssemblyReference.cache
-C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Servicios\obj\Debug\Servicios.dll
-C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Servicios\obj\Debug\Servicios.pdb
-=======
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Servicios\bin\ApplicationInsights.config
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Servicios\bin\Servicios.dll.config
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Servicios\bin\Servicios.dll
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Servicios\bin\Servicios.pdb
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Servicios\bin\Microsoft.AI.Agent.Intercept.dll
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Servicios\bin\Microsoft.AI.DependencyCollector.dll
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Servicios\bin\Microsoft.AI.PerfCounterCollector.dll
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Servicios\bin\Microsoft.AI.ServerTelemetryChannel.dll
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Servicios\bin\Microsoft.AI.Web.dll
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Servicios\bin\Microsoft.AI.WindowsServer.dll
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Servicios\bin\Microsoft.ApplicationInsights.dll
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Servicios\bin\Newtonsoft.Json.dll
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Servicios\bin\System.Net.Http.Formatting.dll
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Servicios\bin\WebApiRestService.WebApiClient.dll
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Servicios\bin\Microsoft.AI.DependencyCollector.xml
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Servicios\bin\Microsoft.AI.ServerTelemetryChannel.xml
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Servicios\bin\Microsoft.AI.Web.xml
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Servicios\bin\Microsoft.AI.WindowsServer.xml
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Servicios\bin\Microsoft.ApplicationInsights.xml
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Servicios\bin\Newtonsoft.Json.xml
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Servicios\bin\System.Net.Http.Formatting.xml
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Servicios\bin\WebApiRestService.WebApiClient.xml
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Servicios\obj\Debug\Servicios.csprojResolveAssemblyReference.cache
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Servicios\obj\Debug\Servicios.dll
-C:\Users\chida\Desktop\Duplicado\UnBreakable\Servicios\obj\Debug\Servicios.pdb
->>>>>>> 22dd38caa39c1acb2211ed786263fb79613ef095
+F:\UnBreakable\Servicios\bin\ApplicationInsights.config
+F:\UnBreakable\Servicios\bin\Servicios.dll.config
+F:\UnBreakable\Servicios\bin\Servicios.dll
+F:\UnBreakable\Servicios\bin\Servicios.pdb
+F:\UnBreakable\Servicios\bin\Microsoft.AI.Agent.Intercept.dll
+F:\UnBreakable\Servicios\bin\Microsoft.AI.DependencyCollector.dll
+F:\UnBreakable\Servicios\bin\Microsoft.AI.PerfCounterCollector.dll
+F:\UnBreakable\Servicios\bin\Microsoft.AI.ServerTelemetryChannel.dll
+F:\UnBreakable\Servicios\bin\Microsoft.AI.Web.dll
+F:\UnBreakable\Servicios\bin\Microsoft.AI.WindowsServer.dll
+F:\UnBreakable\Servicios\bin\Microsoft.ApplicationInsights.dll
+F:\UnBreakable\Servicios\bin\Newtonsoft.Json.dll
+F:\UnBreakable\Servicios\bin\System.Net.Http.Formatting.dll
+F:\UnBreakable\Servicios\bin\WebApiRestService.WebApiClient.dll
+F:\UnBreakable\Servicios\bin\Microsoft.AI.DependencyCollector.xml
+F:\UnBreakable\Servicios\bin\Microsoft.AI.ServerTelemetryChannel.xml
+F:\UnBreakable\Servicios\bin\Microsoft.AI.Web.xml
+F:\UnBreakable\Servicios\bin\Microsoft.AI.WindowsServer.xml
+F:\UnBreakable\Servicios\bin\Microsoft.ApplicationInsights.xml
+F:\UnBreakable\Servicios\bin\Newtonsoft.Json.xml
+F:\UnBreakable\Servicios\bin\System.Net.Http.Formatting.xml
+F:\UnBreakable\Servicios\bin\WebApiRestService.WebApiClient.xml
+F:\UnBreakable\Servicios\obj\Debug\Servicios.csprojResolveAssemblyReference.cache
+F:\UnBreakable\Servicios\obj\Debug\Servicios.dll
+F:\UnBreakable\Servicios\obj\Debug\Servicios.pdb

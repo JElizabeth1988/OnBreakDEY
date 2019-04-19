@@ -27,7 +27,7 @@ namespace Vista
     {
         WpfCliente cl;//recibir a cliente
         //-------------------------------Crear_Contrato cc;
-
+        Crear_Contrato cc;
         //Llamado desde menú principal
         public wpfListadoCliente()
         {
@@ -58,11 +58,42 @@ namespace Vista
             }
         }
 
+        public wpfListadoCliente(Crear_Contrato origen)
+        {
+            InitializeComponent();
+
+            btnPasar.Visibility = Visibility.Visible;//el botón traspasar no se ve
+
+            //llenar el combo box con los datos del enumerador
+            cbActiv.ItemsSource = Enum.GetValues(typeof
+                (ActividadEmpresa));
+            cbActiv.SelectedIndex = 0;
+
+            cbTipoEmp.ItemsSource = Enum.GetValues(typeof
+                (TipoEmpresa));
+            cbTipoEmp.SelectedIndex = 0;
+
+            try
+            {
+                DaoCliente dao = new DaoCliente();
+                dgLista.ItemsSource = dao.Listar();
+                dgLista.Items.Refresh();
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error!" + ex.Message);
+            }
+            cc = origen;
+        }
+
         //Llamado desde el modulo administrar Cliente
         public wpfListadoCliente(WpfCliente origen)
         {
             InitializeComponent();
             cl = origen;
+            btnPasar.Visibility = Visibility.Visible;
 
             //llenar el combo box con los datos del enumerador
             cbActiv.ItemsSource = Enum.GetValues(typeof
@@ -108,10 +139,19 @@ namespace Vista
             {
                 btnPasar.Visibility = Visibility.Hidden;//hacer que vuelva a desaparecer, en este caso no lo necesitamos
             }*/
-
-            Cliente cli = (Cliente)dgLista.SelectedItem;
-            cl.txtRut.Text = cli.Rut;
-            cl.Buscar();
+            if (cl==null)
+            {
+                Cliente cli = (Cliente)dgLista.SelectedItem;
+                cc.txtBuscarCliente.Text = cli.Rut;
+                cc.Buscar();
+            }
+            else
+            {
+                Cliente cli = (Cliente)dgLista.SelectedItem;
+                cl.txtRut.Text = cli.Rut;
+                cl.Buscar();
+            }
+            
 
         }
 

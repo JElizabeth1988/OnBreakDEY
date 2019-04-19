@@ -96,7 +96,7 @@
         <Label x:Name="label9_Copy" Content="Datos Evento" HorizontalAlignment="Left" Margin="38,189,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="Black" Height="34" Width="121" FontSize="16" FontFamily="Segoe UI Historic" FontWeight="Bold"/>
         <Label x:Name="label5_Copy2" Content="N° Personal Adicional:" HorizontalAlignment="Left" Margin="366,409,0,0" VerticalAlignment="Top" Height="26" Width="136"/>
         <TextBox x:Name="txtPersonalAdicional" HorizontalAlignment="Left" Height="23" Margin="513,410,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="41" TextChanged="txtPersonalAdicional_TextChanged_1" RenderTransformOrigin="0.481,0.026"/>
-        <Label x:Name="label" Content="" HorizontalAlignment="Left" Margin="716,324,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label" Content="SubTotal :" HorizontalAlignment="Left" Margin="716,324,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label_Copy" Content="Asistentes :" HorizontalAlignment="Left" Margin="716,355,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label_Copy3" Content="Personal Adicional :" HorizontalAlignment="Left" Margin="716,386,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label_Copy5" HorizontalAlignment="Left" Margin="716,410,-11,0" VerticalAlignment="Top" Width="282" Height="25">
@@ -107,6 +107,7 @@
         <Label x:Name="lblValorBase" Content="" HorizontalAlignment="Left" Margin="905,324,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblAsistentes" Content="" HorizontalAlignment="Left" Margin="905,355,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblPersonalAdicional" Content="" HorizontalAlignment="Left" Margin="905,386,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblTotal" Content="" HorizontalAlignment="Left" Margin="905,435,0,0" VerticalAlignment="Top" Width="81" Grid.RowSpan="2"/>
         <Label x:Name="label_Copy7" Content="Fecha Inicio:" HorizontalAlignment="Left" Height="36" Margin="66,275,0,0" VerticalAlignment="Top" Width="122" RenderTransformOrigin="0.707,0.45">
             <Label.RenderTransform>
                 <TransformGroup>
@@ -128,6 +129,6 @@
         <TextBox x:Name="txtMinutoTermino"  Controls:TextBoxHelper.Watermark ="MN" HorizontalAlignment="Left" Height="26" Margin="543,324,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="39"/>
         <Label x:Name="label2_Copy2" Content="Hora Termino:" HorizontalAlignment="Left" Margin="372,324,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.101,0.5" Height="26" Width="92"/>
         <DatePicker x:Name="dpFechaFinEvento" HorizontalAlignment="Left" Margin="180,324,0,0" VerticalAlignment="Top" Height="26" Width="151"/>
-        <TextBox x:Name="txtTotal" HorizontalAlignment="Left" Height="23" Margin="817,435,0,0" Grid.RowSpan="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="txtTotal_TextChanged"/>
+        <Label x:Name="lblUf" Content="" HorizontalAlignment="Left" Margin="732,223,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Controls:MetroWindow>

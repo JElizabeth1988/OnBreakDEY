@@ -27,12 +27,14 @@ namespace Vista
     public partial class Crear_Contrato : MetroWindow
     {
         DaoContrato dao;
+        double uf = new Servicios.Service1().Uf();
         public RoutedEventHandler btnBuscarContrato_Click { get; private set; }
 
         public Crear_Contrato()
         {
 
             InitializeComponent();
+            lblUf.Content = "" + uf;
             cboTipo.ItemsSource = Enum.GetValues(typeof(TipoEvento));
             cboTipo.SelectedIndex = 0;
 
@@ -153,7 +155,7 @@ namespace Vista
         //listar cliente
         private void btnListadoCliente_Click(object sender, RoutedEventArgs e)
         {
-            wpfListadoCliente cli = new wpfListadoCliente();
+            wpfListadoCliente cli = new wpfListadoCliente(this);
             cli.Show();
 
         }
@@ -203,6 +205,29 @@ namespace Vista
 
         //BUSCAR CLIENTE
         private void btnCliente_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Cliente c = new DaoCliente().
+                    BuscarCliente(txtBuscarCliente.Text);
+                if (c != null)
+                {
+                    lblNombreCliente.Content = c.NombreContacto;
+                }
+                else
+                {
+                    MessageBox.Show("Cliente no Encontrado");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al buscar");
+                Logger.Mensaje(ex.Message);
+
+            }
+        }
+
+        public void Buscar()
         {
             try
             {
@@ -354,8 +379,7 @@ namespace Vista
         {
             if (txtPersonalAdicional.Text != null)
             {
-                Servicios.Service1 WS = new Servicios.Service1();
-                double uf = WS.Uf();
+                
                 int personal = int.Parse(txtPersonalAdicional.Text);
                 double cant_uf = 0;
 
@@ -385,11 +409,6 @@ namespace Vista
                 int v = (int)(cant_uf * uf);
                 lblPersonalAdicional.Content = v.ToString();
             }
-        }
-
-        private void txtTotal_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            txtTotal.Text = 1000000 +;
         }
 
 
