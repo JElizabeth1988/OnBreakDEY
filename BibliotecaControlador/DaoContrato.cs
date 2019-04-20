@@ -80,9 +80,9 @@ namespace BibliotecaControlador
         }
 
         //POR RUT
-        public List<Contrato> FiltroRut(String rut)
+        public List<Cliente> FiltroRut(String rut)
         {
-            List<Contrato> lcl = contratos.Where(x => x.RutCliente == rut).ToList();
+            List<Cliente> lcl = clientes.Where(x => x.Rut == rut).ToList();
             return lcl;
         }
 

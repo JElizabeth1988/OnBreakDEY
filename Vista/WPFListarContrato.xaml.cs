@@ -142,7 +142,7 @@ namespace Vista
             {
                 string rut = txtfiltroRut.Text;
 
-                List<Contrato> lcl = new DaoContrato()
+                List<Cliente> lcl = new DaoContrato()
                     .FiltroRut(rut);
                 dgvLista.ItemsSource = lcl;
             }
