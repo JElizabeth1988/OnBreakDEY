@@ -55,5 +55,11 @@ namespace Vista
             ListarContrato listContrato = new ListarContrato();
             listContrato.Show();
         }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            WpfEvento even = new WpfEvento();
+            even.Show();
+        }
     }
 }

@@ -65,7 +65,6 @@ namespace Vista
 
                 }
 
-                //EVENTO
 
                 //EVENTO
 
