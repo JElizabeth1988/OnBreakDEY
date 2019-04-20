@@ -167,3 +167,5 @@ C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\WpfListadoCliente.b
 C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\Vista.g.resources
 C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\Vista.Properties.Resources.resources
 C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\Vista.csproj.GenerateResource.Cache
+C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\obj\Debug\WpfEvento.g.cs
+C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\obj\Debug\WpfEvento.baml
