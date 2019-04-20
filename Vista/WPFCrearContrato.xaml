@@ -89,8 +89,8 @@
         <Label x:Name="label7" Content="Observaciones:" HorizontalAlignment="Left" Margin="66,3,0,0" VerticalAlignment="Top" Height="26" Width="95" Grid.Row="1"/>
         <TextBox x:Name="txtObservaciones" HorizontalAlignment="Left" Height="74" Margin="180,3,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="292" Grid.Row="1" FontWeight="Normal"/>
         <Label x:Name="label5" Content="Contrato Vigente:" HorizontalAlignment="Left" Margin="750,3,0,0" VerticalAlignment="Top" Height="26" Width="118" Grid.ColumnSpan="2"/>
-        <RadioButton x:Name="rbSi" Content="Sí" HorizontalAlignment="Left" Margin="53,10,0,0" VerticalAlignment="Top" IsChecked="True" Height="18" Width="34" GroupName="vigente" Grid.Column="1"/>
-        <RadioButton x:Name="rbNo" Content="No" HorizontalAlignment="Left" Margin="92,10,0,0" VerticalAlignment="Top" Height="18" Width="52" GroupName="vigente" Grid.Column="1"/>
+        <RadioButton x:Name="rbSi" Content="Sí" HorizontalAlignment="Left" Margin="53,10,0,0" VerticalAlignment="Top" IsChecked="True" Height="18" Width="34" GroupName="vigente" Grid.Column="1" IsEnabled="False"/>
+        <RadioButton x:Name="rbNo" Content="No" HorizontalAlignment="Left" Margin="92,10,0,0" VerticalAlignment="Top" Height="18" Width="52" GroupName="vigente" Grid.Column="1" IsEnabled="False"/>
         <Button x:Name="btnCliente" Content="Buscar" HorizontalAlignment="Left" Margin="467,85,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Click="btnCliente_Click" Height="29"/>
         <Label x:Name="lblNombreCliente" Content="" HorizontalAlignment="Left" Margin="228,130,0,0" VerticalAlignment="Top" Width="310"/>
         <Label x:Name="label9_Copy" Content="Datos Evento" HorizontalAlignment="Left" Margin="38,178,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="Black" Height="34" Width="121" FontSize="16" FontFamily="Segoe UI Historic" FontWeight="Bold"/>
