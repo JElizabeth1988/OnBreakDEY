@@ -177,7 +177,6 @@ namespace Vista
         {
             try
             {
-                Cliente cli = new Cliente();
                 TipoEmpresa tipo = (TipoEmpresa)cbTipoEmp.SelectedItem;
                 List<Cliente> lf = new DaoCliente()
                     .Filtro(tipo);
@@ -185,7 +184,7 @@ namespace Vista
             }
             catch (Exception)
             {
-
+                MessageBox.Show("error al Filtrar Información");
             }
         }
 
@@ -194,7 +193,7 @@ namespace Vista
         {
            try
             {
-                Cliente cli = new Cliente();
+                
                 ActividadEmpresa act = (ActividadEmpresa)cbActiv.SelectedItem;
                 List<Cliente> lf = new DaoCliente()
                     .Filtro(act);
@@ -202,7 +201,7 @@ namespace Vista
             }
             catch (Exception)
             {
-
+                MessageBox.Show("error al Filtrar Información");
             }
 
         }

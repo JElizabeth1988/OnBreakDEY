@@ -10,7 +10,7 @@
                       
         xmlns:local="clr-namespace:Vista"
         mc:Ignorable="d"    
-        Title="OnBreak - Administrar Cliente" Height="470.667" Width="528.666" WindowStartupLocation="CenterScreen" Cursor="Arrow" FontWeight="Bold" WindowTitleBrush="Black" Background="#FF84D9E8" Icon="Imagenes/white_logo_dark_background.jpg">
+        Title="OnBreak - Administrar Cliente" Height="470.667" Width="528.666" WindowStartupLocation="CenterScreen" Cursor="Arrow" FontWeight="Bold" WindowTitleBrush="Black" Background="#FF84D9E8" Icon="Imagenes/white_logo_dark_background.jpg" ResizeMode="NoResize">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="257*"/>

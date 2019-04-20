@@ -26,7 +26,7 @@ namespace Vista
     public partial class ListarContrato : MetroWindow
     {
         Crear_Contrato cc;//recibir a crear contrato
-        WpfCliente cl;
+        WpfCliente cl;//recibir al Mantenedor de Cliente
 
         private WpfCliente cli = new WpfCliente();
 
@@ -115,37 +115,17 @@ namespace Vista
 
         }
 
+        //NÚMERO
         private void btnFiltrar_Click(object sender, RoutedEventArgs e)
         {
-
-
             try
             {
-
-                //NUMERO
-                Contrato con = new Contrato();
                 string numero = txtfiltroNumero.Text;
 
                 List<Contrato> lcon = new DaoContrato()
                     .FiltroNum(numero);
                 dgvLista.ItemsSource = lcon;
 
-
-                //CLIENTE
-                Cliente co = new Cliente();
-                string rut = txtfiltroRut.Text;
-
-                List <Cliente> lco = new DaoContrato()
-                    .FiltroRut(rut);
-                dgvLista.ItemsSource = lco;
-
-
-                //TIPOEVENTO
-                Cliente cl = new Cliente();
-                TipoEvento tipoE = (TipoEvento)cbofilTipoContrato.SelectedItem;
-                List<Contrato> lf = new DaoContrato()
-                    .FiltroCon(tipoE);
-                dgvLista.ItemsSource = lf;
 
             }
             catch (Exception)
@@ -154,6 +134,40 @@ namespace Vista
             }
         }
 
- 
+        //CLIENTE
+        private void btnFiltrarRut_Click(object sender, RoutedEventArgs e)
+        {
+
+            try
+            {
+                string rut = txtfiltroRut.Text;
+
+                List<Cliente> lcl = new DaoContrato()
+                    .FiltroRut(rut);
+                dgvLista.ItemsSource = lcl;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("error al Filtrar Información");
+            }
+
+        }
+        //TIPOEVENTO
+        private void btnFiltrarTipo_Click(object sender, RoutedEventArgs e)
+        {
+
+            try
+            {
+                TipoEvento tipoE = (TipoEvento)cbofilTipoContrato.SelectedItem;
+                List<Contrato> lf = new DaoContrato()
+                    .FiltroCon(tipoE);
+                dgvLista.ItemsSource = lf;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("error al Filtrar Información");
+            }
+
+        }
     }
 }
