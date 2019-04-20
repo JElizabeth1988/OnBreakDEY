@@ -34,6 +34,7 @@ namespace Vista
         {
 
             InitializeComponent();
+            txtNumero.Text =  DateTime.Now.ToString("yyyyMMddHHmm");
             lblUf.Content = "" + uf;
             cboTipo.ItemsSource = Enum.GetValues(typeof(TipoEvento));
             cboTipo.SelectedIndex = 0;
@@ -46,7 +47,7 @@ namespace Vista
         {
             try
             {
-                String numero = DateTime.Now.ToString("yyyyMMddHHmm");
+                String numero = txtNumero.Text;
                 String fechaCreacion = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
                 String vigente;
                 String fechaTermino;
@@ -65,6 +66,7 @@ namespace Vista
 
                 }
 
+                //EVENTO
 
                 //EVENTO
 
