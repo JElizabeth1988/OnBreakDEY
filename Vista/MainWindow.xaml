@@ -49,7 +49,7 @@
 
             </Grid>
         </Controls:Tile>
-        <Button x:Name="button" Content="EVENTO" HorizontalAlignment="Left" Margin="427,545,0,0" VerticalAlignment="Top" Width="136" Height="66" Click="button_Click" Background="White"/>
+        <Button x:Name="button" Content="Crear Evento" HorizontalAlignment="Left" Margin="427,545,0,0" VerticalAlignment="Top" Width="136" Height="66" Click="button_Click" Background="White"/>
 
 
     </Grid>
