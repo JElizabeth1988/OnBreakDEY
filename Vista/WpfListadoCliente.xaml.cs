@@ -164,7 +164,7 @@ namespace Vista
                 string rut = txtFiltroRut.Text;
 
                 List<Cliente> lc = new DaoCliente()
-                    .Filtro(rut);
+                    .FiltroRut(rut);
                 dgLista.ItemsSource = lc;
             }
             catch (Exception)
@@ -179,7 +179,7 @@ namespace Vista
             {
                 TipoEmpresa tipo = (TipoEmpresa)cbTipoEmp.SelectedItem;
                 List<Cliente> lf = new DaoCliente()
-                    .Filtro(tipo);
+                    .FiltroEmp(tipo);
                 dgLista.ItemsSource = lf;
             }
             catch (Exception)
@@ -196,7 +196,7 @@ namespace Vista
                 
                 ActividadEmpresa act = (ActividadEmpresa)cbActiv.SelectedItem;
                 List<Cliente> lf = new DaoCliente()
-                    .Filtro(act);
+                    .FiltroAct(act);
                 dgLista.ItemsSource = lf;
             }
             catch (Exception)

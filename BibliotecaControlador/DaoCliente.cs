@@ -81,7 +81,7 @@ namespace BibliotecaControlador
         }
 
         //Filtrar por rut 
-        public List<Cliente> Filtro(string rut)
+        public List<Cliente> FiltroRut(string rut)
         {
             List<Cliente> cl = clientes.Where(x => x.Rut == rut).
                 ToList();
@@ -89,7 +89,7 @@ namespace BibliotecaControlador
         }
 
         //Filtrar por tipo de empresa
-        public List<Cliente> Filtro(TipoEmpresa tipo)
+        public List<Cliente> FiltroEmp(TipoEmpresa tipo)
         {
             List<Cliente> cl = clientes.Where(x => x.Empresa == tipo).
                 ToList();
@@ -97,7 +97,7 @@ namespace BibliotecaControlador
         }
 
         //Filtrar por Actividad de la empresa
-        public List<Cliente> Filtro(ActividadEmpresa act)
+        public List<Cliente> FiltroAct(ActividadEmpresa act)
         {
             List<Cliente> cl = clientes.Where(x => x.Actividad == act).
                 ToList();
