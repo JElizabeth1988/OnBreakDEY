@@ -108,6 +108,22 @@ namespace BibliotecaControlador
             }
             return false;
         }
+
+        //ESTADO----------------------------
+        public bool ModificarEstado(Contrato nuevo_con)
+        {
+            foreach (Contrato item in contratos)
+            {
+                if (item.Numero.Equals(nuevo_con.Numero))
+                {
+                    contratos.Remove(item);
+                    contratos.Add(nuevo_con);
+                    return true;
+                }
+            }
+            return false;
+        }
+
     }
 
 
