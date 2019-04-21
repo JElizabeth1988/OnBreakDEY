@@ -158,7 +158,8 @@ namespace Vista
             //txtPersonalAdicional.Clear();
             txtObservaciones.Clear();
             txtBuscarCliente.Focus();
-
+            rbSi.IsChecked = true;
+            rbNo.IsChecked = false;
 
 
         }
@@ -200,6 +201,7 @@ namespace Vista
                     txtDireccion.Text = c.Direccion;
                     txtBuscarCliente.Text = c.RutCliente;
                     dpFechaInicio.Text = c.FechaInicioEvento;
+                    dpFechaFinEvento.Text = c.FechaFinEvento;
                     txtHoraInicio.Text = c.HoraInicio.ToString();
                     txtMinutoInicio.Text = c.MinutoInicio.ToString();
                     txtHoraTermino.Text = c.HoraTermino.ToString();
@@ -241,6 +243,7 @@ namespace Vista
                     txtDireccion.Text = c.Direccion;
                     txtBuscarCliente.Text = c.RutCliente;
                     dpFechaInicio.Text = c.FechaInicioEvento;
+                    dpFechaFinEvento.Text = c.FechaFinEvento;
                     txtHoraInicio.Text = c.HoraInicio.ToString();
                     txtMinutoInicio.Text = c.MinutoInicio.ToString();
                     txtHoraTermino.Text = c.HoraTermino.ToString();
