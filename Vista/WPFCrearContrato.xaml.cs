@@ -485,8 +485,8 @@ namespace Vista
                 //{
                //     MessageBox.Show("Debe crear un contrato");
                 //}
-                else
-                {
+               // else
+                //{
 
                     if (rbNo.IsChecked == true)
                     {
@@ -553,7 +553,7 @@ namespace Vista
                         /*MessageBox.Show(resp ? "Contrato Terminado" : "Contrato No Terminado");*/
 
                     }
-                }
+                
             }
             catch (ArgumentException exa) //catch excepciones hechas por el usuario
             {
