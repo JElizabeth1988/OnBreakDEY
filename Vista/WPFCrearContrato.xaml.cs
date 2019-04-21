@@ -143,11 +143,9 @@ namespace Vista
         {
 
             txtBuscarCliente.Clear();
-            //LImpiar lbl cliente
             //lblNombreCliente;
-
-            //dpFechaInicio;
-            //dpFechaFinEvento;
+            dpFechaInicio.SelectedDate = null;
+            dpFechaFinEvento.SelectedDate = null;
             txtDireccion.Clear();
             txtHoraInicio.Clear();
             txtMinutoInicio.Clear();
