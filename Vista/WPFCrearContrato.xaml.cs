@@ -141,7 +141,7 @@ namespace Vista
         //limpiar
         private void btnLimpiar_Click(object sender, RoutedEventArgs e)
         {
-            txtNumero.Clear();
+
             txtBuscarCliente.Clear();
             //LImpiar lbl cliente
             //lblNombreCliente;
@@ -328,7 +328,8 @@ namespace Vista
             try
             {
                 String numero = txtNumero.Text;
-                String fechaCreacion = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
+                //Convert.ToDateTime(txtNumero).ToString("dd/MM/yyyy HH:mm")
+                String fechaCreacion = txtNumero.Text; 
                 String vigente;
                 String fechaTermino;
                 if (rbSi.IsChecked == true)
@@ -505,7 +506,8 @@ namespace Vista
                     else
                     {
                         String numero = txtNumero.Text;
-                        String fechaCreacion = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
+                        //Convert.ToDateTime(txtNumero).ToString("dd/MM/yyyy HH:mm")
+                        String fechaCreacion = txtNumero.Text;
                         String vigente = "No";
                         String fechaTermino = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
                         rbNo.IsChecked = true;
