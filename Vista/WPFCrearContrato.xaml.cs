@@ -345,7 +345,6 @@ namespace Vista
 
                 }
 
-                //EVENTO
 
                 //EVENTO
 
