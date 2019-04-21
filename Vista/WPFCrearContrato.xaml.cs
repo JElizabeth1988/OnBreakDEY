@@ -60,7 +60,7 @@ namespace Vista
                 else
                 {
                     vigente = "No";
-                    fechaTermino = DateTime.Now.ToString("dd/MM/yyyy HH:mm"); ;
+                    fechaTermino = DateTime.Now.ToString("dd/MM/yyyy HH:mm"); 
 
 
 
@@ -141,6 +141,7 @@ namespace Vista
         {
             txtNumero.Clear();
             txtBuscarCliente.Clear();
+            txtDireccion.Clear();
             txtObservaciones.Clear();
             txtNumero.Focus();
 
@@ -271,7 +272,7 @@ namespace Vista
         {
             try
             {
-                String numero = DateTime.Now.ToString("yyyyMMddHHmm");
+                String numero = txtNumero.Text;
                 String fechaCreacion = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
                 String vigente;
                 String fechaTermino;
@@ -290,7 +291,6 @@ namespace Vista
 
                 }
 
-                //EVENTO
 
                 //EVENTO
 
@@ -435,6 +435,7 @@ namespace Vista
         {
             try
             {
+<<<<<<< HEAD
                 String numero = DateTime.Now.ToString("yyyyMMddHHmm");
                 String fechaCreacion = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
                 String vigente = "No";
@@ -464,10 +465,109 @@ namespace Vista
 
                 String observaciones = txtObservaciones.Text;
                 String rutCliente = txtBuscarCliente.Text;
+=======
+>>>>>>> 5ecae0936a2804cbcc5756a239360bb5c00cf0d8
 
-                Contrato con_mod = new Contrato()
+                if (rbNo.IsChecked == true)
                 {
+                    MessageBox.Show("Contrato Ya terminado");
+                }
+                else
+                {
+                    String numero = txtNumero.Text;
+                    String fechaCreacion = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
+                    String vigente = "No";
+                    String fechaTermino = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
 
+
+                    //EVENTO
+
+                    //EVENTO
+
+                    //inicio
+                    String fechaInicioEvento = dpFechaInicio.Text;
+                    int horaInicio = int.Parse(txtHoraInicio.Text);
+                    int minutoInicio = int.Parse(txtMinutoInicio.Text);
+                    //termino
+                    String fechaFinEvento = dpFechaFinEvento.Text;
+                    int horaTermino = int.Parse(txtHoraTermino.Text);
+                    int minutoTermino = int.Parse(txtMinutoTermino.Text);
+
+                    //////
+                    String direccion = txtDireccion.Text;
+                    int numeroAsistentes = int.Parse(txtNumeroAsistentes.Text);
+                    int personalAdicional = int.Parse(txtPersonalAdicional.Text);
+                    TipoEvento evento = (TipoEvento)cboTipo.SelectedItem;
+
+
+                    String observaciones = txtObservaciones.Text;
+                    String rutCliente = txtBuscarCliente.Text;
+
+                    Contrato con_mod = new Contrato()
+                    {
+
+                        Numero = numero,
+                        FechaCreacion = fechaCreacion,
+                        Vigente = vigente,
+                        FechaTermino = fechaTermino,
+                        FechaInicioEvento = fechaInicioEvento,
+                        HoraInicio = horaInicio,
+                        MinutoInicio = minutoInicio,
+                        FechaFinEvento = fechaFinEvento,
+                        HoraTermino = horaTermino,
+                        MinutoTermino = minutoTermino,
+                        Direccion = direccion,
+                        NumeroAsistentes = numeroAsistentes,
+                        PersonalAdicional = personalAdicional,
+                        Evento = evento,
+                        Observaciones = observaciones,
+                        RutCliente = rutCliente
+                    };
+
+
+                    ListarContrato lis = new ListarContrato();
+                    Contrato con = (Contrato)lis.dgvLista.SelectedItem;
+                    MessageBoxResult respuesta =
+                        MessageBox.Show(
+                            "¿Desea Terminar Contrato?",
+                            "Terminar Contrato",
+                            MessageBoxButton.YesNo,
+                            MessageBoxImage.Warning);
+                    if (respuesta == MessageBoxResult.Yes)
+                    {
+
+                        bool resp = new DaoContrato().ModificarEstado(con_mod);
+                        if (resp)
+                        {
+                            MessageBox.Show("Contrato Terminado");
+                            lis.dgvLista.ItemsSource =
+                                new DaoCliente().Listar();
+                            rbNo.IsChecked = true;
+                            rbSi.IsChecked = false;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Contrato no terminado");
+                        }
+
+
+
+
+                        // lis.dgvLista.ItemsSource =
+                        //new DaoContrato().Listar();
+                        // bool resp = dao.Modificar(con_mod);
+                        ///essageBox.Show(resp ? "Contrato Terminado" : "Contrato No Terminado");
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Operación Cancelada");
+                    }
+
+
+                    //METODO AGREGAR DEVUELVE BOOLEAN POR ESO SE CREA VARIABLE BOOLEANA resp
+
+<<<<<<< HEAD
                     Numero = numero,
                     FechaCreacion = fechaCreacion,
                     Vigente = vigente,
@@ -493,6 +593,9 @@ namespace Vista
                       string.Format(resp ? "Contrato Terminado" : "Contrato No Terminado"));
                 /*MessageBox.Show(resp ? "Contrato Terminado" : "Contrato No Terminado");*/
 
+=======
+                }
+>>>>>>> 5ecae0936a2804cbcc5756a239360bb5c00cf0d8
 
             }
             catch (ArgumentException exa) //catch excepciones hechas por el usuario
