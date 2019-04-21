@@ -51,7 +51,7 @@ namespace Vista
             catch (Exception ex)
             {
 
-                MessageBox.Show("Error al Listar"+ex.Message);
+                MessageBox.Show("Error al Listar");
             }
             
         }
@@ -116,7 +116,7 @@ namespace Vista
         }
 
         //NÚMERO
-        private void btnFiltrar_Click(object sender, RoutedEventArgs e)
+        private async void btnFiltrar_Click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -130,12 +130,12 @@ namespace Vista
             }
             catch (Exception)
             {
-                MessageBox.Show("error al Filtrar Información");
+                await this.ShowMessageAsync("Mensaje","error al Filtrar Información");
             }
         }
 
         //CLIENTE
-        private void btnFiltrarRut_Click(object sender, RoutedEventArgs e)
+        private async void btnFiltrarRut_Click(object sender, RoutedEventArgs e)
         {
 
             try
@@ -148,12 +148,12 @@ namespace Vista
             }
             catch (Exception)
             {
-                MessageBox.Show("error al Filtrar Información");
+                await this.ShowMessageAsync("Mensaje","error al Filtrar Información");
             }
 
         }
         //TIPOEVENTO
-        private void btnFiltrarTipo_Click(object sender, RoutedEventArgs e)
+        private async void btnFiltrarTipo_Click(object sender, RoutedEventArgs e)
         {
 
             try
@@ -165,7 +165,7 @@ namespace Vista
             }
             catch (Exception)
             {
-                MessageBox.Show("error al Filtrar Información");
+                await this.ShowMessageAsync("Mensaje","error al Filtrar Información");
             }
 
         }

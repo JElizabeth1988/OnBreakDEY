@@ -208,6 +208,8 @@ namespace BibliotecaClase
             }
         }
 
+        public TipoEvento Evento { get; set; }
+
         public int NumeroAsistentes
         {
             get { return _numeroAsistentes; }
@@ -224,9 +226,23 @@ namespace BibliotecaClase
             }
         }
 
-      
+        public int PersonalAdicional
+        {
+            get { return _personalAdicional; }
+            set
+            {
+                if (value != 0)
+                {
+                    _personalAdicional = value;
+                }
+                else
+                {
+                    throw new ArgumentException("ERROR: Campo Personal Adicional no puede estar Vacío");
+                }
+            }
+        }
 
-        public TipoEvento Evento { get; set; }
+       
 
         public String Observaciones
         {
@@ -259,20 +275,7 @@ namespace BibliotecaClase
             }
         }
 
-        public int PersonalAdicional
-        {
-            get { return _personalAdicional; }
-            set { 
-                if (value != 0)
-                {
-                    _personalAdicional = value;
-                }
-                else
-                {
-                    throw new ArgumentException("ERROR: Campo Personal Adicional no puede estar Vacío");
-                }
-            }
-        }
+       
 
 
        

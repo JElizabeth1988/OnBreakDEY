@@ -198,6 +198,7 @@ namespace Vista
                 {
                   
                     txtDireccion.Text = c.Direccion;
+                    txtBuscarCliente.Text = c.RutCliente;
                     dpFechaInicio.Text = c.FechaInicioEvento;
                     txtHoraInicio.Text = c.HoraInicio.ToString();
                     txtMinutoInicio.Text = c.MinutoInicio.ToString();
@@ -226,7 +227,7 @@ namespace Vista
 
         }
 
-        //BUSCAR CONTRATO
+        //MÉTODO BUSCAR CONTRATO
 
         public async void BuscarContrato()
         {
@@ -237,7 +238,14 @@ namespace Vista
                 if (c != null)
                 {
                     txtDireccion.Text = c.Direccion;
+                    txtBuscarCliente.Text = c.RutCliente;
+                    dpFechaInicio.Text = c.FechaInicioEvento;
+                    txtHoraInicio.Text = c.HoraInicio.ToString();
+                    txtMinutoInicio.Text = c.MinutoInicio.ToString();
+                    txtHoraTermino.Text = c.HoraTermino.ToString();
+                    txtMinutoTermino.Text = c.MinutoTermino.ToString();
                     txtNumeroAsistentes.Text = c.NumeroAsistentes.ToString();
+                    txtPersonalAdicional.Text = c.PersonalAdicional.ToString();
                     cboTipo.Text = c.Evento.ToString();
                     txtObservaciones.Text = c.Observaciones;
                 }
