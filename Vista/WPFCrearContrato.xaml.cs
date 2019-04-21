@@ -143,11 +143,10 @@ namespace Vista
         {
             txtNumero.Clear();
             txtBuscarCliente.Clear();
-            //LImpiar lbl cliente
-            //lblNombreCliente;
+            lblNombreCliente.Visibility = Visibility.Hidden;//no ver label
 
-            //dpFechaInicio;
-            //dpFechaFinEvento;
+            dpFechaInicio.SelectedDate = null;
+            dpFechaFinEvento.SelectedDate = null;
             txtDireccion.Clear();
             txtHoraInicio.Clear();
             txtMinutoInicio.Clear();
@@ -277,6 +276,7 @@ namespace Vista
                 if (c != null)
                 {
                     lblNombreCliente.Content = c.NombreContacto;
+                    lblNombreCliente.Visibility = Visibility.Visible;//ver label
                 }
                 else
                 {
@@ -419,7 +419,7 @@ namespace Vista
             //valor evento base
 
             //Valor asistentes
-        private void txtNumeroAsistentes_TextChanged_1(object sender, TextChangedEventArgs e)
+        private async void txtNumeroAsistentes_TextChanged_1(object sender, TextChangedEventArgs e)
         {
             if (txtNumeroAsistentes.Text != null)
             {
@@ -447,10 +447,15 @@ namespace Vista
                 int v = (int)(n * uf);
                 lblAsistentes.Content = v.ToString();
             }
+            else
+            {
+                await this.ShowMessageAsync("Mensaje", "Debe crear un contrato");
+            }
+
         }
 
             //valor personal adicional
-        private void txtPersonalAdicional_TextChanged_1(object sender, TextChangedEventArgs e)
+        private async void txtPersonalAdicional_TextChanged_1(object sender, TextChangedEventArgs e)
         {
             if (txtPersonalAdicional.Text != null)
             {
@@ -483,6 +488,10 @@ namespace Vista
 
                 int v = (int)(cant_uf * uf);
                 lblPersonalAdicional.Content = v.ToString();
+            }
+            else
+            {
+                await this.ShowMessageAsync("Mensaje", "Debe crear un contrato");
             }
         }
 
