@@ -34,6 +34,7 @@
                 <Button x:Name="btnFiltrarAct" Content="Filtrar" HorizontalAlignment="Left" Margin="255,69,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Click="btnFiltrarAct_Click"/>
             </Grid>
         </GroupBox>
+        <Button x:Name="btnEliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="218,364,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" BorderBrush="#FF707070" Click="btnEliminar_Click" Grid.ColumnSpan="2"/>
 
     </Grid>
 </Controls:MetroWindow>

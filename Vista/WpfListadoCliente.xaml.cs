@@ -26,7 +26,7 @@ namespace Vista
     public partial class wpfListadoCliente : MetroWindow
     {
         WpfCliente cl;//recibir a cliente
-        //-------------------------------Crear_Contrato cc;
+        
         Crear_Contrato cc;
         //Llamado desde menú principal
         public wpfListadoCliente()
@@ -55,6 +55,7 @@ namespace Vista
             {
 
                 MessageBox.Show("Error!" + ex.Message);
+                Logger.Mensaje(ex.Message);
             }
         }
 
@@ -167,9 +168,10 @@ namespace Vista
                     .FiltroRut(rut);
                 dgLista.ItemsSource = lc;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 MessageBox.Show("error al Filtrar Información");
+                Logger.Mensaje(ex.Message);
             }
         }
         //Botón filtrar tipo
@@ -182,9 +184,10 @@ namespace Vista
                     .FiltroEmp(tipo);
                 dgLista.ItemsSource = lf;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 MessageBox.Show("error al Filtrar Información");
+                Logger.Mensaje(ex.Message);
             }
         }
 
@@ -199,11 +202,53 @@ namespace Vista
                     .FiltroAct(act);
                 dgLista.ItemsSource = lf;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 MessageBox.Show("error al Filtrar Información");
+                Logger.Mensaje(ex.Message);
             }
 
+        }
+
+        //Botón Eliminar
+        private void btnEliminar_Click(object sender, RoutedEventArgs e)
+        {
+            /*ntrato co = new Contrato();
+            Cliente cl = new Cliente();
+            //falta validar que no tenga contratos asociados!!!!
+            if (co.RutCliente != cl.Rut)
+            {*/
+
+            Cliente cli = (Cliente)dgLista.SelectedItem;
+            MessageBoxResult respuesta =
+                MessageBox.Show(
+                    "¿Desea eliminar al Cliente?",
+                    "Eliminar",
+                    MessageBoxButton.YesNo,
+                    MessageBoxImage.Warning);
+            if (respuesta == MessageBoxResult.Yes)
+            {
+                bool resp = new DaoCliente().Eliminar(cli.Rut);
+                if (resp)
+                {
+                    MessageBox.Show("Cliente eliminado");
+                    dgLista.ItemsSource =
+                        new DaoCliente().Listar();
+                }
+                else
+                {
+                    MessageBox.Show("No se eliminó al Cliente");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Operación Cancelada");
+            }
+            /* }
+              else
+              {
+                  MessageBox.Show("No se puede eliminar al Cliente, púes tiene contratos asociados!");
+              }*/
         }
     }
 }

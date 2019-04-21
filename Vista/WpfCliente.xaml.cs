@@ -118,38 +118,7 @@ namespace Vista
             }
         }
 
-        //Botón Eliminar
-        private void btnEliminar_Click(object sender, RoutedEventArgs e)
-        {
-            //falta validar que no tenga contratos asociados!!!!
-            wpfListadoCliente lis = new wpfListadoCliente();
-            Cliente cli = (Cliente)lis.dgLista.SelectedItem;
-            MessageBoxResult respuesta =
-                MessageBox.Show(
-                    "¿Desea eliminar al Cliente?",
-                    "Eliminar",
-                    MessageBoxButton.YesNo,
-                    MessageBoxImage.Warning);
-            if (respuesta == MessageBoxResult.Yes)
-            {
-                bool resp = new DaoCliente().Eliminar(cli.Rut);
-                if (resp)
-                {
-                    MessageBox.Show("Cliente eliminado");
-                    lis.dgLista.ItemsSource =
-                        new DaoCliente().Listar();
-                }
-                else
-                {
-                    MessageBox.Show("No se eliminó al Cliente");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Operación Cancelada");
-            }
-
-        }
+        
 
 
         //buscar (método void Singleton)
