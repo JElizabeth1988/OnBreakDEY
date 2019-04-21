@@ -141,14 +141,21 @@ namespace Vista
         {
             txtNumero.Clear();
             txtBuscarCliente.Clear();
+            //LImpiar lbl cliente
+            //lblNombreCliente;
+
+            //dpFechaInicio;
+            //dpFechaFinEvento;
             txtDireccion.Clear();
             txtHoraInicio.Clear();
+            txtMinutoInicio.Clear();
             txtHoraTermino.Clear();
+            txtMinutoTermino.Clear();
             cboTipo.SelectedItem = 0;
             //txtNumeroAsistentes.Clear();
             //txtPersonalAdicional.Clear();
             txtObservaciones.Clear();
-            txtNumero.Focus();
+            txtBuscarCliente.Focus();
 
 
 
@@ -474,11 +481,16 @@ namespace Vista
         {
             try
             {
-               
+               // if ()
+                //{
+                    MessageBox.Show("Debe crear un contrato");
+                //}
+                else
+                {
 
                     if (rbNo.IsChecked == true)
                     {
-                        MessageBox.Show("Contrato Ya terminado");
+                        await this.ShowMessageAsync("Mensaje","Contrato Ya terminado");
                     }
                     else
                     {
@@ -541,6 +553,7 @@ namespace Vista
                         /*MessageBox.Show(resp ? "Contrato Terminado" : "Contrato No Terminado");*/
 
                     }
+                }
             }
             catch (ArgumentException exa) //catch excepciones hechas por el usuario
             {
