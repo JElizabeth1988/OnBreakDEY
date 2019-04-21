@@ -131,6 +131,6 @@
         <DatePicker x:Name="dpFechaFinEvento" HorizontalAlignment="Left" Margin="180,313,0,0" VerticalAlignment="Top" Height="26" Width="151" FontWeight="Normal"/>
         <Label x:Name="lblUf" Content="" HorizontalAlignment="Left" Margin="23,291,0,0" VerticalAlignment="Top" Grid.Column="1"/>
         <Label x:Name="label_Copy8" Content="Valor UF :" HorizontalAlignment="Left" Margin="712,246,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="button1" Content="Terminar Contrato" HorizontalAlignment="Left" Margin="487,179,0,0" Grid.Row="1" VerticalAlignment="Top" Width="145"/>
+        <Button x:Name="btnTerminar" Content="Terminar Contrato" HorizontalAlignment="Left" Margin="487,179,0,0" Grid.Row="1" VerticalAlignment="Top" Width="145" Click="btnTerminar_Click"/>
     </Grid>
 </Controls:MetroWindow>
