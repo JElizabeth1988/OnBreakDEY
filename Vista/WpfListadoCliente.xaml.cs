@@ -157,7 +157,7 @@ namespace Vista
         }
 
         //Botón Filtrar rut
-        private void btnFiltrar_Click(object sender, RoutedEventArgs e)
+        private async void btnFiltrar_Click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -170,12 +170,14 @@ namespace Vista
             }
             catch (Exception ex)
             {
-                MessageBox.Show("error al Filtrar Información");
+                await this.ShowMessageAsync("Mensaje:",
+                      string.Format("Error al filtrar la Información"));
+                /*MessageBox.Show("error al Filtrar Información");*/
                 Logger.Mensaje(ex.Message);
             }
         }
         //Botón filtrar tipo
-        private void btnFiltrarTipo_Click(object sender, RoutedEventArgs e)
+        private async void btnFiltrarTipo_Click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -186,13 +188,15 @@ namespace Vista
             }
             catch (Exception ex)
             {
-                MessageBox.Show("error al Filtrar Información");
+                await this.ShowMessageAsync("Mensaje:",
+                     string.Format("Error al filtrar la Información"));
+                /*MessageBox.Show("error al Filtrar Información");*/
                 Logger.Mensaje(ex.Message);
             }
         }
 
         //Botón filtrar tipo
-        private void btnFiltrarAct_Click(object sender, RoutedEventArgs e)
+        private async void btnFiltrarAct_Click(object sender, RoutedEventArgs e)
         {
            try
             {
@@ -204,14 +208,16 @@ namespace Vista
             }
             catch (Exception ex)
             {
-                MessageBox.Show("error al Filtrar Información");
+                await this.ShowMessageAsync("Mensaje:",
+                     string.Format("Error al filtrar la Información"));
+                /*MessageBox.Show("error al Filtrar Información");*/
                 Logger.Mensaje(ex.Message);
             }
 
         }
 
         //Botón Eliminar
-        private void btnEliminar_Click(object sender, RoutedEventArgs e)
+        private async void btnEliminar_Click(object sender, RoutedEventArgs e)
         {
             /*ntrato co = new Contrato();
             Cliente cl = new Cliente();
@@ -221,7 +227,11 @@ namespace Vista
 
             Cliente cli = (Cliente)dgLista.SelectedItem;
             MessageBoxResult respuesta =
-                MessageBox.Show(
+                /*await this.ShowMessageAsync("Mensaje:",
+                      string.Format("¿Desea eliminar al Cliente?", "Eliminar",
+                    MessageBoxButton.YesNo,
+                    MessageBoxImage.Warning));*/
+            MessageBox.Show(
                     "¿Desea eliminar al Cliente?",
                     "Eliminar",
                     MessageBoxButton.YesNo,

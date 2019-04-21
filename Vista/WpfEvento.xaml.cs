@@ -34,7 +34,7 @@ namespace Vista
             dao = new DaoEvento();
         }
 
-        private void btnCrear_Click(object sender, RoutedEventArgs e)
+        private async void btnCrear_Click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -47,16 +47,18 @@ namespace Vista
                 {
 
                     NombreTipoEvento = nombreTipoEvento,
-                    ValorBase=valorBase,
-                    PersonalBase=personalBase,
+                    ValorBase = valorBase,
+                    PersonalBase = personalBase,
 
-                   
-                  
+
+
                 };
 
                 //METODO AGREGAR DEVUELVE BOOLEAN POR ESO SE CREA VARIABLE BOOLEANA resp
                 bool resp = dao.Agregar(even);
-                MessageBox.Show(resp ? "Guardado" : "No Guardado");
+                await this.ShowMessageAsync("Mensaje:",
+                      string.Format(resp ? "Guardado" : "No Guardado"));
+                /*MessageBox.Show(resp ? "Guardado" : "No Guardado");*/
 
 
             }
@@ -66,8 +68,9 @@ namespace Vista
             }
             catch (Exception ex)
             {
-
-                MessageBox.Show("Error de ingreso de datos");
+                await this.ShowMessageAsync("Mensaje:",
+                      string.Format("Error de Ingreso de datos"));
+                /*MessageBox.Show("Error de ingreso de datos");*/
                 Logger.Mensaje(ex.Message);
             }
 

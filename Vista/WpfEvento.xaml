@@ -10,7 +10,7 @@
                       
         xmlns:local="clr-namespace:Vista"
         mc:Ignorable="d"
-        Title="On Break - Crear Evento" Height="340.333" Width="463.999" Icon="Imagenes/white_logo_dark_background.jpg">
+        Title="OnBreak - Crear Evento" Height="340.333" Width="463.999" Icon="Imagenes/white_logo_dark_background.jpg" WindowTitleBrush="Black" ResizeMode="NoResize">
     <Grid Background="#FF84D9E8">
         <Label x:Name="label6" Content="Tipo Evento:" HorizontalAlignment="Left" Margin="34,40,0,0" VerticalAlignment="Top" Height="26" Width="82"/>
         <Label x:Name="label" Content="Valor Base:" HorizontalAlignment="Left" Margin="34,94,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.237,0.154"/>
@@ -21,4 +21,4 @@
         <TextBox x:Name="txtNombreTipoEvento" HorizontalAlignment="Left" Height="23" Margin="171,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
 
     </Grid>
-</Controls:MetroWindow>
+</Controls:MetroWindow>  

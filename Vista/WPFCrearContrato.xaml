@@ -10,7 +10,7 @@
                       
         xmlns:local="clr-namespace:Vista"
         mc:Ignorable="d"
-        Title="OnBreak - Administrar Contrato" Height="729.335" Width="986.628" WindowStartupLocation="CenterScreen" FontWeight="Bold" WindowTitleBrush="Black" Icon="Imagenes/white_logo_dark_background.jpg" ResizeMode="NoResize">
+        Title="OnBreak - Administrar Contrato" Height="694.335" Width="984.628" WindowStartupLocation="CenterScreen" FontWeight="Bold" WindowTitleBrush="Black" Icon="Imagenes/white_logo_dark_background.jpg" ResizeMode="NoResize">
     <Grid Margin="0,0,-1,-2" Background="#FF84D9E8" Height="799" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
         <Grid.RenderTransform>
             <TransformGroup>
@@ -49,7 +49,7 @@
             </Button.RenderTransform>
         </Button>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="210,184,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="16" Width="0"/>
-        <Button x:Name="btnCrear" Content="Crear" HorizontalAlignment="Left" Margin="143,181,0,0" VerticalAlignment="Top" Width="73" Click="btnCrear_Click" FontWeight="Normal" RenderTransformOrigin="0.5,0.5" Height="28" Grid.Row="1">
+        <Button x:Name="btnCrear" Content="Crear" HorizontalAlignment="Left" Margin="143,144.333,0,0" VerticalAlignment="Top" Width="73" Click="btnCrear_Click" FontWeight="Normal" RenderTransformOrigin="0.5,0.5" Height="28" Grid.Row="1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -59,7 +59,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="btnModificar" Content="Modificar" HorizontalAlignment="Left" Margin="380,177,0,0" VerticalAlignment="Top" Width="82" FontWeight="Normal" RenderTransformOrigin="0.5,0.5" Height="28" Click="btnModificar_Click" Grid.Row="1">
+        <Button x:Name="btnModificar" Content="Modificar" HorizontalAlignment="Left" Margin="384,149.333,0,0" VerticalAlignment="Top" Width="82" FontWeight="Normal" RenderTransformOrigin="0.5,0.5" Height="28" Click="btnModificar_Click" Grid.Row="1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -69,7 +69,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="btnLimpiar" Content="Limpiar" HorizontalAlignment="Left" Margin="266,178,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Click="btnLimpiar_Click" RenderTransformOrigin="0.5,0.5" Height="30" Grid.Row="1">
+        <Button x:Name="btnLimpiar" Content="Limpiar" HorizontalAlignment="Left" Margin="264,146.333,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Click="btnLimpiar_Click" RenderTransformOrigin="0.5,0.5" Height="30" Grid.Row="1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -79,7 +79,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="button" Content="Cerrar" HorizontalAlignment="Left" Margin="23,199,0,0" VerticalAlignment="Top" Width="76" FontWeight="Normal" Height="28" Click="button_Click" Grid.Row="1" Grid.Column="1"/>
+        <Button x:Name="button" Content="Cerrar" HorizontalAlignment="Left" Margin="748,150.333,0,0" VerticalAlignment="Top" Width="76" FontWeight="Normal" Height="28" Click="button_Click" Grid.Row="1" Grid.ColumnSpan="2"/>
         <Label x:Name="label6" Content="Tipo Evento:" HorizontalAlignment="Left" Margin="66,355,0,0" VerticalAlignment="Top" Height="26" Width="82"/>
         <ComboBox x:Name="cboTipo" HorizontalAlignment="Left" Margin="180,355,0,0" VerticalAlignment="Top" Width="145" AutomationProperties.IsOffscreenBehavior="Onscreen" Height="26" FontWeight="Normal"/>
         <Label x:Name="label4" Content="Dirección:" HorizontalAlignment="Left" Margin="66,220,0,0" VerticalAlignment="Top" Height="26" Width="69"/>
@@ -92,22 +92,22 @@
         <RadioButton x:Name="rbSi" Content="Sí" HorizontalAlignment="Left" Margin="53,10,0,0" VerticalAlignment="Top" IsChecked="True" Height="18" Width="34" GroupName="vigente" Grid.Column="1" IsEnabled="False"/>
         <RadioButton x:Name="rbNo" Content="No" HorizontalAlignment="Left" Margin="92,10,0,0" VerticalAlignment="Top" Height="18" Width="52" GroupName="vigente" Grid.Column="1" IsEnabled="False"/>
         <Button x:Name="btnCliente" Content="Buscar" HorizontalAlignment="Left" Margin="467,85,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Click="btnCliente_Click" Height="29"/>
-        <Label x:Name="lblNombreCliente" Content="" HorizontalAlignment="Left" Margin="228,130,0,0" VerticalAlignment="Top" Width="310"/>
+        <Label x:Name="lblNombreCliente" Content="" HorizontalAlignment="Left" Margin="228,130,0,0" VerticalAlignment="Top" Width="310" FontWeight="Normal"/>
         <Label x:Name="label9_Copy" Content="Datos Evento" HorizontalAlignment="Left" Margin="38,178,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="Black" Height="34" Width="121" FontSize="16" FontFamily="Segoe UI Historic" FontWeight="Bold"/>
         <Label x:Name="label5_Copy2" Content="N° Personal Adicional:" HorizontalAlignment="Left" Margin="366,398,0,0" VerticalAlignment="Top" Height="26" Width="136"/>
         <TextBox x:Name="txtPersonalAdicional" HorizontalAlignment="Left" Height="23" Margin="513,399,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="41" TextChanged="txtPersonalAdicional_TextChanged_1" RenderTransformOrigin="0.481,0.026" FontWeight="Normal"/>
         <Label x:Name="label" Content="SubTotal :" HorizontalAlignment="Left" Margin="704,330,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label_Copy" Content="Asistentes :" HorizontalAlignment="Left" Margin="704,361,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label_Copy3" Content="Personal Adicional :" HorizontalAlignment="Left" Margin="704,392,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
-        <Label x:Name="label_Copy5" HorizontalAlignment="Left" Margin="704,416,0,0" VerticalAlignment="Top" Width="282" Height="25" Grid.ColumnSpan="3">
+        <Label x:Name="label_Copy5" HorizontalAlignment="Left" Margin="706,411,0,0" VerticalAlignment="Top" Width="282" Height="25" Grid.ColumnSpan="3">
             <Separator HorizontalAlignment="Left" Height="16" Margin="0" VerticalAlignment="Top" Width="567"/>
         </Label>
         <Label x:Name="label9_Copy1" Content="Valor Evento" HorizontalAlignment="Left" Margin="703,284,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="Black" Height="34" Width="121" FontSize="16" FontFamily="Segoe UI Historic" FontWeight="Bold" Grid.ColumnSpan="2"/>
         <Label x:Name="label_Copy6" Content="Valor Total :" HorizontalAlignment="Left" Margin="704,441,0,0" VerticalAlignment="Top" Grid.RowSpan="2"/>
-        <Label x:Name="lblValorBase" Content="" HorizontalAlignment="Left" Margin="84,375,0,0" VerticalAlignment="Top" Grid.Column="1"/>
-        <Label x:Name="lblAsistentes" Content="" HorizontalAlignment="Left" Margin="84,406,0,0" VerticalAlignment="Top" Grid.Column="1"/>
-        <Label x:Name="lblPersonalAdicional" Content="" HorizontalAlignment="Left" Margin="84,437,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.RowSpan="2"/>
-        <Label x:Name="lblTotal" Content="" HorizontalAlignment="Left" Margin="84,39,0,0" VerticalAlignment="Top" Width="81" Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="1"/>
+        <Label x:Name="lblValorBase" Content="" HorizontalAlignment="Left" Margin="46.258,330,0,0" VerticalAlignment="Top" Grid.Column="1" FontWeight="Normal"/>
+        <Label x:Name="lblAsistentes" Content="" HorizontalAlignment="Left" Margin="46.258,361,0,0" VerticalAlignment="Top" Grid.Column="1" FontWeight="Normal"/>
+        <Label x:Name="lblPersonalAdicional" Content="" HorizontalAlignment="Left" Margin="44.258,387,0,0" VerticalAlignment="Top" Grid.Column="1" FontWeight="Normal"/>
+        <Label x:Name="lblTotal" Content="" HorizontalAlignment="Left" Margin="10.258,441,0,0" VerticalAlignment="Top" Width="81" Grid.Column="1" FontWeight="Normal" Grid.RowSpan="2"/>
         <Label x:Name="label_Copy7" Content="Fecha Inicio:" HorizontalAlignment="Left" Height="36" Margin="66,264,0,0" VerticalAlignment="Top" Width="122" RenderTransformOrigin="0.707,0.45">
             <Label.RenderTransform>
                 <TransformGroup>
@@ -129,8 +129,8 @@
         <TextBox x:Name="txtMinutoTermino"  Controls:TextBoxHelper.Watermark ="MN" HorizontalAlignment="Left" Height="26" Margin="543,313,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="39" FontWeight="Normal"/>
         <Label x:Name="label2_Copy2" Content="Hora Termino:" HorizontalAlignment="Left" Margin="372,313,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.101,0.5" Height="26" Width="92"/>
         <DatePicker x:Name="dpFechaFinEvento" HorizontalAlignment="Left" Margin="180,313,0,0" VerticalAlignment="Top" Height="26" Width="151" FontWeight="Normal"/>
-        <Label x:Name="lblUf" Content="" HorizontalAlignment="Left" Margin="23,291,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label x:Name="lblUf" Content="" HorizontalAlignment="Left" Margin="46.258,246,0,0" VerticalAlignment="Top" Grid.Column="1" FontWeight="Normal"/>
         <Label x:Name="label_Copy8" Content="Valor UF :" HorizontalAlignment="Left" Margin="712,246,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnTerminar" Content="Terminar Contrato" HorizontalAlignment="Left" Margin="487,179,0,0" Grid.Row="1" VerticalAlignment="Top" Width="145" Click="btnTerminar_Click"/>
+        <Button x:Name="btnTerminar" Content="Terminar Contrato" HorizontalAlignment="Left" Margin="513,149.333,0,0" Grid.Row="1" VerticalAlignment="Top" Width="145" Click="btnTerminar_Click" FontWeight="Normal"/>
     </Grid>
 </Controls:MetroWindow>

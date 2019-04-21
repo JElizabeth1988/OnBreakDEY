@@ -43,7 +43,7 @@ namespace Vista
         }
 
         //crear contrato
-        private void btnCrear_Click(object sender, RoutedEventArgs e)
+        private async void btnCrear_Click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -112,7 +112,9 @@ namespace Vista
 
                 //METODO AGREGAR DEVUELVE BOOLEAN POR ESO SE CREA VARIABLE BOOLEANA resp
                 bool resp = dao.Agregar(con);
-                MessageBox.Show(resp ? "Guardado" : "No Guardado");
+                await this.ShowMessageAsync("Mensaje:",
+                      string.Format(resp ? "Guardado" : "No guardado"));
+                /*MessageBox.Show(resp ? "Guardado" : "No Guardado");*/
 
 
             }
@@ -122,8 +124,9 @@ namespace Vista
             }
             catch (Exception ex)
             {
-
-                MessageBox.Show("Error de ingreso de datos");
+                await this.ShowMessageAsync("Mensaje:",
+                      string.Format("Error de ingreso de datos"));
+                /*MessageBox.Show("Error de ingreso de datos");*/
                 Logger.Mensaje(ex.Message);
             }
 
@@ -170,7 +173,7 @@ namespace Vista
 
    
         //BUSCAR CONTRATO
-        private void btnBuscarContrato_Click_2(object sender, RoutedEventArgs e)
+        private async void btnBuscarContrato_Click_2(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -192,12 +195,16 @@ namespace Vista
                 }
                 else
                 {
-                    MessageBox.Show("Contrato no Encontrado");
+                    await this.ShowMessageAsync("Mensaje:",
+                      string.Format("Contrato no encontrado"));
+                    /*MessageBox.Show("Contrato no Encontrado");*/
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al buscar");
+                await this.ShowMessageAsync("Mensaje:",
+                      string.Format("Error al Buscar"));
+                /*MessageBox.Show("Error al buscar");*/
                 Logger.Mensaje(ex.Message);
 
             }
@@ -205,7 +212,7 @@ namespace Vista
         }
 
         //BUSCAR CLIENTE
-        private void btnCliente_Click(object sender, RoutedEventArgs e)
+        private async void btnCliente_Click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -217,18 +224,22 @@ namespace Vista
                 }
                 else
                 {
-                    MessageBox.Show("Cliente no Encontrado");
+                    await this.ShowMessageAsync("Mensaje:",
+                     string.Format("Cliente no encontrado"));
+                    /*MessageBox.Show("Cliente no Encontrado");*/
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al buscar");
+                await this.ShowMessageAsync("Mensaje:",
+                      string.Format("Error al Buscar"));
+                /*MessageBox.Show("Error al buscar");*/
                 Logger.Mensaje(ex.Message);
 
             }
         }
 
-        public void Buscar()
+        public async void Buscar()
         {
             try
             {
@@ -240,19 +251,23 @@ namespace Vista
                 }
                 else
                 {
-                    MessageBox.Show("Cliente no Encontrado");
+                    await this.ShowMessageAsync("Mensaje:",
+                     string.Format("Cliente no encontrado"));
+                    /*MessageBox.Show("Cliente no Encontrado");*/
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al buscar");
+                await this.ShowMessageAsync("Mensaje:",
+                      string.Format("Error al Buscar"));
+                /*MessageBox.Show("Error al buscar");*/
                 Logger.Mensaje(ex.Message);
 
             }
         }
 
         //MODIFICAR
-        private void btnModificar_Click(object sender, RoutedEventArgs e)
+        private async void btnModificar_Click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -322,7 +337,9 @@ namespace Vista
 
                 //METODO AGREGAR DEVUELVE BOOLEAN POR ESO SE CREA VARIABLE BOOLEANA resp
                 bool resp = dao.Modificar(nuevo_con);
-                MessageBox.Show(resp ? "Contrato Modificado" : "Contrato No Modificado");
+                await this.ShowMessageAsync("Mensaje:",
+                      string.Format(resp ? "Contrato Modificado" : "Contrato No Modificado"));
+                /*MessageBox.Show(resp ? "Contrato Modificado" : "Contrato No Modificado");*/
 
 
             }
@@ -332,8 +349,9 @@ namespace Vista
             }
             catch (Exception ex)
             {
-
-                MessageBox.Show("Error");
+                await this.ShowMessageAsync("Mensaje:",
+                     string.Format("Error"));
+                /*MessageBox.Show("Error");*/
                 Logger.Mensaje(ex.Message);
             }
 
@@ -413,14 +431,14 @@ namespace Vista
         }
 
         //TERMINAR CONTRATO
-        private void btnTerminar_Click(object sender, RoutedEventArgs e)
+        private async void btnTerminar_Click(object sender, RoutedEventArgs e)
         {
             try
             {
                 String numero = DateTime.Now.ToString("yyyyMMddHHmm");
                 String fechaCreacion = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
-                String vigente= "No";
-                String fechaTermino= DateTime.Now.ToString("dd/MM/yyyy HH:mm"); 
+                String vigente = "No";
+                String fechaTermino = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
                 rbNo.IsChecked = true;
                 rbSi.IsChecked = false;
 
@@ -471,7 +489,9 @@ namespace Vista
 
                 //METODO AGREGAR DEVUELVE BOOLEAN POR ESO SE CREA VARIABLE BOOLEANA resp
                 bool resp = dao.Modificar(con_mod);
-                MessageBox.Show(resp ? "Contrato Terminado" : "Contrato No Terminado");
+                await this.ShowMessageAsync("Mensaje:",
+                      string.Format(resp ? "Contrato Terminado" : "Contrato No Terminado"));
+                /*MessageBox.Show(resp ? "Contrato Terminado" : "Contrato No Terminado");*/
 
 
             }
@@ -481,8 +501,9 @@ namespace Vista
             }
             catch (Exception ex)
             {
-
-                MessageBox.Show("Error");
+                await this.ShowMessageAsync("Mensaje:",
+                      string.Format("Error"));
+                /*MessageBox.Show("Error");*/
                 Logger.Mensaje(ex.Message);
             }
 
