@@ -481,10 +481,25 @@ namespace Vista
                 if (respuesta == MessageBoxResult.Yes)
                 {
 
-                    lis.dgvLista.ItemsSource =
-                   new DaoContrato().Listar();
-                    bool resp = dao.Modificar(con_mod);
-                    MessageBox.Show(resp ? "Contrato Terminado" : "Contrato No Terminado");
+                    bool resp = new DaoContrato().ModificarEstado(con_mod);
+                    if (resp)
+                    {
+                        MessageBox.Show("Contrato Terminado");
+                        lis.dgvLista.ItemsSource =
+                            new DaoCliente().Listar();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Contrato no terminado");
+                    }
+
+
+
+
+                   // lis.dgvLista.ItemsSource =
+                   //new DaoContrato().Listar();
+                   // bool resp = dao.Modificar(con_mod);
+                    ///essageBox.Show(resp ? "Contrato Terminado" : "Contrato No Terminado");
 
                 }
                 else
