@@ -169,5 +169,25 @@ namespace Vista
             }
 
         }
+
+        private void btnPasar_Click_1(object sender, RoutedEventArgs e)
+        {
+
+            if (btnPasar.Visibility == Visibility.Hidden)
+            {
+                btnPasar.Visibility = Visibility.Hidden;
+
+            }
+
+
+            if (cc.btnModificar.Visibility == Visibility.Hidden)
+            {
+                cc.btnModificar.Visibility = Visibility.Hidden;
+
+            }
+            Contrato con = (Contrato)dgvLista.SelectedItem;
+            cc.txtNumero.Text = con.Numero;
+            cc.BuscarContrato();
+        }
     }
 }

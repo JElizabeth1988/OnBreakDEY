@@ -42,7 +42,7 @@ namespace Vista
             dao = new DaoContrato();
         }
 
-        //crear contrato
+        //CREAR CONTRATO
         private async void btnCrear_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -66,7 +66,7 @@ namespace Vista
 
                 }
 
-                //EVENTO
+              
 
                 //EVENTO
 
@@ -141,6 +141,7 @@ namespace Vista
         {
             txtNumero.Clear();
             txtBuscarCliente.Clear();
+           
             txtObservaciones.Clear();
             txtNumero.Focus();
 
@@ -210,6 +211,39 @@ namespace Vista
             }
 
         }
+
+        //BUSCAR CONTRATO
+
+        public async void BuscarContrato()
+        {
+            try
+            {
+                Contrato c = new DaoContrato().
+                    BuscarContrato(txtNumero.Text);
+                if (c != null)
+                {
+                    txtDireccion.Text = c.Direccion;
+                    txtNumeroAsistentes.Text = c.NumeroAsistentes.ToString();
+                    cboTipo.Text = c.Evento.ToString();
+                    txtObservaciones.Text = c.Observaciones;
+                }
+                else
+                {
+                    await this.ShowMessageAsync("Mensaje:",
+                     string.Format("Contrato no Encontrado"));
+                    MessageBox.Show("Contrato No encontrado");
+                }
+            }
+            catch (Exception ex)
+            {
+                await this.ShowMessageAsync("Mensaje:",
+                     string.Format("Error al Buscar"));
+                Logger.Mensaje(ex.Message);
+
+            }
+        }
+
+
 
         //BUSCAR CLIENTE
         private async void btnCliente_Click(object sender, RoutedEventArgs e)
@@ -369,7 +403,7 @@ namespace Vista
             {
                 Servicios.Service1 WS = new Servicios.Service1();
                 double uf = WS.Uf();
-                int asi = int.Parse(txtNumeroAsistentes.Text);
+              int asi = int.Parse(txtNumeroAsistentes.Text);
                 int n = 0;
 
                 if (asi >= 1 && asi <= 20)
