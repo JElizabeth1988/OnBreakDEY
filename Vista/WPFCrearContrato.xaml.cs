@@ -60,7 +60,7 @@ namespace Vista
                 else
                 {
                     vigente = "No";
-                    fechaTermino = DateTime.Now.ToString("dd/MM/yyyy HH:mm"); ;
+                    fechaTermino = DateTime.Now.ToString("dd/MM/yyyy HH:mm"); 
 
 
 
@@ -422,8 +422,7 @@ namespace Vista
                 String fechaCreacion = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
                 String vigente= "No";
                 String fechaTermino= DateTime.Now.ToString("dd/MM/yyyy HH:mm"); 
-                rbNo.IsChecked = true;
-                rbSi.IsChecked = false;
+             
 
                 //EVENTO
 
@@ -487,6 +486,8 @@ namespace Vista
                         MessageBox.Show("Contrato Terminado");
                         lis.dgvLista.ItemsSource =
                             new DaoCliente().Listar();
+                           rbNo.IsChecked = true;
+                           rbSi.IsChecked = false;
                     }
                     else
                     {
