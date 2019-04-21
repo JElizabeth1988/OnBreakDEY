@@ -94,7 +94,7 @@ namespace BibliotecaControlador
         }
 
 
-        //MODIFICAR
+        //MODIFICAR-----------------------------------------
         public bool Modificar(Contrato nuevo_con)
         {
             foreach (Contrato item in contratos)

@@ -485,7 +485,7 @@ namespace Vista
             {
                 if (cont == 0)
                 {
-                    MessageBox.Show("Debe crear un contrato");
+                    await this.ShowMessageAsync("Mensaje","Debe crear un contrato");
                 }
                 else
                 {
