@@ -271,7 +271,7 @@ namespace Vista
         {
             try
             {
-                String numero = DateTime.Now.ToString("yyyyMMddHHmm");
+                String numero = txtNumero.Text;
                 String fechaCreacion = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
                 String vigente;
                 String fechaTermino;
@@ -435,65 +435,73 @@ namespace Vista
         {
             try
             {
-                String numero = DateTime.Now.ToString("yyyyMMddHHmm");
-                String fechaCreacion = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
-                String vigente = "No";
-                String fechaTermino = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
-                rbNo.IsChecked = true;
-                rbSi.IsChecked = false;
+               
 
-                //EVENTO
+                    if (rbNo.IsChecked == true)
+                    {
+                        MessageBox.Show("Contrato Ya terminado");
+                    }
+                    else
+                    {
+                        String numero = txtNumero.Text;
+                        String fechaCreacion = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
+                        String vigente = "No";
+                        String fechaTermino = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
+                        rbNo.IsChecked = true;
+                        rbSi.IsChecked = false;
 
-                //EVENTO
+                        //EVENTO
 
-                //inicio
-                String fechaInicioEvento = dpFechaInicio.Text;
-                int horaInicio = int.Parse(txtHoraInicio.Text);
-                int minutoInicio = int.Parse(txtMinutoInicio.Text);
-                //termino
-                String fechaFinEvento = dpFechaFinEvento.Text;
-                int horaTermino = int.Parse(txtHoraTermino.Text);
-                int minutoTermino = int.Parse(txtMinutoTermino.Text);
+                        //EVENTO
 
-                //////
-                String direccion = txtDireccion.Text;
-                int numeroAsistentes = int.Parse(txtNumeroAsistentes.Text);
-                int personalAdicional = int.Parse(txtPersonalAdicional.Text);
-                TipoEvento evento = (TipoEvento)cboTipo.SelectedItem;
+                        //inicio
+                        String fechaInicioEvento = dpFechaInicio.Text;
+                        int horaInicio = int.Parse(txtHoraInicio.Text);
+                        int minutoInicio = int.Parse(txtMinutoInicio.Text);
+                        //termino
+                        String fechaFinEvento = dpFechaFinEvento.Text;
+                        int horaTermino = int.Parse(txtHoraTermino.Text);
+                        int minutoTermino = int.Parse(txtMinutoTermino.Text);
 
-
-                String observaciones = txtObservaciones.Text;
-                String rutCliente = txtBuscarCliente.Text;
-
-                Contrato con_mod = new Contrato()
-                {
-
-                    Numero = numero,
-                    FechaCreacion = fechaCreacion,
-                    Vigente = vigente,
-                    FechaTermino = fechaTermino,
-                    FechaInicioEvento = fechaInicioEvento,
-                    HoraInicio = horaInicio,
-                    MinutoInicio = minutoInicio,
-                    FechaFinEvento = fechaFinEvento,
-                    HoraTermino = horaTermino,
-                    MinutoTermino = minutoTermino,
-                    Direccion = direccion,
-                    NumeroAsistentes = numeroAsistentes,
-                    PersonalAdicional = personalAdicional,
-                    Evento = evento,
-                    Observaciones = observaciones,
-                    RutCliente = rutCliente
-                };
+                        //////
+                        String direccion = txtDireccion.Text;
+                        int numeroAsistentes = int.Parse(txtNumeroAsistentes.Text);
+                        int personalAdicional = int.Parse(txtPersonalAdicional.Text);
+                        TipoEvento evento = (TipoEvento)cboTipo.SelectedItem;
 
 
-                //METODO AGREGAR DEVUELVE BOOLEAN POR ESO SE CREA VARIABLE BOOLEANA resp
-                bool resp = dao.Modificar(con_mod);
-                await this.ShowMessageAsync("Mensaje:",
-                      string.Format(resp ? "Contrato Terminado" : "Contrato No Terminado"));
-                /*MessageBox.Show(resp ? "Contrato Terminado" : "Contrato No Terminado");*/
+                        String observaciones = txtObservaciones.Text;
+                        String rutCliente = txtBuscarCliente.Text;
+
+                        Contrato con_mod = new Contrato()
+                        {
+
+                            Numero = numero,
+                            FechaCreacion = fechaCreacion,
+                            Vigente = vigente,
+                            FechaTermino = fechaTermino,
+                            FechaInicioEvento = fechaInicioEvento,
+                            HoraInicio = horaInicio,
+                            MinutoInicio = minutoInicio,
+                            FechaFinEvento = fechaFinEvento,
+                            HoraTermino = horaTermino,
+                            MinutoTermino = minutoTermino,
+                            Direccion = direccion,
+                            NumeroAsistentes = numeroAsistentes,
+                            PersonalAdicional = personalAdicional,
+                            Evento = evento,
+                            Observaciones = observaciones,
+                            RutCliente = rutCliente
+                        };
 
 
+                        //METODO AGREGAR DEVUELVE BOOLEAN POR ESO SE CREA VARIABLE BOOLEANA resp
+                        bool resp = dao.ModificarEstado(con_mod);
+                        await this.ShowMessageAsync("Mensaje:",
+                              string.Format(resp ? "Contrato Terminado" : "Contrato No Terminado"));
+                        /*MessageBox.Show(resp ? "Contrato Terminado" : "Contrato No Terminado");*/
+
+                    }
             }
             catch (ArgumentException exa) //catch excepciones hechas por el usuario
             {
