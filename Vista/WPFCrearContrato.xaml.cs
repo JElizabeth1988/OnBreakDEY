@@ -483,7 +483,7 @@ namespace Vista
             {
                // if ()
                 //{
-                    MessageBox.Show("Debe crear un contrato");
+               //     MessageBox.Show("Debe crear un contrato");
                 //}
                 else
                 {
