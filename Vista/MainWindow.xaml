@@ -15,10 +15,11 @@
 
     <Grid Background="#FF1290CB">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="191*"/>
+            <ColumnDefinition Width="8*"/>
         </Grid.ColumnDefinitions>
 
-        <Image Source="imagenes/white_logo_color_background.jpg" Margin="153,52,154,66"/>
+        <Image Source="imagenes/white_logo_color_background.jpg" Margin="153,52,113.667,66"/>
 
         <Controls:Tile Click="Tile_Click" Margin="10,10,0,0" HorizontalAlignment="Left" Height="225" Width="228"  VerticalAlignment="Top"  >
             <Grid Width="220">
@@ -34,7 +35,7 @@
             </Grid>
         </Controls:Tile>
 
-        <Controls:Tile Click="Tile_Click_3" Margin="755,386,0,0" HorizontalAlignment="Left" Height="225" Width="228"  VerticalAlignment="Top"  >
+        <Controls:Tile Click="Tile_Click_3" Margin="755,386,0,0" HorizontalAlignment="Left" Height="225" Width="228"  VerticalAlignment="Top" Grid.ColumnSpan="2"  >
             <Grid Width="220">
                 <Image x:Name="imgLiCon" Source="Imagenes/p7.png"/>
                 <Label x:Name="lisCli_Copy" Content="Listado de Contratos" HorizontalAlignment="Left" Margin="35,186,0,-0.333" VerticalAlignment="Top" FontSize="16"/>
@@ -42,7 +43,7 @@
             </Grid>
         </Controls:Tile>
 
-        <Controls:Tile Click="Tile_Click_4" Margin="745,10,0,0" HorizontalAlignment="Left" Height="225" Width="228"  VerticalAlignment="Top"  >
+        <Controls:Tile Click="Tile_Click_4" Margin="745,10,0,0" HorizontalAlignment="Left" Height="225" Width="228"  VerticalAlignment="Top" Grid.ColumnSpan="2"  >
             <Grid Width="220">
                 <Image x:Name="imgAdmCont" Source="Imagenes/p6.png"/>
                 <Label x:Name="label_Copy" Content="Administrar Contrato" HorizontalAlignment="Left" Margin="41,0,0,0" VerticalAlignment="Top" FontSize="16"/>
