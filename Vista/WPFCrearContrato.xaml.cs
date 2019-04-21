@@ -418,7 +418,7 @@ namespace Vista
         {
             try
             {
-                String numero = DateTime.Now.ToString("yyyyMMddHHmm");
+                String numero = txtNumero.Text;
                 String fechaCreacion = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
                 String vigente= "No";
                 String fechaTermino= DateTime.Now.ToString("dd/MM/yyyy HH:mm"); 
