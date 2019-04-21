@@ -138,6 +138,7 @@ namespace Vista
         {
             txtNumero.Clear();
             txtBuscarCliente.Clear();
+            txtDireccion.Clear();
             txtObservaciones.Clear();
             txtNumero.Focus();
 
@@ -469,9 +470,31 @@ namespace Vista
                 };
 
 
+                ListarContrato lis = new ListarContrato();
+                Contrato con = (Contrato)lis.dgvLista.SelectedItem;
+                MessageBoxResult respuesta =
+                    MessageBox.Show(
+                        "¿Desea Terminar Contrato?",
+                        "Terminar Contrato",
+                        MessageBoxButton.YesNo,
+                        MessageBoxImage.Warning);
+                if (respuesta == MessageBoxResult.Yes)
+                {
+
+                    lis.dgvLista.ItemsSource =
+                   new DaoContrato().Listar();
+                    bool resp = dao.Modificar(con_mod);
+                    MessageBox.Show(resp ? "Contrato Terminado" : "Contrato No Terminado");
+
+                }
+                else
+                {
+                    MessageBox.Show("Operación Cancelada");
+                }
+
+
                 //METODO AGREGAR DEVUELVE BOOLEAN POR ESO SE CREA VARIABLE BOOLEANA resp
-                bool resp = dao.Modificar(con_mod);
-                MessageBox.Show(resp ? "Contrato Terminado" : "Contrato No Terminado");
+
 
 
             }
