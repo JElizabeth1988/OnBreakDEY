@@ -143,7 +143,7 @@ namespace Vista
         {
 
             txtBuscarCliente.Clear();
-            //lblNombreCliente;
+            lblNombreCliente.Visibility = Visibility.Hidden;
             dpFechaInicio.SelectedDate = null;
             dpFechaFinEvento.SelectedDate = null;
             txtDireccion.Clear();
@@ -194,7 +194,7 @@ namespace Vista
                     BuscarContrato(txtNumero.Text);
                 if (c != null)
                 {
-                  
+                    
                     txtDireccion.Text = c.Direccion;
                     txtBuscarCliente.Text = c.RutCliente;
                     dpFechaInicio.Text = c.FechaInicioEvento;
@@ -274,7 +274,9 @@ namespace Vista
                     BuscarCliente(txtBuscarCliente.Text);
                 if (c != null)
                 {
+                   
                     lblNombreCliente.Content = c.NombreContacto;
+                    lblNombreCliente.Visibility = Visibility.Visible;
                 }
                 else
                 {
