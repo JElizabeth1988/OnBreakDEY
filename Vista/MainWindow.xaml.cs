@@ -35,6 +35,7 @@ namespace Vista
             WpfCliente cliente = new WpfCliente();
             cliente.Show();
         }
+        
 
         //boton listar cliente
         private void Tile_Click_2(object sender, RoutedEventArgs e)
@@ -54,6 +55,12 @@ namespace Vista
         {
             ListarContrato listContrato = new ListarContrato();
             listContrato.Show();
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            WpfEvento even = new WpfEvento();
+            even.Show();
         }
     }
 }

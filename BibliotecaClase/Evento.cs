@@ -53,8 +53,9 @@ namespace BibliotecaClase
 
 
 
-        public Evento(int valorBase,int personalBase)
+        public Evento(String nombreTipoEvento,int valorBase,int personalBase)
         {
+            NombreTipoEvento = nombreTipoEvento;
             ValorBase = valorBase;
             PersonalBase = personalBase;
         }

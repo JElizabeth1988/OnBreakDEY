@@ -80,9 +80,9 @@ namespace BibliotecaControlador
         }
 
         //POR RUT
-        public List<Cliente> FiltroRut(String rut)
+        public List<Contrato> FiltroRut(String rut)
         {
-            List<Cliente> lcl = clientes.Where(x => x.Rut == rut).ToList();
+            List<Contrato> lcl = contratos.Where(x => x.RutCliente == rut).ToList();
             return lcl;
         }
 
@@ -94,7 +94,7 @@ namespace BibliotecaControlador
         }
 
 
-        //MODIFICAR
+        //MODIFICAR-----------------------------------------
         public bool Modificar(Contrato nuevo_con)
         {
             foreach (Contrato item in contratos)
@@ -108,6 +108,22 @@ namespace BibliotecaControlador
             }
             return false;
         }
+
+        //ESTADO----------------------------
+        public bool ModificarEstado(Contrato nuevo_con)
+        {
+            foreach (Contrato item in contratos)
+            {
+                if (item.Numero.Equals(nuevo_con.Numero))
+                {
+                    contratos.Remove(item);
+                    contratos.Add(nuevo_con);
+                    return true;
+                }
+            }
+            return false;
+        }
+
     }
 
 

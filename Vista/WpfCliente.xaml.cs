@@ -78,7 +78,7 @@ namespace Vista
         }
 
         //Botón Guardar
-        private void btnGuardar_Click(object sender, RoutedEventArgs e)
+        private async void btnGuardar_Click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -103,7 +103,9 @@ namespace Vista
 
                 };
                 bool resp = dao.Agregar(c);
-                MessageBox.Show(resp ? "Guardado" : "No Guardado");
+                await this.ShowMessageAsync("Mensaje:",
+                      string.Format(resp ? "Guardado" : "No Guardado"));
+                /*MessageBox.Show(resp ? "Guardado" : "No Guardado");*/
 
             }
             catch (ArgumentException exa)//mensajes de reglas de negocios
@@ -112,48 +114,18 @@ namespace Vista
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error de ingreso de datos");
+                await this.ShowMessageAsync("Mensaje:",
+                      string.Format("Error de ingreso de datos"));
+                /*MessageBox.Show("Error de ingreso de datos");*/
                 Logger.Mensaje(ex.Message);
 
             }
         }
 
-        //Botón Eliminar
-        private void btnEliminar_Click(object sender, RoutedEventArgs e)
-        {
-            //falta validar que no tenga contratos asociados!!!!
-            wpfListadoCliente lis = new wpfListadoCliente();
-            Cliente cli = (Cliente)lis.dgLista.SelectedItem;
-            MessageBoxResult respuesta =
-                MessageBox.Show(
-                    "¿Desea eliminar al Cliente?",
-                    "Eliminar",
-                    MessageBoxButton.YesNo,
-                    MessageBoxImage.Warning);
-            if (respuesta == MessageBoxResult.Yes)
-            {
-                bool resp = new DaoCliente().Eliminar(cli.Rut);
-                if (resp)
-                {
-                    MessageBox.Show("Cliente eliminado");
-                    lis.dgLista.ItemsSource =
-                        new DaoCliente().Listar();
-                }
-                else
-                {
-                    MessageBox.Show("No se eliminó al Cliente");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Operación Cancelada");
-            }
-
-        }
 
 
-        //buscar (método void Singleton)
-        public void Buscar()
+        //buscar 
+        public async void Buscar()
         {
             try
             {
@@ -173,12 +145,16 @@ namespace Vista
                 }
                 else
                 {
-                    MessageBox.Show("No se encontraron resultados!");
+                    await this.ShowMessageAsync("Mensaje:",
+                      string.Format("No se encontraron resultados!"));
+                    /*MessageBox.Show("No se encontraron resultados!");*/
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("error al buscar");
+                await this.ShowMessageAsync("Mensaje:",
+                     string.Format("Error al Buscar Información"));
+                /*MessageBox.Show("error al buscar");*/
                 Logger.Mensaje(ex.Message);
 
 
@@ -186,7 +162,7 @@ namespace Vista
         }
 
         //Botón Buscar
-        private void btnBuscar_Click(object sender, RoutedEventArgs e)
+        private async void btnBuscar_Click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -206,19 +182,23 @@ namespace Vista
                 }
                 else
                 {
-                    MessageBox.Show("No se encontraron resultados!");
+                    await this.ShowMessageAsync("Mensaje:",
+                     string.Format("No se encontraron resultados!"));
+                    /*MessageBox.Show("No se encontraron resultados!");*/
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("error al buscar");
+                await this.ShowMessageAsync("Mensaje:",
+                     string.Format("Error al Buscar Información"));
+                /*MessageBox.Show("error al buscar");*/
                 Logger.Mensaje(ex.Message);
 
             }
         }
 
         //Botón modificar
-        private void btnModificar_Click(object sender, RoutedEventArgs e)
+        private async void btnModificar_Click(object sender, RoutedEventArgs e)
         {
             /*if (btnModificar.Visibility == Visibility.Hidden)
             {
@@ -253,7 +233,9 @@ namespace Vista
 
                 };
                 bool resp = dao.Modificar(c);
-                MessageBox.Show(resp ? "Actualizado" : "No Actualizado, (El rut no se debe modificar)");
+                await this.ShowMessageAsync("Mensaje:",
+                     string.Format(resp ? "Actualizado" : "No Actualizado, (El rut no se debe modificar)"));
+                /*MessageBox.Show(resp ? "Actualizado" : "No Actualizado, (El rut no se debe modificar)");*/
 
             }
             catch (ArgumentException exa)//mensajes de reglas de negocios
@@ -262,7 +244,9 @@ namespace Vista
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al Actualizar");
+                await this.ShowMessageAsync("Mensaje:",
+                     string.Format("Error al Actualizar Datos"));
+                /*MessageBox.Show("Error al Actualizar");*/
                 Logger.Mensaje(ex.Message);
 
             }

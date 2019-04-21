@@ -10,14 +10,14 @@
                       
         xmlns:local="clr-namespace:Vista"
         mc:Ignorable="d"    
-        Title="OnBreak - Administrar Cliente" Height="470.667" Width="528.666" WindowStartupLocation="CenterScreen" Cursor="Arrow" FontWeight="Bold" WindowTitleBrush="Black" Background="#FF84D9E8" Icon="Imagenes/white_logo_dark_background.jpg">
+        Title="OnBreak - Administrar Cliente" Height="470.667" Width="528.666" WindowStartupLocation="CenterScreen" Cursor="Arrow" FontWeight="Bold" WindowTitleBrush="Black" Background="#FF84D9E8" Icon="Imagenes/white_logo_dark_background.jpg" ResizeMode="NoResize">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="257*"/>
             <ColumnDefinition/>
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
-        <Grid HorizontalAlignment="Left" Height="409" VerticalAlignment="Top" Width="516" Margin="-1,0,0,-0.333" Grid.ColumnSpan="2">
+        <Grid HorizontalAlignment="Left" Height="409" VerticalAlignment="Top" Width="516" Margin="5,0,0,0">
             <Label x:Name="label" Content="Rut:" HorizontalAlignment="Left" Margin="18,28,0,0" VerticalAlignment="Top"/>
             <Label x:Name="label_Copy" Content="Razón Social:" HorizontalAlignment="Left" Margin="18,60,0,0" VerticalAlignment="Top"/>
             <Label x:Name="label_Copy1" Content="Nombre de Contacto:" HorizontalAlignment="Left" Margin="18,91,0,0" VerticalAlignment="Top"/>
@@ -34,13 +34,12 @@
             <TextBox x:Name="txtTelefono" HorizontalAlignment="Left" Controls:TextBoxHelper.Watermark="Ingrese Teléfono" Height="8" Margin="187,186,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" FontWeight="Normal"/>
             <ComboBox x:Name="cbActividad" HorizontalAlignment="Left" Margin="187,224,0,0" VerticalAlignment="Top" Width="170" FontWeight="Normal"/>
             <ComboBox x:Name="cbTipo" HorizontalAlignment="Left" Margin="187,263,0,0" VerticalAlignment="Top" Width="170" FontWeight="Normal"/>
-            <Button x:Name="btnGuardar" Content="Guardar" HorizontalAlignment="Left" Margin="230,342,0,0" VerticalAlignment="Top" Width="75" Cursor="Arrow" FontWeight="Normal" Controls:ButtonHelper.PreserveTextCase="True" Click="btnGuardar_Click" RenderTransformOrigin="1.662,0.727"/>
-            <Button x:Name="btnCancelar" Content="Salir" HorizontalAlignment="Left" Margin="397,389,0,-8" VerticalAlignment="Top" Width="75" FontWeight="Normal" Click="btnCancelar_Click"/>
-            <Button x:Name="btnPregunta" Content="?" HorizontalAlignment="Left" Margin="354,29,0,0" VerticalAlignment="Top" Width="33" Background="#FFCACACA" FontWeight="Normal" Height="25" Click="btnPregunta_Click"/>
-            <Button x:Name="btnBuscar" Content="Buscar" HorizontalAlignment="Left" Margin="408,29,0,0" VerticalAlignment="Top" Width="74" Background="#FFCACACA" FontWeight="Normal" Height="25" Click="btnBuscar_Click"/>
-            <Button x:Name="btnLimpiar" Content="Limpiar" HorizontalAlignment="Left" Margin="65,342,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Click="btnLimpiar_Click"/>
-            <Button x:Name="btnEliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="397,341,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" BorderBrush="#FF707070" Click="btnEliminar_Click"/>
-            <Button x:Name="btnModificar" Content="Actualizar" HorizontalAlignment="Left" Margin="230,389,0,-8" VerticalAlignment="Top" Width="85" FontWeight="Normal" BorderBrush="#FF707070" Click="btnModificar_Click" />
+            <Button x:Name="btnGuardar" Content="Guardar" HorizontalAlignment="Left" Margin="153,342,0,0" VerticalAlignment="Top" Width="75" Cursor="Arrow" FontWeight="Normal" Controls:ButtonHelper.PreserveTextCase="True" Click="btnGuardar_Click" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
+            <Button x:Name="btnCancelar" Content="Salir" HorizontalAlignment="Left" Margin="408,342,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Cursor="Arrow" Click="btnCancelar_Click"  Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
+            <Button x:Name="btnPregunta" Content="?" HorizontalAlignment="Left" Margin="355,30,0,0" VerticalAlignment="Top" Width="33"  FontWeight="Normal" Height="25" Cursor="Arrow" Click="btnPregunta_Click"  Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
+            <Button x:Name="btnBuscar" Content="Buscar" HorizontalAlignment="Left" Margin="408,30,0,0" VerticalAlignment="Top" Width="75" Cursor="Arrow" FontWeight="Normal" Click="btnBuscar_Click"  Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
+            <Button x:Name="btnLimpiar" Content="Limpiar" HorizontalAlignment="Left" Margin="27,342,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Click="btnLimpiar_Click"  Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
+            <Button x:Name="btnModificar" Content="Actualizar" HorizontalAlignment="Left" Margin="272,342,0,0" VerticalAlignment="Top" Cursor="Arrow" Width="85" FontWeight="Normal"  Click="btnModificar_Click"  Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" />
         </Grid>
 
     </Grid>

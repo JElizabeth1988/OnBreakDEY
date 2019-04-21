@@ -26,7 +26,7 @@ namespace Vista
     public partial class ListarContrato : MetroWindow
     {
         Crear_Contrato cc;//recibir a crear contrato
-        WpfCliente cl;
+        WpfCliente cl;//recibir al Mantenedor de Cliente
 
         private WpfCliente cli = new WpfCliente();
 
@@ -51,7 +51,7 @@ namespace Vista
             catch (Exception ex)
             {
 
-                MessageBox.Show("Error al Listar"+ex.Message);
+                MessageBox.Show("Error al Listar");
             }
             
         }
@@ -115,15 +115,11 @@ namespace Vista
 
         }
 
-        private void btnFiltrar_Click(object sender, RoutedEventArgs e)
+        //NÚMERO
+        private async void btnFiltrar_Click(object sender, RoutedEventArgs e)
         {
-
-
             try
             {
-
-                //NUMERO
-                Contrato con = new Contrato();
                 string numero = txtfiltroNumero.Text;
 
                 List<Contrato> lcon = new DaoContrato()
@@ -131,29 +127,67 @@ namespace Vista
                 dgvLista.ItemsSource = lcon;
 
 
-                //CLIENTE
-                Cliente co = new Cliente();
+            }
+            catch (Exception)
+            {
+                await this.ShowMessageAsync("Mensaje","error al Filtrar Información");
+            }
+        }
+
+        //CLIENTE
+        private async void btnFiltrarRut_Click(object sender, RoutedEventArgs e)
+        {
+
+            try
+            {
                 string rut = txtfiltroRut.Text;
 
-                List <Cliente> lco = new DaoContrato()
+                List<Contrato> lcl = new DaoContrato()
                     .FiltroRut(rut);
-                dgvLista.ItemsSource = lco;
+                dgvLista.ItemsSource = lcl;
+            }
+            catch (Exception)
+            {
+                await this.ShowMessageAsync("Mensaje","error al Filtrar Información");
+            }
 
+        }
+        //TIPOEVENTO
+        private async void btnFiltrarTipo_Click(object sender, RoutedEventArgs e)
+        {
 
-                //TIPOEVENTO
-                Cliente cl = new Cliente();
+            try
+            {
                 TipoEvento tipoE = (TipoEvento)cbofilTipoContrato.SelectedItem;
                 List<Contrato> lf = new DaoContrato()
                     .FiltroCon(tipoE);
                 dgvLista.ItemsSource = lf;
-
             }
             catch (Exception)
             {
-                MessageBox.Show("error al Filtrar Información");
+                await this.ShowMessageAsync("Mensaje","error al Filtrar Información");
             }
+
         }
 
- 
+        private void btnPasar_Click_1(object sender, RoutedEventArgs e)
+        {
+
+            if (btnPasar.Visibility == Visibility.Hidden)
+            {
+                btnPasar.Visibility = Visibility.Hidden;
+
+            }
+
+
+            if (cc.btnModificar.Visibility == Visibility.Hidden)
+            {
+                cc.btnModificar.Visibility = Visibility.Hidden;
+
+            }
+            Contrato con = (Contrato)dgvLista.SelectedItem;
+            cc.txtNumero.Text = con.Numero;
+            cc.BuscarContrato();
+        }
     }
 }

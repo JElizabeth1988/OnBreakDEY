@@ -13,10 +13,10 @@ namespace BibliotecaClase
 
     public class Contrato
     {
-        
+
         private String _numero;
         private String _fechaCreacion;
-        private String  _vigente;
+        private String _vigente;
         private String _fechaTermino;
         private String _fechaInicioEvento;
         private int _horaInicio;
@@ -29,7 +29,7 @@ namespace BibliotecaClase
         private String _observaciones;
         private String _rutCliente;
         private int _personalAdicional;
-
+       
 
 
 
@@ -79,9 +79,17 @@ namespace BibliotecaClase
             get { return _fechaTermino; }
             set
             {
-                _fechaTermino = value;
+                if (value != null)
+                {
+                    _fechaTermino = value;
+                }
+                else
+                {
+                    throw new ArgumentException("ERROR: Campo Fecha Termino no puede estar Vacío");
+                }
+               
             }
-        }//hacerlo automatico
+        }
 
         public String FechaInicioEvento
         {
@@ -200,6 +208,8 @@ namespace BibliotecaClase
             }
         }
 
+        public TipoEvento Evento { get; set; }
+
         public int NumeroAsistentes
         {
             get { return _numeroAsistentes; }
@@ -219,11 +229,20 @@ namespace BibliotecaClase
         public int PersonalAdicional
         {
             get { return _personalAdicional; }
-            set { _personalAdicional = value; }
+            set
+            {
+                if (value != 0)
+                {
+                    _personalAdicional = value;
+                }
+                else
+                {
+                    throw new ArgumentException("ERROR: Campo Personal Adicional no puede estar Vacío");
+                }
+            }
         }
 
-
-        public TipoEvento Evento { get; set; }
+       
 
         public String Observaciones
         {
@@ -243,9 +262,23 @@ namespace BibliotecaClase
         public String RutCliente
         {
             get { return _rutCliente; }
-            set { _rutCliente = value; }
+            set {
+
+                if (value != null)
+                {
+                    _rutCliente = value;
+                }
+                else
+                {
+                   throw new ArgumentException("ERROR: Campo RUT no puede estar Vacío");
+                }
+            }
         }
 
+       
+
+
+       
 
         public Contrato()
         {
@@ -275,6 +308,7 @@ namespace BibliotecaClase
             Evento = evento;
             Observaciones = observaciones;
             RutCliente = rutCliente;
+            
         }
 
 
