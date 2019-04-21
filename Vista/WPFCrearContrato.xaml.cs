@@ -42,6 +42,8 @@ namespace Vista
             dao = new DaoContrato();
         }
 
+        int cont=0;
+
         //CREAR CONTRATO
         private async void btnCrear_Click(object sender, RoutedEventArgs e)
         {
@@ -115,7 +117,7 @@ namespace Vista
                 await this.ShowMessageAsync("Mensaje:",
                       string.Format(resp ? "Guardado" : "No guardado"));
                 /*MessageBox.Show(resp ? "Guardado" : "No Guardado");*/
-
+                cont = 1;
 
             }
             catch (ArgumentException exa) //catch excepciones hechas por el usuario
@@ -481,16 +483,16 @@ namespace Vista
         {
             try
             {
-               // if ()
-                //{
-               //     MessageBox.Show("Debe crear un contrato");
-                //}
-               // else
-                //{
+                if (cont == 0)
+                {
+                    MessageBox.Show("Debe crear un contrato");
+                }
+                else
+                {
 
                     if (rbNo.IsChecked == true)
                     {
-                        await this.ShowMessageAsync("Mensaje","Contrato Ya terminado");
+                        await this.ShowMessageAsync("Mensaje", "Contrato Ya terminado");
                     }
                     else
                     {
@@ -553,7 +555,7 @@ namespace Vista
                         /*MessageBox.Show(resp ? "Contrato Terminado" : "Contrato No Terminado");*/
 
                     }
-                
+                }   
             }
             catch (ArgumentException exa) //catch excepciones hechas por el usuario
             {

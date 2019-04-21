@@ -29,7 +29,7 @@ namespace BibliotecaClase
         private String _observaciones;
         private String _rutCliente;
         private int _personalAdicional;
-        private bool _termino;
+       
 
 
 
@@ -275,11 +275,7 @@ namespace BibliotecaClase
         }
 
 
-        public bool Termino
-        {
-            get { return _termino; }
-            set { _termino = value; }
-        }
+       
 
         public Contrato()
         {
@@ -290,7 +286,7 @@ namespace BibliotecaClase
                         String fechaInicioEvento, int horaInicio, int minutoInicio,
                         String fechaFinEvento, int horaTermino, int minutoTermino,
                         String direccion, int numeroAsistentes,int personalAdicional,TipoEvento evento,String observaciones,
-                        String rutCliente, bool termino)
+                        String rutCliente)
         {
 
             Numero = numero;
@@ -309,7 +305,7 @@ namespace BibliotecaClase
             Evento = evento;
             Observaciones = observaciones;
             RutCliente = rutCliente;
-            Termino = termino;
+            
         }
 
 
