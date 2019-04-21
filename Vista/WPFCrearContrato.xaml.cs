@@ -143,7 +143,7 @@ namespace Vista
         {
 
             txtBuscarCliente.Clear();
-            lblNombreCliente.Visibility = Visibility.Hidden;
+            lblNombreCliente.Visibility = Visibility.Hidden;//desaparecer label
             dpFechaInicio.SelectedDate = null;
             dpFechaFinEvento.SelectedDate = null;
             txtDireccion.Clear();
@@ -276,7 +276,7 @@ namespace Vista
                 {
                    
                     lblNombreCliente.Content = c.NombreContacto;
-                    lblNombreCliente.Visibility = Visibility.Visible;
+                    lblNombreCliente.Visibility = Visibility.Visible;//aparecer label
                 }
                 else
                 {
