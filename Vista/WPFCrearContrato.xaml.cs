@@ -141,7 +141,12 @@ namespace Vista
         {
             txtNumero.Clear();
             txtBuscarCliente.Clear();
-           
+            txtDireccion.Clear();
+            txtHoraInicio.Clear();
+            txtHoraTermino.Clear();
+            cboTipo.SelectedItem = 0;
+            //txtNumeroAsistentes.Clear();
+            //txtPersonalAdicional.Clear();
             txtObservaciones.Clear();
             txtNumero.Focus();
 
