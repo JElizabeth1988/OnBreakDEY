@@ -573,12 +573,13 @@ namespace Vista
                 int v = (int)(n * uf);
                 lblAsistentes.Content = v.ToString();
             }
-
-            else
-            {
-                await this.ShowMessageAsync("Mensaje", "Debe crear un contrato");
-            }
         }
+
+        //    else
+        //    {
+        //        await this.ShowMessageAsync("Mensaje", "Debe crear un contrato");
+        //    }
+        //}
         //catch (ArgumentException exa) //catch excepciones hechas por el usuario
         //{
         //    MessageBox.Show(exa.Message);
