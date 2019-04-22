@@ -171,3 +171,7 @@ C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\obj\Debug\WpfEvento.g
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\obj\Debug\WpfEvento.baml
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\obj\Debug\Login.g.cs
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\obj\Debug\Login.baml
+D:\UnBreakable\Vista\obj\Debug\Login.g.cs
+D:\UnBreakable\Vista\obj\Debug\WpfEvento.g.cs
+D:\UnBreakable\Vista\obj\Debug\Login.baml
+D:\UnBreakable\Vista\obj\Debug\WpfEvento.baml
