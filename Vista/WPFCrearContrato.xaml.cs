@@ -141,13 +141,11 @@ namespace Vista
         //limpiar
         private void btnLimpiar_Click(object sender, RoutedEventArgs e)
         {
-            txtNumero.Clear();
-            txtBuscarCliente.Clear();
-            //LImpiar lbl cliente
-            //lblNombreCliente;
 
-            //dpFechaInicio;
-            //dpFechaFinEvento;
+            txtBuscarCliente.Clear();
+            lblNombreCliente.Visibility = Visibility.Hidden;//desaparecer label
+            dpFechaInicio.SelectedDate = null;
+            dpFechaFinEvento.SelectedDate = null;
             txtDireccion.Clear();
             txtHoraInicio.Clear();
             txtMinutoInicio.Clear();
@@ -196,7 +194,7 @@ namespace Vista
                     BuscarContrato(txtNumero.Text);
                 if (c != null)
                 {
-                  
+                    
                     txtDireccion.Text = c.Direccion;
                     txtBuscarCliente.Text = c.RutCliente;
                     dpFechaInicio.Text = c.FechaInicioEvento;
@@ -276,7 +274,9 @@ namespace Vista
                     BuscarCliente(txtBuscarCliente.Text);
                 if (c != null)
                 {
+                   
                     lblNombreCliente.Content = c.NombreContacto;
+                    lblNombreCliente.Visibility = Visibility.Visible;//aparecer label
                 }
                 else
                 {
@@ -328,7 +328,8 @@ namespace Vista
             try
             {
                 String numero = txtNumero.Text;
-                String fechaCreacion = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
+                //Convert.ToDateTime(txtNumero).ToString("dd/MM/yyyy HH:mm")
+                String fechaCreacion = txtNumero.Text; 
                 String vigente;
                 String fechaTermino;
                 if (rbSi.IsChecked == true)
@@ -346,7 +347,6 @@ namespace Vista
 
                 }
 
-                //EVENTO
 
                 //EVENTO
 
@@ -505,7 +505,8 @@ namespace Vista
                     else
                     {
                         String numero = txtNumero.Text;
-                        String fechaCreacion = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
+                        //Convert.ToDateTime(txtNumero).ToString("dd/MM/yyyy HH:mm")
+                        String fechaCreacion = txtNumero.Text;
                         String vigente = "No";
                         String fechaTermino = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
                         rbNo.IsChecked = true;
