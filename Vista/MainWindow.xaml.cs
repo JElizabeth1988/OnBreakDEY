@@ -62,5 +62,11 @@ namespace Vista
             WpfEvento even = new WpfEvento();
             even.Show();
         }
+
+        private void Tile_Click_6(object sender, RoutedEventArgs e)
+        {
+            WpfEvento even = new WpfEvento();
+            even.Show();
+        }
     }
 }
