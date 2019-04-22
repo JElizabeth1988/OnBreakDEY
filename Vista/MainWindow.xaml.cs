@@ -57,7 +57,7 @@ namespace Vista
             listContrato.Show();
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private void Tile_Click_5(object sender, RoutedEventArgs e)
         {
             WpfEvento even = new WpfEvento();
             even.Show();

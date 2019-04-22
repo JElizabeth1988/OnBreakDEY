@@ -241,18 +241,24 @@ namespace Vista
                 bool resp = new DaoCliente().Eliminar(cli.Rut);
                 if (resp)
                 {
-                    MessageBox.Show("Cliente eliminado");
+                    await this.ShowMessageAsync("Mensaje:",
+                     string.Format("Cliente Eliminado"));
+                    /*MessageBox.Show("Cliente eliminado");*/
                     dgLista.ItemsSource =
                         new DaoCliente().Listar();
                 }
                 else
                 {
-                    MessageBox.Show("No se eliminó al Cliente");
+                    await this.ShowMessageAsync("Mensaje:",
+                     string.Format("No se eliminó al cliente"));
+                   /* MessageBox.Show("No se eliminó al Cliente");*/
                 }
             }
             else
             {
-                MessageBox.Show("Operación Cancelada");
+                await this.ShowMessageAsync("Mensaje:",
+                     string.Format("Operación Cancelada"));
+                /*MessageBox.Show("Operación Cancelada");*/
             }
             /* }
               else
