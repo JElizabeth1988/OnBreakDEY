@@ -14,7 +14,7 @@
     <Grid Background="#FF84D9E8">
         <TextBox x:Name="txtUsuario" Controls:TextBoxHelper.Watermark="Ingrese Nombre de Usuario" Controls:TextBoxHelper.ClearTextButton="True" HorizontalAlignment="Left" Height="23" Margin="42,139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="207"/>
         <PasswordBox x:Name="pbContrasenia" Controls:TextBoxHelper.Watermark="Ingrese Contraseña" Controls:TextBoxHelper.ClearTextButton="True" HorizontalAlignment="Left" Margin="42,184,0,0" VerticalAlignment="Top" Width="207"/>
-        <Image x:Name="image" HorizontalAlignment="Left" Height="155" Margin="74,10,0,0" VerticalAlignment="Top" Width="141" Source="Imagenes/Business-WHITE.png"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="155" Margin="74,10,0,0" VerticalAlignment="Top" Width="141" Source="Imagenes/Business-BLACK.png"/>
         <Button x:Name="btnLogin" Content="Ingresar" HorizontalAlignment="Left" Margin="105,242,0,0" VerticalAlignment="Top" Width="75" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Click="btnLogin_Click"/>
 
     </Grid>
