@@ -32,32 +32,10 @@
             <RowDefinition Height="352*"/>
         </Grid.RowDefinitions>
         <Rectangle Fill="#CC119EDA" HorizontalAlignment="Left" Height="34" Margin="220,-4,0,0" Stroke="#FFA0A0A0" VerticalAlignment="Top" Width="214" Grid.ColumnSpan="2" Grid.Column="1"/>
-<<<<<<< HEAD
-        <Label x:Name="label_Copy1" Content="Número:" HorizontalAlignment="Left" Height="36" Margin="130,37,0,0" VerticalAlignment="Top" Width="118"/>
-        <TextBox x:Name="txtNumero"  HorizontalAlignment="Left" Height="26" Margin="232,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" FontWeight="Normal"/>
-        <Button x:Name="btnBuscarContrato" Content="Buscar" HorizontalAlignment="Left" Margin="487,41,0,0" VerticalAlignment="Top" Width="76" Height="33" FontWeight="Normal" Click="btnBuscarContrato_Click_2"  Grid.ColumnSpan="2"  Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" />
-        <Button x:Name="btnListadoNum" Content="?" HorizontalAlignment="Left" Margin="416,41,0,0" VerticalAlignment="Top" Width="48" Height="33" Click="btnListadoNum_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
-        <Label x:Name="label_Copy2" Content="Nombre:" HorizontalAlignment="Left" Height="36" Margin="134,130,0,0" VerticalAlignment="Top" Width="76"/>
-        <Label x:Name="label_Copy4" Content="Rut Cliente:" HorizontalAlignment="Left" Height="36" Margin="130,89,0,0" VerticalAlignment="Top" Width="118"/>
-        <TextBox x:Name="txtBuscarCliente" Controls:TextBoxHelper.Watermark ="Ingrese Rut" HorizontalAlignment="Left" Height="26" Margin="232,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" FontWeight="Normal" />
-        <Button x:Name="btnListadoCliente" Content="?" HorizontalAlignment="Left" Margin="416,87,0,0" VerticalAlignment="Top" Width="47" Height="33" Click="btnListadoCliente_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
 
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="210,184,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="16" Width="0"/>
-        <Button x:Name="btnCrear" Content="Crear" HorizontalAlignment="Left" Margin="146,144,0,0" VerticalAlignment="Top" Width="73" Click="btnCrear_Click" FontWeight="Normal" Height="33" Grid.Row="1" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
-=======
-        <Label x:Name="label_Copy1" Content="Buscar Número:" HorizontalAlignment="Left" Height="36" Margin="125,82,0,0" VerticalAlignment="Top" Width="118"/>
-        <TextBox x:Name="txtNumero"  HorizontalAlignment="Left" Height="26" Margin="257,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" FontWeight="Normal"/>
-        <Button x:Name="btnBuscarContrato" Content="Buscar" HorizontalAlignment="Left" Margin="512,85,0,0" VerticalAlignment="Top" Width="76" Height="33" FontWeight="Normal" Click="btnBuscarContrato_Click_2"  Grid.ColumnSpan="2"  Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" />
-        <Button x:Name="btnListadoNum" Content="?" HorizontalAlignment="Left" Margin="441,85,0,0" VerticalAlignment="Top" Width="48" Height="33" Click="btnListadoNum_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
-        <Label x:Name="label_Copy2" Content="Nombre:" HorizontalAlignment="Left" Height="36" Margin="125,174,0,0" VerticalAlignment="Top" Width="76"/>
-        <Label x:Name="label_Copy4" Content="Rut Cliente:" HorizontalAlignment="Left" Height="36" Margin="125,133,0,0" VerticalAlignment="Top" Width="118"/>
-        <TextBox x:Name="txtBuscarCliente" Controls:TextBoxHelper.Watermark ="Ingrese Rut" HorizontalAlignment="Left" Height="26" Margin="257,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" FontWeight="Normal" />
-        <Button x:Name="btnListadoCliente" Content="?" HorizontalAlignment="Left" Margin="441,131,0,0" VerticalAlignment="Top" Width="47" Height="33" Click="btnListadoCliente_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
->>>>>>> 6ba0f4d2df64f3cd26e028db264a3a9dfc0b8471
+       
 
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="210,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="16" Width="0"/>
-        <Button x:Name="btnCrear" Content="Crear" HorizontalAlignment="Left" Margin="145,156,0,0" VerticalAlignment="Top" Width="73" Click="btnCrear_Click" FontWeight="Normal" Height="33" Grid.Row="1" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
-
+      
         <Button x:Name="btnModificar" Content="Modificar" HorizontalAlignment="Left" Margin="370,157,0,0" VerticalAlignment="Top" Width="82" FontWeight="Normal" Height="33" Click="btnModificar_Click" Grid.Row="1" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
 
         <Button x:Name="btnLimpiar" Content="Limpiar" HorizontalAlignment="Left" Margin="255,157,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Click="btnLimpiar_Click" Height="33" Grid.Row="1" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
@@ -116,13 +94,24 @@
         <Label x:Name="lblUf" Content="" HorizontalAlignment="Left" Margin="46,246,0,0" VerticalAlignment="Top" Grid.Column="2" FontWeight="Normal" Height="26" Width="10"/>
         <Label x:Name="label_Copy8" Content="Valor UF :" HorizontalAlignment="Left" Margin="181,246,0,0" VerticalAlignment="Top" Grid.Column="1" Height="26" Width="64"/>
 
-<<<<<<< HEAD
-        <Button x:Name="btnTerminar" Content="Terminar Contrato" HorizontalAlignment="Left" Margin="488,145,0,0" Grid.Row="1" VerticalAlignment="Top" Width="145" Click="btnTerminar_Click" FontWeight="Normal" Grid.ColumnSpan="2" Height="33" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
+
+        <Button x:Name="btnTerminar" Content="Terminar Contrato" HorizontalAlignment="Left" Margin="488,156.333,0,0" Grid.Row="1" VerticalAlignment="Top" Width="145" Click="btnTerminar_Click" FontWeight="Normal" Grid.ColumnSpan="2" Height="33" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
         <Image x:Name="image" HorizontalAlignment="Left" Height="112" Margin="201,88,0,0" VerticalAlignment="Top" Width="133" Source="Imagenes/white_logo_transparent_background.png" Grid.ColumnSpan="2" Grid.Column="1"/>
-=======
-        <Button x:Name="btnTerminar" Content="Terminar Contrato" HorizontalAlignment="Left" Margin="487,157,0,0" Grid.Row="1" VerticalAlignment="Top" Width="145" Click="btnTerminar_Click" FontWeight="Normal" Grid.ColumnSpan="2" Height="33" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
+
+        <Label x:Name="label_Copy1" Content="Buscar Número:" HorizontalAlignment="Left" Height="36" Margin="125,82,0,0" VerticalAlignment="Top" Width="118"/>
+        <TextBox x:Name="txtNumero"  HorizontalAlignment="Left" Height="26" Margin="257,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" FontWeight="Normal"/>
+        <Button x:Name="btnBuscarContrato" Content="Buscar" HorizontalAlignment="Left" Margin="512,85,0,0" VerticalAlignment="Top" Width="76" Height="33" FontWeight="Normal" Click="btnBuscarContrato_Click_2"  Grid.ColumnSpan="2"  Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" />
+        <Button x:Name="btnListadoNum" Content="?" HorizontalAlignment="Left" Margin="441,85,0,0" VerticalAlignment="Top" Width="48" Height="33" Click="btnListadoNum_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
+        <Label x:Name="label_Copy2" Content="Nombre:" HorizontalAlignment="Left" Height="36" Margin="125,174,0,0" VerticalAlignment="Top" Width="76"/>
+        <Label x:Name="label_Copy4" Content="Rut Cliente:" HorizontalAlignment="Left" Height="36" Margin="125,133,0,0" VerticalAlignment="Top" Width="118"/>
+        <TextBox x:Name="txtBuscarCliente" Controls:TextBoxHelper.Watermark ="Ingrese Rut" HorizontalAlignment="Left" Height="26" Margin="257,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" FontWeight="Normal" />
+        <Button x:Name="btnListadoCliente" Content="?" HorizontalAlignment="Left" Margin="441,131,0,0" VerticalAlignment="Top" Width="47" Height="33" Click="btnListadoCliente_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
+
+
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="210,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="16" Width="0"/>
+        <Button x:Name="btnCrear" Content="Crear" HorizontalAlignment="Left" Margin="145,156,0,0" VerticalAlignment="Top" Width="73" Click="btnCrear_Click" FontWeight="Normal" Height="33" Grid.Row="1" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
         <Label x:Name="label1" Content="Número Contrato:" HorizontalAlignment="Left" Margin="125,38,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblNumero" Content="" HorizontalAlignment="Left" Margin="257,38,0,0" VerticalAlignment="Top" Width="166"/>
->>>>>>> 6ba0f4d2df64f3cd26e028db264a3a9dfc0b8471
+
     </Grid>
 </Controls:MetroWindow>

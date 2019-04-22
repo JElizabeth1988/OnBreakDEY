@@ -142,16 +142,16 @@ namespace Vista
         //limpiar
         private void btnLimpiar_Click(object sender, RoutedEventArgs e)
         {
-<<<<<<< HEAD
+
 
             txtBuscarCliente.Clear();
             lblNombreCliente.Visibility = Visibility.Hidden;//desaparecer label
-=======
+
             lblNumero.Content = DateTime.Now.ToString("yyyyMMddHHmm");
             txtBuscarCliente.Clear();
             lblNombreCliente.Visibility = Visibility.Hidden;//no ver label
 
->>>>>>> 6ba0f4d2df64f3cd26e028db264a3a9dfc0b8471
+
             dpFechaInicio.SelectedDate = null;
             dpFechaFinEvento.SelectedDate = null;
             txtDireccion.Clear();
@@ -289,11 +289,11 @@ namespace Vista
                 {
                    
                     lblNombreCliente.Content = c.NombreContacto;
-<<<<<<< HEAD
+
                     lblNombreCliente.Visibility = Visibility.Visible;//aparecer label
-=======
+
                     lblNombreCliente.Visibility = Visibility.Visible;//ver label
->>>>>>> 6ba0f4d2df64f3cd26e028db264a3a9dfc0b8471
+
                 }
                 else
                 {
@@ -344,14 +344,14 @@ namespace Vista
         {
             try
             {
-<<<<<<< HEAD
+
                 String numero = txtNumero.Text;
                 //Convert.ToDateTime(txtNumero).ToString("dd/MM/yyyy HH:mm")
                 String fechaCreacion = txtNumero.Text; 
-=======
-                String numero = lblNumero.Content.ToString();
-                String fechaCreacion = fechaC;
->>>>>>> 6ba0f4d2df64f3cd26e028db264a3a9dfc0b8471
+
+                String numeroC = lblNumero.Content.ToString();
+                String fechaCreacionC = fechaC;
+
                 String vigente;
                 String fechaTermino;
                 if (rbSi.IsChecked == true)
@@ -535,16 +535,16 @@ namespace Vista
                     }
                     else
                     {
-<<<<<<< HEAD
+
                         String numero = txtNumero.Text;
                         //Convert.ToDateTime(txtNumero).ToString("dd/MM/yyyy HH:mm")
                         String fechaCreacion = txtNumero.Text;
-=======
 
 
-                        String numero = lblNumero.Content.ToString();
-                        String fechaCreacion = fechaC;
->>>>>>> 6ba0f4d2df64f3cd26e028db264a3a9dfc0b8471
+
+                        String numeroC = lblNumero.Content.ToString();
+                        String fechaCreacionC = fechaC;
+
                         String vigente = "No";
                         String fechaTermino = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
                         rbNo.IsChecked = true;
