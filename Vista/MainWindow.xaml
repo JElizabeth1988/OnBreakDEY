@@ -15,8 +15,7 @@
 
     <Grid Background="#FF129DDA" Margin="-6,0,-5.333,0">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="191*"/>
-            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
         <Controls:Tile Click="Tile_Click" Margin="134,199,0,0" HorizontalAlignment="Left" Height="159" Width="171"  VerticalAlignment="Top"  >

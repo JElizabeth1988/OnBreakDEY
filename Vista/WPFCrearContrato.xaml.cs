@@ -35,14 +35,14 @@ namespace Vista
 
             InitializeComponent();
             lblNumero.Content =  DateTime.Now.ToString("yyyyMMddHHmm");
-            lblUf.Content = "" + uf;
+            lblUf.Content = "$" + uf;
             cboTipo.ItemsSource = Enum.GetValues(typeof(TipoEvento));
             cboTipo.SelectedIndex = 0;
 
             dao = new DaoContrato();
         }
+        
         String fechaC = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
-
         int cont=0;
 
         //CREAR CONTRATO
@@ -435,88 +435,6 @@ namespace Vista
 
         }
 
-
-        //MOSTRAR VALORES EVENTO
-
-            //valor evento base
-
-            //Valor asistentes
-        private async void txtNumeroAsistentes_TextChanged_1(object sender, TextChangedEventArgs e)
-        {
-            if (txtNumeroAsistentes.Text != null)
-            {
-                Servicios.Service1 WS = new Servicios.Service1();
-                double uf = WS.Uf();
-              int asi = int.Parse(txtNumeroAsistentes.Text);
-                int n = 0;
-
-                if (asi >= 1 && asi <= 20)
-                {
-                    n = 3;
-                }
-                if (asi >= 21 && asi <= 50)
-                {
-                    n = 5;
-                }
-                if (asi > 50)
-                {
-                    int c = asi - 50;
-                    n = 5;
-                    int r = (c / 20);
-                    n = n + r;
-
-                }
-                int v = (int)(n * uf);
-                lblAsistentes.Content = v.ToString();
-            }
-            else
-            {
-                await this.ShowMessageAsync("Mensaje", "Debe crear un contrato");
-            }
-
-        }
-
-            //valor personal adicional
-        private async void txtPersonalAdicional_TextChanged_1(object sender, TextChangedEventArgs e)
-        {
-            if (txtPersonalAdicional.Text != null)
-            {
-                
-                int personal = int.Parse(txtPersonalAdicional.Text);
-                double cant_uf = 0;
-
-
-                if (personal == 2)
-                {
-                    cant_uf = 2;
-                }
-                if (personal == 3)
-                {
-                    cant_uf = 3;
-                }
-                if (personal == 4)
-                {
-                    cant_uf = 3.5;
-                }
-                if (personal > 4)
-                {
-                    int cantidad = personal - 4;
-                    cant_uf = 3.5;
-
-                    double extra = (cantidad * 0.5);
-                    cant_uf = cant_uf + extra;
-
-                }
-
-                int v = (int)(cant_uf * uf);
-                lblPersonalAdicional.Content = v.ToString();
-            }
-            else
-            {
-                await this.ShowMessageAsync("Mensaje", "Debe crear un contrato");
-            }
-        }
-
         //TERMINAR CONTRATO
         private async void btnTerminar_Click(object sender, RoutedEventArgs e)
         {
@@ -524,7 +442,7 @@ namespace Vista
             {
                 if (cont == 0)
                 {
-                    await this.ShowMessageAsync("Mensaje","Debe crear un contrato");
+                    await this.ShowMessageAsync("Mensaje", "Debe crear un contrato");
                 }
                 else
                 {
@@ -602,7 +520,7 @@ namespace Vista
                         /*MessageBox.Show(resp ? "Contrato Terminado" : "Contrato No Terminado");*/
 
                     }
-                }   
+                }
             }
             catch (ArgumentException exa) //catch excepciones hechas por el usuario
             {
@@ -621,6 +539,100 @@ namespace Vista
 
 
 
-        //valor total
+            //valor evento base
+
+            //Valor asistentes
+        private async void txtNumeroAsistentes_TextChanged_1(object sender, TextChangedEventArgs e)
+        {
+            //try
+            //{
+                if (txtNumeroAsistentes.Text != null)
+                {
+                    Servicios.Service1 WS = new Servicios.Service1();
+                    double uf = WS.Uf();
+                    int asi = int.Parse(txtNumeroAsistentes.Text);
+                    int n = 0;
+
+                    if (asi >= 1 && asi <= 20)
+                    {
+                        n = 3;
+                    }
+                    if (asi >= 21 && asi <= 50)
+                    {
+                        n = 5;
+                    }
+                    if (asi > 50)
+                    {
+                        int c = asi - 50;
+                        n = 5;
+                        int r = (c / 20);
+                        n = n + r;
+
+                    }
+                    int v = (int)(n * uf);
+                    lblAsistentes.Content = v.ToString();
+                }
+               // else
+                //{
+                  //  await this.ShowMessageAsync("Mensaje", "Debe crear un contrato");
+                //}
+            //}
+            //catch (ArgumentException exa) //catch excepciones hechas por el usuario
+            //{
+            //    MessageBox.Show(exa.Message);
+            //}
+            //catch (Exception ex)
+            //{
+            //    await this.ShowMessageAsync("Mensaje:",
+            //          string.Format("Error ingreso de datos"));
+            //    MessageBox.Show("Error");
+            //    Logger.Mensaje(ex.Message);
+            //}
+           
+
+        }
+
+            //valor personal adicional
+        private async void txtPersonalAdicional_TextChanged_1(object sender, TextChangedEventArgs e)
+        {
+            if (txtPersonalAdicional.Text != null)
+            {
+                
+                int personal = int.Parse(txtPersonalAdicional.Text);
+                double cant_uf = 0;
+
+
+                if (personal == 2)
+                {
+                    cant_uf = 2;
+                }
+                if (personal == 3)
+                {
+                    cant_uf = 3;
+                }
+                if (personal == 4)
+                {
+                    cant_uf = 3.5;
+                }
+                if (personal > 4)
+                {
+                    int cantidad = personal - 4;
+                    cant_uf = 3.5;
+
+                    double extra = (cantidad * 0.5);
+                    cant_uf = cant_uf + extra;
+
+                }
+
+                int v = (int)(cant_uf * uf);
+                lblPersonalAdicional.Content = v.ToString();
+            }
+            //else
+            //{
+            //    await this.ShowMessageAsync("Mensaje", "Debe crear un contrato");
+            //}
+        }
+       
+            //valor total
     }
 }
