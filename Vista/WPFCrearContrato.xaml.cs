@@ -34,13 +34,14 @@ namespace Vista
         {
 
             InitializeComponent();
-            txtNumero.Text =  DateTime.Now.ToString("yyyyMMddHHmm");
+            lblNumero.Content =  DateTime.Now.ToString("yyyyMMddHHmm");
             lblUf.Content = "" + uf;
             cboTipo.ItemsSource = Enum.GetValues(typeof(TipoEvento));
             cboTipo.SelectedIndex = 0;
 
             dao = new DaoContrato();
         }
+        String fechaC = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
 
         int cont=0;
 
@@ -49,8 +50,8 @@ namespace Vista
         {
             try
             {
-                String numero = txtNumero.Text;
-                String fechaCreacion = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
+                String numero = lblNumero.Content.ToString();
+                String fechaCreacion = fechaC;
                 String vigente;
                 String fechaTermino;
                 if (rbSi.IsChecked == true)
@@ -132,7 +133,7 @@ namespace Vista
                 Logger.Mensaje(ex.Message);
             }
 
-
+            fechaC = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
 
 
         }
@@ -141,9 +142,16 @@ namespace Vista
         //limpiar
         private void btnLimpiar_Click(object sender, RoutedEventArgs e)
         {
+<<<<<<< HEAD
 
             txtBuscarCliente.Clear();
             lblNombreCliente.Visibility = Visibility.Hidden;//desaparecer label
+=======
+            lblNumero.Content = DateTime.Now.ToString("yyyyMMddHHmm");
+            txtBuscarCliente.Clear();
+            lblNombreCliente.Visibility = Visibility.Hidden;//no ver label
+
+>>>>>>> 6ba0f4d2df64f3cd26e028db264a3a9dfc0b8471
             dpFechaInicio.SelectedDate = null;
             dpFechaFinEvento.SelectedDate = null;
             txtDireccion.Clear();
@@ -156,7 +164,8 @@ namespace Vista
             //txtPersonalAdicional.Clear();
             txtObservaciones.Clear();
             txtBuscarCliente.Focus();
-
+            rbSi.IsChecked = true;
+            rbNo.IsChecked = false;
 
 
         }
@@ -198,6 +207,7 @@ namespace Vista
                     txtDireccion.Text = c.Direccion;
                     txtBuscarCliente.Text = c.RutCliente;
                     dpFechaInicio.Text = c.FechaInicioEvento;
+                    dpFechaFinEvento.Text = c.FechaFinEvento;
                     txtHoraInicio.Text = c.HoraInicio.ToString();
                     txtMinutoInicio.Text = c.MinutoInicio.ToString();
                     txtHoraTermino.Text = c.HoraTermino.ToString();
@@ -206,6 +216,7 @@ namespace Vista
                     txtPersonalAdicional.Text = c.PersonalAdicional.ToString();
                     cboTipo.Text = c.Evento.ToString();
                     txtObservaciones.Text = c.Observaciones;
+                    lblNumero.Content = txtNumero.Text; //IGUALAR CAMPOS 
                 }
                 else
                 {
@@ -238,6 +249,7 @@ namespace Vista
                     txtDireccion.Text = c.Direccion;
                     txtBuscarCliente.Text = c.RutCliente;
                     dpFechaInicio.Text = c.FechaInicioEvento;
+                    dpFechaFinEvento.Text = c.FechaFinEvento;
                     txtHoraInicio.Text = c.HoraInicio.ToString();
                     txtMinutoInicio.Text = c.MinutoInicio.ToString();
                     txtHoraTermino.Text = c.HoraTermino.ToString();
@@ -246,6 +258,7 @@ namespace Vista
                     txtPersonalAdicional.Text = c.PersonalAdicional.ToString();
                     cboTipo.Text = c.Evento.ToString();
                     txtObservaciones.Text = c.Observaciones;
+                    lblNumero.Content = txtNumero.Text; //IGUALAR CAMPOS 
                 }
                 else
                 {
@@ -276,7 +289,11 @@ namespace Vista
                 {
                    
                     lblNombreCliente.Content = c.NombreContacto;
+<<<<<<< HEAD
                     lblNombreCliente.Visibility = Visibility.Visible;//aparecer label
+=======
+                    lblNombreCliente.Visibility = Visibility.Visible;//ver label
+>>>>>>> 6ba0f4d2df64f3cd26e028db264a3a9dfc0b8471
                 }
                 else
                 {
@@ -327,9 +344,14 @@ namespace Vista
         {
             try
             {
+<<<<<<< HEAD
                 String numero = txtNumero.Text;
                 //Convert.ToDateTime(txtNumero).ToString("dd/MM/yyyy HH:mm")
                 String fechaCreacion = txtNumero.Text; 
+=======
+                String numero = lblNumero.Content.ToString();
+                String fechaCreacion = fechaC;
+>>>>>>> 6ba0f4d2df64f3cd26e028db264a3a9dfc0b8471
                 String vigente;
                 String fechaTermino;
                 if (rbSi.IsChecked == true)
@@ -419,7 +441,7 @@ namespace Vista
             //valor evento base
 
             //Valor asistentes
-        private void txtNumeroAsistentes_TextChanged_1(object sender, TextChangedEventArgs e)
+        private async void txtNumeroAsistentes_TextChanged_1(object sender, TextChangedEventArgs e)
         {
             if (txtNumeroAsistentes.Text != null)
             {
@@ -447,10 +469,15 @@ namespace Vista
                 int v = (int)(n * uf);
                 lblAsistentes.Content = v.ToString();
             }
+            else
+            {
+                await this.ShowMessageAsync("Mensaje", "Debe crear un contrato");
+            }
+
         }
 
             //valor personal adicional
-        private void txtPersonalAdicional_TextChanged_1(object sender, TextChangedEventArgs e)
+        private async void txtPersonalAdicional_TextChanged_1(object sender, TextChangedEventArgs e)
         {
             if (txtPersonalAdicional.Text != null)
             {
@@ -484,6 +511,10 @@ namespace Vista
                 int v = (int)(cant_uf * uf);
                 lblPersonalAdicional.Content = v.ToString();
             }
+            else
+            {
+                await this.ShowMessageAsync("Mensaje", "Debe crear un contrato");
+            }
         }
 
         //TERMINAR CONTRATO
@@ -504,9 +535,16 @@ namespace Vista
                     }
                     else
                     {
+<<<<<<< HEAD
                         String numero = txtNumero.Text;
                         //Convert.ToDateTime(txtNumero).ToString("dd/MM/yyyy HH:mm")
                         String fechaCreacion = txtNumero.Text;
+=======
+
+
+                        String numero = lblNumero.Content.ToString();
+                        String fechaCreacion = fechaC;
+>>>>>>> 6ba0f4d2df64f3cd26e028db264a3a9dfc0b8471
                         String vigente = "No";
                         String fechaTermino = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
                         rbNo.IsChecked = true;
