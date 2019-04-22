@@ -87,7 +87,7 @@
         <TextBox x:Name="txtMinutoTermino"  Controls:TextBoxHelper.Watermark ="MN" HorizontalAlignment="Left" Height="26" Margin="545,339,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="39" FontWeight="Normal"/>
         <Label x:Name="label2_Copy2" Content="Hora Termino:" HorizontalAlignment="Left" Margin="372,339,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.101,0.5" Height="26" Width="92"/>
         <DatePicker x:Name="dpFechaFinEvento" HorizontalAlignment="Left" Margin="180,339,0,0" VerticalAlignment="Top" Height="26" Width="151" FontWeight="Normal"/>
-        <Label x:Name="lblUf" Content="" HorizontalAlignment="Left" Margin="860,246,0,0" VerticalAlignment="Top" FontWeight="Normal" Height="26" Width="10"/>
+        <Label x:Name="lblUf" Content="" HorizontalAlignment="Left" Margin="860,246,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label_Copy8" Content="Valor UF :" HorizontalAlignment="Left" Margin="714,246,0,0" VerticalAlignment="Top" Height="26" Width="64"/>
 
 
