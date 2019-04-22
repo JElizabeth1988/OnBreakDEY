@@ -14,12 +14,13 @@
     <Grid Background="#FF88D7F9">
         <Label x:Name="label6" Content="Tipo Evento:" HorizontalAlignment="Left" Margin="68,30,0,0" VerticalAlignment="Top" Height="26" Width="82" FontWeight="Bold"/>
         <Label x:Name="label" Content="Valor Base:" HorizontalAlignment="Left" Margin="68,84,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.237,0.154" FontWeight="Bold"/>
-        <Label x:Name="label2" Content="Personal Base" HorizontalAlignment="Left" Margin="68,143,0,0" VerticalAlignment="Top" FontWeight="Bold" />
-        <Button x:Name="btnCrear" Content="Crear" HorizontalAlignment="Left" Margin="183,241,0,0" VerticalAlignment="Top" Width="75" Click="btnCrear_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
+        <Label x:Name="label2" Content="Personal Base:" HorizontalAlignment="Left" Margin="68,143,0,0" VerticalAlignment="Top" FontWeight="Bold" />
+        <Button x:Name="btnCrear" Content="Crear" HorizontalAlignment="Left" Margin="127,242,0,0" VerticalAlignment="Top" Width="75" Click="btnCrear_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
         <TextBox x:Name="txtValorBase" HorizontalAlignment="Left" Height="23" Margin="171,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="74"/>
         <TextBox x:Name="txtPersonalBase" HorizontalAlignment="Left" Height="23" Margin="171,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="74"/>
         <TextBox x:Name="txtNombreTipoEvento" HorizontalAlignment="Left" Height="23" Margin="171,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Image x:Name="image" HorizontalAlignment="Left" Height="101" Margin="309,115,0,0" VerticalAlignment="Top" Width="113" Source="Imagenes/white_logo_transparent_background.png"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="101" Margin="308,85,0,0" VerticalAlignment="Top" Width="113" Source="Imagenes/white_logo_transparent_background.png"/>
+        <Button x:Name="btnCerrar" Content="Salir" HorizontalAlignment="Left" Margin="299,242,0,0" VerticalAlignment="Top" Width="75" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Click="btnCerrar_Click"/>
 
     </Grid>
 </Controls:MetroWindow>  
