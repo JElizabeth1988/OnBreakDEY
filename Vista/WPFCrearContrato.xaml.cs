@@ -34,13 +34,14 @@ namespace Vista
         {
 
             InitializeComponent();
-            txtNumero.Text =  DateTime.Now.ToString("yyyyMMddHHmm");
+            lblNumero.Content =  DateTime.Now.ToString("yyyyMMddHHmm");
             lblUf.Content = "" + uf;
             cboTipo.ItemsSource = Enum.GetValues(typeof(TipoEvento));
             cboTipo.SelectedIndex = 0;
 
             dao = new DaoContrato();
         }
+        String fechaC = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
 
         int cont=0;
 
@@ -49,8 +50,8 @@ namespace Vista
         {
             try
             {
-                String numero = txtNumero.Text;
-                String fechaCreacion = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
+                String numero = lblNumero.Content.ToString();
+                String fechaCreacion = fechaC;
                 String vigente;
                 String fechaTermino;
                 if (rbSi.IsChecked == true)
@@ -141,7 +142,7 @@ namespace Vista
         //limpiar
         private void btnLimpiar_Click(object sender, RoutedEventArgs e)
         {
-            txtNumero.Clear();
+            lblNumero.Content = DateTime.Now.ToString("yyyyMMddHHmm");
             txtBuscarCliente.Clear();
             lblNombreCliente.Visibility = Visibility.Hidden;//no ver label
 
@@ -207,6 +208,7 @@ namespace Vista
                     txtPersonalAdicional.Text = c.PersonalAdicional.ToString();
                     cboTipo.Text = c.Evento.ToString();
                     txtObservaciones.Text = c.Observaciones;
+                    lblNumero.Content = txtNumero.Text; //IGUALAR CAMPOS 
                 }
                 else
                 {
@@ -247,6 +249,7 @@ namespace Vista
                     txtPersonalAdicional.Text = c.PersonalAdicional.ToString();
                     cboTipo.Text = c.Evento.ToString();
                     txtObservaciones.Text = c.Observaciones;
+                    lblNumero.Content = txtNumero.Text; //IGUALAR CAMPOS 
                 }
                 else
                 {
@@ -327,8 +330,8 @@ namespace Vista
         {
             try
             {
-                String numero = txtNumero.Text;
-                String fechaCreacion = txtNumero.Text;
+                String numero = lblNumero.Content.ToString();
+                String fechaCreacion = fechaC;
                 String vigente;
                 String fechaTermino;
                 if (rbSi.IsChecked == true)
@@ -513,8 +516,10 @@ namespace Vista
                     }
                     else
                     {
-                        String numero = txtNumero.Text;
-                        String fechaCreacion = txtNumero.Text;
+
+
+                        String numero = lblNumero.Content.ToString();
+                        String fechaCreacion = fechaC;
                         String vigente = "No";
                         String fechaTermino = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
                         rbNo.IsChecked = true;
