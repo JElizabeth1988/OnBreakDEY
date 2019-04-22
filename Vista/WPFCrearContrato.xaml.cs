@@ -133,7 +133,7 @@ namespace Vista
                 Logger.Mensaje(ex.Message);
             }
 
-
+            fechaC = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
 
 
         }
