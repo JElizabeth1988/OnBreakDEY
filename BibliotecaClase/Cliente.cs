@@ -25,7 +25,7 @@ namespace BibliotecaClase
             get { return _rut; }
             set
             {
-                if (value != null && value.Length >= 11 && value.Length <= 12)
+                if (value != null && value.Length >= 7 || value.Length <= 8)
                 {
                     _rut = value;
                 }
