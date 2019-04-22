@@ -18,44 +18,39 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <Controls:Tile Click="Tile_Click" Margin="228,128,0,0" HorizontalAlignment="Left" Height="159" Width="171"  VerticalAlignment="Top"  >
+        <Controls:Tile Click="Tile_Click" Margin="134,199,0,0" HorizontalAlignment="Left" Height="159" Width="171"  VerticalAlignment="Top"  >
             <Grid Width="220">
-                <Image x:Name="imgAdCliente"  Source="Imagenes/Business-Man-Settings 02 copia.png">
-                    <Image.Effect>
-                        <DropShadowEffect Color="#FFA4A3A3"/>
-                    </Image.Effect>
-                </Image>
+                <Image x:Name="imgAdCliente"  Source="Imagenes/Business-Man-Settings 02 copia.png" Margin="-2,0,2,0.667"/>
             </Grid>
         </Controls:Tile>
 
-        <Image x:Name="ingLogo" HorizontalAlignment="Left" Height="327" Margin="494,128,0,0" VerticalAlignment="Top" Width="370" Source="Imagenes/white_logo_transparent_background.png"/>
+        <Image x:Name="ingLogo" HorizontalAlignment="Left" Height="372" Margin="487,107,0,0" VerticalAlignment="Top" Width="471" Source="Imagenes/white_logo_transparent_background.png"/>
 
-        <Controls:Tile Click="Tile_Click_2" Margin="264,365,0,0" HorizontalAlignment="Left" Height="159" Width="171"  VerticalAlignment="Top"  >
+        <Controls:Tile Click="Tile_Click_2" Margin="228,405,0,0" HorizontalAlignment="Left" Height="159" Width="171"  VerticalAlignment="Top"  >
             <Grid Width="220">
-                <Image x:Name="imgListCliente"  Source="Imagenes/LisCliente.png"/>
+                <Image x:Name="imgListCliente"  Source="Imagenes/LisCliente.png" Margin="0,0,0,-0.333"/>
             </Grid>
         </Controls:Tile>
 
-        <Controls:Tile Click="Tile_Click_4" Margin="917,128,0,0" HorizontalAlignment="Left" Height="159" Width="171"  VerticalAlignment="Top"  >
+        <Controls:Tile Click="Tile_Click_4" Margin="1032,199,0,0" HorizontalAlignment="Left" Height="159" Width="171"  VerticalAlignment="Top"  >
             <Grid Width="220">
                 <Image x:Name="imgAdContrato"  Source="Imagenes/AdmContrato.png" Margin="0,0,0,-0.333"/>
             </Grid>
         </Controls:Tile>
 
-        <Controls:Tile Click="Tile_Click_3" Margin="864,365,0,0" HorizontalAlignment="Left" Height="159" Width="171"  VerticalAlignment="Top"  >
+        <Controls:Tile Click="Tile_Click_3" Margin="911,405,0,0" HorizontalAlignment="Left" Height="159" Width="171"  VerticalAlignment="Top"  >
             <Grid Width="220">
-                <Image x:Name="imgLiscontrato"  Source="Imagenes/ListContrato.png"/>
+                <Image x:Name="imgLiscontrato"  Source="Imagenes/ListContrato.png" Margin="0,0,0,-0.333"/>
             </Grid>
         </Controls:Tile>
 
-        <Controls:Tile Click="Tile_Click_5" Margin="568,460,0,0" HorizontalAlignment="Left" Height="159" Width="171"  VerticalAlignment="Top"  >
+        <Controls:Tile Click="Tile_Click_5" Margin="578,484,0,0" HorizontalAlignment="Left" Height="159" Width="171"  VerticalAlignment="Top"  >
             <Grid Width="220">
-                <Image x:Name="imgEvento"  Source="Imagenes/Beverage-Wine copia.png"/>
+                <Image x:Name="imgEvento"  Source="Imagenes/Beverage-Wine copia.png" Margin="0,0,0,-0.333"/>
             </Grid>
         </Controls:Tile>
 
-        <Label x:Name="label" Content="Bienvenido a OnBreak!&#xA;   Escoja una Opción:" HorizontalAlignment="Left" Margin="532,55,0,0" VerticalAlignment="Top" FontSize="24" Foreground="White" HorizontalContentAlignment="Center"/>
-
+        <Label x:Name="label" Content="Bienvenido a OnBreak! &#xD;&#xA;  Escoja una Opción:" HorizontalAlignment="Left" Margin="539,32,0,0" VerticalAlignment="Top" FontSize="26.667" Foreground="White" HorizontalContentAlignment="Center"/>
 
     </Grid>
 </Controls:MetroWindow>

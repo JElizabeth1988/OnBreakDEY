@@ -78,5 +78,10 @@ namespace Vista
 
 
         }
+
+        private void btnCerrar_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }
