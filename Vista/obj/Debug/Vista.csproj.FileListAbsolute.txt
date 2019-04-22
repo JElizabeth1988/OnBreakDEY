@@ -217,3 +217,5 @@ C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\WpfListadoC
 C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\Vista.g.resources
 C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\Vista.Properties.Resources.resources
 C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\Vista.csproj.GenerateResource.Cache
+C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\Login.g.cs
+C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\Login.baml
