@@ -11,7 +11,7 @@
         xmlns:local="clr-namespace:Vista"
         mc:Ignorable="d"
         Title="OnBreak - Administrar Contrato" Height="714.335" Width="1006.628" WindowStartupLocation="CenterScreen" FontWeight="Bold" WindowTitleBrush="Black" Icon="Imagenes/white_logo_dark_background.jpg" ResizeMode="NoResize">
-    <Grid Margin="0,0,-1,-2" Background="#FF84D9E8" Height="799" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+    <Grid Margin="0,0,-1,-2" Background="#FF88D7F9" Height="799" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
         <Grid.RenderTransform>
             <TransformGroup>
                 <ScaleTransform/>

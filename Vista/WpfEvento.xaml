@@ -11,7 +11,7 @@
         xmlns:local="clr-namespace:Vista"
         mc:Ignorable="d"
         Title="OnBreak - Crear Evento" Height="340.333" Width="463.999" Icon="Imagenes/white_logo_dark_background.jpg" WindowTitleBrush="Black" ResizeMode="NoResize">
-    <Grid Background="#FF84D9E8">
+    <Grid Background="#FF88D7F9">
         <Label x:Name="label6" Content="Tipo Evento:" HorizontalAlignment="Left" Margin="68,30,0,0" VerticalAlignment="Top" Height="26" Width="82" FontWeight="Bold"/>
         <Label x:Name="label" Content="Valor Base:" HorizontalAlignment="Left" Margin="68,84,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.237,0.154" FontWeight="Bold"/>
         <Label x:Name="label2" Content="Personal Base" HorizontalAlignment="Left" Margin="68,143,0,0" VerticalAlignment="Top" FontWeight="Bold" />
