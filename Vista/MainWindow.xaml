@@ -13,44 +13,45 @@
         Title="Bienvenido a OnBreak" Height="650" Width="1000" WindowTitleBrush="Black" Icon="Imagenes/white_logo_dark_background.jpg" WindowStartupLocation="CenterScreen" FontWeight="Bold" ResizeMode="NoResize">
 
 
-    <Grid Background="#FF1290CB">
+    <Grid Background="#FF129DDA" Margin="-6,0,-5.333,0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="191*"/>
             <ColumnDefinition Width="8*"/>
         </Grid.ColumnDefinitions>
 
-        <Image Source="imagenes/white_logo_color_background.jpg" Margin="153,52,113.667,66"/>
-
-        <Controls:Tile Click="Tile_Click" Margin="10,10,0,0" HorizontalAlignment="Left" Height="225" Width="228"  VerticalAlignment="Top"  >
+        <Controls:Tile Click="Tile_Click" Margin="79,102,0,0" HorizontalAlignment="Left" Height="159" Width="171"  VerticalAlignment="Top"  >
             <Grid Width="220">
-                <Image x:Name="imgAdCli" Source="Imagenes/administrar clientes 2.png"/>
-                <Label x:Name="label" Content="Administrar Cliente" HorizontalAlignment="Left" Margin="54,0,0,0" VerticalAlignment="Top" FontSize="16"/>
+                <Image x:Name="imgAdCliente"  Source="Imagenes/Business-Man-Settings 02 copia.png"/>
             </Grid>
         </Controls:Tile>
 
-        <Controls:Tile Click="Tile_Click_2" Margin="10,386,0,0" HorizontalAlignment="Left" Height="225" Width="228"  VerticalAlignment="Top"  >
+        <Image x:Name="ingLogo" HorizontalAlignment="Left" Height="327" Margin="345,102,0,0" VerticalAlignment="Top" Width="370" Source="Imagenes/white_logo_transparent_background.png"/>
+
+        <Controls:Tile Click="Tile_Click_2" Margin="115,339,0,0" HorizontalAlignment="Left" Height="159" Width="171"  VerticalAlignment="Top"  >
             <Grid Width="220">
-                <Image x:Name="imLisCli" Source="Imagenes/p3.png"/>
-                <Label x:Name="lisCli" Content="Listado de Clientes" HorizontalAlignment="Left" Margin="30,173,0,0" VerticalAlignment="Top" FontSize="16"/>
+                <Image x:Name="imgListCliente"  Source="Imagenes/LisCliente.png"/>
             </Grid>
         </Controls:Tile>
 
-        <Controls:Tile Click="Tile_Click_3" Margin="755,386,0,0" HorizontalAlignment="Left" Height="225" Width="228"  VerticalAlignment="Top" Grid.ColumnSpan="2"  >
+        <Controls:Tile Click="Tile_Click_4" Margin="768,102,0,0" HorizontalAlignment="Left" Height="159" Width="171"  VerticalAlignment="Top"  >
             <Grid Width="220">
-                <Image x:Name="imgLiCon" Source="Imagenes/p7.png"/>
-                <Label x:Name="lisCli_Copy" Content="Listado de Contratos" HorizontalAlignment="Left" Margin="35,186,0,-0.333" VerticalAlignment="Top" FontSize="16"/>
-
+                <Image x:Name="imgAdContrato"  Source="Imagenes/AdmContrato.png"/>
             </Grid>
         </Controls:Tile>
 
-        <Controls:Tile Click="Tile_Click_4" Margin="745,10,0,0" HorizontalAlignment="Left" Height="225" Width="228"  VerticalAlignment="Top" Grid.ColumnSpan="2"  >
+        <Controls:Tile Click="Tile_Click_3" Margin="715,339,0,0" HorizontalAlignment="Left" Height="159" Width="171"  VerticalAlignment="Top"  >
             <Grid Width="220">
-                <Image x:Name="imgAdmCont" Source="Imagenes/p6.png"/>
-                <Label x:Name="label_Copy" Content="Administrar Contrato" HorizontalAlignment="Left" Margin="41,0,0,0" VerticalAlignment="Top" FontSize="16"/>
-
+                <Image x:Name="imgLiscontrato"  Source="Imagenes/ListContrato.png"/>
             </Grid>
         </Controls:Tile>
-        <Button x:Name="button" Content="Crear Evento" HorizontalAlignment="Left" Margin="427,545,0,0" VerticalAlignment="Top" Width="136" Height="66" Click="button_Click" Background="White"/>
+
+        <Controls:Tile Click="Tile_Click_5" Margin="419,434,0,0" HorizontalAlignment="Left" Height="159" Width="171"  VerticalAlignment="Top"  >
+            <Grid Width="220">
+                <Image x:Name="imgEvento"  Source="Imagenes/Beverage-Wine copia.png"/>
+            </Grid>
+        </Controls:Tile>
+
+        <Label x:Name="label" Content="Bienvenido a OnBreak!&#xA;   Escoja una Opción:" HorizontalAlignment="Left" Margin="383,29,0,0" VerticalAlignment="Top" FontSize="24" Foreground="White" HorizontalContentAlignment="Center"/>
 
 
     </Grid>

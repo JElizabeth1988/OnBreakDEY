@@ -176,38 +176,21 @@
     <Resource Include="Imagenes\white_logo_color_background.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Imagenes\1.png" />
-    <Resource Include="Imagenes\2.png" />
-    <Resource Include="Imagenes\4.png" />
-    <Resource Include="Imagenes\5.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Imagenes\administrar clientes 2.png" />
-    <Resource Include="Imagenes\administrar clientes.png" />
-    <Resource Include="Imagenes\p1.png" />
-    <Resource Include="Imagenes\p2.png" />
-    <Resource Include="Imagenes\p3.png" />
-    <Resource Include="Imagenes\p6.png" />
-    <Resource Include="Imagenes\p7.png" />
     <Resource Include="Imagenes\white_logo_dark_background.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Imagenes\ADM CLIENTE.png" />
-    <Resource Include="Imagenes\ADM CLIENTE2.png" />
-    <Resource Include="Imagenes\ADM CONTRATO.png" />
-    <Resource Include="Imagenes\ADM CONTRATO2.png" />
     <Resource Include="Imagenes\Business-BLACK.png" />
     <Resource Include="Imagenes\Business-WHITE.png" />
     <Resource Include="Imagenes\dark_logo_transparent_background.png" />
-    <Resource Include="Imagenes\EVENTO.png" />
-    <Resource Include="Imagenes\EVENTO2.png" />
-    <Resource Include="Imagenes\lISTAR CLIENTE.png" />
-    <Resource Include="Imagenes\LISTAR CLIENTE2.1.png" />
-    <Resource Include="Imagenes\LISTAR CLIENTE2.png" />
-    <Resource Include="Imagenes\LISTAR CONTRATO.png" />
-    <Resource Include="Imagenes\LISTAR CONTRATO2.png" />
     <Resource Include="Imagenes\logo_transparent_background.png" />
     <Resource Include="Imagenes\white_logo_transparent_background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\AdmContrato.png" />
+    <Resource Include="Imagenes\Beverage-Wine copia.png" />
+    <Resource Include="Imagenes\Business-Man-Settings 02 copia.png" />
+    <Resource Include="Imagenes\LisCliente.png" />
+    <Resource Include="Imagenes\ListContrato.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

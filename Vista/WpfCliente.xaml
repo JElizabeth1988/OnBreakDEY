@@ -40,6 +40,7 @@
             <Button x:Name="btnBuscar" Content="Buscar" HorizontalAlignment="Left" Margin="408,30,0,0" VerticalAlignment="Top" Width="75" Cursor="Arrow" FontWeight="Normal" Click="btnBuscar_Click"  Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
             <Button x:Name="btnLimpiar" Content="Limpiar" HorizontalAlignment="Left" Margin="27,342,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Click="btnLimpiar_Click"  Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
             <Button x:Name="btnModificar" Content="Actualizar" HorizontalAlignment="Left" Margin="272,342,0,0" VerticalAlignment="Top" Cursor="Arrow" Width="85" FontWeight="Normal"  Click="btnModificar_Click"  Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" />
+            <Image x:Name="image" HorizontalAlignment="Left" Height="101" Margin="383,199,0,0" VerticalAlignment="Top" Width="113" Source="Imagenes/white_logo_transparent_background.png"/>
         </Grid>
 
     </Grid>

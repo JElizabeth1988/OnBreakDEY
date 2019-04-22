@@ -19,6 +19,7 @@
         <TextBox x:Name="txtValorBase" HorizontalAlignment="Left" Height="23" Margin="171,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="74"/>
         <TextBox x:Name="txtPersonalBase" HorizontalAlignment="Left" Height="23" Margin="171,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="74"/>
         <TextBox x:Name="txtNombreTipoEvento" HorizontalAlignment="Left" Height="23" Margin="171,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="101" Margin="309,115,0,0" VerticalAlignment="Top" Width="113" Source="Imagenes/white_logo_transparent_background.png"/>
 
     </Grid>
 </Controls:MetroWindow>  
