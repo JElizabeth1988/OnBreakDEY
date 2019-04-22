@@ -35,7 +35,12 @@ namespace Servicios
             //string fecha = "";
             foreach (Serie item in datos.serie)
             {
-                uf = item.valor;
+                if (item.fecha == "2019-04-22T04:00:00.000Z")
+                {
+                    uf = item.valor;
+                }
+                
+                
                 //fecha = item.fecha;
             }
             uf = uf.Replace('.', ',');
