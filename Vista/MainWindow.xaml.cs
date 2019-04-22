@@ -26,7 +26,9 @@ namespace Vista
     {
         public MainWindow()
         {
+           
             InitializeComponent();
+
         }
 
         //BOTON ADMINISTRACION CLIENTE
@@ -66,8 +68,9 @@ namespace Vista
 
         private void Tile_Click_6(object sender, RoutedEventArgs e)
         {
-            WpfEvento even = new WpfEvento();
-            even.Show();
+           Login log = new Login();
+            this.Close();
+            log.ShowDialog();
         }
     }
 }
