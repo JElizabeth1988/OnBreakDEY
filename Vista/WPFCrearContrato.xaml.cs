@@ -544,8 +544,8 @@ namespace Vista
             //Valor asistentes
         private async void txtNumeroAsistentes_TextChanged_1(object sender, TextChangedEventArgs e)
         {
-            try
-            {
+            //try
+            //{
                 if (txtNumeroAsistentes.Text != null)
                 {
                     Servicios.Service1 WS = new Servicios.Service1();
@@ -576,18 +576,18 @@ namespace Vista
                 //{
                   //  await this.ShowMessageAsync("Mensaje", "Debe crear un contrato");
                 //}
-            }
-            catch (ArgumentException exa) //catch excepciones hechas por el usuario
-            {
-                MessageBox.Show(exa.Message);
-            }
-            catch (Exception ex)
-            {
-                await this.ShowMessageAsync("Mensaje:",
-                      string.Format("Error ingreso de datos"));
-                MessageBox.Show("Error");
-                Logger.Mensaje(ex.Message);
-            }
+            //}
+            //catch (ArgumentException exa) //catch excepciones hechas por el usuario
+            //{
+            //    MessageBox.Show(exa.Message);
+            //}
+            //catch (Exception ex)
+            //{
+            //    await this.ShowMessageAsync("Mensaje:",
+            //          string.Format("Error ingreso de datos"));
+            //    MessageBox.Show("Error");
+            //    Logger.Mensaje(ex.Message);
+            //}
            
 
         }
@@ -627,10 +627,10 @@ namespace Vista
                 int v = (int)(cant_uf * uf);
                 lblPersonalAdicional.Content = v.ToString();
             }
-            else
-            {
-                await this.ShowMessageAsync("Mensaje", "Debe crear un contrato");
-            }
+            //else
+            //{
+            //    await this.ShowMessageAsync("Mensaje", "Debe crear un contrato");
+            //}
         }
        
             //valor total
