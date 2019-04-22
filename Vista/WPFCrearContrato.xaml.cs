@@ -539,39 +539,40 @@ namespace Vista
 
 
 
-            //valor evento base
+        //valor evento base
 
-            //Valor asistentes
-        private async void txtNumeroAsistentes_TextChanged_1(object sender, TextChangedEventArgs e)
+        //Valor asistentes
+        private void txtNumeroAsistentes_TextChanged_1(object sender, TextChangedEventArgs e)
         {
             //try
             //{
-                if (txtNumeroAsistentes.Text != null)
+            if (txtNumeroAsistentes.Text != null)
+            {
+                Servicios.Service1 WS = new Servicios.Service1();
+                double uf = WS.Uf();
+                int asi = int.Parse(txtNumeroAsistentes.Text);
+                int n = 0;
+
+                if (asi >= 1 && asi <= 20)
                 {
-                    Servicios.Service1 WS = new Servicios.Service1();
-                    double uf = WS.Uf();
-                    int asi = int.Parse(txtNumeroAsistentes.Text);
-                    int n = 0;
-
-                    if (asi >= 1 && asi <= 20)
-                    {
-                        n = 3;
-                    }
-                    if (asi >= 21 && asi <= 50)
-                    {
-                        n = 5;
-                    }
-                    if (asi > 50)
-                    {
-                        int c = asi - 50;
-                        n = 5;
-                        int r = (c / 20);
-                        n = n + r;
-
-                    }
-                    int v = (int)(n * uf);
-                    lblAsistentes.Content = v.ToString();
+                    n = 3;
                 }
+                if (asi >= 21 && asi <= 50)
+                {
+                    n = 5;
+                }
+                if (asi > 50)
+                {
+                    int c = asi - 50;
+                    n = 5;
+                    int r = (c / 20);
+                    n = n + r;
+
+                }
+                int v = (int)(n * uf);
+                lblAsistentes.Content = v.ToString();
+            }
+        }
                // else
                 //{
                   //  await this.ShowMessageAsync("Mensaje", "Debe crear un contrato");
@@ -590,10 +591,10 @@ namespace Vista
             //}
            
 
-        }
+        
 
             //valor personal adicional
-        private async void txtPersonalAdicional_TextChanged_1(object sender, TextChangedEventArgs e)
+        private void txtPersonalAdicional_TextChanged_1(object sender, TextChangedEventArgs e)
         {
             if (txtPersonalAdicional.Text != null)
             {
