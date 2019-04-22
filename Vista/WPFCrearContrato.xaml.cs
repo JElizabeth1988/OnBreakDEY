@@ -44,6 +44,7 @@ namespace Vista
         
         String fechaC = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
         int cont=0;
+        int asi = 0;
 
         //CREAR CONTRATO
         private async void btnCrear_Click(object sender, RoutedEventArgs e)
@@ -573,27 +574,28 @@ namespace Vista
                 lblAsistentes.Content = v.ToString();
             }
         }
-               // else
-                //{
-                  //  await this.ShowMessageAsync("Mensaje", "Debe crear un contrato");
-                //}
-            //}
-            //catch (ArgumentException exa) //catch excepciones hechas por el usuario
-            //{
-            //    MessageBox.Show(exa.Message);
-            //}
-            //catch (Exception ex)
-            //{
-            //    await this.ShowMessageAsync("Mensaje:",
-            //          string.Format("Error ingreso de datos"));
-            //    MessageBox.Show("Error");
-            //    Logger.Mensaje(ex.Message);
-            //}
-           
 
-        
+        //    else
+        //    {
+        //        await this.ShowMessageAsync("Mensaje", "Debe crear un contrato");
+        //    }
+        //}
+        //catch (ArgumentException exa) //catch excepciones hechas por el usuario
+        //{
+        //    MessageBox.Show(exa.Message);
+        //}
+        //catch (Exception ex)
+        //{
+        //    await this.ShowMessageAsync("Mensaje:",
+        //          string.Format("Error ingreso de datos"));
+        //    MessageBox.Show("Error");
+        //    Logger.Mensaje(ex.Message);
+        //}
 
-            //valor personal adicional
+
+
+
+        //valor personal adicional
         private void txtPersonalAdicional_TextChanged_1(object sender, TextChangedEventArgs e)
         {
             if (txtPersonalAdicional.Text != null)
