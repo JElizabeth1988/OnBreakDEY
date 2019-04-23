@@ -44,6 +44,7 @@ namespace Vista
         
         String fechaC = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
         int cont=0;
+        int asi = 0;
 
         //CREAR CONTRATO
         private async void btnCrear_Click(object sender, RoutedEventArgs e)
@@ -412,7 +413,6 @@ namespace Vista
                     RutCliente = rutCliente
                 };
 
-
                 //METODO AGREGAR DEVUELVE BOOLEAN POR ESO SE CREA VARIABLE BOOLEANA resp
                 bool resp = dao.Modificar(nuevo_con);
                 await this.ShowMessageAsync("Mensaje:",
@@ -512,6 +512,39 @@ namespace Vista
                             RutCliente = rutCliente
                         };
 
+                        //BLOQUEAR EDITAR EL CONTRATO
+                        txtNumero.IsEnabled = !txtNumero.IsEnabled;
+                        txtBuscarCliente.IsEnabled = !txtBuscarCliente.IsEnabled;
+                        txtNumero.IsEnabled = !txtNumero.IsEnabled;
+                        //Convert.ToDateTime(txtNumero).ToString("dd/MM/yyyy HH:mm")
+                        txtNumero.IsEnabled = !txtNumero.IsEnabled;
+                        txtBuscarCliente.IsEnabled = !txtBuscarCliente.IsEnabled;
+                        lblNumero.IsEnabled = !lblNumero.IsEnabled;
+                        
+
+
+                        //EVENTO
+
+                        //inicio
+                        dpFechaInicio.IsEnabled = !dpFechaInicio.IsEnabled;
+                        txtHoraInicio.IsEnabled = !txtHoraInicio.IsEnabled;
+                        txtMinutoInicio.IsEnabled = !txtMinutoInicio.IsEnabled;
+                        //termino
+                        dpFechaFinEvento.IsEnabled = !dpFechaFinEvento.IsEnabled;
+                        txtHoraTermino.IsEnabled = !txtHoraTermino.IsEnabled;
+                        txtMinutoTermino.IsEnabled = !txtMinutoTermino.IsEnabled;
+
+                        //////
+                        txtDireccion.IsEnabled = !txtDireccion.IsEnabled;
+                        txtNumeroAsistentes.IsEnabled = !txtNumeroAsistentes.IsEnabled;
+                        txtPersonalAdicional.IsEnabled = !txtPersonalAdicional.IsEnabled;
+                        cboTipo.IsEnabled = !cboTipo.IsEnabled;
+
+
+                        txtObservaciones.IsEnabled = !txtObservaciones.IsEnabled;
+                        txtBuscarCliente.IsEnabled = !txtBuscarCliente.IsEnabled;
+                        
+
 
                         //METODO AGREGAR DEVUELVE BOOLEAN POR ESO SE CREA VARIABLE BOOLEANA resp
                         bool resp = dao.ModificarEstado(con_mod);
@@ -573,27 +606,28 @@ namespace Vista
                 lblAsistentes.Content = v.ToString();
             }
         }
-               // else
-                //{
-                  //  await this.ShowMessageAsync("Mensaje", "Debe crear un contrato");
-                //}
-            //}
-            //catch (ArgumentException exa) //catch excepciones hechas por el usuario
-            //{
-            //    MessageBox.Show(exa.Message);
-            //}
-            //catch (Exception ex)
-            //{
-            //    await this.ShowMessageAsync("Mensaje:",
-            //          string.Format("Error ingreso de datos"));
-            //    MessageBox.Show("Error");
-            //    Logger.Mensaje(ex.Message);
-            //}
-           
 
-        
+        //    else
+        //    {
+        //        await this.ShowMessageAsync("Mensaje", "Debe crear un contrato");
+        //    }
+        //}
+        //catch (ArgumentException exa) //catch excepciones hechas por el usuario
+        //{
+        //    MessageBox.Show(exa.Message);
+        //}
+        //catch (Exception ex)
+        //{
+        //    await this.ShowMessageAsync("Mensaje:",
+        //          string.Format("Error ingreso de datos"));
+        //    MessageBox.Show("Error");
+        //    Logger.Mensaje(ex.Message);
+        //}
 
-            //valor personal adicional
+
+
+
+        //valor personal adicional
         private void txtPersonalAdicional_TextChanged_1(object sender, TextChangedEventArgs e)
         {
             if (txtPersonalAdicional.Text != null)
