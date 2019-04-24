@@ -58,13 +58,13 @@ namespace Vista
                 Logger.Mensaje(ex.Message);
             }
         }
-
+        //Llamado desde Contrato
         public wpfListadoCliente(Crear_Contrato origen)
         {
             InitializeComponent();
 
-            btnPasar.Visibility = Visibility.Visible;//el botón traspasar no se ve
-
+            btnPasar.Visibility = Visibility.Visible;//el botón traspasar se ve
+            btnEliminar.Visibility = Visibility.Hidden;//Botón eliminar no se ve
             //llenar el combo box con los datos del enumerador
             cbActiv.ItemsSource = Enum.GetValues(typeof
                 (ActividadEmpresa));
@@ -94,8 +94,8 @@ namespace Vista
         {
             InitializeComponent();
             cl = origen;
-            btnPasar.Visibility = Visibility.Visible;
-
+            btnPasar.Visibility = Visibility.Visible;//Botón pasar es visible
+            btnEliminar.Visibility = Visibility.Hidden;//Botón Eliminar no se ve
             //llenar el combo box con los datos del enumerador
             cbActiv.ItemsSource = Enum.GetValues(typeof
                 (ActividadEmpresa));
@@ -131,15 +131,8 @@ namespace Vista
         //Botón Pasar
         private void btnPasar_Click(object sender, RoutedEventArgs e)
         {
-            if (btnPasar.Visibility == Visibility.Hidden)
-            {
-                btnPasar.Visibility = Visibility.Hidden;//hacer visible el botón
+            btnPasar.Visibility = Visibility.Visible;
 
-            }
-            /*else
-            {
-                btnPasar.Visibility = Visibility.Hidden;//hacer que vuelva a desaparecer, en este caso no lo necesitamos
-            }*/
             if (cl==null)
             {
                 Cliente cli = (Cliente)dgLista.SelectedItem;

@@ -28,7 +28,6 @@ namespace Vista
     {
         DaoContrato dao;
         double uf = new Servicios.Service1().Uf();
-        public RoutedEventHandler btnBuscarContrato_Click { get; private set; }
 
         public Crear_Contrato()
         {
