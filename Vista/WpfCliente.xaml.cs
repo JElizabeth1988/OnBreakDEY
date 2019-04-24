@@ -33,7 +33,7 @@ namespace Vista
         {
             InitializeComponent();
 
-            //btnModificar.Visibility = Visibility.Hidden;//el botón Modificar no se ve
+            btnModificar.Visibility = Visibility.Hidden;//el botón Modificar no se ve
 
             //llenar el combo box con los datos del enumerador
             cbActividad.ItemsSource = Enum.GetValues(typeof
@@ -69,6 +69,8 @@ namespace Vista
         {
             wpfListadoCliente list = new wpfListadoCliente(this);
             list.Show();
+            
+
 
         }
 
@@ -144,6 +146,9 @@ namespace Vista
                     txtTelefono.Text = c.Telefono.ToString();
                     cbActividad.Text = c.Actividad.ToString();
                     cbTipo.Text = c.Empresa.ToString();
+
+                    btnModificar.Visibility = Visibility.Visible;
+
 
                 }
                 else
