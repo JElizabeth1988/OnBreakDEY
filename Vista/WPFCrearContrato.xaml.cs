@@ -572,6 +572,7 @@ namespace Vista
                        await this.ShowMessageAsync("Mensaje:",
                          string.Format(resp ? "Contrato Terminado" : "Contrato No Terminado"));
 
+                
 
             }
             catch (ArgumentException exa) //catch excepciones hechas por el usuario
