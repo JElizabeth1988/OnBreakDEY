@@ -58,13 +58,13 @@ namespace Vista
                 Logger.Mensaje(ex.Message);
             }
         }
-
+        //Llamado desde Contrato
         public wpfListadoCliente(Crear_Contrato origen)
         {
             InitializeComponent();
 
-            btnPasar.Visibility = Visibility.Visible;//el botón traspasar no se ve
-
+            btnPasar.Visibility = Visibility.Visible;//el botón traspasar se ve
+            btnEliminar.Visibility = Visibility.Hidden;//Botón eliminar no se ve
             //llenar el combo box con los datos del enumerador
             cbActiv.ItemsSource = Enum.GetValues(typeof
                 (ActividadEmpresa));
@@ -94,8 +94,8 @@ namespace Vista
         {
             InitializeComponent();
             cl = origen;
-            btnPasar.Visibility = Visibility.Visible;
-
+            btnPasar.Visibility = Visibility.Visible;//Botón pasar es visible
+            btnEliminar.Visibility = Visibility.Hidden;//Botón Eliminar no se ve
             //llenar el combo box con los datos del enumerador
             cbActiv.ItemsSource = Enum.GetValues(typeof
                 (ActividadEmpresa));
@@ -131,15 +131,8 @@ namespace Vista
         //Botón Pasar
         private void btnPasar_Click(object sender, RoutedEventArgs e)
         {
-            if (btnPasar.Visibility == Visibility.Hidden)
-            {
-                btnPasar.Visibility = Visibility.Hidden;//hacer visible el botón
+            btnPasar.Visibility = Visibility.Visible;
 
-            }
-            /*else
-            {
-                btnPasar.Visibility = Visibility.Hidden;//hacer que vuelva a desaparecer, en este caso no lo necesitamos
-            }*/
             if (cl==null)
             {
                 Cliente cli = (Cliente)dgLista.SelectedItem;
@@ -149,10 +142,12 @@ namespace Vista
             else
             {
                 Cliente cli = (Cliente)dgLista.SelectedItem;
+                string rutbuscar;
+                rutbuscar = cl.txtRut+"-"+cl.txtDV;
                 cl.txtRut.Text = cli.Rut;
                 cl.Buscar();
             }
-            
+    
 
         }
 
@@ -219,52 +214,54 @@ namespace Vista
         //Botón Eliminar
         private async void btnEliminar_Click(object sender, RoutedEventArgs e)
         {
-            /*ntrato co = new Contrato();
+            /*Contrato co = new Contrato();
             Cliente cl = new Cliente();
             //falta validar que no tenga contratos asociados!!!!
-            if (co.RutCliente != cl.Rut)
+            if (co.RutCliente==cl.Rut)
             {*/
-
-            Cliente cli = (Cliente)dgLista.SelectedItem;
-            MessageBoxResult respuesta =
+                
+                Cliente cli = (Cliente)dgLista.SelectedItem;
+                MessageBoxResult respuesta =
                 /*await this.ShowMessageAsync("Mensaje:",
                       string.Format("¿Desea eliminar al Cliente?", "Eliminar",
                     MessageBoxButton.YesNo,
                     MessageBoxImage.Warning));*/
-            MessageBox.Show(
-                    "¿Desea eliminar al Cliente?",
-                    "Eliminar",
-                    MessageBoxButton.YesNo,
-                    MessageBoxImage.Warning);
-            if (respuesta == MessageBoxResult.Yes)
-            {
-                bool resp = new DaoCliente().Eliminar(cli.Rut);
-                if (resp)
+                MessageBox.Show(
+                        "¿Desea eliminar al Cliente?",
+                        "Eliminar",
+                        MessageBoxButton.YesNo,
+                        MessageBoxImage.Warning);
+                if (respuesta == MessageBoxResult.Yes)
                 {
-                    await this.ShowMessageAsync("Mensaje:",
-                      string.Format("Cliente Eliminado"));
-                    /*MessageBox.Show("Cliente eliminado");*/
-                    dgLista.ItemsSource =
-                        new DaoCliente().Listar();
+                    bool resp = new DaoCliente().Eliminar(cli.Rut);
+                    if (resp)
+                    {
+                        await this.ShowMessageAsync("Mensaje:",
+                          string.Format("Cliente Eliminado"));
+                        /*MessageBox.Show("Cliente eliminado");*/
+                        dgLista.ItemsSource =
+                            new DaoCliente().Listar();
+                    }
+                    else
+                    {
+                        await this.ShowMessageAsync("Mensaje:",
+                          string.Format("No se eliminó al Cliente"));
+                        /*MessageBox.Show("No se eliminó al Cliente");*/
+                    }
                 }
                 else
                 {
                     await this.ShowMessageAsync("Mensaje:",
-                      string.Format("No se eliminó al Cliente"));
-                    /*MessageBox.Show("No se eliminó al Cliente");*/
+                          string.Format("Operación Cancelada"));
+                    /*MessageBox.Show("Operación Cancelada");*/
                 }
-            }
-            else
-            {
-                await this.ShowMessageAsync("Mensaje:",
-                      string.Format("Operación Cancelada"));
-                /*MessageBox.Show("Operación Cancelada");*/
-            }
+
             /* }
-              else
-              {
-                  MessageBox.Show("No se puede eliminar al Cliente, púes tiene contratos asociados!");
-              }*/
+               else
+               {
+                 MessageBox.Show("No se puede eliminar al Cliente, púes tiene contratos asociados!");
+
+               }*/
         }
     }
 }

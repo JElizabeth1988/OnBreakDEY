@@ -33,7 +33,7 @@ namespace Vista
             if (txtUsuario.Text == "admin" && pbContrasenia.Password == "admin")
             {
                 await this.ShowMessageAsync("Mensaje:",
-                     string.Format("Los Datos Ingresados son Correctos!"));
+                     string.Format("Bienvenido!"));
                 MainWindow _ver = new MainWindow();
                 this.Close();
                 _ver.ShowDialog();

@@ -54,14 +54,14 @@
 
 
         <Image x:Name="imgUsuario" Source="Imagenes/Business-BLACK.png" Margin="920,8.5,0,0"  HorizontalAlignment="Left"  Height="61" VerticalAlignment="Top" Width="125"/>
-                <Label x:Name="lblUser" Content="Admin" HorizontalAlignment="Left" Margin="983,29,0,0" VerticalAlignment="Top" FontSize="14.667"/>
+                <Label x:Name="lblUser" Content="Admin" HorizontalAlignment="Left" Margin="983,29,0,0" VerticalAlignment="Top" FontSize="14.667" Foreground="White"/>
 
            
 
         <Controls:Tile Click="Tile_Click_6" HorizontalAlignment="Left"  Height="61" Margin="1050,10,0,0" VerticalAlignment="Top" Width="189"  >
             <Grid Width="233">
                 <Image x:Name="imgClose" Source="Imagenes/Media-Start.png" Margin="10,0,96,0.333"/>
-                <Label x:Name="label1" Content="Cerrar Sesión" HorizontalAlignment="Left" Margin="112,17,-8,0" VerticalAlignment="Top" FontSize="14.667" Width="129"/>
+                <Label x:Name="label1" Content="Cerrar Sesión" HorizontalAlignment="Left" Margin="112,17,-8,0" VerticalAlignment="Top" FontSize="14.667" Width="129" Foreground="White"/>
 
             </Grid>
         </Controls:Tile>

@@ -18,3 +18,8 @@ C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\BibliotecaClase\obj\Debug\B
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\BibliotecaClase\obj\Debug\BibliotecaClase.dll
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\BibliotecaClase\obj\Debug\BibliotecaClase.pdb
 C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\BibliotecaClase\obj\Debug\BibliotecaClases.csprojResolveAssemblyReference.cache
+F:\UnBreakable - copia\BibliotecaClase\bin\Debug\BibliotecaClase.dll
+F:\UnBreakable - copia\BibliotecaClase\bin\Debug\BibliotecaClase.pdb
+F:\UnBreakable - copia\BibliotecaClase\obj\Debug\BibliotecaClases.csprojResolveAssemblyReference.cache
+F:\UnBreakable - copia\BibliotecaClase\obj\Debug\BibliotecaClase.dll
+F:\UnBreakable - copia\BibliotecaClase\obj\Debug\BibliotecaClase.pdb

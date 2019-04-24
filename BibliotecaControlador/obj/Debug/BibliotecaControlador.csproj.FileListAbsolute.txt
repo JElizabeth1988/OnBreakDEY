@@ -26,3 +26,10 @@ D:\UnBreakable\BibliotecaControlador\bin\Debug\BibliotecaClase.pdb
 D:\UnBreakable\BibliotecaControlador\obj\Debug\BibliotecaControlador.csprojResolveAssemblyReference.cache
 D:\UnBreakable\BibliotecaControlador\obj\Debug\BibliotecaControlador.dll
 D:\UnBreakable\BibliotecaControlador\obj\Debug\BibliotecaControlador.pdb
+F:\UnBreakable - copia\BibliotecaControlador\bin\Debug\BibliotecaControlador.dll
+F:\UnBreakable - copia\BibliotecaControlador\bin\Debug\BibliotecaControlador.pdb
+F:\UnBreakable - copia\BibliotecaControlador\bin\Debug\BibliotecaClase.dll
+F:\UnBreakable - copia\BibliotecaControlador\bin\Debug\BibliotecaClase.pdb
+F:\UnBreakable - copia\BibliotecaControlador\obj\Debug\BibliotecaControlador.csprojResolveAssemblyReference.cache
+F:\UnBreakable - copia\BibliotecaControlador\obj\Debug\BibliotecaControlador.dll
+F:\UnBreakable - copia\BibliotecaControlador\obj\Debug\BibliotecaControlador.pdb

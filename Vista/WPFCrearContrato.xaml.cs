@@ -28,7 +28,6 @@ namespace Vista
     {
         DaoContrato dao;
         double uf = new Servicios.Service1().Uf();
-        public RoutedEventHandler btnBuscarContrato_Click { get; private set; }
 
         public Crear_Contrato()
         {
@@ -38,89 +37,97 @@ namespace Vista
             lblUf.Content = "$" + uf;
             cboTipo.ItemsSource = Enum.GetValues(typeof(TipoEvento));
             cboTipo.SelectedIndex = 0;
-
+            btnTerminar.Visibility = Visibility.Hidden;
+            btnModificar.Visibility = Visibility.Hidden;
             dao = new DaoContrato();
         }
         
         String fechaC = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
-        int cont=0;
-        int asi = 0;
+
+
 
         //CREAR CONTRATO
         private async void btnCrear_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                String numero = lblNumero.Content.ToString();
-                String fechaCreacion = fechaC;
-                String vigente;
-                String fechaTermino;
-                if (rbSi.IsChecked == true)
+                if (dpFechaInicio.SelectedDate <= dpFechaFinEvento.SelectedDate)
                 {
-                    vigente = "Sí";
-                    fechaTermino = "Aún Vigente";
-                   
+                    String numero = lblNumero.Content.ToString();
+                    String fechaCreacion = fechaC;
+                    String vigente;
+                    String fechaTermino;
+                    if (rbSi.IsChecked == true)
+                    {
+                        vigente = "Sí";
+                        fechaTermino = "Aún Vigente";
+
+                    }
+                    else
+                    {
+                        vigente = "No";
+                        fechaTermino = DateTime.Now.ToString("dd/MM/yyyy HH:mm"); ;
+
+
+
+                    }
+
+
+
+                    //EVENTO
+
+                    //inicio
+                    String fechaInicioEvento = dpFechaInicio.Text;
+                    int horaInicio = int.Parse(txtHoraInicio.Text);
+                    int minutoInicio = int.Parse(txtMinutoInicio.Text);
+                    //termino
+                    String fechaFinEvento = dpFechaFinEvento.Text;
+                    int horaTermino = int.Parse(txtHoraTermino.Text);
+                    int minutoTermino = int.Parse(txtMinutoTermino.Text);
+
+                    //////
+                    String direccion = txtDireccion.Text;
+                    int numeroAsistentes = int.Parse(txtNumeroAsistentes.Text);
+                    int personalAdicional = int.Parse(txtPersonalAdicional.Text);
+                    TipoEvento evento = (TipoEvento)cboTipo.SelectedItem;
+
+
+                    String observaciones = txtObservaciones.Text;
+                    String rutCliente = txtBuscarCliente.Text;
+
+                    Contrato con = new Contrato()
+                    {
+
+                        Numero = numero,
+                        FechaCreacion = fechaCreacion,
+                        Vigente = vigente,
+                        FechaTermino = fechaTermino,
+                        FechaInicioEvento = fechaInicioEvento,
+                        HoraInicio = horaInicio,
+                        MinutoInicio = minutoInicio,
+                        FechaFinEvento = fechaFinEvento,
+                        HoraTermino = horaTermino,
+                        MinutoTermino = minutoTermino,
+                        Direccion = direccion,
+                        NumeroAsistentes = numeroAsistentes,
+                        PersonalAdicional = personalAdicional,
+                        Evento = evento,
+                        Observaciones = observaciones,
+                        RutCliente = rutCliente
+                    };
+
+                    //METODO AGREGAR DEVUELVE BOOLEAN POR ESO SE CREA VARIABLE BOOLEANA resp
+                    bool resp = dao.Agregar(con);
+                    await this.ShowMessageAsync("Mensaje:",
+                          string.Format(resp ? "Guardado" : "No guardado"));
+                    /*MessageBox.Show(resp ? "Guardado" : "No Guardado");*/
+                    btnTerminar.Visibility = Visibility.Visible;
                 }
                 else
                 {
-                    vigente = "No";
-                    fechaTermino = DateTime.Now.ToString("dd/MM/yyyy HH:mm"); ;
-
-
-
+                    await this.ShowMessageAsync("Mensaje:",
+                      string.Format("Error: Fecha de Termino es menor a Fecha de Inicio"));
                 }
-
-              
-
-                //EVENTO
-
-                //inicio
-                String fechaInicioEvento = dpFechaInicio.Text;
-                int horaInicio = int.Parse(txtHoraInicio.Text);
-                int minutoInicio = int.Parse(txtMinutoInicio.Text);
-                //termino
-                String fechaFinEvento = dpFechaFinEvento.Text;
-                int horaTermino = int.Parse(txtHoraTermino.Text);
-                int minutoTermino = int.Parse(txtMinutoTermino.Text);
-                
-                //////
-                String direccion = txtDireccion.Text;
-                int numeroAsistentes = int.Parse(txtNumeroAsistentes.Text);
-                int personalAdicional = int.Parse(txtPersonalAdicional.Text);
-                TipoEvento evento = (TipoEvento)cboTipo.SelectedItem;
-
-
-                String observaciones = txtObservaciones.Text;
-                String rutCliente = txtBuscarCliente.Text;
-
-                Contrato con = new Contrato()
-                {
-
-                    Numero = numero,
-                    FechaCreacion = fechaCreacion,
-                    Vigente = vigente,
-                    FechaTermino = fechaTermino,
-                    FechaInicioEvento = fechaInicioEvento,
-                    HoraInicio = horaInicio,
-                    MinutoInicio = minutoInicio,
-                    FechaFinEvento = fechaFinEvento,
-                    HoraTermino = horaTermino,
-                    MinutoTermino = minutoTermino,
-                    Direccion = direccion,
-                    NumeroAsistentes = numeroAsistentes,
-                    PersonalAdicional=personalAdicional,
-                    Evento = evento,
-                    Observaciones = observaciones,
-                    RutCliente = rutCliente
-                };
-
-                //METODO AGREGAR DEVUELVE BOOLEAN POR ESO SE CREA VARIABLE BOOLEANA resp
-                bool resp = dao.Agregar(con);
-                await this.ShowMessageAsync("Mensaje:",
-                      string.Format(resp ? "Guardado" : "No guardado"));
-                /*MessageBox.Show(resp ? "Guardado" : "No Guardado");*/
-                cont = 1;
-
             }
             catch (ArgumentException exa) //catch excepciones hechas por el usuario
             {
@@ -167,6 +174,36 @@ namespace Vista
             txtBuscarCliente.Focus();
             rbSi.IsChecked = true;
             rbNo.IsChecked = false;
+
+            ////DESBLOQUEAR EDITAR EL CONTRATO
+            if (!txtBuscarCliente.IsEnabled)
+            {
+                txtNumero.IsEnabled = true;
+                txtBuscarCliente.IsEnabled = true;
+                txtNumero.IsEnabled = true;
+                //Convert.ToDateTime(txtNumero).ToString("dd/MM/yyyy HH:mm")
+                txtNumero.IsEnabled = true;
+                txtBuscarCliente.IsEnabled = true;
+                lblNumero.IsEnabled = true;
+                //EVENTO
+                //inicio
+                dpFechaInicio.IsEnabled = true;
+                txtHoraInicio.IsEnabled = true;
+                txtMinutoInicio.IsEnabled = true;
+                //termino
+                dpFechaFinEvento.IsEnabled = true;
+                txtHoraTermino.IsEnabled = true;
+                txtMinutoTermino.IsEnabled = true;
+                //////
+                txtDireccion.IsEnabled = true;
+                txtNumeroAsistentes.IsEnabled = true;
+                txtPersonalAdicional.IsEnabled = true;
+                cboTipo.IsEnabled = true;
+                txtObservaciones.IsEnabled = true;
+                txtBuscarCliente.IsEnabled = true;
+            }
+
+
 
 
         }
@@ -218,6 +255,7 @@ namespace Vista
                     cboTipo.Text = c.Evento.ToString();
                     txtObservaciones.Text = c.Observaciones;
                     lblNumero.Content = txtNumero.Text; //IGUALAR CAMPOS 
+                    btnModificar.Visibility = Visibility.Visible;
                 }
                 else
                 {
@@ -413,7 +451,6 @@ namespace Vista
                     RutCliente = rutCliente
                 };
 
-
                 //METODO AGREGAR DEVUELVE BOOLEAN POR ESO SE CREA VARIABLE BOOLEANA resp
                 bool resp = dao.Modificar(nuevo_con);
                 await this.ShowMessageAsync("Mensaje:",
@@ -441,28 +478,9 @@ namespace Vista
         {
             try
             {
-                if (cont == 0)
-                {
-                    await this.ShowMessageAsync("Mensaje", "Debe crear un contrato");
-                }
-                else
-                {
 
-                    if (rbNo.IsChecked == true)
-                    {
-                        await this.ShowMessageAsync("Mensaje", "Contrato Ya terminado");
-                    }
-                    else
-                    {
-
-                        String numero = txtNumero.Text;
-                        //Convert.ToDateTime(txtNumero).ToString("dd/MM/yyyy HH:mm")
-                        String fechaCreacion = txtNumero.Text;
-
-
-
-                        String numeroC = lblNumero.Content.ToString();
-                        String fechaCreacionC = fechaC;
+                        String numero = lblNumero.Content.ToString();
+                        String fechaCreacion = fechaC;
 
                         String vigente = "No";
                         String fechaTermino = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
@@ -513,15 +531,48 @@ namespace Vista
                             RutCliente = rutCliente
                         };
 
+                        //BLOQUEAR EDITAR EL CONTRATO
+                        txtNumero.IsEnabled = !txtNumero.IsEnabled;
+                        txtBuscarCliente.IsEnabled = !txtBuscarCliente.IsEnabled;
+                        txtNumero.IsEnabled = !txtNumero.IsEnabled;
+                        //Convert.ToDateTime(txtNumero).ToString("dd/MM/yyyy HH:mm")
+                        txtNumero.IsEnabled = !txtNumero.IsEnabled;
+                        txtBuscarCliente.IsEnabled = !txtBuscarCliente.IsEnabled;
+                        lblNumero.IsEnabled = !lblNumero.IsEnabled;
+                        
+
+
+                        //EVENTO
+
+                        //inicio
+                        dpFechaInicio.IsEnabled = !dpFechaInicio.IsEnabled;
+                        txtHoraInicio.IsEnabled = !txtHoraInicio.IsEnabled;
+                        txtMinutoInicio.IsEnabled = !txtMinutoInicio.IsEnabled;
+                        //termino
+                        dpFechaFinEvento.IsEnabled = !dpFechaFinEvento.IsEnabled;
+                        txtHoraTermino.IsEnabled = !txtHoraTermino.IsEnabled;
+                        txtMinutoTermino.IsEnabled = !txtMinutoTermino.IsEnabled;
+
+                        //////
+                        txtDireccion.IsEnabled = !txtDireccion.IsEnabled;
+                        txtNumeroAsistentes.IsEnabled = !txtNumeroAsistentes.IsEnabled;
+                        txtPersonalAdicional.IsEnabled = !txtPersonalAdicional.IsEnabled;
+                        cboTipo.IsEnabled = !cboTipo.IsEnabled;
+
+
+                        txtObservaciones.IsEnabled = !txtObservaciones.IsEnabled;
+                        txtBuscarCliente.IsEnabled = !txtBuscarCliente.IsEnabled;
+                        
+
 
                         //METODO AGREGAR DEVUELVE BOOLEAN POR ESO SE CREA VARIABLE BOOLEANA resp
                         bool resp = dao.ModificarEstado(con_mod);
-                        await this.ShowMessageAsync("Mensaje:",
-                              string.Format(resp ? "Contrato Terminado" : "Contrato No Terminado"));
-                        /*MessageBox.Show(resp ? "Contrato Terminado" : "Contrato No Terminado");*/
 
-                    }
-                }
+                /*MessageBox.Show(resp ? "Contrato Terminado" : "Contrato No Terminado");*/
+                       await this.ShowMessageAsync("Mensaje:",
+                         string.Format(resp ? "Contrato Terminado" : "Contrato No Terminado"));
+
+
             }
             catch (ArgumentException exa) //catch excepciones hechas por el usuario
             {

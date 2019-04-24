@@ -33,7 +33,8 @@ namespace Vista
         {
             InitializeComponent();
 
-            //btnModificar.Visibility = Visibility.Hidden;//el botón Modificar no se ve
+            txtDV.IsEnabled = false;
+            btnModificar.Visibility = Visibility.Hidden;//el botón Modificar no se ve
 
             //llenar el combo box con los datos del enumerador
             cbActividad.ItemsSource = Enum.GetValues(typeof
@@ -52,6 +53,7 @@ namespace Vista
         {
             txtDV.Clear();
             txtRut.Clear();
+            txtRut.IsEnabled = true;
             txtRazon.Clear();
             txtNombre.Clear();
             txtEmail.Clear();
@@ -61,6 +63,9 @@ namespace Vista
             cbTipo.SelectedIndex = 0;//Para que en el ComboBox no quede seleccionado nada
             txtRut.Focus();//Mover el cursor a la poscición Rut
 
+            btnModificar.Visibility = Visibility.Hidden;
+            btnGuardar.Visibility = Visibility.Visible;
+
         }
 
         //Botón '?'
@@ -69,6 +74,8 @@ namespace Vista
         {
             wpfListadoCliente list = new wpfListadoCliente(this);
             list.Show();
+            
+
 
         }
 
@@ -83,7 +90,7 @@ namespace Vista
         {
             try
             {
-                String rut = txtRut.Text;
+                String rut = txtRut.Text+"-"+txtDV.Text;
                 String razonSocial = txtRazon.Text;
                 String nombreContacto = txtNombre.Text;
                 String mail = txtEmail.Text;
@@ -125,7 +132,7 @@ namespace Vista
 
 
 
-        //buscar 
+        //Rellenar con ? (genera el traspaso desde lista)
         public async void Buscar()
         {
             try
@@ -134,7 +141,8 @@ namespace Vista
                     Buscar(txtRut.Text);
                 if (c != null)
                 {
-                    txtRut.Text = c.Rut;
+                    txtRut.Text = c.Rut.Substring(0, 10);
+                    txtDV.Text = c.Rut.Substring(11, 1);
                     txtRazon.Text = c.RazonSocial;
                     txtNombre.Text = c.NombreContacto;
                     txtEmail.Text = c.Mail;
@@ -142,6 +150,10 @@ namespace Vista
                     txtTelefono.Text = c.Telefono.ToString();
                     cbActividad.Text = c.Actividad.ToString();
                     cbTipo.Text = c.Empresa.ToString();
+
+
+                    btnModificar.Visibility = Visibility.Visible;
+                    btnGuardar.Visibility = Visibility.Hidden;
 
                 }
                 else
@@ -162,16 +174,20 @@ namespace Vista
             }
         }
 
-        //Botón Buscar
+        //Botón Buscar (de administrar cliente)
         private async void btnBuscar_Click(object sender, RoutedEventArgs e)
         {
+            
             try
             {
                 Cliente c = new DaoCliente().
-                    Buscar(txtRut.Text);
+                    Buscar(txtRut.Text+"-"+txtDV.Text);
                 if (c != null)
                 {
-                    txtRut.Text = c.Rut;
+                    txtRut.Text = c.Rut.Substring(0, 10);
+                    txtDV.Text = c.Rut.Substring(11, 1);
+                    txtRut.IsEnabled = false;
+                    txtDV.IsEnabled = false;
                     txtRazon.Text = c.RazonSocial;
                     txtNombre.Text = c.NombreContacto;
                     txtEmail.Text = c.Mail;
@@ -179,6 +195,9 @@ namespace Vista
                     txtTelefono.Text = c.Telefono.ToString();
                     cbActividad.Text = c.Actividad.ToString();
                     cbTipo.Text = c.Empresa.ToString();
+
+                    btnModificar.Visibility = Visibility.Visible;
+                    btnGuardar.Visibility = Visibility.Hidden;
 
                 }
                 else
@@ -201,19 +220,10 @@ namespace Vista
         //Botón modificar
         private async void btnModificar_Click(object sender, RoutedEventArgs e)
         {
-            /*if (btnModificar.Visibility == Visibility.Hidden)
-            {
-                btnModificar.Visibility = Visibility.Hidden;//hacer visible el botón
-
-            }
-            else
-            {
-                btnModificar.Visibility = Visibility.Hidden;//hacer que vuelva a desaparecer, en este caso no lo necesitamos
-            }*/
-
+           
             try
             {
-                String rut = txtRut.Text;
+                String rut = txtRut.Text+"-"+txtDV.Text;
                 String razonSocial = txtRazon.Text;
                 String nombreContacto = txtNombre.Text;
                 String mail = txtEmail.Text;
@@ -258,57 +268,64 @@ namespace Vista
 
         private void txtRut_LostFocus(object sender, RoutedEventArgs e)
         {
-            string v = new Verificar().ValidarRut(txtRut.Text);
-            txtDV.Text = v;
-            try
+            if (txtRut.Text.Length>=7 && txtRut.Text.Length<=8)
             {
-                string rutSinFormato = txtRut.Text;
-
-                //si el rut ingresado tiene "." o "," o "-" son ratirados para realizar la formula 
-                rutSinFormato = rutSinFormato.Replace(",", "");
-                rutSinFormato = rutSinFormato.Replace(".", "");
-                rutSinFormato = rutSinFormato.Replace("-", "");
-                string rutFormateado = String.Empty;
-
-                //obtengo la parte numerica del RUT
-                //string rutTemporal = rutSinFormato.Substring(0, rutSinFormato.Length - 1);
-                string rutTemporal = rutSinFormato;
-                //obtengo el Digito Verificador del RUT
-                //string dv = rutSinFormato.Substring(rutSinFormato.Length - 1, 1);
-
-                Int64 rut;
-
-                //aqui convierto a un numero el RUT si ocurre un error lo deja en CERO
-                if (!Int64.TryParse(rutTemporal, out rut))
+                string v = new Verificar().ValidarRut(txtRut.Text);
+                txtDV.Text = v;
+                try
                 {
-                    rut = 0;
+                    string rutSinFormato = txtRut.Text;
+
+                    //si el rut ingresado tiene "." o "," o "-" son ratirados para realizar la formula 
+                    rutSinFormato = rutSinFormato.Replace(",", "");
+                    rutSinFormato = rutSinFormato.Replace(".", "");
+                    rutSinFormato = rutSinFormato.Replace("-", "");
+                    string rutFormateado = String.Empty;
+
+                    //obtengo la parte numerica del RUT
+                    //string rutTemporal = rutSinFormato.Substring(0, rutSinFormato.Length - 1);
+                    string rutTemporal = rutSinFormato;
+                    //obtengo el Digito Verificador del RUT
+                    //string dv = rutSinFormato.Substring(rutSinFormato.Length - 1, 1);
+
+                    Int64 rut;
+
+                    //aqui convierto a un numero el RUT si ocurre un error lo deja en CERO
+                    if (!Int64.TryParse(rutTemporal, out rut))
+                    {
+                        rut = 0;
+                    }
+
+                    //este comando es el que formatea con los separadores de miles
+                    rutFormateado = rut.ToString("N0");
+
+                    if (rutFormateado.Equals("0"))
+                    {
+                        rutFormateado = string.Empty;
+                    }
+                    else
+                    {
+                        //si no hubo problemas con el formateo agrego el DV a la salida
+                        // rutFormateado += "-" + dv;
+
+                        //y hago este replace por si el servidor tuviese configuracion anglosajona y reemplazo las comas por puntos
+                        rutFormateado = rutFormateado.Replace(",", ".");
+                    }
+
+                    //se pasa a mayuscula si tiene letra k
+                    rutFormateado = rutFormateado.ToUpper();
+
+                    //la salida esperada para el ejemplo es 99.999.999-K
+                    txtRut.Text = rutFormateado;
                 }
-
-                //este comando es el que formatea con los separadores de miles
-                rutFormateado = rut.ToString("N0");
-
-                if (rutFormateado.Equals("0"))
+                catch (Exception)
                 {
-                    rutFormateado = string.Empty;
+
                 }
-                else
-                {
-                    //si no hubo problemas con el formateo agrego el DV a la salida
-                    // rutFormateado += "-" + dv;
-
-                    //y hago este replace por si el servidor tuviese configuracion anglosajona y reemplazo las comas por puntos
-                    rutFormateado = rutFormateado.Replace(",", ".");
-                }
-
-                //se pasa a mayuscula si tiene letra k
-                rutFormateado = rutFormateado.ToUpper();
-
-                //la salida esperada para el ejemplo es 99.999.999-K
-                txtRut.Text = rutFormateado;
             }
-            catch (Exception)
+            else
             {
-
+                txtRut.Text = "";
             }
         }
 

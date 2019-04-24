@@ -68,9 +68,18 @@ namespace Vista
 
         private void Tile_Click_6(object sender, RoutedEventArgs e)
         {
-           Login log = new Login();
+            MessageBoxResult respuesta =
+            MessageBox.Show(
+                       "¿Desea Cerrar Sesión?",
+                       "Advertencia",
+                       MessageBoxButton.YesNo,
+                       MessageBoxImage.Warning);
+            if (respuesta == MessageBoxResult.Yes)
+            { 
+                Login log = new Login();
             this.Close();
             log.ShowDialog();
+            }
         }
     }
 }

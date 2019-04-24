@@ -123,3 +123,28 @@ C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Servicios\bin\WebApiRestSer
 C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Servicios\obj\Debug\Servicios.csprojResolveAssemblyReference.cache
 C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Servicios\obj\Debug\Servicios.dll
 C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Servicios\obj\Debug\Servicios.pdb
+F:\UnBreakable - copia\Servicios\bin\ApplicationInsights.config
+F:\UnBreakable - copia\Servicios\bin\Servicios.dll.config
+F:\UnBreakable - copia\Servicios\bin\Servicios.dll
+F:\UnBreakable - copia\Servicios\bin\Servicios.pdb
+F:\UnBreakable - copia\Servicios\bin\Microsoft.AI.Agent.Intercept.dll
+F:\UnBreakable - copia\Servicios\bin\Microsoft.AI.DependencyCollector.dll
+F:\UnBreakable - copia\Servicios\bin\Microsoft.AI.PerfCounterCollector.dll
+F:\UnBreakable - copia\Servicios\bin\Microsoft.AI.ServerTelemetryChannel.dll
+F:\UnBreakable - copia\Servicios\bin\Microsoft.AI.Web.dll
+F:\UnBreakable - copia\Servicios\bin\Microsoft.AI.WindowsServer.dll
+F:\UnBreakable - copia\Servicios\bin\Microsoft.ApplicationInsights.dll
+F:\UnBreakable - copia\Servicios\bin\Newtonsoft.Json.dll
+F:\UnBreakable - copia\Servicios\bin\System.Net.Http.Formatting.dll
+F:\UnBreakable - copia\Servicios\bin\WebApiRestService.WebApiClient.dll
+F:\UnBreakable - copia\Servicios\bin\Microsoft.AI.DependencyCollector.xml
+F:\UnBreakable - copia\Servicios\bin\Microsoft.AI.ServerTelemetryChannel.xml
+F:\UnBreakable - copia\Servicios\bin\Microsoft.AI.Web.xml
+F:\UnBreakable - copia\Servicios\bin\Microsoft.AI.WindowsServer.xml
+F:\UnBreakable - copia\Servicios\bin\Microsoft.ApplicationInsights.xml
+F:\UnBreakable - copia\Servicios\bin\Newtonsoft.Json.xml
+F:\UnBreakable - copia\Servicios\bin\System.Net.Http.Formatting.xml
+F:\UnBreakable - copia\Servicios\bin\WebApiRestService.WebApiClient.xml
+F:\UnBreakable - copia\Servicios\obj\Debug\Servicios.csprojResolveAssemblyReference.cache
+F:\UnBreakable - copia\Servicios\obj\Debug\Servicios.dll
+F:\UnBreakable - copia\Servicios\obj\Debug\Servicios.pdb
