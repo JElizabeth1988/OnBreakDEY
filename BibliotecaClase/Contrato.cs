@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace BibliotecaClase
 {
-    //public enum TipoEvento
-    //{
-    //    Matrimonio,Cumpleaños,Bautizo,Graduacion,Gala,Aniversario,BabyShower
-    //}
+    public enum TipoEvento
+    {
+        Matrimonio, Cumpleaños, Bautizo, Graduacion, Gala, Aniversario, BabyShower
+    }
 
     public class Contrato
     {
@@ -209,7 +209,7 @@ namespace BibliotecaClase
             }
         }
 
-        //public TipoEvento Evento { get; set; }
+        public TipoEvento Evento { get; set; }
 
         public int NumeroAsistentes
         {

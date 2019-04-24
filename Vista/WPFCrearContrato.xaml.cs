@@ -719,7 +719,12 @@ namespace Vista
             //    await this.ShowMessageAsync("Mensaje", "Debe crear un contrato");
             //}
         }
-       
-            //valor total
+
+        private void cboTipo_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        //valor total
     }
 }

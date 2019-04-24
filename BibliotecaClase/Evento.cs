@@ -8,14 +8,14 @@ namespace BibliotecaClase
 {
     public class Evento
     {
-        public enum TipoEvento
-        {
-            Matrimonio, Cumpleaños, Bautizo, Graduacion, Gala, Aniversario, BabyShower
-        }
+        //public enum TipoEvento
+        //{
+        //    Matrimonio, Cumpleaños, Bautizo, Graduacion, Gala, Aniversario, BabyShower
+        //}
 
         private int _id;
-        public TipoEvento NombreEvento { get; set; }
-        //private string _nombreTipoEvento;
+        //public TipoEvento NombreEvento { get; set; }
+        private string _nombreTipoEvento;
         private int _valorBase;
         private int _personalBase;
 
@@ -25,21 +25,21 @@ namespace BibliotecaClase
             get { return _id; }
             set { _id = value; }
         }
-        //public string NombreTipoEvento
-        //{
-        //    get { return _nombreTipoEvento; }
-        //    set
-        //    {
-        //        if (value != null)
-        //        {
-        //            _nombreTipoEvento = value;
-        //        }
-        //        else
-        //        {
-        //            throw new ArgumentException("- Campo Nombre Evento no puede estar Vacío");
-        //        }
-        //    }
-        //} 
+        public string NombreTipoEvento
+        {
+            get { return _nombreTipoEvento; }
+            set
+            {
+                if (value != null)
+                {
+                    _nombreTipoEvento = value;
+                }
+                else
+                {
+                    throw new ArgumentException("- Campo Nombre Evento no puede estar Vacío");
+                }
+            }
+        }
 
         //conectar nombre que se guarde AQUI al combobox de CONTRATO
 
