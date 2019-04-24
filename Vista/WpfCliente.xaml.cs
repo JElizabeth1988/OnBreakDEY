@@ -125,7 +125,7 @@ namespace Vista
 
 
 
-        //buscar 
+        //Rellenar con ? (genera el traspaso desde lista)
         public async void Buscar()
         {
             try
@@ -134,9 +134,8 @@ namespace Vista
                     Buscar(txtRut.Text);
                 if (c != null)
                 {
-                    txtRut.Text = c.Rut.Substring(0, 7);
+                    txtRut.Text = c.Rut.Substring(0, 10);
                     txtDV.Text = c.Rut.Substring(11, 1);
-                    txtRut.Text = c.Rut;
                     txtRazon.Text = c.RazonSocial;
                     txtNombre.Text = c.NombreContacto;
                     txtEmail.Text = c.Mail;
@@ -164,17 +163,17 @@ namespace Vista
             }
         }
 
-        //Botón Buscar
+        //Botón Buscar (de administrar cliente)
         private async void btnBuscar_Click(object sender, RoutedEventArgs e)
         {
             try
             {
                 Cliente c = new DaoCliente().
-                    Buscar(txtRut.Text);
+                    Buscar(txtRut.Text+"-"+txtDV.Text);
                 if (c != null)
                 {
-                    txtRut.Text = c.Rut.Substring(0,7);
-                    txtDV.Text = c.Rut.Substring(11,1);
+                    txtRut.Text = c.Rut.Substring(0, 10);
+                    txtDV.Text = c.Rut.Substring(11, 1);
                     txtRazon.Text = c.RazonSocial;
                     txtNombre.Text = c.NombreContacto;
                     txtEmail.Text = c.Mail;

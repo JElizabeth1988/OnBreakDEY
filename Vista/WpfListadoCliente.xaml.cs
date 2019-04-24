@@ -149,6 +149,8 @@ namespace Vista
             else
             {
                 Cliente cli = (Cliente)dgLista.SelectedItem;
+                string rutbuscar;
+                rutbuscar = cl.txtRut+"-"+cl.txtDV;
                 cl.txtRut.Text = cli.Rut;
                 cl.Buscar();
             }
