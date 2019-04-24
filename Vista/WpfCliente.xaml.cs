@@ -33,6 +33,7 @@ namespace Vista
         {
             InitializeComponent();
 
+            txtDV.IsEnabled = false;
             btnModificar.Visibility = Visibility.Hidden;//el botón Modificar no se ve
 
             //llenar el combo box con los datos del enumerador
@@ -52,6 +53,7 @@ namespace Vista
         {
             txtDV.Clear();
             txtRut.Clear();
+            txtRut.IsEnabled = true;
             txtRazon.Clear();
             txtNombre.Clear();
             txtEmail.Clear();
@@ -184,6 +186,8 @@ namespace Vista
                 {
                     txtRut.Text = c.Rut.Substring(0, 10);
                     txtDV.Text = c.Rut.Substring(11, 1);
+                    txtRut.IsEnabled = false;
+                    txtDV.IsEnabled = false;
                     txtRazon.Text = c.RazonSocial;
                     txtNombre.Text = c.NombreContacto;
                     txtEmail.Text = c.Mail;
@@ -219,7 +223,7 @@ namespace Vista
            
             try
             {
-                String rut = txtRut.Text;
+                String rut = txtRut.Text+"-"+txtDV.Text;
                 String razonSocial = txtRazon.Text;
                 String nombreContacto = txtNombre.Text;
                 String mail = txtEmail.Text;

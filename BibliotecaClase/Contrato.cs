@@ -114,13 +114,13 @@ namespace BibliotecaClase
             set
             {
 
-                if (value != 0)
+                if (value >= 0 && value <= 24)
                 {
                     _horaInicio = value;
                 }
                 else
                 {
-                    throw new ArgumentException("ERROR: Campo Hora Inicio no puede estar Vacío");
+                    throw new ArgumentException("ERROR: Ingrese hora entre 1 y 24");
                 }
             }
         }
@@ -130,16 +130,17 @@ namespace BibliotecaClase
             get { return _minutoInicio; }
             set
             {
-                if (value != 0)
+                if (value >= 0 && value < 60)
                 {
                     _minutoInicio = value;
                 }
                 else
                 {
-                    throw new ArgumentException("ERROR: Campo Minuto Inicio no puede estar Vacío");
+                    throw new ArgumentException("ERROR: Ingrese entre 1 y 59 minutos");
                 }
             }
         }
+
 
         public String FechaFinEvento
         {
@@ -163,13 +164,13 @@ namespace BibliotecaClase
             get { return _horaTermino; }
             set
             {
-                if (value != 0)
+                if (value >= 1 && value <= 24)
                 {
                     _horaTermino = value;
                 }
                 else
                 {
-                    throw new ArgumentException("ERROR: Campo Hora Termino no puede estar Vacío");
+                    throw new ArgumentException("ERROR: Ingrese hora entre 1 y 24");
                 }
 
             }
@@ -180,13 +181,13 @@ namespace BibliotecaClase
             get { return _minutoTermino; }
             set
             {
-                if (value != 0)
+                if (value >= 0 && value < 60)
                 {
                     _minutoTermino = value;
                 }
                 else
                 {
-                    throw new ArgumentException("ERROR: Campo Hora Termino no puede estar Vacío");
+                    throw new ArgumentException("ERROR: Ingrese entre 1 y 59 minutos");
                 }
             }
         }

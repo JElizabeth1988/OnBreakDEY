@@ -176,28 +176,33 @@ namespace Vista
             rbNo.IsChecked = false;
 
             ////DESBLOQUEAR EDITAR EL CONTRATO
-            //txtBuscarCliente.IsEnabled = txtBuscarCliente.IsEnabled;
-            //txtNumero.IsEnabled = txtNumero.IsEnabled;
-            ////Convert.ToDateTime(txtNumero).ToString("dd/MM/yyyy HH:mm")
-            //txtNumero.IsEnabled = txtNumero.IsEnabled;
-            //txtBuscarCliente.IsEnabled = txtBuscarCliente.IsEnabled;
-            //lblNumero.IsEnabled = lblNumero.IsEnabled;
-            ////EVENTO
-            ////inicio
-            //dpFechaInicio.IsEnabled = dpFechaInicio.IsEnabled;
-            //txtHoraInicio.IsEnabled = txtHoraInicio.IsEnabled;
-            //txtMinutoInicio.IsEnabled = txtMinutoInicio.IsEnabled;
-            ////termino
-            //dpFechaFinEvento.IsEnabled = dpFechaFinEvento.IsEnabled;
-            //txtHoraTermino.IsEnabled = txtHoraTermino.IsEnabled;
-            //txtMinutoTermino.IsEnabled = txtMinutoTermino.IsEnabled;
-            ////////
-            //txtDireccion.IsEnabled = txtDireccion.IsEnabled;
-            //txtNumeroAsistentes.IsEnabled = txtNumeroAsistentes.IsEnabled;
-            //txtPersonalAdicional.IsEnabled = txtPersonalAdicional.IsEnabled;
-            //cboTipo.IsEnabled = cboTipo.IsEnabled;
-            //txtObservaciones.IsEnabled = txtObservaciones.IsEnabled;
-            //txtBuscarCliente.IsEnabled = txtBuscarCliente.IsEnabled;
+            if (!txtBuscarCliente.IsEnabled)
+            {
+                txtNumero.IsEnabled = true;
+                txtBuscarCliente.IsEnabled = true;
+                txtNumero.IsEnabled = true;
+                //Convert.ToDateTime(txtNumero).ToString("dd/MM/yyyy HH:mm")
+                txtNumero.IsEnabled = true;
+                txtBuscarCliente.IsEnabled = true;
+                lblNumero.IsEnabled = true;
+                //EVENTO
+                //inicio
+                dpFechaInicio.IsEnabled = true;
+                txtHoraInicio.IsEnabled = true;
+                txtMinutoInicio.IsEnabled = true;
+                //termino
+                dpFechaFinEvento.IsEnabled = true;
+                txtHoraTermino.IsEnabled = true;
+                txtMinutoTermino.IsEnabled = true;
+                //////
+                txtDireccion.IsEnabled = true;
+                txtNumeroAsistentes.IsEnabled = true;
+                txtPersonalAdicional.IsEnabled = true;
+                cboTipo.IsEnabled = true;
+                txtObservaciones.IsEnabled = true;
+                txtBuscarCliente.IsEnabled = true;
+            }
+
 
 
 
