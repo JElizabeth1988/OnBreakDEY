@@ -38,6 +38,7 @@ namespace Vista
             cboTipo.ItemsSource = Enum.GetValues(typeof(TipoEvento));
             cboTipo.SelectedIndex = 0;
             btnTerminar.Visibility = Visibility.Hidden;
+            btnModificar.Visibility = Visibility.Hidden;
             dao = new DaoContrato();
         }
         
@@ -249,6 +250,7 @@ namespace Vista
                     cboTipo.Text = c.Evento.ToString();
                     txtObservaciones.Text = c.Observaciones;
                     lblNumero.Content = txtNumero.Text; //IGUALAR CAMPOS 
+                    btnModificar.Visibility = Visibility.Visible;
                 }
                 else
                 {
