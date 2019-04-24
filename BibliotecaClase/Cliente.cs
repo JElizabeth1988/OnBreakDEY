@@ -25,13 +25,13 @@ namespace BibliotecaClase
             get { return _rut; }
             set
             {
-                if (value != null && value.Length >= 7 || value.Length <= 8)
+                if (value != null )
                 {
                     _rut = value;
                 }
                 else
                 {
-                    throw new ArgumentException("ERROR: Campo Rut no puede estar Vacío y debe tener un largo de 9 o 10 dígitos");
+                    throw new ArgumentException("ERROR: Campo Rut no puede estar Vacío");
                 }
             }
         }
@@ -117,13 +117,13 @@ namespace BibliotecaClase
             get { return _telefono; }
             set
             {
-                if (value != 0)
+                if (value != 0 && value>=900000000 && value<1000000000)
                 {
                     _telefono = value;
                 }
                 else
                 {
-                    throw new ArgumentException("ERROR: Campo Teléfono no puede estar Vacío");
+                    throw new ArgumentException("ERROR: Campo Teléfono no puede estar Vacío y debe tener un largo de 9 dígitos");
                 }
 
             }

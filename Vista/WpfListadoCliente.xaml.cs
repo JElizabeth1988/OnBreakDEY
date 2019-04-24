@@ -90,7 +90,7 @@ namespace Vista
         }
 
         //Llamado desde el modulo administrar Cliente
-        public wpfListadoCliente(WpfCliente origen)
+        public  wpfListadoCliente(WpfCliente origen)
         {
             InitializeComponent();
             cl = origen;
@@ -114,7 +114,7 @@ namespace Vista
             }
             catch (Exception ex)
             {
-
+                
                 MessageBox.Show("Error al Listar!" + ex.Message);
             }
 

@@ -46,7 +46,7 @@
             <Image x:Name="image" HorizontalAlignment="Left" Height="101" Margin="383,199,0,0" VerticalAlignment="Top" Width="113" Source="Imagenes/white_logo_transparent_background.png"/>
 
 
-            <TextBox x:Name="txtDV" HorizontalAlignment="Left" Height="23" Margin="327,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" RenderTransformOrigin="0.422,0.462"/>
+            <TextBox x:Name="txtDV" HorizontalAlignment="Left" Height="23" Margin="327,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" RenderTransformOrigin="0.422,0.462" FontWeight="Normal"/>
             <Label x:Name="label1" Content="-" HorizontalAlignment="Left" Margin="310,30,0,0" VerticalAlignment="Top"/>
 
         </Grid>
