@@ -561,6 +561,12 @@ namespace Vista {
             return;
             case 5:
             this.cboTipo = ((System.Windows.Controls.ComboBox)(target));
+            
+            #line 43 "..\..\WPFCrearContrato.xaml"
+            this.cboTipo.SelectionChanged += new System.Windows.Controls.SelectionChangedEventHandler(this.cboTipo_SelectionChanged);
+            
+            #line default
+            #line hidden
             return;
             case 6:
             this.label4 = ((System.Windows.Controls.Label)(target));

@@ -26,7 +26,8 @@ namespace BibliotecaControlador
         {
             if (ExisteCliente(cli.Rut) == false)
             {
-                clientes.Add(cli); return true;
+                clientes.Add(cli);
+                return true;
             }
             return false;
            

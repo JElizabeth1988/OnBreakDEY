@@ -66,20 +66,13 @@ namespace Vista
             even.Show();
         }
 
-        private void Tile_Click_6(object sender, RoutedEventArgs e)
+        private async void Tile_Click_6(object sender, RoutedEventArgs e)
         {
-            MessageBoxResult respuesta =
-            MessageBox.Show(
-                       "¿Desea Cerrar Sesión?",
-                       "Advertencia",
-                       MessageBoxButton.YesNo,
-                       MessageBoxImage.Warning);
-            if (respuesta == MessageBoxResult.Yes)
-            { 
-                Login log = new Login();
+            await this.ShowMessageAsync("Advertencia", "¿Desea cerra sesión?", MessageDialogStyle.AffirmativeAndNegative);
+            Login log = new Login();
             this.Close();
             log.ShowDialog();
-            }
+            
         }
     }
 }
