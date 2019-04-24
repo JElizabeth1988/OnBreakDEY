@@ -506,99 +506,107 @@ namespace Vista
             try
             {
 
-                        String numero = lblNumero.Content.ToString();
-                        String fechaCreacion = fechaC;
+                MessageBoxResult respuesta =
+               MessageBox.Show(
+                     "¿Desea terminar Contrato?",
+                     "Advertencia",
+                     MessageBoxButton.YesNo,
+                     MessageBoxImage.Warning);
+                if (respuesta == MessageBoxResult.Yes)
+                {
 
-                        String vigente = "No";
-                        String fechaTermino = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
-                        rbNo.IsChecked = true;
-                        rbSi.IsChecked = false;
+                    String numero = lblNumero.Content.ToString();
+                    String fechaCreacion = fechaC;
+                    String vigente = "No";
+                    String fechaTermino = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
+                    rbNo.IsChecked = true;
+                    rbSi.IsChecked = false;
 
-                        //EVENTO
+                    //EVENTO
 
-                        //EVENTO
+                    //EVENTO
 
-                        //inicio
-                        String fechaInicioEvento = dpFechaInicio.Text;
-                        int horaInicio = int.Parse(txtHoraInicio.Text);
-                        int minutoInicio = int.Parse(txtMinutoInicio.Text);
-                        //termino
-                        String fechaFinEvento = dpFechaFinEvento.Text;
-                        int horaTermino = int.Parse(txtHoraTermino.Text);
-                        int minutoTermino = int.Parse(txtMinutoTermino.Text);
+                    //inicio
+                    String fechaInicioEvento = dpFechaInicio.Text;
+                    int horaInicio = int.Parse(txtHoraInicio.Text);
+                    int minutoInicio = int.Parse(txtMinutoInicio.Text);
+                    //termino
+                    String fechaFinEvento = dpFechaFinEvento.Text;
+                    int horaTermino = int.Parse(txtHoraTermino.Text);
+                    int minutoTermino = int.Parse(txtMinutoTermino.Text);
 
-                        //////
-                        String direccion = txtDireccion.Text;
-                        int numeroAsistentes = int.Parse(txtNumeroAsistentes.Text);
-                        int personalAdicional = int.Parse(txtPersonalAdicional.Text);
-                        TipoEvento evento = (TipoEvento)cboTipo.SelectedItem;
-
-
-                        String observaciones = txtObservaciones.Text;
-                        String rutCliente = txtBuscarCliente.Text;
-
-                        Contrato con_mod = new Contrato()
-                        {
-
-                            Numero = numero,
-                            FechaCreacion = fechaCreacion,
-                            Vigente = vigente,
-                            FechaTermino = fechaTermino,
-                            FechaInicioEvento = fechaInicioEvento,
-                            HoraInicio = horaInicio,
-                            MinutoInicio = minutoInicio,
-                            FechaFinEvento = fechaFinEvento,
-                            HoraTermino = horaTermino,
-                            MinutoTermino = minutoTermino,
-                            Direccion = direccion,
-                            NumeroAsistentes = numeroAsistentes,
-                            PersonalAdicional = personalAdicional,
-                            Evento = evento,
-                            Observaciones = observaciones,
-                            RutCliente = rutCliente
-                        };
-
-                        //BLOQUEAR EDITAR EL CONTRATO
-                txtNumero.IsEnabled = false;
-                txtBuscarCliente.IsEnabled = false;
-                txtNumero.IsEnabled = false;
-                //Convert.ToDateTime(txtNumero).ToString("dd/MM/yyyy HH:mm")
-                txtNumero.IsEnabled = false;
-                txtBuscarCliente.IsEnabled = false;
-                lblNumero.IsEnabled = false;
+                    //////
+                    String direccion = txtDireccion.Text;
+                    int numeroAsistentes = int.Parse(txtNumeroAsistentes.Text);
+                    int personalAdicional = int.Parse(txtPersonalAdicional.Text);
+                    TipoEvento evento = (TipoEvento)cboTipo.SelectedItem;
 
 
+                    String observaciones = txtObservaciones.Text;
+                    String rutCliente = txtBuscarCliente.Text;
 
-                //EVENTO
+                    Contrato con_mod = new Contrato()
+                    {
 
-                //inicio
-                dpFechaInicio.IsEnabled = false;
-                txtHoraInicio.IsEnabled = false;
-                txtMinutoInicio.IsEnabled = false;
-                //termino
-                dpFechaFinEvento.IsEnabled = false;
-                txtHoraTermino.IsEnabled = false;
-                txtMinutoTermino.IsEnabled = false;
+                        Numero = numero,
+                        FechaCreacion = fechaCreacion,
+                        Vigente = vigente,
+                        FechaTermino = fechaTermino,
+                        FechaInicioEvento = fechaInicioEvento,
+                        HoraInicio = horaInicio,
+                        MinutoInicio = minutoInicio,
+                        FechaFinEvento = fechaFinEvento,
+                        HoraTermino = horaTermino,
+                        MinutoTermino = minutoTermino,
+                        Direccion = direccion,
+                        NumeroAsistentes = numeroAsistentes,
+                        PersonalAdicional = personalAdicional,
+                        Evento = evento,
+                        Observaciones = observaciones,
+                        RutCliente = rutCliente
+                    };
 
-                //////
-                txtDireccion.IsEnabled = false;
-                txtNumeroAsistentes.IsEnabled = false;
-                txtPersonalAdicional.IsEnabled = false;
-                cboTipo.IsEnabled = false;
-                txtObservaciones.IsEnabled = false;
-                txtBuscarCliente.IsEnabled = false;
+                    //BLOQUEAR EDITAR EL CONTRATO
+                    txtNumero.IsEnabled = false;
+                    txtBuscarCliente.IsEnabled = false;
+                    txtNumero.IsEnabled = false;
+                    //Convert.ToDateTime(txtNumero).ToString("dd/MM/yyyy HH:mm")
+                    txtNumero.IsEnabled = false;
+                    txtBuscarCliente.IsEnabled = false;
+                    lblNumero.IsEnabled = false;
 
 
 
-                //METODO AGREGAR DEVUELVE BOOLEAN POR ESO SE CREA VARIABLE BOOLEANA resp
-                bool resp = dao.ModificarEstado(con_mod);
+                    //EVENTO
 
-                /*MessageBox.Show(resp ? "Contrato Terminado" : "Contrato No Terminado");*/
-                       await this.ShowMessageAsync("Mensaje:",
-                         string.Format(resp ? "Contrato Terminado" : "Contrato No Terminado"));
+                    //inicio
+                    dpFechaInicio.IsEnabled = false;
+                    txtHoraInicio.IsEnabled = false;
+                    txtMinutoInicio.IsEnabled = false;
+                    //termino
+                    dpFechaFinEvento.IsEnabled = false;
+                    txtHoraTermino.IsEnabled = false;
+                    txtMinutoTermino.IsEnabled = false;
 
-                
+                    //////
+                    txtDireccion.IsEnabled = false;
+                    txtNumeroAsistentes.IsEnabled = false;
+                    txtPersonalAdicional.IsEnabled = false;
+                    cboTipo.IsEnabled = false;
+                    txtObservaciones.IsEnabled = false;
+                    txtBuscarCliente.IsEnabled = false;
 
+                   
+
+                    //METODO AGREGAR DEVUELVE BOOLEAN POR ESO SE CREA VARIABLE BOOLEANA resp
+                    bool resp = dao.ModificarEstado(con_mod);
+
+                    /*MessageBox.Show(resp ? "Contrato Terminado" : "Contrato No Terminado");*/
+                    await this.ShowMessageAsync("Mensaje:",
+                      string.Format(resp ? "Contrato Terminado" : "Contrato No Terminado"));
+                    btnTerminar.Visibility = Visibility.Hidden;
+
+                }
             }
             catch (ArgumentException exa) //catch excepciones hechas por el usuario
             {
