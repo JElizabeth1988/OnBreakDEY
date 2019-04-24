@@ -19,19 +19,19 @@
             <ColumnDefinition Width="35*"/>
         </Grid.ColumnDefinitions>
         <Button x:Name="btnPasar" Content="Traspasar" HorizontalAlignment="Left" Margin="68,364,0,0" VerticalAlignment="Top" Width="89" FontWeight="Normal" Click="btnPasar_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
-        <DataGrid x:Name="dgLista" HorizontalAlignment="Left" Margin="68,171,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="173" Width="376"/>
+        <DataGrid x:Name="dgLista" HorizontalAlignment="Left" Margin="57,171,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="173" Width="388"/>
         <Button x:Name="btnSalir" Content="Salir" HorizontalAlignment="Left" Margin="21.667,364,0,0" VerticalAlignment="Top" Width="75"  FontWeight="Normal" Grid.Column="2" Click="btnSalir_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
-        <GroupBox x:Name="gbFiltrar" Header="Filtrar Información" HorizontalAlignment="Left" Margin="68,10,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="144" Width="376">
+        <GroupBox x:Name="gbFiltrar" Header="Filtrar Información" HorizontalAlignment="Left" Margin="57,10,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="144" Width="388">
             <Grid HorizontalAlignment="Left" Height="110" Margin="10,4,0,-34" VerticalAlignment="Top" Width="351">
                 <Label x:Name="label" Content="Rut" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,1,0,0"/>
                 <Label x:Name="label1" Content="Tipo de Empresa" HorizontalAlignment="Left" Margin="0,32,0,0" VerticalAlignment="Top"/>
                 <Label x:Name="label2" Content="Actividad" HorizontalAlignment="Left" Margin="0,71,0,0" VerticalAlignment="Top"/>
-                <TextBox x:Name="txtFiltroRut"  Controls:TextBoxHelper.Watermark="Ej. 11.111.111-1" HorizontalAlignment="Left" Height="23" Margin="113,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontWeight="Normal"/>
-                <ComboBox x:Name="cbTipoEmp" HorizontalAlignment="Left" Margin="111,34,0,0" VerticalAlignment="Top" Width="120" Height="26" FontWeight="Normal"/>
-                <ComboBox x:Name="cbActiv" HorizontalAlignment="Left" Margin="112,71,0,0" VerticalAlignment="Top" Width="120" FontWeight="Normal"/>
-                <Button x:Name="btnFiltrarRut" Content="Filtrar" HorizontalAlignment="Left" Margin="255,0,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Click="btnFiltrar_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
-                <Button x:Name="btnFiltrarTipo" Content="Filtrar" HorizontalAlignment="Left" Margin="255,34,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Click="btnFiltrarTipo_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
-                <Button x:Name="btnFiltrarAct" Content="Filtrar" HorizontalAlignment="Left" Margin="255,69,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Click="btnFiltrarAct_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
+                <TextBox x:Name="txtFiltroRut"  Controls:TextBoxHelper.Watermark="Ej. 11.111.111-1" HorizontalAlignment="Left" Height="23" Margin="112,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="137" FontWeight="Normal" Controls:TextBoxHelper.ClearTextButton="True"/>
+                <ComboBox x:Name="cbTipoEmp" HorizontalAlignment="Left" Margin="111,34,0,0" VerticalAlignment="Top" Width="138" Height="26" FontWeight="Normal"/>
+                <ComboBox x:Name="cbActiv" HorizontalAlignment="Left" Margin="112,71,0,0" VerticalAlignment="Top" Width="137" FontWeight="Normal"/>
+                <Button x:Name="btnFiltrarRut" Content="Filtrar" HorizontalAlignment="Left" Margin="265,0,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Click="btnFiltrar_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
+                <Button x:Name="btnFiltrarTipo" Content="Filtrar" HorizontalAlignment="Left" Margin="265,34,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Click="btnFiltrarTipo_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
+                <Button x:Name="btnFiltrarAct" Content="Filtrar" HorizontalAlignment="Left" Margin="265,69,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Click="btnFiltrarAct_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
             </Grid>
         </GroupBox>
         <Button x:Name="btnEliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="218,364,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal"  Click="btnEliminar_Click" Grid.ColumnSpan="2" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
