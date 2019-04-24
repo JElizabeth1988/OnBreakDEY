@@ -61,6 +61,9 @@ namespace Vista
             cbTipo.SelectedIndex = 0;//Para que en el ComboBox no quede seleccionado nada
             txtRut.Focus();//Mover el cursor a la poscición Rut
 
+            btnModificar.Visibility = Visibility.Hidden;
+            btnGuardar.Visibility = Visibility.Visible;
+
         }
 
         //Botón '?'
@@ -146,8 +149,9 @@ namespace Vista
                     cbActividad.Text = c.Actividad.ToString();
                     cbTipo.Text = c.Empresa.ToString();
 
-                    btnModificar.Visibility = Visibility.Visible;
 
+                    btnModificar.Visibility = Visibility.Visible;
+                    btnGuardar.Visibility = Visibility.Hidden;
 
                 }
                 else
@@ -171,6 +175,7 @@ namespace Vista
         //Botón Buscar (de administrar cliente)
         private async void btnBuscar_Click(object sender, RoutedEventArgs e)
         {
+            
             try
             {
                 Cliente c = new DaoCliente().
@@ -186,6 +191,9 @@ namespace Vista
                     txtTelefono.Text = c.Telefono.ToString();
                     cbActividad.Text = c.Actividad.ToString();
                     cbTipo.Text = c.Empresa.ToString();
+
+                    btnModificar.Visibility = Visibility.Visible;
+                    btnGuardar.Visibility = Visibility.Hidden;
 
                 }
                 else
@@ -208,16 +216,7 @@ namespace Vista
         //Botón modificar
         private async void btnModificar_Click(object sender, RoutedEventArgs e)
         {
-            /*if (btnModificar.Visibility == Visibility.Hidden)
-            {
-                btnModificar.Visibility = Visibility.Hidden;//hacer visible el botón
-
-            }
-            else
-            {
-                btnModificar.Visibility = Visibility.Hidden;//hacer que vuelva a desaparecer, en este caso no lo necesitamos
-            }*/
-
+           
             try
             {
                 String rut = txtRut.Text;
