@@ -22,7 +22,7 @@ namespace Servicios
         {
             /////
             ClDatos datos;
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(@"https://mindicador.cl/api/uf"); //crear peticion
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(@"https://mindicador.cl/api/uf/"); //crear peticion
             HttpWebResponse response = (HttpWebResponse)request.GetResponse(); //recupera la respuesta
             Stream stream = response.GetResponseStream(); //recivo esa respuesta
             StreamReader stream_reader = new StreamReader(stream); //leo esa respuesta
@@ -35,7 +35,7 @@ namespace Servicios
             //string fecha = "";
             foreach (Serie item in datos.serie)
             {
-                if (item.fecha == "2019-04-24T04:00:00.000Z")
+                if (item.fecha == DateTime.Now.ToString("yyyy-MM-ddT04:00:00.000Z"))
                 {
                     uf = item.valor;
                 }
