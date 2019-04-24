@@ -310,3 +310,5 @@ F:\UnBreakable - copia\Vista\obj\Debug\Vista.Properties.Resources.resources
 F:\UnBreakable - copia\Vista\obj\Debug\Vista.csproj.GenerateResource.Cache
 F:\UnBreakable - copia\Vista\obj\Debug\Vista.exe
 F:\UnBreakable - copia\Vista\obj\Debug\Vista.pdb
+C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\Login.g.cs
+C:\Users\chida\Desktop\Duplicado\UnBreakable\Vista\obj\Debug\Login.baml

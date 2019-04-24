@@ -11,7 +11,12 @@
         xmlns:local="clr-namespace:Vista"
         mc:Ignorable="d"
         Title="Login" Height="333.561" Width="297.544" WindowTitleBrush="Black" Icon="Imagenes/white_logo_dark_background.jpg" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
-    <Grid Background="#FF84D9E8">
+    <Grid Background="#FF88D7F9">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="273*"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
         <TextBox x:Name="txtUsuario" Controls:TextBoxHelper.Watermark="Ingrese Nombre de Usuario" Controls:TextBoxHelper.ClearTextButton="True" HorizontalAlignment="Left" Height="23" Margin="42,139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="207"/>
         <PasswordBox x:Name="pbContrasenia" Controls:TextBoxHelper.Watermark="Ingrese Contraseña" Controls:TextBoxHelper.ClearTextButton="True" HorizontalAlignment="Left" Margin="42,184,0,0" VerticalAlignment="Top" Width="207"/>
         <Image x:Name="image" HorizontalAlignment="Left" Height="155" Margin="74,10,0,0" VerticalAlignment="Top" Width="141" Source="Imagenes/Business-BLACK.png"/>

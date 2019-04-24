@@ -44,7 +44,7 @@ namespace Vista {
     public partial class Login : MahApps.Metro.Controls.MetroWindow, System.Windows.Markup.IComponentConnector {
         
         
-        #line 15 "..\..\Login.xaml"
+        #line 20 "..\..\Login.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox txtUsuario;
         
@@ -52,7 +52,7 @@ namespace Vista {
         #line hidden
         
         
-        #line 16 "..\..\Login.xaml"
+        #line 21 "..\..\Login.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.PasswordBox pbContrasenia;
         
@@ -60,7 +60,7 @@ namespace Vista {
         #line hidden
         
         
-        #line 17 "..\..\Login.xaml"
+        #line 22 "..\..\Login.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Image image;
         
@@ -68,7 +68,7 @@ namespace Vista {
         #line hidden
         
         
-        #line 18 "..\..\Login.xaml"
+        #line 23 "..\..\Login.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnLogin;
         
@@ -117,7 +117,7 @@ namespace Vista {
             case 4:
             this.btnLogin = ((System.Windows.Controls.Button)(target));
             
-            #line 18 "..\..\Login.xaml"
+            #line 23 "..\..\Login.xaml"
             this.btnLogin.Click += new System.Windows.RoutedEventHandler(this.btnLogin_Click);
             
             #line default
