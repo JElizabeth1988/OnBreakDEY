@@ -227,6 +227,33 @@ namespace Vista
         //salir
         private void button_Click(object sender, RoutedEventArgs e)
         {
+            ////DESBLOQUEAR EDITAR EL CONTRATO
+            if (!txtBuscarCliente.IsEnabled)
+            {
+                txtNumero.IsEnabled = true;
+                txtBuscarCliente.IsEnabled = true;
+                txtNumero.IsEnabled = true;
+                //Convert.ToDateTime(txtNumero).ToString("dd/MM/yyyy HH:mm")
+                txtNumero.IsEnabled = true;
+                txtBuscarCliente.IsEnabled = true;
+                lblNumero.IsEnabled = true;
+                //EVENTO
+                //inicio
+                dpFechaInicio.IsEnabled = true;
+                txtHoraInicio.IsEnabled = true;
+                txtMinutoInicio.IsEnabled = true;
+                //termino
+                dpFechaFinEvento.IsEnabled = true;
+                txtHoraTermino.IsEnabled = true;
+                txtMinutoTermino.IsEnabled = true;
+                //////
+                txtDireccion.IsEnabled = true;
+                txtNumeroAsistentes.IsEnabled = true;
+                txtPersonalAdicional.IsEnabled = true;
+                cboTipo.IsEnabled = true;
+                txtObservaciones.IsEnabled = true;
+                txtBuscarCliente.IsEnabled = true;
+            }
             this.Close();
         }
 
@@ -532,41 +559,39 @@ namespace Vista
                         };
 
                         //BLOQUEAR EDITAR EL CONTRATO
-                        txtNumero.IsEnabled = !txtNumero.IsEnabled;
-                        txtBuscarCliente.IsEnabled = !txtBuscarCliente.IsEnabled;
-                        txtNumero.IsEnabled = !txtNumero.IsEnabled;
-                        //Convert.ToDateTime(txtNumero).ToString("dd/MM/yyyy HH:mm")
-                        txtNumero.IsEnabled = !txtNumero.IsEnabled;
-                        txtBuscarCliente.IsEnabled = !txtBuscarCliente.IsEnabled;
-                        lblNumero.IsEnabled = !lblNumero.IsEnabled;
-                        
+                txtNumero.IsEnabled = false;
+                txtBuscarCliente.IsEnabled = false;
+                txtNumero.IsEnabled = false;
+                //Convert.ToDateTime(txtNumero).ToString("dd/MM/yyyy HH:mm")
+                txtNumero.IsEnabled = false;
+                txtBuscarCliente.IsEnabled = false;
+                lblNumero.IsEnabled = false;
 
 
-                        //EVENTO
 
-                        //inicio
-                        dpFechaInicio.IsEnabled = !dpFechaInicio.IsEnabled;
-                        txtHoraInicio.IsEnabled = !txtHoraInicio.IsEnabled;
-                        txtMinutoInicio.IsEnabled = !txtMinutoInicio.IsEnabled;
-                        //termino
-                        dpFechaFinEvento.IsEnabled = !dpFechaFinEvento.IsEnabled;
-                        txtHoraTermino.IsEnabled = !txtHoraTermino.IsEnabled;
-                        txtMinutoTermino.IsEnabled = !txtMinutoTermino.IsEnabled;
+                //EVENTO
 
-                        //////
-                        txtDireccion.IsEnabled = !txtDireccion.IsEnabled;
-                        txtNumeroAsistentes.IsEnabled = !txtNumeroAsistentes.IsEnabled;
-                        txtPersonalAdicional.IsEnabled = !txtPersonalAdicional.IsEnabled;
-                        cboTipo.IsEnabled = !cboTipo.IsEnabled;
+                //inicio
+                dpFechaInicio.IsEnabled = false;
+                txtHoraInicio.IsEnabled = false;
+                txtMinutoInicio.IsEnabled = false;
+                //termino
+                dpFechaFinEvento.IsEnabled = false;
+                txtHoraTermino.IsEnabled = false;
+                txtMinutoTermino.IsEnabled = false;
 
-
-                        txtObservaciones.IsEnabled = !txtObservaciones.IsEnabled;
-                        txtBuscarCliente.IsEnabled = !txtBuscarCliente.IsEnabled;
-                        
+                //////
+                txtDireccion.IsEnabled = false;
+                txtNumeroAsistentes.IsEnabled = false;
+                txtPersonalAdicional.IsEnabled = false;
+                cboTipo.IsEnabled = false;
+                txtObservaciones.IsEnabled = false;
+                txtBuscarCliente.IsEnabled = false;
 
 
-                        //METODO AGREGAR DEVUELVE BOOLEAN POR ESO SE CREA VARIABLE BOOLEANA resp
-                        bool resp = dao.ModificarEstado(con_mod);
+
+                //METODO AGREGAR DEVUELVE BOOLEAN POR ESO SE CREA VARIABLE BOOLEANA resp
+                bool resp = dao.ModificarEstado(con_mod);
 
                 /*MessageBox.Show(resp ? "Contrato Terminado" : "Contrato No Terminado");*/
                        await this.ShowMessageAsync("Mensaje:",
