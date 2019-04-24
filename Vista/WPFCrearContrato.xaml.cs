@@ -167,6 +167,32 @@ namespace Vista
             rbSi.IsChecked = true;
             rbNo.IsChecked = false;
 
+            ////DESBLOQUEAR EDITAR EL CONTRATO
+            //txtNumero.IsEnabled = txtNumero.IsEnabled;
+            //txtBuscarCliente.IsEnabled = txtBuscarCliente.IsEnabled;
+            //txtNumero.IsEnabled = txtNumero.IsEnabled;
+            ////Convert.ToDateTime(txtNumero).ToString("dd/MM/yyyy HH:mm")
+            //txtNumero.IsEnabled = txtNumero.IsEnabled;
+            //txtBuscarCliente.IsEnabled = txtBuscarCliente.IsEnabled;
+            //lblNumero.IsEnabled = lblNumero.IsEnabled;
+            ////EVENTO
+            ////inicio
+            //dpFechaInicio.IsEnabled = dpFechaInicio.IsEnabled;
+            //txtHoraInicio.IsEnabled = txtHoraInicio.IsEnabled;
+            //txtMinutoInicio.IsEnabled = txtMinutoInicio.IsEnabled;
+            ////termino
+            //dpFechaFinEvento.IsEnabled = dpFechaFinEvento.IsEnabled;
+            //txtHoraTermino.IsEnabled = txtHoraTermino.IsEnabled;
+            //txtMinutoTermino.IsEnabled = txtMinutoTermino.IsEnabled;
+            ////////
+            //txtDireccion.IsEnabled = txtDireccion.IsEnabled;
+            //txtNumeroAsistentes.IsEnabled = txtNumeroAsistentes.IsEnabled;
+            //txtPersonalAdicional.IsEnabled = txtPersonalAdicional.IsEnabled;
+            //cboTipo.IsEnabled = cboTipo.IsEnabled;
+            //txtObservaciones.IsEnabled = txtObservaciones.IsEnabled;
+            //txtBuscarCliente.IsEnabled = txtBuscarCliente.IsEnabled;
+
+
 
         }
 
