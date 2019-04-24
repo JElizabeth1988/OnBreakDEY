@@ -35,7 +35,7 @@ namespace Servicios
             //string fecha = "";
             foreach (Serie item in datos.serie)
             {
-                if (item.fecha == "2019-04-22T04:00:00.000Z")
+                if (item.fecha == "2019-04-24T04:00:00.000Z")
                 {
                     uf = item.valor;
                 }
