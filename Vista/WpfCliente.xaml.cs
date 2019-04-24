@@ -63,8 +63,9 @@ namespace Vista
             cbTipo.SelectedIndex = 0;//Para que en el ComboBox no quede seleccionado nada
             txtRut.Focus();//Mover el cursor a la poscición Rut
 
-            btnModificar.Visibility = Visibility.Hidden;
-            btnGuardar.Visibility = Visibility.Visible;
+            btnModificar.Visibility = Visibility.Hidden;//botón modificar desaparece
+            btnGuardar.Visibility = Visibility.Visible;//botón guardar aparece
+            txtRut.IsEnabled = true;
 
         }
 
@@ -156,6 +157,8 @@ namespace Vista
 
                     btnModificar.Visibility = Visibility.Visible;
                     btnGuardar.Visibility = Visibility.Hidden;
+
+                    txtRut.IsEnabled = false;
 
                 }
                 else
