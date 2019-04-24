@@ -312,6 +312,8 @@ namespace Vista
             }
         }
 
+
+
         ////Dar formato al rut
 
         //private void txtRut_LostFocus(object sender, RoutedEventArgs e)
