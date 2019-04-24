@@ -43,3 +43,6 @@ D:\UnBreakable\Vista\obj\Debug\Vista.Properties.Resources.resources
 D:\UnBreakable\Vista\obj\Debug\Vista.csproj.GenerateResource.Cache
 D:\UnBreakable\Vista\obj\Debug\Vista.exe
 D:\UnBreakable\Vista\obj\Debug\Vista.pdb
+C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\bin\Debug\Vista.exe.config
+C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\Vista.exe
+C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Vista\obj\Debug\Vista.pdb
