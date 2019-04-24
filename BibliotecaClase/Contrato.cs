@@ -47,7 +47,7 @@ namespace BibliotecaClase
                 }
                 else
                 {
-                    throw new ArgumentException("ERROR: Campo Número Contrato no puede estar Vacío");
+                    throw new ArgumentException("- Campo Número Contrato no puede estar Vacío");
                 }
             }
         }
@@ -63,7 +63,7 @@ namespace BibliotecaClase
                 }
                 else
                 {
-                    throw new ArgumentException("ERROR: Campo Fecha Creación no puede estar Vacío");
+                    throw new ArgumentException("- Campo Fecha Creación no puede estar Vacío");
                 }
         }
         }//hacerlo automatico
@@ -85,7 +85,7 @@ namespace BibliotecaClase
                 }
                 else
                 {
-                    throw new ArgumentException("ERROR: Campo Fecha Termino no puede estar Vacío");
+                    throw new ArgumentException("- Campo Fecha Termino no puede estar Vacío");
                 }
                
             }
@@ -103,7 +103,7 @@ namespace BibliotecaClase
                 }
                 else
                 {
-                    throw new ArgumentException("ERROR: Campo Fecha Inicio no puede estar Vacío");
+                    throw new ArgumentException("- Campo Fecha Inicio no puede estar Vacío");
                 }
             }
         }
@@ -120,7 +120,7 @@ namespace BibliotecaClase
                 }
                 else
                 {
-                    throw new ArgumentException("ERROR: Ingrese hora entre 1 y 24");
+                    throw new ArgumentException("- Ingrese hora entre 1 y 24");
                 }
             }
         }
@@ -136,7 +136,7 @@ namespace BibliotecaClase
                 }
                 else
                 {
-                    throw new ArgumentException("ERROR: Ingrese entre 1 y 59 minutos");
+                    throw new ArgumentException("- Ingrese entre 0 y 59 minutos");
                 }
             }
         }
@@ -153,7 +153,7 @@ namespace BibliotecaClase
                 }
                 else
                 {
-                    throw new ArgumentException("ERROR: Campo Fecha Termino no puede estar Vacío");
+                    throw new ArgumentException("- Campo Fecha Termino no puede estar Vacío");
                 }
 
             }
@@ -170,7 +170,7 @@ namespace BibliotecaClase
                 }
                 else
                 {
-                    throw new ArgumentException("ERROR: Ingrese hora entre 1 y 24");
+                    throw new ArgumentException("- Ingrese hora entre 1 y 24");
                 }
 
             }
@@ -187,7 +187,7 @@ namespace BibliotecaClase
                 }
                 else
                 {
-                    throw new ArgumentException("ERROR: Ingrese entre 1 y 59 minutos");
+                    throw new ArgumentException("- Ingrese entre 0 y 59 minutos");
                 }
             }
         }
@@ -204,7 +204,7 @@ namespace BibliotecaClase
                 }
                 else
                 {
-                    throw new ArgumentException("ERROR: Campo Dirección no puede estar Vacío");
+                    throw new ArgumentException("- Campo Dirección no puede estar Vacío");
                 }
             }
         }
@@ -222,7 +222,7 @@ namespace BibliotecaClase
                 }
                 else
                 {
-                    throw new ArgumentException("ERROR: Campo Numero de Asistentes no puede estar Vacío");
+                    throw new ArgumentException("- Campo Numero de Asistentes no puede estar Vacío");
                 }
             }
         }
@@ -238,7 +238,7 @@ namespace BibliotecaClase
                 }
                 else
                 {
-                    throw new ArgumentException("ERROR: Campo Personal Adicional no puede estar Vacío");
+                    throw new ArgumentException("- Campo Personal Adicional no puede estar Vacío");
                 }
             }
         }
@@ -255,7 +255,7 @@ namespace BibliotecaClase
                 }
                 else
                 {
-                    throw new ArgumentException("ERROR: Campo observaciones no puede estar Vacío");
+                    throw new ArgumentException("- Campo observaciones no puede estar Vacío");
                 }
             }
         }
@@ -271,7 +271,7 @@ namespace BibliotecaClase
                 }
                 else
                 {
-                   throw new ArgumentException("ERROR: Campo RUT no puede estar Vacío");
+                   throw new ArgumentException("- Campo RUT no puede estar Vacío");
                 }
             }
         }

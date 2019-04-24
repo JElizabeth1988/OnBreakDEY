@@ -121,7 +121,7 @@ namespace Vista
                     await this.ShowMessageAsync("Mensaje:",
                           string.Format(resp ? "Guardado" : "No guardado"));
                     /*MessageBox.Show(resp ? "Guardado" : "No Guardado");*/
-                    btnTerminar.Visibility = Visibility.Visible;
+                    
                 }
                 else
                 {
@@ -131,7 +131,7 @@ namespace Vista
             }
             catch (ArgumentException exa) //catch excepciones hechas por el usuario
             {
-                MessageBox.Show(exa.Message);
+                await this.ShowMessageAsync("Mensaje:",string.Format((exa.Message)));
             }
             catch (Exception ex)
             {
@@ -154,7 +154,7 @@ namespace Vista
 
             txtBuscarCliente.Clear();
             lblNombreCliente.Visibility = Visibility.Hidden;//desaparecer label
-
+            txtNumero.Clear();
             lblNumero.Content = DateTime.Now.ToString("yyyyMMddHHmm");
             txtBuscarCliente.Clear();
             lblNombreCliente.Visibility = Visibility.Hidden;//no ver label
@@ -168,8 +168,8 @@ namespace Vista
             txtHoraTermino.Clear();
             txtMinutoTermino.Clear();
             cboTipo.SelectedItem = 0;
-            //txtNumeroAsistentes.Clear();
-            //txtPersonalAdicional.Clear();
+            txtNumeroAsistentes.Text = "0";
+            txtPersonalAdicional.Text = "0";
             txtObservaciones.Clear();
             txtBuscarCliente.Focus();
             rbSi.IsChecked = true;
@@ -213,7 +213,8 @@ namespace Vista
         {
             ListarContrato con = new ListarContrato(this);
             con.Show();
-            
+            btnTerminar.Visibility = Visibility.Visible;
+
         }
 
         //listar cliente
@@ -264,8 +265,7 @@ namespace Vista
         {
             try
             {
-                Contrato c = new DaoContrato().
-                    BuscarContrato(txtNumero.Text);
+                Contrato c = new DaoContrato().BuscarContrato(txtNumero.Text);
                 if (c != null)
                 {
                     
@@ -283,6 +283,7 @@ namespace Vista
                     txtObservaciones.Text = c.Observaciones;
                     lblNumero.Content = txtNumero.Text; //IGUALAR CAMPOS 
                     btnModificar.Visibility = Visibility.Visible;
+                    btnTerminar.Visibility = Visibility.Visible;
                 }
                 else
                 {
@@ -324,7 +325,8 @@ namespace Vista
                     txtPersonalAdicional.Text = c.PersonalAdicional.ToString();
                     cboTipo.Text = c.Evento.ToString();
                     txtObservaciones.Text = c.Observaciones;
-                    lblNumero.Content = txtNumero.Text; //IGUALAR CAMPOS 
+                    lblNumero.Content = txtNumero.Text; //IGUALAR CAMPOS
+                    
                 }
                 else
                 {
@@ -505,13 +507,10 @@ namespace Vista
         {
             try
             {
-
-                MessageBoxResult respuesta =
-               MessageBox.Show(
-                     "¿Desea terminar Contrato?",
-                     "Advertencia",
-                     MessageBoxButton.YesNo,
-                     MessageBoxImage.Warning);
+                MessageBoxResult respuesta = MessageBox.Show("¿Desea terminar Contrato?", "Advertencia", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+                //await this.ShowMessageAsync("Advertencia", "¿Desea Terminar el Contrato?", MessageDialogStyle.AffirmativeAndNegative);
+                //bool respuesta = new DaoContrato().ModificarEstado(MessageDialogStyle.AffirmativeAndNegative);
+                //int MessageDialogStyle = 1;
                 if (respuesta == MessageBoxResult.Yes)
                 {
 
@@ -596,7 +595,7 @@ namespace Vista
                     txtObservaciones.IsEnabled = false;
                     txtBuscarCliente.IsEnabled = false;
 
-                   
+
 
                     //METODO AGREGAR DEVUELVE BOOLEAN POR ESO SE CREA VARIABLE BOOLEANA resp
                     bool resp = dao.ModificarEstado(con_mod);
@@ -605,23 +604,23 @@ namespace Vista
                     await this.ShowMessageAsync("Mensaje:",
                       string.Format(resp ? "Contrato Terminado" : "Contrato No Terminado"));
                     btnTerminar.Visibility = Visibility.Hidden;
+                }
 
                 }
-            }
-            catch (ArgumentException exa) //catch excepciones hechas por el usuario
-            {
-                MessageBox.Show(exa.Message);
-            }
-            catch (Exception ex)
-            {
-                await this.ShowMessageAsync("Mensaje:",
-                      string.Format("Guardado"));
-                MessageBox.Show("Error");
-                Logger.Mensaje(ex.Message);
-            }
+                        catch (ArgumentException exa) //catch excepciones hechas por el usuario
+                        {
+                            MessageBox.Show(exa.Message);
+                        }
+                        catch (Exception ex)
+                        {
+                            await this.ShowMessageAsync("Mensaje:",
+                                  string.Format("Guardado"));
+                            MessageBox.Show("Error");
+                            Logger.Mensaje(ex.Message);
+                        }
 
-
-        }
+                    }
+        
 
 
 
@@ -630,6 +629,7 @@ namespace Vista
         //Valor asistentes
         private void txtNumeroAsistentes_TextChanged_1(object sender, TextChangedEventArgs e)
         {
+
             //try
             //{
             if (txtNumeroAsistentes.Text != null)
@@ -637,6 +637,7 @@ namespace Vista
                 Servicios.Service1 WS = new Servicios.Service1();
                 double uf = WS.Uf();
                 int asi = int.Parse(txtNumeroAsistentes.Text);
+                txtNumeroAsistentes.Text = txtNumeroAsistentes.Text;
                 int n = 0;
 
                 if (asi >= 1 && asi <= 20)
@@ -658,25 +659,23 @@ namespace Vista
                 int v = (int)(n * uf);
                 lblAsistentes.Content = v.ToString();
             }
+            else
+            {
+                txtNumeroAsistentes.Text = "0";
+            }
+            //}
+            //catch (ArgumentException exa) //catch excepciones hechas por el usuario
+            //{
+            //    MessageBox.Show(exa.Message);
+            //}
+            //catch (Exception ex)
+            //{
+            //    await this.ShowMessageAsync("Mensaje:",
+            //          string.Format("Error ingreso de datos"));
+            //    MessageBox.Show("Error");
+            //    Logger.Mensaje(ex.Message);
+            //}
         }
-
-        //    else
-        //    {
-        //        await this.ShowMessageAsync("Mensaje", "Debe crear un contrato");
-        //    }
-        //}
-        //catch (ArgumentException exa) //catch excepciones hechas por el usuario
-        //{
-        //    MessageBox.Show(exa.Message);
-        //}
-        //catch (Exception ex)
-        //{
-        //    await this.ShowMessageAsync("Mensaje:",
-        //          string.Format("Error ingreso de datos"));
-        //    MessageBox.Show("Error");
-        //    Logger.Mensaje(ex.Message);
-        //}
-
 
 
 

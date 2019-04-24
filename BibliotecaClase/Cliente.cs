@@ -25,13 +25,13 @@ namespace BibliotecaClase
             get { return _rut; }
             set
             {
-                if (value != null )
+                if (value != null && value.Length>=11 && value.Length<=12)
                 {
                     _rut = value;
                 }
                 else
                 {
-                    throw new ArgumentException("ERROR: Campo Rut no puede estar Vacío");
+                    throw new ArgumentException("- Campo Rut no puede estar Vacío");
                 }
             }
         }
@@ -49,7 +49,7 @@ namespace BibliotecaClase
                 }
                 else
                 {
-                    throw new ArgumentException("ERROR: Campo RazónSocial no puede estar Vacío");
+                    throw new ArgumentException("- Campo RazónSocial no puede estar Vacío");
                 }
 
             }
@@ -68,7 +68,7 @@ namespace BibliotecaClase
                 }
                 else
                 {
-                    throw new ArgumentException("ERROR: Campo Nombre Contrato no puede estar Vacío");
+                    throw new ArgumentException("- Campo Nombre Contrato no puede estar Vacío");
                 }
 
             }
@@ -87,7 +87,7 @@ namespace BibliotecaClase
                 }
                 else
                 {
-                    throw new ArgumentException("ERROR: Campo Email no puede estar Vacío");
+                    throw new ArgumentException("- Campo Email no puede estar Vacío");
                 }
             }
         }
@@ -105,7 +105,7 @@ namespace BibliotecaClase
                 }
                 else
                 {
-                    throw new ArgumentException("ERROR: Campo Dirección no puede estar Vacío");
+                    throw new ArgumentException("- Campo Dirección no puede estar Vacío");
                 }
             }
         }
@@ -117,13 +117,13 @@ namespace BibliotecaClase
             get { return _telefono; }
             set
             {
-                if (value != 0 && value>=900000000 && value<1000000000)
+                if (value != 0 && value>=111111111 && value<999999999)
                 {
                     _telefono = value;
                 }
                 else
                 {
-                    throw new ArgumentException("ERROR: Campo Teléfono no puede estar Vacío y debe tener un largo de 9 dígitos");
+                    throw new ArgumentException("- Campo Teléfono no puede estar Vacío y debe tener un largo de 9 dígitos");
                 }
 
             }
