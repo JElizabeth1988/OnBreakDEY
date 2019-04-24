@@ -188,6 +188,8 @@ namespace Vista
             Contrato con = (Contrato)dgvLista.SelectedItem;
             cc.txtNumero.Text = con.Numero;
             cc.BuscarContrato();
+            cc.btnModificar.Visibility = Visibility.Visible;
+
         }
     }
 }

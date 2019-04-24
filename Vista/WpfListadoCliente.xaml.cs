@@ -147,7 +147,7 @@ namespace Vista
                 cl.txtRut.Text = cli.Rut;
                 cl.Buscar();
             }
-            
+    
 
         }
 
