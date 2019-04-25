@@ -38,7 +38,7 @@ namespace Vista
             //COMBOBOX
             cbofilTipoContrato.ItemsSource = Enum.GetValues(typeof
                 (TipoEvento));
-            cbofilTipoContrato.SelectedIndex = 0;
+            this.cbofilTipoContrato.SelectedItem = null;
 
 
             try
@@ -65,7 +65,7 @@ namespace Vista
             //COMBO BOX
             cbofilTipoContrato.ItemsSource = Enum.GetValues(typeof
                 (TipoEvento));
-            cbofilTipoContrato.SelectedIndex = 0;
+            this.cbofilTipoContrato.SelectedItem = null;
 
             try
             {

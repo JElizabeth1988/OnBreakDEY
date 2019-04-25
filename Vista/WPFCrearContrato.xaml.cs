@@ -36,7 +36,7 @@ namespace Vista
             lblNumero.Content =  DateTime.Now.ToString("yyyyMMddHHmm");
             lblUf.Content = "$" + uf;
             cboTipo.ItemsSource = Enum.GetValues(typeof(TipoEvento));
-            cboTipo.SelectedIndex = 0;
+            this.cboTipo.SelectedItem = null;
             btnTerminar.Visibility = Visibility.Hidden;
             btnModificar.Visibility = Visibility.Hidden;
             dao = new DaoContrato();
@@ -78,17 +78,86 @@ namespace Vista
 
                     //inicio
                     String fechaInicioEvento = dpFechaInicio.Text;
-                    int horaInicio = int.Parse(txtHoraInicio.Text);
-                    int minutoInicio = int.Parse(txtMinutoInicio.Text);
+                    int horaInicio = 0;
+                    if (int.TryParse(txtHoraInicio.Text, out horaInicio))
+                    {
+
+                    }
+                    else
+                    {
+                        await this.ShowMessageAsync("Mensaje:",
+                          string.Format("Ingrese sólo números"));
+                        txtHoraInicio.Focus();
+                        return;
+                    }
+                    int minutoInicio = 0;
+                    if (int.TryParse(txtMinutoInicio.Text, out minutoInicio))
+                    {
+
+                    }
+                    else
+                    {
+                        await this.ShowMessageAsync("Mensaje:",
+                          string.Format("Ingrese sólo números"));
+                        txtMinutoInicio.Focus();
+                        return;
+                    }
                     //termino
                     String fechaFinEvento = dpFechaFinEvento.Text;
-                    int horaTermino = int.Parse(txtHoraTermino.Text);
-                    int minutoTermino = int.Parse(txtMinutoTermino.Text);
+                    int horaTermino = 0;
+                    if (int.TryParse(txtHoraTermino.Text, out horaTermino))
+                    {
+
+                    }
+                    else
+                    {
+                        await this.ShowMessageAsync("Mensaje:",
+                          string.Format("Ingrese sólo números"));
+                        txtHoraTermino.Focus();
+                        return;
+                    }
+                    int minutoTermino= 0;
+                    if (int.TryParse(txtMinutoTermino.Text, out minutoTermino))
+                    {
+
+                    }
+                    else
+                    {
+                        await this.ShowMessageAsync("Mensaje:",
+                          string.Format("Ingrese sólo números"));
+                        txtMinutoTermino.Focus();
+                        return;
+                    }
+                    
 
                     //////
                     String direccion = txtDireccion.Text;
-                    int numeroAsistentes = int.Parse(txtNumeroAsistentes.Text);
-                    int personalAdicional = int.Parse(txtPersonalAdicional.Text);
+                    int numeroAsistentes = 0;
+                    if (int.TryParse(txtNumeroAsistentes.Text, out numeroAsistentes))
+                    {
+
+                    }
+                    else
+                    {
+                        await this.ShowMessageAsync("Mensaje:",
+                          string.Format("Ingrese sólo números"));
+                        txtNumeroAsistentes.Focus();
+                        return;
+                    }
+
+                    int personalAdicional = 0;
+                    if (int.TryParse(txtPersonalAdicional.Text, out personalAdicional))
+                    {
+
+                    }
+                    else
+                    {
+                        await this.ShowMessageAsync("Mensaje:",
+                          string.Format("Ingrese sólo números"));
+                        txtPersonalAdicional.Focus();
+                        return;
+                    }
+
                     TipoEvento evento = (TipoEvento)cboTipo.SelectedItem;
 
 
@@ -168,8 +237,8 @@ namespace Vista
             txtHoraTermino.Clear();
             txtMinutoTermino.Clear();
             cboTipo.SelectedItem = 0;
-            //txtNumeroAsistentes.Clear();
-            //txtPersonalAdicional.Clear();
+            txtNumeroAsistentes.Clear();
+            txtPersonalAdicional.Clear();
             txtObservaciones.Clear();
             txtBuscarCliente.Focus();
             rbSi.IsChecked = true;
@@ -437,20 +506,87 @@ namespace Vista
 
 
                 //EVENTO
-
-                //inicio
+                //Inicio
                 String fechaInicioEvento = dpFechaInicio.Text;
-                int horaInicio = int.Parse(txtHoraInicio.Text);
-                int minutoInicio = int.Parse(txtMinutoInicio.Text);
+                int horaInicio = 0;
+                if (int.TryParse(txtHoraInicio.Text, out horaInicio))
+                {
+
+                }
+                else
+                {
+                    await this.ShowMessageAsync("Mensaje:",
+                      string.Format("Ingrese sólo números"));
+                    txtHoraInicio.Focus();
+                    return;
+                }
+                int minutoInicio = 0;
+                if (int.TryParse(txtMinutoInicio.Text, out minutoInicio))
+                {
+
+                }
+                else
+                {
+                    await this.ShowMessageAsync("Mensaje:",
+                      string.Format("Ingrese sólo números"));
+                    txtMinutoInicio.Focus();
+                    return;
+                }
                 //termino
                 String fechaFinEvento = dpFechaFinEvento.Text;
-                int horaTermino = int.Parse(txtHoraTermino.Text);
-                int minutoTermino = int.Parse(txtMinutoTermino.Text);
+                int horaTermino = 0;
+                if (int.TryParse(txtHoraTermino.Text, out horaTermino))
+                {
+
+                }
+                else
+                {
+                    await this.ShowMessageAsync("Mensaje:",
+                      string.Format("Ingrese sólo números"));
+                    txtHoraTermino.Focus();
+                    return;
+                }
+                int minutoTermino = 0;
+                if (int.TryParse(txtMinutoTermino.Text, out minutoTermino))
+                {
+
+                }
+                else
+                {
+                    await this.ShowMessageAsync("Mensaje:",
+                      string.Format("Ingrese sólo números"));
+                    txtMinutoTermino.Focus();
+                    return;
+                }
+
 
                 //////
                 String direccion = txtDireccion.Text;
-                int numeroAsistentes = int.Parse(txtNumeroAsistentes.Text);
-                int personalAdicional = int.Parse(txtPersonalAdicional.Text);
+                int numeroAsistentes = 0;
+                if (int.TryParse(txtNumeroAsistentes.Text, out numeroAsistentes))
+                {
+
+                }
+                else
+                {
+                    await this.ShowMessageAsync("Mensaje:",
+                      string.Format("Ingrese sólo números"));
+                    txtNumeroAsistentes.Focus();
+                    return;
+                }
+
+                int personalAdicional = 0;
+                if (int.TryParse(txtPersonalAdicional.Text, out personalAdicional))
+                {
+
+                }
+                else
+                {
+                    await this.ShowMessageAsync("Mensaje:",
+                      string.Format("Ingrese sólo números"));
+                    txtPersonalAdicional.Focus();
+                    return;
+                }
                 TipoEvento evento = (TipoEvento)cboTipo.SelectedItem;
 
 
@@ -628,7 +764,7 @@ namespace Vista
         //valor evento base
 
         //Valor asistentes
-        private void txtNumeroAsistentes_TextChanged_1(object sender, TextChangedEventArgs e)
+        private async void txtNumeroAsistentes_TextChanged_1(object sender, TextChangedEventArgs e)
         {
             //try
             //{
@@ -636,7 +772,18 @@ namespace Vista
             {
                 Servicios.Service1 WS = new Servicios.Service1();
                 double uf = WS.Uf();
-                int asi = int.Parse(txtNumeroAsistentes.Text);
+             
+                int asi = 0;
+                if (int.TryParse(txtNumeroAsistentes.Text, out asi))
+                {
+
+                }
+                else
+                {
+                    
+                    txtNumeroAsistentes.Focus();
+                    return;
+                }
                 int n = 0;
 
                 if (asi >= 1 && asi <= 20)
@@ -681,12 +828,22 @@ namespace Vista
 
 
         //valor personal adicional
-        private void txtPersonalAdicional_TextChanged_1(object sender, TextChangedEventArgs e)
+        private async void txtPersonalAdicional_TextChanged_1(object sender, TextChangedEventArgs e)
         {
             if (txtPersonalAdicional.Text != null)
             {
                 
-                int personal = int.Parse(txtPersonalAdicional.Text);
+                int personal = 0;
+                if (int.TryParse(txtPersonalAdicional.Text, out personal))
+                {
+
+                }
+                else
+                {
+                    
+                    txtPersonalAdicional.Focus();
+                    return;
+                }
                 double cant_uf = 0;
 
 

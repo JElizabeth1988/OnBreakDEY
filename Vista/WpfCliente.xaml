@@ -17,7 +17,7 @@
             <ColumnDefinition/>
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
-        <Grid HorizontalAlignment="Left" Height="409" VerticalAlignment="Top" Width="516" Margin="5,0,0,0">
+        <Grid HorizontalAlignment="Left" Height="431" VerticalAlignment="Top" Width="533" Margin="5,0,0,0">
             <Label x:Name="label" Content="Rut:" HorizontalAlignment="Left" Margin="18,28,0,0" VerticalAlignment="Top"/>
             <Label x:Name="label_Copy" Content="Razón Social:" HorizontalAlignment="Left" Margin="18,60,0,0" VerticalAlignment="Top"/>
             <Label x:Name="label_Copy1" Content="Nombre de Contacto:" HorizontalAlignment="Left" Margin="18,91,0,0" VerticalAlignment="Top"/>
@@ -30,11 +30,11 @@
 
             <TextBox x:Name="txtRut" HorizontalAlignment="Left" Controls:TextBoxHelper.Watermark="Ingrese Rut sin DV" Height="8" Margin="187,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="143" FontWeight="Normal" LostFocus="txtRut_LostFocus" Controls:TextBoxHelper.ClearTextButton="True"/>
 
-            <TextBox x:Name="txtRazon" HorizontalAlignment="Left" Controls:TextBoxHelper.Watermark="Ingrese Razón Social" Height="8" Margin="187,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" FontWeight="Normal" Controls:TextBoxHelper.ClearTextButton="True"/>
+            <TextBox x:Name="txtRazon" HorizontalAlignment="Left" Controls:TextBoxHelper.Watermark="Ingrese Razón Social" Height="8" Margin="187,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontWeight="Normal" Controls:TextBoxHelper.ClearTextButton="True"/>
             <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Controls:TextBoxHelper.Watermark="Ingrese Nombre " Height="8" Margin="187,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="186" FontWeight="Normal" Controls:TextBoxHelper.ClearTextButton="True"/>
             <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Controls:TextBoxHelper.Watermark="Ingrese Email" Height="8" Margin="187,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="186" FontWeight="Normal" Controls:TextBoxHelper.ClearTextButton="True"/>
             <TextBox x:Name="txtDireccion" HorizontalAlignment="Left" Controls:TextBoxHelper.Watermark="Ingrese Dirección" Height="8" Margin="187,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="186" FontWeight="Normal" Controls:TextBoxHelper.ClearTextButton="True"/>
-            <TextBox x:Name="txtTelefono" HorizontalAlignment="Left" Controls:TextBoxHelper.Watermark="Ingrese Teléfono" Height="8" Margin="187,186,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" FontWeight="Normal" Controls:TextBoxHelper.ClearTextButton="True"/>
+            <TextBox x:Name="txtTelefono" HorizontalAlignment="Left" Controls:TextBoxHelper.Watermark="Ej. 988888888" Height="8" Margin="187,186,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" FontWeight="Normal" Controls:TextBoxHelper.ClearTextButton="True"/>
             <ComboBox x:Name="cbActividad" HorizontalAlignment="Left" Margin="187,224,0,0" VerticalAlignment="Top" Width="170" FontWeight="Normal"/>
             <ComboBox x:Name="cbTipo" HorizontalAlignment="Left" Margin="187,263,0,0" VerticalAlignment="Top" Width="170" FontWeight="Normal"/>
             <Button x:Name="btnGuardar" Content="Guardar" HorizontalAlignment="Left" Margin="153,342,0,0" VerticalAlignment="Top" Width="75" Cursor="Arrow" FontWeight="Normal" Controls:ButtonHelper.PreserveTextCase="True" Click="btnGuardar_Click" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>

@@ -39,11 +39,11 @@ namespace Vista
             //llenar el combo box con los datos del enumerador
             cbActividad.ItemsSource = Enum.GetValues(typeof
                 (ActividadEmpresa));
-            cbActividad.SelectedIndex = 0;
+            this.cbActividad.SelectedItem=null;
 
             cbTipo.ItemsSource = Enum.GetValues(typeof
                 (TipoEmpresa));
-            cbTipo.SelectedIndex = 0;
+            this.cbTipo.SelectedItem = null;
 
             dao = new DaoCliente();
         }
@@ -96,7 +96,18 @@ namespace Vista
                 String nombreContacto = txtNombre.Text;
                 String mail = txtEmail.Text;
                 String direccion = txtDireccion.Text;
-                int telefono = int.Parse(txtTelefono.Text);
+                int telefono = 0;
+                if (int.TryParse(txtTelefono.Text, out telefono))
+                {
+
+                }
+                else
+                {
+                    await this.ShowMessageAsync("Mensaje:",
+                      string.Format("Ingrese un número de 9 dígitos"));
+                    txtTelefono.Focus();
+                    return;
+                }
                 ActividadEmpresa actividad = (ActividadEmpresa)cbActividad.SelectedItem;
                 TipoEmpresa empresa = (TipoEmpresa)cbTipo.SelectedItem;
                 Cliente c = new Cliente()
@@ -233,7 +244,18 @@ namespace Vista
                 String nombreContacto = txtNombre.Text;
                 String mail = txtEmail.Text;
                 String direccion = txtDireccion.Text;
-                int telefono = int.Parse(txtTelefono.Text);
+                int telefono = 0;
+                if (int.TryParse(txtTelefono.Text, out telefono))
+                {
+
+                }
+                else
+                {
+                    await this.ShowMessageAsync("Mensaje:",
+                      string.Format("Ingrese un número de 9 dígitos"));
+                    txtTelefono.Focus();
+                    return;
+                }
                 ActividadEmpresa actividad = (ActividadEmpresa)cbActividad.SelectedItem;
                 TipoEmpresa empresa = (TipoEmpresa)cbTipo.SelectedItem;
                 Cliente c = new Cliente()

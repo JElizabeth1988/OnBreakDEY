@@ -27,7 +27,8 @@ namespace Vista
     {
         WpfCliente cl;//recibir a cliente
         
-        Crear_Contrato cc;
+        Crear_Contrato cc;//Recibe al Contrato
+
         //Llamado desde menú principal
         public wpfListadoCliente()
         {
@@ -38,11 +39,11 @@ namespace Vista
             //llenar el combo box con los datos del enumerador
             cbActiv.ItemsSource = Enum.GetValues(typeof
                 (ActividadEmpresa));
-            cbActiv.SelectedIndex = 0;
+            this.cbActiv.SelectedItem = null;
 
             cbTipoEmp.ItemsSource = Enum.GetValues(typeof
                 (TipoEmpresa));
-            cbTipoEmp.SelectedIndex = 0;
+            this.cbTipoEmp.SelectedItem = null;
 
             try
             {
@@ -68,11 +69,11 @@ namespace Vista
             //llenar el combo box con los datos del enumerador
             cbActiv.ItemsSource = Enum.GetValues(typeof
                 (ActividadEmpresa));
-            cbActiv.SelectedIndex = 0;
+            this.cbActiv.SelectedItem = null;//que no se muestre valor
 
             cbTipoEmp.ItemsSource = Enum.GetValues(typeof
                 (TipoEmpresa));
-            cbTipoEmp.SelectedIndex = 0;
+            this.cbTipoEmp.SelectedItem = null;
 
             try
             {
@@ -99,11 +100,11 @@ namespace Vista
             //llenar el combo box con los datos del enumerador
             cbActiv.ItemsSource = Enum.GetValues(typeof
                 (ActividadEmpresa));
-            cbActiv.SelectedIndex = 0;
+            this.cbActiv.SelectedItem = null;
 
             cbTipoEmp.ItemsSource = Enum.GetValues(typeof
                 (TipoEmpresa));
-            cbTipoEmp.SelectedIndex = 0;
+            this.cbTipoEmp.SelectedItem = null;
 
             try
             {
@@ -169,6 +170,8 @@ namespace Vista
                       string.Format("Error al filtrar la Información"));
                 /*MessageBox.Show("error al Filtrar Información");*/
                 Logger.Mensaje(ex.Message);
+
+                dgLista.Items.Refresh();
             }
         }
         //Botón filtrar tipo
@@ -187,7 +190,9 @@ namespace Vista
                      string.Format("Error al filtrar la Información"));
                 /*MessageBox.Show("error al Filtrar Información");*/
                 Logger.Mensaje(ex.Message);
+                dgLista.Items.Refresh();
             }
+
         }
 
         //Botón filtrar tipo
@@ -207,6 +212,7 @@ namespace Vista
                      string.Format("Error al filtrar la Información"));
                 /*MessageBox.Show("error al Filtrar Información");*/
                 Logger.Mensaje(ex.Message);
+                dgLista.Items.Refresh();
             }
 
         }
