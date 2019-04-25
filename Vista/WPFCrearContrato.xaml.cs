@@ -645,11 +645,10 @@ namespace Vista
         {
             try
             {
-                MessageBoxResult respuesta = MessageBox.Show("¿Desea terminar Contrato?", "Advertencia", MessageBoxButton.YesNo, MessageBoxImage.Warning);
-                //await this.ShowMessageAsync("Advertencia", "¿Desea Terminar el Contrato?", MessageDialogStyle.AffirmativeAndNegative);
-                //bool respuesta = new DaoContrato().ModificarEstado(MessageDialogStyle.AffirmativeAndNegative);
-                //int MessageDialogStyle = 1;
-                if (respuesta == MessageBoxResult.Yes)
+                var x =
+             await this.ShowMessageAsync("Advertencia", "¿Desea Dar Término al Contrato?",
+                     MessageDialogStyle.AffirmativeAndNegative);
+                if (x == MessageDialogResult.Affirmative)
                 {
 
                     String numero = lblNumero.Content.ToString();

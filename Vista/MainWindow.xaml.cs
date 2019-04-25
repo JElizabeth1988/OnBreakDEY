@@ -68,11 +68,20 @@ namespace Vista
 
         private async void Tile_Click_6(object sender, RoutedEventArgs e)
         {
-            await this.ShowMessageAsync("Advertencia", "¿Desea cerra sesión?", MessageDialogStyle.AffirmativeAndNegative);
-            Login log = new Login();
-            this.Close();
-            log.ShowDialog();
-            
+            var x =
+            await this.ShowMessageAsync("Advertencia", "¿Desea cerrar sesión?", 
+                    MessageDialogStyle.AffirmativeAndNegative);
+            if (x == MessageDialogResult.Affirmative)
+            {
+                Login log = new Login();
+                this.Close();
+                log.ShowDialog();
+            }
+            else
+            {
+                
+            }
+
         }
     }
 }
