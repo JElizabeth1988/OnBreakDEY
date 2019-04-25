@@ -40,7 +40,7 @@
 
         <Button x:Name="button" Content="Cerrar" HorizontalAlignment="Left" Margin="823,604,0,0" VerticalAlignment="Top" Width="76" FontWeight="Normal" Height="33" Click="button_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
         <Label x:Name="label6" Content="Tipo Evento:" HorizontalAlignment="Left" Margin="66,381,0,0" VerticalAlignment="Top" Height="26" Width="82"/>
-        <ComboBox x:Name="cboTipo" HorizontalAlignment="Left" Margin="180,381,0,0" VerticalAlignment="Top" Width="145" AutomationProperties.IsOffscreenBehavior="Onscreen" Height="26" FontWeight="Normal"/>
+        <ComboBox x:Name="cboTipo" HorizontalAlignment="Left" Margin="180,381,0,0" VerticalAlignment="Top" Width="145" AutomationProperties.IsOffscreenBehavior="Onscreen" Height="26" FontWeight="Normal" SelectionChanged="cboTipo_SelectionChanged"/>
         <Label x:Name="label4" Content="Dirección:" HorizontalAlignment="Left" Margin="66,246,0,0" VerticalAlignment="Top" Height="26" Width="69"/>
         <TextBox x:Name="txtDireccion" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark ="Ingrese dirección" HorizontalAlignment="Left" Height="26" Margin="181,247,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="292" FontWeight="Normal" />
         <Label x:Name="label5_Copy" Content="N° Asistentes:" HorizontalAlignment="Left" Margin="66,424,0,0" VerticalAlignment="Top" Height="26" Width="88"/>

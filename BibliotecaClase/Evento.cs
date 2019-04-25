@@ -8,8 +8,14 @@ namespace BibliotecaClase
 {
     public class Evento
     {
+        //public enum TipoEvento
+        //{
+        //    Matrimonio, Cumpleaños, Bautizo, Graduacion, Gala, Aniversario, BabyShower
+        //}
+
         private int _id;
-        private string _nombreTipoEvento; //vicky
+        //public TipoEvento NombreEvento { get; set; }
+        private string _nombreTipoEvento;
         private int _valorBase;
         private int _personalBase;
 
@@ -30,10 +36,10 @@ namespace BibliotecaClase
                 }
                 else
                 {
-                    throw new ArgumentException("ERROR: Campo Nombre Evento no puede estar Vacío");
+                    throw new ArgumentException("- Campo Nombre Evento no puede estar Vacío");
                 }
             }
-        } //vicky
+        }
 
         //conectar nombre que se guarde AQUI al combobox de CONTRATO
 
@@ -42,13 +48,33 @@ namespace BibliotecaClase
         public int ValorBase
         {
             get { return _valorBase; }
-            set { _valorBase = value; }
+            set
+            {
+                if (value>=0)
+                {
+                    _valorBase = value;
+                }
+                else
+                {
+                    throw new ArgumentException("- Campo Valor Base debe ser mayor o igual a 0");
+                }
+            }
         }
 
         public int PersonalBase
         {
             get { return _personalBase; }
-            set { _personalBase = value; }
+            set
+            {
+                if (value >= 0)
+                {
+                    _personalBase = value;
+                }
+                else
+                {
+                    throw new ArgumentException("- Campo Personal Base debe ser mayor o igual a 0");
+                }
+            }
         }
 
 

@@ -48,6 +48,16 @@ namespace BibliotecaControlador
             }
             return false;
         }
+
+        //LIstar nombre evento
+        public List<Evento> Listar()
+        {
+           
+            return eventos;
+        }
+        //LIstar nombre evento 2
+
+
     }
 
 }

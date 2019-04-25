@@ -220,54 +220,29 @@ namespace Vista
         //Botón Eliminar
         private async void btnEliminar_Click(object sender, RoutedEventArgs e)
         {
-            /*Contrato co = new Contrato();
-            Cliente cl = new Cliente();
-            //falta validar que no tenga contratos asociados!!!!
-            if (co.RutCliente==cl.Rut)
-            {*/
                 
                 Cliente cli = (Cliente)dgLista.SelectedItem;
-                MessageBoxResult respuesta =
-                /*await this.ShowMessageAsync("Mensaje:",
-                      string.Format("¿Desea eliminar al Cliente?", "Eliminar",
-                    MessageBoxButton.YesNo,
-                    MessageBoxImage.Warning));*/
-                MessageBox.Show(
-                        "¿Desea eliminar al Cliente?",
-                        "Eliminar",
-                        MessageBoxButton.YesNo,
-                        MessageBoxImage.Warning);
-                if (respuesta == MessageBoxResult.Yes)
+            
+                await this.ShowMessageAsync("Eliminar Datos de Cliente", "¿Desea eliminar al Cliente?", MessageDialogStyle.AffirmativeAndNegative);
+            
+                bool resp = new DaoCliente().Eliminar(cli.Rut);
+                if (resp)
                 {
-                    bool resp = new DaoCliente().Eliminar(cli.Rut);
-                    if (resp)
-                    {
-                        await this.ShowMessageAsync("Mensaje:",
-                          string.Format("Cliente Eliminado"));
-                        /*MessageBox.Show("Cliente eliminado");*/
-                        dgLista.ItemsSource =
-                            new DaoCliente().Listar();
-                    }
-                    else
-                    {
-                        await this.ShowMessageAsync("Mensaje:",
-                          string.Format("No se eliminó al Cliente"));
-                        /*MessageBox.Show("No se eliminó al Cliente");*/
-                    }
+                    await this.ShowMessageAsync("Mensaje:",
+                      string.Format("Cliente Eliminado"));
+                    /*MessageBox.Show("Cliente eliminado");*/
+                    dgLista.ItemsSource =
+                    new DaoCliente().Listar();
+                    dgLista.Items.Refresh();
                 }
                 else
                 {
                     await this.ShowMessageAsync("Mensaje:",
-                          string.Format("Operación Cancelada"));
-                    /*MessageBox.Show("Operación Cancelada");*/
+                      string.Format("No se eliminó al Cliente"));
+                    /*MessageBox.Show("No se eliminó al Cliente");*/
                 }
+            
 
-            /* }
-               else
-               {
-                 MessageBox.Show("No se puede eliminar al Cliente, púes tiene contratos asociados!");
-
-               }*/
         }
     }
 }

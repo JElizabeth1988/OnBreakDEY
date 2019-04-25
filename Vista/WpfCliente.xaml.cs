@@ -131,8 +131,7 @@ namespace Vista
             catch (ArgumentException exa)//mensajes de reglas de negocios
             {
                 await this.ShowMessageAsync("Mensaje:",
-                      string.Format("Error de ingreso de datos"));
-                /*MessageBox.Show(exa.Message);*/
+                      string.Format((exa.Message)));
             }
             catch (Exception ex)
             {
@@ -355,6 +354,8 @@ namespace Vista
                 txtRut.Text = "";
             }
         }
+
+
 
 
 
