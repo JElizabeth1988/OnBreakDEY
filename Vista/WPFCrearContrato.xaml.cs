@@ -237,13 +237,10 @@ namespace Vista
             txtHoraTermino.Clear();
             txtMinutoTermino.Clear();
             cboTipo.SelectedItem = 0;
-<<<<<<< HEAD
+
             txtNumeroAsistentes.Clear();
             txtPersonalAdicional.Clear();
-=======
-            txtNumeroAsistentes.Text = "0";
-            txtPersonalAdicional.Text = "0";
->>>>>>> 4a67e49da341ab19746225875830c1113fe6b970
+
             txtObservaciones.Clear();
             txtBuscarCliente.Focus();
             rbSi.IsChecked = true;
@@ -777,7 +774,7 @@ namespace Vista
             {
                 Servicios.Service1 WS = new Servicios.Service1();
                 double uf = WS.Uf();
-<<<<<<< HEAD
+
              
                 int asi = 0;
                 if (int.TryParse(txtNumeroAsistentes.Text, out asi))
@@ -790,10 +787,7 @@ namespace Vista
                     txtNumeroAsistentes.Focus();
                     return;
                 }
-=======
-                int asi = int.Parse(txtNumeroAsistentes.Text);
-                txtNumeroAsistentes.Text = txtNumeroAsistentes.Text;
->>>>>>> 4a67e49da341ab19746225875830c1113fe6b970
+
                 int n = 0;
 
                 if (asi >= 1 && asi <= 20)
