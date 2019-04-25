@@ -237,10 +237,10 @@ namespace Vista
             txtHoraTermino.Clear();
             txtMinutoTermino.Clear();
             cboTipo.SelectedItem = 0;
+
             txtNumeroAsistentes.Clear();
             txtPersonalAdicional.Clear();
-            txtNumeroAsistentes.Text = "0";
-            txtPersonalAdicional.Text = "0";
+
             txtObservaciones.Clear();
             txtBuscarCliente.Focus();
             rbSi.IsChecked = true;
@@ -645,11 +645,10 @@ namespace Vista
         {
             try
             {
-                MessageBoxResult respuesta = MessageBox.Show("¿Desea terminar Contrato?", "Advertencia", MessageBoxButton.YesNo, MessageBoxImage.Warning);
-                //await this.ShowMessageAsync("Advertencia", "¿Desea Terminar el Contrato?", MessageDialogStyle.AffirmativeAndNegative);
-                //bool respuesta = new DaoContrato().ModificarEstado(MessageDialogStyle.AffirmativeAndNegative);
-                //int MessageDialogStyle = 1;
-                if (respuesta == MessageBoxResult.Yes)
+                var x =
+             await this.ShowMessageAsync("Advertencia", "¿Desea Dar Término al Contrato?",
+                     MessageDialogStyle.AffirmativeAndNegative);
+                if (x == MessageDialogResult.Affirmative)
                 {
 
                     String numero = lblNumero.Content.ToString();
@@ -774,6 +773,7 @@ namespace Vista
             {
                 Servicios.Service1 WS = new Servicios.Service1();
                 double uf = WS.Uf();
+
              
                 int asi = 0;
                 if (int.TryParse(txtNumeroAsistentes.Text, out asi))
@@ -786,8 +786,6 @@ namespace Vista
                     txtNumeroAsistentes.Focus();
                     return;
                 }
-                //int asi = int.Parse(txtNumeroAsistentes.Text);
-                txtNumeroAsistentes.Text = txtNumeroAsistentes.Text;
 
                 int n = 0;
 

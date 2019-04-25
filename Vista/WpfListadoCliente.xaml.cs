@@ -222,9 +222,11 @@ namespace Vista
         {
                 
                 Cliente cli = (Cliente)dgLista.SelectedItem;
-            
-                await this.ShowMessageAsync("Eliminar Datos de Cliente", "¿Desea eliminar al Cliente?", MessageDialogStyle.AffirmativeAndNegative);
-            
+            var x=
+            await this.ShowMessageAsync("Eliminar Datos de Cliente", "¿Desea eliminar al Cliente?", 
+                    MessageDialogStyle.AffirmativeAndNegative);
+            if (x == MessageDialogResult.Affirmative)
+            { 
                 bool resp = new DaoCliente().Eliminar(cli.Rut);
                 if (resp)
                 {
@@ -241,8 +243,15 @@ namespace Vista
                       string.Format("No se eliminó al Cliente"));
                     /*MessageBox.Show("No se eliminó al Cliente");*/
                 }
-            
+            }
+            else
+                {
+                    await this.ShowMessageAsync("Mensaje:",
+                          string.Format("Operación Cancelada"));
+                    /*MessageBox.Show("Operación Cancelada");*/
+                }
 
-        }
+
+            }
     }
 }
