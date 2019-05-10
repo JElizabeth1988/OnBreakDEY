@@ -1,4 +1,5 @@
 ﻿
+<<<<<<< HEAD
 FC:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\App.xaml;;
 FC:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\Login.xaml;;
 FC:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\WPFCrearContrato.xaml;;
@@ -7,4 +8,14 @@ FC:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\WPFListarContrato.xa
 FC:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\MainWindow.xaml;;
 FC:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\WpfCliente.xaml;;
 FC:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Vista\WpfListadoCliente.xaml;;
+=======
+FD:\UnBreakable\Vista\App.xaml;;
+FD:\UnBreakable\Vista\Login.xaml;;
+FD:\UnBreakable\Vista\WPFCrearContrato.xaml;;
+FD:\UnBreakable\Vista\WpfEvento.xaml;;
+FD:\UnBreakable\Vista\WPFListarContrato.xaml;;
+FD:\UnBreakable\Vista\MainWindow.xaml;;
+FD:\UnBreakable\Vista\WpfCliente.xaml;;
+FD:\UnBreakable\Vista\WpfListadoCliente.xaml;;
+>>>>>>> 87825ee4982367b90a1333b6a10a2f962e789b51
 
