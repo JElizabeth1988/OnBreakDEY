@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\BibliotecaDALC\bin\Debug\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,10 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cliente.cs" />
+    <Compile Include="CommonBC.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="DaoCliente.cs" />
     <Compile Include="DaoContrato.cs" />
     <Compile Include="DaoEvento.cs" />
+    <Compile Include="ICliente.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -51,6 +57,10 @@
     <ProjectReference Include="..\BibliotecaClase\BibliotecaClases.csproj">
       <Project>{c44072f2-9415-4243-819c-a664b0744639}</Project>
       <Name>BibliotecaClases</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BibliotecaDALC\BibliotecaDALC.csproj">
+      <Project>{65c88204-185a-42dd-bb07-7b1363263b47}</Project>
+      <Name>BibliotecaDALC</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

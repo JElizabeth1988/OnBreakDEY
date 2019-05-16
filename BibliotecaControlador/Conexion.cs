@@ -11,8 +11,7 @@ namespace BibliotecaControlador
     public class Conexion
     {
         private static SqlConnection cone;
-        //falta data source catalogo usuario y contraseña
-        private String _cadena = "Data Source=;Initial Catalog=;Persist Security Info=True;User ID=;Password=";
+        private String _cadena = "Data Source=.;Initial Catalog=OnBreak;Persist Security Info=True;User ID=sa;Password=Duocadmin2019"";
 
         public Conexion()
         {

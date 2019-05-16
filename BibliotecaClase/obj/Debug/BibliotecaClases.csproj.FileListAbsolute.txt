@@ -23,3 +23,7 @@ F:\UnBreakable - copia\BibliotecaClase\bin\Debug\BibliotecaClase.pdb
 F:\UnBreakable - copia\BibliotecaClase\obj\Debug\BibliotecaClases.csprojResolveAssemblyReference.cache
 F:\UnBreakable - copia\BibliotecaClase\obj\Debug\BibliotecaClase.dll
 F:\UnBreakable - copia\BibliotecaClase\obj\Debug\BibliotecaClase.pdb
+C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\BibliotecaClase\bin\Debug\BibliotecaDALC.dll
+C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\BibliotecaClase\bin\Debug\EntityFramework.dll
+C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\BibliotecaClase\bin\Debug\BibliotecaDALC.pdb
+C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\BibliotecaClase\bin\Debug\EntityFramework.xml

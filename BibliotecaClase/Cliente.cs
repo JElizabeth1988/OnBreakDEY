@@ -6,16 +6,7 @@ using System.Threading.Tasks;
 
 namespace BibliotecaClase
 {
-    public enum ActividadEmpresa
-    {
-        Agropecuaria, Mineria, Manufactura, Comercio, Hoteleria,
-        Alimentos, Transporte, Servicios
-    }
-
-    public enum TipoEmpresa
-    {
-        SPA, EIRL, Limitada, Sociedad_Anonima
-    }
+   
     public class Cliente
     {
         private String _rut;
@@ -150,7 +141,7 @@ namespace BibliotecaClase
 
         }
 
-        public Cliente(string rut, string razonSocial, string nombreContacto, string mail, string direccion, int telefono, TipoEmpresa empresa, ActividadEmpresa actividad)
+        public Cliente(string rut, string razonSocial, string nombreContacto, string mail, string direccion, int telefono)
         {
             Rut = rut;
             RazonSocial = razonSocial;
@@ -158,8 +149,7 @@ namespace BibliotecaClase
             Mail = mail;
             Direccion = direccion;
             Telefono = telefono;
-            Actividad = actividad;
-            Empresa = empresa;
+           
         }
 
 
