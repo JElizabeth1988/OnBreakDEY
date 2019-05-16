@@ -13,7 +13,7 @@ namespace BibliotecaControlador
     {
         private String _rut;
 
-        public String Rut
+        public String RutCliente
         {
             get { return _rut; }
             set
@@ -69,7 +69,7 @@ namespace BibliotecaControlador
 
         private String _mailContacto;
 
-        public String Mail
+        public String MailContacto
         {
             get { return _mailContacto; }
             set
@@ -146,17 +146,6 @@ namespace BibliotecaControlador
                 bdd.Cliente.Add(cl);
                 bdd.SaveChanges();
 
-                cl.RutCliente = Rut;
-                cl.RazonSocial = RazonSocial;
-                cl.NombreContacto = NombreContacto;
-                cl.MailContacto = Mail;
-                cl.Direccion = Direccion;
-                cl.Telefono = Telefono;
-                cl.IdActividadEmpresa = IdActividadEmpresa;
-                cl.IdTipoEmpresa = IdTipoEmpresa;
-                
-                bdd.Cliente.Add(cl);
-                bdd.SaveChanges();
                 return true;
 
 
@@ -173,7 +162,7 @@ namespace BibliotecaControlador
             try
             {
                 BibliotecaDALC.Cliente cl =
-                bdd.Cliente.First(cli => cli.RutCliente.Equals(Rut));
+                bdd.Cliente.First(cli => cli.RutCliente.Equals(RutCliente));
 
                 bdd.Cliente.Remove(cl);
                 bdd.SaveChanges();
@@ -192,11 +181,11 @@ namespace BibliotecaControlador
             try
             {
                 BibliotecaDALC.Cliente cl =
-                    bdd.Cliente.First(cli => cli.RutCliente.Equals(Rut));
+                    bdd.Cliente.First(cli => cli.RutCliente.Equals(RutCliente));
 
                 RazonSocial = cl.RazonSocial;
                 NombreContacto = cl.NombreContacto;
-                Mail = cl.MailContacto;
+                MailContacto = cl.MailContacto;
                 Direccion = cl.Direccion;
                 Telefono = cl.Telefono;
                 IdActividadEmpresa = cl.IdActividadEmpresa;
@@ -216,7 +205,7 @@ namespace BibliotecaControlador
         {
             try
             {
-                BibliotecaDALC.Cliente cli = bdd.Cliente.Find(Rut);
+                BibliotecaDALC.Cliente cli = bdd.Cliente.Find(RutCliente);
                 CommonBC.Syncronize(cli, this);
                 return true;
             }
@@ -226,7 +215,30 @@ namespace BibliotecaControlador
             }
 
         }
+        public List<Cliente> ReadAll()
+        {
+            try
+            {
+                var c = from cli in bdd.Cliente
+                        select new Cliente()
+                        {
+                            RutCliente = cli.RutCliente,
+                            RazonSocial = cli.RazonSocial,
+                            MailContacto = cli.MailContacto,
+                            Direccion = cli.Direccion,
+                            Telefono = cli.Telefono,
+                            IdActividadEmpresa = cli.IdActividadEmpresa,
+                            IdTipoEmpresa = cli.IdTipoEmpresa
+                        };
+                          return c.ToList();
 
+            }
+            catch (Exception ex)
+            {
+
+                return null;
+            }
+        }
         public List<ListaClientes> ReadAll2()
         {
             try
@@ -253,6 +265,26 @@ namespace BibliotecaControlador
             catch (Exception ex)
             {
                 return null;
+            }
+        }
+
+        //Modificar
+        public Boolean Modificar()
+        {
+            try
+            {
+                //creo un modelo de la tabla cliente
+                BibliotecaDALC.Cliente cli = bdd.Cliente.Find(RutCliente);
+                CommonBC.Syncronize(this, cli);
+                bdd.SaveChanges();
+                return true;
+
+
+            }
+            catch (Exception ex)
+            {
+
+                return false;
             }
         }
 

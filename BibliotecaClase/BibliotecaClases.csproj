@@ -45,12 +45,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ActividadEmpresa.cs" />
-    <Compile Include="Cliente.cs" />
     <Compile Include="Contrato.cs" />
     <Compile Include="Evento.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TipoEmpresa.cs" />
     <Compile Include="TipoEvento.cs" />
     <Compile Include="Verificar.cs" />
   </ItemGroup>

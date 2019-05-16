@@ -43,15 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActividadEmpresa.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="CommonBC.cs" />
-    <Compile Include="Conexion.cs" />
+    <Compile Include="Contrato.cs" />
     <Compile Include="DaoCliente.cs" />
     <Compile Include="DaoContrato.cs" />
     <Compile Include="DaoEvento.cs" />
-    <Compile Include="ICliente.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TipoEmpresa.cs" />
+    <Compile Include="TipoEvento.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BibliotecaClase\BibliotecaClases.csproj">

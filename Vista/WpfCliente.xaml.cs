@@ -27,7 +27,7 @@ namespace Vista
     /// </summary>
     public partial class WpfCliente : MetroWindow
     {
-        DaoCliente dao;
+        
 
         public WpfCliente()
         {
@@ -37,15 +37,20 @@ namespace Vista
             btnModificar.Visibility = Visibility.Hidden;//el botón Modificar no se ve
 
             //llenar el combo box con los datos del enumerador
-            cbActividad.ItemsSource = Enum.GetValues(typeof
-                (ActividadEmpresa));
-            this.cbActividad.SelectedItem=null;
-
-            cbTipo.ItemsSource = Enum.GetValues(typeof
-                (TipoEmpresa));
-            this.cbTipo.SelectedItem = null;
-
-            dao = new DaoCliente();
+            foreach (ActividadEmpresa item in new ActividadEmpresa().ReadAll())
+            {
+                comboBoxItem cb = new comboBoxItem();
+                cb.id = item.Id;
+                cb.descripcion = item.Descripcion;
+                cbActividad.Items.Add(cb);
+            }
+            foreach (TipoEmpresa item in new TipoEmpresa().ReadAll())
+            {
+                comboBoxItem cb = new comboBoxItem();
+                cb.id = item.Id;
+                cb.descripcion = item.Descripcion;
+                cbTipo.Items.Add(cb);
+            }
         }
 
         //Botón limpiar
@@ -108,8 +113,8 @@ namespace Vista
                     txtTelefono.Focus();
                     return;
                 }
-                ActividadEmpresa actividad = (ActividadEmpresa)cbActividad.SelectedItem;
-                TipoEmpresa empresa = (TipoEmpresa)cbTipo.SelectedItem;
+                int Actividad = ((comboBoxItem)cbActividad.SelectedItem).id;
+                int Tipo = ((comboBoxItem)cbTipo.SelectedItem).id;
                 Cliente c = new Cliente()
                 {
                     Rut = rut,
@@ -117,12 +122,12 @@ namespace Vista
                     NombreContacto = nombreContacto,
                     Mail = mail,
                     Direccion = direccion,
-                    Telefono = telefono,
-                    Actividad = actividad,
-                    Empresa = empresa
+                    Telefono = telefono.ToString(),
+                    IdActividadEmpresa = Actividad,
+                    IdTipoEmpresa = Tipo
 
                 };
-                bool resp = dao.Agregar(c);
+                bool resp = c.Grabar();
                 await this.ShowMessageAsync("Mensaje:",
                       string.Format(resp ? "Guardado" : "No Guardado"));
                 /*MessageBox.Show(resp ? "Guardado" : "No Guardado");*/
@@ -150,9 +155,11 @@ namespace Vista
         {
             try
             {
-                Cliente c = new DaoCliente().
-                    Buscar(txtRut.Text);
-                if (c != null)
+                Cliente c = new Cliente();
+                c.Rut = txtRut.Text;
+                bool buscar = c.Buscar();
+                
+                if (buscar)
                 {
                     txtRut.Text = c.Rut.Substring(0, 10);
                     txtDV.Text = c.Rut.Substring(11, 1);
@@ -161,8 +168,8 @@ namespace Vista
                     txtEmail.Text = c.Mail;
                     txtDireccion.Text = c.Direccion;
                     txtTelefono.Text = c.Telefono.ToString();
-                    cbActividad.Text = c.Actividad.ToString();
-                    cbTipo.Text = c.Empresa.ToString();
+                    cbActividad.Text = c.IdActividadEmpresa.ToString();
+                    cbTipo.Text = c.IdTipoEmpresa.ToString();
 
 
                     btnModificar.Visibility = Visibility.Visible;
@@ -195,9 +202,10 @@ namespace Vista
             
             try
             {
-                Cliente c = new DaoCliente().
-                    Buscar(txtRut.Text+"-"+txtDV.Text);
-                if (c != null)
+                Cliente c = new Cliente();
+                c.Rut = txtRut.Text;
+                bool buscar = c.Buscar();
+                if (buscar)
                 {
                     txtRut.Text = c.Rut.Substring(0, 10);
                     txtDV.Text = c.Rut.Substring(11, 1);
@@ -208,8 +216,8 @@ namespace Vista
                     txtEmail.Text = c.Mail;
                     txtDireccion.Text = c.Direccion;
                     txtTelefono.Text = c.Telefono.ToString();
-                    cbActividad.Text = c.Actividad.ToString();
-                    cbTipo.Text = c.Empresa.ToString();
+                    cbActividad.Text = c.IdActividadEmpresa.ToString();
+                    cbTipo.Text = c.IdTipoEmpresa.ToString();
 
                     btnModificar.Visibility = Visibility.Visible;
                     btnGuardar.Visibility = Visibility.Hidden;
@@ -255,8 +263,8 @@ namespace Vista
                     txtTelefono.Focus();
                     return;
                 }
-                ActividadEmpresa actividad = (ActividadEmpresa)cbActividad.SelectedItem;
-                TipoEmpresa empresa = (TipoEmpresa)cbTipo.SelectedItem;
+                int Actividad = ((comboBoxItem)cbActividad.SelectedItem).id;
+                int Tipo = ((comboBoxItem)cbTipo.SelectedItem).id;
                 Cliente c = new Cliente()
                 {
                     Rut = rut,
@@ -264,12 +272,12 @@ namespace Vista
                     NombreContacto = nombreContacto,
                     Mail = mail,
                     Direccion = direccion,
-                    Telefono = telefono,
-                    Actividad = actividad,
-                    Empresa = empresa
+                    Telefono = telefono.ToString(),
+                    IdActividadEmpresa = Actividad,
+                    IdTipoEmpresa = Tipo
 
                 };
-                bool resp = dao.Modificar(c);
+                bool resp = c.Modificar();
                 await this.ShowMessageAsync("Mensaje:",
                      string.Format(resp ? "Actualizado" : "No Actualizado, (El rut no se debe modificar)"));
                 /*MessageBox.Show(resp ? "Actualizado" : "No Actualizado, (El rut no se debe modificar)");*/
