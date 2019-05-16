@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BibliotecaControlador", "Bi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servicios", "Servicios\Servicios.csproj", "{900483E1-95CE-4E70-9F1D-E69C1BD828E3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BibliotecaDALC", "BibliotecaDALC\BibliotecaDALC.csproj", "{6B97DE36-5D80-47CC-BBDF-D772F3B3B6D8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{900483E1-95CE-4E70-9F1D-E69C1BD828E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{900483E1-95CE-4E70-9F1D-E69C1BD828E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{900483E1-95CE-4E70-9F1D-E69C1BD828E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B97DE36-5D80-47CC-BBDF-D772F3B3B6D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B97DE36-5D80-47CC-BBDF-D772F3B3B6D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B97DE36-5D80-47CC-BBDF-D772F3B3B6D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B97DE36-5D80-47CC-BBDF-D772F3B3B6D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
