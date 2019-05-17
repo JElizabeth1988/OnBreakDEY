@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using BibliotecaDALC;
 
 
-namespace BibliotecaControlador
+namespace BibliotecaNegocio
 {
    
     public class Cliente
@@ -110,7 +110,7 @@ namespace BibliotecaControlador
             get { return _telefono; }
             set
             {
-                if (value != null)
+                if (value != null && value.Length >=9  && value.Length <= 12)
                 {
                     _telefono = value;
                 }
@@ -162,7 +162,8 @@ namespace BibliotecaControlador
             try
             {
                 BibliotecaDALC.Cliente cl =
-                bdd.Cliente.First(cli => cli.RutCliente.Equals(RutCliente));
+                //bdd.Cliente.First(cli => cli.RutCliente.Equals(RutCliente));
+                bdd.Cliente.Find(RutCliente);
 
                 bdd.Cliente.Remove(cl);
                 bdd.SaveChanges();
@@ -182,6 +183,7 @@ namespace BibliotecaControlador
             {
                 BibliotecaDALC.Cliente cl =
                     bdd.Cliente.First(cli => cli.RutCliente.Equals(RutCliente));
+                    //bdd.Cliente.Find(RutCliente);
 
                 RazonSocial = cl.RazonSocial;
                 NombreContacto = cl.NombreContacto;

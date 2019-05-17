@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using BibliotecaDALC;
 
-namespace BibliotecaClase
+namespace BibliotecaNegocio
 {
     public class TipoEvento
     {

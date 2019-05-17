@@ -11,8 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using BibliotecaClase;
-using BibliotecaControlador;
+
+using BibliotecaNegocio;
 
 using MahApps.Metro.Controls;
 using MahApps.Metro.Controls.Dialogs;
@@ -37,13 +37,20 @@ namespace Vista
             btnPasar.Visibility = Visibility.Hidden;//el botón traspasar no se ve
 
             //llenar el combo box con los datos del enumerador
-            cbActiv.ItemsSource = Enum.GetValues(typeof
-                (ActividadEmpresa));
-            this.cbActiv.SelectedItem = null;
-
-            cbTipoEmp.ItemsSource = Enum.GetValues(typeof
-                (TipoEmpresa));
-            this.cbTipoEmp.SelectedItem = null;
+            foreach (ActividadEmpresa item in new ActividadEmpresa().ReadAll())
+            {
+                comboBoxItem cb = new comboBoxItem();
+                cb.id = item.Id;
+                cb.descripcion = item.Descripcion;
+                cbActiv.Items.Add(cb);
+            }
+            foreach (TipoEmpresa item in new TipoEmpresa().ReadAll())
+            {
+                comboBoxItem cb = new comboBoxItem();
+                cb.id = item.Id;
+                cb.descripcion = item.Descripcion;
+                cbTipoEmp.Items.Add(cb);
+            }
 
             try
             {
@@ -67,13 +74,20 @@ namespace Vista
             btnPasar.Visibility = Visibility.Visible;//el botón traspasar se ve
             btnEliminar.Visibility = Visibility.Hidden;//Botón eliminar no se ve
             //llenar el combo box con los datos del enumerador
-            cbActiv.ItemsSource = Enum.GetValues(typeof
-                (ActividadEmpresa));
-            this.cbActiv.SelectedItem = null;//que no se muestre valor
-
-            cbTipoEmp.ItemsSource = Enum.GetValues(typeof
-                (TipoEmpresa));
-            this.cbTipoEmp.SelectedItem = null;
+            foreach(ActividadEmpresa item in new ActividadEmpresa().ReadAll())
+            {
+                comboBoxItem cb = new comboBoxItem();
+                cb.id = item.Id;
+                cb.descripcion = item.Descripcion;
+                cbActiv.Items.Add(cb);
+            }
+            foreach (TipoEmpresa item in new TipoEmpresa().ReadAll())
+            {
+                comboBoxItem cb = new comboBoxItem();
+                cb.id = item.Id;
+                cb.descripcion = item.Descripcion;
+                cbTipoEmp.Items.Add(cb);
+            }
 
             try
             {
@@ -97,15 +111,23 @@ namespace Vista
             cl = origen;
             btnPasar.Visibility = Visibility.Visible;//Botón pasar es visible
             btnEliminar.Visibility = Visibility.Hidden;//Botón Eliminar no se ve
+                                                       
             //llenar el combo box con los datos del enumerador
-            cbActiv.ItemsSource = Enum.GetValues(typeof
-                (ActividadEmpresa));
-            this.cbActiv.SelectedItem = null;
-
-            cbTipoEmp.ItemsSource = Enum.GetValues(typeof
-                (TipoEmpresa));
-            this.cbTipoEmp.SelectedItem = null;
-
+            foreach (ActividadEmpresa item in new ActividadEmpresa().ReadAll())
+            {
+                comboBoxItem cb = new comboBoxItem();
+                cb.id = item.Id;
+                cb.descripcion = item.Descripcion;
+                cbActiv.Items.Add(cb);
+            }
+            foreach (TipoEmpresa item in new TipoEmpresa().ReadAll())
+            {
+                comboBoxItem cb = new comboBoxItem();
+                cb.id = item.Id;
+                cb.descripcion = item.Descripcion;
+                cbTipoEmp.Items.Add(cb);
+            }
+            
             try
             {
                 DaoCliente dao = new DaoCliente();
@@ -137,7 +159,7 @@ namespace Vista
             if (cl==null)
             {
                 Cliente cli = (Cliente)dgLista.SelectedItem;
-                cc.txtBuscarCliente.Text = cli.Rut;
+                cc.txtBuscarCliente.Text = cli.RutCliente;
                 cc.Buscar();
             }
             else
@@ -145,7 +167,7 @@ namespace Vista
                 Cliente cli = (Cliente)dgLista.SelectedItem;
                 string rutbuscar;
                 rutbuscar = cl.txtRut+"-"+cl.txtDV;
-                cl.txtRut.Text = cli.Rut;
+                cl.txtRut.Text = cli.RutCliente;
                 cl.Buscar();
             }
     

@@ -167,13 +167,9 @@
     <Resource Include="Resources\Entypo-license.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BibliotecaClase\BibliotecaClases.csproj">
-      <Project>{c44072f2-9415-4243-819c-a664b0744639}</Project>
-      <Name>BibliotecaClases</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\BibliotecaControlador\BibliotecaControlador.csproj">
+    <ProjectReference Include="..\BibliotecaControlador\BibliotecaNegocio.csproj">
       <Project>{5f5241b3-dbf9-4b09-b205-3efa19c66622}</Project>
-      <Name>BibliotecaControlador</Name>
+      <Name>BibliotecaNegocio</Name>
     </ProjectReference>
     <ProjectReference Include="..\Servicios\Servicios.csproj">
       <Project>{900483e1-95ce-4e70-9f1d-e69c1bd828e3}</Project>

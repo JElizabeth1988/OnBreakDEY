@@ -7,7 +7,7 @@ using BibliotecaDALC;
 
 
 
-namespace BibliotecaClase
+namespace BibliotecaNegocio
 {
     public class TipoEmpresa
     {

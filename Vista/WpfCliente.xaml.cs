@@ -12,8 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-using BibliotecaClase;
-using BibliotecaControlador;
+using BibliotecaNegocio;
 
 
 using MahApps.Metro.Controls;
@@ -117,10 +116,10 @@ namespace Vista
                 int Tipo = ((comboBoxItem)cbTipo.SelectedItem).id;
                 Cliente c = new Cliente()
                 {
-                    Rut = rut,
+                    RutCliente = rut,
                     RazonSocial = razonSocial,
                     NombreContacto = nombreContacto,
-                    Mail = mail,
+                    MailContacto = mail,
                     Direccion = direccion,
                     Telefono = telefono.ToString(),
                     IdActividadEmpresa = Actividad,
@@ -156,16 +155,16 @@ namespace Vista
             try
             {
                 Cliente c = new Cliente();
-                c.Rut = txtRut.Text;
+                c.RutCliente = txtRut.Text;
                 bool buscar = c.Buscar();
                 
                 if (buscar)
                 {
-                    txtRut.Text = c.Rut.Substring(0, 10);
-                    txtDV.Text = c.Rut.Substring(11, 1);
+                    txtRut.Text = c.RutCliente.Substring(0, 10);
+                    txtDV.Text = c.RutCliente.Substring(11, 1);
                     txtRazon.Text = c.RazonSocial;
                     txtNombre.Text = c.NombreContacto;
-                    txtEmail.Text = c.Mail;
+                    txtEmail.Text = c.MailContacto;
                     txtDireccion.Text = c.Direccion;
                     txtTelefono.Text = c.Telefono.ToString();
                     cbActividad.Text = c.IdActividadEmpresa.ToString();
@@ -203,17 +202,17 @@ namespace Vista
             try
             {
                 Cliente c = new Cliente();
-                c.Rut = txtRut.Text;
+                c.RutCliente = txtRut.Text;
                 bool buscar = c.Buscar();
                 if (buscar)
                 {
-                    txtRut.Text = c.Rut.Substring(0, 10);
-                    txtDV.Text = c.Rut.Substring(11, 1);
+                    txtRut.Text = c.RutCliente.Substring(0, 10);
+                    txtDV.Text = c.RutCliente.Substring(11, 1);
                     txtRut.IsEnabled = false;
                     txtDV.IsEnabled = false;
                     txtRazon.Text = c.RazonSocial;
                     txtNombre.Text = c.NombreContacto;
-                    txtEmail.Text = c.Mail;
+                    txtEmail.Text = c.MailContacto;
                     txtDireccion.Text = c.Direccion;
                     txtTelefono.Text = c.Telefono.ToString();
                     cbActividad.Text = c.IdActividadEmpresa.ToString();
@@ -267,10 +266,10 @@ namespace Vista
                 int Tipo = ((comboBoxItem)cbTipo.SelectedItem).id;
                 Cliente c = new Cliente()
                 {
-                    Rut = rut,
+                    RutCliente = rut,
                     RazonSocial = razonSocial,
                     NombreContacto = nombreContacto,
-                    Mail = mail,
+                    MailContacto = mail,
                     Direccion = direccion,
                     Telefono = telefono.ToString(),
                     IdActividadEmpresa = Actividad,

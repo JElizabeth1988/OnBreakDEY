@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO; //ENTRADA Y SALIDA
 
-namespace BibliotecaControlador
+namespace BibliotecaNegocio
 {
     public class Logger
     {

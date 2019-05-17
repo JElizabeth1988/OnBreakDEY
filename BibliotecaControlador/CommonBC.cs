@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Xml.Serialization;
 using System.Reflection;
 
-namespace BibliotecaControlador
+namespace BibliotecaNegocio
 {
     public class CommonBC
     {
