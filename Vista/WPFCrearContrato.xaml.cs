@@ -40,14 +40,14 @@ namespace Vista
             btnModificar.Visibility = Visibility.Hidden;
 
             //llenar el combo box con los datos del enumerador
-            foreach (ActividadEmpresa item in new ActividadEmpresa().ReadAll())
+            foreach (TipoEvento item in new TipoEvento().ReadAll())
             {
                 comboBoxItem cb = new comboBoxItem();
                 cb.id = item.Id;
                 cb.descripcion = item.Descripcion;
                 cboTipo.Items.Add(cb);
             }
-            foreach (TipoEmpresa item in new TipoEmpresa().ReadAll())
+            foreach (TipoEvento item in new TipoEvento().ReadAll())
             {
                 comboBoxItem cb = new comboBoxItem();
                 cb.id = item.Id;
@@ -57,7 +57,7 @@ namespace Vista
 
         }
         
-        DateTime fechaC = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
+        //DateTime fechaC = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
 
 
 
