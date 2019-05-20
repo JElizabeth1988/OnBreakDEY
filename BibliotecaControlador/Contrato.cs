@@ -3,29 +3,31 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BibliotecaDALC;
 
 namespace BibliotecaNegocio
 {
-    
+
     public class Contrato
     {
 
         private String _numero;
-        private String _fechaCreacion;
-        private String _vigente;
-        private String _fechaTermino;
-        private String _fechaInicioEvento;
-        private int _horaInicio;
-        private int _minutoInicio;
-        private String _fechaFinEvento;
-        private int _horaTermino;
-        private int _minutoTermino;
-        private String _direccion;
-        private int _numeroAsistentes;
-        private String _observaciones;
+        private DateTime _creacion;
+        private DateTime _termino;
         private String _rutCliente;
+        public int IdModalidad { get; set; }
+        public int IdTipoEvento{ get; set; }
+        private DateTime _fechaHoraInicio;
+        private DateTime _fechaHoraTermino;
+        private int _asistentes;
         private int _personalAdicional;
-    
+        public bool Realizado { get; set; }
+        private double _valorTotalContrato;
+        private String _observaciones;
+
+
+
+
 
         //PROPIEDADES
 
@@ -36,7 +38,7 @@ namespace BibliotecaNegocio
 
                 if (value != null)
                 {
-                    _numero =value;
+                    _numero = value;
                 }
                 else
                 {
@@ -45,54 +47,67 @@ namespace BibliotecaNegocio
             }
         }
 
-        public String FechaCreacion
+        public DateTime Creacion
         {
-            get { return _fechaCreacion; }
+            get { return _creacion; }
             set
             {
                 if (value != null)
                 {
-                    _fechaCreacion = value;
+                    _creacion = value;
                 }
                 else
                 {
                     throw new ArgumentException("- Campo Fecha Creación no puede estar Vacío");
                 }
-        }
+            }
         }//hacerlo automatico
 
-        public String Vigente
-        {
-            get { return _vigente; }
-            set { _vigente = value; }
-        }
 
-        public String FechaTermino
+
+        public DateTime Termino
         {
-            get { return _fechaTermino; }
+            get { return _termino; }
             set
             {
                 if (value != null)
                 {
-                    _fechaTermino = value;
+                    _termino = value;
                 }
                 else
                 {
                     throw new ArgumentException("- Campo Fecha Termino no puede estar Vacío");
                 }
-               
+
             }
         }
 
-        public String FechaInicioEvento
+        public String RutCliente
         {
-            get { return _fechaInicioEvento; }
+            get { return _rutCliente; }
             set
             {
 
                 if (value != null)
                 {
-                    _fechaInicioEvento = value;
+                    _rutCliente = value;
+                }
+                else
+                {
+                    throw new ArgumentException("- Campo RUT no puede estar Vacío");
+                }
+            }
+        }
+
+        public DateTime FechaHoraInicio
+        {
+            get { return _fechaHoraInicio; }
+            set
+            {
+
+                if (value != null)
+                {
+                    _fechaHoraInicio = value;
                 }
                 else
                 {
@@ -101,48 +116,17 @@ namespace BibliotecaNegocio
             }
         }
 
-        public int HoraInicio
+      
+
+
+        public DateTime FechaHoraTermino
         {
-            get { return _horaInicio; }
-            set
-            {
-
-                if (value >= 0 && value <= 24)
-                {
-                    _horaInicio = value;
-                }
-                else
-                {
-                    throw new ArgumentException("- Ingrese hora entre 1 y 24");
-                }
-            }
-        }
-
-        public int MinutoInicio
-        {
-            get { return _minutoInicio; }
-            set
-            {
-                if (value >= 0 && value < 60)
-                {
-                    _minutoInicio = value;
-                }
-                else
-                {
-                    throw new ArgumentException("- Ingrese entre 0 y 59 minutos");
-                }
-            }
-        }
-
-
-        public String FechaFinEvento
-        {
-            get { return _fechaFinEvento; }
+            get { return _fechaHoraTermino; }
             set
             {
                 if (value != null)
                 {
-                    _fechaFinEvento = value;
+                    _fechaHoraTermino = value;
                 }
                 else
                 {
@@ -152,65 +136,17 @@ namespace BibliotecaNegocio
             }
         }
 
-        public int HoraTermino
-        {
-            get { return _horaTermino; }
-            set
-            {
-                if (value >= 1 && value <= 24)
-                {
-                    _horaTermino = value;
-                }
-                else
-                {
-                    throw new ArgumentException("- Ingrese hora entre 1 y 24");
-                }
-
-            }
-        }
-
-        public int MinutoTermino
-        {
-            get { return _minutoTermino; }
-            set
-            {
-                if (value >= 0 && value < 60)
-                {
-                    _minutoTermino = value;
-                }
-                else
-                {
-                    throw new ArgumentException("- Ingrese entre 0 y 59 minutos");
-                }
-            }
-        }
-
-
-        public String Direccion
-        {
-            get { return _direccion; }
-            set
-            {
-                if (value != null)
-                {
-                    _direccion = value;
-                }
-                else
-                {
-                    throw new ArgumentException("- Campo Dirección no puede estar Vacío");
-                }
-            }
-        }
 
         
-        public int NumeroAsistentes
+
+        public int Asistentes
         {
-            get { return _numeroAsistentes; }
+            get { return _asistentes; }
             set
             {
                 if (value != 0)
                 {
-                    _numeroAsistentes = value;
+                    _asistentes = value;
                 }
                 else
                 {
@@ -235,7 +171,13 @@ namespace BibliotecaNegocio
             }
         }
 
-       
+        public double ValorTotalContrato
+        {
+            get { return _valorTotalContrato; }
+            set { _valorTotalContrato = value; }
+        }
+
+
 
         public String Observaciones
         {
@@ -252,62 +194,214 @@ namespace BibliotecaNegocio
             }
         }
 
-        public String RutCliente
-        {
-            get { return _rutCliente; }
-            set {
-
-                if (value != null)
-                {
-                    _rutCliente = value;
-                }
-                else
-                {
-                   throw new ArgumentException("- Campo RUT no puede estar Vacío");
-                }
-            }
-        }
-
        
 
 
-       
+
+      
+        //objeto permite manipular todo en la BD
+        private OnBreakEntities bdd = new OnBreakEntities();
 
         public Contrato()
         {
 
         }
 
-        public Contrato(String numero,String fechaCreacion ,String vigente,String fechaTermino,
-                        String fechaInicioEvento, int horaInicio, int minutoInicio,
-                        String fechaFinEvento, int horaTermino, int minutoTermino,
-                        String direccion, int numeroAsistentes,int personalAdicional,String observaciones,
-                        String rutCliente)
-        {
 
-            Numero = numero;
-            FechaCreacion = fechaCreacion;
-            Vigente = vigente;
-            FechaTermino = fechaTermino ;
-            FechaInicioEvento = fechaInicioEvento;
-            HoraInicio = horaInicio;
-            MinutoInicio = minutoInicio;
-            FechaFinEvento = fechaFinEvento;
-            HoraTermino = horaTermino;
-            MinutoTermino = minutoTermino;
-            Direccion = direccion;
-            NumeroAsistentes = numeroAsistentes;
-            PersonalAdicional = personalAdicional;
-            
-            Observaciones = observaciones;
-            RutCliente = rutCliente;
-            
+        //MÉTODOS CRUD
+        //grabar
+        public Boolean Grabar()
+        {
+            try
+            {
+                
+                BibliotecaDALC.Contrato co = new BibliotecaDALC.Contrato();
+                CommonBC.Syncronize(this, co);
+                bdd.Contrato.Add(co);
+                bdd.SaveChanges();
+
+                return true;
+
+
+            }
+            catch (Exception ex)
+            {
+
+                return false;
+            }
+        }
+
+        //Buscar
+        public bool Buscar()
+        {
+            try
+            {
+                BibliotecaDALC.Contrato co =
+                    bdd.Contrato.First(con => con.Numero.Equals(Numero));
+               
+
+                CommonBC.Syncronize(this, co);
+
+                return true;
+
+            }
+            catch (Exception ex)
+            {
+
+                return false;
+            }
         }
 
 
-       
+        //Eliminar
+        public bool Eliminar()
+        {
+            try
+            {
+                BibliotecaDALC.Contrato co =
+                    bdd.Contrato.Find(Numero);
+
+                bdd.Contrato.Remove(co);
+                bdd.SaveChanges();
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+
+                return false;
+            }
+        }
+        //Modificar
+        public Boolean Modificar()
+        {
+            try
+            {
+               
+                BibliotecaDALC.Contrato con = bdd.Contrato.Find(Numero);
+                CommonBC.Syncronize(this, con);
+                bdd.SaveChanges();
+                return true;
+
+
+            }
+            catch (Exception ex)
+            {
+
+                return false;
+            }
+        }
+
+        //READ
+        public bool Read()
+        {
+            try
+            {
+                BibliotecaDALC.Contrato con= bdd.Contrato.Find(Numero);
+                CommonBC.Syncronize(con, this);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+
+        }
+
+        //ReadAll
+        public List<Contrato> ReadAll()
+        {
+            try
+            {
+                var c = from con in bdd.Contrato
+                        select new Contrato()
+                        {
+                            Numero = con.Numero,
+                            Creacion = con.Creacion,
+                            Termino = con.Termino,
+                            RutCliente = con.RutCliente,
+                            IdModalidad =,
+                            IdTipoEvento =,
+                            FechaHoraInicio = con.FechaHoraInicio,
+                            FechaHoraTermino = con.FechaHoraTermino,
+                            Asistentes = con.Asistentes,
+                            PersonalAdicional = con.PersonalAdicional,
+                            Realizado = con.Realizado,
+                            ValorTotalContrato = con.ValorTotalContrato,
+                            Observaciones = Observaciones
+                        };
+                return c.ToList();
+
+            }
+            catch (Exception ex)
+            {
+
+                return null;
+            }
+        }
+        
+        //READALL2
+        public List<ListaContratos> ReadAll2()
+        {
+            try
+            {
+                var c = from con in bdd.Contrato
+                        join modal in bdd.ModalidadServicio
+                          on con.IdModalidad equals modal.IdModalidad
+                        join tip in bdd.TipoEvento
+                          on con.IdTipoEvento equals tip.IdTipoEvento
+                        select new ListaContratos()
+                        {
+                            Numero = con.Numero,
+                            Creacion = con.Creacion.ToString(),
+                            Termino = con.Termino.ToString(),
+                            RutCliente = con.RutCliente,
+                            Modalidad =modal.Nombre,
+                            TipoEvento= tip.Descripcion,
+                            FechaHoraInicio = con.FechaHoraInicio.ToString(),
+                            FechaHoraTermino = con.FechaHoraTermino.ToString(),
+                            Asistentes = con.Asistentes.ToString(),
+                            PersonalAdicional = con.PersonalAdicional.ToString(),
+                            Realizado = con.Realizado.ToString(),//?
+                            ValorTotalContrato = con.ValorTotalContrato.ToString(),//?
+                            Observaciones = Observaciones
+                              
+                        };
+                return c.ToList();
+
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
+      
+
+        public class ListaContratos
+        {
+            public string Numero { get; set; }
+            public string Creacion { get; set; }
+            public string Termino { get; set; }
+            public string RutCliente { get; set; }
+            public string Modalidad { get; set; }
+            public string TipoEvento{ get; set; }
+            public string FechaHoraInicio { get; set; }
+            public string FechaHoraTermino { get; set; }
+            public string Asistentes { get; set; }
+            public string PersonalAdicional { get; set; }
+            public string Realizado { get; set; }
+            public string ValorTotalContrato { get; set; }
+            public string Observaciones { get; set; }
+
+            public ListaContratos()
+            {
+
+            }
+        }
+
 
     }
-    
+
 }
 

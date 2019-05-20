@@ -12,8 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-using BibliotecaClase;
-using BibliotecaControlador;
+using BibliotecaNegocio;
 
 using MahApps.Metro.Controls;
 using MahApps.Metro.Controls.Dialogs;
@@ -26,7 +25,7 @@ namespace Vista
     /// </summary>
     public partial class Crear_Contrato : MetroWindow
     {
-        DaoContrato dao;
+      
         double uf = new Servicios.Service1().Uf();
 
         public Crear_Contrato()
@@ -39,7 +38,7 @@ namespace Vista
             this.cboTipo.SelectedItem = null;
             btnTerminar.Visibility = Visibility.Hidden;
             btnModificar.Visibility = Visibility.Hidden;
-            dao = new DaoContrato();
+         
         }
         
         String fechaC = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
@@ -54,19 +53,19 @@ namespace Vista
                 if (dpFechaInicio.SelectedDate <= dpFechaFinEvento.SelectedDate)
                 {
                     String numero = lblNumero.Content.ToString();
-                    String fechaCreacion = fechaC;
-                    String vigente;
-                    String fechaTermino;
+                    String creacion = fechaC;
+                    bool realizado ;
+                    String termino;
                     if (rbSi.IsChecked == true)
                     {
-                        vigente = "Sí";
-                        fechaTermino = "Aún Vigente";
+                        realizado = false;
+                        termino = "Aún Vigente";
 
                     }
                     else
                     {
-                        vigente = "No";
-                        fechaTermino = DateTime.Now.ToString("dd/MM/yyyy HH:mm"); ;
+                        realizado = true;
+                        termino = DateTime.Now.ToString("dd/MM/yyyy HH:mm"); ;
 
 
 
@@ -131,9 +130,9 @@ namespace Vista
                     
 
                     //////
-                    String direccion = txtDireccion.Text;
-                    int numeroAsistentes = 0;
-                    if (int.TryParse(txtNumeroAsistentes.Text, out numeroAsistentes))
+             
+                    int asistentes = 0;
+                    if (int.TryParse(txtNumeroAsistentes.Text, out asistentes))
                     {
 
                     }
@@ -158,8 +157,8 @@ namespace Vista
                         return;
                     }
 
-                    TipoEvento evento = (TipoEvento)cboTipo.SelectedItem;
 
+                    TipoEvento evento = (TipoEvento)cboTipo.SelectedItem;
 
                     String observaciones = txtObservaciones.Text;
                     String rutCliente = txtBuscarCliente.Text;
@@ -168,25 +167,27 @@ namespace Vista
                     {
 
                         Numero = numero,
-                        FechaCreacion = fechaCreacion,
-                        Vigente = vigente,
-                        FechaTermino = fechaTermino,
+                        Creacion = creacion,
+                        Termino = termino,
+                        RutCliente = rutCliente,
+                        IdModalidad=,
+                        IdTipoEvento =evento,
                         FechaInicioEvento = fechaInicioEvento,
                         HoraInicio = horaInicio,
                         MinutoInicio = minutoInicio,
                         FechaFinEvento = fechaFinEvento,
                         HoraTermino = horaTermino,
                         MinutoTermino = minutoTermino,
-                        Direccion = direccion,
-                        NumeroAsistentes = numeroAsistentes,
+                        Asistentes = asistentes,
                         PersonalAdicional = personalAdicional,
-                        Evento = evento,
+                        Realizado = realizado,
+                        ValorTotalContrato=,
                         Observaciones = observaciones,
-                        RutCliente = rutCliente
+                        
                     };
 
                     //METODO AGREGAR DEVUELVE BOOLEAN POR ESO SE CREA VARIABLE BOOLEANA resp
-                    bool resp = dao.Agregar(con);
+                    bool resp = con.Grabar();
                     await this.ShowMessageAsync("Mensaje:",
                           string.Format(resp ? "Guardado" : "No guardado"));
                     /*MessageBox.Show(resp ? "Guardado" : "No Guardado");*/
@@ -231,7 +232,6 @@ namespace Vista
 
             dpFechaInicio.SelectedDate = null;
             dpFechaFinEvento.SelectedDate = null;
-            txtDireccion.Clear();
             txtHoraInicio.Clear();
             txtMinutoInicio.Clear();
             txtHoraTermino.Clear();
@@ -266,7 +266,6 @@ namespace Vista
                 txtHoraTermino.IsEnabled = true;
                 txtMinutoTermino.IsEnabled = true;
                 //////
-                txtDireccion.IsEnabled = true;
                 txtNumeroAsistentes.IsEnabled = true;
                 txtPersonalAdicional.IsEnabled = true;
                 cboTipo.IsEnabled = true;
@@ -319,7 +318,7 @@ namespace Vista
                 txtHoraTermino.IsEnabled = true;
                 txtMinutoTermino.IsEnabled = true;
                 //////
-                txtDireccion.IsEnabled = true;
+       
                 txtNumeroAsistentes.IsEnabled = true;
                 txtPersonalAdicional.IsEnabled = true;
                 cboTipo.IsEnabled = true;
@@ -336,8 +335,9 @@ namespace Vista
         {
             try
             {
-                Contrato c = new DaoContrato().BuscarContrato(txtNumero.Text);
-                if (c != null)
+                Contrato c = new Contrato();
+                c.Numero = txtNumero.Text;
+                if (buscar)
                 {
                     
                     txtDireccion.Text = c.Direccion;
@@ -610,7 +610,7 @@ namespace Vista
                     FechaFinEvento = fechaFinEvento,
                     HoraTermino = horaTermino,
                     MinutoTermino = minutoTermino,
-                    Direccion = direccion,
+
                     NumeroAsistentes = numeroAsistentes,
                     PersonalAdicional = personalAdicional,
                     Evento = evento,
@@ -653,7 +653,7 @@ namespace Vista
 
                     String numero = lblNumero.Content.ToString();
                     String fechaCreacion = fechaC;
-                    String vigente = "No";
+                    bool realizado = true;
                     String fechaTermino = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
                     rbNo.IsChecked = true;
                     rbSi.IsChecked = false;
@@ -672,7 +672,6 @@ namespace Vista
                     int minutoTermino = int.Parse(txtMinutoTermino.Text);
 
                     //////
-                    String direccion = txtDireccion.Text;
                     int numeroAsistentes = int.Parse(txtNumeroAsistentes.Text);
                     int personalAdicional = int.Parse(txtPersonalAdicional.Text);
                     TipoEvento evento = (TipoEvento)cboTipo.SelectedItem;
@@ -725,7 +724,6 @@ namespace Vista
                     txtMinutoTermino.IsEnabled = false;
 
                     //////
-                    txtDireccion.IsEnabled = false;
                     txtNumeroAsistentes.IsEnabled = false;
                     txtPersonalAdicional.IsEnabled = false;
                     cboTipo.IsEnabled = false;
