@@ -272,6 +272,25 @@ namespace BibliotecaNegocio
                 return false;
             }
         }
+        //Modificar
+        public Boolean Modificar()
+        {
+            try
+            {
+               
+                BibliotecaDALC.Contrato con = bdd.Contrato.Find(Numero);
+                CommonBC.Syncronize(this, con);
+                bdd.SaveChanges();
+                return true;
+
+
+            }
+            catch (Exception ex)
+            {
+
+                return false;
+            }
+        }
 
         //READ
         public bool Read()
@@ -289,6 +308,7 @@ namespace BibliotecaNegocio
 
         }
 
+        //ReadAll
         public List<Contrato> ReadAll()
         {
             try
@@ -299,16 +319,16 @@ namespace BibliotecaNegocio
                             Numero = con.Numero,
                             Creacion = con.Creacion,
                             Termino = con.Termino,
-                            RutCliente=con.RutCliente,
-                            IdModalidad=,
-                            IdTipoEvento=,
-                            FechaHoraInicio=con.FechaHoraInicio,
-                            FechaHoraTermino=con.FechaHoraTermino,
-                            Asistentes=con.Asistentes,
-                            PersonalAdicional=con.PersonalAdicional,
-                            Realizado=con.Realizado,
-                            ValorTotalContrato=con.ValorTotalContrato,
-                            Observaciones=Observaciones
+                            RutCliente = con.RutCliente,
+                            IdModalidad =,
+                            IdTipoEvento =,
+                            FechaHoraInicio = con.FechaHoraInicio,
+                            FechaHoraTermino = con.FechaHoraTermino,
+                            Asistentes = con.Asistentes,
+                            PersonalAdicional = con.PersonalAdicional,
+                            Realizado = con.Realizado,
+                            ValorTotalContrato = con.ValorTotalContrato,
+                            Observaciones = Observaciones
                         };
                 return c.ToList();
 
@@ -319,25 +339,33 @@ namespace BibliotecaNegocio
                 return null;
             }
         }
+        
+        //READALL2
         public List<ListaContratos> ReadAll2()
         {
             try
             {
                 var c = from con in bdd.Contrato
-                        join tipoev in bdd.TipoEvento
-                          on con.IdActividadEmpresa equals actemp.IdActividadEmpresa
-                        join temp in bdd.TipoEmpresa
-                          on cli.IdTipoEmpresa equals temp.IdTipoEmpresa
+                        join modal in bdd.ModalidadServicio
+                          on con.IdModalidad equals modal.IdModalidad
+                        join tip in bdd.TipoEvento
+                          on con.IdTipoEvento equals tip.IdTipoEvento
                         select new ListaContratos()
                         {
-                            Rut = cli.RutCliente,
-                            NombreContacto = cli.NombreContacto,
-                            RazonSocial = cli.RazonSocial,
-                            MailContacto = cli.MailContacto,
-                            Direccion = cli.Direccion,
-                            Telefono = cli.Telefono,
-                            ActividadEmpresa = actemp.Descripcion,
-                            TipoEmpresa = temp.Descripcion
+                            Numero = con.Numero,
+                            Creacion = con.Creacion.ToString(),
+                            Termino = con.Termino.ToString(),
+                            RutCliente = con.RutCliente,
+                            Modalidad =modal.Nombre,
+                            TipoEvento= tip.Descripcion,
+                            FechaHoraInicio = con.FechaHoraInicio.ToString(),
+                            FechaHoraTermino = con.FechaHoraTermino.ToString(),
+                            Asistentes = con.Asistentes.ToString(),
+                            PersonalAdicional = con.PersonalAdicional.ToString(),
+                            Realizado = con.Realizado.ToString(),//?
+                            ValorTotalContrato = con.ValorTotalContrato.ToString(),//?
+                            Observaciones = Observaciones
+                              
                         };
                 return c.ToList();
 
@@ -348,38 +376,25 @@ namespace BibliotecaNegocio
             }
         }
 
-        //Modificar
-        public Boolean Modificar()
+      
+
+        public class ListaContratos
         {
-            try
-            {
-                //creo un modelo de la tabla cliente
-                BibliotecaDALC.Cliente cli = bdd.Cliente.Find(RutCliente);
-                CommonBC.Syncronize(this, cli);
-                bdd.SaveChanges();
-                return true;
+            public string Numero { get; set; }
+            public string Creacion { get; set; }
+            public string Termino { get; set; }
+            public string RutCliente { get; set; }
+            public string Modalidad { get; set; }
+            public string TipoEvento{ get; set; }
+            public string FechaHoraInicio { get; set; }
+            public string FechaHoraTermino { get; set; }
+            public string Asistentes { get; set; }
+            public string PersonalAdicional { get; set; }
+            public string Realizado { get; set; }
+            public string ValorTotalContrato { get; set; }
+            public string Observaciones { get; set; }
 
-
-            }
-            catch (Exception ex)
-            {
-
-                return false;
-            }
-        }
-
-        public class ListaClientes
-        {
-            public string Rut { get; set; }
-            public string RazonSocial { get; set; }
-            public string NombreContacto { get; set; }
-            public string MailContacto { get; set; }
-            public string Direccion { get; set; }
-            public string Telefono { get; set; }
-            public string TipoEmpresa { get; set; }
-            public string ActividadEmpresa { get; set; }
-
-            public ListaClientes()
+            public ListaContratos()
             {
 
             }
