@@ -157,8 +157,8 @@ namespace Vista
                         return;
                     }
 
-                   
 
+                    TipoEvento evento = (TipoEvento)cboTipo.SelectedItem;
 
                     String observaciones = txtObservaciones.Text;
                     String rutCliente = txtBuscarCliente.Text;
@@ -171,7 +171,7 @@ namespace Vista
                         Termino = termino,
                         RutCliente = rutCliente,
                         IdModalidad=,
-                        IdTipoEvento =,
+                        IdTipoEvento =evento,
                         FechaInicioEvento = fechaInicioEvento,
                         HoraInicio = horaInicio,
                         MinutoInicio = minutoInicio,

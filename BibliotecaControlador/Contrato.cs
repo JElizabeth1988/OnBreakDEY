@@ -12,13 +12,13 @@ namespace BibliotecaNegocio
     {
 
         private String _numero;
-        private String _creacion;
-        private String _termino;
+        private DateTime _creacion;
+        private DateTime _termino;
         private String _rutCliente;
         public int IdModalidad { get; set; }
         public int IdTipoEvento{ get; set; }
-        private String _fechaHoraInicio;
-        private string _fechaHoraTermino;
+        private DateTime _fechaHoraInicio;
+        private DateTime _fechaHoraTermino;
         private int _asistentes;
         private int _personalAdicional;
         public bool Realizado { get; set; }
@@ -47,7 +47,7 @@ namespace BibliotecaNegocio
             }
         }
 
-        public String Creacion
+        public DateTime Creacion
         {
             get { return _creacion; }
             set
@@ -65,7 +65,7 @@ namespace BibliotecaNegocio
 
 
 
-        public String Termino
+        public DateTime Termino
         {
             get { return _termino; }
             set
@@ -99,7 +99,7 @@ namespace BibliotecaNegocio
             }
         }
 
-        public String FechaHoraInicio
+        public DateTime FechaHoraInicio
         {
             get { return _fechaHoraInicio; }
             set
@@ -119,7 +119,7 @@ namespace BibliotecaNegocio
       
 
 
-        public String FechaHoraTermino
+        public DateTime FechaHoraTermino
         {
             get { return _fechaHoraTermino; }
             set
@@ -238,7 +238,7 @@ namespace BibliotecaNegocio
             {
                 BibliotecaDALC.Contrato co =
                     bdd.Contrato.First(con => con.Numero.Equals(Numero));
-                //bdd.Cliente.Find(RutCliente);
+               
 
                 CommonBC.Syncronize(this, co);
 
@@ -273,6 +273,117 @@ namespace BibliotecaNegocio
             }
         }
 
+        //READ
+        public bool Read()
+        {
+            try
+            {
+                BibliotecaDALC.Contrato con= bdd.Contrato.Find(Numero);
+                CommonBC.Syncronize(con, this);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+
+        }
+
+        public List<Contrato> ReadAll()
+        {
+            try
+            {
+                var c = from con in bdd.Contrato
+                        select new Contrato()
+                        {
+                            Numero = con.Numero,
+                            Creacion = con.Creacion,
+                            Termino = con.Termino,
+                            RutCliente=con.RutCliente,
+                            IdModalidad=,
+                            IdTipoEvento=,
+                            FechaHoraInicio=con.FechaHoraInicio,
+                            FechaHoraTermino=con.FechaHoraTermino,
+                            Asistentes=con.Asistentes,
+                            PersonalAdicional=con.PersonalAdicional,
+                            Realizado=con.Realizado,
+                            ValorTotalContrato=con.ValorTotalContrato,
+                            Observaciones=Observaciones
+                        };
+                return c.ToList();
+
+            }
+            catch (Exception ex)
+            {
+
+                return null;
+            }
+        }
+        public List<ListaContratos> ReadAll2()
+        {
+            try
+            {
+                var c = from con in bdd.Contrato
+                        join tipoev in bdd.TipoEvento
+                          on con.IdActividadEmpresa equals actemp.IdActividadEmpresa
+                        join temp in bdd.TipoEmpresa
+                          on cli.IdTipoEmpresa equals temp.IdTipoEmpresa
+                        select new ListaContratos()
+                        {
+                            Rut = cli.RutCliente,
+                            NombreContacto = cli.NombreContacto,
+                            RazonSocial = cli.RazonSocial,
+                            MailContacto = cli.MailContacto,
+                            Direccion = cli.Direccion,
+                            Telefono = cli.Telefono,
+                            ActividadEmpresa = actemp.Descripcion,
+                            TipoEmpresa = temp.Descripcion
+                        };
+                return c.ToList();
+
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
+        //Modificar
+        public Boolean Modificar()
+        {
+            try
+            {
+                //creo un modelo de la tabla cliente
+                BibliotecaDALC.Cliente cli = bdd.Cliente.Find(RutCliente);
+                CommonBC.Syncronize(this, cli);
+                bdd.SaveChanges();
+                return true;
+
+
+            }
+            catch (Exception ex)
+            {
+
+                return false;
+            }
+        }
+
+        public class ListaClientes
+        {
+            public string Rut { get; set; }
+            public string RazonSocial { get; set; }
+            public string NombreContacto { get; set; }
+            public string MailContacto { get; set; }
+            public string Direccion { get; set; }
+            public string Telefono { get; set; }
+            public string TipoEmpresa { get; set; }
+            public string ActividadEmpresa { get; set; }
+
+            public ListaClientes()
+            {
+
+            }
+        }
 
 
     }
