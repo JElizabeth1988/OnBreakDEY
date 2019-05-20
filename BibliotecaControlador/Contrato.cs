@@ -16,7 +16,7 @@ namespace BibliotecaNegocio
         private DateTime _termino;
         private String _rutCliente;
         public int IdModalidad { get; set; }
-        public int IdTipoEvento{ get; set; }
+        public int IdTipoEvento { get; set; }
         private DateTime _fechaHoraInicio;
         private DateTime _fechaHoraTermino;
         private int _asistentes;
@@ -116,7 +116,7 @@ namespace BibliotecaNegocio
             }
         }
 
-      
+
 
 
         public DateTime FechaHoraTermino
@@ -137,7 +137,7 @@ namespace BibliotecaNegocio
         }
 
 
-        
+
 
         public int Asistentes
         {
@@ -194,11 +194,11 @@ namespace BibliotecaNegocio
             }
         }
 
-       
 
 
 
-      
+
+
         //objeto permite manipular todo en la BD
         private OnBreakEntities bdd = new OnBreakEntities();
 
@@ -214,7 +214,7 @@ namespace BibliotecaNegocio
         {
             try
             {
-                
+
                 BibliotecaDALC.Contrato co = new BibliotecaDALC.Contrato();
                 CommonBC.Syncronize(this, co);
                 bdd.Contrato.Add(co);
@@ -238,7 +238,7 @@ namespace BibliotecaNegocio
             {
                 BibliotecaDALC.Contrato co =
                     bdd.Contrato.First(con => con.Numero.Equals(Numero));
-               
+
 
                 CommonBC.Syncronize(this, co);
 
@@ -277,10 +277,34 @@ namespace BibliotecaNegocio
         {
             try
             {
-               
+
                 BibliotecaDALC.Contrato con = bdd.Contrato.Find(Numero);
                 CommonBC.Syncronize(this, con);
                 bdd.SaveChanges();
+                return true;
+
+
+            }
+            catch (Exception ex)
+            {
+
+                return false;
+            }
+        }
+
+        //TERMINAR CONTRATO
+        public Boolean TerminarContrato()
+        {
+            try
+            {
+
+                BibliotecaDALC.Contrato co = new BibliotecaDALC.Contrato();
+                CommonBC.Syncronize(this, co);
+
+                bdd.Contrato.Remove(co);
+                bdd.Contrato.Add(co);
+                bdd.SaveChanges();
+
                 return true;
 
 
@@ -321,7 +345,7 @@ namespace BibliotecaNegocio
                             Termino = con.Termino,
                             RutCliente = con.RutCliente,
                             IdModalidad =,
-                            IdTipoEvento =,
+                            IdTipoEvento =con.IdTipoEvento,
                             FechaHoraInicio = con.FechaHoraInicio,
                             FechaHoraTermino = con.FechaHoraTermino,
                             Asistentes = con.Asistentes,

@@ -38,7 +38,23 @@ namespace Vista
             this.cboTipo.SelectedItem = null;
             btnTerminar.Visibility = Visibility.Hidden;
             btnModificar.Visibility = Visibility.Hidden;
-         
+
+            //llenar el combo box con los datos del enumerador
+            foreach (ActividadEmpresa item in new ActividadEmpresa().ReadAll())
+            {
+                comboBoxItem cb = new comboBoxItem();
+                cb.id = item.Id;
+                cb.descripcion = item.Descripcion;
+                cboTipo.Items.Add(cb);
+            }
+            foreach (TipoEmpresa item in new TipoEmpresa().ReadAll())
+            {
+                comboBoxItem cb = new comboBoxItem();
+                cb.id = item.Id;
+                cb.descripcion = item.Descripcion;
+                cboTipo.Items.Add(cb);
+            }
+
         }
         
         String fechaC = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
@@ -157,8 +173,7 @@ namespace Vista
                         return;
                     }
 
-
-                    TipoEvento evento = (TipoEvento)cboTipo.SelectedItem;
+                    int evento = ((comboBoxItem)cboTipo.SelectedItem).id;
 
                     String observaciones = txtObservaciones.Text;
                     String rutCliente = txtBuscarCliente.Text;
@@ -172,12 +187,12 @@ namespace Vista
                         RutCliente = rutCliente,
                         IdModalidad=,
                         IdTipoEvento =evento,
-                        FechaInicioEvento = fechaInicioEvento,
-                        HoraInicio = horaInicio,
-                        MinutoInicio = minutoInicio,
-                        FechaFinEvento = fechaFinEvento,
-                        HoraTermino = horaTermino,
-                        MinutoTermino = minutoTermino,
+                        FechaHoraInicio = fechaInicioEvento,
+                       // HoraInicio = horaInicio,
+                        //MinutoInicio = minutoInicio,
+                        FechaHoraTermino = fechaFinEvento,
+                        //HoraTermino = horaTermino,
+                        //MinutoTermino = minutoTermino,
                         Asistentes = asistentes,
                         PersonalAdicional = personalAdicional,
                         Realizado = realizado,
@@ -337,24 +352,27 @@ namespace Vista
             {
                 Contrato c = new Contrato();
                 c.Numero = txtNumero.Text;
+                bool buscar = c.Buscar();
                 if (buscar)
                 {
                     
-                    txtDireccion.Text = c.Direccion;
+                    
                     txtBuscarCliente.Text = c.RutCliente;
-                    dpFechaInicio.Text = c.FechaInicioEvento;
-                    dpFechaFinEvento.Text = c.FechaFinEvento;
-                    txtHoraInicio.Text = c.HoraInicio.ToString();
-                    txtMinutoInicio.Text = c.MinutoInicio.ToString();
-                    txtHoraTermino.Text = c.HoraTermino.ToString();
-                    txtMinutoTermino.Text = c.MinutoTermino.ToString();
-                    txtNumeroAsistentes.Text = c.NumeroAsistentes.ToString();
+                    dpFechaInicio.Text = c.FechaHoraInicio.ToString();
+                    dpFechaFinEvento.Text = c.FechaHoraTermino.ToString();
+                    //txtHoraInicio.Text = c.HoraInicio.ToString();
+                    //txtMinutoInicio.Text = c.MinutoInicio.ToString();
+                    //txtHoraTermino.Text = c.HoraTermino.ToString();
+                    //txtMinutoTermino.Text = c.MinutoTermino.ToString();
+                    txtNumeroAsistentes.Text = c.Asistentes.ToString();
                     txtPersonalAdicional.Text = c.PersonalAdicional.ToString();
-                    cboTipo.Text = c.Evento.ToString();
+                    cboTipo.Text = c.IdTipoEvento.ToString();
                     txtObservaciones.Text = c.Observaciones;
                     lblNumero.Content = txtNumero.Text; //IGUALAR CAMPOS 
                     btnModificar.Visibility = Visibility.Visible;
                     btnTerminar.Visibility = Visibility.Visible;
+                    //MODALIDAD ?
+                    
                 }
                 else
                 {
@@ -380,51 +398,56 @@ namespace Vista
         {
             try
             {
-                Contrato c = new DaoContrato().
-                    BuscarContrato(txtNumero.Text);
-                if (c != null)
+                Contrato c = new Contrato();
+                c.Numero = txtNumero.Text;
+                bool buscar = c.Buscar();
+                if (buscar)
                 {
-                    txtDireccion.Text = c.Direccion;
+
+
                     txtBuscarCliente.Text = c.RutCliente;
-                    dpFechaInicio.Text = c.FechaInicioEvento;
-                    dpFechaFinEvento.Text = c.FechaFinEvento;
-                    txtHoraInicio.Text = c.HoraInicio.ToString();
-                    txtMinutoInicio.Text = c.MinutoInicio.ToString();
-                    txtHoraTermino.Text = c.HoraTermino.ToString();
-                    txtMinutoTermino.Text = c.MinutoTermino.ToString();
-                    txtNumeroAsistentes.Text = c.NumeroAsistentes.ToString();
+                    dpFechaInicio.Text = c.FechaHoraInicio.ToString();
+                    dpFechaFinEvento.Text = c.FechaHoraTermino.ToString();
+                    //txtHoraInicio.Text = c.HoraInicio.ToString();
+                    //txtMinutoInicio.Text = c.MinutoInicio.ToString();
+                    //txtHoraTermino.Text = c.HoraTermino.ToString();
+                    //txtMinutoTermino.Text = c.MinutoTermino.ToString();
+                    txtNumeroAsistentes.Text = c.Asistentes.ToString();
                     txtPersonalAdicional.Text = c.PersonalAdicional.ToString();
-                    cboTipo.Text = c.Evento.ToString();
+                    cboTipo.Text = c.IdTipoEvento.ToString();
                     txtObservaciones.Text = c.Observaciones;
-                    lblNumero.Content = txtNumero.Text; //IGUALAR CAMPOS
-                    
+                    lblNumero.Content = txtNumero.Text; //IGUALAR CAMPOS 
+                    btnModificar.Visibility = Visibility.Visible;
+                    btnTerminar.Visibility = Visibility.Visible;
+                    //MODALIDAD ?
+
                 }
                 else
                 {
                     await this.ShowMessageAsync("Mensaje:",
-                     string.Format("Contrato no Encontrado"));
-                    MessageBox.Show("Contrato No encontrado");
+                      string.Format("Contrato no encontrado"));
+                    /*MessageBox.Show("Contrato no Encontrado");*/
                 }
             }
             catch (Exception ex)
             {
                 await this.ShowMessageAsync("Mensaje:",
-                     string.Format("Error al Buscar"));
+                      string.Format("Error al Buscar"));
+                /*MessageBox.Show("Error al buscar");*/
                 Logger.Mensaje(ex.Message);
-
             }
+
         }
-
-
 
         //BUSCAR CLIENTE
         private async void btnCliente_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                Cliente c = new DaoCliente().
-                    BuscarCliente(txtBuscarCliente.Text);
-                if (c != null)
+                Cliente c = new Cliente();
+                c.RutCliente = txtBuscarCliente.Text;
+                bool buscar = c.Buscar();
+                if (buscar)
                 {
                    
                     lblNombreCliente.Content = c.NombreContacto;
@@ -455,9 +478,10 @@ namespace Vista
         {
             try
             {
-                Cliente c = new DaoCliente().
-                    BuscarCliente(txtBuscarCliente.Text);
-                if (c != null)
+                Cliente c = new Cliente();
+                c.RutCliente = txtBuscarCliente.Text;
+                bool buscar = c.Buscar();
+                if (buscar)
                 {
                     lblNombreCliente.Content = c.NombreContacto;
                 }
@@ -484,147 +508,148 @@ namespace Vista
             try
             {
 
-                String numero = txtNumero.Text;
-                //Convert.ToDateTime(txtNumero).ToString("dd/MM/yyyy HH:mm")
-                String fechaCreacion = txtNumero.Text; 
-
-                String numeroC = lblNumero.Content.ToString();
-                String fechaCreacionC = fechaC;
-
-                String vigente;
-                String fechaTermino;
-                if (rbSi.IsChecked == true)
+                if (dpFechaInicio.SelectedDate <= dpFechaFinEvento.SelectedDate)
                 {
-                    vigente = "Sí";
-                    fechaTermino = "Aún Vigente";
+                    String numero = lblNumero.Content.ToString();
+                    String creacion = fechaC;
+                    bool realizado;
+                    String termino;
+                    if (rbSi.IsChecked == true)
+                    {
+                        realizado = false;
+                        termino = "Aún Vigente";
 
-                }
-                else
-                {
-                    vigente = "No";
-                    fechaTermino = DateTime.Now.ToString("dd/MM/yyyy HH:mm"); ;
+                    }
+                    else
+                    {
+                        realizado = true;
+                        termino = DateTime.Now.ToString("dd/MM/yyyy HH:mm"); ;
 
 
 
-                }
+                    }
 
 
-                //EVENTO
-                //Inicio
-                String fechaInicioEvento = dpFechaInicio.Text;
-                int horaInicio = 0;
-                if (int.TryParse(txtHoraInicio.Text, out horaInicio))
-                {
 
-                }
-                else
-                {
+                    //EVENTO
+
+                    //inicio
+                    String fechaInicioEvento = dpFechaInicio.Text;
+                    int horaInicio = 0;
+                    if (int.TryParse(txtHoraInicio.Text, out horaInicio))
+                    {
+
+                    }
+                    else
+                    {
+                        await this.ShowMessageAsync("Mensaje:",
+                          string.Format("Ingrese sólo números"));
+                        txtHoraInicio.Focus();
+                        return;
+                    }
+                    int minutoInicio = 0;
+                    if (int.TryParse(txtMinutoInicio.Text, out minutoInicio))
+                    {
+
+                    }
+                    else
+                    {
+                        await this.ShowMessageAsync("Mensaje:",
+                          string.Format("Ingrese sólo números"));
+                        txtMinutoInicio.Focus();
+                        return;
+                    }
+                    //termino
+                    String fechaFinEvento = dpFechaFinEvento.Text;
+                    int horaTermino = 0;
+                    if (int.TryParse(txtHoraTermino.Text, out horaTermino))
+                    {
+
+                    }
+                    else
+                    {
+                        await this.ShowMessageAsync("Mensaje:",
+                          string.Format("Ingrese sólo números"));
+                        txtHoraTermino.Focus();
+                        return;
+                    }
+                    int minutoTermino = 0;
+                    if (int.TryParse(txtMinutoTermino.Text, out minutoTermino))
+                    {
+
+                    }
+                    else
+                    {
+                        await this.ShowMessageAsync("Mensaje:",
+                          string.Format("Ingrese sólo números"));
+                        txtMinutoTermino.Focus();
+                        return;
+                    }
+
+
+                    //////
+
+                    int asistentes = 0;
+                    if (int.TryParse(txtNumeroAsistentes.Text, out asistentes))
+                    {
+
+                    }
+                    else
+                    {
+                        await this.ShowMessageAsync("Mensaje:",
+                          string.Format("Ingrese sólo números"));
+                        txtNumeroAsistentes.Focus();
+                        return;
+                    }
+
+                    int personalAdicional = 0;
+                    if (int.TryParse(txtPersonalAdicional.Text, out personalAdicional))
+                    {
+
+                    }
+                    else
+                    {
+                        await this.ShowMessageAsync("Mensaje:",
+                          string.Format("Ingrese sólo números"));
+                        txtPersonalAdicional.Focus();
+                        return;
+                    }
+
+                    int evento = ((comboBoxItem)cboTipo.SelectedItem).id;
+
+                    String observaciones = txtObservaciones.Text;
+                    String rutCliente = txtBuscarCliente.Text;
+
+                    Contrato nuevo_con = new Contrato()
+                    {
+
+                        Numero = numero,
+                        Creacion = creacion,
+                        Termino = termino,
+                        RutCliente = rutCliente,
+                        IdModalidad =,
+                        IdTipoEvento = evento,
+                        FechaHoraInicio = fechaInicioEvento,
+                        // HoraInicio = horaInicio,
+                        //MinutoInicio = minutoInicio,
+                        FechaHoraTermino = fechaFinEvento,
+                        //HoraTermino = horaTermino,
+                        //MinutoTermino = minutoTermino,
+                        Asistentes = asistentes,
+                        PersonalAdicional = personalAdicional,
+                        Realizado = realizado,
+                        ValorTotalContrato =,
+                        Observaciones = observaciones,
+                    };
+
+                    //METODO AGREGAR DEVUELVE BOOLEAN POR ESO SE CREA VARIABLE BOOLEANA resp
+                    bool resp = nuevo_con.Modificar();
                     await this.ShowMessageAsync("Mensaje:",
-                      string.Format("Ingrese sólo números"));
-                    txtHoraInicio.Focus();
-                    return;
-                }
-                int minutoInicio = 0;
-                if (int.TryParse(txtMinutoInicio.Text, out minutoInicio))
-                {
+                          string.Format(resp ? "Contrato Modificado" : "Contrato No Modificado"));
+                    /*MessageBox.Show(resp ? "Contrato Modificado" : "Contrato No Modificado");*/
+
 
                 }
-                else
-                {
-                    await this.ShowMessageAsync("Mensaje:",
-                      string.Format("Ingrese sólo números"));
-                    txtMinutoInicio.Focus();
-                    return;
-                }
-                //termino
-                String fechaFinEvento = dpFechaFinEvento.Text;
-                int horaTermino = 0;
-                if (int.TryParse(txtHoraTermino.Text, out horaTermino))
-                {
-
-                }
-                else
-                {
-                    await this.ShowMessageAsync("Mensaje:",
-                      string.Format("Ingrese sólo números"));
-                    txtHoraTermino.Focus();
-                    return;
-                }
-                int minutoTermino = 0;
-                if (int.TryParse(txtMinutoTermino.Text, out minutoTermino))
-                {
-
-                }
-                else
-                {
-                    await this.ShowMessageAsync("Mensaje:",
-                      string.Format("Ingrese sólo números"));
-                    txtMinutoTermino.Focus();
-                    return;
-                }
-
-
-                //////
-                String direccion = txtDireccion.Text;
-                int numeroAsistentes = 0;
-                if (int.TryParse(txtNumeroAsistentes.Text, out numeroAsistentes))
-                {
-
-                }
-                else
-                {
-                    await this.ShowMessageAsync("Mensaje:",
-                      string.Format("Ingrese sólo números"));
-                    txtNumeroAsistentes.Focus();
-                    return;
-                }
-
-                int personalAdicional = 0;
-                if (int.TryParse(txtPersonalAdicional.Text, out personalAdicional))
-                {
-
-                }
-                else
-                {
-                    await this.ShowMessageAsync("Mensaje:",
-                      string.Format("Ingrese sólo números"));
-                    txtPersonalAdicional.Focus();
-                    return;
-                }
-                TipoEvento evento = (TipoEvento)cboTipo.SelectedItem;
-
-
-                String observaciones = txtObservaciones.Text;
-                String rutCliente = txtBuscarCliente.Text;
-
-                Contrato nuevo_con = new Contrato()
-                {
-
-                    Numero = numero,
-                    FechaCreacion = fechaCreacion,
-                    Vigente = vigente,
-                    FechaTermino = fechaTermino,
-                    FechaInicioEvento = fechaInicioEvento,
-                    HoraInicio = horaInicio,
-                    MinutoInicio = minutoInicio,
-                    FechaFinEvento = fechaFinEvento,
-                    HoraTermino = horaTermino,
-                    MinutoTermino = minutoTermino,
-
-                    NumeroAsistentes = numeroAsistentes,
-                    PersonalAdicional = personalAdicional,
-                    Evento = evento,
-                    Observaciones = observaciones,
-                    RutCliente = rutCliente
-                };
-
-                //METODO AGREGAR DEVUELVE BOOLEAN POR ESO SE CREA VARIABLE BOOLEANA resp
-                bool resp = dao.Modificar(nuevo_con);
-                await this.ShowMessageAsync("Mensaje:",
-                      string.Format(resp ? "Contrato Modificado" : "Contrato No Modificado"));
-                /*MessageBox.Show(resp ? "Contrato Modificado" : "Contrato No Modificado");*/
-
-
             }
             catch (ArgumentException exa) //catch excepciones hechas por el usuario
             {
@@ -652,13 +677,13 @@ namespace Vista
                 {
 
                     String numero = lblNumero.Content.ToString();
-                    String fechaCreacion = fechaC;
+                    String creacion = fechaC;
                     bool realizado = true;
-                    String fechaTermino = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
+                    String termino = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
                     rbNo.IsChecked = true;
                     rbSi.IsChecked = false;
 
-                    //EVENTO
+                    
 
                     //EVENTO
 
@@ -672,9 +697,10 @@ namespace Vista
                     int minutoTermino = int.Parse(txtMinutoTermino.Text);
 
                     //////
-                    int numeroAsistentes = int.Parse(txtNumeroAsistentes.Text);
+                    int asistentes = int.Parse(txtNumeroAsistentes.Text);
                     int personalAdicional = int.Parse(txtPersonalAdicional.Text);
-                    TipoEvento evento = (TipoEvento)cboTipo.SelectedItem;
+
+                    int evento = ((comboBoxItem)cboTipo.SelectedItem).id;
 
 
                     String observaciones = txtObservaciones.Text;
@@ -683,22 +709,24 @@ namespace Vista
                     Contrato con_mod = new Contrato()
                     {
 
+
                         Numero = numero,
-                        FechaCreacion = fechaCreacion,
-                        Vigente = vigente,
-                        FechaTermino = fechaTermino,
-                        FechaInicioEvento = fechaInicioEvento,
-                        HoraInicio = horaInicio,
-                        MinutoInicio = minutoInicio,
-                        FechaFinEvento = fechaFinEvento,
-                        HoraTermino = horaTermino,
-                        MinutoTermino = minutoTermino,
-                        Direccion = direccion,
-                        NumeroAsistentes = numeroAsistentes,
+                        Creacion = creacion,
+                        Termino = termino,
+                        RutCliente = rutCliente,
+                        IdModalidad =,
+                        IdTipoEvento = evento,
+                        FechaHoraInicio = fechaInicioEvento,
+                        // HoraInicio = horaInicio,
+                        //MinutoInicio = minutoInicio,
+                        FechaHoraTermino = fechaFinEvento,
+                        //HoraTermino = horaTermino,
+                        //MinutoTermino = minutoTermino,
+                        Asistentes = asistentes,
                         PersonalAdicional = personalAdicional,
-                        Evento = evento,
+                        Realizado = realizado,
+                        ValorTotalContrato =,
                         Observaciones = observaciones,
-                        RutCliente = rutCliente
                     };
 
                     //BLOQUEAR EDITAR EL CONTRATO
@@ -733,7 +761,7 @@ namespace Vista
 
 
                     //METODO AGREGAR DEVUELVE BOOLEAN POR ESO SE CREA VARIABLE BOOLEANA resp
-                    bool resp = dao.ModificarEstado(con_mod);
+                    bool resp = con_mod.Modificar();
 
                     /*MessageBox.Show(resp ? "Contrato Terminado" : "Contrato No Terminado");*/
                     await this.ShowMessageAsync("Mensaje:",
