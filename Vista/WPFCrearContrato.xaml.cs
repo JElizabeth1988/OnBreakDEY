@@ -57,7 +57,7 @@ namespace Vista
 
         }
         
-        String fechaC = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
+        DateTime fechaC = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
 
 
 
@@ -69,7 +69,7 @@ namespace Vista
                 if (dpFechaInicio.SelectedDate <= dpFechaFinEvento.SelectedDate)
                 {
                     String numero = lblNumero.Content.ToString();
-                    String creacion = fechaC;
+                    DateTime creacion = fechaC;
                     bool realizado ;
                     String termino;
                     if (rbSi.IsChecked == true)

@@ -60,7 +60,7 @@
         <Label x:Name="label_Copy5" HorizontalAlignment="Left" Margin="708,411,0,0" VerticalAlignment="Top" Width="282" Height="25">
             <Separator HorizontalAlignment="Left" Height="16" Margin="0" VerticalAlignment="Top" Width="567"/>
         </Label>
-        <Label x:Name="label9_Copy1" Content="Valor Evento" HorizontalAlignment="Left" Margin="705,284,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="Black" Height="34" Width="121" FontSize="16" FontFamily="Segoe UI Historic" FontWeight="Bold"/>
+        <Label x:Name="label9_Copy1" Content="Valor Evento" HorizontalAlignment="Left" Margin="706,285,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="Black" Height="34" Width="121" FontSize="16" FontFamily="Segoe UI Historic" FontWeight="Bold"/>
         <Label x:Name="label_Copy6" Content="Valor Total :" HorizontalAlignment="Left" Margin="706,441,0,0" VerticalAlignment="Top" Height="26" Width="77"/>
         <Label x:Name="lblValorBase" Content="" HorizontalAlignment="Left" Margin="860,330,0,0" VerticalAlignment="Top" FontWeight="Normal" Height="26" Width="10"/>
         <Label x:Name="lblAsistentes" Content="" HorizontalAlignment="Left" Margin="905,355,0,0" VerticalAlignment="Top"/>
