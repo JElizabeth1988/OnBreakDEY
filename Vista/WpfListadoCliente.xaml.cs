@@ -54,8 +54,8 @@ namespace Vista
 
             try
             {
-                DaoCliente dao = new DaoCliente();
-                dgLista.ItemsSource = dao.Listar();
+                Cliente cl = new Cliente();
+                dgLista.ItemsSource = cl.ReadAll();//No sé si este bien
                 dgLista.Items.Refresh();
 
             }
@@ -91,8 +91,8 @@ namespace Vista
 
             try
             {
-                DaoCliente dao = new DaoCliente();
-                dgLista.ItemsSource = dao.Listar();
+                Cliente cl = new Cliente();
+                dgLista.ItemsSource = cl.ReadAll();//No sé si este bien
                 dgLista.Items.Refresh();
 
             }
@@ -130,8 +130,8 @@ namespace Vista
             
             try
             {
-                DaoCliente dao = new DaoCliente();
-                dgLista.ItemsSource = dao.Listar();
+                Cliente cl = new Cliente();
+                dgLista.ItemsSource = cl.ReadAll();//No sé si este bien
                 dgLista.Items.Refresh();
 
             }
