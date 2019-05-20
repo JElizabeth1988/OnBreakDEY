@@ -11,8 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using BibliotecaClase;
-using BibliotecaControlador;
+using BibliotecaNegocio;
 
 using MahApps.Metro.Controls;
 using MahApps.Metro.Controls.Dialogs;
@@ -36,14 +35,25 @@ namespace Vista
             btnPasar.Visibility = Visibility.Hidden;
 
             //COMBOBOX
-            cbofilTipoContrato.ItemsSource = Enum.GetValues(typeof
-                (TipoEvento));
-            this.cbofilTipoContrato.SelectedItem = null;
+            foreach (TipoEvento item in new TipoEvento().ReadAll())
+            {
+                comboBoxItem cb = new comboBoxItem();
+                cb.id = item.Id;
+                cb.descripcion = item.Descripcion;
+                cbofilTipoContrato.Items.Add(cb);
+            }
+            foreach (TipoEvento item in new TipoEvento().ReadAll())
+            {
+                comboBoxItem cb = new comboBoxItem();
+                cb.id = item.Id;
+                cb.descripcion = item.Descripcion;
+                cbofilTipoContrato.Items.Add(cb);
+            }
 
 
             try
             {
-                DaoContrato dao = new DaoContrato(); 
+                //DaoContrato dao = new DaoContrato(); 
                 dgvLista.ItemsSource = dao.Listar(); 
                 dgvLista.Items.Refresh(); 
 

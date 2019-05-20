@@ -40,7 +40,7 @@
 
         <Controls:Tile Click="Tile_Click_3" Margin="911,405,0,0" HorizontalAlignment="Left" Height="159" Width="171"  VerticalAlignment="Top"  >
             <Grid Width="220">
-                <Image x:Name="imgLiscontrato"  Source="Imagenes/ListContrato.png" Margin="0,0,0,-0.333"/>
+                <Image x:Name="imgLiscontrato"  Source="Imagenes/ListContrato.png" Margin="1045,-216,-1045,215.667"/>
             </Grid>
         </Controls:Tile>
 
