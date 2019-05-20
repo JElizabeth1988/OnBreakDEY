@@ -182,8 +182,7 @@ namespace Vista
                 
                 string rut = txtFiltroRut.Text;
 
-                List<Cliente> lc = new DaoCliente()
-                    .FiltroRut(rut);
+                List<ListaClientes> lc = new Cliente().FiltroRut(rut);
                 dgLista.ItemsSource = lc;
             }
             catch (Exception ex)
@@ -202,8 +201,7 @@ namespace Vista
             try
             {
                 TipoEmpresa tipo = (TipoEmpresa)cbTipoEmp.SelectedItem;
-                List<Cliente> lf = new DaoCliente()
-                    .FiltroEmp(tipo);
+                List<ListaClientes> lf = new Cliente().FiltroEmp(tipo);
                 dgLista.ItemsSource = lf;
             }
             catch (Exception ex)
@@ -224,8 +222,7 @@ namespace Vista
             {
                 
                 ActividadEmpresa act = (ActividadEmpresa)cbActiv.SelectedItem;
-                List<Cliente> lf = new DaoCliente()
-                    .FiltroAct(act);
+                List<ListaClientes> lf = new Cliente().FiltroAct(act);
                 dgLista.ItemsSource = lf;
             }
             catch (Exception ex)
@@ -244,19 +241,20 @@ namespace Vista
         {
                 
                 Cliente cli = (Cliente)dgLista.SelectedItem;
-            var x=
-            await this.ShowMessageAsync("Eliminar Datos de Cliente", "¿Desea eliminar al Cliente?", 
+            var x =
+            await this.ShowMessageAsync("Eliminar Datos de Cliente" + cli.RutCliente,
+            "¿Desea eliminar al Cliente?",
                     MessageDialogStyle.AffirmativeAndNegative);
             if (x == MessageDialogResult.Affirmative)
-            { 
-                bool resp = new DaoCliente().Eliminar(cli.Rut);
+            {
+                bool resp = cli.Eliminar();
                 if (resp)
                 {
                     await this.ShowMessageAsync("Mensaje:",
                       string.Format("Cliente Eliminado"));
                     /*MessageBox.Show("Cliente eliminado");*/
                     dgLista.ItemsSource =
-                    new DaoCliente().Listar();
+                    cli.ReadAll();
                     dgLista.Items.Refresh();
                 }
                 else

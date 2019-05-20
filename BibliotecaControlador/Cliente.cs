@@ -293,42 +293,87 @@ namespace BibliotecaNegocio
         //Filtro por Rut
         public List<ListaClientes> FiltroRut(string rut)
         {
-            List<ListaClientes> cl = BibliotecaDALC.Cliente.Where(x => x.RutCliente == rut).
-                ToList();
-            return cl;
+            var cl = from cli in bdd.Cliente
+                     join temp in bdd.TipoEmpresa
+                     on cli.IdTipoEmpresa equals temp.IdTipoEmpresa
+                     join acti in bdd.ActividadEmpresa on cli.IdActividadEmpresa equals acti.IdActividadEmpresa
+                     where cli.RutCliente == rut
+                     select new ListaClientes()
+                     {
+                         RazonSocial = cli.RazonSocial,
+                         Direccion = cli.Direccion,
+                         MailContacto = cli.MailContacto,
+                         NombreContacto = cli.NombreContacto,
+                         Rut = cli.RutCliente,
+                         Telefono = cli.Telefono,
+                         ActividadEmpresa = acti.Descripcion,
+                         TipoEmpresa = temp.Descripcion
+                     };
+            
+            return cl.ToList();
         }
 
         //Filtrar por tipo de empresa
-        public List<Cliente> FiltroEmp(TipoEmpresa tipo)
+        public List<ListaClientes> FiltroEmp(TipoEmpresa tipo)
         {
-            List<Cliente> cl = clientes.Where(x => x.Empresa == tipo).
-                ToList();
-            return cl;
+            var emp = from cli in bdd.Cliente
+                     join temp in bdd.TipoEmpresa
+                     on cli.IdTipoEmpresa equals temp.IdTipoEmpresa
+                     join acti in bdd.ActividadEmpresa on cli.IdActividadEmpresa equals acti.IdActividadEmpresa
+                     where temp.Descripcion == tipo.Descripcion
+                     select new ListaClientes()
+                     {
+                         RazonSocial = cli.RazonSocial,
+                         Direccion = cli.Direccion,
+                         MailContacto = cli.MailContacto,
+                         NombreContacto = cli.NombreContacto,
+                         Rut = cli.RutCliente,
+                         Telefono = cli.Telefono,
+                         ActividadEmpresa = acti.Descripcion,
+                         TipoEmpresa = temp.Descripcion
+                     };
+
+            return emp.ToList(); 
         }
 
         //Filtrar por Actividad de la empresa
-        public List<Cliente> FiltroAct(ActividadEmpresa act)
+        public List<ListaClientes> FiltroAct(ActividadEmpresa act)
         {
-            List<Cliente> cl = clientes.Where(x => x.Actividad == act).
-                ToList();
-            return cl;
+            var actividad = from cli in bdd.Cliente
+                      join temp in bdd.TipoEmpresa
+                      on cli.IdTipoEmpresa equals temp.IdTipoEmpresa
+                      join acti in bdd.ActividadEmpresa on cli.IdActividadEmpresa equals acti.IdActividadEmpresa
+                      where temp.Descripcion == acti.Descripcion
+                      select new ListaClientes()
+                      {
+                          RazonSocial = cli.RazonSocial,
+                          Direccion = cli.Direccion,
+                          MailContacto = cli.MailContacto,
+                          NombreContacto = cli.NombreContacto,
+                          Rut = cli.RutCliente,
+                          Telefono = cli.Telefono,
+                          ActividadEmpresa = acti.Descripcion,
+                          TipoEmpresa = temp.Descripcion
+                      };
+
+            return actividad.ToList();
         }
 
-        public class ListaClientes
+         }
+    public class ListaClientes
+    {
+        public string Rut { get; set; }
+        public string RazonSocial { get; set; }
+        public string NombreContacto { get; set; }
+        public string MailContacto { get; set; }
+        public string Direccion { get; set; }
+        public string Telefono { get; set; }
+        public string TipoEmpresa { get; set; }
+        public string ActividadEmpresa { get; set; }
+
+        public ListaClientes()
         {
-            public string Rut { get; set; }
-            public string RazonSocial { get; set; }
-            public string NombreContacto { get; set; }
-            public string MailContacto { get; set; }
-            public string Direccion { get; set; }
-            public string Telefono { get; set; }
-            public string TipoEmpresa { get; set; }
-            public string ActividadEmpresa { get; set; }
 
-            public ListaClientes()
-            {
-
-            }
         }
     }
 

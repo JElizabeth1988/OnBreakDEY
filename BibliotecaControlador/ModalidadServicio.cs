@@ -26,7 +26,7 @@ namespace BibliotecaControlador
             {
                 BibliotecaDALC.ModalidadServicio tipo = bdd.ModalidadServicio
                 .First(t => t.Nombre.Equals(Nombre));
-                Id = tipo.IdModalidad;
+                Id = int.Parse(tipo.IdModalidad);
                 return true;
             }
             catch (Exception ex)
@@ -43,7 +43,7 @@ namespace BibliotecaControlador
                 foreach (BibliotecaDALC.ModalidadServicio item in lista_tipo_bdd)
                 {
                     ModalidadServicio tipo = new ModalidadServicio();
-                    tipo.Id = item.IdModalidad;
+                    tipo.Id = int.Parse(item.IdModalidad);
                     tipo.Nombre = item.Nombre;
                     lista.Add(tipo);
                 }
@@ -62,4 +62,4 @@ namespace BibliotecaControlador
   
 
    
-}
+

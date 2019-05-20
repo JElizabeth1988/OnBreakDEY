@@ -714,7 +714,7 @@ namespace Vista
                         Creacion = creacion,
                         Termino = termino,
                         RutCliente = rutCliente,
-                        IdModalidad =,
+                        IdModalidad = ,
                         IdTipoEvento = evento,
                         FechaHoraInicio = fechaInicioEvento,
                         // HoraInicio = horaInicio,

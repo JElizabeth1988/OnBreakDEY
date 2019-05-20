@@ -338,13 +338,15 @@ namespace BibliotecaNegocio
             try
             {
                 var c = from con in bdd.Contrato
+                        join mod in bdd.ModalidadServicio
+                        on con.IdModalidad equals mod.IdModalidad
                         select new Contrato()
                         {
                             Numero = con.Numero,
                             Creacion = con.Creacion,
                             Termino = con.Termino,
                             RutCliente = con.RutCliente,
-                            IdModalidad =,
+                            IdModalidad = int.Parse(mod.IdModalidad),
                             IdTipoEvento =con.IdTipoEvento,
                             FechaHoraInicio = con.FechaHoraInicio,
                             FechaHoraTermino = con.FechaHoraTermino,
