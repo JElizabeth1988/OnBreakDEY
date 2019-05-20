@@ -116,7 +116,7 @@ namespace BibliotecaNegocio
                 }
                 else
                 {
-                    throw new ArgumentException("- Campo Teléfono no puede estar Vacío y debe tener un largo de 9 dígitos");
+                    throw new ArgumentException("Campo Teléfono no puede estar Vacío y debe tener un largo de 9 dígitos");
                 }
 
             }
@@ -288,6 +288,30 @@ namespace BibliotecaNegocio
 
                 return false;
             }
+        }
+
+        //Filtro por Rut
+        public List<ListaClientes> FiltroRut(string rut)
+        {
+            List<ListaClientes> cl = BibliotecaDALC.Cliente.Where(x => x.RutCliente == rut).
+                ToList();
+            return cl;
+        }
+
+        //Filtrar por tipo de empresa
+        public List<Cliente> FiltroEmp(TipoEmpresa tipo)
+        {
+            List<Cliente> cl = clientes.Where(x => x.Empresa == tipo).
+                ToList();
+            return cl;
+        }
+
+        //Filtrar por Actividad de la empresa
+        public List<Cliente> FiltroAct(ActividadEmpresa act)
+        {
+            List<Cliente> cl = clientes.Where(x => x.Actividad == act).
+                ToList();
+            return cl;
         }
 
         public class ListaClientes

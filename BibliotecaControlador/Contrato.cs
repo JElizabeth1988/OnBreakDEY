@@ -25,10 +25,7 @@ namespace BibliotecaNegocio
         private String _observaciones;
         private String _rutCliente;
         private int _personalAdicional;
-       
-
-
-
+    
 
         //PROPIEDADES
 
