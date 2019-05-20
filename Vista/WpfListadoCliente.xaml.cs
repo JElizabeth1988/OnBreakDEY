@@ -18,6 +18,7 @@ using MahApps.Metro.Controls;
 using MahApps.Metro.Controls.Dialogs;
 using MahApps.Metro.Behaviours;
 
+
 namespace Vista
 {
     /// <summary>
@@ -248,15 +249,16 @@ namespace Vista
             await this.ShowMessageAsync("Eliminar Datos de Cliente", "¿Desea eliminar al Cliente?", 
                     MessageDialogStyle.AffirmativeAndNegative);
             if (x == MessageDialogResult.Affirmative)
-            { 
-                bool resp = new DaoCliente().Eliminar(cli.Rut);
+            {
+                
+                bool resp = cli.Eliminar();
                 if (resp)
                 {
                     await this.ShowMessageAsync("Mensaje:",
                       string.Format("Cliente Eliminado"));
                     /*MessageBox.Show("Cliente eliminado");*/
                     dgLista.ItemsSource =
-                    new DaoCliente().Listar();
+                    cli.ReadAll();
                     dgLista.Items.Refresh();
                 }
                 else
@@ -275,5 +277,7 @@ namespace Vista
 
 
             }
+
+       
     }
 }

@@ -131,6 +131,8 @@ namespace Vista
                       string.Format(resp ? "Guardado" : "No Guardado"));
                 /*MessageBox.Show(resp ? "Guardado" : "No Guardado");*/
 
+               
+
             }
             catch (ArgumentException exa)//mensajes de reglas de negocios
             {

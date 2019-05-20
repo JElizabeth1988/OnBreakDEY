@@ -148,7 +148,7 @@ namespace BibliotecaNegocio
 
                 return true;
 
-
+                
             }
             catch (Exception ex)
             {
@@ -182,16 +182,16 @@ namespace BibliotecaNegocio
             try
             {
                 BibliotecaDALC.Cliente cl =
-                    bdd.Cliente.First(cli => cli.RutCliente.Equals(RutCliente));
-                    //bdd.Cliente.Find(RutCliente);
+                    //bdd.Cliente.First(cli => cli.RutCliente.Equals(RutCliente));
+                bdd.Cliente.Find(RutCliente);
 
-                RazonSocial = cl.RazonSocial;
+                /*RazonSocial = cl.RazonSocial;
                 NombreContacto = cl.NombreContacto;
                 MailContacto = cl.MailContacto;
                 Direccion = cl.Direccion;
                 Telefono = cl.Telefono;
                 IdActividadEmpresa = cl.IdActividadEmpresa;
-                IdTipoEmpresa = cl.IdTipoEmpresa;
+                IdTipoEmpresa = cl.IdTipoEmpresa;*/
 
                 return true;
 

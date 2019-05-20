@@ -1,0 +1,3 @@
+C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\BibliotecaControlador\obj\Debug\BibliotecaNegocio.csprojResolveAssemblyReference.cache
+C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\BibliotecaControlador\obj\Debug\BibliotecaControlador.dll
+C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\BibliotecaControlador\obj\Debug\BibliotecaControlador.pdb
