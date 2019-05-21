@@ -24,7 +24,7 @@
             </Grid>
         </Controls:Tile>
 
-        <Image x:Name="ingLogo" HorizontalAlignment="Left" Height="502" Margin="416,113,0,0" VerticalAlignment="Top" Width="762" Source="Imagenes/white_logo_transparent_background.png"/>
+        <Image x:Name="ingLogo" HorizontalAlignment="Left" Height="507" Margin="416,113,0,0" VerticalAlignment="Top" Width="889" Source="Imagenes/white_logo_transparent_background.png"/>
 
         <Controls:Tile Click="Tile_Click_2" Margin="228,405,0,0" HorizontalAlignment="Left" Height="159" Width="171"  VerticalAlignment="Top"  >
             <Grid Width="220">
@@ -38,10 +38,8 @@
             </Grid>
         </Controls:Tile>
 
-        <Controls:Tile Click="Tile_Click_3" Margin="911,405,0,0" HorizontalAlignment="Left" Height="159" Width="171"  VerticalAlignment="Top"  >
-            <Grid Width="220">
-                <Image x:Name="imgLiscontrato"  Source="Imagenes/ListContrato.png" Margin="1045,-216,-1045,215.667"/>
-            </Grid>
+        <Controls:Tile Click="Tile_Click_3" Margin="939,417,0,0" HorizontalAlignment="Left" Height="159" Width="171"  VerticalAlignment="Top"  >
+            <Image x:Name="image" Height="149" Width="199" Source="Imagenes/ListContrato.png"/>
         </Controls:Tile>
 
         <Label x:Name="label" Content="Bienvenido a OnBreak! &#xD;&#xA;  Escoja una Opción:" HorizontalAlignment="Left" Margin="539,32,0,0" VerticalAlignment="Top" FontSize="26.667" Foreground="White" HorizontalContentAlignment="Center"/>
