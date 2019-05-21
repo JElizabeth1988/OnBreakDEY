@@ -319,7 +319,8 @@ namespace BibliotecaNegocio
             var emp = from cli in bdd.Cliente
                      join temp in bdd.TipoEmpresa
                      on cli.IdTipoEmpresa equals temp.IdTipoEmpresa
-                     join acti in bdd.ActividadEmpresa on cli.IdActividadEmpresa equals acti.IdActividadEmpresa
+                     join acti in bdd.ActividadEmpresa 
+                     on cli.IdActividadEmpresa equals acti.IdActividadEmpresa
                      where temp.Descripcion == tipo.Descripcion
                      select new ListaClientes()
                      {
@@ -342,7 +343,8 @@ namespace BibliotecaNegocio
             var actividad = from cli in bdd.Cliente
                       join temp in bdd.TipoEmpresa
                       on cli.IdTipoEmpresa equals temp.IdTipoEmpresa
-                      join acti in bdd.ActividadEmpresa on cli.IdActividadEmpresa equals acti.IdActividadEmpresa
+                      join acti in bdd.ActividadEmpresa 
+                      on cli.IdActividadEmpresa equals acti.IdActividadEmpresa
                       where temp.Descripcion == acti.Descripcion
                       select new ListaClientes()
                       {

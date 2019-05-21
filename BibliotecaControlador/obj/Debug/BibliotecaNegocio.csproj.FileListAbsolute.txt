@@ -7,3 +7,12 @@ C:\Users\chida\Desktop\Duplicado\UnBreakable\BibliotecaControlador\bin\Debug\Bib
 C:\Users\chida\Desktop\Duplicado\UnBreakable\BibliotecaControlador\bin\Debug\EntityFramework.dll
 C:\Users\chida\Desktop\Duplicado\UnBreakable\BibliotecaControlador\bin\Debug\BibliotecaDALC.pdb
 C:\Users\chida\Desktop\Duplicado\UnBreakable\BibliotecaControlador\bin\Debug\EntityFramework.xml
+C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\BibliotecaControlador\bin\Debug\BibliotecaControlador.dll
+C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\BibliotecaControlador\bin\Debug\BibliotecaControlador.pdb
+C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\BibliotecaControlador\bin\Debug\BibliotecaDALC.dll
+C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\BibliotecaControlador\bin\Debug\EntityFramework.dll
+C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\BibliotecaControlador\bin\Debug\BibliotecaDALC.pdb
+C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\BibliotecaControlador\bin\Debug\EntityFramework.xml
+C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\BibliotecaControlador\obj\Debug\BibliotecaNegocio.csprojResolveAssemblyReference.cache
+C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\BibliotecaControlador\obj\Debug\BibliotecaControlador.dll
+C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\BibliotecaControlador\obj\Debug\BibliotecaControlador.pdb

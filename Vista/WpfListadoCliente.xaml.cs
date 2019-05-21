@@ -195,7 +195,7 @@ namespace Vista
                 dgLista.Items.Refresh();
             }
         }
-        //Botón filtrar tipo
+        //Botón filtrar tipoEmpresa
         private async void btnFiltrarTipo_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -215,7 +215,7 @@ namespace Vista
 
         }
 
-        //Botón filtrar tipo
+        //Botón filtrar Actividad Empresa
         private async void btnFiltrarAct_Click(object sender, RoutedEventArgs e)
         {
            try

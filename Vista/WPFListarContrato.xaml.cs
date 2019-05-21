@@ -53,9 +53,11 @@ namespace Vista
 
             try
             {
-                //DaoContrato dao = new DaoContrato(); 
-                dgvLista.ItemsSource = dao.Listar(); 
+               /////////////////////////////////
+                Contrato co = new Contrato(); 
+                dgvLista.ItemsSource = co.ReadAll(); //Llama al listar todo
                 dgvLista.Items.Refresh(); 
+                //////////////////////////////
 
             }
             catch (Exception ex)
@@ -66,22 +68,33 @@ namespace Vista
             
         }
 
-        //Llamado Ventana Principal
+        //Llamado Ventana Contrato
         public ListarContrato(Crear_Contrato origen)
         {
             InitializeComponent();
             cc = origen;
 
-            //COMBO BOX
-            cbofilTipoContrato.ItemsSource = Enum.GetValues(typeof
-                (TipoEvento));
-            this.cbofilTipoContrato.SelectedItem = null;
+            //COMBO BOX////////////////////////////////////////
+            foreach (TipoEvento item in new TipoEvento().ReadAll())
+            {
+                comboBoxItem cb = new comboBoxItem();
+                cb.id = item.Id;
+                cb.descripcion = item.Descripcion;
+                cbofilTipoContrato.Items.Add(cb);
+            }
+            foreach (TipoEvento item in new TipoEvento().ReadAll())
+            {
+                comboBoxItem cb = new comboBoxItem();
+                cb.id = item.Id;
+                cb.descripcion = item.Descripcion;
+                cbofilTipoContrato.Items.Add(cb);
+            }
 
             try
             {
 
-                DaoContrato dao = new DaoContrato();
-                dgvLista.ItemsSource = dao.Listar();
+                Contrato co = new Contrato();
+                dgvLista.ItemsSource = co.ReadAll();
                 dgvLista.Items.Refresh();
 
             }
@@ -90,6 +103,7 @@ namespace Vista
 
                 MessageBox.Show("Error al Listar");
             }
+            //////////////////////////////////////////////////////
         }
 
         //THIS
@@ -114,11 +128,11 @@ namespace Vista
             else {
                 btnPasar.Visibility = Visibility.Hidden;
             }
-            
+
         }
 
 
-        
+
 
         private void dgvLista_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -132,17 +146,19 @@ namespace Vista
             {
                 string numero = txtfiltroNumero.Text;
 
-                List<Contrato> lcon = new DaoContrato()
-                    .FiltroNum(numero);
+                List<ListaContratos> lcon = new Contrato().FiltroNumeroContrato(numero);
                 dgvLista.ItemsSource = lcon;
 
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 await this.ShowMessageAsync("Mensaje","error al Filtrar Información");
+                Logger.Mensaje(ex.Message);
+                dgvLista.Items.Refresh();
             }
         }
+
 
         //CLIENTE
         private async void btnFiltrarRut_Click(object sender, RoutedEventArgs e)
@@ -152,13 +168,15 @@ namespace Vista
             {
                 string rut = txtfiltroRut.Text;
 
-                List<Contrato> lcl = new DaoContrato()
-                    .FiltroRut(rut);
+                List<ListaContratos> lcl = new Contrato().FiltroRut(rut);
                 dgvLista.ItemsSource = lcl;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 await this.ShowMessageAsync("Mensaje","error al Filtrar Información");
+                Logger.Mensaje(ex.Message);
+                dgvLista.Items.Refresh();
+
             }
 
         }
@@ -169,13 +187,15 @@ namespace Vista
             try
             {
                 TipoEvento tipoE = (TipoEvento)cbofilTipoContrato.SelectedItem;
-                List<Contrato> lf = new DaoContrato()
-                    .FiltroCon(tipoE);
+
+                List<ListaContratos> lf = new Contrato().FiltroTipoEvento(tipoE);
                 dgvLista.ItemsSource = lf;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 await this.ShowMessageAsync("Mensaje","error al Filtrar Información");
+                Logger.Mensaje(ex.Message);
+                dgvLista.Items.Refresh();
             }
 
         }

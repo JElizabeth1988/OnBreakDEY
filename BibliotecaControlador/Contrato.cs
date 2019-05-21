@@ -402,31 +402,127 @@ namespace BibliotecaNegocio
             }
         }
 
-      
 
-        public class ListaContratos
+        /// /////////////////////////////////////////////////////////////////////////
+        /// FILTROS
+        //Filtro por número
+        public List<ListaContratos> FiltroNumeroContrato(string num)
         {
-            public string Numero { get; set; }
-            public string Creacion { get; set; }
-            public string Termino { get; set; }
-            public string RutCliente { get; set; }
-            public string Modalidad { get; set; }
-            public string TipoEvento{ get; set; }
-            public string FechaHoraInicio { get; set; }
-            public string FechaHoraTermino { get; set; }
-            public string Asistentes { get; set; }
-            public string PersonalAdicional { get; set; }
-            public string Realizado { get; set; }
-            public string ValorTotalContrato { get; set; }
-            public string Observaciones { get; set; }
+            var co = from con in bdd.Contrato
+                     join modal in bdd.ModalidadServicio
+                       on con.IdModalidad equals modal.IdModalidad
+                     join tip in bdd.TipoEvento
+                       on con.IdTipoEvento equals tip.IdTipoEvento
+                     where con.Numero == num
+                     select new ListaContratos()
+                     {
+                         Numero = con.Numero,
+                         Creacion = con.Creacion.ToString(),
+                         Termino = con.Termino.ToString(),
+                         RutCliente = con.RutCliente,
+                         Modalidad = modal.Nombre,
+                         TipoEvento = tip.Descripcion,
+                         FechaHoraInicio = con.FechaHoraInicio.ToString(),
+                         FechaHoraTermino = con.FechaHoraTermino.ToString(),
+                         Asistentes = con.Asistentes.ToString(),
+                         PersonalAdicional = con.PersonalAdicional.ToString(),
+                         Realizado = con.Realizado.ToString(),//?
+                         ValorTotalContrato = con.ValorTotalContrato.ToString(),//?
+                         Observaciones = Observaciones
 
-            public ListaContratos()
-            {
+                     };
 
-            }
+            return co.ToList();
         }
 
 
+        //Filtro por Rut Cliente
+        public List<ListaContratos> FiltroRut(string rut)
+        {
+            var co = from con in bdd.Contrato
+                     join temp in bdd.Cliente
+                     on con.RutCliente equals temp.RutCliente
+                     join mod in bdd.ModalidadServicio 
+                     on con.IdModalidad equals mod.IdModalidad
+                     join tip in bdd.TipoEvento
+                     on con.IdTipoEvento equals tip.IdTipoEvento
+                     where con.RutCliente == rut
+                     select new ListaContratos()
+                     {
+                         Numero = con.Numero,
+                         Creacion = con.Creacion.ToString(),
+                         Termino = con.Termino.ToString(),
+                         RutCliente = con.RutCliente,
+                         Modalidad = mod.Nombre,
+                         TipoEvento = tip.Descripcion,
+                         FechaHoraInicio = con.FechaHoraInicio.ToString(),
+                         FechaHoraTermino = con.FechaHoraTermino.ToString(),
+                         Asistentes = con.Asistentes.ToString(),
+                         PersonalAdicional = con.PersonalAdicional.ToString(),
+                         Realizado = con.Realizado.ToString(),//?
+                         ValorTotalContrato = con.ValorTotalContrato.ToString(),//?
+                         Observaciones = Observaciones
+
+                     };
+
+            return co.ToList();
+        }
+
+        //Filtro tipo evento
+        public List<ListaContratos> FiltroTipoEvento(TipoEvento evento)
+        {
+            var co = from con in bdd.Contrato
+                     join modal in bdd.ModalidadServicio
+                       on con.IdModalidad equals modal.IdModalidad
+                     join tip in bdd.TipoEvento
+                       on con.IdTipoEvento equals tip.IdTipoEvento
+                     where tip.Descripcion == evento.Descripcion
+                     select new ListaContratos()
+                     {
+                         Numero = con.Numero,
+                         Creacion = con.Creacion.ToString(),
+                         Termino = con.Termino.ToString(),
+                         RutCliente = con.RutCliente,
+                         Modalidad = modal.Nombre,
+                         TipoEvento = tip.Descripcion,
+                         FechaHoraInicio = con.FechaHoraInicio.ToString(),
+                         FechaHoraTermino = con.FechaHoraTermino.ToString(),
+                         Asistentes = con.Asistentes.ToString(),
+                         PersonalAdicional = con.PersonalAdicional.ToString(),
+                         Realizado = con.Realizado.ToString(),//?
+                         ValorTotalContrato = con.ValorTotalContrato.ToString(),//?
+                         Observaciones = Observaciones
+
+                     };
+
+            return co.ToList();
+        }
+
+        //////////////////////////////////////////////////////////////////////////////
+
+
+    }
+    // Johana: Moví esto por que estaba dentro de la clase contrato y debe estar afuera de las llaves
+    public class ListaContratos
+    {
+        public string Numero { get; set; }
+        public string Creacion { get; set; }
+        public string Termino { get; set; }
+        public string RutCliente { get; set; }
+        public string Modalidad { get; set; }
+        public string TipoEvento { get; set; }
+        public string FechaHoraInicio { get; set; }
+        public string FechaHoraTermino { get; set; }
+        public string Asistentes { get; set; }
+        public string PersonalAdicional { get; set; }
+        public string Realizado { get; set; }
+        public string ValorTotalContrato { get; set; }
+        public string Observaciones { get; set; }
+
+        public ListaContratos()
+        {
+
+        }
     }
 
 }
