@@ -60,14 +60,14 @@ namespace Vista
 
             foreach (ModalidadServicio item in new ModalidadServicio().ReadAll())
             {
-                comboBoxItem cb = new comboBoxItem();
+                comboBoxItem2 cb = new comboBoxItem2();
                 cb.id = item.Id;
                 cb.descripcion = item.Nombre;
                 cboTipo.Items.Add(cb);
             }
             foreach (ModalidadServicio item in new ModalidadServicio().ReadAll())
             {
-                comboBoxItem cb = new comboBoxItem();
+                comboBoxItem2 cb = new comboBoxItem2();
                 cb.id = item.Id;
                 cb.descripcion = item.Nombre;
                 cboTipo.Items.Add(cb);
@@ -141,7 +141,9 @@ namespace Vista
                         return;
                     }
 
+                    //CB
                     int evento = ((comboBoxItem)cboTipo.SelectedItem).id;
+                    string idMod = ((comboBoxItem2)cbModalidad.SelectedItem).id;
 
                     String observaciones = txtObservaciones.Text;
                     String rutCliente = txtBuscarCliente.Text;
@@ -153,7 +155,7 @@ namespace Vista
                         Creacion = creacion,
                         Termino = termino,
                         RutCliente = rutCliente,
-                        IdModalidad= ,
+                        IdModalidad= idMod,
                         IdTipoEvento =evento,
                         FechaHoraInicio = fechaHoraInicio,
                         FechaHoraTermino = fechaHoraTermino,
@@ -325,11 +327,12 @@ namespace Vista
                     txtNumeroAsistentes.Text = c.Asistentes.ToString();
                     txtPersonalAdicional.Text = c.PersonalAdicional.ToString();
                     cboTipo.Text = c.IdTipoEvento.ToString();
+                    cbModalidad.Text = c.IdModalidad;
                     txtObservaciones.Text = c.Observaciones;
                     lblNumero.Content = txtNumero.Text; //IGUALAR CAMPOS 
                     btnModificar.Visibility = Visibility.Visible;
                     btnTerminar.Visibility = Visibility.Visible;
-                    //MODALIDAD ?
+                    
                     
                 }
                 else
@@ -373,11 +376,12 @@ namespace Vista
                     txtNumeroAsistentes.Text = c.Asistentes.ToString();
                     txtPersonalAdicional.Text = c.PersonalAdicional.ToString();
                     cboTipo.Text = c.IdTipoEvento.ToString();
+                    cbModalidad.Text = c.IdModalidad;
                     txtObservaciones.Text = c.Observaciones;
                     lblNumero.Content = txtNumero.Text; //IGUALAR CAMPOS 
                     btnModificar.Visibility = Visibility.Visible;
                     btnTerminar.Visibility = Visibility.Visible;
-                    //MODALIDAD ?
+                    
 
                 }
                 else
@@ -488,63 +492,6 @@ namespace Vista
                     }
 
 
-
-                    //EVENTO
-
-                    //inicio
-                    /*String fechaInicioEvento = dpFechaInicio.Text;
-                    int horaInicio = 0;
-                    if (int.TryParse(txtHoraInicio.Text, out horaInicio))
-                    {
-
-                    }
-                    else
-                    {
-                        await this.ShowMessageAsync("Mensaje:",
-                          string.Format("Ingrese sólo números"));
-                        txtHoraInicio.Focus();
-                        return;
-                    }
-                    int minutoInicio = 0;
-                    if (int.TryParse(txtMinutoInicio.Text, out minutoInicio))
-                    {
-
-                    }
-                    else
-                    {
-                        await this.ShowMessageAsync("Mensaje:",
-                          string.Format("Ingrese sólo números"));
-                        txtMinutoInicio.Focus();
-                        return;
-                    }
-                    //termino
-                    String fechaFinEvento = dpFechaFinEvento.Text;
-                    int horaTermino = 0;
-                    if (int.TryParse(txtHoraTermino.Text, out horaTermino))
-                    {
-
-                    }
-                    else
-                    {
-                        await this.ShowMessageAsync("Mensaje:",
-                          string.Format("Ingrese sólo números"));
-                        txtHoraTermino.Focus();
-                        return;
-                    }
-                    int minutoTermino = 0;
-                    if (int.TryParse(txtMinutoTermino.Text, out minutoTermino))
-                    {
-
-                    }
-                    else
-                    {
-                        await this.ShowMessageAsync("Mensaje:",
-                          string.Format("Ingrese sólo números"));
-                        txtMinutoTermino.Focus();
-                        return;
-                    }
-                    */
-
                     //////
 
                     int asistentes = 0;
@@ -573,7 +520,9 @@ namespace Vista
                         return;
                     }
 
+                    //CB
                     int evento = ((comboBoxItem)cboTipo.SelectedItem).id;
+                    string idMod = ((comboBoxItem2)cbModalidad.SelectedItem).id;
 
                     String observaciones = txtObservaciones.Text;
                     String rutCliente = txtBuscarCliente.Text;
@@ -585,7 +534,7 @@ namespace Vista
                         Creacion = creacion,
                         Termino = termino,
                         RutCliente = rutCliente,
-                       // IdModalidad =,
+                        IdModalidad =idMod,
                         IdTipoEvento = evento,
                         FechaHoraInicio = dpFechaInicio1.recuperar(),
                         FechaHoraTermino = dpFechaTermino.recuperar(),
@@ -653,7 +602,7 @@ namespace Vista
                     int personalAdicional = int.Parse(txtPersonalAdicional.Text);
 
                     int evento = ((comboBoxItem)cboTipo.SelectedItem).id;
-
+                    string idMod = ((comboBoxItem2)cbModalidad.SelectedItem).id;
 
                     String observaciones = txtObservaciones.Text;
                     String rutCliente = txtBuscarCliente.Text;
@@ -666,7 +615,7 @@ namespace Vista
                         Creacion = creacion,
                         Termino = termino,
                         RutCliente = rutCliente,
-                       // IdModalidad = ,
+                        IdModalidad = idMod,
                         IdTipoEvento = evento,
                         FechaHoraInicio = fechaHoraInicio,
                         FechaHoraTermino = fechaFinTermino,
