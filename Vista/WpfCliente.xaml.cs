@@ -151,7 +151,7 @@ namespace Vista
 
 
 
-        //Rellenar con ? (genera el traspaso desde lista)
+        
         public async void Buscar()
         {
             try

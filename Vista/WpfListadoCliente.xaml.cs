@@ -158,8 +158,8 @@ namespace Vista
 
             if (cl==null)
             {
-                Cliente cli = (Cliente)dgLista.SelectedItem;
-                cc.txtBuscarCliente.Text = cli.RutCliente;
+                ListaClientes cli = (ListaClientes)dgLista.SelectedItem;
+                cc.txtBuscarCliente.Text = cli.Rut;
                 cc.Buscar();
             }
             else
@@ -170,7 +170,7 @@ namespace Vista
                 cl.txtRut.Text = cli.Rut;
                 cl.Buscar();
             }
-    
+            Close();
 
         }
 
@@ -221,8 +221,8 @@ namespace Vista
            try
             {
                 
-                ActividadEmpresa act = (ActividadEmpresa)cbActiv.SelectedItem;
-                List<ListaClientes> lf = new Cliente().FiltroAct(act);
+                comboBoxItem act = (comboBoxItem)cbActiv.SelectedItem;
+                List<ListaClientes> lf = new Cliente().FiltroAct(act.descripcion);
                 dgLista.ItemsSource = lf;
             }
             catch (Exception ex)
