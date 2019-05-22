@@ -34,7 +34,7 @@ namespace Vista
             InitializeComponent();
             btnPasar.Visibility = Visibility.Hidden;
 
-            //COMBOBOX
+            //COMBOBOX EVENTO
             foreach (TipoEvento item in new TipoEvento().ReadAll())
             {
                 comboBoxItem cb = new comboBoxItem();
@@ -49,6 +49,7 @@ namespace Vista
                 cb.descripcion = item.Descripcion;
                 cbofilTipoContrato.Items.Add(cb);
             }
+            //COMBOBOX MODALIDAD
 
 
             try
