@@ -321,14 +321,14 @@ namespace BibliotecaNegocio
         }
 
         //Filtrar por tipo de empresa
-        public List<ListaClientes> FiltroEmp(TipoEmpresa tipo)
+        public List<ListaClientes> FiltroEmp(string tip)
         {
             var emp = from cli in bdd.Cliente
                      join temp in bdd.TipoEmpresa
                      on cli.IdTipoEmpresa equals temp.IdTipoEmpresa
                      join acti in bdd.ActividadEmpresa 
                      on cli.IdActividadEmpresa equals acti.IdActividadEmpresa
-                     where temp.Descripcion == tipo.Descripcion
+                     where temp.Descripcion == tip
                      select new ListaClientes()
                      {
                          RazonSocial = cli.RazonSocial,
@@ -352,7 +352,7 @@ namespace BibliotecaNegocio
                       on cli.IdTipoEmpresa equals temp.IdTipoEmpresa
                       join acti in bdd.ActividadEmpresa 
                       on cli.IdActividadEmpresa equals acti.IdActividadEmpresa
-                      where temp.Descripcion == acti.Descripcion
+                      where temp.Descripcion == act.Descripcion
                       select new ListaClientes()
                       {
                           RazonSocial = cli.RazonSocial,

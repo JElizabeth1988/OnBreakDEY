@@ -55,7 +55,7 @@ namespace Vista
             try
             {
                 Cliente cl = new Cliente();
-                dgLista.ItemsSource = cl.ReadAll();//No sé si este bien
+                dgLista.ItemsSource = cl.ReadAll2();//No sé si este bien
                 dgLista.Items.Refresh();
 
             }
@@ -92,7 +92,7 @@ namespace Vista
             try
             {
                 Cliente cl = new Cliente();
-                dgLista.ItemsSource = cl.ReadAll();//No sé si este bien
+                dgLista.ItemsSource = cl.ReadAll2();//No sé si este bien
                 dgLista.Items.Refresh();
 
             }
@@ -131,7 +131,7 @@ namespace Vista
             try
             {
                 Cliente cl = new Cliente();
-                dgLista.ItemsSource = cl.ReadAll();//No sé si este bien
+                dgLista.ItemsSource = cl.ReadAll2();//No sé si este bien
                 dgLista.Items.Refresh();
 
             }
@@ -164,10 +164,10 @@ namespace Vista
             }
             else
             {
-                Cliente cli = (Cliente)dgLista.SelectedItem;
+                ListaClientes cli = (ListaClientes)dgLista.SelectedItem;
                 string rutbuscar;
                 rutbuscar = cl.txtRut+"-"+cl.txtDV;
-                cl.txtRut.Text = cli.RutCliente;
+                cl.txtRut.Text = cli.Rut;
                 cl.Buscar();
             }
     
@@ -200,8 +200,8 @@ namespace Vista
         {
             try
             {
-                TipoEmpresa tipo = (TipoEmpresa)cbTipoEmp.SelectedItem;
-                List<ListaClientes> lf = new Cliente().FiltroEmp(tipo);
+                comboBoxItem tipo = (comboBoxItem)cbTipoEmp.SelectedItem;
+                List<ListaClientes> lf = new Cliente().FiltroEmp(tipo.descripcion);
                 dgLista.ItemsSource = lf;
             }
             catch (Exception ex)

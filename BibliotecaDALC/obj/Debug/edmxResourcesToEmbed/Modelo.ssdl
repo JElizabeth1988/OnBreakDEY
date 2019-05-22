@@ -11,7 +11,7 @@
     <Key>
       <PropertyRef Name="RutCliente" />
     </Key>
-    <Property Name="RutCliente" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="RutCliente" Type="nvarchar" MaxLength="12" Nullable="false" />
     <Property Name="RazonSocial" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="NombreContacto" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="MailContacto" Type="nvarchar" MaxLength="30" Nullable="false" />
@@ -27,7 +27,7 @@
     <Property Name="Numero" Type="nvarchar" MaxLength="12" Nullable="false" />
     <Property Name="Creacion" Type="datetime" Nullable="false" />
     <Property Name="Termino" Type="datetime" Nullable="false" />
-    <Property Name="RutCliente" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="RutCliente" Type="nvarchar" MaxLength="12" Nullable="false" />
     <Property Name="IdModalidad" Type="nvarchar" MaxLength="5" Nullable="false" />
     <Property Name="IdTipoEvento" Type="int" Nullable="false" />
     <Property Name="FechaHoraInicio" Type="datetime" Nullable="false" />

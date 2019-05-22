@@ -12,7 +12,7 @@
     <Key>
       <PropertyRef Name="RutCliente" />
     </Key>
-    <Property Name="RutCliente" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RutCliente" Type="String" MaxLength="12" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="RazonSocial" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="NombreContacto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="MailContacto" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
@@ -31,7 +31,7 @@
     <Property Name="Numero" Type="String" MaxLength="12" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Creacion" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="Termino" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="RutCliente" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RutCliente" Type="String" MaxLength="12" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="IdModalidad" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="IdTipoEvento" Type="Int32" Nullable="false" />
     <Property Name="FechaHoraInicio" Type="DateTime" Nullable="false" Precision="3" />
