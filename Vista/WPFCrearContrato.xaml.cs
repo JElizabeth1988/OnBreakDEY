@@ -39,7 +39,7 @@ namespace Vista
             btnTerminar.Visibility = Visibility.Hidden;
             btnModificar.Visibility = Visibility.Hidden;
 
-            //llenar el combo box con los datos del enumerador
+            //LLENAR COMBO BOX TIPO EVENTO
             foreach (TipoEvento item in new TipoEvento().ReadAll())
             {
                 comboBoxItem cb = new comboBoxItem();
@@ -52,6 +52,24 @@ namespace Vista
                 comboBoxItem cb = new comboBoxItem();
                 cb.id = item.Id;
                 cb.descripcion = item.Descripcion;
+                cboTipo.Items.Add(cb);
+            }
+           
+
+            //LLENAR CB MODALIDAD SERVICIO
+
+            foreach (ModalidadServicio item in new ModalidadServicio().ReadAll())
+            {
+                comboBoxItem cb = new comboBoxItem();
+                cb.id = item.Id;
+                cb.descripcion = item.Nombre;
+                cboTipo.Items.Add(cb);
+            }
+            foreach (ModalidadServicio item in new ModalidadServicio().ReadAll())
+            {
+                comboBoxItem cb = new comboBoxItem();
+                cb.id = item.Id;
+                cb.descripcion = item.Nombre;
                 cboTipo.Items.Add(cb);
             }
 
@@ -84,10 +102,7 @@ namespace Vista
                         realizado = true;
                         termino = fechat; 
 
-
-
                     }
-
 
 
                     //EVENTO
@@ -96,57 +111,7 @@ namespace Vista
                     DateTime fechaHoraInicio = dpFechaInicio1.recuperar();
 
                     DateTime fechaHoraTermino = dpFechaTermino.recuperar();
-                   /* int horaInicio = 0;
-                    if (int.TryParse(txtHoraInicio.Text, out horaInicio))
-                    {
-
-                    }
-                    else
-                    {
-                        await this.ShowMessageAsync("Mensaje:",
-                          string.Format("Ingrese sólo números"));
-                        txtHoraInicio.Focus();
-                        return;
-                    }
-                    int minutoInicio = 0;
-                    if (int.TryParse(txtMinutoInicio.Text, out minutoInicio))
-                    {
-
-                    }
-                    else
-                    {
-                        await this.ShowMessageAsync("Mensaje:",
-                          string.Format("Ingrese sólo números"));
-                        txtMinutoInicio.Focus();
-                        return;
-                    }
-                    //termino
-                    String fechaFinEvento = dpFechaFinEvento.Text;
-                    int horaTermino = 0;
-                    if (int.TryParse(txtHoraTermino.Text, out horaTermino))
-                    {
-
-                    }
-                    else
-                    {
-                        await this.ShowMessageAsync("Mensaje:",
-                          string.Format("Ingrese sólo números"));
-                        txtHoraTermino.Focus();
-                        return;
-                    }
-                    int minutoTermino= 0;
-                    if (int.TryParse(txtMinutoTermino.Text, out minutoTermino))
-                    {
-
-                    }
-                    else
-                    {
-                        await this.ShowMessageAsync("Mensaje:",
-                          string.Format("Ingrese sólo números"));
-                        txtMinutoTermino.Focus();
-                        return;
-                    }*/
-                    
+                 
 
                     //////
              
@@ -188,7 +153,7 @@ namespace Vista
                         Creacion = creacion,
                         Termino = termino,
                         RutCliente = rutCliente,
-                        //IdModalidad= ,
+                        IdModalidad= ,
                         IdTipoEvento =evento,
                         FechaHoraInicio = fechaHoraInicio,
                         FechaHoraTermino = fechaHoraTermino,
