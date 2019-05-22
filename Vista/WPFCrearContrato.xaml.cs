@@ -858,6 +858,11 @@ namespace Vista
 
         }
 
+        private void btnMasHoraInicio_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
 
         //valor total
     }

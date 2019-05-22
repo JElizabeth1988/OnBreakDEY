@@ -501,6 +501,20 @@ namespace BibliotecaNegocio
 
         //////////////////////////////////////////////////////////////////////////////
 
+        public bool contarContratos()
+        {
+            try
+            {
+                BibliotecaDALC.Contrato cc = bdd.Contrato.First(c => c.RutCliente.Equals(RutCliente));
+                return true;
+
+            }
+            catch (Exception ex) 
+            {
+
+                return false;
+            }
+        }
 
     }
     // Johana: Moví esto por que estaba dentro de la clase contrato y debe estar afuera de las llaves
