@@ -56,10 +56,10 @@ namespace Vista
             }
 
         }
-        
 
 
 
+        DateTime fechac = DateTime.Now;
         //CREAR CONTRATO
         private async void btnCrear_Click(object sender, RoutedEventArgs e)
         {
@@ -67,8 +67,9 @@ namespace Vista
             {
                 if (dpFechaInicio.SelectedDate <= dpFechaFinEvento.SelectedDate)
                 {
+                   
                     String numero = lblNumero.Content.ToString();
-                    DateTime creacion = DateTime.Now;
+                    DateTime creacion = fechac;
                     bool realizado ;
                     DateTime termino;
                     if (rbSi.IsChecked == true)
@@ -506,9 +507,9 @@ namespace Vista
                 if (dpFechaInicio.SelectedDate <= dpFechaFinEvento.SelectedDate)
                 {
                     String numero = lblNumero.Content.ToString();
-                    String creacion = fechaC;
+                    DateTime creacion = fechac;
                     bool realizado;
-                    String termino;
+                    DateTime termino;
                     if (rbSi.IsChecked == true)
                     {
                         realizado = false;
@@ -529,7 +530,7 @@ namespace Vista
                     //EVENTO
 
                     //inicio
-                    String fechaInicioEvento = dpFechaInicio.Text;
+                    /*String fechaInicioEvento = dpFechaInicio.Text;
                     int horaInicio = 0;
                     if (int.TryParse(txtHoraInicio.Text, out horaInicio))
                     {
@@ -580,7 +581,7 @@ namespace Vista
                         txtMinutoTermino.Focus();
                         return;
                     }
-
+                    */
 
                     //////
 
@@ -622,7 +623,7 @@ namespace Vista
                         Creacion = creacion,
                         Termino = termino,
                         RutCliente = rutCliente,
-                        IdModalidad =,
+                       // IdModalidad =,
                         IdTipoEvento = evento,
                         FechaHoraInicio = fechaInicioEvento,
                         // HoraInicio = horaInicio,
