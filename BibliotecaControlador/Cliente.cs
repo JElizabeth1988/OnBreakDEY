@@ -11,6 +11,7 @@ namespace BibliotecaNegocio
    
     public class Cliente
     {
+
         private String _rut;
 
         public String RutCliente
@@ -165,9 +166,15 @@ namespace BibliotecaNegocio
                 //bdd.Cliente.First(cli => cli.RutCliente.Equals(RutCliente));
                 bdd.Cliente.Find(RutCliente);
 
-                bdd.Cliente.Remove(cl);
-                bdd.SaveChanges();
+                Contrato cont = new Contrato();
+                cont.RutCliente = cl.RutCliente;
 
+                if ( cont.contarContratos() ==false)
+                {
+                    bdd.Cliente.Remove(cl);
+                    bdd.SaveChanges();
+                }
+                
                 return true;
             }
             catch (Exception ex)

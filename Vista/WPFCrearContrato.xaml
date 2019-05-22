@@ -71,7 +71,7 @@
                 <Label x:Name="label5_Copy" Content="N° Asistentes:" HorizontalAlignment="Left" Margin="12,168,0,0" VerticalAlignment="Top" Height="26" Width="88"/>
                 <TextBox x:Name="txtNumeroAsistentes" HorizontalAlignment="Left" Height="26" Margin="127,169,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="56" TextChanged="txtNumeroAsistentes_TextChanged_1" FontWeight="Normal"/>
                 <Label x:Name="label7" Content="Observaciones:" HorizontalAlignment="Left" Margin="12,220,0,0" VerticalAlignment="Top" Height="26" Width="95"/>
-                <TextBox x:Name="txtObservaciones" HorizontalAlignment="Left" Height="74" Margin="126,220,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="292" FontWeight="Normal"/>
+                <TextBox x:Name="txtObservaciones" HorizontalAlignment="Left" Height="74" Margin="126,220,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="383" FontWeight="Normal"/>
                 <Label x:Name="label5_Copy2" Content="N° Personal Adicional:" HorizontalAlignment="Left" Margin="312,168,0,0" VerticalAlignment="Top" Height="26" Width="136"/>
                 <TextBox x:Name="txtPersonalAdicional" HorizontalAlignment="Left" Height="26" Margin="459,169,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" TextChanged="txtPersonalAdicional_TextChanged_1"  FontWeight="Normal"/>
                 <Label x:Name="label" Content="SubTotal :" HorizontalAlignment="Left" Margin="640,74,0,0" VerticalAlignment="Top" Height="26" Width="66"/>
@@ -110,7 +110,7 @@
 
 
                 <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="156,-32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="16" Width="0"/>
-                <Button x:Name="btnMasHoraInicio" Content="+" HorizontalAlignment="Left" Margin="459,34,0,0" VerticalAlignment="Top" Width="25" Height="13" Background="#CC119EDA" BorderBrush="#FF010000" BorderThickness="1" FontSize="8" FontWeight="Normal" />
+                <Button x:Name="btnMasHoraInicio" Content="+" HorizontalAlignment="Left" Margin="459,34,0,0" VerticalAlignment="Top" Width="25" Height="13" Background="#CC119EDA" BorderBrush="#FF010000" BorderThickness="1" FontSize="8" FontWeight="Normal" Click="btnMasHoraInicio_Click" />
                 <Button x:Name="btnMenHorInicio" Content="-" HorizontalAlignment="Left" Margin="459,54,0,0" VerticalAlignment="Top" Width="25" Height="13" Background="#CC119EDA" BorderBrush="#FF010000" BorderThickness="1" FontSize="8" FontWeight="Normal"/>
                 <Button x:Name="btnMasMinInicio" Content="+" HorizontalAlignment="Left" Margin="554,34,0,0" VerticalAlignment="Top" Width="25" Height="13" Background="#CC119EDA" BorderBrush="#FF010000" BorderThickness="1" FontSize="8" FontWeight="Normal"/>
                 <Button x:Name="btnMenosMinInicio" Content="-" HorizontalAlignment="Left" Margin="554,55,0,0" VerticalAlignment="Top" Width="25" Height="13" Background="#CC119EDA" BorderBrush="#FF010000" BorderThickness="1" FontSize="8" FontWeight="Normal"/>

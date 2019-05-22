@@ -13,15 +13,12 @@
         Title="OnBreak - Lista de Clientes" Height="452.333" Width="511.334" WindowTitleBrush="Black" WindowStyle="ToolWindow" Background="#FF88D7F9" FontWeight="Bold" WindowStartupLocation="CenterScreen" Icon="Imagenes/white_logo_dark_background.jpg" ResizeMode="NoResize">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="158*"/>
-            <ColumnDefinition Width="38*"/>
-            <ColumnDefinition Width="62*"/>
-            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Button x:Name="btnPasar" Content="Traspasar" HorizontalAlignment="Left" Margin="68,364,0,0" VerticalAlignment="Top" Width="89" FontWeight="Normal" Click="btnPasar_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
-        <DataGrid x:Name="dgLista" HorizontalAlignment="Left" Margin="57,171,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="173" Width="388"/>
-        <Button x:Name="btnSalir" Content="Salir" HorizontalAlignment="Left" Margin="21.667,364,0,0" VerticalAlignment="Top" Width="75"  FontWeight="Normal" Grid.Column="2" Click="btnSalir_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
-        <GroupBox x:Name="gbFiltrar" Header="Filtrar Información" HorizontalAlignment="Left" Margin="57,10,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="144" Width="388">
+        <DataGrid x:Name="dgLista" HorizontalAlignment="Left" Margin="57,171,0,0" VerticalAlignment="Top" Height="173" Width="388"/>
+        <Button x:Name="btnSalir" Content="Salir" HorizontalAlignment="Left" Margin="360,364,0,0" VerticalAlignment="Top" Width="75"  FontWeight="Normal" Click="btnSalir_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
+        <GroupBox x:Name="gbFiltrar" Header="Filtrar Información" HorizontalAlignment="Left" Margin="57,10,0,0" VerticalAlignment="Top" Height="144" Width="388">
             <Grid HorizontalAlignment="Left" Height="110" Margin="10,4,0,-34" VerticalAlignment="Top" Width="351">
                 <Label x:Name="label" Content="Rut" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,1,0,0"/>
                 <Label x:Name="label1" Content="Tipo de Empresa" HorizontalAlignment="Left" Margin="0,32,0,0" VerticalAlignment="Top"/>
@@ -34,7 +31,7 @@
                 <Button x:Name="btnFiltrarAct" Content="Filtrar" HorizontalAlignment="Left" Margin="265,69,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Click="btnFiltrarAct_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
             </Grid>
         </GroupBox>
-        <Button x:Name="btnEliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="218,364,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal"  Click="btnEliminar_Click" Grid.ColumnSpan="2" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
+        <Button x:Name="btnEliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="218,364,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal"  Click="btnEliminar_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
 
     </Grid>
 </Controls:MetroWindow>
