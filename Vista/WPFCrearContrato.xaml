@@ -49,7 +49,7 @@
         <Button x:Name="btnCrear" Content="Crear" HorizontalAlignment="Left" Margin="210,603,0,0" VerticalAlignment="Top" Width="73" Click="btnCrear_Click" FontWeight="Normal" Height="33" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
         <Label x:Name="label1" Content="Número Contrato:" HorizontalAlignment="Left" Margin="125,16,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblNumero" Content="" HorizontalAlignment="Left" Margin="257,16,0,0" VerticalAlignment="Top" Width="166"/>
-        <GroupBox x:Name="groupBox" Header="GroupBox" HorizontalAlignment="Left" Margin="99,49,0,0" VerticalAlignment="Top" Height="170" Width="598">
+        <GroupBox x:Name="groupBox" Header="Buscar Información" HorizontalAlignment="Left" Margin="99,49,0,0" VerticalAlignment="Top" Height="170" Width="598">
             <Grid HorizontalAlignment="Left" Height="136" VerticalAlignment="Top" Width="588" Margin="0,0,0,-1.333">
                 <Button x:Name="btnCliente" Content="Buscar" HorizontalAlignment="Left" Margin="414,57,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Click="btnCliente_Click" Height="33" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
                 <Label x:Name="lblNombreCliente" Content="" HorizontalAlignment="Left" Margin="154,99,0,0" VerticalAlignment="Top" Width="310" FontWeight="Normal" Height="26"/>
@@ -64,7 +64,7 @@
                 <Button x:Name="btnListadoCliente" Content="?" HorizontalAlignment="Left" Margin="342,56,0,0" VerticalAlignment="Top" Width="47" Height="33" Click="btnListadoCliente_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
             </Grid>
         </GroupBox>
-        <GroupBox x:Name="groupBox1" Header="GroupBox" HorizontalAlignment="Left" Height="356" Margin="58,224,0,0" VerticalAlignment="Top" Width="880">
+        <GroupBox x:Name="groupBox1" Header="Datos de evento" HorizontalAlignment="Left" Height="356" Margin="58,224,0,0" VerticalAlignment="Top" Width="880">
             <Grid HorizontalAlignment="Left" Height="306" Margin="5,10,0,0" VerticalAlignment="Top" Width="860">
                 <Label x:Name="label6" Content="Tipo Evento:" HorizontalAlignment="Left" Margin="12,125,0,0" VerticalAlignment="Top" Height="26" Width="82"/>
                 <ComboBox x:Name="cboTipo" HorizontalAlignment="Left" Margin="126,125,0,0" VerticalAlignment="Top" Width="145" AutomationProperties.IsOffscreenBehavior="Onscreen" Height="26" FontWeight="Normal" SelectionChanged="cboTipo_SelectionChanged"/>
