@@ -39,82 +39,87 @@
         <Button x:Name="btnLimpiar" Content="Limpiar" HorizontalAlignment="Left" Margin="79,603,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Click="btnLimpiar_Click" Height="33" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
 
         <Button x:Name="button" Content="Cerrar" HorizontalAlignment="Left" Margin="823,604,0,0" VerticalAlignment="Top" Width="76" FontWeight="Normal" Height="33" Click="button_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
-        <Label x:Name="label6" Content="Tipo Evento:" HorizontalAlignment="Left" Margin="66,381,0,0" VerticalAlignment="Top" Height="26" Width="82"/>
-        <ComboBox x:Name="cboTipo" HorizontalAlignment="Left" Margin="180,381,0,0" VerticalAlignment="Top" Width="145" AutomationProperties.IsOffscreenBehavior="Onscreen" Height="26" FontWeight="Normal" SelectionChanged="cboTipo_SelectionChanged"/>
-        <Label x:Name="label5_Copy" Content="N° Asistentes:" HorizontalAlignment="Left" Margin="66,424,0,0" VerticalAlignment="Top" Height="26" Width="88"/>
-        <TextBox x:Name="txtNumeroAsistentes" HorizontalAlignment="Left" Height="26" Margin="181,425,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="56" TextChanged="txtNumeroAsistentes_TextChanged_1" FontWeight="Normal"/>
-        <Label x:Name="label7" Content="Observaciones:" HorizontalAlignment="Left" Margin="66,476,0,0" VerticalAlignment="Top" Height="26" Width="95"/>
-        <TextBox x:Name="txtObservaciones" HorizontalAlignment="Left" Height="74" Margin="180,476,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="292" FontWeight="Normal"/>
         <Label x:Name="label5" Content="Contrato vigente:" Margin="753,-2,33,768" VerticalAlignment="Bottom" Height="33" BorderThickness="2"/>
         <RadioButton x:Name="rbSi" Content="Sí" HorizontalAlignment="Left" Margin="871,6,0,0" VerticalAlignment="Top" IsChecked="True" Height="18" Width="34" GroupName="vigente" IsEnabled="False"/>
         <RadioButton x:Name="rbNo" Content="No" HorizontalAlignment="Left" Margin="915,4,0,0" VerticalAlignment="Top" Height="22" Width="57" GroupName="vigente" IsEnabled="False" RenderTransformOrigin="0.296,0.864"/>
 
-        <Button x:Name="btnCliente" Content="Buscar" HorizontalAlignment="Left" Margin="546,141,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Click="btnCliente_Click" Height="33" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
-        <Label x:Name="lblNombreCliente" Content="" HorizontalAlignment="Left" Margin="286,183,0,0" VerticalAlignment="Top" Width="310" FontWeight="Normal" Height="26"/>
-        <Label x:Name="label5_Copy2" Content="N° Personal Adicional:" HorizontalAlignment="Left" Margin="366,424,0,0" VerticalAlignment="Top" Height="26" Width="136"/>
-        <TextBox x:Name="txtPersonalAdicional" HorizontalAlignment="Left" Height="26" Margin="513,425,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" TextChanged="txtPersonalAdicional_TextChanged_1"  FontWeight="Normal"/>
-        <Label x:Name="label" Content="SubTotal :" HorizontalAlignment="Left" Margin="694,330,0,0" VerticalAlignment="Top" Height="26" Width="66"/>
-        <Label x:Name="label_Copy" Content="Asistentes :" HorizontalAlignment="Left" Margin="694,361,0,0" VerticalAlignment="Top" Height="26" Width="74"/>
-        <Label x:Name="label_Copy3" Content="Personal Adicional :" HorizontalAlignment="Left" Margin="694,396,0,0" VerticalAlignment="Top" Height="26" Width="121"/>
-        <Label x:Name="label_Copy5" HorizontalAlignment="Left" Margin="694,421,0,0" VerticalAlignment="Top" Width="251" Height="25">
-            <Separator HorizontalAlignment="Left" Height="6" Margin="0" VerticalAlignment="Top" Width="567"/>
-        </Label>
-        <Label x:Name="label9_Copy1" Content="Valor Evento" HorizontalAlignment="Left" Margin="692,285,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="Black" Height="34" Width="121" FontSize="16" FontFamily="Segoe UI Historic" FontWeight="Bold"/>
-        <Label x:Name="label_Copy6" Content="Valor Total :" HorizontalAlignment="Left" Margin="698,441,0,0" VerticalAlignment="Top" Height="26" Width="77"/>
-        <Label x:Name="lblValorBase" Content="" HorizontalAlignment="Left" Margin="830,324,0,0" VerticalAlignment="Top" FontWeight="Normal" Height="26" Width="10"/>
-        <Label x:Name="lblAsistentes" Content="" HorizontalAlignment="Left" Margin="829,357,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblPersonalAdicional" Content="" HorizontalAlignment="Left" Margin="829,394,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblTotal" Content="" HorizontalAlignment="Left" Margin="828,441,0,0" VerticalAlignment="Top" Width="81" FontWeight="Normal" Height="26"/>
-        <Label x:Name="label_Copy7" Content="Fecha Inicio:" HorizontalAlignment="Left" Height="36" Margin="66,290,0,0" VerticalAlignment="Top" Width="122" RenderTransformOrigin="0.707,0.45">
-            <Label.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleY="-0.005"/>
-                    <RotateTransform/>
-                    <TranslateTransform Y="-0.006"/>
-                </TransformGroup>
-            </Label.RenderTransform>
-        </Label>
-        <DatePicker x:Name="dpFechaInicio"  DisplayDateStart="{x:Static sys:DateTime.Now}" SelectedDate="{x:Static sys:DateTime.Now}" HorizontalAlignment="Left" Margin="180,293,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.744,0.428" Height="26" Width="151" FontWeight="Normal"/>
-        <TextBox x:Name="txtHoraInicio" Controls:TextBoxHelper.Watermark ="HH" HorizontalAlignment="Left" Height="26" Margin="468,293,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="34" FontWeight="Normal" IsEnabled="False" />
-        <Label x:Name="label_Copy9" Content="Fecha Termino:" HorizontalAlignment="Left" Height="36" Margin="66,338,0,0" VerticalAlignment="Top" Width="118"/>
-        <Label x:Name="label2_Copy1" Content="Hora Inicio:" HorizontalAlignment="Left" Margin="362,291,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.101,0.5" Height="26" Width="74"/>
-        <TextBox x:Name="txtHoraTermino" Controls:TextBoxHelper.Watermark ="HH" HorizontalAlignment="Left" Height="26" Margin="469,339,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="34" FontWeight="Normal" IsEnabled="False"/>
-        <TextBox x:Name="txtMinutoInicio" Controls:TextBoxHelper.Watermark ="MM" HorizontalAlignment="Left" Height="26" Margin="556,293,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="39" FontWeight="Normal" IsEnabled="False"/>
-        <TextBox x:Name="txtMinutoTermino"  Controls:TextBoxHelper.Watermark ="MM" HorizontalAlignment="Left" Height="26" Margin="557,341,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="39" FontWeight="Normal" IsEnabled="False"/>
-        <Label x:Name="label2_Copy2" Content="Hora Termino:" HorizontalAlignment="Left" Margin="364,337,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.101,0.5" Height="26" Width="92"/>
-        <DatePicker x:Name="dpFechaFinEvento"  DisplayDateStart="{x:Static sys:DateTime.Now}" SelectedDate="{x:Static sys:DateTime.Now}" HorizontalAlignment="Left" Margin="180,339,0,0" VerticalAlignment="Top" Height="26" Width="151" FontWeight="Normal"/>
-        <Label x:Name="lblUf" Content="" HorizontalAlignment="Left" Margin="830,258,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label_Copy8" Content="Valor UF :" HorizontalAlignment="Left" Margin="692,254,0,0" VerticalAlignment="Top" Height="26" Width="64"/>
-
 
         <Button x:Name="btnTerminar" Content="Terminar Contrato" HorizontalAlignment="Left" Margin="488,604,0,0" VerticalAlignment="Top" Width="145" Click="btnTerminar_Click" FontWeight="Normal" Height="33" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
-        <Image x:Name="image" HorizontalAlignment="Left" Height="112" Margin="734,88,0,0" VerticalAlignment="Top" Width="133" Source="Imagenes/white_logo_transparent_background.png"/>
-
-        <Label x:Name="label_Copy1" Content="Buscar Número:" HorizontalAlignment="Left" Height="36" Margin="158,91,0,0" VerticalAlignment="Top" Width="118"/>
-        <TextBox x:Name="txtNumero"  Controls:TextBoxHelper.ClearTextButton="True" HorizontalAlignment="Left" Height="26" Margin="290,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" FontWeight="Normal"/>
-        <Button x:Name="btnBuscarContrato" Content="Buscar" HorizontalAlignment="Left" Margin="545,88,0,0" VerticalAlignment="Top" Width="76" Height="33" FontWeight="Normal" Click="btnBuscarContrato_Click_2"  Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" />
-        <Button x:Name="btnListadoNum" Content="?" HorizontalAlignment="Left" Margin="474,88,0,0" VerticalAlignment="Top" Width="48" Height="33" Click="btnListadoNum_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
-        <Label x:Name="label_Copy2" Content="Nombre:" HorizontalAlignment="Left" Height="36" Margin="158,183,0,0" VerticalAlignment="Top" Width="76"/>
-        <Label x:Name="label_Copy4" Content="Rut Cliente:" HorizontalAlignment="Left" Height="36" Margin="158,142,0,0" VerticalAlignment="Top" Width="118"/>
-        <TextBox x:Name="txtBuscarCliente" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark ="Ej: 11.111.111-1" HorizontalAlignment="Left" Height="26" Margin="290,141,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" FontWeight="Normal" />
-        <Button x:Name="btnListadoCliente" Content="?" HorizontalAlignment="Left" Margin="474,140,0,0" VerticalAlignment="Top" Width="47" Height="33" Click="btnListadoCliente_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
-
-
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="210,224,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="16" Width="0"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="112" Margin="734,74,0,0" VerticalAlignment="Top" Width="133" Source="Imagenes/white_logo_transparent_background.png"/>
         <Button x:Name="btnCrear" Content="Crear" HorizontalAlignment="Left" Margin="210,603,0,0" VerticalAlignment="Top" Width="73" Click="btnCrear_Click" FontWeight="Normal" Height="33" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
-        <Label x:Name="label1" Content="Número Contrato:" HorizontalAlignment="Left" Margin="125,24,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblNumero" Content="" HorizontalAlignment="Left" Margin="257,26,0,0" VerticalAlignment="Top" Width="166"/>
-        <GroupBox x:Name="groupBox" Header="Buscar Información" HorizontalAlignment="Left" Height="169" Margin="109,50,0,0" VerticalAlignment="Top" Width="571"/>
-        <Button x:Name="btnMasHoraInicio" Content="+" HorizontalAlignment="Left" Margin="513,290,0,0" VerticalAlignment="Top" Width="25" Height="13" Background="#CC119EDA" BorderBrush="#FF010000" BorderThickness="1" FontSize="8" FontWeight="Normal" />
-        <Button x:Name="btnMenHorInicio" Content="-" HorizontalAlignment="Left" Margin="513,310,0,0" VerticalAlignment="Top" Width="25" Height="13" Background="#CC119EDA" BorderBrush="#FF010000" BorderThickness="1" FontSize="8" FontWeight="Normal"/>
-        <Button x:Name="btnMasMinInicio" Content="+" HorizontalAlignment="Left" Margin="608,290,0,0" VerticalAlignment="Top" Width="25" Height="13" Background="#CC119EDA" BorderBrush="#FF010000" BorderThickness="1" FontSize="8" FontWeight="Normal"/>
-        <Button x:Name="btnMenosMinInicio" Content="-" HorizontalAlignment="Left" Margin="608,311,0,0" VerticalAlignment="Top" Width="25" Height="13" Background="#CC119EDA" BorderBrush="#FF010000" BorderThickness="1" FontSize="8" FontWeight="Normal"/>
-        <Button x:Name="btnMasHoraFin" Content="+" HorizontalAlignment="Left" Margin="513,335,0,0" VerticalAlignment="Top" Width="25" Height="13" Background="#CC119EDA" BorderBrush="#FF030303" BorderThickness="1" FontSize="8" FontWeight="Normal"/>
-        <Button x:Name="btnMenosHoraFin" Content="-" HorizontalAlignment="Left" Margin="513,354,0,0" VerticalAlignment="Top" Width="25" Height="13" Background="#CC119EDA" BorderBrush="#FF030303" BorderThickness="1" FontSize="8" FontWeight="Normal"/>
-        <Button x:Name="btnMasMinFin" Content="+" HorizontalAlignment="Left" Margin="608,336,0,0" VerticalAlignment="Top" Width="25" Height="13" Background="#CC119EDA" BorderBrush="#FF030303" BorderThickness="1" FontSize="8" FontWeight="Normal"/>
-        <Button x:Name="btnMenosMinFin" Content="-" HorizontalAlignment="Left" Margin="608,356,0,0" VerticalAlignment="Top" Width="25" Height="13" Background="#CC119EDA" BorderBrush="#FF010000" BorderThickness="1" FontSize="8" FontWeight="Normal"/>
-        <GroupBox x:Name="groupBox1" Header="Datos de Evento" HorizontalAlignment="Left" Height="346" Margin="47,224,0,0" VerticalAlignment="Top" Width="898"/>
+        <Label x:Name="label1" Content="Número Contrato:" HorizontalAlignment="Left" Margin="125,16,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblNumero" Content="" HorizontalAlignment="Left" Margin="257,16,0,0" VerticalAlignment="Top" Width="166"/>
+        <GroupBox x:Name="groupBox" Header="GroupBox" HorizontalAlignment="Left" Margin="99,49,0,0" VerticalAlignment="Top" Height="170" Width="598">
+            <Grid HorizontalAlignment="Left" Height="136" VerticalAlignment="Top" Width="588" Margin="0,0,0,-1.333">
+                <Button x:Name="btnCliente" Content="Buscar" HorizontalAlignment="Left" Margin="414,57,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Click="btnCliente_Click" Height="33" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
+                <Label x:Name="lblNombreCliente" Content="" HorizontalAlignment="Left" Margin="154,99,0,0" VerticalAlignment="Top" Width="310" FontWeight="Normal" Height="26"/>
+
+                <Label x:Name="label_Copy1" Content="Buscar Número:" HorizontalAlignment="Left" Height="36" Margin="26,7,0,0" VerticalAlignment="Top" Width="118"/>
+                <TextBox x:Name="txtNumero"  Controls:TextBoxHelper.ClearTextButton="True" HorizontalAlignment="Left" Height="26" Margin="158,8,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" FontWeight="Normal"/>
+                <Button x:Name="btnBuscarContrato" Content="Buscar" HorizontalAlignment="Left" Margin="413,4,0,0" VerticalAlignment="Top" Width="76" Height="33" FontWeight="Normal" Click="btnBuscarContrato_Click_2"  Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" />
+                <Button x:Name="btnListadoNum" Content="?" HorizontalAlignment="Left" Margin="342,4,0,0" VerticalAlignment="Top" Width="48" Height="33" Click="btnListadoNum_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
+                <Label x:Name="label_Copy2" Content="Nombre:" HorizontalAlignment="Left" Height="36" Margin="26,99,0,0" VerticalAlignment="Top" Width="76"/>
+                <Label x:Name="label_Copy4" Content="Rut Cliente:" HorizontalAlignment="Left" Height="36" Margin="26,58,0,0" VerticalAlignment="Top" Width="118"/>
+                <TextBox x:Name="txtBuscarCliente" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark ="Ej: 11.111.111-1" HorizontalAlignment="Left" Height="26" Margin="158,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" FontWeight="Normal" />
+                <Button x:Name="btnListadoCliente" Content="?" HorizontalAlignment="Left" Margin="342,56,0,0" VerticalAlignment="Top" Width="47" Height="33" Click="btnListadoCliente_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="groupBox1" Header="GroupBox" HorizontalAlignment="Left" Height="356" Margin="58,224,0,0" VerticalAlignment="Top" Width="880">
+            <Grid HorizontalAlignment="Left" Height="306" Margin="5,10,0,0" VerticalAlignment="Top" Width="860">
+                <Label x:Name="label6" Content="Tipo Evento:" HorizontalAlignment="Left" Margin="12,125,0,0" VerticalAlignment="Top" Height="26" Width="82"/>
+                <ComboBox x:Name="cboTipo" HorizontalAlignment="Left" Margin="126,125,0,0" VerticalAlignment="Top" Width="145" AutomationProperties.IsOffscreenBehavior="Onscreen" Height="26" FontWeight="Normal" SelectionChanged="cboTipo_SelectionChanged"/>
+                <Label x:Name="label5_Copy" Content="N° Asistentes:" HorizontalAlignment="Left" Margin="12,168,0,0" VerticalAlignment="Top" Height="26" Width="88"/>
+                <TextBox x:Name="txtNumeroAsistentes" HorizontalAlignment="Left" Height="26" Margin="127,169,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="56" TextChanged="txtNumeroAsistentes_TextChanged_1" FontWeight="Normal"/>
+                <Label x:Name="label7" Content="Observaciones:" HorizontalAlignment="Left" Margin="12,220,0,0" VerticalAlignment="Top" Height="26" Width="95"/>
+                <TextBox x:Name="txtObservaciones" HorizontalAlignment="Left" Height="74" Margin="126,220,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="292" FontWeight="Normal"/>
+                <Label x:Name="label5_Copy2" Content="N° Personal Adicional:" HorizontalAlignment="Left" Margin="312,168,0,0" VerticalAlignment="Top" Height="26" Width="136"/>
+                <TextBox x:Name="txtPersonalAdicional" HorizontalAlignment="Left" Height="26" Margin="459,169,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" TextChanged="txtPersonalAdicional_TextChanged_1"  FontWeight="Normal"/>
+                <Label x:Name="label" Content="SubTotal :" HorizontalAlignment="Left" Margin="640,74,0,0" VerticalAlignment="Top" Height="26" Width="66"/>
+                <Label x:Name="label_Copy" Content="Asistentes :" HorizontalAlignment="Left" Margin="640,105,0,0" VerticalAlignment="Top" Height="26" Width="74"/>
+                <Label x:Name="label_Copy3" Content="Personal Adicional :" HorizontalAlignment="Left" Margin="640,140,0,0" VerticalAlignment="Top" Height="26" Width="121"/>
+                <Label x:Name="label_Copy5" HorizontalAlignment="Left" Margin="640,165,-31,0" VerticalAlignment="Top" Width="251" Height="25">
+                    <Separator HorizontalAlignment="Left" Height="6" Margin="0" VerticalAlignment="Top" Width="567"/>
+                </Label>
+                <Label x:Name="label9_Copy1" Content="Valor Evento" HorizontalAlignment="Left" Margin="638,29,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="Black" Height="34" Width="121" FontSize="16" FontFamily="Segoe UI Historic" FontWeight="Bold"/>
+                <Label x:Name="label_Copy6" Content="Valor Total :" HorizontalAlignment="Left" Margin="644,185,0,0" VerticalAlignment="Top" Height="26" Width="77"/>
+                <Label x:Name="lblValorBase" Content="" HorizontalAlignment="Left" Margin="776,68,0,0" VerticalAlignment="Top" FontWeight="Normal" Height="26" Width="10"/>
+                <Label x:Name="lblAsistentes" Content="" HorizontalAlignment="Left" Margin="775,101,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="lblPersonalAdicional" Content="" HorizontalAlignment="Left" Margin="775,138,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="lblTotal" Content="" HorizontalAlignment="Left" Margin="774,185,0,0" VerticalAlignment="Top" Width="81" FontWeight="Normal" Height="26"/>
+                <Label x:Name="label_Copy7" Content="Fecha Inicio:" HorizontalAlignment="Left" Height="36" Margin="12,34,0,0" VerticalAlignment="Top" Width="122" RenderTransformOrigin="0.707,0.45">
+                    <Label.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform AngleY="-0.005"/>
+                            <RotateTransform/>
+                            <TranslateTransform Y="-0.006"/>
+                        </TransformGroup>
+                    </Label.RenderTransform>
+                </Label>
+                <DatePicker x:Name="dpFechaInicio"  DisplayDateStart="{x:Static sys:DateTime.Now}" SelectedDate="{x:Static sys:DateTime.Now}" HorizontalAlignment="Left" Margin="126,37,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.744,0.428" Height="26" Width="151" FontWeight="Normal"/>
+                <TextBox x:Name="txtHoraInicio" Controls:TextBoxHelper.Watermark ="HH" HorizontalAlignment="Left" Height="26" Margin="414,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="34" FontWeight="Normal" IsEnabled="False" />
+                <Label x:Name="label_Copy9" Content="Fecha Termino:" HorizontalAlignment="Left" Height="36" Margin="12,82,0,0" VerticalAlignment="Top" Width="118"/>
+                <Label x:Name="label2_Copy1" Content="Hora Inicio:" HorizontalAlignment="Left" Margin="308,35,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.101,0.5" Height="26" Width="74"/>
+                <TextBox x:Name="txtHoraTermino" Controls:TextBoxHelper.Watermark ="HH" HorizontalAlignment="Left" Height="26" Margin="415,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="34" FontWeight="Normal" IsEnabled="False"/>
+                <TextBox x:Name="txtMinutoInicio" Controls:TextBoxHelper.Watermark ="MM" HorizontalAlignment="Left" Height="26" Margin="502,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="39" FontWeight="Normal" IsEnabled="False"/>
+                <TextBox x:Name="txtMinutoTermino"  Controls:TextBoxHelper.Watermark ="MM" HorizontalAlignment="Left" Height="26" Margin="503,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="39" FontWeight="Normal" IsEnabled="False"/>
+                <Label x:Name="label2_Copy2" Content="Hora Termino:" HorizontalAlignment="Left" Margin="310,81,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.101,0.5" Height="26" Width="92"/>
+                <DatePicker x:Name="dpFechaFinEvento"  DisplayDateStart="{x:Static sys:DateTime.Now}" SelectedDate="{x:Static sys:DateTime.Now}" HorizontalAlignment="Left" Margin="126,83,0,0" VerticalAlignment="Top" Height="26" Width="151" FontWeight="Normal"/>
+                <Label x:Name="lblUf" Content="" HorizontalAlignment="Left" Margin="776,2,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="label_Copy8" Content="Valor UF :" HorizontalAlignment="Left" Margin="638,-2,0,0" VerticalAlignment="Top" Height="26" Width="64"/>
+
+
+                <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="156,-32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="16" Width="0"/>
+                <Button x:Name="btnMasHoraInicio" Content="+" HorizontalAlignment="Left" Margin="459,34,0,0" VerticalAlignment="Top" Width="25" Height="13" Background="#CC119EDA" BorderBrush="#FF010000" BorderThickness="1" FontSize="8" FontWeight="Normal" />
+                <Button x:Name="btnMenHorInicio" Content="-" HorizontalAlignment="Left" Margin="459,54,0,0" VerticalAlignment="Top" Width="25" Height="13" Background="#CC119EDA" BorderBrush="#FF010000" BorderThickness="1" FontSize="8" FontWeight="Normal"/>
+                <Button x:Name="btnMasMinInicio" Content="+" HorizontalAlignment="Left" Margin="554,34,0,0" VerticalAlignment="Top" Width="25" Height="13" Background="#CC119EDA" BorderBrush="#FF010000" BorderThickness="1" FontSize="8" FontWeight="Normal"/>
+                <Button x:Name="btnMenosMinInicio" Content="-" HorizontalAlignment="Left" Margin="554,55,0,0" VerticalAlignment="Top" Width="25" Height="13" Background="#CC119EDA" BorderBrush="#FF010000" BorderThickness="1" FontSize="8" FontWeight="Normal"/>
+                <Button x:Name="btnMasHoraFin" Content="+" HorizontalAlignment="Left" Margin="459,79,0,0" VerticalAlignment="Top" Width="25" Height="13" Background="#CC119EDA" BorderBrush="#FF030303" BorderThickness="1" FontSize="8" FontWeight="Normal"/>
+                <Button x:Name="btnMenosHoraFin" Content="-" HorizontalAlignment="Left" Margin="459,98,0,0" VerticalAlignment="Top" Width="25" Height="13" Background="#CC119EDA" BorderBrush="#FF030303" BorderThickness="1" FontSize="8" FontWeight="Normal"/>
+                <Button x:Name="btnMasMinFin" Content="+" HorizontalAlignment="Left" Margin="554,80,0,0" VerticalAlignment="Top" Width="25" Height="13" Background="#CC119EDA" BorderBrush="#FF030303" BorderThickness="1" FontSize="8" FontWeight="Normal"/>
+                <Button x:Name="btnMenosMinFin" Content="-" HorizontalAlignment="Left" Margin="554,100,0,0" VerticalAlignment="Top" Width="25" Height="13" Background="#CC119EDA" BorderBrush="#FF010000" BorderThickness="1" FontSize="8" FontWeight="Normal"/>
+            </Grid>
+        </GroupBox>
 
     </Grid>
 </Controls:MetroWindow>
