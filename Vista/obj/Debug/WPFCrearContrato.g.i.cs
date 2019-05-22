@@ -390,7 +390,7 @@ namespace Vista {
         
         #line 100 "..\..\WPFCrearContrato.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.TextBox txtHoraInicio;
+        internal System.Windows.Controls.Label label_Copy9;
         
         #line default
         #line hidden
@@ -398,7 +398,7 @@ namespace Vista {
         
         #line 101 "..\..\WPFCrearContrato.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Label label_Copy9;
+        internal System.Windows.Controls.DatePicker dpFechaFinEvento;
         
         #line default
         #line hidden
@@ -406,7 +406,7 @@ namespace Vista {
         
         #line 102 "..\..\WPFCrearContrato.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Label label2_Copy1;
+        internal System.Windows.Controls.Label lblUf;
         
         #line default
         #line hidden
@@ -414,23 +414,7 @@ namespace Vista {
         
         #line 103 "..\..\WPFCrearContrato.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.TextBox txtHoraTermino;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 104 "..\..\WPFCrearContrato.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.TextBox txtMinutoInicio;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 105 "..\..\WPFCrearContrato.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.TextBox txtMinutoTermino;
+        internal System.Windows.Controls.Label label_Copy8;
         
         #line default
         #line hidden
@@ -438,103 +422,7 @@ namespace Vista {
         
         #line 106 "..\..\WPFCrearContrato.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Label label2_Copy2;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 107 "..\..\WPFCrearContrato.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.DatePicker dpFechaFinEvento;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 108 "..\..\WPFCrearContrato.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Label lblUf;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 109 "..\..\WPFCrearContrato.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Label label_Copy8;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 112 "..\..\WPFCrearContrato.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBlock textBlock;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 113 "..\..\WPFCrearContrato.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Button btnMasHoraInicio;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 114 "..\..\WPFCrearContrato.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Button btnMenHorInicio;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 115 "..\..\WPFCrearContrato.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Button btnMasMinInicio;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 116 "..\..\WPFCrearContrato.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Button btnMenosMinInicio;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 117 "..\..\WPFCrearContrato.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Button btnMasHoraFin;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 118 "..\..\WPFCrearContrato.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Button btnMenosHoraFin;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 119 "..\..\WPFCrearContrato.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Button btnMasMinFin;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 120 "..\..\WPFCrearContrato.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Button btnMenosMinFin;
         
         #line default
         #line hidden
@@ -771,61 +659,19 @@ namespace Vista {
             this.dpFechaInicio = ((System.Windows.Controls.DatePicker)(target));
             return;
             case 44:
-            this.txtHoraInicio = ((System.Windows.Controls.TextBox)(target));
-            return;
-            case 45:
             this.label_Copy9 = ((System.Windows.Controls.Label)(target));
             return;
-            case 46:
-            this.label2_Copy1 = ((System.Windows.Controls.Label)(target));
-            return;
-            case 47:
-            this.txtHoraTermino = ((System.Windows.Controls.TextBox)(target));
-            return;
-            case 48:
-            this.txtMinutoInicio = ((System.Windows.Controls.TextBox)(target));
-            return;
-            case 49:
-            this.txtMinutoTermino = ((System.Windows.Controls.TextBox)(target));
-            return;
-            case 50:
-            this.label2_Copy2 = ((System.Windows.Controls.Label)(target));
-            return;
-            case 51:
+            case 45:
             this.dpFechaFinEvento = ((System.Windows.Controls.DatePicker)(target));
             return;
-            case 52:
+            case 46:
             this.lblUf = ((System.Windows.Controls.Label)(target));
             return;
-            case 53:
+            case 47:
             this.label_Copy8 = ((System.Windows.Controls.Label)(target));
             return;
-            case 54:
+            case 48:
             this.textBlock = ((System.Windows.Controls.TextBlock)(target));
-            return;
-            case 55:
-            this.btnMasHoraInicio = ((System.Windows.Controls.Button)(target));
-            return;
-            case 56:
-            this.btnMenHorInicio = ((System.Windows.Controls.Button)(target));
-            return;
-            case 57:
-            this.btnMasMinInicio = ((System.Windows.Controls.Button)(target));
-            return;
-            case 58:
-            this.btnMenosMinInicio = ((System.Windows.Controls.Button)(target));
-            return;
-            case 59:
-            this.btnMasHoraFin = ((System.Windows.Controls.Button)(target));
-            return;
-            case 60:
-            this.btnMenosHoraFin = ((System.Windows.Controls.Button)(target));
-            return;
-            case 61:
-            this.btnMasMinFin = ((System.Windows.Controls.Button)(target));
-            return;
-            case 62:
-            this.btnMenosMinFin = ((System.Windows.Controls.Button)(target));
             return;
             }
             this._contentLoaded = true;
