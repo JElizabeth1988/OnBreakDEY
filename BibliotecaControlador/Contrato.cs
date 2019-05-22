@@ -15,7 +15,7 @@ namespace BibliotecaNegocio
         private DateTime _creacion;
         private DateTime _termino;
         private String _rutCliente;
-        public int IdModalidad { get; set; }
+        public string IdModalidad { get; set; }
         public int IdTipoEvento { get; set; }
         private DateTime _fechaHoraInicio;
         private DateTime _fechaHoraTermino;
@@ -346,7 +346,7 @@ namespace BibliotecaNegocio
                             Creacion = con.Creacion,
                             Termino = con.Termino,
                             RutCliente = con.RutCliente,
-                            IdModalidad = int.Parse(mod.IdModalidad),
+                            IdModalidad = mod.IdModalidad,//ESTÁ BIEN ASÍ?
                             IdTipoEvento =con.IdTipoEvento,
                             FechaHoraInicio = con.FechaHoraInicio,
                             FechaHoraTermino = con.FechaHoraTermino,
