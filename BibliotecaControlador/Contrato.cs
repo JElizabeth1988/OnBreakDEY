@@ -470,14 +470,14 @@ namespace BibliotecaNegocio
         }
 
         //Filtro tipo evento
-        public List<ListaContratos> FiltroTipoEvento(TipoEvento evento)
+        public List<ListaContratos> FiltroTipoEvento(string tipo)
         {
             var co = from con in bdd.Contrato
                      join modal in bdd.ModalidadServicio
                        on con.IdModalidad equals modal.IdModalidad
                      join tip in bdd.TipoEvento
                        on con.IdTipoEvento equals tip.IdTipoEvento
-                     where tip.Descripcion == evento.Descripcion
+                     where tip.Descripcion == tipo
                      select new ListaContratos()
                      {
                          Numero = con.Numero,

@@ -189,7 +189,7 @@ namespace Vista
             {
                 TipoEvento tipoE = (TipoEvento)cbofilTipoContrato.SelectedItem;
 
-                List<ListaContratos> lf = new Contrato().FiltroTipoEvento(tipoE);
+                List<ListaContratos> lf = new Contrato().FiltroTipoEvento(tipoE.Descripcion);
                 dgvLista.ItemsSource = lf;
             }
             catch (Exception ex)
@@ -211,15 +211,19 @@ namespace Vista
             }
 
 
-            if (cc.btnModificar.Visibility == Visibility.Hidden)
+            if (cc==null)
             {
-                cc.btnModificar.Visibility = Visibility.Hidden;
-
+                Contrato con = (Contrato)dgvLista.SelectedItem;
+                cc.txtNumero.Text = con.Numero;
+                cc.BuscarContrato();
             }
-            Contrato con = (Contrato)dgvLista.SelectedItem;
-            cc.txtNumero.Text = con.Numero;
-            cc.BuscarContrato();
-            cc.btnModificar.Visibility = Visibility.Visible;
+            else
+            {
+                Contrato con = (Contrato)dgvLista.SelectedItem;
+                cc.txtNumero.Text = con.Numero;
+                cc.BuscarContrato();
+            }
+            Close();
 
         }
     }
