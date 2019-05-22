@@ -39,7 +39,7 @@ namespace Vista
             btnTerminar.Visibility = Visibility.Hidden;
             btnModificar.Visibility = Visibility.Hidden;
 
-            //llenar el combo box con los datos del enumerador
+            //LLENAR COMBO BOX TIPO EVENTO
             foreach (TipoEvento item in new TipoEvento().ReadAll())
             {
                 comboBoxItem cb = new comboBoxItem();
@@ -52,15 +52,33 @@ namespace Vista
                 comboBoxItem cb = new comboBoxItem();
                 cb.id = item.Id;
                 cb.descripcion = item.Descripcion;
+                cboTipo.Items.Add(cb);
+            }
+           
+
+            //LLENAR CB MODALIDAD SERVICIO
+
+            foreach (ModalidadServicio item in new ModalidadServicio().ReadAll())
+            {
+                comboBoxItem cb = new comboBoxItem();
+                cb.id = item.Id;
+                cb.descripcion = item.Nombre;
+                cboTipo.Items.Add(cb);
+            }
+            foreach (ModalidadServicio item in new ModalidadServicio().ReadAll())
+            {
+                comboBoxItem cb = new comboBoxItem();
+                cb.id = item.Id;
+                cb.descripcion = item.Nombre;
                 cboTipo.Items.Add(cb);
             }
 
         }
-        
-        //DateTime fechaC = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
 
 
 
+        DateTime fechac = DateTime.Now;
+        DateTime fechat = DateTime.Now;
         //CREAR CONTRATO
         private async void btnCrear_Click(object sender, RoutedEventArgs e)
         {
@@ -68,82 +86,32 @@ namespace Vista
             {
                 if (dpFechaInicio.SelectedDate <= dpFechaFinEvento.SelectedDate)
                 {
+                   
                     String numero = lblNumero.Content.ToString();
-                    DateTime creacion = fechaC;
+                    DateTime creacion = fechac;
                     bool realizado ;
-                    String termino;
+                    DateTime termino;
                     if (rbSi.IsChecked == true)
                     {
                         realizado = false;
-                        termino = "Aún Vigente";
+                        termino = DateTime.MinValue;
 
                     }
                     else
                     {
                         realizado = true;
-                        termino = DateTime.Now.ToString("dd/MM/yyyy HH:mm"); ;
-
-
+                        termino = fechat; 
 
                     }
-
 
 
                     //EVENTO
 
                     //inicio
-                    String fechaInicioEvento = dpFechaInicio.Text;
-                    int horaInicio = 0;
-                    if (int.TryParse(txtHoraInicio.Text, out horaInicio))
-                    {
+                    DateTime fechaHoraInicio = dpFechaInicio1.recuperar();
 
-                    }
-                    else
-                    {
-                        await this.ShowMessageAsync("Mensaje:",
-                          string.Format("Ingrese sólo números"));
-                        txtHoraInicio.Focus();
-                        return;
-                    }
-                    int minutoInicio = 0;
-                    if (int.TryParse(txtMinutoInicio.Text, out minutoInicio))
-                    {
-
-                    }
-                    else
-                    {
-                        await this.ShowMessageAsync("Mensaje:",
-                          string.Format("Ingrese sólo números"));
-                        txtMinutoInicio.Focus();
-                        return;
-                    }
-                    //termino
-                    String fechaFinEvento = dpFechaFinEvento.Text;
-                    int horaTermino = 0;
-                    if (int.TryParse(txtHoraTermino.Text, out horaTermino))
-                    {
-
-                    }
-                    else
-                    {
-                        await this.ShowMessageAsync("Mensaje:",
-                          string.Format("Ingrese sólo números"));
-                        txtHoraTermino.Focus();
-                        return;
-                    }
-                    int minutoTermino= 0;
-                    if (int.TryParse(txtMinutoTermino.Text, out minutoTermino))
-                    {
-
-                    }
-                    else
-                    {
-                        await this.ShowMessageAsync("Mensaje:",
-                          string.Format("Ingrese sólo números"));
-                        txtMinutoTermino.Focus();
-                        return;
-                    }
-                    
+                    DateTime fechaHoraTermino = dpFechaTermino.recuperar();
+                 
 
                     //////
              
@@ -185,18 +153,14 @@ namespace Vista
                         Creacion = creacion,
                         Termino = termino,
                         RutCliente = rutCliente,
-                        IdModalidad=,
+                        IdModalidad= ,
                         IdTipoEvento =evento,
-                        FechaHoraInicio = fechaInicioEvento,
-                       // HoraInicio = horaInicio,
-                        //MinutoInicio = minutoInicio,
-                        FechaHoraTermino = fechaFinEvento,
-                        //HoraTermino = horaTermino,
-                        //MinutoTermino = minutoTermino,
+                        FechaHoraInicio = fechaHoraInicio,
+                        FechaHoraTermino = fechaHoraTermino,
                         Asistentes = asistentes,
                         PersonalAdicional = personalAdicional,
                         Realizado = realizado,
-                        ValorTotalContrato=,
+                       // ValorTotalContrato=,
                         Observaciones = observaciones,
                         
                     };
@@ -226,7 +190,7 @@ namespace Vista
                 Logger.Mensaje(ex.Message);
             }
 
-            fechaC = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
+           
 
 
         }
@@ -247,10 +211,8 @@ namespace Vista
 
             dpFechaInicio.SelectedDate = null;
             dpFechaFinEvento.SelectedDate = null;
-            txtHoraInicio.Clear();
-            txtMinutoInicio.Clear();
-            txtHoraTermino.Clear();
-            txtMinutoTermino.Clear();
+            //dpFechaInicio1.ClearValue(DatePicker);
+           // dpFechaTermino.ClearValue(DatePicker);
             cboTipo.SelectedItem = 0;
 
             txtNumeroAsistentes.Clear();
@@ -274,12 +236,12 @@ namespace Vista
                 //EVENTO
                 //inicio
                 dpFechaInicio.IsEnabled = true;
-                txtHoraInicio.IsEnabled = true;
-                txtMinutoInicio.IsEnabled = true;
+               // txtHoraInicio.IsEnabled = true;
+                //txtMinutoInicio.IsEnabled = true;
                 //termino
                 dpFechaFinEvento.IsEnabled = true;
-                txtHoraTermino.IsEnabled = true;
-                txtMinutoTermino.IsEnabled = true;
+                //txtHoraTermino.IsEnabled = true;
+                //txtMinutoTermino.IsEnabled = true;
                 //////
                 txtNumeroAsistentes.IsEnabled = true;
                 txtPersonalAdicional.IsEnabled = true;
@@ -326,12 +288,12 @@ namespace Vista
                 //EVENTO
                 //inicio
                 dpFechaInicio.IsEnabled = true;
-                txtHoraInicio.IsEnabled = true;
-                txtMinutoInicio.IsEnabled = true;
+               // txtHoraInicio.IsEnabled = true;
+                //txtMinutoInicio.IsEnabled = true;
                 //termino
                 dpFechaFinEvento.IsEnabled = true;
-                txtHoraTermino.IsEnabled = true;
-                txtMinutoTermino.IsEnabled = true;
+               // txtHoraTermino.IsEnabled = true;
+                //txtMinutoTermino.IsEnabled = true;
                 //////
        
                 txtNumeroAsistentes.IsEnabled = true;
@@ -360,10 +322,6 @@ namespace Vista
                     txtBuscarCliente.Text = c.RutCliente;
                     dpFechaInicio.Text = c.FechaHoraInicio.ToString();
                     dpFechaFinEvento.Text = c.FechaHoraTermino.ToString();
-                    //txtHoraInicio.Text = c.HoraInicio.ToString();
-                    //txtMinutoInicio.Text = c.MinutoInicio.ToString();
-                    //txtHoraTermino.Text = c.HoraTermino.ToString();
-                    //txtMinutoTermino.Text = c.MinutoTermino.ToString();
                     txtNumeroAsistentes.Text = c.Asistentes.ToString();
                     txtPersonalAdicional.Text = c.PersonalAdicional.ToString();
                     cboTipo.Text = c.IdTipoEvento.ToString();
@@ -511,19 +469,19 @@ namespace Vista
                 if (dpFechaInicio.SelectedDate <= dpFechaFinEvento.SelectedDate)
                 {
                     String numero = lblNumero.Content.ToString();
-                    String creacion = fechaC;
+                    DateTime creacion = fechac;
                     bool realizado;
-                    String termino;
+                    DateTime termino;
                     if (rbSi.IsChecked == true)
                     {
                         realizado = false;
-                        termino = "Aún Vigente";
+                        termino = DateTime.MinValue;
 
                     }
                     else
                     {
                         realizado = true;
-                        termino = DateTime.Now.ToString("dd/MM/yyyy HH:mm"); ;
+                        termino = fechat ;
 
 
 
@@ -534,7 +492,7 @@ namespace Vista
                     //EVENTO
 
                     //inicio
-                    String fechaInicioEvento = dpFechaInicio.Text;
+                    /*String fechaInicioEvento = dpFechaInicio.Text;
                     int horaInicio = 0;
                     if (int.TryParse(txtHoraInicio.Text, out horaInicio))
                     {
@@ -585,7 +543,7 @@ namespace Vista
                         txtMinutoTermino.Focus();
                         return;
                     }
-
+                    */
 
                     //////
 
@@ -627,18 +585,14 @@ namespace Vista
                         Creacion = creacion,
                         Termino = termino,
                         RutCliente = rutCliente,
-                        IdModalidad =,
+                       // IdModalidad =,
                         IdTipoEvento = evento,
-                        FechaHoraInicio = fechaInicioEvento,
-                        // HoraInicio = horaInicio,
-                        //MinutoInicio = minutoInicio,
-                        FechaHoraTermino = fechaFinEvento,
-                        //HoraTermino = horaTermino,
-                        //MinutoTermino = minutoTermino,
+                        FechaHoraInicio = dpFechaInicio1.recuperar(),
+                        FechaHoraTermino = dpFechaTermino.recuperar(),
                         Asistentes = asistentes,
                         PersonalAdicional = personalAdicional,
                         Realizado = realizado,
-                        ValorTotalContrato =,
+                       // ValorTotalContrato =,
                         Observaciones = observaciones,
                     };
 
@@ -677,9 +631,9 @@ namespace Vista
                 {
 
                     String numero = lblNumero.Content.ToString();
-                    String creacion = fechaC;
+                    DateTime creacion = fechac;
                     bool realizado = true;
-                    String termino = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
+                    DateTime termino = fechat;
                     rbNo.IsChecked = true;
                     rbSi.IsChecked = false;
 
@@ -688,13 +642,11 @@ namespace Vista
                     //EVENTO
 
                     //inicio
-                    String fechaInicioEvento = dpFechaInicio.Text;
-                    int horaInicio = int.Parse(txtHoraInicio.Text);
-                    int minutoInicio = int.Parse(txtMinutoInicio.Text);
+                    DateTime fechaHoraInicio= dpFechaInicio1.recuperar();
+
                     //termino
-                    String fechaFinEvento = dpFechaFinEvento.Text;
-                    int horaTermino = int.Parse(txtHoraTermino.Text);
-                    int minutoTermino = int.Parse(txtMinutoTermino.Text);
+                    DateTime fechaFinTermino = dpFechaTermino.recuperar();
+                    
 
                     //////
                     int asistentes = int.Parse(txtNumeroAsistentes.Text);
@@ -714,18 +666,14 @@ namespace Vista
                         Creacion = creacion,
                         Termino = termino,
                         RutCliente = rutCliente,
-                        IdModalidad = ,
+                       // IdModalidad = ,
                         IdTipoEvento = evento,
-                        FechaHoraInicio = fechaInicioEvento,
-                        // HoraInicio = horaInicio,
-                        //MinutoInicio = minutoInicio,
-                        FechaHoraTermino = fechaFinEvento,
-                        //HoraTermino = horaTermino,
-                        //MinutoTermino = minutoTermino,
+                        FechaHoraInicio = fechaHoraInicio,
+                        FechaHoraTermino = fechaFinTermino,
                         Asistentes = asistentes,
                         PersonalAdicional = personalAdicional,
                         Realizado = realizado,
-                        ValorTotalContrato =,
+                       // ValorTotalContrato =,
                         Observaciones = observaciones,
                     };
 
@@ -740,7 +688,7 @@ namespace Vista
 
 
 
-                    //EVENTO
+                    /*EVENTO
 
                     //inicio
                     dpFechaInicio.IsEnabled = false;
@@ -757,7 +705,7 @@ namespace Vista
                     cboTipo.IsEnabled = false;
                     txtObservaciones.IsEnabled = false;
                     txtBuscarCliente.IsEnabled = false;
-
+                    */
 
 
                     //METODO AGREGAR DEVUELVE BOOLEAN POR ESO SE CREA VARIABLE BOOLEANA resp

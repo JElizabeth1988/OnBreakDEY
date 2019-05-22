@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using BibliotecaDALC;
 
-namespace BibliotecaControlador
+namespace BibliotecaNegocio
 {
     public class ModalidadServicio
     {
-        public int Id { get; set; }
+        public string Id { get; set; }
         public int IdtipoEvento { get; set; }//foranea
 
         public string Nombre { get; set; }
@@ -26,7 +26,7 @@ namespace BibliotecaControlador
             {
                 BibliotecaDALC.ModalidadServicio tipo = bdd.ModalidadServicio
                 .First(t => t.Nombre.Equals(Nombre));
-                Id = int.Parse(tipo.IdModalidad);
+                Id = tipo.IdModalidad;
                 return true;
             }
             catch (Exception ex)
@@ -34,23 +34,29 @@ namespace BibliotecaControlador
                 return false;
             }
         }
+
+        //ReadAll
         public List<ModalidadServicio> ReadAll()
         {
             try
             {
-                List<ModalidadServicio> lista = new List<ModalidadServicio>();
-                var lista_tipo_bdd = bdd.ModalidadServicio.ToList();
-                foreach (BibliotecaDALC.ModalidadServicio item in lista_tipo_bdd)
-                {
-                    ModalidadServicio tipo = new ModalidadServicio();
-                    tipo.Id = int.Parse(item.IdModalidad);
-                    tipo.Nombre = item.Nombre;
-                    lista.Add(tipo);
-                }
-                return lista;
+                var c = from mod in bdd.ModalidadServicio
+                        join tip in bdd.TipoEvento
+                        on mod.IdTipoEvento equals tip.IdTipoEvento
+                        select new ModalidadServicio()
+                        {
+                            Id=mod.IdModalidad,
+                            IdtipoEvento = tip.IdTipoEvento,
+                            Nombre = mod.Nombre,
+                            ValorBase = mod.ValorBase,
+                            PersonalBase = mod.PersonalBase,
+                        };
+                return c.ToList();
+
             }
             catch (Exception ex)
             {
+
                 return null;
             }
         }
