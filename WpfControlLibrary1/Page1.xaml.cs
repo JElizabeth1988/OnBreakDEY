@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Vista
+namespace WpfControlLibrary1
 {
     /// <summary>
-    /// Lógica de interacción para UserControl1.xaml
+    /// Lógica de interacción para Page1.xaml
     /// </summary>
-    public partial class UserControl1 : Page
+    public partial class Page1 : Page
     {
-        public UserControl1()
+        public Page1()
         {
             InitializeComponent();
         }

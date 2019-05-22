@@ -1,4 +1,4 @@
-﻿<Controls:MetroWindow x:Class="Vista.Crear_Contrato"
+﻿<Controls:MetroWindow
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -11,6 +11,7 @@
         xmlns:sys="clr-namespace:System;assembly=mscorlib"              
                       
         xmlns:local="clr-namespace:Vista"
+        xmlns:WpfControlLibrary1="clr-namespace:WpfControlLibrary1;assembly=WpfControlLibrary1" x:Class="Vista.Crear_Contrato"
         mc:Ignorable="d"
         Title="OnBreak - Administrar Contrato" Height="714.335" Width="1006.628" WindowStartupLocation="CenterScreen" FontWeight="Bold" WindowTitleBrush="Black" Icon="Imagenes/white_logo_dark_background.jpg" ResizeMode="NoResize">
     <Grid Margin="0,0,-1,-80" Background="#FF88D7F9" Height="765" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
@@ -29,7 +30,7 @@
         <Grid.RowDefinitions>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Rectangle Fill="#CC119EDA" HorizontalAlignment="Left" Height="34" Margin="753,-4,0,0" Stroke="#FFA0A0A0" VerticalAlignment="Top" Width="214"/>
+        <Rectangle Fill="#CC119EDA" HorizontalAlignment="Left" Height="34" Margin="753,-2,0,0" Stroke="#FFA0A0A0" VerticalAlignment="Top" Width="214"/>
 
 
 
@@ -65,13 +66,13 @@
             </Grid>
         </GroupBox>
         <GroupBox x:Name="groupBox1" Header="Datos de evento" HorizontalAlignment="Left" Height="419" Margin="65,224,0,0" VerticalAlignment="Top" Width="880">
-            <Grid HorizontalAlignment="Left" Height="306" Margin="5,10,0,0" VerticalAlignment="Top" Width="860">
+            <Grid HorizontalAlignment="Left" Height="306" VerticalAlignment="Top" Width="860">
                 <Label x:Name="label6" Content="Tipo Evento:" HorizontalAlignment="Left" Margin="12,125,0,0" VerticalAlignment="Top" Height="26" Width="82"/>
                 <ComboBox x:Name="cboTipo" HorizontalAlignment="Left" Margin="126,125,0,0" VerticalAlignment="Top" Width="145" AutomationProperties.IsOffscreenBehavior="Onscreen" Height="26" FontWeight="Normal" SelectionChanged="cboTipo_SelectionChanged"/>
                 <Label x:Name="label5_Copy" Content="N° Asistentes:" HorizontalAlignment="Left" Margin="12,168,0,0" VerticalAlignment="Top" Height="26" Width="88"/>
                 <TextBox x:Name="txtNumeroAsistentes" HorizontalAlignment="Left" Height="26" Margin="127,169,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="56" TextChanged="txtNumeroAsistentes_TextChanged_1" FontWeight="Normal"/>
                 <Label x:Name="label7" Content="Observaciones:" HorizontalAlignment="Left" Margin="12,298,0,-18" VerticalAlignment="Top" Height="26" Width="95"/>
-                <TextBox x:Name="txtObservaciones" HorizontalAlignment="Left" Height="74" Margin="126,276,0,-44" TextWrapping="Wrap" VerticalAlignment="Top" Width="292" FontWeight="Normal"/>
+                <TextBox x:Name="txtObservaciones" HorizontalAlignment="Left" Height="74" Margin="126,302,0,-70" TextWrapping="Wrap" VerticalAlignment="Top" Width="292" FontWeight="Normal"/>
                 <Label x:Name="label5_Copy2" Content="N° Personal Adicional:" HorizontalAlignment="Left" Margin="312,168,0,0" VerticalAlignment="Top" Height="26" Width="136"/>
                 <TextBox x:Name="txtPersonalAdicional" HorizontalAlignment="Left" Height="26" Margin="459,169,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" TextChanged="txtPersonalAdicional_TextChanged_1"  FontWeight="Normal"/>
                 <Label x:Name="label" Content="SubTotal :" HorizontalAlignment="Left" Margin="640,74,0,0" VerticalAlignment="Top" Height="26" Width="66"/>
@@ -104,8 +105,13 @@
 
 
                 <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="156,-32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="16" Width="0"/>
+                <WpfControlLibrary1:UserControl1 x:Name="dpFechaInicio1" HorizontalAlignment="Left" Margin="94,200,0,0" VerticalAlignment="Top" Width="388"/>
             </Grid>
         </GroupBox>
+        <Label x:Name="label2" Content="Contrato Vigente" HorizontalAlignment="Left" Margin="762,0,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label3" Content="Inicio" HorizontalAlignment="Left" Margin="87,471,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.471,-0.113"/>
+        <WpfControlLibrary1:UserControl1 x:Name="dpFechaTermino" HorizontalAlignment="Left" Margin="164,499,0,0" VerticalAlignment="Top" Width="368"/>
+        <Label x:Name="label3_Copy" Content="Termino" HorizontalAlignment="Left" Margin="87,516,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.471,-0.113"/>
 
     </Grid>
 </Controls:MetroWindow>

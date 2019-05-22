@@ -57,7 +57,6 @@ namespace Vista
 
         }
         
-        //DateTime fechaC = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
 
 
 
@@ -69,19 +68,19 @@ namespace Vista
                 if (dpFechaInicio.SelectedDate <= dpFechaFinEvento.SelectedDate)
                 {
                     String numero = lblNumero.Content.ToString();
-                    DateTime creacion = fechaC;
+                    DateTime creacion = DateTime.Now;
                     bool realizado ;
-                    String termino;
+                    DateTime termino;
                     if (rbSi.IsChecked == true)
                     {
                         realizado = false;
-                        termino = "Aún Vigente";
+                        termino = DateTime.MinValue;
 
                     }
                     else
                     {
                         realizado = true;
-                        termino = DateTime.Now.ToString("dd/MM/yyyy HH:mm"); ;
+                        termino = DateTime.MinValue; 
 
 
 
@@ -92,8 +91,10 @@ namespace Vista
                     //EVENTO
 
                     //inicio
-                    String fechaInicioEvento = dpFechaInicio.Text;
-                    int horaInicio = 0;
+                    DateTime fechaHoraInicio = dpFechaInicio1.recuperar();
+
+                    DateTime fechaHoraTermino = dpFechaTermino.recuperar();
+                   /* int horaInicio = 0;
                     if (int.TryParse(txtHoraInicio.Text, out horaInicio))
                     {
 
@@ -142,7 +143,7 @@ namespace Vista
                           string.Format("Ingrese sólo números"));
                         txtMinutoTermino.Focus();
                         return;
-                    }
+                    }*/
                     
 
                     //////
@@ -185,18 +186,14 @@ namespace Vista
                         Creacion = creacion,
                         Termino = termino,
                         RutCliente = rutCliente,
-                        IdModalidad=,
+                        //IdModalidad= ,
                         IdTipoEvento =evento,
-                        FechaHoraInicio = fechaInicioEvento,
-                       // HoraInicio = horaInicio,
-                        //MinutoInicio = minutoInicio,
-                        FechaHoraTermino = fechaFinEvento,
-                        //HoraTermino = horaTermino,
-                        //MinutoTermino = minutoTermino,
+                        FechaHoraInicio = fechaHoraInicio,
+                        FechaHoraTermino = fechaHoraTermino,
                         Asistentes = asistentes,
                         PersonalAdicional = personalAdicional,
                         Realizado = realizado,
-                        ValorTotalContrato=,
+                       // ValorTotalContrato=,
                         Observaciones = observaciones,
                         
                     };
@@ -226,7 +223,7 @@ namespace Vista
                 Logger.Mensaje(ex.Message);
             }
 
-            fechaC = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
+           
 
 
         }
@@ -247,10 +244,8 @@ namespace Vista
 
             dpFechaInicio.SelectedDate = null;
             dpFechaFinEvento.SelectedDate = null;
-            txtHoraInicio.Clear();
-            txtMinutoInicio.Clear();
-            txtHoraTermino.Clear();
-            txtMinutoTermino.Clear();
+            //dpFechaInicio1.ClearValue(DatePicker);
+           // dpFechaTermino.ClearValue(DatePicker);
             cboTipo.SelectedItem = 0;
 
             txtNumeroAsistentes.Clear();
@@ -274,12 +269,12 @@ namespace Vista
                 //EVENTO
                 //inicio
                 dpFechaInicio.IsEnabled = true;
-                txtHoraInicio.IsEnabled = true;
-                txtMinutoInicio.IsEnabled = true;
+               // txtHoraInicio.IsEnabled = true;
+                //txtMinutoInicio.IsEnabled = true;
                 //termino
                 dpFechaFinEvento.IsEnabled = true;
-                txtHoraTermino.IsEnabled = true;
-                txtMinutoTermino.IsEnabled = true;
+                //txtHoraTermino.IsEnabled = true;
+                //txtMinutoTermino.IsEnabled = true;
                 //////
                 txtNumeroAsistentes.IsEnabled = true;
                 txtPersonalAdicional.IsEnabled = true;
@@ -326,12 +321,12 @@ namespace Vista
                 //EVENTO
                 //inicio
                 dpFechaInicio.IsEnabled = true;
-                txtHoraInicio.IsEnabled = true;
-                txtMinutoInicio.IsEnabled = true;
+               // txtHoraInicio.IsEnabled = true;
+                //txtMinutoInicio.IsEnabled = true;
                 //termino
                 dpFechaFinEvento.IsEnabled = true;
-                txtHoraTermino.IsEnabled = true;
-                txtMinutoTermino.IsEnabled = true;
+               // txtHoraTermino.IsEnabled = true;
+                //txtMinutoTermino.IsEnabled = true;
                 //////
        
                 txtNumeroAsistentes.IsEnabled = true;

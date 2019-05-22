@@ -71,9 +71,6 @@
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControl1.xaml.cs">
-      <DependentUpon>UserControl1.xaml</DependentUpon>
-    </Compile>
     <Compile Include="WpfCliente.xaml.cs">
       <DependentUpon>WpfCliente.xaml</DependentUpon>
     </Compile>
@@ -81,10 +78,6 @@
       <DependentUpon>WpfListadoCliente.xaml</DependentUpon>
     </Compile>
     <Page Include="Login.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="UserControl1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -174,6 +167,10 @@
     <ProjectReference Include="..\Servicios\Servicios.csproj">
       <Project>{900483e1-95ce-4e70-9f1d-e69c1bd828e3}</Project>
       <Name>Servicios</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WpfControlLibrary1\WpfControlLibrary1.csproj">
+      <Project>{EBA24714-911A-4C39-B2EA-C9EA52C5DDD5}</Project>
+      <Name>WpfControlLibrary1</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

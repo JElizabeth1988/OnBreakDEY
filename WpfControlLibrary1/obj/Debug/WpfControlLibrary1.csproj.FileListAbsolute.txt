@@ -1,0 +1,39 @@
+c:\users\duoc\documents\visual studio 2015\Projects\WpfApplication1\WpfControlLibrary1\bin\Debug\WpfControlLibrary1.dll
+c:\users\duoc\documents\visual studio 2015\Projects\WpfApplication1\WpfControlLibrary1\bin\Debug\WpfControlLibrary1.pdb
+c:\users\duoc\documents\visual studio 2015\Projects\WpfApplication1\WpfControlLibrary1\obj\Debug\UserControl1.g.cs
+c:\users\duoc\documents\visual studio 2015\Projects\WpfApplication1\WpfControlLibrary1\obj\Debug\WpfControlLibrary1_MarkupCompile.cache
+c:\users\duoc\documents\visual studio 2015\Projects\WpfApplication1\WpfControlLibrary1\obj\Debug\WpfControlLibrary1_MarkupCompile.lref
+c:\users\duoc\documents\visual studio 2015\Projects\WpfApplication1\WpfControlLibrary1\obj\Debug\UserControl1.baml
+c:\users\duoc\documents\visual studio 2015\Projects\WpfApplication1\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.g.resources
+c:\users\duoc\documents\visual studio 2015\Projects\WpfApplication1\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.Properties.Resources.resources
+c:\users\duoc\documents\visual studio 2015\Projects\WpfApplication1\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.csproj.GenerateResource.Cache
+c:\users\duoc\documents\visual studio 2015\Projects\WpfApplication1\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.dll
+c:\users\duoc\documents\visual studio 2015\Projects\WpfApplication1\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.pdb
+G:\2019 Semestre 3\DEY 3101\fecha y hora\WpfControlLibrary1\bin\Debug\WpfControlLibrary1.dll
+G:\2019 Semestre 3\DEY 3101\fecha y hora\WpfControlLibrary1\bin\Debug\WpfControlLibrary1.pdb
+G:\2019 Semestre 3\DEY 3101\fecha y hora\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.csprojResolveAssemblyReference.cache
+G:\2019 Semestre 3\DEY 3101\fecha y hora\WpfControlLibrary1\obj\Debug\Page1.g.cs
+G:\2019 Semestre 3\DEY 3101\fecha y hora\WpfControlLibrary1\obj\Debug\UserControl1.g.cs
+G:\2019 Semestre 3\DEY 3101\fecha y hora\WpfControlLibrary1\obj\Debug\WpfControlLibrary1_MarkupCompile.cache
+G:\2019 Semestre 3\DEY 3101\fecha y hora\WpfControlLibrary1\obj\Debug\WpfControlLibrary1_MarkupCompile.lref
+G:\2019 Semestre 3\DEY 3101\fecha y hora\WpfControlLibrary1\obj\Debug\Page1.baml
+G:\2019 Semestre 3\DEY 3101\fecha y hora\WpfControlLibrary1\obj\Debug\UserControl1.baml
+G:\2019 Semestre 3\DEY 3101\fecha y hora\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.g.resources
+G:\2019 Semestre 3\DEY 3101\fecha y hora\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.Properties.Resources.resources
+G:\2019 Semestre 3\DEY 3101\fecha y hora\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.csproj.GenerateResource.Cache
+G:\2019 Semestre 3\DEY 3101\fecha y hora\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.dll
+G:\2019 Semestre 3\DEY 3101\fecha y hora\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.pdb
+C:\Users\chida\Desktop\Duplicado\UnBreakable\WpfControlLibrary1\bin\Debug\WpfControlLibrary1.dll
+C:\Users\chida\Desktop\Duplicado\UnBreakable\WpfControlLibrary1\bin\Debug\WpfControlLibrary1.pdb
+C:\Users\chida\Desktop\Duplicado\UnBreakable\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.csprojResolveAssemblyReference.cache
+C:\Users\chida\Desktop\Duplicado\UnBreakable\WpfControlLibrary1\obj\Debug\Page1.g.cs
+C:\Users\chida\Desktop\Duplicado\UnBreakable\WpfControlLibrary1\obj\Debug\UserControl1.g.cs
+C:\Users\chida\Desktop\Duplicado\UnBreakable\WpfControlLibrary1\obj\Debug\WpfControlLibrary1_MarkupCompile.cache
+C:\Users\chida\Desktop\Duplicado\UnBreakable\WpfControlLibrary1\obj\Debug\WpfControlLibrary1_MarkupCompile.lref
+C:\Users\chida\Desktop\Duplicado\UnBreakable\WpfControlLibrary1\obj\Debug\Page1.baml
+C:\Users\chida\Desktop\Duplicado\UnBreakable\WpfControlLibrary1\obj\Debug\UserControl1.baml
+C:\Users\chida\Desktop\Duplicado\UnBreakable\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.g.resources
+C:\Users\chida\Desktop\Duplicado\UnBreakable\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.Properties.Resources.resources
+C:\Users\chida\Desktop\Duplicado\UnBreakable\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.csproj.GenerateResource.Cache
+C:\Users\chida\Desktop\Duplicado\UnBreakable\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.dll
+C:\Users\chida\Desktop\Duplicado\UnBreakable\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.pdb
