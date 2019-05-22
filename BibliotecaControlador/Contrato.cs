@@ -292,7 +292,7 @@ namespace BibliotecaNegocio
             }
         }
 
-        //TERMINAR CONTRATO
+        /*TERMINAR CONTRATO
         public Boolean TerminarContrato()
         {
             try
@@ -315,6 +315,7 @@ namespace BibliotecaNegocio
                 return false;
             }
         }
+        */
 
         //READ
         public bool Read()

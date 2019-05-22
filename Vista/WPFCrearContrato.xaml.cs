@@ -60,6 +60,7 @@ namespace Vista
 
 
         DateTime fechac = DateTime.Now;
+        DateTime fechat = DateTime.Now;
         //CREAR CONTRATO
         private async void btnCrear_Click(object sender, RoutedEventArgs e)
         {
@@ -81,7 +82,7 @@ namespace Vista
                     else
                     {
                         realizado = true;
-                        termino = DateTime.MinValue; 
+                        termino = fechat; 
 
 
 
@@ -356,10 +357,6 @@ namespace Vista
                     txtBuscarCliente.Text = c.RutCliente;
                     dpFechaInicio.Text = c.FechaHoraInicio.ToString();
                     dpFechaFinEvento.Text = c.FechaHoraTermino.ToString();
-                    //txtHoraInicio.Text = c.HoraInicio.ToString();
-                    //txtMinutoInicio.Text = c.MinutoInicio.ToString();
-                    //txtHoraTermino.Text = c.HoraTermino.ToString();
-                    //txtMinutoTermino.Text = c.MinutoTermino.ToString();
                     txtNumeroAsistentes.Text = c.Asistentes.ToString();
                     txtPersonalAdicional.Text = c.PersonalAdicional.ToString();
                     cboTipo.Text = c.IdTipoEvento.ToString();
@@ -513,13 +510,13 @@ namespace Vista
                     if (rbSi.IsChecked == true)
                     {
                         realizado = false;
-                        termino = "Aún Vigente";
+                        termino = DateTime.MinValue;
 
                     }
                     else
                     {
                         realizado = true;
-                        termino = DateTime.Now.ToString("dd/MM/yyyy HH:mm"); ;
+                        termino = fechat ;
 
 
 
@@ -625,16 +622,12 @@ namespace Vista
                         RutCliente = rutCliente,
                        // IdModalidad =,
                         IdTipoEvento = evento,
-                        FechaHoraInicio = fechaInicioEvento,
-                        // HoraInicio = horaInicio,
-                        //MinutoInicio = minutoInicio,
-                        FechaHoraTermino = fechaFinEvento,
-                        //HoraTermino = horaTermino,
-                        //MinutoTermino = minutoTermino,
+                        FechaHoraInicio = dpFechaInicio1.recuperar(),
+                        FechaHoraTermino = dpFechaTermino.recuperar(),
                         Asistentes = asistentes,
                         PersonalAdicional = personalAdicional,
                         Realizado = realizado,
-                        ValorTotalContrato =,
+                       // ValorTotalContrato =,
                         Observaciones = observaciones,
                     };
 
@@ -673,9 +666,9 @@ namespace Vista
                 {
 
                     String numero = lblNumero.Content.ToString();
-                    String creacion = fechaC;
+                    DateTime creacion = fechac;
                     bool realizado = true;
-                    String termino = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
+                    DateTime termino = fechat;
                     rbNo.IsChecked = true;
                     rbSi.IsChecked = false;
 
@@ -684,13 +677,11 @@ namespace Vista
                     //EVENTO
 
                     //inicio
-                    String fechaInicioEvento = dpFechaInicio.Text;
-                    int horaInicio = int.Parse(txtHoraInicio.Text);
-                    int minutoInicio = int.Parse(txtMinutoInicio.Text);
+                    DateTime fechaHoraInicio= dpFechaInicio1.recuperar();
+
                     //termino
-                    String fechaFinEvento = dpFechaFinEvento.Text;
-                    int horaTermino = int.Parse(txtHoraTermino.Text);
-                    int minutoTermino = int.Parse(txtMinutoTermino.Text);
+                    DateTime fechaFinTermino = dpFechaTermino.recuperar();
+                    
 
                     //////
                     int asistentes = int.Parse(txtNumeroAsistentes.Text);
@@ -710,18 +701,14 @@ namespace Vista
                         Creacion = creacion,
                         Termino = termino,
                         RutCliente = rutCliente,
-                        IdModalidad = ,
+                       // IdModalidad = ,
                         IdTipoEvento = evento,
-                        FechaHoraInicio = fechaInicioEvento,
-                        // HoraInicio = horaInicio,
-                        //MinutoInicio = minutoInicio,
-                        FechaHoraTermino = fechaFinEvento,
-                        //HoraTermino = horaTermino,
-                        //MinutoTermino = minutoTermino,
+                        FechaHoraInicio = fechaHoraInicio,
+                        FechaHoraTermino = fechaFinTermino,
                         Asistentes = asistentes,
                         PersonalAdicional = personalAdicional,
                         Realizado = realizado,
-                        ValorTotalContrato =,
+                       // ValorTotalContrato =,
                         Observaciones = observaciones,
                     };
 
@@ -736,7 +723,7 @@ namespace Vista
 
 
 
-                    //EVENTO
+                    /*EVENTO
 
                     //inicio
                     dpFechaInicio.IsEnabled = false;
@@ -753,7 +740,7 @@ namespace Vista
                     cboTipo.IsEnabled = false;
                     txtObservaciones.IsEnabled = false;
                     txtBuscarCliente.IsEnabled = false;
-
+                    */
 
 
                     //METODO AGREGAR DEVUELVE BOOLEAN POR ESO SE CREA VARIABLE BOOLEANA resp
