@@ -173,7 +173,10 @@ namespace Vista
                     ac.Id = c.IdActividadEmpresa;
                     ac.Read();
                     cbActividad.Text = ac.Descripcion;//Cambiar a descripción
-                    cbTipo.Text = c.IdTipoEmpresa.ToString();
+                    TipoEmpresa te = new TipoEmpresa();
+                    te.Id = c.IdTipoEmpresa;
+                    te.Read();
+                    cbTipo.Text = te.Descripcion;//Cambiar a descripción
 
 
                     btnModificar.Visibility = Visibility.Visible;

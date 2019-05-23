@@ -26,8 +26,8 @@ namespace BibliotecaNegocio
             try
             {
                 BibliotecaDALC.TipoEmpresa tipo = bdd.
-                    TipoEmpresa.First(t => t.Descripcion.Equals(Descripcion));
-                Id = tipo.IdTipoEmpresa;
+                    TipoEmpresa.First(t => t.IdTipoEmpresa==Id);
+                Descripcion = tipo.Descripcion;
                 return true;
             }
             catch (Exception ex)
