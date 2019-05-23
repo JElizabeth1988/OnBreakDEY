@@ -26,9 +26,6 @@ namespace BibliotecaNegocio
         private String _observaciones;
 
 
-
-
-
         //PROPIEDADES
 
         public String Numero
