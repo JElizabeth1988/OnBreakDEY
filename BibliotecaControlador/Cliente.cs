@@ -191,13 +191,12 @@ namespace BibliotecaNegocio
                 BibliotecaDALC.Cliente cl =
                 bdd.Cliente.First(cli => cli.RutCliente.Equals(RutCliente));
                 //bdd.Cliente.Find(RutCliente);
-
                 RazonSocial = cl.RazonSocial;
                  NombreContacto = cl.NombreContacto;
                  MailContacto = cl.MailContacto;
                  Direccion = cl.Direccion;
                  Telefono = cl.Telefono;
-                 IdActividadEmpresa = cl.IdActividadEmpresa;
+                 IdActividadEmpresa = cl.IdActividadEmpresa;//debo llamar a la descripción
                  IdTipoEmpresa = cl.IdTipoEmpresa;
                 CommonBC.Syncronize(this, cl);
 

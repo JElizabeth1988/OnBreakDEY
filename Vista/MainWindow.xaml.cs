@@ -60,7 +60,7 @@ namespace Vista
         }
 
 
-        private async void Tile_Click_6(object sender, RoutedEventArgs e)
+       /* private async void Tile_Click_6(object sender, RoutedEventArgs e)
         {
             var x =
             await this.ShowMessageAsync("Advertencia", "¿Desea cerrar sesión?", 
@@ -76,6 +76,6 @@ namespace Vista
                 
             }
 
-        }
+        }*/
     }
 }

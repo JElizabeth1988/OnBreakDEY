@@ -69,19 +69,12 @@
     </ApplicationDefinition>
     <Compile Include="comboBoxItem.cs" />
     <Compile Include="comboBoxItem2.cs" />
-    <Compile Include="Login.xaml.cs">
-      <DependentUpon>Login.xaml</DependentUpon>
-    </Compile>
     <Compile Include="WpfCliente.xaml.cs">
       <DependentUpon>WpfCliente.xaml</DependentUpon>
     </Compile>
     <Compile Include="WpfListadoCliente.xaml.cs">
       <DependentUpon>WpfListadoCliente.xaml</DependentUpon>
     </Compile>
-    <Page Include="Login.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="WPFCrearContrato.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
