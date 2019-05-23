@@ -75,5 +75,15 @@ namespace WpfControlLibrary1
             return new DateTime(ano, mes, dia, hora, min, 0);
 
         }
+        public DateTime recuperarFecha()
+        {
+            int ano = ((DateTime)dtfecha.SelectedDate).Year;
+            int mes = ((DateTime)dtfecha.SelectedDate).Month;
+            int dia = ((DateTime)dtfecha.SelectedDate).Day;
+
+            return new DateTime(ano, mes, dia);
+        }
+
+
     }
 }

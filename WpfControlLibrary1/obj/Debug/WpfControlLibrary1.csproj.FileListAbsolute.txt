@@ -50,3 +50,4 @@ C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\WpfControlLibrary1\obj\Debu
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.csproj.GenerateResource.Cache
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.dll
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.pdb
+C:\Users\chida\Desktop\Duplicado\UnBreakable\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.csprojResolveAssemblyReference.cache
