@@ -23,8 +23,8 @@ namespace BibliotecaNegocio
             try
             {
                 BibliotecaDALC.ActividadEmpresa act = bdd.
-                    ActividadEmpresa.First(a => a.Descripcion.Equals(Descripcion));
-                Id = act.IdActividadEmpresa;
+                    ActividadEmpresa.First(a => a.IdActividadEmpresa==Id);
+                Descripcion = act.Descripcion;
                 return true;
             }
             catch (Exception ex)

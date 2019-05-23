@@ -169,7 +169,10 @@ namespace Vista
                     txtEmail.Text = c.MailContacto;
                     txtDireccion.Text = c.Direccion;
                     txtTelefono.Text = c.Telefono.ToString();
-                    cbActividad.Text = c.IdActividadEmpresa.ToString();
+                    ActividadEmpresa ac = new ActividadEmpresa();
+                    ac.Id = c.IdActividadEmpresa;
+                    ac.Read();
+                    cbActividad.Text = ac.Descripcion;//Cambiar a descripción
                     cbTipo.Text = c.IdTipoEmpresa.ToString();
 
 
@@ -280,7 +283,7 @@ namespace Vista
                 };
                 bool resp = c.Modificar();
                 await this.ShowMessageAsync("Mensaje:",
-                     string.Format(resp ? "Actualizado" : "No Actualizado, (El rut no se debe modificar)"));
+                     string.Format(resp ? "Actualizado" : "No Actualizado"));
                 /*MessageBox.Show(resp ? "Actualizado" : "No Actualizado, (El rut no se debe modificar)");*/
 
             }
