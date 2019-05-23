@@ -1,13 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="OnBreakModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-  <EntityType Name="ActividadEmpresa">
-    <Key>
-      <PropertyRef Name="IdActividadEmpresa" />
-    </Key>
-    <Property Name="IdActividadEmpresa" Type="Int32" Nullable="false" />
-    <Property Name="Descripcion" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
-    <NavigationProperty Name="Cliente" Relationship="Self.Cliente_ActividadEmpresa_FK1" FromRole="ActividadEmpresa" ToRole="Cliente" />
-  </EntityType>
   <EntityType Name="Cliente">
     <Key>
       <PropertyRef Name="RutCliente" />
@@ -20,9 +12,9 @@
     <Property Name="Telefono" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="IdActividadEmpresa" Type="Int32" Nullable="false" />
     <Property Name="IdTipoEmpresa" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="ActividadEmpresa" Relationship="Self.Cliente_ActividadEmpresa_FK1" FromRole="Cliente" ToRole="ActividadEmpresa" />
     <NavigationProperty Name="TipoEmpresa" Relationship="Self.Cliente_TipoEmpresa_FK1" FromRole="Cliente" ToRole="TipoEmpresa" />
     <NavigationProperty Name="Contrato" Relationship="Self.Contrato_Cliente_FK1" FromRole="Cliente" ToRole="Contrato" />
+    <NavigationProperty Name="ActividadEmpresa" Relationship="OnBreakModel.Cliente_ActividadEmpresa_FK1" FromRole="Cliente" ToRole="ActividadEmpresa" />
   </EntityType>
   <EntityType Name="Contrato">
     <Key>
@@ -83,18 +75,6 @@
     <Property Name="Descripcion" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="ModalidadServicio" Relationship="Self.ModalidadServicio_TipoEvento_FK1" FromRole="TipoEvento" ToRole="ModalidadServicio" />
   </EntityType>
-  <Association Name="Cliente_ActividadEmpresa_FK1">
-    <End Role="ActividadEmpresa" Type="Self.ActividadEmpresa" Multiplicity="1" />
-    <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="ActividadEmpresa">
-        <PropertyRef Name="IdActividadEmpresa" />
-      </Principal>
-      <Dependent Role="Cliente">
-        <PropertyRef Name="IdActividadEmpresa" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="Cliente_TipoEmpresa_FK1">
     <End Role="TipoEmpresa" Type="Self.TipoEmpresa" Multiplicity="1" />
     <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
@@ -146,17 +126,12 @@
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="OnBreakEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="ActividadEmpresa" EntityType="Self.ActividadEmpresa" />
     <EntitySet Name="Cliente" EntityType="Self.Cliente" />
     <EntitySet Name="Contrato" EntityType="Self.Contrato" />
     <EntitySet Name="ModalidadServicio" EntityType="Self.ModalidadServicio" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
     <EntitySet Name="TipoEmpresa" EntityType="Self.TipoEmpresa" />
     <EntitySet Name="TipoEvento" EntityType="Self.TipoEvento" />
-    <AssociationSet Name="Cliente_ActividadEmpresa_FK1" Association="Self.Cliente_ActividadEmpresa_FK1">
-      <End Role="ActividadEmpresa" EntitySet="ActividadEmpresa" />
-      <End Role="Cliente" EntitySet="Cliente" />
-    </AssociationSet>
     <AssociationSet Name="Cliente_TipoEmpresa_FK1" Association="Self.Cliente_TipoEmpresa_FK1">
       <End Role="TipoEmpresa" EntitySet="TipoEmpresa" />
       <End Role="Cliente" EntitySet="Cliente" />
@@ -203,6 +178,11 @@
       <Parameter Name="new_diagramname" Mode="In" Type="String" />
     </FunctionImport>
     <FunctionImport Name="sp_upgraddiagrams" />
+    <EntitySet Name="ActividadEmpresa" EntityType="OnBreakModel.ActividadEmpresa" />
+    <AssociationSet Name="Cliente_ActividadEmpresa_FK1" Association="OnBreakModel.Cliente_ActividadEmpresa_FK1">
+      <End Role="ActividadEmpresa" EntitySet="ActividadEmpresa" />
+      <End Role="Cliente" EntitySet="Cliente" />
+    </AssociationSet>
   </EntityContainer>
   <ComplexType Name="sp_helpdiagramdefinition_Result">
     <Property Type="Int32" Name="version" Nullable="true" />
@@ -215,4 +195,24 @@
     <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
     <Property Type="Int32" Name="OwnerID" Nullable="false" />
   </ComplexType>
+  <EntityType Name="ActividadEmpresa">
+    <Key>
+      <PropertyRef Name="IdActividadEmpresa" />
+    </Key>
+    <Property Name="IdActividadEmpresa" Type="Int32" Nullable="false" />
+    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Cliente" Relationship="OnBreakModel.Cliente_ActividadEmpresa_FK1" FromRole="ActividadEmpresa" ToRole="Cliente" />
+  </EntityType>
+  <Association Name="Cliente_ActividadEmpresa_FK1">
+    <End Type="OnBreakModel.ActividadEmpresa" Role="ActividadEmpresa" Multiplicity="1" />
+    <End Type="OnBreakModel.Cliente" Role="Cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ActividadEmpresa">
+        <PropertyRef Name="IdActividadEmpresa" />
+      </Principal>
+      <Dependent Role="Cliente">
+        <PropertyRef Name="IdActividadEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>
