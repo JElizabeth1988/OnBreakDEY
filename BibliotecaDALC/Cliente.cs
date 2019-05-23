@@ -28,8 +28,8 @@ namespace BibliotecaDALC
         public int IdActividadEmpresa { get; set; }
         public int IdTipoEmpresa { get; set; }
     
-        public virtual ActividadEmpresa ActividadEmpresa { get; set; }
         public virtual TipoEmpresa TipoEmpresa { get; set; }
         public virtual ICollection<Contrato> Contrato { get; set; }
+        public virtual ActividadEmpresa ActividadEmpresa { get; set; }
     }
 }

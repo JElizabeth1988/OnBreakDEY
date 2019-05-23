@@ -25,7 +25,6 @@ G:\2019 Semestre 3\DEY 3101\fecha y hora\WpfControlLibrary1\obj\Debug\WpfControl
 G:\2019 Semestre 3\DEY 3101\fecha y hora\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.pdb
 C:\Users\chida\Desktop\Duplicado\UnBreakable\WpfControlLibrary1\bin\Debug\WpfControlLibrary1.dll
 C:\Users\chida\Desktop\Duplicado\UnBreakable\WpfControlLibrary1\bin\Debug\WpfControlLibrary1.pdb
-C:\Users\chida\Desktop\Duplicado\UnBreakable\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.csprojResolveAssemblyReference.cache
 C:\Users\chida\Desktop\Duplicado\UnBreakable\WpfControlLibrary1\obj\Debug\Page1.g.cs
 C:\Users\chida\Desktop\Duplicado\UnBreakable\WpfControlLibrary1\obj\Debug\UserControl1.g.cs
 C:\Users\chida\Desktop\Duplicado\UnBreakable\WpfControlLibrary1\obj\Debug\WpfControlLibrary1_MarkupCompile.cache

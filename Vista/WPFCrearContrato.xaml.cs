@@ -34,7 +34,6 @@ namespace Vista
             InitializeComponent();
             lblNumero.Content =  DateTime.Now.ToString("yyyyMMddHHmm");
             lblUf.Content = "$" + uf;
-            cboTipo.ItemsSource = Enum.GetValues(typeof(TipoEvento));
             this.cboTipo.SelectedItem = null;
             btnTerminar.Visibility = Visibility.Hidden;
             btnModificar.Visibility = Visibility.Hidden;
@@ -47,13 +46,7 @@ namespace Vista
                 cb.descripcion = item.Descripcion;
                 cboTipo.Items.Add(cb);
             }
-            foreach (TipoEvento item in new TipoEvento().ReadAll())
-            {
-                comboBoxItem cb = new comboBoxItem();
-                cb.id = item.Id;
-                cb.descripcion = item.Descripcion;
-                cboTipo.Items.Add(cb);
-            }
+          
            
 
             //LLENAR CB MODALIDAD SERVICIO
@@ -63,19 +56,13 @@ namespace Vista
                 comboBoxItem2 cb = new comboBoxItem2();
                 cb.id = item.Id;
                 cb.descripcion = item.Nombre;
-                cboTipo.Items.Add(cb);
+                cbModalidad.Items.Add(cb);
             }
-            foreach (ModalidadServicio item in new ModalidadServicio().ReadAll())
-            {
-                comboBoxItem2 cb = new comboBoxItem2();
-                cb.id = item.Id;
-                cb.descripcion = item.Nombre;
-                cboTipo.Items.Add(cb);
-            }
+         
 
         }
 
-
+        double valorc= 2;
 
         DateTime fechac = DateTime.Now;
         DateTime fechat = DateTime.Now;
@@ -84,7 +71,7 @@ namespace Vista
         {
             try
             {
-                if (dpFechaInicio.SelectedDate <= dpFechaFinEvento.SelectedDate)
+                //if (dpFechaInicio.SelectedDate <= dpFechaFinEvento.SelectedDate)
                 {
                    
                     String numero = lblNumero.Content.ToString();
@@ -162,7 +149,7 @@ namespace Vista
                         Asistentes = asistentes,
                         PersonalAdicional = personalAdicional,
                         Realizado = realizado,
-                       // ValorTotalContrato=,
+                        ValorTotalContrato=valorc,
                         Observaciones = observaciones,
                         
                     };
@@ -174,11 +161,11 @@ namespace Vista
                     /*MessageBox.Show(resp ? "Guardado" : "No Guardado");*/
                     
                 }
-                else
-                {
+               /* else
+               / {
                     await this.ShowMessageAsync("Mensaje:",
                       string.Format("Error: Fecha de Termino es menor a Fecha de Inicio"));
-                }
+                }*/
             }
             catch (ArgumentException exa) //catch excepciones hechas por el usuario
             {
@@ -211,8 +198,8 @@ namespace Vista
             lblNombreCliente.Visibility = Visibility.Hidden;//no ver label
 
 
-            dpFechaInicio.SelectedDate = null;
-            dpFechaFinEvento.SelectedDate = null;
+            //dpFechaInicio.SelectedDate = null;
+            //dpFechaFinEvento.SelectedDate = null;
             //dpFechaInicio1.ClearValue(DatePicker);
            // dpFechaTermino.ClearValue(DatePicker);
             cboTipo.SelectedItem = 0;
@@ -237,11 +224,11 @@ namespace Vista
                 lblNumero.IsEnabled = true;
                 //EVENTO
                 //inicio
-                dpFechaInicio.IsEnabled = true;
+               // dpFechaInicio.IsEnabled = true;
                // txtHoraInicio.IsEnabled = true;
                 //txtMinutoInicio.IsEnabled = true;
                 //termino
-                dpFechaFinEvento.IsEnabled = true;
+                //dpFechaFinEvento.IsEnabled = true;
                 //txtHoraTermino.IsEnabled = true;
                 //txtMinutoTermino.IsEnabled = true;
                 //////
@@ -289,11 +276,11 @@ namespace Vista
                 lblNumero.IsEnabled = true;
                 //EVENTO
                 //inicio
-                dpFechaInicio.IsEnabled = true;
+               // dpFechaInicio.IsEnabled = true;
                // txtHoraInicio.IsEnabled = true;
                 //txtMinutoInicio.IsEnabled = true;
                 //termino
-                dpFechaFinEvento.IsEnabled = true;
+                //dpFechaFinEvento.IsEnabled = true;
                // txtHoraTermino.IsEnabled = true;
                 //txtMinutoTermino.IsEnabled = true;
                 //////
@@ -322,8 +309,8 @@ namespace Vista
                     
                     
                     txtBuscarCliente.Text = c.RutCliente;
-                    dpFechaInicio.Text = c.FechaHoraInicio.ToString();
-                    dpFechaFinEvento.Text = c.FechaHoraTermino.ToString();
+                    //dpFechaInicio.Text = c.FechaHoraInicio.ToString();
+                    //dpFechaFinEvento.Text = c.FechaHoraTermino.ToString();
                     txtNumeroAsistentes.Text = c.Asistentes.ToString();
                     txtPersonalAdicional.Text = c.PersonalAdicional.ToString();
                     cboTipo.Text = c.IdTipoEvento.ToString();
@@ -367,8 +354,8 @@ namespace Vista
 
 
                     txtBuscarCliente.Text = c.RutCliente;
-                    dpFechaInicio.Text = c.FechaHoraInicio.ToString();
-                    dpFechaFinEvento.Text = c.FechaHoraTermino.ToString();
+                    //dpFechaInicio.Text = c.FechaHoraInicio.ToString();
+                    //dpFechaFinEvento.Text = c.FechaHoraTermino.ToString();
                     //txtHoraInicio.Text = c.HoraInicio.ToString();
                     //txtMinutoInicio.Text = c.MinutoInicio.ToString();
                     //txtHoraTermino.Text = c.HoraTermino.ToString();
@@ -470,7 +457,7 @@ namespace Vista
             try
             {
 
-                if (dpFechaInicio.SelectedDate <= dpFechaFinEvento.SelectedDate)
+               // if (dpFechaInicio.SelectedDate <= dpFechaFinEvento.SelectedDate)
                 {
                     String numero = lblNumero.Content.ToString();
                     DateTime creacion = fechac;
@@ -541,7 +528,7 @@ namespace Vista
                         Asistentes = asistentes,
                         PersonalAdicional = personalAdicional,
                         Realizado = realizado,
-                       // ValorTotalContrato =,
+                        ValorTotalContrato =valorc,
                         Observaciones = observaciones,
                     };
 
@@ -622,7 +609,7 @@ namespace Vista
                         Asistentes = asistentes,
                         PersonalAdicional = personalAdicional,
                         Realizado = realizado,
-                       // ValorTotalContrato =,
+                       ValorTotalContrato =valorc,
                         Observaciones = observaciones,
                     };
 
