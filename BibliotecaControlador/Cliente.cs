@@ -169,7 +169,7 @@ namespace BibliotecaNegocio
                 Contrato cont = new Contrato();
                 cont.RutCliente = cl.RutCliente;
 
-                if ( cont.contarContratos() ==false)
+                if ( cont.verificarContratos() ==false)
                 {
                     bdd.Cliente.Remove(cl);
                     bdd.SaveChanges();

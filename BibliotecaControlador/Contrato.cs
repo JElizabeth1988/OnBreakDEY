@@ -498,7 +498,7 @@ namespace BibliotecaNegocio
 
         //////////////////////////////////////////////////////////////////////////////
 
-        public bool contarContratos()
+        public bool verificarContratos()
         {
             try
             {
