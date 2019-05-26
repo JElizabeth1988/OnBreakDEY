@@ -81,13 +81,13 @@ namespace Vista
                     if (rbSi.IsChecked == true)
                     {
                         realizado = false;
-                        termino = DateTime.MinValue;
+                        termino = dpFechaTermino.recuperarFecha();
 
                     }
                     else
                     {
                         realizado = true;
-                        termino = fechat; 
+                        termino = dpFechaTermino.recuperarFecha();
 
                     }
 
@@ -160,6 +160,8 @@ namespace Vista
                           string.Format(resp ? "Guardado" : "No guardado"));
                     /*MessageBox.Show(resp ? "Guardado" : "No Guardado");*/
                     
+
+                    btnModificar.Visibility=Visibility.Visible;
                 }
                /* else
                / {
@@ -466,13 +468,13 @@ namespace Vista
                     if (rbSi.IsChecked == true)
                     {
                         realizado = false;
-                        termino = DateTime.MinValue;
+                        termino = dpFechaTermino.recuperarFecha();
 
                     }
                     else
                     {
                         realizado = true;
-                        termino = fechat ;
+                        termino = dpFechaTermino.recuperarFecha();
 
 
 

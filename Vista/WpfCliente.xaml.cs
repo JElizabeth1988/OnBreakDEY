@@ -169,8 +169,14 @@ namespace Vista
                     txtEmail.Text = c.MailContacto;
                     txtDireccion.Text = c.Direccion;
                     txtTelefono.Text = c.Telefono.ToString();
-                    cbActividad.Text = c.IdActividadEmpresa.ToString();
-                    cbTipo.Text = c.IdTipoEmpresa.ToString();
+                    ActividadEmpresa ac = new ActividadEmpresa();
+                    ac.Id = c.IdActividadEmpresa;
+                    ac.Read();
+                    cbActividad.Text = ac.Descripcion;//Cambiar a descripción
+                    TipoEmpresa te = new TipoEmpresa();
+                    te.Id = c.IdTipoEmpresa;
+                    te.Read();
+                    cbTipo.Text = te.Descripcion;//Cambiar a descripción
 
 
                     btnModificar.Visibility = Visibility.Visible;
@@ -280,7 +286,7 @@ namespace Vista
                 };
                 bool resp = c.Modificar();
                 await this.ShowMessageAsync("Mensaje:",
-                     string.Format(resp ? "Actualizado" : "No Actualizado, (El rut no se debe modificar)"));
+                     string.Format(resp ? "Actualizado" : "No Actualizado"));
                 /*MessageBox.Show(resp ? "Actualizado" : "No Actualizado, (El rut no se debe modificar)");*/
 
             }

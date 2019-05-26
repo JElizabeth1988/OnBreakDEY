@@ -169,6 +169,7 @@ namespace Vista
                 rutbuscar = cl.txtRut+"-"+cl.txtDV;
                 cl.txtRut.Text = cli.Rut;
                 cl.Buscar();
+                
             }
             Close();
 
