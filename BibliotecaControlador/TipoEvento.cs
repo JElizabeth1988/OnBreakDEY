@@ -23,9 +23,11 @@ namespace BibliotecaNegocio
         {
             try
             {
-                BibliotecaDALC.ModalidadServicio mod = bdd.ModalidadServicio.Find(Id);
-                CommonBC.Syncronize(mod, this);
+                BibliotecaDALC.TipoEvento tipo = bdd.TipoEvento
+                .First(t => t.IdTipoEvento == Id);
+                Descripcion = tipo.Descripcion;
                 return true;
+
             }
             catch (Exception ex)
             {

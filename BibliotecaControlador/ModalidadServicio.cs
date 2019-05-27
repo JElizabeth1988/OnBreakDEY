@@ -25,9 +25,10 @@ namespace BibliotecaNegocio
             try
             {
                 BibliotecaDALC.ModalidadServicio tipo = bdd.ModalidadServicio
-                .First(t => t.Nombre.Equals(Nombre));
-                Id = tipo.IdModalidad;
+                .First(t => t.IdModalidad==Id);
+                 Nombre = tipo.Nombre;
                 return true;
+
             }
             catch (Exception ex)
             {
