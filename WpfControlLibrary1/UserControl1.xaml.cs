@@ -83,7 +83,29 @@ namespace WpfControlLibrary1
 
             return new DateTime(ano, mes, dia);
         }
+        public void datos(DateTime fecha)
+        {
+            dtfecha.SelectedDate = fecha.Date;
+            txthora.Text= ((DateTime)dtfecha.SelectedDate).Hour.ToString();
+            txtminutos.Text= ((DateTime)dtfecha.SelectedDate).Minute.ToString();
+        }
 
+        public bool limpiar()
+        {
+            dtfecha.SelectedDate = null;
+            txthora.Clear();
+            txtminutos.Clear();
+            return true;
+        }
+
+        public bool desbloquear()
+        {
+            dtfecha.IsEnabled = true;
+            txthora.IsEnabled = true;
+            txtminutos.IsEnabled = true;
+
+            return true;
+        }
 
     }
 }

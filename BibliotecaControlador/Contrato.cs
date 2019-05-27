@@ -237,7 +237,7 @@ namespace BibliotecaNegocio
                     bdd.Contrato.First(con => con.Numero.Equals(Numero));
 
 
-                CommonBC.Syncronize(this, co);
+                CommonBC.Syncronize(co, this);
 
                 return true;
 
@@ -344,7 +344,7 @@ namespace BibliotecaNegocio
                             Creacion = con.Creacion,
                             Termino = con.Termino,
                             RutCliente = con.RutCliente,
-                            IdModalidad = mod.IdModalidad,//ESTÁ BIEN ASÍ?
+                            IdModalidad = mod.IdModalidad,
                             IdTipoEvento =con.IdTipoEvento,
                             FechaHoraInicio = con.FechaHoraInicio,
                             FechaHoraTermino = con.FechaHoraTermino,
