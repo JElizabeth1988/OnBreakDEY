@@ -30,9 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BibliotecaClase">
-      <HintPath>..\BibliotecaControlador\bin\Debug\BibliotecaClase.dll</HintPath>
-    </Reference>
     <Reference Include="BibliotecaControlador">
       <HintPath>..\BibliotecaControlador\bin\Debug\BibliotecaControlador.dll</HintPath>
     </Reference>
