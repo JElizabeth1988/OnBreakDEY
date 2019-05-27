@@ -85,5 +85,22 @@ namespace WpfControlLibrary1
         }
 
 
+        public bool limpiar()
+        {
+            dtfecha.SelectedDate = null;
+            txthora.Clear();
+            txtminutos.Clear();
+            return true;
+        }
+
+        public bool desbloquear()
+        {
+            dtfecha.IsEnabled = true;
+            txthora.IsEnabled = true;
+            txtminutos.IsEnabled = true;
+
+            return true;
+        }
+
     }
 }

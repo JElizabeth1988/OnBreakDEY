@@ -203,7 +203,12 @@ namespace Vista
             //dpFechaInicio.SelectedDate = null;
             //dpFechaFinEvento.SelectedDate = null;
             //dpFechaInicio1.ClearValue(DatePicker);
-           // dpFechaTermino.ClearValue(DatePicker);
+            // dpFechaTermino.ClearValue(DatePicker);
+
+            //MÉTODO LIMPIAR USERCONTROL
+            dpFechaInicio1.limpiar();
+            dpFechaTermino.limpiar();
+
             cboTipo.SelectedItem = 0;
 
             txtNumeroAsistentes.Clear();
@@ -226,14 +231,19 @@ namespace Vista
                 lblNumero.IsEnabled = true;
                 //EVENTO
                 //inicio
-               // dpFechaInicio.IsEnabled = true;
-               // txtHoraInicio.IsEnabled = true;
+                // dpFechaInicio.IsEnabled = true;
+                // txtHoraInicio.IsEnabled = true;
                 //txtMinutoInicio.IsEnabled = true;
                 //termino
                 //dpFechaFinEvento.IsEnabled = true;
                 //txtHoraTermino.IsEnabled = true;
                 //txtMinutoTermino.IsEnabled = true;
                 //////
+
+                //MÉTODO DESBLOQUEAR USERCONTROL
+                dpFechaInicio1.desbloquear();
+                dpFechaTermino.desbloquear();
+
                 txtNumeroAsistentes.IsEnabled = true;
                 txtPersonalAdicional.IsEnabled = true;
                 cboTipo.IsEnabled = true;
@@ -278,15 +288,19 @@ namespace Vista
                 lblNumero.IsEnabled = true;
                 //EVENTO
                 //inicio
-               // dpFechaInicio.IsEnabled = true;
-               // txtHoraInicio.IsEnabled = true;
+                // dpFechaInicio.IsEnabled = true;
+                // txtHoraInicio.IsEnabled = true;
                 //txtMinutoInicio.IsEnabled = true;
                 //termino
                 //dpFechaFinEvento.IsEnabled = true;
-               // txtHoraTermino.IsEnabled = true;
+                // txtHoraTermino.IsEnabled = true;
                 //txtMinutoTermino.IsEnabled = true;
                 //////
-       
+
+                //MÉTODO DESBLOQUEAR USERCONTROL
+                dpFechaInicio1.desbloquear();
+                dpFechaTermino.desbloquear();
+
                 txtNumeroAsistentes.IsEnabled = true;
                 txtPersonalAdicional.IsEnabled = true;
                 cboTipo.IsEnabled = true;
@@ -313,6 +327,11 @@ namespace Vista
                     txtBuscarCliente.Text = c.RutCliente;
                     //dpFechaInicio.Text = c.FechaHoraInicio.ToString();
                     //dpFechaFinEvento.Text = c.FechaHoraTermino.ToString();
+
+                    //PREGUNTAR
+                   //dpFechaInicio1.recuperar() = c.FechaHoraInicio.ToString;
+                    //dpFechaTermino.recuperar() = c.FechaHoraTermino;
+
                     txtNumeroAsistentes.Text = c.Asistentes.ToString();
                     txtPersonalAdicional.Text = c.PersonalAdicional.ToString();
                     cboTipo.Text = c.IdTipoEvento.ToString();
@@ -362,6 +381,11 @@ namespace Vista
                     //txtMinutoInicio.Text = c.MinutoInicio.ToString();
                     //txtHoraTermino.Text = c.HoraTermino.ToString();
                     //txtMinutoTermino.Text = c.MinutoTermino.ToString();
+
+                    //PREGUNTAR
+                   // dpFechaInicio1.recuperar() = c.FechaHoraInicio;
+                    //dpFechaTermino.recuperar() = c.FechaHoraTermino;
+
                     txtNumeroAsistentes.Text = c.Asistentes.ToString();
                     txtPersonalAdicional.Text = c.PersonalAdicional.ToString();
                     cboTipo.Text = c.IdTipoEvento.ToString();

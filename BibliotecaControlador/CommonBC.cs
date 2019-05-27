@@ -22,7 +22,7 @@ namespace BibliotecaNegocio
             Type tipo = null;
             PropertyInfo[] propiedades = null;
 
-            /* Obtiene información del Tipo Origen y sus Propiedades */
+            /* Obtiene información del Tipo Origen y sus Propiedades. */
             tipo = origen.GetType();
             propiedades = tipo.GetProperties();
 

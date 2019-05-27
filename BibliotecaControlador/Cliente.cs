@@ -117,7 +117,7 @@ namespace BibliotecaNegocio
                 }
                 else
                 {
-                    throw new ArgumentException("Campo Teléfono no puede estar Vacío y debe tener un largo de 9 dígitos");
+                    throw new ArgumentException("- Campo Teléfono no puede estar Vacío y debe tener un largo de 9 dígitos");
                 }
 
             }
@@ -196,7 +196,7 @@ namespace BibliotecaNegocio
                  MailContacto = cl.MailContacto;
                  Direccion = cl.Direccion;
                  Telefono = cl.Telefono;
-                 IdActividadEmpresa = cl.IdActividadEmpresa;//debo llamar a la descripción
+                 IdActividadEmpresa = cl.IdActividadEmpresa;
                  IdTipoEmpresa = cl.IdTipoEmpresa;
                 CommonBC.Syncronize(this, cl);
 
