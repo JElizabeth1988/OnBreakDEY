@@ -331,6 +331,9 @@ namespace Vista
                     //PREGUNTAR
                     dpFechaInicio1.datos( c.FechaHoraInicio);
                     dpFechaTermino.datos( c.FechaHoraTermino);
+                    
+                    dpFechaInicio1.datos(c.FechaHoraInicio);
+                    dpFechaTermino.datos(c.FechaHoraTermino);
 
                     txtNumeroAsistentes.Text = c.Asistentes.ToString();
                     txtPersonalAdicional.Text = c.PersonalAdicional.ToString();
@@ -382,13 +385,23 @@ namespace Vista
                     //txtHoraTermino.Text = c.HoraTermino.ToString();
                     //txtMinutoTermino.Text = c.MinutoTermino.ToString();
 
-                    //PREGUNTAR
-                    dpFechaInicio1.datos(c.FechaHoraInicio);
-                    dpFechaTermino.datos(c.FechaHoraTermino);
-
                     txtNumeroAsistentes.Text = c.Asistentes.ToString();
                     txtPersonalAdicional.Text = c.PersonalAdicional.ToString();
+
+                    TipoEvento tip = new TipoEvento();
+                    tip.Id = c.IdTipoEvento;
+                    tip.Read();
+                    cboTipo.Text = tip.Descripcion;//Cambiar a descripción
+
+                    //PASAR nombre modalidad no id
+                    ModalidadServicio mod = new ModalidadServicio();
+                    mod.Id = c.IdModalidad;
+                    mod.Read();
+                    cbModalidad.Text = mod.Nombre;//Cambiar a descripción
+
                     cboTipo.Text = c.IdTipoEvento.ToString();
+                    cbModalidad.Text = c.IdModalidad.ToString();
+
                     cbModalidad.Text = c.IdModalidad;
                     txtObservaciones.Text = c.Observaciones;
                     lblNumero.Content = txtNumero.Text; //IGUALAR CAMPOS 

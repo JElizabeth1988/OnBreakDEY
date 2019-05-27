@@ -16,7 +16,7 @@
         </Grid.ColumnDefinitions>
         <DatePicker x:Name="dtfecha"  DisplayDateStart="{x:Static sys:DateTime.Now}" SelectedDate="{x:Static sys:DateTime.Now}" HorizontalAlignment="Left" Margin="9.415,16,0,0" VerticalAlignment="Top" Grid.Column="1"/>
         <TextBox x:Name="txthora" HorizontalAlignment="Left" Height="23" Margin="174.415,16,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="49" Grid.Column="1"/>
-        <Button x:Name="btnmashora" Content="+" HorizontalAlignment="Left" Height="11" Margin="228,16,0,0" VerticalAlignment="Top" Width="18" Click="btnmashora_Click" RenderTransformOrigin="0.5,0.5" FontSize="6" FontWeight="Bold" Grid.Column="1">
+        <Button x:Name="btnmashora" Content="" HorizontalAlignment="Left" Height="11" Margin="228,16,0,0" VerticalAlignment="Top" Width="18" Click="btnmashora_Click" RenderTransformOrigin="0.5,0.5" FontSize="14" FontWeight="Bold" Grid.Column="1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -34,10 +34,6 @@
         <Button x:Name="btnmenosminutos" HorizontalAlignment="Left" Height="10" Margin="308.415,29,0,0" VerticalAlignment="Top" Width="20" Click="btnmenosminutos_Click" Grid.Column="1">
             <Label x:Name="label_Copy3" Content="-" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         </Button>
-        <Label x:Name="label" Content="+" Grid.Column="1" HorizontalAlignment="Left" Margin="228,6,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
-        <Label x:Name="label_Copy" Content="+" Grid.Column="1" HorizontalAlignment="Left" Margin="308,7,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
-        <Label x:Name="label_Copy2" Content="-" Grid.Column="1" HorizontalAlignment="Left" Margin="229,19,0,0" VerticalAlignment="Top" FontWeight="Bold" Width="21" FontSize="14"/>
-        <Label x:Name="label_Copy4" Content="-" Grid.Column="1" HorizontalAlignment="Left" Margin="310,19,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
 
     </Grid>
 </UserControl>

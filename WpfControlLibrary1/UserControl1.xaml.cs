@@ -86,8 +86,8 @@ namespace WpfControlLibrary1
         public void datos(DateTime fecha)
         {
             dtfecha.SelectedDate = fecha.Date;
-            txthora.Text= ((DateTime)dtfecha.SelectedDate).Hour.ToString();
-            txtminutos.Text= ((DateTime)dtfecha.SelectedDate).Minute.ToString();
+            txthora.Text= fecha.Hour.ToString();
+            txtminutos.Text= fecha.Minute.ToString();
         }
 
         public bool limpiar()
