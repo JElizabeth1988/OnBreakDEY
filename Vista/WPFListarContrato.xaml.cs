@@ -42,30 +42,22 @@ namespace Vista
                 cb.descripcion = item.Descripcion;
                 cbofilTipoContrato.Items.Add(cb);
             }
-            foreach (TipoEvento item in new TipoEvento().ReadAll())
-            {
-                comboBoxItem cb = new comboBoxItem();
-                cb.id = item.Id;
-                cb.descripcion = item.Descripcion;
-                cbofilTipoContrato.Items.Add(cb);
-            }
-            //COMBOBOX MODALIDAD
 
 
             try
             {
-               /////////////////////////////////
-                Contrato co = new Contrato(); 
-                dgvLista.ItemsSource = co.ReadAll(); //Llama al listar todo
-                dgvLista.Items.Refresh(); 
-                //////////////////////////////
+                Contrato co = new Contrato();
+                dgvLista.ItemsSource = co.ReadAll2();//LLamar al Listar Todo
+                dgvLista.Items.Refresh();
 
             }
             catch (Exception ex)
             {
 
-                MessageBox.Show("Error al Listar");
+                MessageBox.Show("Error!" + ex.Message);
+                Logger.Mensaje(ex.Message);
             }
+
             
         }
 

@@ -329,7 +329,7 @@ namespace Vista
                     //dpFechaFinEvento.Text = c.FechaHoraTermino.ToString();
 
                     //PREGUNTAR
-                   // dpFechaInicio1.recuperar() = c.FechaHoraInicio;
+                   //dpFechaInicio1.recuperar() = c.FechaHoraInicio.ToString;
                     //dpFechaTermino.recuperar() = c.FechaHoraTermino;
 
                     txtNumeroAsistentes.Text = c.Asistentes.ToString();
