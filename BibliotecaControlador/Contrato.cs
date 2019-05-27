@@ -237,7 +237,7 @@ namespace BibliotecaNegocio
                     bdd.Contrato.First(con => con.Numero.Equals(Numero));
 
 
-                CommonBC.Syncronize(this, co);
+                CommonBC.Syncronize(co, this);
 
                 return true;
 
@@ -344,7 +344,7 @@ namespace BibliotecaNegocio
                             Creacion = con.Creacion,
                             Termino = con.Termino,
                             RutCliente = con.RutCliente,
-                            IdModalidad = mod.IdModalidad,//ESTÁ BIEN ASÍ?
+                            IdModalidad = mod.IdModalidad,
                             IdTipoEvento =con.IdTipoEvento,
                             FechaHoraInicio = con.FechaHoraInicio,
                             FechaHoraTermino = con.FechaHoraTermino,
@@ -496,9 +496,9 @@ namespace BibliotecaNegocio
             return co.ToList();
         }
 
-        //////////////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////////////////////////////////
 
-        public bool contarContratos()
+        public bool verificarContratos()
         {
             try
             {
@@ -514,7 +514,6 @@ namespace BibliotecaNegocio
         }
 
     }
-    // Johana: Moví esto por que estaba dentro de la clase contrato y debe estar afuera de las llaves
     public class ListaContratos
     {
         public string Numero { get; set; }

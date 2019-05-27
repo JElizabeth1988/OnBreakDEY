@@ -117,7 +117,7 @@ namespace BibliotecaNegocio
                 }
                 else
                 {
-                    throw new ArgumentException("Campo Teléfono no puede estar Vacío y debe tener un largo de 9 dígitos");
+                    throw new ArgumentException("- Campo Teléfono no puede estar Vacío y debe tener un largo de 9 dígitos");
                 }
 
             }
@@ -166,10 +166,10 @@ namespace BibliotecaNegocio
                 //bdd.Cliente.First(cli => cli.RutCliente.Equals(RutCliente));
                 bdd.Cliente.Find(RutCliente);
 
-                Contrato cont = new Contrato();
+               Contrato cont = new Contrato();
                 cont.RutCliente = cl.RutCliente;
 
-                if ( cont.contarContratos() ==false)
+                if ( cont.verificarContratos() ==false)
                 {
                     bdd.Cliente.Remove(cl);
                     bdd.SaveChanges();
@@ -191,14 +191,14 @@ namespace BibliotecaNegocio
                 BibliotecaDALC.Cliente cl =
                 bdd.Cliente.First(cli => cli.RutCliente.Equals(RutCliente));
                 //bdd.Cliente.Find(RutCliente);
-                RazonSocial = cl.RazonSocial;
+                /*RazonSocial = cl.RazonSocial;
                  NombreContacto = cl.NombreContacto;
                  MailContacto = cl.MailContacto;
                  Direccion = cl.Direccion;
                  Telefono = cl.Telefono;
-                 IdActividadEmpresa = cl.IdActividadEmpresa;//debo llamar a la descripción
-                 IdTipoEmpresa = cl.IdTipoEmpresa;
-                CommonBC.Syncronize(this, cl);
+                 IdActividadEmpresa = cl.IdActividadEmpresa;
+                 IdTipoEmpresa = cl.IdTipoEmpresa;*/
+                CommonBC.Syncronize(cl,this);//arregló this
 
                 return true;
 

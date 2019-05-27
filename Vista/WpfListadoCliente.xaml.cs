@@ -240,38 +240,50 @@ namespace Vista
         //Botón Eliminar
         private async void btnEliminar_Click(object sender, RoutedEventArgs e)
         {
-                
-                Cliente cli = (Cliente)dgLista.SelectedItem;
-            var x = await this.ShowMessageAsync("Eliminar Datos de Cliente" + cli.RutCliente,
-                     "¿Desea eliminar al Cliente?",
-                    MessageDialogStyle.AffirmativeAndNegative);
-            if (x == MessageDialogResult.Affirmative)
+            try
             {
-                bool resp = cli.Eliminar();
-                if (resp)
+                           
+                    ListaClientes cli = (ListaClientes)dgLista.SelectedItem;
+                var x = await this.ShowMessageAsync("Eliminar Datos de Cliente" + cli.Rut,
+                         "¿Desea eliminar al Cliente?",
+                        MessageDialogStyle.AffirmativeAndNegative);
+                if (x == MessageDialogResult.Affirmative)
                 {
-                    await this.ShowMessageAsync("Mensaje:",
-                      string.Format("Cliente Eliminado"));
-                    /*MessageBox.Show("Cliente eliminado");*/
-                    dgLista.ItemsSource =
-                    cli.ReadAll();
-                    dgLista.Items.Refresh();
+                    Cliente cl = new Cliente();
+                    cl.RutCliente = cli.Rut;
+                    bool resp = cl.Eliminar();
+                    if (resp)
+                    {
+                        await this.ShowMessageAsync("Mensaje:",
+                          string.Format("Cliente Eliminado"));
+                        /*MessageBox.Show("Cliente eliminado"); */
+                        dgLista.ItemsSource =
+                        cl.ReadAll2();
+                        dgLista.Items.Refresh();
+                    }
+                    else
+                    {
+                        await this.ShowMessageAsync("Mensaje:",
+                          string.Format("No se eliminó al Cliente"));
+                        /*MessageBox.Show("No se eliminó al Cliente");*/
+                    }
                 }
                 else
-                {
-                    await this.ShowMessageAsync("Mensaje:",
-                      string.Format("No se eliminó al Cliente"));
-                    /*MessageBox.Show("No se eliminó al Cliente");*/
-                }
+                    {
+                        await this.ShowMessageAsync("Mensaje:",
+                              string.Format("Operación Cancelada"));
+                        /*MessageBox.Show("Operación Cancelada");*/
+                    }
             }
-            else
-                {
-                    await this.ShowMessageAsync("Mensaje:",
-                          string.Format("Operación Cancelada"));
-                    /*MessageBox.Show("Operación Cancelada");*/
-                }
+            catch (Exception ex)
+            {
 
-
+                await this.ShowMessageAsync("Mensaje:",
+                     string.Format("Error al Eliminar la Información"));
+                /*MessageBox.Show("error al Filtrar Información");*/
+                Logger.Mensaje(ex.Message);
             }
+
+        }
     }
 }
