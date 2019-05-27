@@ -157,13 +157,15 @@ namespace Vista
             try
             {
                 Cliente c = new Cliente();
-                c.RutCliente = txtRut.Text;
+                c.RutCliente = txtRut.Text + "-" + txtDV.Text;
                 bool buscar = c.Buscar();
                 
                 if (buscar)
                 {
                     txtRut.Text = c.RutCliente.Substring(0, 10);
                     txtDV.Text = c.RutCliente.Substring(11, 1);
+                    txtRut.IsEnabled = false;
+                    txtDV.IsEnabled = false;
                     txtRazon.Text = c.RazonSocial;
                     txtNombre.Text = c.NombreContacto;
                     txtEmail.Text = c.MailContacto;
@@ -210,7 +212,7 @@ namespace Vista
             try
             {
                 Cliente c = new Cliente();
-                c.RutCliente = txtRut.Text;
+                c.RutCliente = txtRut.Text +"-"+ txtDV.Text;
                 bool buscar = c.Buscar();
                 if (buscar)
                 {
@@ -223,8 +225,14 @@ namespace Vista
                     txtEmail.Text = c.MailContacto;
                     txtDireccion.Text = c.Direccion;
                     txtTelefono.Text = c.Telefono.ToString();
-                    cbActividad.Text = c.IdActividadEmpresa.ToString();
-                    cbTipo.Text = c.IdTipoEmpresa.ToString();
+                    ActividadEmpresa ac = new ActividadEmpresa();
+                    ac.Id = c.IdActividadEmpresa;
+                    ac.Read();
+                    cbActividad.Text = ac.Descripcion;//Cambiar a descripción
+                    TipoEmpresa te = new TipoEmpresa();
+                    te.Id = c.IdTipoEmpresa;
+                    te.Read();
+                    cbTipo.Text = te.Descripcion;//Cambiar a descripción
 
                     btnModificar.Visibility = Visibility.Visible;
                     btnGuardar.Visibility = Visibility.Hidden;
@@ -240,7 +248,7 @@ namespace Vista
             catch (Exception ex)
             {
                 await this.ShowMessageAsync("Mensaje:",
-                     string.Format("Error al Buscar Información"));
+                     string.Format("Error al Buscar Información! "));
                 /*MessageBox.Show("error al buscar");*/
                 Logger.Mensaje(ex.Message);
 
