@@ -514,7 +514,6 @@ namespace BibliotecaNegocio
         }
 
     }
-    // Johana: Moví esto por que estaba dentro de la clase contrato y debe estar afuera de las llaves
     public class ListaContratos
     {
         public string Numero { get; set; }
