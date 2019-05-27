@@ -327,6 +327,11 @@ namespace Vista
                     txtBuscarCliente.Text = c.RutCliente;
                     //dpFechaInicio.Text = c.FechaHoraInicio.ToString();
                     //dpFechaFinEvento.Text = c.FechaHoraTermino.ToString();
+
+                    //PREGUNTAR
+                   // dpFechaInicio1.recuperar() = c.FechaHoraInicio;
+                    //dpFechaTermino.recuperar() = c.FechaHoraTermino;
+
                     txtNumeroAsistentes.Text = c.Asistentes.ToString();
                     txtPersonalAdicional.Text = c.PersonalAdicional.ToString();
                     cboTipo.Text = c.IdTipoEvento.ToString();
@@ -376,6 +381,11 @@ namespace Vista
                     //txtMinutoInicio.Text = c.MinutoInicio.ToString();
                     //txtHoraTermino.Text = c.HoraTermino.ToString();
                     //txtMinutoTermino.Text = c.MinutoTermino.ToString();
+
+                    //PREGUNTAR
+                   // dpFechaInicio1.recuperar() = c.FechaHoraInicio;
+                    //dpFechaTermino.recuperar() = c.FechaHoraTermino;
+
                     txtNumeroAsistentes.Text = c.Asistentes.ToString();
                     txtPersonalAdicional.Text = c.PersonalAdicional.ToString();
                     cboTipo.Text = c.IdTipoEvento.ToString();
