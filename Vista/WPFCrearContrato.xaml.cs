@@ -47,7 +47,6 @@ namespace Vista
                 cboTipo.Items.Add(cb);
             }
           
-           
 
             //LLENAR CB MODALIDAD SERVICIO
 
@@ -71,7 +70,7 @@ namespace Vista
         {
             try
             {
-                //if (dpFechaInicio.SelectedDate <= dpFechaFinEvento.SelectedDate)
+                if (dpFechaInicio1.recuperar() <= dpFechaTermino.recuperar())
                 {
                    
                     String numero = lblNumero.Content.ToString();
@@ -163,11 +162,11 @@ namespace Vista
 
                     btnModificar.Visibility=Visibility.Visible;
                 }
-               /* else
-               / {
+                else
+                {
                     await this.ShowMessageAsync("Mensaje:",
                       string.Format("Error: Fecha de Termino es menor a Fecha de Inicio"));
-                }*/
+                }
             }
             catch (ArgumentException exa) //catch excepciones hechas por el usuario
             {
@@ -261,7 +260,7 @@ namespace Vista
         {
             ListarContrato con = new ListarContrato(this);
             con.Show();
-            btnTerminar.Visibility = Visibility.Visible;
+           // btnTerminar.Visibility = Visibility.Visible;
 
         }
 

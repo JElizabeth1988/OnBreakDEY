@@ -75,13 +75,7 @@ namespace Vista
                 cb.descripcion = item.Descripcion;
                 cbofilTipoContrato.Items.Add(cb);
             }
-            foreach (TipoEvento item in new TipoEvento().ReadAll())
-            {
-                comboBoxItem cb = new comboBoxItem();
-                cb.id = item.Id;
-                cb.descripcion = item.Descripcion;
-                cbofilTipoContrato.Items.Add(cb);
-            }
+         
 
             try
             {
@@ -127,10 +121,7 @@ namespace Vista
 
 
 
-        private void dgvLista_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
 
-        }
 
         //NÚMERO
         private async void btnFiltrar_Click(object sender, RoutedEventArgs e)
