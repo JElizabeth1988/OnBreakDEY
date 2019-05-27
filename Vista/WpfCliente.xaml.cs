@@ -22,7 +22,7 @@ using MahApps.Metro.Behaviours;
 namespace Vista
 {
     /// <summary>
-    /// Lógica de interacción para WpfCliente.xaml
+    /// Lógica de C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\BibliotecaControlador\Logger.csinteracción para WpfCliente.xaml
     /// </summary>
     public partial class WpfCliente : MetroWindow
     {
