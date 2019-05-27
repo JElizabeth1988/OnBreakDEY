@@ -17,6 +17,7 @@ using BibliotecaNegocio;
 using MahApps.Metro.Controls;
 using MahApps.Metro.Controls.Dialogs;
 using MahApps.Metro.Behaviours;
+using WpfControlLibrary1;
 
 namespace Vista
 {
@@ -328,8 +329,8 @@ namespace Vista
                     //dpFechaFinEvento.Text = c.FechaHoraTermino.ToString();
 
                     //PREGUNTAR
-                   //dpFechaInicio1.recuperar() = c.FechaHoraInicio.ToString;
-                    //dpFechaTermino.recuperar() = c.FechaHoraTermino;
+                    dpFechaInicio1.datos( c.FechaHoraInicio);
+                    dpFechaTermino.datos( c.FechaHoraTermino);
 
                     txtNumeroAsistentes.Text = c.Asistentes.ToString();
                     txtPersonalAdicional.Text = c.PersonalAdicional.ToString();
@@ -382,8 +383,8 @@ namespace Vista
                     //txtMinutoTermino.Text = c.MinutoTermino.ToString();
 
                     //PREGUNTAR
-                   // dpFechaInicio1.recuperar() = c.FechaHoraInicio;
-                    //dpFechaTermino.recuperar() = c.FechaHoraTermino;
+                    dpFechaInicio1.datos(c.FechaHoraInicio);
+                    dpFechaTermino.datos(c.FechaHoraTermino);
 
                     txtNumeroAsistentes.Text = c.Asistentes.ToString();
                     txtPersonalAdicional.Text = c.PersonalAdicional.ToString();
