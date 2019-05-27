@@ -15,16 +15,4 @@ C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\BibliotecaControlador\bin\D
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\BibliotecaControlador\obj\Debug\BibliotecaNegocio.csprojResolveAssemblyReference.cache
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\BibliotecaControlador\obj\Debug\BibliotecaControlador.dll
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\BibliotecaControlador\obj\Debug\BibliotecaControlador.pdb
-<<<<<<< HEAD
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\BibliotecaControlador\bin\Debug\EntityFramework.xml
-=======
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\BibliotecaControlador\bin\Debug\BibliotecaControlador.dll
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\BibliotecaControlador\bin\Debug\BibliotecaControlador.pdb
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\BibliotecaControlador\bin\Debug\BibliotecaDALC.dll
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\BibliotecaControlador\bin\Debug\EntityFramework.dll
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\BibliotecaControlador\bin\Debug\BibliotecaDALC.pdb
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\BibliotecaControlador\bin\Debug\EntityFramework.xml
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\BibliotecaControlador\obj\Debug\BibliotecaNegocio.csprojResolveAssemblyReference.cache
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\BibliotecaControlador\obj\Debug\BibliotecaControlador.dll
-C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\BibliotecaControlador\obj\Debug\BibliotecaControlador.pdb
->>>>>>> ac400a1f63b3c1bd1cfc386e868a9b59efc22fa8
