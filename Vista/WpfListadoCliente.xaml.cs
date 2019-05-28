@@ -29,6 +29,9 @@ namespace Vista
         
         Crear_Contrato cc;//Recibe al Contrato
 
+        ListarContrato lc;//Recibe al ListarContrato
+        private ListarContrato listarContrato;
+
         //Llamado desde menú principal
         public wpfListadoCliente()
         {
@@ -144,6 +147,44 @@ namespace Vista
 
         }
 
+        public wpfListadoCliente(ListarContrato origen)
+        {
+           
+            InitializeComponent();
+
+            btnPasar.Visibility = Visibility.Visible;//el botón traspasar se ve
+            btnEliminar.Visibility = Visibility.Hidden;//Botón eliminar no se ve
+            //llenar el combo box con los datos del enumerador
+            foreach (ActividadEmpresa item in new ActividadEmpresa().ReadAll())
+            {
+                comboBoxItem cb = new comboBoxItem();
+                cb.id = item.Id;
+                cb.descripcion = item.Descripcion;
+                cbActiv.Items.Add(cb);
+            }
+            foreach (TipoEmpresa item in new TipoEmpresa().ReadAll())
+            {
+                comboBoxItem cb = new comboBoxItem();
+                cb.id = item.Id;
+                cb.descripcion = item.Descripcion;
+                cbTipoEmp.Items.Add(cb);
+            }
+
+            try
+            {
+                Cliente cl = new Cliente();
+                dgLista.ItemsSource = cl.ReadAll2();
+                dgLista.Items.Refresh();
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error!" + ex.Message);
+            }
+            lc = origen;
+        }
+
 
 
         //Botón Salir
@@ -243,8 +284,8 @@ namespace Vista
         {
             try
             {
-                           
-                    ListaClientes cli = (ListaClientes)dgLista.SelectedItem;
+
+                ListaClientes cli = (ListaClientes)dgLista.SelectedItem;
                 var x = await this.ShowMessageAsync("Eliminar Datos de Cliente" + cli.Rut,
                          "¿Desea eliminar al Cliente?",
                         MessageDialogStyle.AffirmativeAndNegative);
@@ -270,11 +311,11 @@ namespace Vista
                     }
                 }
                 else
-                    {
-                        await this.ShowMessageAsync("Mensaje:",
-                              string.Format("Operación Cancelada"));
-                        /*MessageBox.Show("Operación Cancelada");*/
-                    }
+                {
+                    await this.ShowMessageAsync("Mensaje:",
+                          string.Format("Operación Cancelada"));
+                    /*MessageBox.Show("Operación Cancelada");*/
+                }
             }
             catch (Exception ex)
             {
@@ -284,7 +325,46 @@ namespace Vista
                 /*MessageBox.Show("error al Filtrar Información");*/
                 Logger.Mensaje(ex.Message);
             }
-
         }
+
+            //Llamado desde Contrato
+      /*  public ListarContrato(ListarContrato origen)
+        {
+            InitializeComponent();
+
+            btnPasar.Visibility = Visibility.Visible;//el botón traspasar se ve
+            btnEliminar.Visibility = Visibility.Hidden;//Botón eliminar no se ve
+            //llenar el combo box con los datos del enumerador
+            foreach (ActividadEmpresa item in new ActividadEmpresa().ReadAll())
+            {
+                comboBoxItem cb = new comboBoxItem();
+                cb.id = item.Id;
+                cb.descripcion = item.Descripcion;
+                cbActiv.Items.Add(cb);
+            }
+            foreach (TipoEmpresa item in new TipoEmpresa().ReadAll())
+            {
+                comboBoxItem cb = new comboBoxItem();
+                cb.id = item.Id;
+                cb.descripcion = item.Descripcion;
+                cbTipoEmp.Items.Add(cb);
+            }
+
+            try
+            {
+                Cliente cl = new Cliente();
+                dgLista.ItemsSource = cl.ReadAll2();
+                dgLista.Items.Refresh();
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error!" + ex.Message);
+            }
+            lc = origen;*/
+        
+
+    
     }
 }

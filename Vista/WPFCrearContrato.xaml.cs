@@ -47,7 +47,6 @@ namespace Vista
                 cb.descripcion = item.Descripcion;
                 cboTipo.Items.Add(cb);
             }
-          
 
             //LLENAR CB MODALIDAD SERVICIO
 
@@ -58,6 +57,13 @@ namespace Vista
                 cb.descripcion = item.Nombre;
                 cbModalidad.Items.Add(cb);
             }
+
+          /* if (cboTipo.SelectedValue='Cofee Break')
+                    cbModalidad = 'Light Break'
+            else 
+           if (cboTipo.SelectedValue)*/
+
+            
          
 
         }
@@ -631,7 +637,7 @@ namespace Vista
                     String numero = lblNumero.Content.ToString();
                     DateTime creacion = fechac;
                     bool realizado = true;
-                    DateTime termino = fechat;
+                    DateTime termino = DateTime.Now;
                     rbNo.IsChecked = true;
                     rbSi.IsChecked = false;
 

@@ -209,5 +209,12 @@ namespace Vista
             Close();
 
         }
+
+        private void button_Click_1(object sender, RoutedEventArgs e)
+        {
+            wpfListadoCliente cli = new wpfListadoCliente(this);
+            cli.Show();
+
+        }
     }
 }
