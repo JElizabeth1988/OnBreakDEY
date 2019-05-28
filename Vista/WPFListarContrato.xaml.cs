@@ -43,6 +43,16 @@ namespace Vista
                 cbofilTipoContrato.Items.Add(cb);
             }
 
+            //LLENAR CB MODALIDAD SERVICIO
+
+            foreach (ModalidadServicio item in new ModalidadServicio().ReadAll())
+            {
+                comboBoxItem2 cb = new comboBoxItem2();
+                cb.id = item.Id;
+                cb.descripcion = item.Nombre;
+                cbFiltroModalidad.Items.Add(cb);
+            }
+
 
             try
             {
@@ -215,6 +225,24 @@ namespace Vista
             wpfListadoCliente cli = new wpfListadoCliente(this);
             cli.Show();
 
+        }
+
+        //FILTRAR MODALIDAD
+        private async void btnFiltrarModalidad_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                comboBoxItem2 mod = (comboBoxItem2)cbFiltroModalidad.SelectedItem;
+
+                List<ListaContratos> lf = new Contrato().FiltroModalidad(mod.descripcion);
+                dgvLista.ItemsSource = lf;
+            }
+            catch (Exception ex)
+            {
+                await this.ShowMessageAsync("Mensaje", "error al Filtrar Información");
+                Logger.Mensaje(ex.Message);
+                dgvLista.Items.Refresh();
+            }
         }
     }
 }

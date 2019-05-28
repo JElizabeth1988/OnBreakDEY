@@ -499,9 +499,39 @@ namespace BibliotecaNegocio
             return co.ToList();
         }
 
+        //FILTRO MODALIDAD
+        public List<ListaContratos> FiltroModalidad(string mod)
+        {
+            var co = from con in bdd.Contrato
+                     join modal in bdd.ModalidadServicio
+                       on con.IdModalidad equals modal.IdModalidad
+                     join tip in bdd.TipoEvento
+                       on con.IdTipoEvento equals tip.IdTipoEvento
+                     where modal.Nombre == mod
+                     select new ListaContratos()
+                     {
+                         Numero = con.Numero,
+                         Creacion = con.Creacion,
+                         Termino = con.Termino,
+                         RutCliente = con.RutCliente,
+                         Modalidad = modal.Nombre,
+                         TipoEvento = tip.Descripcion,
+                         FechaHoraInicio = con.FechaHoraInicio,
+                         FechaHoraTermino = con.FechaHoraTermino,
+                         Asistentes = con.Asistentes,
+                         PersonalAdicional = con.PersonalAdicional,
+                         Realizado = con.Realizado,//?
+                         ValorTotalContrato = con.ValorTotalContrato,//?
+                         Observaciones = con.Observaciones
+
+                     };
+
+            return co.ToList();
+        }
+
         ///////////////////////////////////////////////////////////////////////////////
-        
-    
+
+
         public bool verificarContratos()
         {
             try
