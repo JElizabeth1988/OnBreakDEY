@@ -151,13 +151,13 @@ namespace Vista
 
 
 
-        
+        //Llamado del botón traspasar
         public async void Buscar()
         {
             try
             {
                 Cliente c = new Cliente();
-                c.RutCliente = txtRut.Text + "-" + txtDV.Text;
+                c.RutCliente = txtRut.Text;
                 bool buscar = c.Buscar();
                 
                 if (buscar)
