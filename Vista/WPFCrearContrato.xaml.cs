@@ -19,6 +19,7 @@ using MahApps.Metro.Controls.Dialogs;
 using MahApps.Metro.Behaviours;
 using WpfControlLibrary1;
 
+
 namespace Vista
 {
     /// <summary>
@@ -39,6 +40,8 @@ namespace Vista
             btnTerminar.Visibility = Visibility.Hidden;
             btnModificar.Visibility = Visibility.Hidden;
 
+             
+           
             //LLENAR COMBO BOX TIPO EVENTO
             foreach (TipoEvento item in new TipoEvento().ReadAll())
             {
@@ -57,13 +60,7 @@ namespace Vista
                 cb.descripcion = item.Nombre;
                 cbModalidad.Items.Add(cb);
             }
-
-          /* if (cboTipo.SelectedValue='Cofee Break')
-                    cbModalidad = 'Light Break'
-            else 
-           if (cboTipo.SelectedValue)*/
-
-            
+                
          
 
         }
@@ -72,6 +69,8 @@ namespace Vista
 
         DateTime fechac = DateTime.Now;
         DateTime fechat = DateTime.Now;
+
+
         //CREAR CONTRATO
         private async void btnCrear_Click(object sender, RoutedEventArgs e)
         {
@@ -859,8 +858,21 @@ namespace Vista
 
         private void cboTipo_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            int contenido = ((comboBoxItem)cboTipo.SelectedItem).id;
 
-        }
+            ModalidadServicio mod = new ModalidadServicio();
+
+            foreach (var item in mod.ReadAll().Where(con => con.IdtipoEvento == contenido).ToList())
+            {
+                comboBoxItem cb = new comboBoxItem();
+
+                cbModalidad.Items.Add(cb);
+    
+            } 
+            
+
+    }
+        
 
         private void btnMasHoraInicio_Click(object sender, RoutedEventArgs e)
         {

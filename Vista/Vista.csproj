@@ -158,6 +158,10 @@
       <Project>{5f5241b3-dbf9-4b09-b205-3efa19c66622}</Project>
       <Name>BibliotecaNegocio</Name>
     </ProjectReference>
+    <ProjectReference Include="..\BibliotecaDALC\BibliotecaDALC.csproj">
+      <Project>{65c88204-185a-42dd-bb07-7b1363263b47}</Project>
+      <Name>BibliotecaDALC</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Servicios\Servicios.csproj">
       <Project>{900483e1-95ce-4e70-9f1d-e69c1bd828e3}</Project>
       <Name>Servicios</Name>
