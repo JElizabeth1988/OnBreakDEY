@@ -254,7 +254,7 @@ namespace Vista
                     bool resp = cl.Eliminar();
                     if (resp)
                     {
-                        await this.ShowMessageAsync("Mensaje:",
+                        await this.ShowMessageAsync("Éxito:",
                           string.Format("Cliente Eliminado"));
                         /*MessageBox.Show("Cliente eliminado"); */
                         dgLista.ItemsSource =
