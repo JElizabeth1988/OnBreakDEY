@@ -162,17 +162,21 @@ namespace BibliotecaNegocio
         {
             try
             {
-                BibliotecaDALC.Cliente cl =
-                //bdd.Cliente.First(cli => cli.RutCliente.Equals(RutCliente));
-                bdd.Cliente.Find(RutCliente);
-
-               Contrato cont = new Contrato();
-                cont.RutCliente = cl.RutCliente;
-
-                if ( cont.verificarContratos() ==false)
+                Contrato cont = new Contrato();
+                if (cont.verificarContratos() == false)
                 {
+                    BibliotecaDALC.Cliente cl =
+                    //bdd.Cliente.First(cli => cli.RutCliente.Equals(RutCliente));
+                    bdd.Cliente.Find(RutCliente);
+
+               
+                    cont.RutCliente = cl.RutCliente;
+
+                
                     bdd.Cliente.Remove(cl);
                     bdd.SaveChanges();
+
+
                 }
                 
                 return true;
@@ -181,6 +185,7 @@ namespace BibliotecaNegocio
             {
 
                 return false;
+                Logger.Mensaje(ex.Message);
             }
         }
 

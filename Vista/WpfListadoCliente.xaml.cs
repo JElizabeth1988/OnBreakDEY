@@ -263,8 +263,8 @@ namespace Vista
                     }
                     else
                     {
-                        await this.ShowMessageAsync("Mensaje:",
-                          string.Format("No se eliminó al Cliente"));
+                        await this.ShowMessageAsync("Lo Sentimos:",
+                          string.Format("No se puede eliminar al Cliente porque tiene contratos asociados"));
                         /*MessageBox.Show("No se eliminó al Cliente");*/
                     }
                 }
