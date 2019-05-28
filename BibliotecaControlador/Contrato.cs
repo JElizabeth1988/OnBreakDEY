@@ -352,7 +352,7 @@ namespace BibliotecaNegocio
                             PersonalAdicional = con.PersonalAdicional,
                             Realizado = con.Realizado,
                             ValorTotalContrato = con.ValorTotalContrato,
-                            Observaciones = Observaciones
+                            Observaciones = con.Observaciones
                         };
                 return c.ToList();
 
@@ -391,7 +391,7 @@ namespace BibliotecaNegocio
                             PersonalAdicional = con.PersonalAdicional,
                             Realizado = con.Realizado,//?
                             ValorTotalContrato = con.ValorTotalContrato,//?
-                            Observaciones = Observaciones
+                            Observaciones = con.Observaciones
 
                         };
                 return c.ToList();
@@ -429,7 +429,7 @@ namespace BibliotecaNegocio
                          PersonalAdicional = con.PersonalAdicional,
                          Realizado = con.Realizado,//?
                          ValorTotalContrato = con.ValorTotalContrato,//?
-                         Observaciones = Observaciones
+                         Observaciones = con.Observaciones
 
                      };
 
@@ -462,7 +462,7 @@ namespace BibliotecaNegocio
                          PersonalAdicional = con.PersonalAdicional,
                          Realizado = con.Realizado,//?
                          ValorTotalContrato = con.ValorTotalContrato,//?
-                         Observaciones = Observaciones
+                         Observaciones = con.Observaciones
 
                      };
 
@@ -492,7 +492,7 @@ namespace BibliotecaNegocio
                          PersonalAdicional = con.PersonalAdicional,
                          Realizado = con.Realizado,//?
                          ValorTotalContrato = con.ValorTotalContrato,//?
-                         Observaciones = Observaciones
+                         Observaciones = con.Observaciones
 
                      };
 
