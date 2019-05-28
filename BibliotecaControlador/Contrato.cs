@@ -374,22 +374,25 @@ namespace BibliotecaNegocio
                           on con.IdModalidad equals modal.IdModalidad
                         join tip in bdd.TipoEvento
                           on con.IdTipoEvento equals tip.IdTipoEvento
+                        join cli in bdd.Cliente
+                            on con.RutCliente equals cli.RutCliente
                         select new ListaContratos()
                         {
+                            
                             Numero = con.Numero,
-                            Creacion = con.Creacion.ToString(),
-                            Termino = con.Termino.ToString(),
+                            Creacion = con.Creacion,
+                            Termino = con.Termino,
                             RutCliente = con.RutCliente,
                             Modalidad =modal.Nombre,
                             TipoEvento= tip.Descripcion,
-                            FechaHoraInicio = con.FechaHoraInicio.ToString(),
-                            FechaHoraTermino = con.FechaHoraTermino.ToString(),
-                            Asistentes = con.Asistentes.ToString(),
-                            PersonalAdicional = con.PersonalAdicional.ToString(),
-                            Realizado = con.Realizado.ToString(),//?
-                            ValorTotalContrato = con.ValorTotalContrato.ToString(),//?
+                            FechaHoraInicio = con.FechaHoraInicio,
+                            FechaHoraTermino = con.FechaHoraTermino,
+                            Asistentes = con.Asistentes,
+                            PersonalAdicional = con.PersonalAdicional,
+                            Realizado = con.Realizado,//?
+                            ValorTotalContrato = con.ValorTotalContrato,//?
                             Observaciones = Observaciones
-                              
+
                         };
                 return c.ToList();
 
@@ -403,7 +406,7 @@ namespace BibliotecaNegocio
 
         /// /////////////////////////////////////////////////////////////////////////
         /// FILTROS
-        //Filtro por número
+       //Filtro por número
         public List<ListaContratos> FiltroNumeroContrato(string num)
         {
             var co = from con in bdd.Contrato
@@ -415,17 +418,17 @@ namespace BibliotecaNegocio
                      select new ListaContratos()
                      {
                          Numero = con.Numero,
-                         Creacion = con.Creacion.ToString(),
-                         Termino = con.Termino.ToString(),
+                         Creacion = con.Creacion,
+                         Termino = con.Termino,
                          RutCliente = con.RutCliente,
                          Modalidad = modal.Nombre,
                          TipoEvento = tip.Descripcion,
-                         FechaHoraInicio = con.FechaHoraInicio.ToString(),
-                         FechaHoraTermino = con.FechaHoraTermino.ToString(),
-                         Asistentes = con.Asistentes.ToString(),
-                         PersonalAdicional = con.PersonalAdicional.ToString(),
-                         Realizado = con.Realizado.ToString(),//?
-                         ValorTotalContrato = con.ValorTotalContrato.ToString(),//?
+                         FechaHoraInicio = con.FechaHoraInicio,
+                         FechaHoraTermino = con.FechaHoraTermino,
+                         Asistentes = con.Asistentes,
+                         PersonalAdicional = con.PersonalAdicional,
+                         Realizado = con.Realizado,//?
+                         ValorTotalContrato = con.ValorTotalContrato,//?
                          Observaciones = Observaciones
 
                      };
@@ -448,17 +451,17 @@ namespace BibliotecaNegocio
                      select new ListaContratos()
                      {
                          Numero = con.Numero,
-                         Creacion = con.Creacion.ToString(),
-                         Termino = con.Termino.ToString(),
+                         Creacion = con.Creacion,
+                         Termino = con.Termino,
                          RutCliente = con.RutCliente,
                          Modalidad = mod.Nombre,
                          TipoEvento = tip.Descripcion,
-                         FechaHoraInicio = con.FechaHoraInicio.ToString(),
-                         FechaHoraTermino = con.FechaHoraTermino.ToString(),
-                         Asistentes = con.Asistentes.ToString(),
-                         PersonalAdicional = con.PersonalAdicional.ToString(),
-                         Realizado = con.Realizado.ToString(),//?
-                         ValorTotalContrato = con.ValorTotalContrato.ToString(),//?
+                         FechaHoraInicio = con.FechaHoraInicio,
+                         FechaHoraTermino = con.FechaHoraTermino,
+                         Asistentes = con.Asistentes,
+                         PersonalAdicional = con.PersonalAdicional,
+                         Realizado = con.Realizado,//?
+                         ValorTotalContrato = con.ValorTotalContrato,//?
                          Observaciones = Observaciones
 
                      };
@@ -478,17 +481,17 @@ namespace BibliotecaNegocio
                      select new ListaContratos()
                      {
                          Numero = con.Numero,
-                         Creacion = con.Creacion.ToString(),
-                         Termino = con.Termino.ToString(),
+                         Creacion = con.Creacion,
+                         Termino = con.Termino,
                          RutCliente = con.RutCliente,
                          Modalidad = modal.Nombre,
                          TipoEvento = tip.Descripcion,
-                         FechaHoraInicio = con.FechaHoraInicio.ToString(),
-                         FechaHoraTermino = con.FechaHoraTermino.ToString(),
-                         Asistentes = con.Asistentes.ToString(),
-                         PersonalAdicional = con.PersonalAdicional.ToString(),
-                         Realizado = con.Realizado.ToString(),//?
-                         ValorTotalContrato = con.ValorTotalContrato.ToString(),//?
+                         FechaHoraInicio = con.FechaHoraInicio,
+                         FechaHoraTermino = con.FechaHoraTermino,
+                         Asistentes = con.Asistentes,
+                         PersonalAdicional = con.PersonalAdicional,
+                         Realizado = con.Realizado,//?
+                         ValorTotalContrato = con.ValorTotalContrato,//?
                          Observaciones = Observaciones
 
                      };
@@ -497,7 +500,8 @@ namespace BibliotecaNegocio
         }
 
         ///////////////////////////////////////////////////////////////////////////////
-
+        
+    
         public bool verificarContratos()
         {
             try
@@ -517,17 +521,17 @@ namespace BibliotecaNegocio
     public class ListaContratos
     {
         public string Numero { get; set; }
-        public string Creacion { get; set; }
-        public string Termino { get; set; }
+        public DateTime Creacion { get; set; }
+        public DateTime Termino { get; set; }
         public string RutCliente { get; set; }
         public string Modalidad { get; set; }
-        public string TipoEvento { get; set; }
-        public string FechaHoraInicio { get; set; }
-        public string FechaHoraTermino { get; set; }
-        public string Asistentes { get; set; }
-        public string PersonalAdicional { get; set; }
-        public string Realizado { get; set; }
-        public string ValorTotalContrato { get; set; }
+        public String TipoEvento { get; set; }
+        public DateTime FechaHoraInicio { get; set; }
+        public DateTime FechaHoraTermino { get; set; }
+        public int Asistentes { get; set; }
+        public int PersonalAdicional { get; set; }
+        public bool Realizado { get; set; }
+        public double ValorTotalContrato { get; set; }
         public string Observaciones { get; set; }
 
         public ListaContratos()

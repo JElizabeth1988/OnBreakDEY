@@ -312,7 +312,7 @@ namespace Vista
 
 
    
-        //BUSCAR CONTRATO
+        //BUSCAR CONTRATO de traspasar
         private async void btnBuscarContrato_Click_2(object sender, RoutedEventArgs e)
         {
             try
@@ -322,27 +322,44 @@ namespace Vista
                 bool buscar = c.Buscar();
                 if (buscar)
                 {
-                    
-                    
+
                     txtBuscarCliente.Text = c.RutCliente;
                     //dpFechaInicio.Text = c.FechaHoraInicio.ToString();
                     //dpFechaFinEvento.Text = c.FechaHoraTermino.ToString();
+                    //txtHoraInicio.Text = c.HoraInicio.ToString();
+                    //txtMinutoInicio.Text = c.MinutoInicio.ToString();
+                    //txtHoraTermino.Text = c.HoraTermino.ToString();
+                    //txtMinutoTermino.Text = c.MinutoTermino.ToString();
 
-                    //PREGUNTAR
-                    dpFechaInicio1.datos( c.FechaHoraInicio);
-                    dpFechaTermino.datos( c.FechaHoraTermino);
-                    
+                    dpFechaInicio1.datos(c.FechaHoraInicio);
+                    dpFechaTermino.datos(c.FechaHoraTermino);
+
                     dpFechaInicio1.datos(c.FechaHoraInicio);
                     dpFechaTermino.datos(c.FechaHoraTermino);
 
                     txtNumeroAsistentes.Text = c.Asistentes.ToString();
                     txtPersonalAdicional.Text = c.PersonalAdicional.ToString();
-                    cboTipo.Text = c.IdTipoEvento.ToString();
-                    cbModalidad.Text = c.IdModalidad;
+
+                    TipoEvento tip = new TipoEvento();
+                    tip.Id = c.IdTipoEvento;
+                    tip.Read();
+                    cboTipo.Text = tip.Descripcion;//Cambiar a descripción
+
+                    //PASAR nombre modalidad no id
+                    ModalidadServicio mod = new ModalidadServicio();
+                    mod.Id = c.IdModalidad;
+                    mod.Read();
+                    cbModalidad.Text = mod.Nombre;//Cambiar a descripción
+
+                    /*cboTipo.Text = c.IdTipoEvento.ToString();
+                    cbModalidad.Text = c.IdModalidad.ToString();*/
+
+                   // cbModalidad.Text = c.IdModalidad;
                     txtObservaciones.Text = c.Observaciones;
                     lblNumero.Content = txtNumero.Text; //IGUALAR CAMPOS 
                     btnModificar.Visibility = Visibility.Visible;
                     btnTerminar.Visibility = Visibility.Visible;
+                    
                     
                     
                 }
@@ -364,7 +381,7 @@ namespace Vista
 
         }
 
-        //MÉTODO BUSCAR CONTRATO
+        //MÉTODO BUSCAR CONTRATO botón buscar
 
         public async void BuscarContrato()
         {
@@ -385,6 +402,12 @@ namespace Vista
                     //txtHoraTermino.Text = c.HoraTermino.ToString();
                     //txtMinutoTermino.Text = c.MinutoTermino.ToString();
 
+                    dpFechaInicio1.datos(c.FechaHoraInicio);
+                    dpFechaTermino.datos(c.FechaHoraTermino);
+
+                    dpFechaInicio1.datos(c.FechaHoraInicio);
+                    dpFechaTermino.datos(c.FechaHoraTermino);
+
                     txtNumeroAsistentes.Text = c.Asistentes.ToString();
                     txtPersonalAdicional.Text = c.PersonalAdicional.ToString();
 
@@ -399,10 +422,10 @@ namespace Vista
                     mod.Read();
                     cbModalidad.Text = mod.Nombre;//Cambiar a descripción
 
-                    cboTipo.Text = c.IdTipoEvento.ToString();
-                    cbModalidad.Text = c.IdModalidad.ToString();
+                    /*cboTipo.Text = c.IdTipoEvento.ToString();
+                    cbModalidad.Text = c.IdModalidad.ToString();*/
 
-                    cbModalidad.Text = c.IdModalidad;
+                   // cbModalidad.Text = c.IdModalidad;
                     txtObservaciones.Text = c.Observaciones;
                     lblNumero.Content = txtNumero.Text; //IGUALAR CAMPOS 
                     btnModificar.Visibility = Visibility.Visible;

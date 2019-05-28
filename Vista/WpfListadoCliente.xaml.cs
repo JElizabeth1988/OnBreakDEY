@@ -139,6 +139,7 @@ namespace Vista
             {
                 
                 MessageBox.Show("Error al Listar!" + ex.Message);
+                Logger.Mensaje(ex.Message);
             }
 
         }

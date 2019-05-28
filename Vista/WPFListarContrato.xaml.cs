@@ -81,7 +81,7 @@ namespace Vista
             {
 
                 Contrato co = new Contrato();
-                dgvLista.ItemsSource = co.ReadAll();
+                dgvLista.ItemsSource = co.ReadAll2();
                 dgvLista.Items.Refresh();
 
             }
@@ -170,9 +170,9 @@ namespace Vista
 
             try
             {
-                TipoEvento tipoE = (TipoEvento)cbofilTipoContrato.SelectedItem;
+                comboBoxItem tipoE = (comboBoxItem)cbofilTipoContrato.SelectedItem;
 
-                List<ListaContratos> lf = new Contrato().FiltroTipoEvento(tipoE.Descripcion);
+                List<ListaContratos> lf = new Contrato().FiltroTipoEvento(tipoE.descripcion);
                 dgvLista.ItemsSource = lf;
             }
             catch (Exception ex)
@@ -196,13 +196,13 @@ namespace Vista
 
             if (cc==null)
             {
-                Contrato con = (Contrato)dgvLista.SelectedItem;
+                ListaContratos con = (ListaContratos)dgvLista.SelectedItem;
                 cc.txtNumero.Text = con.Numero;
                 cc.BuscarContrato();
             }
             else
             {
-                Contrato con = (Contrato)dgvLista.SelectedItem;
+                ListaContratos con = (ListaContratos)dgvLista.SelectedItem;
                 cc.txtNumero.Text = con.Numero;
                 cc.BuscarContrato();
             }
