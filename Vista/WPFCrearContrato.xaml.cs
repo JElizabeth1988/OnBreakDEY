@@ -34,14 +34,14 @@ namespace Vista
         {
 
             InitializeComponent();
-            lblNumero.Content =  DateTime.Now.ToString("yyyyMMddHHmm");
+            lblNumero.Content = DateTime.Now.ToString("yyyyMMddHHmm");
             lblUf.Content = "$" + uf;
             this.cboTipo.SelectedItem = null;
             btnTerminar.Visibility = Visibility.Hidden;
             btnModificar.Visibility = Visibility.Hidden;
 
-             
-           
+
+
             //LLENAR COMBO BOX TIPO EVENTO
             foreach (TipoEvento item in new TipoEvento().ReadAll())
             {
@@ -60,13 +60,26 @@ namespace Vista
                 cb.descripcion = item.Nombre;
                 cbModalidad.Items.Add(cb);
             }
-                
-         
+
+        
 
         }
+        
 
-        double valorc= 2;
+        //CALCULO CONTRATO
+       public double calculo ()
+        {
+            ModalidadServicio mod = new ModalidadServicio();
+            double valorc = mod.ValorBase + double.Parse(txtNumeroAsistentes.Text);
+                      //     + (double)lblAsistentes.Content()
+                        //   + (double)lblPersonalAdicional.Content();
 
+                return valorc;
+                //lblTotal =fechac.tostring();
+        }
+
+        //BORRAR ESTE DESPUÉS
+        double valorc = 2;
         DateTime fechac = DateTime.Now;
         DateTime fechat = DateTime.Now;
 
@@ -752,8 +765,8 @@ namespace Vista
                 double uf = WS.Uf();
 
              
-                int asi = 0;
-                if (int.TryParse(txtNumeroAsistentes.Text, out asi))
+                double asi = 0;
+                if (double.TryParse(txtNumeroAsistentes.Text, out asi))
                 {
 
                 }
@@ -764,7 +777,7 @@ namespace Vista
                     return;
                 }
 
-                int n = 0;
+                double n = 0;
 
                 if (asi >= 1 && asi <= 20)
                 {
@@ -776,14 +789,14 @@ namespace Vista
                 }
                 if (asi > 50)
                 {
-                    int c = asi - 50;
+                    double c = asi - 50;
                     n = 5;
-                    int r = (c / 20);
+                    double r = (c / 20);
                     n = n + r;
 
                 }
-                int v = (int)(n * uf);
-                lblAsistentes.Content = v.ToString();
+                double v = (n * uf);
+               lblAsistentes.Content = v.ToString();
             }
             else
             {
@@ -810,9 +823,9 @@ namespace Vista
         {
             if (txtPersonalAdicional.Text != null)
             {
-                
-                int personal = 0;
-                if (int.TryParse(txtPersonalAdicional.Text, out personal))
+                ModalidadServicio mod = new ModalidadServicio();
+                double personal = 0;
+                if (double.TryParse(txtPersonalAdicional.Text, out personal))
                 {
 
                 }
@@ -837,9 +850,9 @@ namespace Vista
                 {
                     cant_uf = 3.5;
                 }
-                if (personal > 4)
+                if (personal > mod.PersonalBase)
                 {
-                    int cantidad = personal - 4;
+                    double cantidad = personal - mod.PersonalBase;
                     cant_uf = 3.5;
 
                     double extra = (cantidad * 0.5);
@@ -847,7 +860,7 @@ namespace Vista
 
                 }
 
-                int v = (int)(cant_uf * uf);
+                double v = (double)(cant_uf * uf);
                 lblPersonalAdicional.Content = v.ToString();
             }
             //else
@@ -880,6 +893,6 @@ namespace Vista
         }
 
 
-        //valor total
+       
     }
 }
