@@ -194,29 +194,40 @@ namespace Vista
 
         }
 
-        private void btnPasar_Click_1(object sender, RoutedEventArgs e)
+        private async void btnPasar_Click_1(object sender, RoutedEventArgs e)
         {
-
-            if (btnPasar.Visibility == Visibility.Hidden)
+            try
             {
-                btnPasar.Visibility = Visibility.Hidden;
+                if (btnPasar.Visibility == Visibility.Hidden)
+                {
+                    btnPasar.Visibility = Visibility.Hidden;
+
+                }
+
+
+                if (cc==null)
+                {
+                    ListaContratos con = (ListaContratos)dgvLista.SelectedItem;
+                    cc.txtNumero.Text = con.Numero;
+                    cc.BuscarContrato();
+                }
+                else
+                {
+                    ListaContratos con = (ListaContratos)dgvLista.SelectedItem;
+                    cc.txtNumero.Text = con.Numero;
+                    cc.BuscarContrato();
+                }
+                Close();
+            }
+            catch (Exception ex)
+            {
+                await this.ShowMessageAsync("Mensaje:",
+                     string.Format("Error al traspasar la Información"));
+                /*MessageBox.Show("error al Filtrar Información");*/
+                Logger.Mensaje(ex.Message);
 
             }
-
-
-            if (cc==null)
-            {
-                ListaContratos con = (ListaContratos)dgvLista.SelectedItem;
-                cc.txtNumero.Text = con.Numero;
-                cc.BuscarContrato();
-            }
-            else
-            {
-                ListaContratos con = (ListaContratos)dgvLista.SelectedItem;
-                cc.txtNumero.Text = con.Numero;
-                cc.BuscarContrato();
-            }
-            Close();
+            
 
         }
 
@@ -250,6 +261,36 @@ namespace Vista
             Contrato co = new Contrato();
             dgvLista.ItemsSource = co.ReadAll2();//LLamar al Listar Todo
             dgvLista.Items.Refresh();
+        }
+
+
+        //Busca cliente en listado de clientes
+        public async void BuscarCliente()
+        {
+            try
+            {
+                Cliente c = new Cliente();
+                c.RutCliente = txtfiltroRut.Text;
+                bool buscar = c.Buscar();
+                if (buscar)
+                {
+                    txtfiltroRut.Text = c.RutCliente;
+                }
+                else
+                {
+                    await this.ShowMessageAsync("Mensaje:",
+                     string.Format("Cliente no encontrado"));
+                    /*MessageBox.Show("Cliente no Encontrado");*/
+                }
+            }
+            catch (Exception ex)
+            {
+                await this.ShowMessageAsync("Mensaje:",
+                      string.Format("Error al Buscar"));
+                /*MessageBox.Show("Error al buscar");*/
+                Logger.Mensaje(ex.Message);
+
+            }
         }
     }
 }

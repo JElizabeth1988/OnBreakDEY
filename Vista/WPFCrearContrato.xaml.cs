@@ -506,7 +506,7 @@ namespace Vista
 
             }
         }
-
+        //Busca cliente en listado de clientes
         public async void Buscar()
         {
             try
@@ -534,6 +534,8 @@ namespace Vista
 
             }
         }
+
+
 
         //MODIFICAR
         private async void btnModificar_Click(object sender, RoutedEventArgs e)
