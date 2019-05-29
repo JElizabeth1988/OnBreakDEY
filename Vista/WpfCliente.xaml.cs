@@ -300,7 +300,8 @@ namespace Vista
             }
             catch (ArgumentException exa)//mensajes de reglas de negocios
             {
-                MessageBox.Show(exa.Message);
+                await this.ShowMessageAsync("Mensaje:",
+                      string.Format((exa.Message)));
             }
             catch (Exception ex)
             {

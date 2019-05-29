@@ -19,7 +19,7 @@ namespace BibliotecaNegocio
             get { return _rut; }
             set
             {
-                if (value != null && value.Length>=11 && value.Length<=12)
+                if (value != "" && value.Length>=11 && value.Length<=12)
                 {
                     _rut = value;
                 }
@@ -37,7 +37,7 @@ namespace BibliotecaNegocio
             get { return _razonSocial; }
             set
             {
-                if (value != null)
+                if (value != "")
                 {
                     _razonSocial = value;
                 }
@@ -56,7 +56,7 @@ namespace BibliotecaNegocio
             get { return _nombreContacto; }
             set
             {
-                if (value != null)
+                if (value != "")
                 {
                     _nombreContacto = value;
                 }
@@ -75,7 +75,7 @@ namespace BibliotecaNegocio
             get { return _mailContacto; }
             set
             {
-                if (value != null)
+                if (value != "")
                 {
                     _mailContacto = value;
                 }
@@ -93,7 +93,7 @@ namespace BibliotecaNegocio
             get { return _direccion; }
             set
             {
-                if (value != null)
+                if (value != "")
                 {
                     _direccion = value;
                 }
