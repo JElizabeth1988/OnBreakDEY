@@ -214,15 +214,18 @@ namespace Vista
                     cl.txtRut.Text = cli.Rut;
                     cl.Buscar();
 
-
                 }
+                   /* ListaClientes clie = (ListaClientes)dgLista.SelectedItem;
+                    lc.txtfiltroRut.Text = clie.Rut;
+                    lc.BuscarCliente();*/
+                
                 Close();
             }
             catch (Exception ex)
             {
 
-                await this.ShowMessageAsync("Error:",
-                     string.Format("Debe seleccionar un item de la lista"));
+                await this.ShowMessageAsync("Mensaje:",
+                     string.Format("Error al traspasar la Información"));
                 /*MessageBox.Show("error al Filtrar Información");*/
                 Logger.Mensaje(ex.Message);
             }
@@ -251,6 +254,7 @@ namespace Vista
                 dgLista.Items.Refresh();
             }
         }
+
         //Botón filtrar tipoEmpresa
         private async void btnFiltrarTipo_Click(object sender, RoutedEventArgs e)
         {

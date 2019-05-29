@@ -126,7 +126,7 @@ namespace BibliotecaNegocio
         public int IdActividadEmpresa { get; set; }//foraneas
         public int IdTipoEmpresa { get; set; }//foraneas
 
-        //creao un objeto que me permite manipular todo en la BD
+        //creo un objeto que me permite manipular todo en la BD
         private OnBreakEntities bdd = new OnBreakEntities();
 
         public Cliente()
@@ -155,6 +155,7 @@ namespace BibliotecaNegocio
             {
 
                 return false;
+                Logger.Mensaje(ex.Message);
             }
         }
 
@@ -212,6 +213,7 @@ namespace BibliotecaNegocio
             {
 
                 return false;
+                Logger.Mensaje(ex.Message);
             }
         }
 
@@ -226,6 +228,7 @@ namespace BibliotecaNegocio
             catch (Exception ex)
             {
                 return false;
+                Logger.Mensaje(ex.Message);
             }
 
         }
@@ -305,6 +308,15 @@ namespace BibliotecaNegocio
         //Filtro por Rut
         public List<ListaClientes> FiltroRut(string rut)
         {
+            try
+            {
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
             var cl = from cli in bdd.Cliente
                      join temp in bdd.TipoEmpresa
                      on cli.IdTipoEmpresa equals temp.IdTipoEmpresa
