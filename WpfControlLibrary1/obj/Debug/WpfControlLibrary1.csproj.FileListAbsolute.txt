@@ -63,3 +63,4 @@ C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\WpfControlLibrary1\obj\Debu
 C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.csproj.GenerateResource.Cache
 C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.dll
 C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.pdb
+C:\Users\chida\Desktop\Duplicado\UnBreakable\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.csprojResolveAssemblyReference.cache

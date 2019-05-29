@@ -64,22 +64,26 @@ namespace Vista
         
 
         }
-        
+
 
         //CALCULO CONTRATO
-       public double calculo ()
+        public double calculo()
         {
             ModalidadServicio mod = new ModalidadServicio();
-            double valorc = mod.ValorBase + double.Parse(txtNumeroAsistentes.Text);
-                      //     + (double)lblAsistentes.Content()
-                        //   + (double)lblPersonalAdicional.Content();
+            double valorc = mod.ValorBase + double.Parse(txtNumeroAsistentes.Text)
+            + double.Parse(lblAsistentes.Content.ToString())
+            + double.Parse(lblPersonalAdicional.Content.ToString());
+            lblTotal.Content = valorc;
 
-                return valorc;
-                //lblTotal =fechac.tostring();
+            return valorc;
+            
         }
 
+
+        //lblTotal.Content = calculo();
+
         //BORRAR ESTE DESPUÉS
-        double valorc = 2;
+       
         DateTime fechac = DateTime.Now;
         DateTime fechat = DateTime.Now;
 
@@ -167,7 +171,7 @@ namespace Vista
                         Asistentes = asistentes,
                         PersonalAdicional = personalAdicional,
                         Realizado = realizado,
-                        ValorTotalContrato=valorc,
+                        ValorTotalContrato= calculo(),
                         Observaciones = observaciones,
                         
                     };
@@ -610,7 +614,7 @@ namespace Vista
                         Asistentes = asistentes,
                         PersonalAdicional = personalAdicional,
                         Realizado = realizado,
-                        ValorTotalContrato =valorc,
+                        ValorTotalContrato = calculo(),
                         Observaciones = observaciones,
                     };
 
@@ -691,7 +695,7 @@ namespace Vista
                         Asistentes = asistentes,
                         PersonalAdicional = personalAdicional,
                         Realizado = realizado,
-                       ValorTotalContrato =valorc,
+                       ValorTotalContrato = calculo(),
                         Observaciones = observaciones,
                     };
 
