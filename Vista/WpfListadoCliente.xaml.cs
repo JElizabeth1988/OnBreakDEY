@@ -194,26 +194,39 @@ namespace Vista
         }
 
         //Botón Pasar
-        private void btnPasar_Click(object sender, RoutedEventArgs e)
+        private async void btnPasar_Click(object sender, RoutedEventArgs e)
         {
             btnPasar.Visibility = Visibility.Visible;
+            try
+            {
 
-            if (cl==null)
-            {
-                ListaClientes cli = (ListaClientes)dgLista.SelectedItem;
-                cc.txtBuscarCliente.Text = cli.Rut;
-                cc.Buscar();
+                if (cl == null)
+                {
+                    ListaClientes cli = (ListaClientes)dgLista.SelectedItem;
+                    cc.txtBuscarCliente.Text = cli.Rut;
+                    cc.Buscar();
+                }
+                else
+                {
+                    ListaClientes cli = (ListaClientes)dgLista.SelectedItem;
+                    string rutbuscar;
+                    rutbuscar = cl.txtRut + "-" + cl.txtDV;
+                    cl.txtRut.Text = cli.Rut;
+                    cl.Buscar();
+
+
+                }
+                Close();
             }
-            else
+            catch (Exception ex)
             {
-                ListaClientes cli = (ListaClientes)dgLista.SelectedItem;
-                string rutbuscar;
-                rutbuscar = cl.txtRut+"-"+cl.txtDV;
-                cl.txtRut.Text = cli.Rut;
-                cl.Buscar();
-                
+
+                await this.ShowMessageAsync("Error:",
+                     string.Format("Debe seleccionar un item de la lista"));
+                /*MessageBox.Show("error al Filtrar Información");*/
+                Logger.Mensaje(ex.Message);
             }
-            Close();
+
 
         }
 
@@ -327,44 +340,51 @@ namespace Vista
             }
         }
 
-            //Llamado desde Contrato
-      /*  public ListarContrato(ListarContrato origen)
+        private void btnRefresh_Click(object sender, RoutedEventArgs e)
         {
-            InitializeComponent();
+            Cliente cl = new Cliente();
+            dgLista.ItemsSource = cl.ReadAll2();//No sé si este bien
+            dgLista.Items.Refresh();
+        }
 
-            btnPasar.Visibility = Visibility.Visible;//el botón traspasar se ve
-            btnEliminar.Visibility = Visibility.Hidden;//Botón eliminar no se ve
-            //llenar el combo box con los datos del enumerador
-            foreach (ActividadEmpresa item in new ActividadEmpresa().ReadAll())
-            {
-                comboBoxItem cb = new comboBoxItem();
-                cb.id = item.Id;
-                cb.descripcion = item.Descripcion;
-                cbActiv.Items.Add(cb);
-            }
-            foreach (TipoEmpresa item in new TipoEmpresa().ReadAll())
-            {
-                comboBoxItem cb = new comboBoxItem();
-                cb.id = item.Id;
-                cb.descripcion = item.Descripcion;
-                cbTipoEmp.Items.Add(cb);
-            }
+        //Llamado desde Contrato
+        /*  public ListarContrato(ListarContrato origen)
+          {
+              InitializeComponent();
 
-            try
-            {
-                Cliente cl = new Cliente();
-                dgLista.ItemsSource = cl.ReadAll2();
-                dgLista.Items.Refresh();
+              btnPasar.Visibility = Visibility.Visible;//el botón traspasar se ve
+              btnEliminar.Visibility = Visibility.Hidden;//Botón eliminar no se ve
+              //llenar el combo box con los datos del enumerador
+              foreach (ActividadEmpresa item in new ActividadEmpresa().ReadAll())
+              {
+                  comboBoxItem cb = new comboBoxItem();
+                  cb.id = item.Id;
+                  cb.descripcion = item.Descripcion;
+                  cbActiv.Items.Add(cb);
+              }
+              foreach (TipoEmpresa item in new TipoEmpresa().ReadAll())
+              {
+                  comboBoxItem cb = new comboBoxItem();
+                  cb.id = item.Id;
+                  cb.descripcion = item.Descripcion;
+                  cbTipoEmp.Items.Add(cb);
+              }
 
-            }
-            catch (Exception ex)
-            {
+              try
+              {
+                  Cliente cl = new Cliente();
+                  dgLista.ItemsSource = cl.ReadAll2();
+                  dgLista.Items.Refresh();
 
-                MessageBox.Show("Error!" + ex.Message);
-            }
-            lc = origen;*/
-        
+              }
+              catch (Exception ex)
+              {
 
-    
+                  MessageBox.Show("Error!" + ex.Message);
+              }
+              lc = origen;*/
+
+
+
     }
 }

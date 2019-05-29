@@ -179,6 +179,14 @@ namespace Vista {
         #line default
         #line hidden
         
+        
+        #line 39 "..\..\WPFListarContrato.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Button btnRefrescar;
+        
+        #line default
+        #line hidden
+        
         private bool _contentLoaded;
         
         /// <summary>
@@ -298,6 +306,15 @@ namespace Vista {
             
             #line 38 "..\..\WPFListarContrato.xaml"
             this.btnFiltrarModalidad.Click += new System.Windows.RoutedEventHandler(this.btnFiltrarModalidad_Click);
+            
+            #line default
+            #line hidden
+            return;
+            case 18:
+            this.btnRefrescar = ((System.Windows.Controls.Button)(target));
+            
+            #line 39 "..\..\WPFListarContrato.xaml"
+            this.btnRefrescar.Click += new System.Windows.RoutedEventHandler(this.btnRefrescar_Click);
             
             #line default
             #line hidden
