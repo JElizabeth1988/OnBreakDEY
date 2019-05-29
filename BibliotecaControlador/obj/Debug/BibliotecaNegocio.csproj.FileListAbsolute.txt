@@ -16,3 +16,12 @@ C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\BibliotecaControlador\bin\D
 C:\Users\chida\Desktop\Duplicado\UnBreakable\BibliotecaControlador\obj\Debug\BibliotecaNegocio.csprojResolveAssemblyReference.cache
 C:\Users\chida\Desktop\Duplicado\UnBreakable\BibliotecaControlador\obj\Debug\BibliotecaControlador.dll
 C:\Users\chida\Desktop\Duplicado\UnBreakable\BibliotecaControlador\obj\Debug\BibliotecaControlador.pdb
+C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\BibliotecaControlador\bin\Debug\BibliotecaControlador.dll
+C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\BibliotecaControlador\bin\Debug\BibliotecaControlador.pdb
+C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\BibliotecaControlador\bin\Debug\BibliotecaDALC.dll
+C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\BibliotecaControlador\bin\Debug\EntityFramework.dll
+C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\BibliotecaControlador\bin\Debug\BibliotecaDALC.pdb
+C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\BibliotecaControlador\bin\Debug\EntityFramework.xml
+C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\BibliotecaControlador\obj\Debug\BibliotecaNegocio.csprojResolveAssemblyReference.cache
+C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\BibliotecaControlador\obj\Debug\BibliotecaControlador.dll
+C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\BibliotecaControlador\obj\Debug\BibliotecaControlador.pdb
