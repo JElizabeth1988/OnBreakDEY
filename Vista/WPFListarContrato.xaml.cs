@@ -244,5 +244,12 @@ namespace Vista
                 dgvLista.Items.Refresh();
             }
         }
+
+        private void btnRefrescar_Click(object sender, RoutedEventArgs e)
+        {
+            Contrato co = new Contrato();
+            dgvLista.ItemsSource = co.ReadAll2();//LLamar al Listar Todo
+            dgvLista.Items.Refresh();
+        }
     }
 }

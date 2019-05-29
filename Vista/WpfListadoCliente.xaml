@@ -17,7 +17,7 @@
         </Grid.ColumnDefinitions>
         <Button x:Name="btnPasar" Content="Traspasar" HorizontalAlignment="Left" Margin="68,364,0,0" VerticalAlignment="Top" Width="89" FontWeight="Normal" Click="btnPasar_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
         <DataGrid x:Name="dgLista" HorizontalAlignment="Left" Margin="57,171,0,0" VerticalAlignment="Top" Height="173" Width="388"/>
-        <Button x:Name="btnSalir" Content="Salir" HorizontalAlignment="Left" Margin="360,364,0,0" VerticalAlignment="Top" Width="75"  FontWeight="Normal" Click="btnSalir_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
+        <Button x:Name="btnSalir" Content="Salir" HorizontalAlignment="Left" Margin="319,364,0,0" VerticalAlignment="Top" Width="75"  FontWeight="Normal" Click="btnSalir_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
         <GroupBox x:Name="gbFiltrar" Header="Filtrar Información" HorizontalAlignment="Left" Margin="57,10,0,0" VerticalAlignment="Top" Height="144" Width="388">
             <Grid HorizontalAlignment="Left" Height="110" Margin="10,4,0,-34" VerticalAlignment="Top" Width="351">
                 <Label x:Name="label" Content="Rut" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,1,0,0"/>
@@ -31,7 +31,12 @@
                 <Button x:Name="btnFiltrarAct" Content="Filtrar" HorizontalAlignment="Left" Margin="265,69,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Click="btnFiltrarAct_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
             </Grid>
         </GroupBox>
-        <Button x:Name="btnEliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="218,364,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal"  Click="btnEliminar_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
+        <Button x:Name="btnEliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="199,364,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal"  Click="btnEliminar_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
+        <Button x:Name="btnRefrescar" HorizontalAlignment="Left" Margin="431,360,0,0" VerticalAlignment="Top" Width="40" Click="btnRefresh_Click" Style="{DynamicResource MahApps.Metro.Styles.MetroCircleButtonStyle}" Height="39" BorderBrush="Black">
+            <Button.Background>
+                <ImageBrush ImageSource="Command-Refresh.png"/>
+            </Button.Background>
+        </Button>
 
     </Grid>
 </Controls:MetroWindow>
