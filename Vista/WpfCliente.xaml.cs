@@ -96,6 +96,10 @@ namespace Vista
             try
             {
                 String rut = txtRut.Text+"-"+txtDV.Text;
+                if (rut.Length == 11)
+                {
+                    rut = "0"+txtRut.Text + "-" + txtDV.Text;
+                }
                 String razonSocial = txtRazon.Text;
                 String nombreContacto = txtNombre.Text;
                 String mail = txtEmail.Text;
