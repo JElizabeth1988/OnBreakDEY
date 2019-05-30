@@ -25,7 +25,8 @@ namespace BibliotecaNegocio
                 }
                 else
                 {
-                    throw new ArgumentException("- Campo Rut no puede estar Vacío");
+                    dao.AgregarError("- Campo Rut no puede estar Vacío");
+                    //throw new ArgumentException("- Campo Rut no puede estar Vacío");
                 }
             }
         }
@@ -43,7 +44,8 @@ namespace BibliotecaNegocio
                 }
                 else
                 {
-                    throw new ArgumentException("- Campo RazónSocial no puede estar Vacío");
+                    dao.AgregarError("- Campo RazónSocial no puede estar Vacío");
+                    //throw new ArgumentException("- Campo RazónSocial no puede estar Vacío");
                 }
 
             }
@@ -62,7 +64,8 @@ namespace BibliotecaNegocio
                 }
                 else
                 {
-                    throw new ArgumentException("- Campo Nombre Contrato no puede estar Vacío");
+                    dao.AgregarError("- Campo Nombre Contrato no puede estar Vacío");
+                    //throw new ArgumentException("- Campo Nombre Contrato no puede estar Vacío");
                 }
 
             }
@@ -81,7 +84,8 @@ namespace BibliotecaNegocio
                 }
                 else
                 {
-                    throw new ArgumentException("- Campo Email no puede estar Vacío");
+                    dao.AgregarError("- Campo Email no puede estar Vacío");
+                    //throw new ArgumentException("- Campo Email no puede estar Vacío");
                 }
             }
         }
@@ -99,7 +103,8 @@ namespace BibliotecaNegocio
                 }
                 else
                 {
-                    throw new ArgumentException("- Campo Dirección no puede estar Vacío");
+                    dao.AgregarError("- Campo Dirección no puede estar Vacío");
+                    //throw new ArgumentException("- Campo Dirección no puede estar Vacío");
                 }
             }
         }
@@ -111,18 +116,20 @@ namespace BibliotecaNegocio
             get { return _telefono; }
             set
             {
-                if (value != null && value.Length >=9  && value.Length <= 12)
+                if (value != "" && value.Length >=9  && value.Length <= 12)
                 {
                     _telefono = value;
                 }
                 else
                 {
-                    throw new ArgumentException("- Campo Teléfono no puede estar Vacío y debe tener un largo de 9 dígitos");
+                    dao.AgregarError("- Campo Teléfono no puede estar Vacío y debe tener un largo de 9 dígitos");
+                    //throw new ArgumentException("- Campo Teléfono no puede estar Vacío y debe tener un largo de 9 dígitos");
                 }
 
             }
         }
-
+        DaoErrores dao = new DaoErrores();
+        public DaoErrores retornar() { return dao; }
         public int IdActividadEmpresa { get; set; }//foraneas
         public int IdTipoEmpresa { get; set; }//foraneas
 

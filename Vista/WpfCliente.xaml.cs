@@ -50,6 +50,9 @@ namespace Vista
                 cb.descripcion = item.Descripcion;
                 cbTipo.Items.Add(cb);
             }
+            cbActividad.SelectedIndex = 0;
+            cbTipo.SelectedIndex = 0;
+            txtTelefono.Text = "0";
         }
 
         //Botón limpiar
@@ -62,7 +65,7 @@ namespace Vista
             txtNombre.Clear();
             txtEmail.Clear();
             txtDireccion.Clear();
-            txtTelefono.Clear();
+            txtTelefono.Text = "0";
             cbActividad.SelectedIndex = 0;
             cbTipo.SelectedIndex = 0;//Para que en el ComboBox no quede seleccionado nada
             txtRut.Focus();//Mover el cursor a la poscición Rut
@@ -111,9 +114,9 @@ namespace Vista
                 }
                 else
                 {
-                    await this.ShowMessageAsync("Mensaje:",
-                      string.Format("Ingrese un número de 9 dígitos"));
-                    txtTelefono.Focus();
+                    //await this.ShowMessageAsync("Mensaje:",
+                    //  string.Format("Ingrese un número de 9 dígitos"));
+                    //txtTelefono.Focus();
                     return;
                 }
                 int Actividad = ((comboBoxItem)cbActividad.SelectedItem).id;
@@ -135,7 +138,20 @@ namespace Vista
                       string.Format(resp ? "Guardado" : "No Guardado"));
                 /*MessageBox.Show(resp ? "Guardado" : "No Guardado");*/
 
-               
+
+                //-----------------------------------------------------------------------------------------------
+                //MOSTRAR LISTA DE ERRORES
+                DaoErrores de = c.retornar();
+                string li = "";
+                foreach (string item in de.ListarErrores())
+                {
+                    li += item + " \n";
+                }
+                await this.ShowMessageAsync("Mensaje:",
+                    string.Format(li));
+                
+                //-----------------------------------------------------------------------------------------------
+
 
             }
             catch (ArgumentException exa)//mensajes de reglas de negocios
@@ -300,6 +316,19 @@ namespace Vista
                 await this.ShowMessageAsync("Mensaje:",
                      string.Format(resp ? "Actualizado" : "No Actualizado"));
                 /*MessageBox.Show(resp ? "Actualizado" : "No Actualizado, (El rut no se debe modificar)");*/
+
+                //-----------------------------------------------------------------------------------------------
+                //MOSTRAR LISTA DE ERRORES
+                DaoErrores de = c.retornar();
+                string li = "";
+                foreach (string item in de.ListarErrores())
+                {
+                    li += item + " \n";
+                }
+                await this.ShowMessageAsync("Mensaje:",
+                    string.Format(li));
+
+                //-----------------------------------------------------------------------------------------------
 
             }
             catch (ArgumentException exa)//mensajes de reglas de negocios

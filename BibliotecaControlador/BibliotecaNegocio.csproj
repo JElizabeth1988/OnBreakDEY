@@ -47,6 +47,7 @@
     <Compile Include="Cliente.cs" />
     <Compile Include="CommonBC.cs" />
     <Compile Include="Contrato.cs" />
+    <Compile Include="DaoErrores.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="ModalidadServicio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
