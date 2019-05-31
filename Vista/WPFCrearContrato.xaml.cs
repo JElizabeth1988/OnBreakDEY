@@ -39,7 +39,7 @@ namespace Vista
             this.cboTipo.SelectedItem = null;
             btnTerminar.Visibility = Visibility.Hidden;
             btnModificar.Visibility = Visibility.Hidden;
-
+            cbModalidad.IsEnabled=false;
 
 
             //LLENAR COMBO BOX TIPO EVENTO
@@ -220,7 +220,8 @@ namespace Vista
             lblNumero.Content = DateTime.Now.ToString("yyyyMMddHHmm");
             txtBuscarCliente.Clear();
             lblNombreCliente.Visibility = Visibility.Hidden;//no ver label
-
+            cboTipo.Items.Clear();
+            cbModalidad.Items.Clear();
 
             //dpFechaInicio.SelectedDate = null;
             //dpFechaFinEvento.SelectedDate = null;
@@ -880,18 +881,19 @@ namespace Vista
             int contenido = ((comboBoxItem)cboTipo.SelectedItem).id;
 
             ModalidadServicio mod = new ModalidadServicio();
-
+            cbModalidad.Items.Clear();
+            cbModalidad.IsEnabled = true;
             foreach (var item in mod.ReadAll().Where(con => con.IdtipoEvento == contenido).ToList())
             {
-                comboBoxItem cb = new comboBoxItem();
-
+                comboBoxItem2 cb = new comboBoxItem2();
+                cb.id = item.Id;
+                cb.descripcion = item.Nombre;
                 cbModalidad.Items.Add(cb);
-    
-            } 
-            
+            }
 
-    }
-        
+         }
+
+
 
         private void btnMasHoraInicio_Click(object sender, RoutedEventArgs e)
         {
