@@ -65,25 +65,22 @@ namespace Vista
 
         }
 
+    
+        //BOTON CALCULO CONTRATO
 
-        //CALCULO CONTRATO
-        public double calculo()
+        private async void btnCalculo_Click(object sender, RoutedEventArgs e)
         {
             ModalidadServicio mod = new ModalidadServicio();
             double valorc = mod.ValorBase + double.Parse(txtNumeroAsistentes.Text)
             + double.Parse(lblAsistentes.Content.ToString())
             + double.Parse(lblPersonalAdicional.Content.ToString());
             lblTotal.Content = valorc;
-
-            return valorc;
-            
         }
-
 
         //lblTotal.Content = calculo();
 
         //BORRAR ESTE DESPUÉS
-       
+
         DateTime fechac = DateTime.Now;
         DateTime fechat = DateTime.Now;
 
@@ -155,7 +152,8 @@ namespace Vista
                     string idMod = ((comboBoxItem2)cbModalidad.SelectedItem).id;
 
                     String observaciones = txtObservaciones.Text;
-                    String rutCliente = txtBuscarCliente.Text;
+                    double valorc = double.Parse(lblTotal.Content.ToString());
+                   String rutCliente = txtBuscarCliente.Text;
 
                     Contrato con = new Contrato()
                     {
@@ -171,7 +169,7 @@ namespace Vista
                         Asistentes = asistentes,
                         PersonalAdicional = personalAdicional,
                         Realizado = realizado,
-                        ValorTotalContrato= calculo(),
+                        ValorTotalContrato= valorc,
                         Observaciones = observaciones,
                         
                     };
@@ -183,7 +181,7 @@ namespace Vista
                     /*MessageBox.Show(resp ? "Guardado" : "No Guardado");*/
                     
 
-                    btnModificar.Visibility=Visibility.Visible;
+                    
                 }
                 else
                 {
@@ -599,6 +597,7 @@ namespace Vista
                     string idMod = ((comboBoxItem2)cbModalidad.SelectedItem).id;
 
                     String observaciones = txtObservaciones.Text;
+                    double valorc = double.Parse(lblTotal.Content.ToString());
                     String rutCliente = txtBuscarCliente.Text;
 
                     Contrato nuevo_con = new Contrato()
@@ -615,7 +614,7 @@ namespace Vista
                         Asistentes = asistentes,
                         PersonalAdicional = personalAdicional,
                         Realizado = realizado,
-                        ValorTotalContrato = calculo(),
+                        ValorTotalContrato = valorc,
                         Observaciones = observaciones,
                     };
 
@@ -679,6 +678,7 @@ namespace Vista
                     string idMod = ((comboBoxItem2)cbModalidad.SelectedItem).id;
 
                     String observaciones = txtObservaciones.Text;
+                    double valorc = double.Parse(lblTotal.Content.ToString());
                     String rutCliente = txtBuscarCliente.Text;
 
                     Contrato con_mod = new Contrato()
@@ -696,7 +696,7 @@ namespace Vista
                         Asistentes = asistentes,
                         PersonalAdicional = personalAdicional,
                         Realizado = realizado,
-                       ValorTotalContrato = calculo(),
+                       ValorTotalContrato = valorc,
                         Observaciones = observaciones,
                     };
 
@@ -899,7 +899,6 @@ namespace Vista
         {
 
         }
-
 
        
     }
