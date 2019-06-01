@@ -16,7 +16,7 @@
             <ColumnDefinition Width="523*"/>
             <ColumnDefinition Width="33*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="btnSalir" Content="Salir" HorizontalAlignment="Left" Margin="314,434,0,0" VerticalAlignment="Top" Width="75" Click="button_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
+        <Button x:Name="btnSalir" Content="Salir" HorizontalAlignment="Left" Margin="288,434,0,0" VerticalAlignment="Top" Width="75" Click="button_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
         <DataGrid x:Name="dgvLista" HorizontalAlignment="Left" Margin="68,201,0,0" VerticalAlignment="Top" Height="214" Width="451" FontWeight="Bold"/>
         <GroupBox x:Name="gbFiltrar" Header="Filtrar Información" HorizontalAlignment="Left" Margin="68,10,0,0" VerticalAlignment="Top" Height="175" Width="451">
             <Grid HorizontalAlignment="Left" Height="140" Margin="10,4,0,-16" VerticalAlignment="Top" Width="351">
@@ -31,12 +31,12 @@
             </Grid>
         </GroupBox>
         <TextBox x:Name="txtfiltroRut" Controls:TextBoxHelper.Watermark="Ej. 11.111.111-1" HorizontalAlignment="Left" Height="23" Margin="201,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="127" Controls:TextBoxHelper.ClearTextButton="True"/>
-        <Button x:Name="btnPasar" Content="Traspasar" HorizontalAlignment="Left" Margin="150,434,0,0" VerticalAlignment="Top" Width="82" Click="btnPasar_Click_1" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
-        <Button x:Name="button" Content="Listado" HorizontalAlignment="Left" Margin="435,80,0,0" VerticalAlignment="Top" Width="75" Background="#FF29A9E0" BorderBrush="Black" BorderThickness="2" Foreground="White" FontSize="12" FontFamily="Segoe UI, Lucida Sans Unicode, Verdana" FontWeight="Bold" Click="button_Click_1"/>
+        <Button x:Name="btnPasar" Content="Traspasar" HorizontalAlignment="Left" Margin="128,434,0,0" VerticalAlignment="Top" Width="82" Click="btnPasar_Click_1" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
+        <Button x:Name="button" Content="?" HorizontalAlignment="Left" Margin="435,80,0,0" VerticalAlignment="Top" Width="32" Background="#FF29A9E0" BorderBrush="Black" BorderThickness="2" Foreground="White" FontSize="12" FontFamily="Segoe UI, Lucida Sans Unicode, Verdana" FontWeight="Bold" Click="button_Click_1" Height="26"/>
         <Label x:Name="label2_Copy" Content="Modalidad Evento:" HorizontalAlignment="Left" Margin="85,153,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <ComboBox x:Name="cbFiltroModalidad" HorizontalAlignment="Left" Margin="201,152,0,0" VerticalAlignment="Top" Width="127"/>
         <Button x:Name="btnFiltrarModalidad" Content="Filtrar" HorizontalAlignment="Left" Margin="344,150,0,0" VerticalAlignment="Top" Width="75" Background="#FF29A9E0" BorderBrush="Black" BorderThickness="2" Foreground="White" FontSize="12" Click="btnFiltrarModalidad_Click" />
-        <Button x:Name="btnRefrescar" HorizontalAlignment="Left" Margin="481,428,0,0" VerticalAlignment="Top" Width="40" Click="btnRefrescar_Click" Style="{DynamicResource MahApps.Metro.Styles.MetroCircleButtonStyle}" Height="39" BorderBrush="Black">
+        <Button x:Name="btnRefrescar" HorizontalAlignment="Left" Margin="464,428,0,0" VerticalAlignment="Top" Width="40" Click="btnRefrescar_Click" Style="{DynamicResource MahApps.Metro.Styles.MetroCircleButtonStyle}" Height="39" BorderBrush="Black">
             <Button.Background>
                 <ImageBrush ImageSource="Command-Refresh1.png"/>
             </Button.Background>

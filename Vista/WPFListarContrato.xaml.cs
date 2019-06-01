@@ -53,6 +53,9 @@ namespace Vista
                 cbFiltroModalidad.Items.Add(cb);
             }
 
+            cbofilTipoContrato.SelectedIndex = 0;
+            cbFiltroModalidad.SelectedIndex = 0;
+
 
             try
             {

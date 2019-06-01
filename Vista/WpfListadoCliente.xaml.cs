@@ -55,6 +55,10 @@ namespace Vista
                 cbTipoEmp.Items.Add(cb);
             }
 
+            cbActiv.SelectedIndex = 0;
+            cbTipoEmp.SelectedIndex = 0;
+            
+
             try
             {
                 Cliente cl = new Cliente();

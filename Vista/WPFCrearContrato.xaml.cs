@@ -61,7 +61,13 @@ namespace Vista
                 cbModalidad.Items.Add(cb);
             }
 
-        
+            cboTipo.SelectedIndex = 0;
+            cbModalidad.SelectedIndex = 0;
+            txtNumeroAsistentes.Text = "0";
+            txtPersonalAdicional.Text = "0";
+            txtNumero.Text = "0";
+
+
 
         }
 
