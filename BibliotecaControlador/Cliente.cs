@@ -8,7 +8,7 @@ using BibliotecaDALC;
 
 namespace BibliotecaNegocio
 {
-   
+    //cadena de conexión Johana desktop-4l5hcap\sqlexpress
     public class Cliente
     {
 

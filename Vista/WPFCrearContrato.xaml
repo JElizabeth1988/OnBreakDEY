@@ -56,25 +56,25 @@
                 <Label x:Name="lblNombreCliente" Content="" HorizontalAlignment="Left" Margin="154,99,0,0" VerticalAlignment="Top" Width="310" FontWeight="Normal" Height="26"/>
 
                 <Label x:Name="label_Copy1" Content="Buscar Número:" HorizontalAlignment="Left" Height="36" Margin="26,7,0,0" VerticalAlignment="Top" Width="118"/>
-                <TextBox x:Name="txtNumero"  Controls:TextBoxHelper.ClearTextButton="True" HorizontalAlignment="Left" Height="26" Margin="158,8,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" FontWeight="Normal"/>
+                <TextBox x:Name="txtNumero"  Controls:TextBoxHelper.ClearTextButton="True" HorizontalAlignment="Left" Height="26" Margin="158,8,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" FontWeight="Bold"/>
                 <Button x:Name="btnBuscarContrato" Content="Buscar" HorizontalAlignment="Left" Margin="413,4,0,0" VerticalAlignment="Top" Width="76" Height="33" FontWeight="Normal" Click="btnBuscarContrato_Click_2"  Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" />
                 <Button x:Name="btnListadoNum" Content="?" HorizontalAlignment="Left" Margin="342,4,0,0" VerticalAlignment="Top" Width="48" Height="33" Click="btnListadoNum_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
                 <Label x:Name="label_Copy2" Content="Nombre:" HorizontalAlignment="Left" Height="36" Margin="26,99,0,0" VerticalAlignment="Top" Width="76"/>
                 <Label x:Name="label_Copy4" Content="Rut Cliente:" HorizontalAlignment="Left" Height="36" Margin="26,58,0,0" VerticalAlignment="Top" Width="118"/>
-                <TextBox x:Name="txtBuscarCliente" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark ="Ej: 11.111.111-1" HorizontalAlignment="Left" Height="26" Margin="158,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" FontWeight="Normal" />
+                <TextBox x:Name="txtBuscarCliente" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark ="Ej: 11.111.111-1" HorizontalAlignment="Left" Height="26" Margin="158,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" FontWeight="Bold" />
                 <Button x:Name="btnListadoCliente" Content="?" HorizontalAlignment="Left" Margin="342,56,0,0" VerticalAlignment="Top" Width="47" Height="33" Click="btnListadoCliente_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
             </Grid>
         </GroupBox>
         <GroupBox x:Name="groupBox1" Header="Datos de evento" HorizontalAlignment="Left" Height="392" Margin="65,224,0,0" VerticalAlignment="Top" Width="880">
             <Grid HorizontalAlignment="Left" Height="306" VerticalAlignment="Top" Width="860">
                 <Label x:Name="label6" Content="Tipo Evento:" HorizontalAlignment="Left" Margin="12,25,0,0" VerticalAlignment="Top" Height="26" Width="82"/>
-                <ComboBox x:Name="cboTipo" HorizontalAlignment="Left" Margin="126,27,0,0" VerticalAlignment="Top" Width="145" AutomationProperties.IsOffscreenBehavior="Onscreen" Height="26" FontWeight="Normal" SelectionChanged="cboTipo_SelectionChanged"/>
+                <ComboBox x:Name="cboTipo" HorizontalAlignment="Left" Margin="126,27,0,0" VerticalAlignment="Top" Width="145" AutomationProperties.IsOffscreenBehavior="Onscreen" Height="26" FontWeight="Bold" SelectionChanged="cboTipo_SelectionChanged"/>
                 <Label x:Name="label5_Copy" Content="N° Asistentes:" HorizontalAlignment="Left" Margin="12,82,0,0" VerticalAlignment="Top" Height="26" Width="88"/>
-                <TextBox x:Name="txtNumeroAsistentes" HorizontalAlignment="Left" Height="26" Margin="127,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="56" TextChanged="txtNumeroAsistentes_TextChanged_1" FontWeight="Normal"/>
+                <TextBox x:Name="txtNumeroAsistentes" HorizontalAlignment="Left" Height="26" Margin="127,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="56" TextChanged="txtNumeroAsistentes_TextChanged_1" FontWeight="Bold"/>
                 <Label x:Name="label7" Content="Observaciones:" HorizontalAlignment="Left" Margin="12,256,0,0" VerticalAlignment="Top" Height="26" Width="95"/>
-                <TextBox x:Name="txtObservaciones" HorizontalAlignment="Left" Height="74" Margin="126,262,0,-30" TextWrapping="Wrap" VerticalAlignment="Top" Width="292" FontWeight="Normal"/>
+                <TextBox x:Name="txtObservaciones" HorizontalAlignment="Left" Height="74" Margin="126,262,0,-30" TextWrapping="Wrap" VerticalAlignment="Top" Width="292" FontWeight="Bold"/>
                 <Label x:Name="label5_Copy2" Content="N° Personal Adicional:" HorizontalAlignment="Left" Margin="312,82,0,0" VerticalAlignment="Top" Height="26" Width="136"/>
-                <TextBox x:Name="txtPersonalAdicional" HorizontalAlignment="Left" Height="26" Margin="459,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" TextChanged="txtPersonalAdicional_TextChanged_1"  FontWeight="Normal"/>
+                <TextBox x:Name="txtPersonalAdicional" HorizontalAlignment="Left" Height="26" Margin="459,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" TextChanged="txtPersonalAdicional_TextChanged_1"  FontWeight="Bold"/>
                 <Label x:Name="label" Content="SubTotal :" HorizontalAlignment="Left" Margin="640,74,0,0" VerticalAlignment="Top" Height="26" Width="66"/>
                 <Label x:Name="label_Copy" Content="Asistentes :" HorizontalAlignment="Left" Margin="640,105,0,0" VerticalAlignment="Top" Height="26" Width="74"/>
                 <Label x:Name="label_Copy3" Content="Personal Adicional :" HorizontalAlignment="Left" Margin="640,140,0,0" VerticalAlignment="Top" Height="26" Width="121"/>
