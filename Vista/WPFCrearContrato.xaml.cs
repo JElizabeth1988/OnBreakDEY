@@ -74,7 +74,7 @@ namespace Vista
             double valorc = mod.ValorBase + double.Parse(txtNumeroAsistentes.Text)
             + double.Parse(lblAsistentes.Content.ToString())
             + double.Parse(lblPersonalAdicional.Content.ToString());
-            lblTotal.Content = valorc;
+            lblTotal.Content = "$"+valorc;
         }
 
         //lblTotal.Content = calculo();
