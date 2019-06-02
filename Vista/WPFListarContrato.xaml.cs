@@ -267,7 +267,7 @@ namespace Vista
         }
 
 
-        //Busca cliente en listado de clientes
+        //Busca cliente en listado de clientes.
         public async void BuscarCliente()
         {
             try
