@@ -107,5 +107,12 @@ namespace WpfControlLibrary1
             return true;
         }
 
+        public void bloquear()
+        {
+            dtfecha.IsEnabled = false;
+            txthora.IsEnabled = false;
+            txtminutos.IsEnabled = false;
+        }
+
     }
 }

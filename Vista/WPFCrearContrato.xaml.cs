@@ -723,8 +723,13 @@ namespace Vista
                     txtNumero.IsEnabled = false;
                     txtBuscarCliente.IsEnabled = false;
                     lblNumero.IsEnabled = false;
-
-
+                    cbModalidad.IsEnabled = false;
+                    cboTipo.IsEnabled = false;
+                    txtObservaciones.IsEnabled = false;
+                    txtNumeroAsistentes.IsEnabled = false;
+                    txtPersonalAdicional.IsEnabled = false;
+                    dpFechaInicio1.bloquear();
+                    dpFechaTermino.bloquear();
 
                     /*EVENTO
 
