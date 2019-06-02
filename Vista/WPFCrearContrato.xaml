@@ -56,8 +56,8 @@
                 <Label x:Name="lblNombreCliente" Content="" HorizontalAlignment="Left" Margin="154,99,0,0" VerticalAlignment="Top" Width="310" FontWeight="Bold" Height="26"/>
 
                 <Label x:Name="label_Copy1" Content="Buscar Número:" HorizontalAlignment="Left" Height="36" Margin="26,7,0,0" VerticalAlignment="Top" Width="118"/>
-                <TextBox x:Name="txtNumero"   HorizontalAlignment="Left" Height="26" Margin="158,8,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" FontWeight="Bold"/>
-                <Button x:Name="btnBuscarContrato" Content="Buscar" HorizontalAlignment="Left" Margin="413,4,0,0" VerticalAlignment="Top" Width="76" Height="33" FontWeight="Normal" Click="btnBuscarContrato_Click_2"  Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" />
+                <TextBox x:Name="txtNumero"  Controls:TextBoxHelper.ClearTextButton="True"  HorizontalAlignment="Left" Height="26" Margin="158,8,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" FontWeight="Bold"/>
+                <Button x:Name="btnBuscarContrato" Content="Buscar"  HorizontalAlignment="Left" Margin="413,4,0,0" VerticalAlignment="Top" Width="76" Height="33" FontWeight="Normal" Click="btnBuscarContrato_Click_2"  Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" />
                 <Button x:Name="btnListadoNum" Content="?" HorizontalAlignment="Left" Margin="342,4,0,0" VerticalAlignment="Top" Width="48" Height="33" Click="btnListadoNum_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
                 <Label x:Name="label_Copy2" Content="Nombre:" HorizontalAlignment="Left" Height="36" Margin="26,99,0,0" VerticalAlignment="Top" Width="76"/>
                 <Label x:Name="label_Copy4" Content="Rut Cliente:" HorizontalAlignment="Left" Height="36" Margin="26,58,0,0" VerticalAlignment="Top" Width="118"/>
