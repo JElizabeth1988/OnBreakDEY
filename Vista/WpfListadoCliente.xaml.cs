@@ -151,13 +151,15 @@ namespace Vista
 
         }
 
+        //Llamado desde listarContrato
         public wpfListadoCliente(ListarContrato origen)
         {
            
             InitializeComponent();
 
-            btnPasar.Visibility = Visibility.Visible;//el botón traspasar se ve
+            btnPasar.Visibility = Visibility.Hidden;//el botón traspasar no se ve
             btnEliminar.Visibility = Visibility.Hidden;//Botón eliminar no se ve
+            btnPasarAContrato.Visibility = Visibility.Visible;//Botón pasar a contrato se ve
             //llenar el combo box con los datos del enumerador
             foreach (ActividadEmpresa item in new ActividadEmpresa().ReadAll())
             {
@@ -355,43 +357,48 @@ namespace Vista
             dgLista.Items.Refresh();
         }
 
-        //Llamado desde Contrato
-        /*  public ListarContrato(ListarContrato origen)
-          {
-              InitializeComponent();
+        private async void btnPasarContrato_Click(object sender, RoutedEventArgs e)
+        {
+            btnPasar.Visibility = Visibility.Visible;
+            try
+            {
 
-              btnPasar.Visibility = Visibility.Visible;//el botón traspasar se ve
-              btnEliminar.Visibility = Visibility.Hidden;//Botón eliminar no se ve
-              //llenar el combo box con los datos del enumerador
-              foreach (ActividadEmpresa item in new ActividadEmpresa().ReadAll())
-              {
-                  comboBoxItem cb = new comboBoxItem();
-                  cb.id = item.Id;
-                  cb.descripcion = item.Descripcion;
-                  cbActiv.Items.Add(cb);
-              }
-              foreach (TipoEmpresa item in new TipoEmpresa().ReadAll())
-              {
-                  comboBoxItem cb = new comboBoxItem();
-                  cb.id = item.Id;
-                  cb.descripcion = item.Descripcion;
-                  cbTipoEmp.Items.Add(cb);
-              }
+                if (cl == null)
+                {
+                    ListaClientes clie = (ListaClientes)dgLista.SelectedItem;
+                    lc.txtfiltroRut.Text = clie.Rut;
+                    lc.BuscarCliente();
+                    /*ListaClientes cli = (ListaClientes)dgLista.SelectedItem;
+                    cc.txtBuscarCliente.Text = cli.Rut;
+                    cc.Buscar();*/
+                }
+                else
+                {
+                    /*ListaClientes cli = (ListaClientes)dgLista.SelectedItem;
+                    string rutbuscar;
+                    rutbuscar = cl.txtRut + "-" + cl.txtDV;
+                    cl.txtRut.Text = cli.Rut;
+                    cl.Buscar();*/
+                    ListaClientes clie = (ListaClientes)dgLista.SelectedItem;
+                    lc.txtfiltroRut.Text = clie.Rut;
+                    lc.BuscarCliente();
 
-              try
-              {
-                  Cliente cl = new Cliente();
-                  dgLista.ItemsSource = cl.ReadAll2();
-                  dgLista.Items.Refresh();
+                }
+                
 
-              }
-              catch (Exception ex)
-              {
+                Close();
+            }
+            catch (Exception ex)
+            {
 
-                  MessageBox.Show("Error!" + ex.Message);
-              }
-              lc = origen;*/
+                await this.ShowMessageAsync("Mensaje:",
+                     string.Format("Error al traspasar la Información"));
+                /*MessageBox.Show("error al Filtrar Información");*/
+                Logger.Mensaje(ex.Message);
+            }
+        }
 
+        
 
 
     }
