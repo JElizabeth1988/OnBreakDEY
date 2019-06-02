@@ -15,8 +15,8 @@
             <ColumnDefinition Width="119*"/>
         </Grid.ColumnDefinitions>
         <DatePicker x:Name="dtfecha"  DisplayDateStart="{x:Static sys:DateTime.Now}" SelectedDate="{x:Static sys:DateTime.Now}" HorizontalAlignment="Left" Margin="9.415,16,0,0" VerticalAlignment="Top" Grid.Column="1"/>
-        <TextBox x:Name="txthora" HorizontalAlignment="Left" Height="23" Margin="174.415,16,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="49" Grid.Column="1"/>
-        <Button x:Name="btnmashora" Content="" HorizontalAlignment="Left" Height="11" Margin="228,16,0,0" VerticalAlignment="Top" Width="18" Click="btnmashora_Click" RenderTransformOrigin="0.5,0.5" FontSize="14" FontWeight="Bold" Grid.Column="1">
+        <TextBox x:Name="txthora" HorizontalAlignment="Left" Height="23" Margin="174,16,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="49" Grid.Column="1"/>
+        <Button x:Name="btnmashora" Content="" HorizontalAlignment="Left" Height="12" Margin="228,16,0,0" VerticalAlignment="Top" Width="24" Click="btnmashora_Click" RenderTransformOrigin="0.5,0.5" FontSize="14" FontWeight="Bold" Grid.Column="1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -26,14 +26,36 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="btnmenoshora" HorizontalAlignment="Left" Height="10" Margin="228,29,0,0" VerticalAlignment="Top" Width="18" Click="btnmenoshora_Click" Grid.Column="1">
+        <Button x:Name="btnmenoshora" HorizontalAlignment="Left" Height="11" Margin="228,30,0,0" VerticalAlignment="Top" Width="24" Click="btnmenoshora_Click" Grid.Column="1">
             <Label x:Name="label_Copy1" Content="+" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         </Button>
-        <TextBox x:Name="txtminutos" HorizontalAlignment="Left" Height="23" Margin="250.415,17,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="53" Grid.Column="1"/>
-        <Button x:Name="btnmasminutos" Content="+" HorizontalAlignment="Left" Height="10" Margin="308.415,17,0,0" VerticalAlignment="Top" Width="20" Click="btnmasminutos_Click" Grid.Column="1"/>
-        <Button x:Name="btnmenosminutos" HorizontalAlignment="Left" Height="10" Margin="308.415,29,0,0" VerticalAlignment="Top" Width="20" Click="btnmenosminutos_Click" Grid.Column="1">
+        <TextBox x:Name="txtminutos" HorizontalAlignment="Left" Height="23" Margin="256,16,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="53" Grid.Column="1"/>
+        <Button x:Name="btnmasminutos" Content="+" HorizontalAlignment="Left" Height="12" Margin="313,16,0,0" VerticalAlignment="Top" Width="23" Click="btnmasminutos_Click" Grid.Column="1"/>
+        <Button x:Name="btnmenosminutos" HorizontalAlignment="Left" Height="11" Margin="313,30,0,0" VerticalAlignment="Top" Width="23" Click="btnmenosminutos_Click" Grid.Column="1">
             <Label x:Name="label_Copy3" Content="-" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         </Button>
+        <Image x:Name="image" Grid.Column="1" HorizontalAlignment="Left" Height="11" Margin="234,16,0,0" VerticalAlignment="Top" Width="12" Source="Arrowhead-01.png"/>
+        <Image x:Name="image_Copy" Grid.Column="1" HorizontalAlignment="Left" Height="11" Margin="319,16,0,0" VerticalAlignment="Top" Width="12" Source="Arrowhead-01.png"/>
+        <Image x:Name="image1" Grid.Column="1" HorizontalAlignment="Left" Height="11" Margin="234,30,0,0" VerticalAlignment="Top" Width="12" Source="Arrowhead-Down-01.png" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.556"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="image1_Copy" Grid.Column="1" HorizontalAlignment="Left" Height="11" Margin="319,30,0,0" VerticalAlignment="Top" Width="12" Source="Arrowhead-Down-01.png" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.556"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
 
     </Grid>
 </UserControl>
