@@ -38,6 +38,7 @@ namespace Vista
             InitializeComponent();
 
             btnPasar.Visibility = Visibility.Hidden;//el botón traspasar no se ve
+            btnPasarAContrato.Visibility = Visibility.Hidden;
 
             //llenar el combo box con los datos del enumerador
             foreach (ActividadEmpresa item in new ActividadEmpresa().ReadAll())
@@ -359,7 +360,7 @@ namespace Vista
 
         private async void btnPasarContrato_Click(object sender, RoutedEventArgs e)
         {
-            btnPasar.Visibility = Visibility.Visible;
+            btnPasarAContrato.Visibility = Visibility.Visible;
             try
             {
 
