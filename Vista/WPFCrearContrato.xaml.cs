@@ -222,9 +222,9 @@ namespace Vista
             lblNumero.Content = DateTime.Now.ToString("yyyyMMddHHmm");
             txtBuscarCliente.Clear();
             lblNombreCliente.Visibility = Visibility.Hidden;//no ver label
-            cboTipo.Items.Clear();
-            cbModalidad.Items.Clear();
-
+            cboTipo.SelectedIndex = 0;
+            cbModalidad.SelectedIndex = 0;
+            cbModalidad.IsEnabled = false;
             //dpFechaInicio.SelectedDate = null;
             //dpFechaFinEvento.SelectedDate = null;
             //dpFechaInicio1.ClearValue(DatePicker);
