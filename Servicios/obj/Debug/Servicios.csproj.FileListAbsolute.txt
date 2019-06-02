@@ -45,7 +45,6 @@ C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Servicios\bin\Microsoft.App
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Servicios\bin\Newtonsoft.Json.xml
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Servicios\bin\System.Net.Http.Formatting.xml
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Servicios\bin\WebApiRestService.WebApiClient.xml
-C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Servicios\obj\Debug\Servicios.csprojResolveAssemblyReference.cache
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Servicios\obj\Debug\Servicios.dll
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Servicios\obj\Debug\Servicios.pdb
 C:\Users\chida\Desktop\Duplicado\UnBreakable\Servicios\bin\ApplicationInsights.config
@@ -148,3 +147,4 @@ F:\UnBreakable - copia\Servicios\obj\Debug\Servicios.csprojResolveAssemblyRefere
 F:\UnBreakable - copia\Servicios\obj\Debug\Servicios.dll
 F:\UnBreakable - copia\Servicios\obj\Debug\Servicios.pdb
 C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Servicios\obj\Debug\Servicios.csprojResolveAssemblyReference.cache
+C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Servicios\obj\Debug\Servicios.csprojResolveAssemblyReference.cache

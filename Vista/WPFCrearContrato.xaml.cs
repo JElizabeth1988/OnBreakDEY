@@ -231,16 +231,18 @@ namespace Vista
         //limpiar
         private void btnLimpiar_Click(object sender, RoutedEventArgs e)
         {
-
+            btnCrear.Visibility = Visibility.Visible;
+            btnModificar.Visibility = Visibility.Hidden;
+            btnTerminar.Visibility = Visibility.Hidden;
 
             txtBuscarCliente.Clear();
             lblNombreCliente.Visibility = Visibility.Hidden;//desaparecer label
-            btnCrear.Visibility = Visibility.Visible;
-            btnModificar.Visibility = Visibility.Hidden;
+            //btnCrear.Visibility = Visibility.Visible;
+            //btnModificar.Visibility = Visibility.Hidden;
             txtNumero.Clear();
             lblNumero.Content = DateTime.Now.ToString("yyyyMMddHHmm");
             txtBuscarCliente.Clear();
-            lblNombreCliente.Visibility = Visibility.Hidden;//no ver label
+            //lblNombreCliente.Visibility = Visibility.Hidden;//no ver label
             cboTipo.SelectedIndex = 0;
             cbModalidad.SelectedIndex = 0;
             cbModalidad.IsEnabled = false;
@@ -266,6 +268,9 @@ namespace Vista
             ////DESBLOQUEAR EDITAR EL CONTRATO
             if (!txtBuscarCliente.IsEnabled)
             {
+                btnCrear.Visibility = Visibility.Visible;
+                btnModificar.Visibility = Visibility.Hidden;
+                btnTerminar.Visibility = Visibility.Hidden;
                 txtNumero.IsEnabled = true;
                 txtBuscarCliente.IsEnabled = true;
                 txtNumero.IsEnabled = true;
@@ -351,6 +356,8 @@ namespace Vista
                 cboTipo.IsEnabled = true;
                 txtObservaciones.IsEnabled = true;
                 txtBuscarCliente.IsEnabled = true;
+
+       
             }
             this.Close();
         }
@@ -362,9 +369,12 @@ namespace Vista
         {
             try
             {
+                
                 Contrato c = new Contrato();
+                Cliente clie = new Cliente();
                 c.Numero = txtNumero.Text;
                 bool buscar = c.Buscar();
+
                 if (buscar)
                 {
 
@@ -406,7 +416,11 @@ namespace Vista
                     lblTotal.Content= calculo();
                     btnModificar.Visibility = Visibility.Visible;
                     btnTerminar.Visibility = Visibility.Visible;
-                    //btnCrear.Visibility = Visibility.Hidden;
+                    
+                    btnCrear.Visibility = Visibility.Hidden;//Desaparece el btn crear
+                    
+                    
+                    lblNombreCliente.Content = clie.NombreContacto;
 
 
 
@@ -478,8 +492,12 @@ namespace Vista
                     lblNumero.Content = txtNumero.Text; //IGUALAR CAMPOS 
                     btnModificar.Visibility = Visibility.Visible;
                     btnTerminar.Visibility = Visibility.Visible;
-                   btnCrear.Visibility = Visibility.Hidden;
-                    lblNombreCliente.Visibility = Visibility.Visible;//aparecer label
+                    btnCrear.Visibility = Visibility.Hidden;
+
+                    Cliente cl = new Cliente();
+                    lblNombreCliente.Content = cl.NombreContacto;
+
+
 
 
                 }
