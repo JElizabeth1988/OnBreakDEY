@@ -81,8 +81,9 @@ namespace Vista
 
             btnPasar.Visibility = Visibility.Visible;//el botón traspasar se ve
             btnEliminar.Visibility = Visibility.Hidden;//Botón eliminar no se ve
+            btnPasarAContrato.Visibility = Visibility.Hidden;
             //llenar el combo box con los datos del enumerador
-            foreach(ActividadEmpresa item in new ActividadEmpresa().ReadAll())
+            foreach (ActividadEmpresa item in new ActividadEmpresa().ReadAll())
             {
                 comboBoxItem cb = new comboBoxItem();
                 cb.id = item.Id;

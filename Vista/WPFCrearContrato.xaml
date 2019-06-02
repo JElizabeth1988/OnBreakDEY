@@ -53,7 +53,7 @@
         <GroupBox x:Name="groupBox" Header="Buscar Información" HorizontalAlignment="Left" Margin="99,49,0,0" VerticalAlignment="Top" Height="170" Width="598">
             <Grid HorizontalAlignment="Left" Height="136" VerticalAlignment="Top" Width="588" Margin="0,0,0,-1.333">
                 <Button x:Name="btnCliente" Content="Buscar" HorizontalAlignment="Left" Margin="414,57,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Click="btnCliente_Click" Height="33" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
-                <Label x:Name="lblNombreCliente" Content="" HorizontalAlignment="Left" Margin="154,99,0,0" VerticalAlignment="Top" Width="310" FontWeight="Normal" Height="26"/>
+                <Label x:Name="lblNombreCliente" Content="" HorizontalAlignment="Left" Margin="154,99,0,0" VerticalAlignment="Top" Width="310" FontWeight="Bold" Height="26"/>
 
                 <Label x:Name="label_Copy1" Content="Buscar Número:" HorizontalAlignment="Left" Height="36" Margin="26,7,0,0" VerticalAlignment="Top" Width="118"/>
                 <TextBox x:Name="txtNumero"   HorizontalAlignment="Left" Height="26" Margin="158,8,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" FontWeight="Bold"/>
