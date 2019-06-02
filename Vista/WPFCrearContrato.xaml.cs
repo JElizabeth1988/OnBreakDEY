@@ -39,7 +39,7 @@ namespace Vista
             this.cboTipo.SelectedItem = null;
             btnTerminar.Visibility = Visibility.Hidden;
             btnModificar.Visibility = Visibility.Hidden;
-            cbModalidad.IsEnabled=false;
+           
 
 
             //LLENAR COMBO BOX TIPO EVENTO
@@ -66,7 +66,7 @@ namespace Vista
             txtNumeroAsistentes.Text = "0";
             txtPersonalAdicional.Text = "0";
             txtNumero.Text = "0";
-
+            cbModalidad.IsEnabled = false;
 
 
         }
@@ -896,8 +896,8 @@ namespace Vista
                 cb.descripcion = item.Nombre;
                 cbModalidad.Items.Add(cb);
             }
-
-         }
+            cbModalidad.SelectedIndex = 0;
+        }
 
 
 
