@@ -39,7 +39,6 @@ namespace Vista
             this.cboTipo.SelectedItem = null;
             btnTerminar.Visibility = Visibility.Hidden;
             btnModificar.Visibility = Visibility.Hidden;
-           
 
 
             //LLENAR COMBO BOX TIPO EVENTO
@@ -76,6 +75,7 @@ namespace Vista
         {
             try
             {
+
                 ModalidadServicio mod = new ModalidadServicio();
                 double valorc = mod.ValorBase + double.Parse(txtNumeroAsistentes.Text)
                 + double.Parse(lblAsistentes.Content.ToString())

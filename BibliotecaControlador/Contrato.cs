@@ -235,11 +235,12 @@ namespace BibliotecaNegocio
             {
                 BibliotecaDALC.Contrato co =
                     bdd.Contrato.First(con => con.Numero.Equals(Numero));
-
+               
 
                 CommonBC.Syncronize(co, this);
 
                 return true;
+
 
             }
             catch (Exception ex)

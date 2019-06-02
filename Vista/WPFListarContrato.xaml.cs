@@ -24,6 +24,7 @@ namespace Vista
     /// </summary>
     public partial class ListarContrato : MetroWindow
     {
+       
         Crear_Contrato cc;//recibir a crear contrato
         WpfCliente cl;//recibir al Mantenedor de Cliente
 
@@ -216,9 +217,32 @@ namespace Vista
                 }
                 else
                 {
+                    
                     ListaContratos con = (ListaContratos)dgvLista.SelectedItem;
                     cc.txtNumero.Text = con.Numero;
                     cc.BuscarContrato();
+                    
+                    if (con.Realizado == true)
+                    {
+                        cc.rbSi.IsChecked = false;
+                        cc.rbNo.IsChecked = true;
+                        //BLOQUEAR EDITAR EL CONTRATO
+                        cc.txtNumero.IsEnabled = false;
+                        cc.txtBuscarCliente.IsEnabled = false;
+                        cc.txtNumero.IsEnabled = false;
+                        //Convert.ToDateTime(txtNumero).ToString("dd/MM/yyyy HH:mm")
+                        cc.txtNumero.IsEnabled = false;
+                        cc.txtBuscarCliente.IsEnabled = false;
+                        cc.lblNumero.IsEnabled = false;
+                        cc.cbModalidad.IsEnabled = false;
+                        cc.cboTipo.IsEnabled = false;
+                        cc.txtObservaciones.IsEnabled = false;
+                        cc.txtNumeroAsistentes.IsEnabled = false;
+                        cc.txtPersonalAdicional.IsEnabled = false;
+                        cc.dpFechaInicio1.bloquear();
+                        cc.dpFechaTermino.bloquear();
+                    }
+
                 }
                 Close();
             }
