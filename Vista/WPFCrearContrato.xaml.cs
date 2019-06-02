@@ -74,11 +74,22 @@ namespace Vista
 
         private async void btnCalculo_Click(object sender, RoutedEventArgs e)
         {
-            ModalidadServicio mod = new ModalidadServicio();
-            double valorc = mod.ValorBase + double.Parse(txtNumeroAsistentes.Text)
-            + double.Parse(lblAsistentes.Content.ToString())
-            + double.Parse(lblPersonalAdicional.Content.ToString());
-            lblTotal.Content = valorc;
+            try
+            {
+                ModalidadServicio mod = new ModalidadServicio();
+                double valorc = mod.ValorBase + double.Parse(txtNumeroAsistentes.Text)
+                + double.Parse(lblAsistentes.Content.ToString())
+                + double.Parse(lblPersonalAdicional.Content.ToString());
+                lblTotal.Content = valorc;
+            }
+            catch (Exception ex)
+            {
+
+                await this.ShowMessageAsync("Mensaje:",
+                     string.Format("Debe ingresar valor de asistentes"));
+                Logger.Mensaje(ex.Message);
+            }
+           
         }
 
         //lblTotal.Content = calculo();
