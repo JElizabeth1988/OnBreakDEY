@@ -312,7 +312,7 @@ namespace Vista
             {
 
                 ListaClientes cli = (ListaClientes)dgLista.SelectedItem;
-                var x = await this.ShowMessageAsync("Eliminar Datos de Cliente" + cli.Rut,
+                var x = await this.ShowMessageAsync("Eliminar Datos de Cliente " + cli.Rut,
                          "¿Desea eliminar al Cliente?",
                         MessageDialogStyle.AffirmativeAndNegative);
                 if (x == MessageDialogResult.Affirmative)
