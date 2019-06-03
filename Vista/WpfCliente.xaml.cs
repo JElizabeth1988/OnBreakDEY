@@ -141,14 +141,18 @@ namespace Vista
 
                 //-----------------------------------------------------------------------------------------------
                 //MOSTRAR LISTA DE ERRORES
-                DaoErrores de = c.retornar();
-                string li = "";
-                foreach (string item in de.ListarErrores())
+                if (resp==false)//If para que no muestre mensaje en blanco en caso de éxito
                 {
-                    li += item + " \n";
+                    DaoErrores de = c.retornar();
+                    string li = "";
+                    foreach (string item in de.ListarErrores())
+                    {
+                        li += item + " \n";
+                    }
+                    await this.ShowMessageAsync("Mensaje:",
+                        string.Format(li));
                 }
-                await this.ShowMessageAsync("Mensaje:",
-                    string.Format(li));
+                
                 
                 //-----------------------------------------------------------------------------------------------
 
@@ -319,14 +323,19 @@ namespace Vista
 
                 //-----------------------------------------------------------------------------------------------
                 //MOSTRAR LISTA DE ERRORES
-                DaoErrores de = c.retornar();
-                string li = "";
-                foreach (string item in de.ListarErrores())
+                if (resp == false)//If para que no muestre mensaje en blanco en caso de éxito
                 {
-                    li += item + " \n";
+
+                    DaoErrores de = c.retornar();
+                    string li = "";
+                    foreach (string item in de.ListarErrores())
+                    {
+                        li += item + " \n";
+                    }
+                    await this.ShowMessageAsync("Mensaje:",
+                        string.Format(li));
                 }
-                await this.ShowMessageAsync("Mensaje:",
-                    string.Format(li));
+                
 
                 //-----------------------------------------------------------------------------------------------
 
