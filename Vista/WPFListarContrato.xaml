@@ -36,7 +36,7 @@
         <Label x:Name="label2_Copy" Content="Modalidad Evento" HorizontalAlignment="Left" Margin="83,153,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <ComboBox x:Name="cbFiltroModalidad" HorizontalAlignment="Left" Margin="201,152,0,0" VerticalAlignment="Top" Width="138" FontWeight="Bold" />
         <Button x:Name="btnFiltrarModalidad" Content="Filtrar" HorizontalAlignment="Left" Margin="353,150,0,0" VerticalAlignment="Top" Width="75" Click="btnFiltrarModalidad_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
-        <Button x:Name="btnRefrescar" HorizontalAlignment="Left" Margin="464,428,0,0" VerticalAlignment="Top" Width="40" Click="btnRefrescar_Click" Style="{DynamicResource MahApps.Metro.Styles.MetroCircleButtonStyle}" Height="39" BorderBrush="Black">
+        <Button x:Name="btnRefrescar" HorizontalAlignment="Left" Margin="464,428,0,0" VerticalAlignment="Top" Width="40" Click="btnRefrescar_Click" Style="{DynamicResource MahApps.Metro.Styles.MetroCircleButtonStyle}" Height="39" BorderBrush="Black" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727">
             <Button.Background>
                 <ImageBrush ImageSource="Command-Refresh1.png"/>
             </Button.Background>

@@ -235,6 +235,8 @@ namespace Vista
 
             txtBuscarCliente.Clear();
             lblNombreCliente.Visibility = Visibility.Hidden;//desaparecer label
+            btnCrear.Visibility = Visibility.Visible;
+            btnModificar.Visibility = Visibility.Hidden;
             txtNumero.Clear();
             lblNumero.Content = DateTime.Now.ToString("yyyyMMddHHmm");
             txtBuscarCliente.Clear();
@@ -304,6 +306,7 @@ namespace Vista
             ListarContrato con = new ListarContrato(this);
             con.Show();
            // btnTerminar.Visibility = Visibility.Visible;
+
 
         }
 
@@ -399,12 +402,14 @@ namespace Vista
                    // cbModalidad.Text = c.IdModalidad;
                     txtObservaciones.Text = c.Observaciones;
                     lblNumero.Content = txtNumero.Text; //IGUALAR CAMPOS 
+                    lblNombreCliente.Visibility = Visibility.Visible;//aparecer label
                     lblTotal.Content= calculo();
                     btnModificar.Visibility = Visibility.Visible;
                     btnTerminar.Visibility = Visibility.Visible;
-                    
-                    
-                    
+                    //btnCrear.Visibility = Visibility.Hidden;
+
+
+
                 }
                 else
                 {
@@ -473,7 +478,9 @@ namespace Vista
                     lblNumero.Content = txtNumero.Text; //IGUALAR CAMPOS 
                     btnModificar.Visibility = Visibility.Visible;
                     btnTerminar.Visibility = Visibility.Visible;
-                    
+                   btnCrear.Visibility = Visibility.Hidden;
+                    lblNombreCliente.Visibility = Visibility.Visible;//aparecer label
+
 
                 }
                 else
@@ -509,6 +516,8 @@ namespace Vista
                     lblNombreCliente.Visibility = Visibility.Visible;//aparecer label
 
                     lblNombreCliente.Visibility = Visibility.Visible;//ver label
+
+                    btnCrear.Visibility = Visibility.Visible;
 
                 }
                 else
