@@ -35,19 +35,19 @@
 
 
 
-        <Button x:Name="btnModificar" Content="Modificar" HorizontalAlignment="Left" Margin="374,645,0,0" VerticalAlignment="Top" Width="82" FontWeight="Normal" Height="33" Click="btnModificar_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
+        <Button x:Name="btnModificar" Content="Modificar" HorizontalAlignment="Left" Margin="374,641,0,0" VerticalAlignment="Top" Width="82" FontWeight="Normal" Height="33" Click="btnModificar_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
 
-        <Button x:Name="btnLimpiar" Content="Limpiar" HorizontalAlignment="Left" Margin="112,645,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Click="btnLimpiar_Click" Height="33" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
+        <Button x:Name="btnLimpiar" Content="Limpiar" HorizontalAlignment="Left" Margin="112,641,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Click="btnLimpiar_Click" Height="33" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
 
-        <Button x:Name="button" Content="Cerrar" HorizontalAlignment="Left" Margin="856,646,0,0" VerticalAlignment="Top" Width="76" FontWeight="Normal" Height="33" Click="button_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
+        <Button x:Name="button" Content="Cerrar" HorizontalAlignment="Left" Margin="856,640,0,0" VerticalAlignment="Top" Width="76" FontWeight="Normal" Height="33" Click="button_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
         <Label x:Name="label5" Content="Contrato vigente:" Margin="753,-2,33,768" VerticalAlignment="Bottom" Height="33" BorderThickness="2"/>
         <RadioButton x:Name="rbSi" Content="Sí" HorizontalAlignment="Left" Margin="871,6,0,0" VerticalAlignment="Top" IsChecked="True" Height="18" Width="34" GroupName="vigente" IsEnabled="False"/>
         <RadioButton x:Name="rbNo" Content="No" HorizontalAlignment="Left" Margin="915,4,0,0" VerticalAlignment="Top" Height="22" Width="57" GroupName="vigente" IsEnabled="False" RenderTransformOrigin="0.296,0.864"/>
 
 
-        <Button x:Name="btnTerminar" Content="Terminar Contrato" HorizontalAlignment="Left" Margin="521,646,0,0" VerticalAlignment="Top" Width="145" Click="btnTerminar_Click" FontWeight="Normal" Height="33" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
+        <Button x:Name="btnTerminar" Content="Terminar Contrato" HorizontalAlignment="Left" Margin="521,640,0,0" VerticalAlignment="Top" Width="145" Click="btnTerminar_Click" FontWeight="Normal" Height="33" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
         <Image x:Name="image" HorizontalAlignment="Left" Height="112" Margin="734,74,0,0" VerticalAlignment="Top" Width="133" Source="Imagenes/white_logo_transparent_background.png"/>
-        <Button x:Name="btnCrear" Content="Crear" HorizontalAlignment="Left" Margin="243,645,0,0" VerticalAlignment="Top" Width="73" Click="btnCrear_Click" FontWeight="Normal" Height="33" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
+        <Button x:Name="btnCrear" Content="Crear" HorizontalAlignment="Left" Margin="243,641,0,0" VerticalAlignment="Top" Width="73" Click="btnCrear_Click" FontWeight="Normal" Height="33" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
         <Label x:Name="label1" Content="Número Contrato:" HorizontalAlignment="Left" Margin="125,16,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblNumero" Content="" HorizontalAlignment="Left" Margin="257,16,0,0" VerticalAlignment="Top" Width="166"/>
         <GroupBox x:Name="groupBox" Header="Buscar Información" HorizontalAlignment="Left" Margin="99,49,0,0" VerticalAlignment="Top" Height="170" Width="598">
