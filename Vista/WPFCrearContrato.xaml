@@ -93,7 +93,7 @@
 
                 <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="156,-32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="16" Width="0"/>
                 <WpfControlLibrary1:UserControl1 x:Name="dpFechaInicio1" HorizontalAlignment="Left" Margin="94,126,0,0" VerticalAlignment="Top" Width="388"/>
-                <ComboBox x:Name="cbModalidad" HorizontalAlignment="Left" Margin="456,26,0,0" VerticalAlignment="Top" Width="120"/>
+                <ComboBox x:Name="cbModalidad" HorizontalAlignment="Left" Margin="456,26,0,0" VerticalAlignment="Top" Width="138"/>
                 <Label x:Name="label4" Content="Modalidad Servicio:" HorizontalAlignment="Left" Margin="313,26,0,0" VerticalAlignment="Top"/>
             </Grid>
         </GroupBox>
