@@ -393,9 +393,10 @@ namespace Vista
                     txtPersonalAdicional.IsEnabled = false;
                     dpFechaInicio1.bloquear();
                     dpFechaTermino.bloquear();
+
                 }
 
-
+           
                 if (buscar)
                 {
 
