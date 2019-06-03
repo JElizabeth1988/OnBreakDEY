@@ -68,6 +68,16 @@ namespace Vista
 
         }
 
+        //METODO CALCULO
+        public double calculo()
+        {
+            ModalidadServicio mod = new ModalidadServicio();
+            double valorc = mod.ValorBase + double.Parse(txtNumeroAsistentes.Text)
+            + double.Parse(lblAsistentes.Content.ToString())
+            + double.Parse(lblPersonalAdicional.Content.ToString());
+            return valorc;
+        }
+
     
         //BOTON CALCULO CONTRATO
 
@@ -75,12 +85,8 @@ namespace Vista
         {
             try
             {
-
-                ModalidadServicio mod = new ModalidadServicio();
-                double valorc = mod.ValorBase + double.Parse(txtNumeroAsistentes.Text)
-                + double.Parse(lblAsistentes.Content.ToString())
-                + double.Parse(lblPersonalAdicional.Content.ToString());
-                lblTotal.Content = valorc;
+ 
+                lblTotal.Content =calculo();
             }
             catch (Exception ex)
             {
@@ -184,7 +190,7 @@ namespace Vista
                         Asistentes = asistentes,
                         PersonalAdicional = personalAdicional,
                         Realizado = realizado,
-                        ValorTotalContrato= valorc,
+                        ValorTotalContrato= calculo(),
                         Observaciones = observaciones,
                         
                     };
@@ -393,6 +399,7 @@ namespace Vista
                    // cbModalidad.Text = c.IdModalidad;
                     txtObservaciones.Text = c.Observaciones;
                     lblNumero.Content = txtNumero.Text; //IGUALAR CAMPOS 
+                    lblTotal.Content= calculo();
                     btnModificar.Visibility = Visibility.Visible;
                     btnTerminar.Visibility = Visibility.Visible;
                     
@@ -457,7 +464,7 @@ namespace Vista
                     mod.Id = c.IdModalidad;
                     mod.Read();
                     cbModalidad.Text = mod.Nombre;//Cambiar a descripción
-
+                    lblTotal.Content= calculo();
                     /*cboTipo.Text = c.IdTipoEvento.ToString();
                     cbModalidad.Text = c.IdModalidad.ToString();*/
 
