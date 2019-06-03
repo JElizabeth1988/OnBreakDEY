@@ -673,7 +673,7 @@ namespace Vista
                      MessageDialogStyle.AffirmativeAndNegative);
                 if (x == MessageDialogResult.Affirmative)
                 {
-
+                   
                     String numero = lblNumero.Content.ToString();
                     DateTime creacion = fechac;
                     bool realizado = true;
@@ -765,6 +765,8 @@ namespace Vista
                     await this.ShowMessageAsync("Mensaje:",
                       string.Format(resp ? "Contrato Terminado" : "Contrato No Terminado"));
                     btnTerminar.Visibility = Visibility.Hidden;
+                    btnModificar.Visibility = Visibility.Hidden;
+                    btnCrear.Visibility = Visibility.Hidden;
                 }
 
                 }
