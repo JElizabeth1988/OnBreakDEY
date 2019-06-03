@@ -395,8 +395,27 @@ namespace Vista
                     dpFechaTermino.bloquear();
 
                 }
+                else
+                {
+                    rbSi.IsChecked = true;
+                    rbNo.IsChecked = false;
+                    //BLOQUEAR EDITAR EL CONTRATO
+                    txtNumero.IsEnabled = true;
+                    txtBuscarCliente.IsEnabled = true;
+                    txtNumero.IsEnabled = true;
+                    //Convert.ToDateTime(txtNumero).ToString("dd/MM/yyyy HH:mm")
+                    txtNumero.IsEnabled = true;
+                    txtBuscarCliente.IsEnabled = true;
+                    lblNumero.IsEnabled = true;
+                    cbModalidad.IsEnabled = true;
+                    cboTipo.IsEnabled = true;
+                    txtObservaciones.IsEnabled = true;
+                    txtNumeroAsistentes.IsEnabled = true;
+                    txtPersonalAdicional.IsEnabled = true;
 
-           
+                }
+
+
                 if (buscar)
                 {
 
