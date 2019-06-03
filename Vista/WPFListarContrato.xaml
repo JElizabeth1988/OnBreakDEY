@@ -32,10 +32,10 @@
         </GroupBox>
         <TextBox x:Name="txtfiltroRut" Controls:TextBoxHelper.Watermark="Ej. 11.111.111-1" HorizontalAlignment="Left" Height="23" Margin="201,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138" Controls:TextBoxHelper.ClearTextButton="True" FontWeight="Bold"/>
         <Button x:Name="btnPasar" Content="Traspasar" HorizontalAlignment="Left" Margin="128,434,0,0" VerticalAlignment="Top" Width="82" Click="btnPasar_Click_1" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
-        <Button x:Name="button" Content="?" HorizontalAlignment="Left" Margin="450,80,0,0" VerticalAlignment="Top" Width="32" Background="#FF29A9E0" BorderBrush="Black" BorderThickness="2" Foreground="White" FontSize="12" FontFamily="Segoe UI, Lucida Sans Unicode, Verdana" FontWeight="Bold" Click="button_Click_1" Height="26"/>
+        <Button x:Name="button" Content="?" HorizontalAlignment="Left" Margin="450,80,0,0" VerticalAlignment="Top" Width="32" Click="button_Click_1" Height="26" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
         <Label x:Name="label2_Copy" Content="Modalidad Evento" HorizontalAlignment="Left" Margin="83,153,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <ComboBox x:Name="cbFiltroModalidad" HorizontalAlignment="Left" Margin="201,152,0,0" VerticalAlignment="Top" Width="138" FontWeight="Bold" />
-        <Button x:Name="btnFiltrarModalidad" Content="Filtrar" HorizontalAlignment="Left" Margin="353,150,0,0" VerticalAlignment="Top" Width="75" Background="#FF29A9E0" BorderBrush="Black" BorderThickness="2" Foreground="White" FontSize="12" Click="btnFiltrarModalidad_Click" />
+        <Button x:Name="btnFiltrarModalidad" Content="Filtrar" HorizontalAlignment="Left" Margin="353,150,0,0" VerticalAlignment="Top" Width="75" Click="btnFiltrarModalidad_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
         <Button x:Name="btnRefrescar" HorizontalAlignment="Left" Margin="464,428,0,0" VerticalAlignment="Top" Width="40" Click="btnRefrescar_Click" Style="{DynamicResource MahApps.Metro.Styles.MetroCircleButtonStyle}" Height="39" BorderBrush="Black">
             <Button.Background>
                 <ImageBrush ImageSource="Command-Refresh1.png"/>

@@ -101,7 +101,7 @@
         <Label x:Name="label3" Content="Inicio" HorizontalAlignment="Left" Margin="87,395,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.471,-0.113"/>
         <WpfControlLibrary1:UserControl1 x:Name="dpFechaTermino" HorizontalAlignment="Left" Margin="164,439,0,0" VerticalAlignment="Top" Width="390"/>
         <Label x:Name="label3_Copy" Content="Termino" HorizontalAlignment="Left" Margin="87,454,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.471,-0.113"/>
-        <Button x:Name="btnCalculo" Content="Calcular" HorizontalAlignment="Left" Margin="763,439,0,0" VerticalAlignment="Top" Width="75" Background="#FF29A9E0" Foreground="White" BorderBrush="Black" BorderThickness="2" Click="btnCalculo_Click" FontWeight="Normal"/>
+        <Button x:Name="btnCalculo" Content="Calcular" HorizontalAlignment="Left" Margin="763,439,0,0" VerticalAlignment="Top" Width="76" Height="33" Click="btnCalculo_Click" FontWeight="Normal" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
 
     </Grid>
 </Controls:MetroWindow>
