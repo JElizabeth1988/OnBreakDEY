@@ -374,6 +374,27 @@ namespace Vista
                 Cliente clie = new Cliente();
                 c.Numero = txtNumero.Text;
                 bool buscar = c.Buscar();
+                if (c.Realizado == true)
+                {
+                    rbSi.IsChecked = false;
+                    rbNo.IsChecked = true;
+                    //BLOQUEAR EDITAR EL CONTRATO
+                    txtNumero.IsEnabled = false;
+                    txtBuscarCliente.IsEnabled = false;
+                    txtNumero.IsEnabled = false;
+                    //Convert.ToDateTime(txtNumero).ToString("dd/MM/yyyy HH:mm")
+                    txtNumero.IsEnabled = false;
+                    txtBuscarCliente.IsEnabled = false;
+                    lblNumero.IsEnabled = false;
+                    cbModalidad.IsEnabled = false;
+                    cboTipo.IsEnabled = false;
+                    txtObservaciones.IsEnabled = false;
+                    txtNumeroAsistentes.IsEnabled = false;
+                    txtPersonalAdicional.IsEnabled = false;
+                    dpFechaInicio1.bloquear();
+                    dpFechaTermino.bloquear();
+                }
+
 
                 if (buscar)
                 {
@@ -421,6 +442,7 @@ namespace Vista
                     
                     
                     lblNombreCliente.Content = clie.NombreContacto;
+
 
 
 
