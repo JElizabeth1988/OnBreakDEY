@@ -71,10 +71,12 @@ namespace Vista
         //METODO CALCULO
         public double calculo()
         {
-            ModalidadServicio mod = new ModalidadServicio();
-            double valorc = mod.ValorBase + double.Parse(txtNumeroAsistentes.Text)
+           // ModalidadServicio mod = new ModalidadServicio();
+            double valorc = double.Parse(lblValorBase.Content.ToString())
             + double.Parse(lblAsistentes.Content.ToString())
             + double.Parse(lblPersonalAdicional.Content.ToString());
+
+            
             return valorc;
         }
 
@@ -374,6 +376,47 @@ namespace Vista
                 Cliente clie = new Cliente();
                 c.Numero = txtNumero.Text;
                 bool buscar = c.Buscar();
+                if (c.Realizado == true)
+                {
+                    rbSi.IsChecked = false;
+                    rbNo.IsChecked = true;
+                    //BLOQUEAR EDITAR EL CONTRATO
+                    txtNumero.IsEnabled = false;
+                    txtBuscarCliente.IsEnabled = false;
+                    txtNumero.IsEnabled = false;
+                    //Convert.ToDateTime(txtNumero).ToString("dd/MM/yyyy HH:mm")
+                    txtNumero.IsEnabled = false;
+                    txtBuscarCliente.IsEnabled = false;
+                    lblNumero.IsEnabled = false;
+                    cbModalidad.IsEnabled = false;
+                    cboTipo.IsEnabled = false;
+                    txtObservaciones.IsEnabled = false;
+                    txtNumeroAsistentes.IsEnabled = false;
+                    txtPersonalAdicional.IsEnabled = false;
+                    dpFechaInicio1.bloquear();
+                    dpFechaTermino.bloquear();
+
+                }
+                else
+                {
+                    rbSi.IsChecked = true;
+                    rbNo.IsChecked = false;
+                    //BLOQUEAR EDITAR EL CONTRATO
+                    txtNumero.IsEnabled = true;
+                    txtBuscarCliente.IsEnabled = true;
+                    txtNumero.IsEnabled = true;
+                    //Convert.ToDateTime(txtNumero).ToString("dd/MM/yyyy HH:mm")
+                    txtNumero.IsEnabled = true;
+                    txtBuscarCliente.IsEnabled = true;
+                    lblNumero.IsEnabled = true;
+                    cbModalidad.IsEnabled = true;
+                    cboTipo.IsEnabled = true;
+                    txtObservaciones.IsEnabled = true;
+                    txtNumeroAsistentes.IsEnabled = true;
+                    txtPersonalAdicional.IsEnabled = true;
+
+                }
+
 
                 if (buscar)
                 {
@@ -421,6 +464,7 @@ namespace Vista
                     
                     
                     lblNombreCliente.Content = clie.NombreContacto;
+
 
 
 
@@ -956,6 +1000,46 @@ namespace Vista
 
         }
 
-       
+        private void cbModalidad_LostFocus(object sender, SelectionChangedEventArgs e)
+        {
+            if (cbModalidad.SelectedItem != null)
+            {
+                string moda = ((comboBoxItem2)cbModalidad.SelectedItem).id;
+                int cant = 0;
+
+                if (moda.Equals("CB001"))
+                {
+                    cant = 3;
+                }
+                if (moda.Equals("CB002"))
+                {
+                    cant = 8;
+                }
+                if (moda.Equals("CB003"))
+                {
+                    cant = 12;
+                }
+                if (moda.Equals("CE001"))
+                {
+                    cant = 25;
+                }
+                if (moda.Equals("CE002"))
+                {
+                    cant = 35;
+                }
+                if (moda.Equals("CO001"))
+                {
+                    cant = 6;
+                }
+                if (moda.Equals("CO002"))
+                {
+                    cant = 10;
+                }
+
+                double valor = (double)(cant * uf);
+                lblValorBase.Content = valor.ToString();
+            }   
+
+        }
     }
 }

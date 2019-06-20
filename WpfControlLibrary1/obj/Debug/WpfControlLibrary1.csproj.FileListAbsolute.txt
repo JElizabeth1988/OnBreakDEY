@@ -63,4 +63,18 @@ C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\WpfControlLibrary1\obj\Debu
 C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.dll
 C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.pdb
 C:\Users\chida\Desktop\Duplicado\UnBreakable\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.csprojResolveAssemblyReference.cache
+F:\UnBreakable\WpfControlLibrary1\bin\Debug\WpfControlLibrary1.dll
+F:\UnBreakable\WpfControlLibrary1\bin\Debug\WpfControlLibrary1.pdb
+F:\UnBreakable\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.csprojResolveAssemblyReference.cache
+F:\UnBreakable\WpfControlLibrary1\obj\Debug\Page1.g.cs
+F:\UnBreakable\WpfControlLibrary1\obj\Debug\UserControl1.g.cs
+F:\UnBreakable\WpfControlLibrary1\obj\Debug\WpfControlLibrary1_MarkupCompile.cache
+F:\UnBreakable\WpfControlLibrary1\obj\Debug\WpfControlLibrary1_MarkupCompile.lref
+F:\UnBreakable\WpfControlLibrary1\obj\Debug\Page1.baml
+F:\UnBreakable\WpfControlLibrary1\obj\Debug\UserControl1.baml
+F:\UnBreakable\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.g.resources
+F:\UnBreakable\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.Properties.Resources.resources
+F:\UnBreakable\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.csproj.GenerateResource.Cache
+F:\UnBreakable\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.dll
+F:\UnBreakable\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.pdb
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.csprojResolveAssemblyReference.cache

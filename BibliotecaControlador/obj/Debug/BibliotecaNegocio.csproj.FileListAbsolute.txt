@@ -34,3 +34,12 @@ C:\Users\Elise\Documents\GitHub\UnBreakable\BibliotecaControlador\bin\Debug\Enti
 C:\Users\Elise\Documents\GitHub\UnBreakable\BibliotecaControlador\obj\Debug\BibliotecaNegocio.csprojResolveAssemblyReference.cache
 C:\Users\Elise\Documents\GitHub\UnBreakable\BibliotecaControlador\obj\Debug\BibliotecaControlador.dll
 C:\Users\Elise\Documents\GitHub\UnBreakable\BibliotecaControlador\obj\Debug\BibliotecaControlador.pdb
+F:\UnBreakable\BibliotecaControlador\bin\Debug\BibliotecaControlador.dll
+F:\UnBreakable\BibliotecaControlador\bin\Debug\BibliotecaControlador.pdb
+F:\UnBreakable\BibliotecaControlador\bin\Debug\BibliotecaDALC.dll
+F:\UnBreakable\BibliotecaControlador\bin\Debug\EntityFramework.dll
+F:\UnBreakable\BibliotecaControlador\bin\Debug\BibliotecaDALC.pdb
+F:\UnBreakable\BibliotecaControlador\bin\Debug\EntityFramework.xml
+F:\UnBreakable\BibliotecaControlador\obj\Debug\BibliotecaNegocio.csprojResolveAssemblyReference.cache
+F:\UnBreakable\BibliotecaControlador\obj\Debug\BibliotecaControlador.dll
+F:\UnBreakable\BibliotecaControlador\obj\Debug\BibliotecaControlador.pdb

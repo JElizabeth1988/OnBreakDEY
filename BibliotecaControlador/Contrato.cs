@@ -141,7 +141,7 @@ namespace BibliotecaNegocio
             get { return _asistentes; }
             set
             {
-                if (value != 0)
+                if (value >= 0)
                 {
                     _asistentes = value;
                 }
@@ -157,7 +157,7 @@ namespace BibliotecaNegocio
             get { return _personalAdicional; }
             set
             {
-                if (value != 0)
+                if (value >= 0)
                 {
                     _personalAdicional = value;
                 }

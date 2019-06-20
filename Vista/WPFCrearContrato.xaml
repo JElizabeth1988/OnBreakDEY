@@ -83,7 +83,6 @@
                 </Label>
                 <Label x:Name="label9_Copy1" Content="Valor Evento" HorizontalAlignment="Left" Margin="638,29,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="Black" Height="34" Width="121" FontSize="16" FontFamily="Segoe UI Historic" FontWeight="Bold"/>
                 <Label x:Name="label_Copy6" Content="Valor Total : $" HorizontalAlignment="Left" Margin="644,227,0,0" VerticalAlignment="Top" Height="26" Width="77"/>
-                <Label x:Name="lblValorBase" Content="" HorizontalAlignment="Left" Margin="776,68,0,0" VerticalAlignment="Top" FontWeight="Normal" Height="26" Width="10"/>
                 <Label x:Name="lblAsistentes" Content="" HorizontalAlignment="Left" Margin="775,101,0,0" VerticalAlignment="Top"/>
                 <Label x:Name="lblPersonalAdicional" Content="" HorizontalAlignment="Left" Margin="775,138,0,0" VerticalAlignment="Top"/>
                 <Label x:Name="lblTotal" Content="" HorizontalAlignment="Left" Margin="768,227,-5,0" VerticalAlignment="Top" Width="97" FontWeight="Bold" Height="26" BorderBrush="Black"/>
@@ -93,8 +92,9 @@
 
                 <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="156,-32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="16" Width="0"/>
                 <WpfControlLibrary1:UserControl1 x:Name="dpFechaInicio1" HorizontalAlignment="Left" Margin="94,126,0,0" VerticalAlignment="Top" Width="388"/>
-                <ComboBox x:Name="cbModalidad" HorizontalAlignment="Left" Margin="456,26,0,0" VerticalAlignment="Top" Width="138"/>
+                <ComboBox x:Name="cbModalidad" HorizontalAlignment="Left" Margin="456,26,0,0" VerticalAlignment="Top" Width="138" SelectionChanged="cbModalidad_LostFocus"/>
                 <Label x:Name="label4" Content="Modalidad Servicio:" HorizontalAlignment="Left" Margin="313,26,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="lblValorBase" Content="" HorizontalAlignment="Left" Margin="775,74,0,0" VerticalAlignment="Top"/>
             </Grid>
         </GroupBox>
         <Label x:Name="label2" Content="Contrato Vigente" HorizontalAlignment="Left" Margin="762,0,0,0" VerticalAlignment="Top"/>

@@ -38,3 +38,13 @@ C:\Users\Elise\Documents\GitHub\UnBreakable\BibliotecaDALC\bin\Debug\EntityFrame
 C:\Users\Elise\Documents\GitHub\UnBreakable\BibliotecaDALC\obj\Debug\BibliotecaDALC.csprojResolveAssemblyReference.cache
 C:\Users\Elise\Documents\GitHub\UnBreakable\BibliotecaDALC\obj\Debug\BibliotecaDALC.dll
 C:\Users\Elise\Documents\GitHub\UnBreakable\BibliotecaDALC\obj\Debug\BibliotecaDALC.pdb
+F:\UnBreakable\BibliotecaDALC\bin\Debug\BibliotecaDALC.dll.config
+F:\UnBreakable\BibliotecaDALC\bin\Debug\BibliotecaDALC.dll
+F:\UnBreakable\BibliotecaDALC\bin\Debug\BibliotecaDALC.pdb
+F:\UnBreakable\BibliotecaDALC\bin\Debug\BibliotecaControlador.dll
+F:\UnBreakable\BibliotecaDALC\bin\Debug\EntityFramework.dll
+F:\UnBreakable\BibliotecaDALC\bin\Debug\BibliotecaControlador.pdb
+F:\UnBreakable\BibliotecaDALC\bin\Debug\EntityFramework.xml
+F:\UnBreakable\BibliotecaDALC\obj\Debug\BibliotecaDALC.csprojResolveAssemblyReference.cache
+F:\UnBreakable\BibliotecaDALC\obj\Debug\BibliotecaDALC.dll
+F:\UnBreakable\BibliotecaDALC\obj\Debug\BibliotecaDALC.pdb

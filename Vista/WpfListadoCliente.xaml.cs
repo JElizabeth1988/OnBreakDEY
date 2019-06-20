@@ -39,6 +39,7 @@ namespace Vista
 
             btnPasar.Visibility = Visibility.Hidden;//el botón traspasar no se ve
             btnPasarAContrato.Visibility = Visibility.Hidden;//no se ve
+            btnCrear.Visibility = Visibility.Hidden; //No se ve
 
             //llenar el combo box con los datos del enumerador
             foreach (ActividadEmpresa item in new ActividadEmpresa().ReadAll())
@@ -82,6 +83,7 @@ namespace Vista
             btnPasar.Visibility = Visibility.Visible;//el botón traspasar se ve
             btnEliminar.Visibility = Visibility.Hidden;//Botón eliminar no se ve
             btnPasarAContrato.Visibility = Visibility.Hidden;
+            btnCrear.Visibility = Visibility.Visible;//se ve botón
             //llenar el combo box con los datos del enumerador
             foreach (ActividadEmpresa item in new ActividadEmpresa().ReadAll())
             {
@@ -121,6 +123,7 @@ namespace Vista
             btnPasar.Visibility = Visibility.Visible;//Botón pasar es visible
             btnEliminar.Visibility = Visibility.Hidden;//Botón Eliminar no se ve
             btnPasarAContrato.Visibility = Visibility.Hidden;//No se ve
+            btnCrear.Visibility = Visibility.Hidden;//No se ve
 
             //llenar el combo box con los datos del enumerador
             foreach (ActividadEmpresa item in new ActividadEmpresa().ReadAll())
@@ -163,6 +166,7 @@ namespace Vista
             btnPasar.Visibility = Visibility.Hidden;//el botón traspasar no se ve
             btnEliminar.Visibility = Visibility.Hidden;//Botón eliminar no se ve
             btnPasarAContrato.Visibility = Visibility.Visible;//Botón pasar a contrato se ve
+            btnCrear.Visibility = Visibility.Visible;//No se ve
             //llenar el combo box con los datos del enumerador
             foreach (ActividadEmpresa item in new ActividadEmpresa().ReadAll())
             {
@@ -401,8 +405,10 @@ namespace Vista
             }
         }
 
-        
-
-
+        private void btnCrear_Click(object sender, RoutedEventArgs e)
+        {
+            WpfCliente cliente = new WpfCliente();
+            cliente.Show();
+        }
     }
 }
