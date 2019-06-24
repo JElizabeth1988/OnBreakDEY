@@ -35,6 +35,10 @@ namespace BibliotecaDALC
         public DbSet<TipoEmpresa> TipoEmpresa { get; set; }
         public DbSet<TipoEvento> TipoEvento { get; set; }
         public DbSet<ActividadEmpresa> ActividadEmpresa { get; set; }
+        public DbSet<Cenas> Cenas { get; set; }
+        public DbSet<Cocktail> Cocktail { get; set; }
+        public DbSet<CoffeeBreak> CoffeeBreak { get; set; }
+        public DbSet<TipoAmbientacion> TipoAmbientacion { get; set; }
     
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
         {

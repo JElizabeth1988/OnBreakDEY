@@ -7,6 +7,17 @@
     <Property Name="IdActividadEmpresa" Type="int" Nullable="false" />
     <Property Name="Descripcion" Type="nvarchar" MaxLength="20" Nullable="false" />
   </EntityType>
+  <EntityType Name="Cenas">
+    <Key>
+      <PropertyRef Name="Numero" />
+    </Key>
+    <Property Name="Numero" Type="nvarchar" MaxLength="12" Nullable="false" />
+    <Property Name="IdTipoAmbientacion" Type="int" Nullable="false" />
+    <Property Name="MusicaAmbiental" Type="bit" Nullable="false" />
+    <Property Name="LocalOnBreak" Type="bit" Nullable="false" />
+    <Property Name="OtroLocalOnBreak" Type="bit" Nullable="false" />
+    <Property Name="ValorArriendo" Type="float" Nullable="false" />
+  </EntityType>
   <EntityType Name="Cliente">
     <Key>
       <PropertyRef Name="RutCliente" />
@@ -19,6 +30,23 @@
     <Property Name="Telefono" Type="nvarchar" MaxLength="15" Nullable="false" />
     <Property Name="IdActividadEmpresa" Type="int" Nullable="false" />
     <Property Name="IdTipoEmpresa" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Cocktail">
+    <Key>
+      <PropertyRef Name="Numero" />
+    </Key>
+    <Property Name="Numero" Type="nvarchar" MaxLength="12" Nullable="false" />
+    <Property Name="IdTipoAmbientacion" Type="int" Nullable="false" />
+    <Property Name="Ambientacion" Type="bit" Nullable="false" />
+    <Property Name="MusicaAmbiental" Type="bit" Nullable="false" />
+    <Property Name="MusicaCliente" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CoffeeBreak">
+    <Key>
+      <PropertyRef Name="Numero" />
+    </Key>
+    <Property Name="Numero" Type="nvarchar" MaxLength="12" Nullable="false" />
+    <Property Name="Vegetariana" Type="bit" Nullable="false" />
   </EntityType>
   <EntityType Name="Contrato">
     <Key>
@@ -49,15 +77,12 @@
     <Property Name="ValorBase" Type="float" Nullable="false" />
     <Property Name="PersonalBase" Type="int" Nullable="false" />
   </EntityType>
-  <EntityType Name="sysdiagrams">
+  <EntityType Name="TipoAmbientacion">
     <Key>
-      <PropertyRef Name="diagram_id" />
+      <PropertyRef Name="IdTipoAmbientacion" />
     </Key>
-    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-    <Property Name="principal_id" Type="int" Nullable="false" />
-    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="version" Type="int" />
-    <Property Name="definition" Type="varbinary(max)" />
+    <Property Name="IdTipoAmbientacion" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="15" Nullable="false" />
   </EntityType>
   <EntityType Name="TipoEmpresa">
     <Key>
@@ -73,6 +98,18 @@
     <Property Name="IdTipoEvento" Type="int" Nullable="false" />
     <Property Name="Descripcion" Type="nvarchar" MaxLength="15" Nullable="false" />
   </EntityType>
+  <Association Name="Cena_TipoAmbientacion_FK1">
+    <End Role="TipoAmbientacion" Type="Self.TipoAmbientacion" Multiplicity="1" />
+    <End Role="Cenas" Type="Self.Cenas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoAmbientacion">
+        <PropertyRef Name="IdTipoAmbientacion" />
+      </Principal>
+      <Dependent Role="Cenas">
+        <PropertyRef Name="IdTipoAmbientacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="Cliente_ActividadEmpresa_FK1">
     <End Role="ActividadEmpresa" Type="Self.ActividadEmpresa" Multiplicity="1" />
     <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
@@ -97,6 +134,30 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="Cocktail_TipoAmbientacion_FK1">
+    <End Role="TipoAmbientacion" Type="Self.TipoAmbientacion" Multiplicity="1" />
+    <End Role="Cocktail" Type="Self.Cocktail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoAmbientacion">
+        <PropertyRef Name="IdTipoAmbientacion" />
+      </Principal>
+      <Dependent Role="Cocktail">
+        <PropertyRef Name="IdTipoAmbientacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Contrato_Cenas_FK1">
+    <End Role="Contrato" Type="Self.Contrato" Multiplicity="1" />
+    <End Role="Cenas" Type="Self.Cenas" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Contrato">
+        <PropertyRef Name="Numero" />
+      </Principal>
+      <Dependent Role="Cenas">
+        <PropertyRef Name="Numero" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="Contrato_Cliente_FK1">
     <End Role="Cliente" Type="Self.Cliente" Multiplicity="1" />
     <End Role="Contrato" Type="Self.Contrato" Multiplicity="*" />
@@ -106,6 +167,30 @@
       </Principal>
       <Dependent Role="Contrato">
         <PropertyRef Name="RutCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Contrato_Cocktail_FK1">
+    <End Role="Contrato" Type="Self.Contrato" Multiplicity="1" />
+    <End Role="Cocktail" Type="Self.Cocktail" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Contrato">
+        <PropertyRef Name="Numero" />
+      </Principal>
+      <Dependent Role="Cocktail">
+        <PropertyRef Name="Numero" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Contrato_CoffeeBreak_FK1">
+    <End Role="Contrato" Type="Self.Contrato" Multiplicity="1" />
+    <End Role="CoffeeBreak" Type="Self.CoffeeBreak" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Contrato">
+        <PropertyRef Name="Numero" />
+      </Principal>
+      <Dependent Role="CoffeeBreak">
+        <PropertyRef Name="Numero" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -135,45 +220,21 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
-  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-    <Parameter Name="owner_id" Type="int" Mode="In" />
-    <Parameter Name="version" Type="int" Mode="In" />
-    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
-  </Function>
-  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-    <Parameter Name="owner_id" Type="int" Mode="In" />
-    <Parameter Name="version" Type="int" Mode="In" />
-    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
-  </Function>
-  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-    <Parameter Name="owner_id" Type="int" Mode="In" />
-  </Function>
-  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-    <Parameter Name="owner_id" Type="int" Mode="In" />
-  </Function>
-  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-    <Parameter Name="owner_id" Type="int" Mode="In" />
-  </Function>
-  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-    <Parameter Name="owner_id" Type="int" Mode="In" />
-    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
-  </Function>
-  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <EntityContainer Name="OnBreakModelStoreContainer">
     <EntitySet Name="ActividadEmpresa" EntityType="Self.ActividadEmpresa" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cenas" EntityType="Self.Cenas" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Cliente" EntityType="Self.Cliente" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cocktail" EntityType="Self.Cocktail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CoffeeBreak" EntityType="Self.CoffeeBreak" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Contrato" EntityType="Self.Contrato" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ModalidadServicio" EntityType="Self.ModalidadServicio" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipoAmbientacion" EntityType="Self.TipoAmbientacion" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TipoEmpresa" EntityType="Self.TipoEmpresa" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TipoEvento" EntityType="Self.TipoEvento" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="Cena_TipoAmbientacion_FK1" Association="Self.Cena_TipoAmbientacion_FK1">
+      <End Role="TipoAmbientacion" EntitySet="TipoAmbientacion" />
+      <End Role="Cenas" EntitySet="Cenas" />
+    </AssociationSet>
     <AssociationSet Name="Cliente_ActividadEmpresa_FK1" Association="Self.Cliente_ActividadEmpresa_FK1">
       <End Role="ActividadEmpresa" EntitySet="ActividadEmpresa" />
       <End Role="Cliente" EntitySet="Cliente" />
@@ -182,9 +243,25 @@
       <End Role="TipoEmpresa" EntitySet="TipoEmpresa" />
       <End Role="Cliente" EntitySet="Cliente" />
     </AssociationSet>
+    <AssociationSet Name="Cocktail_TipoAmbientacion_FK1" Association="Self.Cocktail_TipoAmbientacion_FK1">
+      <End Role="TipoAmbientacion" EntitySet="TipoAmbientacion" />
+      <End Role="Cocktail" EntitySet="Cocktail" />
+    </AssociationSet>
+    <AssociationSet Name="Contrato_Cenas_FK1" Association="Self.Contrato_Cenas_FK1">
+      <End Role="Contrato" EntitySet="Contrato" />
+      <End Role="Cenas" EntitySet="Cenas" />
+    </AssociationSet>
     <AssociationSet Name="Contrato_Cliente_FK1" Association="Self.Contrato_Cliente_FK1">
       <End Role="Cliente" EntitySet="Cliente" />
       <End Role="Contrato" EntitySet="Contrato" />
+    </AssociationSet>
+    <AssociationSet Name="Contrato_Cocktail_FK1" Association="Self.Contrato_Cocktail_FK1">
+      <End Role="Contrato" EntitySet="Contrato" />
+      <End Role="Cocktail" EntitySet="Cocktail" />
+    </AssociationSet>
+    <AssociationSet Name="Contrato_CoffeeBreak_FK1" Association="Self.Contrato_CoffeeBreak_FK1">
+      <End Role="Contrato" EntitySet="Contrato" />
+      <End Role="CoffeeBreak" EntitySet="CoffeeBreak" />
     </AssociationSet>
     <AssociationSet Name="Contrato_ModalidadEvento_FK1" Association="Self.Contrato_ModalidadEvento_FK1">
       <End Role="ModalidadServicio" EntitySet="ModalidadServicio" />

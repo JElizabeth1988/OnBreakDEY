@@ -54,7 +54,16 @@
     <Compile Include="ActividadEmpresa.cs">
       <DependentUpon>Modelo.tt</DependentUpon>
     </Compile>
+    <Compile Include="Cenas.cs">
+      <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
     <Compile Include="Cliente.cs">
+      <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cocktail.cs">
+      <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CoffeeBreak.cs">
       <DependentUpon>Modelo.tt</DependentUpon>
     </Compile>
     <Compile Include="Contrato.cs">
@@ -86,6 +95,9 @@
       <DependentUpon>Modelo.tt</DependentUpon>
     </Compile>
     <Compile Include="sysdiagrams.cs">
+      <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TipoAmbientacion.cs">
       <DependentUpon>Modelo.tt</DependentUpon>
     </Compile>
     <Compile Include="TipoEmpresa.cs">
