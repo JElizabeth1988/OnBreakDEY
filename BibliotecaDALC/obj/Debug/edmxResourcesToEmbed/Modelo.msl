@@ -53,14 +53,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="TipoEvento">
-      <EntityTypeMapping TypeName="OnBreakModel.TipoEvento">
-        <MappingFragment StoreEntitySet="TipoEvento">
-          <ScalarProperty Name="IdTipoEvento" ColumnName="IdTipoEvento" />
-          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="ActividadEmpresa">
       <EntityTypeMapping TypeName="OnBreakModel.ActividadEmpresa">
         <MappingFragment StoreEntitySet="ActividadEmpresa">
@@ -105,6 +97,14 @@
         <MappingFragment StoreEntitySet="TipoAmbientacion">
           <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
           <ScalarProperty Name="IdTipoAmbientacion" ColumnName="IdTipoAmbientacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoEvento">
+      <EntityTypeMapping TypeName="OnBreakModel.TipoEvento">
+        <MappingFragment StoreEntitySet="TipoEvento">
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="IdTipoEvento" ColumnName="IdTipoEvento" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

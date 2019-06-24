@@ -31,14 +31,13 @@ namespace BibliotecaDALC
         public DbSet<Cliente> Cliente { get; set; }
         public DbSet<Contrato> Contrato { get; set; }
         public DbSet<ModalidadServicio> ModalidadServicio { get; set; }
-        public DbSet<sysdiagrams> sysdiagrams { get; set; }
         public DbSet<TipoEmpresa> TipoEmpresa { get; set; }
-        public DbSet<TipoEvento> TipoEvento { get; set; }
         public DbSet<ActividadEmpresa> ActividadEmpresa { get; set; }
         public DbSet<Cenas> Cenas { get; set; }
         public DbSet<Cocktail> Cocktail { get; set; }
         public DbSet<CoffeeBreak> CoffeeBreak { get; set; }
         public DbSet<TipoAmbientacion> TipoAmbientacion { get; set; }
+        public DbSet<TipoEvento> TipoEvento { get; set; }
     
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
         {

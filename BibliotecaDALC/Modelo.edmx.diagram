@@ -8,13 +8,10 @@
         <EntityTypeShape EntityType="OnBreakModel.Cliente" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
         <EntityTypeShape EntityType="OnBreakModel.Contrato" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="OnBreakModel.ModalidadServicio" Width="1.5" PointX="3" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="OnBreakModel.sysdiagrams" Width="1.5" PointX="3.25" PointY="5.875" IsExpanded="true" />
         <EntityTypeShape EntityType="OnBreakModel.TipoEmpresa" Width="1.5" PointX="0.75" PointY="6.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="OnBreakModel.TipoEvento" Width="1.5" PointX="0.75" PointY="9.125" IsExpanded="true" />
         <AssociationConnector Association="OnBreakModel.Cliente_TipoEmpresa_FK1" ManuallyRouted="false" />
         <AssociationConnector Association="OnBreakModel.Contrato_Cliente_FK1" ManuallyRouted="false" />
         <AssociationConnector Association="OnBreakModel.Contrato_ModalidadEvento_FK1" ManuallyRouted="false" />
-        <AssociationConnector Association="OnBreakModel.ModalidadServicio_TipoEvento_FK1" ManuallyRouted="false" />
         <EntityTypeShape EntityType="OnBreakModel.ActividadEmpresa" Width="1.5" PointX="0.75" PointY="2.125" />
         <AssociationConnector Association="OnBreakModel.Cliente_ActividadEmpresa_FK1" />
         <EntityTypeShape EntityType="OnBreakModel.Cenas" Width="2.375" PointX="7.875" PointY="4.625" />
@@ -26,6 +23,8 @@
         <AssociationConnector Association="OnBreakModel.Cocktail_TipoAmbientacion_FK1" />
         <AssociationConnector Association="OnBreakModel.Contrato_Cocktail_FK1" />
         <AssociationConnector Association="OnBreakModel.Contrato_CoffeeBreak_FK1" />
+        <EntityTypeShape EntityType="OnBreakModel.TipoEvento" Width="1.5" PointX="0.75" PointY="9.125" />
+        <AssociationConnector Association="OnBreakModel.ModalidadServicio_TipoEvento_FK1" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

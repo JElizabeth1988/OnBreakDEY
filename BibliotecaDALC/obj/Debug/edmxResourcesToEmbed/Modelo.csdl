@@ -50,17 +50,7 @@
     <Property Name="ValorBase" Type="Double" Nullable="false" />
     <Property Name="PersonalBase" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Contrato" Relationship="Self.Contrato_ModalidadEvento_FK1" FromRole="ModalidadServicio" ToRole="Contrato" />
-    <NavigationProperty Name="TipoEvento" Relationship="Self.ModalidadServicio_TipoEvento_FK1" FromRole="ModalidadServicio" ToRole="TipoEvento" />
-  </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="principal_id" Type="Int32" Nullable="false" />
-    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="Int32" />
-    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="TipoEvento" Relationship="OnBreakModel.ModalidadServicio_TipoEvento_FK1" FromRole="ModalidadServicio" ToRole="TipoEvento" />
   </EntityType>
   <EntityType Name="TipoEmpresa">
     <Key>
@@ -69,14 +59,6 @@
     <Property Name="IdTipoEmpresa" Type="Int32" Nullable="false" />
     <Property Name="Descripcion" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="Cliente" Relationship="Self.Cliente_TipoEmpresa_FK1" FromRole="TipoEmpresa" ToRole="Cliente" />
-  </EntityType>
-  <EntityType Name="TipoEvento">
-    <Key>
-      <PropertyRef Name="IdTipoEvento" />
-    </Key>
-    <Property Name="IdTipoEvento" Type="Int32" Nullable="false" />
-    <Property Name="Descripcion" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
-    <NavigationProperty Name="ModalidadServicio" Relationship="Self.ModalidadServicio_TipoEvento_FK1" FromRole="TipoEvento" ToRole="ModalidadServicio" />
   </EntityType>
   <Association Name="Cliente_TipoEmpresa_FK1">
     <End Role="TipoEmpresa" Type="Self.TipoEmpresa" Multiplicity="1" />
@@ -116,25 +98,11 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="ModalidadServicio_TipoEvento_FK1">
-    <End Role="TipoEvento" Type="Self.TipoEvento" Multiplicity="1" />
-    <End Role="ModalidadServicio" Type="Self.ModalidadServicio" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="TipoEvento">
-        <PropertyRef Name="IdTipoEvento" />
-      </Principal>
-      <Dependent Role="ModalidadServicio">
-        <PropertyRef Name="IdTipoEvento" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <EntityContainer Name="OnBreakEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Cliente" EntityType="Self.Cliente" />
     <EntitySet Name="Contrato" EntityType="Self.Contrato" />
     <EntitySet Name="ModalidadServicio" EntityType="Self.ModalidadServicio" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
     <EntitySet Name="TipoEmpresa" EntityType="Self.TipoEmpresa" />
-    <EntitySet Name="TipoEvento" EntityType="Self.TipoEvento" />
     <AssociationSet Name="Cliente_TipoEmpresa_FK1" Association="Self.Cliente_TipoEmpresa_FK1">
       <End Role="TipoEmpresa" EntitySet="TipoEmpresa" />
       <End Role="Cliente" EntitySet="Cliente" />
@@ -146,10 +114,6 @@
     <AssociationSet Name="Contrato_ModalidadEvento_FK1" Association="Self.Contrato_ModalidadEvento_FK1">
       <End Role="ModalidadServicio" EntitySet="ModalidadServicio" />
       <End Role="Contrato" EntitySet="Contrato" />
-    </AssociationSet>
-    <AssociationSet Name="ModalidadServicio_TipoEvento_FK1" Association="Self.ModalidadServicio_TipoEvento_FK1">
-      <End Role="TipoEvento" EntitySet="TipoEvento" />
-      <End Role="ModalidadServicio" EntitySet="ModalidadServicio" />
     </AssociationSet>
     <FunctionImport Name="sp_alterdiagram">
       <Parameter Name="diagramname" Mode="In" Type="String" />
@@ -209,6 +173,11 @@
     <AssociationSet Name="Contrato_CoffeeBreak_FK1" Association="OnBreakModel.Contrato_CoffeeBreak_FK1">
       <End Role="Contrato" EntitySet="Contrato" />
       <End Role="CoffeeBreak" EntitySet="CoffeeBreak" />
+    </AssociationSet>
+    <EntitySet Name="TipoEvento" EntityType="OnBreakModel.TipoEvento" />
+    <AssociationSet Name="ModalidadServicio_TipoEvento_FK1" Association="OnBreakModel.ModalidadServicio_TipoEvento_FK1">
+      <End Role="TipoEvento" EntitySet="TipoEvento" />
+      <End Role="ModalidadServicio" EntitySet="ModalidadServicio" />
     </AssociationSet>
   </EntityContainer>
   <ComplexType Name="sp_helpdiagramdefinition_Result">
@@ -341,6 +310,26 @@
       </Principal>
       <Dependent Role="CoffeeBreak">
         <PropertyRef Name="Numero" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="TipoEvento">
+    <Key>
+      <PropertyRef Name="IdTipoEvento" />
+    </Key>
+    <Property Name="IdTipoEvento" Type="Int32" Nullable="false" />
+    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ModalidadServicio" Relationship="OnBreakModel.ModalidadServicio_TipoEvento_FK1" FromRole="TipoEvento" ToRole="ModalidadServicio" />
+  </EntityType>
+  <Association Name="ModalidadServicio_TipoEvento_FK1">
+    <End Type="OnBreakModel.TipoEvento" Role="TipoEvento" Multiplicity="1" />
+    <End Type="OnBreakModel.ModalidadServicio" Role="ModalidadServicio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoEvento">
+        <PropertyRef Name="IdTipoEvento" />
+      </Principal>
+      <Dependent Role="ModalidadServicio">
+        <PropertyRef Name="IdTipoEvento" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
