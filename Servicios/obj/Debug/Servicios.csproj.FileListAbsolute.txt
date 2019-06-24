@@ -148,3 +148,28 @@ F:\UnBreakable - copia\Servicios\obj\Debug\Servicios.dll
 F:\UnBreakable - copia\Servicios\obj\Debug\Servicios.pdb
 C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\Servicios\obj\Debug\Servicios.csprojResolveAssemblyReference.cache
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\Servicios\obj\Debug\Servicios.csprojResolveAssemblyReference.cache
+C:\Users\yobit\Desktop\Duplicado Onbreak\OnBreak2.0\Servicios\bin\ApplicationInsights.config
+C:\Users\yobit\Desktop\Duplicado Onbreak\OnBreak2.0\Servicios\bin\Servicios.dll.config
+C:\Users\yobit\Desktop\Duplicado Onbreak\OnBreak2.0\Servicios\bin\Servicios.dll
+C:\Users\yobit\Desktop\Duplicado Onbreak\OnBreak2.0\Servicios\bin\Servicios.pdb
+C:\Users\yobit\Desktop\Duplicado Onbreak\OnBreak2.0\Servicios\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\yobit\Desktop\Duplicado Onbreak\OnBreak2.0\Servicios\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\yobit\Desktop\Duplicado Onbreak\OnBreak2.0\Servicios\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\yobit\Desktop\Duplicado Onbreak\OnBreak2.0\Servicios\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\yobit\Desktop\Duplicado Onbreak\OnBreak2.0\Servicios\bin\Microsoft.AI.Web.dll
+C:\Users\yobit\Desktop\Duplicado Onbreak\OnBreak2.0\Servicios\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\yobit\Desktop\Duplicado Onbreak\OnBreak2.0\Servicios\bin\Microsoft.ApplicationInsights.dll
+C:\Users\yobit\Desktop\Duplicado Onbreak\OnBreak2.0\Servicios\bin\Newtonsoft.Json.dll
+C:\Users\yobit\Desktop\Duplicado Onbreak\OnBreak2.0\Servicios\bin\System.Net.Http.Formatting.dll
+C:\Users\yobit\Desktop\Duplicado Onbreak\OnBreak2.0\Servicios\bin\WebApiRestService.WebApiClient.dll
+C:\Users\yobit\Desktop\Duplicado Onbreak\OnBreak2.0\Servicios\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\yobit\Desktop\Duplicado Onbreak\OnBreak2.0\Servicios\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\yobit\Desktop\Duplicado Onbreak\OnBreak2.0\Servicios\bin\Microsoft.AI.Web.xml
+C:\Users\yobit\Desktop\Duplicado Onbreak\OnBreak2.0\Servicios\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\yobit\Desktop\Duplicado Onbreak\OnBreak2.0\Servicios\bin\Microsoft.ApplicationInsights.xml
+C:\Users\yobit\Desktop\Duplicado Onbreak\OnBreak2.0\Servicios\bin\Newtonsoft.Json.xml
+C:\Users\yobit\Desktop\Duplicado Onbreak\OnBreak2.0\Servicios\bin\System.Net.Http.Formatting.xml
+C:\Users\yobit\Desktop\Duplicado Onbreak\OnBreak2.0\Servicios\bin\WebApiRestService.WebApiClient.xml
+C:\Users\yobit\Desktop\Duplicado Onbreak\OnBreak2.0\Servicios\obj\Debug\Servicios.csprojResolveAssemblyReference.cache
+C:\Users\yobit\Desktop\Duplicado Onbreak\OnBreak2.0\Servicios\obj\Debug\Servicios.dll
+C:\Users\yobit\Desktop\Duplicado Onbreak\OnBreak2.0\Servicios\obj\Debug\Servicios.pdb

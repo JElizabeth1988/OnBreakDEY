@@ -78,3 +78,17 @@ F:\UnBreakable\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.csproj.GenerateRe
 F:\UnBreakable\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.dll
 F:\UnBreakable\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.pdb
 C:\Users\yobit\Desktop\Duplicado Onbreak\UnBreakable\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.csprojResolveAssemblyReference.cache
+C:\Users\yobit\Desktop\Duplicado Onbreak\OnBreak2.0\WpfControlLibrary1\bin\Debug\WpfControlLibrary1.dll
+C:\Users\yobit\Desktop\Duplicado Onbreak\OnBreak2.0\WpfControlLibrary1\bin\Debug\WpfControlLibrary1.pdb
+C:\Users\yobit\Desktop\Duplicado Onbreak\OnBreak2.0\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.csprojResolveAssemblyReference.cache
+C:\Users\yobit\Desktop\Duplicado Onbreak\OnBreak2.0\WpfControlLibrary1\obj\Debug\Page1.g.cs
+C:\Users\yobit\Desktop\Duplicado Onbreak\OnBreak2.0\WpfControlLibrary1\obj\Debug\UserControl1.g.cs
+C:\Users\yobit\Desktop\Duplicado Onbreak\OnBreak2.0\WpfControlLibrary1\obj\Debug\WpfControlLibrary1_MarkupCompile.cache
+C:\Users\yobit\Desktop\Duplicado Onbreak\OnBreak2.0\WpfControlLibrary1\obj\Debug\WpfControlLibrary1_MarkupCompile.lref
+C:\Users\yobit\Desktop\Duplicado Onbreak\OnBreak2.0\WpfControlLibrary1\obj\Debug\Page1.baml
+C:\Users\yobit\Desktop\Duplicado Onbreak\OnBreak2.0\WpfControlLibrary1\obj\Debug\UserControl1.baml
+C:\Users\yobit\Desktop\Duplicado Onbreak\OnBreak2.0\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.g.resources
+C:\Users\yobit\Desktop\Duplicado Onbreak\OnBreak2.0\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.Properties.Resources.resources
+C:\Users\yobit\Desktop\Duplicado Onbreak\OnBreak2.0\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.csproj.GenerateResource.Cache
+C:\Users\yobit\Desktop\Duplicado Onbreak\OnBreak2.0\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.dll
+C:\Users\yobit\Desktop\Duplicado Onbreak\OnBreak2.0\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.pdb
