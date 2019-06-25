@@ -16,40 +16,48 @@
     <Grid Background="#FF129DDA" Margin="-6,0,-5.333,0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
+        <Image x:Name="image1" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="701" Margin="0,0,-0.333,-0.333" VerticalAlignment="Top" Width="1315" Source="Imagenes/sparkling-glassware-stands-long-table-prepared-wedding-di_8353-688.jpg" Stretch="Fill"/>
+        <Image x:Name="ingLogo" HorizontalAlignment="Left" Height="338" Margin="493,167,0,0" VerticalAlignment="Top" Width="349" Source="Imagenes/dark_logo_transparent_background.png"/>
 
-        <Controls:Tile Click="Tile_Click" Margin="134,199,0,0" HorizontalAlignment="Left" Height="159" Width="171"  VerticalAlignment="Top"  >
+        <Controls:Tile x:Name="Tile_Cliente" Click="Tile_Click" Margin="133,183,0,0" HorizontalAlignment="Left" Height="179" Width="195"  VerticalAlignment="Top" Background="{x:Null}"  >
             <Grid Width="220">
-                <Image x:Name="imgAdCliente"  Source="Imagenes/Business-Man-Settings 02 copia.png" Margin="-2,0,2,0.667"/>
+                <Image x:Name="imgAdCliente"  Source="Imagenes/agregar-usuario.png" Margin="40,0,40,9.667"/>
             </Grid>
         </Controls:Tile>
 
-        <Image x:Name="ingLogo" HorizontalAlignment="Left" Height="507" Margin="416,113,0,0" VerticalAlignment="Top" Width="889" Source="Imagenes/white_logo_transparent_background.png"/>
 
-        <Controls:Tile Click="Tile_Click_2" Margin="228,405,0,0" HorizontalAlignment="Left" Height="159" Width="171"  VerticalAlignment="Top"  >
+
+        <Controls:Tile x:Name="tile_lis_cliente" Click="Tile_Click_2" Margin="219,453,0,0" HorizontalAlignment="Left" Height="179" Width="195"  VerticalAlignment="Top" Background="{x:Null}"  >
             <Grid Width="220">
-                <Image x:Name="imgListCliente"  Source="Imagenes/LisCliente.png" Margin="0,0,0,-0.333"/>
+                <Image x:Name="imgListCliente"  Source="Imagenes/lista-de-usuarios.png" Margin="34,0,35,-0.667"/>
             </Grid>
         </Controls:Tile>
 
-        <Controls:Tile Click="Tile_Click_4" Margin="1032,199,0,0" HorizontalAlignment="Left" Height="159" Width="171"  VerticalAlignment="Top"  >
-            <Grid Width="220">
-                <Image x:Name="imgAdContrato"  Source="Imagenes/AdmContrato.png" Margin="0,0,0,-0.333"/>
+        <Controls:Tile x:Name="Tile_Contrato" Click="Tile_Click_4" Margin="1017,173,0,0" HorizontalAlignment="Left" Height="179" Width="195"  VerticalAlignment="Top" Background="{x:Null}"  >
+            <Grid Width="136">
+                <Image x:Name="imgAdContrato"  Source="Imagenes/contrato.png" Margin="0,0,0,10"/>
             </Grid>
         </Controls:Tile>
 
-        <Controls:Tile Click="Tile_Click_3" Margin="939,417,0,0" HorizontalAlignment="Left" Height="159" Width="171"  VerticalAlignment="Top"  >
-            <Image x:Name="image" Height="149" Width="199" Source="Imagenes/ListContrato.png"/>
+        <Controls:Tile x:Name="Tile_list_Contrato" Click="Tile_Click_3" Margin="891,453,0,0" HorizontalAlignment="Left" Height="179" Width="195"  VerticalAlignment="Top" Background="{x:Null}"  >
+            <Image x:Name="image" Height="140" Width="140" Source="Imagenes/lista-de-contrato.png"/>
         </Controls:Tile>
 
-        <Label x:Name="label" Content="Bienvenido a OnBreak! &#xD;&#xA;  Escoja una Opción:" HorizontalAlignment="Left" Margin="539,32,0,0" VerticalAlignment="Top" FontSize="26.667" Foreground="White" HorizontalContentAlignment="Center"/>
+        <Label x:Name="label" Content="Bienvenido a OnBreak! &#xD;&#xA;  Escoja una Opción:" HorizontalAlignment="Left" Margin="539,32,0,0" VerticalAlignment="Top" FontSize="26.667" Foreground="#FF194490" HorizontalContentAlignment="Center" Height="81" Width="303" Background="{x:Null}"/>
+        <Label x:Name="label1" Content="Administrar Clientes" HorizontalAlignment="Left" Margin="144,346,0,0" VerticalAlignment="Top" FontSize="18.667" Foreground="#FFFEFEFC" Background="#FF4CDBC4"/>
+        <Label x:Name="label1_Copy" Content="Listado de Clientes" HorizontalAlignment="Left" Margin="225,622,0,0" VerticalAlignment="Top" FontSize="18.667" Foreground="#FFFEFEFC" Background="#FFD37C4B"/>
+        <Label x:Name="label1_Copy1" Content="Listado de Contratos" HorizontalAlignment="Left" Margin="894,622,0,0" VerticalAlignment="Top" FontSize="18.667" Foreground="#FFFEFEFC" Background="#FF9347B2"/>
+        <Label x:Name="label1_Copy2" Content="Administrar Contratos" HorizontalAlignment="Left" Margin="1020,337,0,0" VerticalAlignment="Top" FontSize="18.667" Foreground="#FFFEFEFC" Background="#FFDA6001"/>
 
 
-        
 
 
 
-       
+
+
+
 
     </Grid>
 </Controls:MetroWindow>

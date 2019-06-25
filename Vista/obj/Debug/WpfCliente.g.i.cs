@@ -44,7 +44,7 @@ namespace Vista {
     public partial class WpfCliente : MahApps.Metro.Controls.MetroWindow, System.Windows.Markup.IComponentConnector {
         
         
-        #line 21 "..\..\WpfCliente.xaml"
+        #line 27 "..\..\WpfCliente.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label label;
         
@@ -52,7 +52,7 @@ namespace Vista {
         #line hidden
         
         
-        #line 22 "..\..\WpfCliente.xaml"
+        #line 28 "..\..\WpfCliente.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label label_Copy;
         
@@ -60,7 +60,7 @@ namespace Vista {
         #line hidden
         
         
-        #line 23 "..\..\WpfCliente.xaml"
+        #line 29 "..\..\WpfCliente.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label label_Copy1;
         
@@ -68,7 +68,7 @@ namespace Vista {
         #line hidden
         
         
-        #line 24 "..\..\WpfCliente.xaml"
+        #line 30 "..\..\WpfCliente.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label label_Copy2;
         
@@ -76,7 +76,7 @@ namespace Vista {
         #line hidden
         
         
-        #line 25 "..\..\WpfCliente.xaml"
+        #line 31 "..\..\WpfCliente.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label label_Copy3;
         
@@ -84,7 +84,7 @@ namespace Vista {
         #line hidden
         
         
-        #line 26 "..\..\WpfCliente.xaml"
+        #line 32 "..\..\WpfCliente.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label label_Copy4;
         
@@ -92,7 +92,7 @@ namespace Vista {
         #line hidden
         
         
-        #line 27 "..\..\WpfCliente.xaml"
+        #line 33 "..\..\WpfCliente.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label label_Copy5;
         
@@ -100,7 +100,7 @@ namespace Vista {
         #line hidden
         
         
-        #line 28 "..\..\WpfCliente.xaml"
+        #line 34 "..\..\WpfCliente.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label label_Copy6;
         
@@ -108,7 +108,7 @@ namespace Vista {
         #line hidden
         
         
-        #line 31 "..\..\WpfCliente.xaml"
+        #line 37 "..\..\WpfCliente.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox txtRut;
         
@@ -116,7 +116,7 @@ namespace Vista {
         #line hidden
         
         
-        #line 33 "..\..\WpfCliente.xaml"
+        #line 39 "..\..\WpfCliente.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox txtRazon;
         
@@ -124,7 +124,7 @@ namespace Vista {
         #line hidden
         
         
-        #line 34 "..\..\WpfCliente.xaml"
+        #line 40 "..\..\WpfCliente.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox txtNombre;
         
@@ -132,7 +132,7 @@ namespace Vista {
         #line hidden
         
         
-        #line 35 "..\..\WpfCliente.xaml"
+        #line 41 "..\..\WpfCliente.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox txtEmail;
         
@@ -140,7 +140,7 @@ namespace Vista {
         #line hidden
         
         
-        #line 36 "..\..\WpfCliente.xaml"
+        #line 42 "..\..\WpfCliente.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox txtDireccion;
         
@@ -148,7 +148,7 @@ namespace Vista {
         #line hidden
         
         
-        #line 37 "..\..\WpfCliente.xaml"
+        #line 43 "..\..\WpfCliente.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox txtTelefono;
         
@@ -156,7 +156,7 @@ namespace Vista {
         #line hidden
         
         
-        #line 38 "..\..\WpfCliente.xaml"
+        #line 44 "..\..\WpfCliente.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ComboBox cbActividad;
         
@@ -164,7 +164,7 @@ namespace Vista {
         #line hidden
         
         
-        #line 39 "..\..\WpfCliente.xaml"
+        #line 45 "..\..\WpfCliente.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ComboBox cbTipo;
         
@@ -172,7 +172,7 @@ namespace Vista {
         #line hidden
         
         
-        #line 40 "..\..\WpfCliente.xaml"
+        #line 46 "..\..\WpfCliente.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnGuardar;
         
@@ -180,7 +180,7 @@ namespace Vista {
         #line hidden
         
         
-        #line 41 "..\..\WpfCliente.xaml"
+        #line 47 "..\..\WpfCliente.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnCancelar;
         
@@ -188,7 +188,7 @@ namespace Vista {
         #line hidden
         
         
-        #line 42 "..\..\WpfCliente.xaml"
+        #line 48 "..\..\WpfCliente.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnPregunta;
         
@@ -196,7 +196,7 @@ namespace Vista {
         #line hidden
         
         
-        #line 43 "..\..\WpfCliente.xaml"
+        #line 49 "..\..\WpfCliente.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnBuscar;
         
@@ -204,7 +204,7 @@ namespace Vista {
         #line hidden
         
         
-        #line 44 "..\..\WpfCliente.xaml"
+        #line 50 "..\..\WpfCliente.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnLimpiar;
         
@@ -212,7 +212,7 @@ namespace Vista {
         #line hidden
         
         
-        #line 45 "..\..\WpfCliente.xaml"
+        #line 51 "..\..\WpfCliente.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnModificar;
         
@@ -220,7 +220,7 @@ namespace Vista {
         #line hidden
         
         
-        #line 46 "..\..\WpfCliente.xaml"
+        #line 52 "..\..\WpfCliente.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Image image;
         
@@ -228,7 +228,7 @@ namespace Vista {
         #line hidden
         
         
-        #line 49 "..\..\WpfCliente.xaml"
+        #line 55 "..\..\WpfCliente.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox txtDV;
         
@@ -236,7 +236,7 @@ namespace Vista {
         #line hidden
         
         
-        #line 50 "..\..\WpfCliente.xaml"
+        #line 56 "..\..\WpfCliente.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label label1;
         
@@ -300,7 +300,7 @@ namespace Vista {
             case 9:
             this.txtRut = ((System.Windows.Controls.TextBox)(target));
             
-            #line 31 "..\..\WpfCliente.xaml"
+            #line 37 "..\..\WpfCliente.xaml"
             this.txtRut.LostFocus += new System.Windows.RoutedEventHandler(this.txtRut_LostFocus);
             
             #line default
@@ -330,7 +330,7 @@ namespace Vista {
             case 17:
             this.btnGuardar = ((System.Windows.Controls.Button)(target));
             
-            #line 40 "..\..\WpfCliente.xaml"
+            #line 46 "..\..\WpfCliente.xaml"
             this.btnGuardar.Click += new System.Windows.RoutedEventHandler(this.btnGuardar_Click);
             
             #line default
@@ -339,7 +339,7 @@ namespace Vista {
             case 18:
             this.btnCancelar = ((System.Windows.Controls.Button)(target));
             
-            #line 41 "..\..\WpfCliente.xaml"
+            #line 47 "..\..\WpfCliente.xaml"
             this.btnCancelar.Click += new System.Windows.RoutedEventHandler(this.btnCancelar_Click);
             
             #line default
@@ -348,7 +348,7 @@ namespace Vista {
             case 19:
             this.btnPregunta = ((System.Windows.Controls.Button)(target));
             
-            #line 42 "..\..\WpfCliente.xaml"
+            #line 48 "..\..\WpfCliente.xaml"
             this.btnPregunta.Click += new System.Windows.RoutedEventHandler(this.btnPregunta_Click);
             
             #line default
@@ -357,7 +357,7 @@ namespace Vista {
             case 20:
             this.btnBuscar = ((System.Windows.Controls.Button)(target));
             
-            #line 43 "..\..\WpfCliente.xaml"
+            #line 49 "..\..\WpfCliente.xaml"
             this.btnBuscar.Click += new System.Windows.RoutedEventHandler(this.btnBuscar_Click);
             
             #line default
@@ -366,7 +366,7 @@ namespace Vista {
             case 21:
             this.btnLimpiar = ((System.Windows.Controls.Button)(target));
             
-            #line 44 "..\..\WpfCliente.xaml"
+            #line 50 "..\..\WpfCliente.xaml"
             this.btnLimpiar.Click += new System.Windows.RoutedEventHandler(this.btnLimpiar_Click);
             
             #line default
@@ -375,7 +375,7 @@ namespace Vista {
             case 22:
             this.btnModificar = ((System.Windows.Controls.Button)(target));
             
-            #line 45 "..\..\WpfCliente.xaml"
+            #line 51 "..\..\WpfCliente.xaml"
             this.btnModificar.Click += new System.Windows.RoutedEventHandler(this.btnModificar_Click);
             
             #line default

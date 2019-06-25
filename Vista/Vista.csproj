@@ -196,6 +196,25 @@
   <ItemGroup>
     <Resource Include="Command-Refresh1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\eventos-sociales-2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\agregar-usuario.png" />
+    <Resource Include="Imagenes\coctel2.jpg" />
+    <Resource Include="Imagenes\contrato.png" />
+    <Resource Include="Imagenes\fdi-origen-eventos.jpg" />
+    <Resource Include="Imagenes\lista-de-contrato.png" />
+    <Resource Include="Imagenes\lista-de-usuarios.png" />
+    <Resource Include="Imagenes\people-celebrating-night_23-2147651886.jpg" />
+    <Resource Include="Imagenes\rich-sunlight-outdoor-background-colorful_1304-1506.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\sparkling-glassware-stands-long-table-prepared-wedding-di_8353-688.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\Command-Refresh.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

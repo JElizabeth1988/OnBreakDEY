@@ -44,7 +44,7 @@ namespace Vista {
     public partial class ListarContrato : MahApps.Metro.Controls.MetroWindow, System.Windows.Markup.IComponentConnector {
         
         
-        #line 19 "..\..\WPFListarContrato.xaml"
+        #line 25 "..\..\WPFListarContrato.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnSalir;
         
@@ -52,7 +52,7 @@ namespace Vista {
         #line hidden
         
         
-        #line 20 "..\..\WPFListarContrato.xaml"
+        #line 26 "..\..\WPFListarContrato.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.DataGrid dgvLista;
         
@@ -60,7 +60,7 @@ namespace Vista {
         #line hidden
         
         
-        #line 21 "..\..\WPFListarContrato.xaml"
+        #line 27 "..\..\WPFListarContrato.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.GroupBox gbFiltrar;
         
@@ -68,7 +68,7 @@ namespace Vista {
         #line hidden
         
         
-        #line 23 "..\..\WPFListarContrato.xaml"
+        #line 29 "..\..\WPFListarContrato.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label label;
         
@@ -76,7 +76,7 @@ namespace Vista {
         #line hidden
         
         
-        #line 24 "..\..\WPFListarContrato.xaml"
+        #line 30 "..\..\WPFListarContrato.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label label1;
         
@@ -84,7 +84,7 @@ namespace Vista {
         #line hidden
         
         
-        #line 25 "..\..\WPFListarContrato.xaml"
+        #line 31 "..\..\WPFListarContrato.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label label2;
         
@@ -92,7 +92,7 @@ namespace Vista {
         #line hidden
         
         
-        #line 26 "..\..\WPFListarContrato.xaml"
+        #line 32 "..\..\WPFListarContrato.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox txtfiltroNumero;
         
@@ -100,7 +100,7 @@ namespace Vista {
         #line hidden
         
         
-        #line 27 "..\..\WPFListarContrato.xaml"
+        #line 33 "..\..\WPFListarContrato.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ComboBox cbofilTipoContrato;
         
@@ -108,7 +108,7 @@ namespace Vista {
         #line hidden
         
         
-        #line 28 "..\..\WPFListarContrato.xaml"
+        #line 34 "..\..\WPFListarContrato.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnFiltrarNum;
         
@@ -116,7 +116,7 @@ namespace Vista {
         #line hidden
         
         
-        #line 29 "..\..\WPFListarContrato.xaml"
+        #line 35 "..\..\WPFListarContrato.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnFiltrarRut;
         
@@ -124,7 +124,7 @@ namespace Vista {
         #line hidden
         
         
-        #line 30 "..\..\WPFListarContrato.xaml"
+        #line 36 "..\..\WPFListarContrato.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnFiltrarTipo;
         
@@ -132,7 +132,7 @@ namespace Vista {
         #line hidden
         
         
-        #line 33 "..\..\WPFListarContrato.xaml"
+        #line 39 "..\..\WPFListarContrato.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox txtfiltroRut;
         
@@ -140,7 +140,7 @@ namespace Vista {
         #line hidden
         
         
-        #line 34 "..\..\WPFListarContrato.xaml"
+        #line 40 "..\..\WPFListarContrato.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnPasar;
         
@@ -148,7 +148,7 @@ namespace Vista {
         #line hidden
         
         
-        #line 35 "..\..\WPFListarContrato.xaml"
+        #line 41 "..\..\WPFListarContrato.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button button;
         
@@ -156,7 +156,7 @@ namespace Vista {
         #line hidden
         
         
-        #line 36 "..\..\WPFListarContrato.xaml"
+        #line 42 "..\..\WPFListarContrato.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label label2_Copy;
         
@@ -164,7 +164,7 @@ namespace Vista {
         #line hidden
         
         
-        #line 37 "..\..\WPFListarContrato.xaml"
+        #line 43 "..\..\WPFListarContrato.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ComboBox cbFiltroModalidad;
         
@@ -172,7 +172,7 @@ namespace Vista {
         #line hidden
         
         
-        #line 38 "..\..\WPFListarContrato.xaml"
+        #line 44 "..\..\WPFListarContrato.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnFiltrarModalidad;
         
@@ -180,7 +180,7 @@ namespace Vista {
         #line hidden
         
         
-        #line 39 "..\..\WPFListarContrato.xaml"
+        #line 45 "..\..\WPFListarContrato.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnRefrescar;
         
@@ -220,7 +220,7 @@ namespace Vista {
             case 1:
             this.btnSalir = ((System.Windows.Controls.Button)(target));
             
-            #line 19 "..\..\WPFListarContrato.xaml"
+            #line 25 "..\..\WPFListarContrato.xaml"
             this.btnSalir.Click += new System.Windows.RoutedEventHandler(this.button_Click);
             
             #line default
@@ -250,7 +250,7 @@ namespace Vista {
             case 9:
             this.btnFiltrarNum = ((System.Windows.Controls.Button)(target));
             
-            #line 28 "..\..\WPFListarContrato.xaml"
+            #line 34 "..\..\WPFListarContrato.xaml"
             this.btnFiltrarNum.Click += new System.Windows.RoutedEventHandler(this.btnFiltrar_Click);
             
             #line default
@@ -259,7 +259,7 @@ namespace Vista {
             case 10:
             this.btnFiltrarRut = ((System.Windows.Controls.Button)(target));
             
-            #line 29 "..\..\WPFListarContrato.xaml"
+            #line 35 "..\..\WPFListarContrato.xaml"
             this.btnFiltrarRut.Click += new System.Windows.RoutedEventHandler(this.btnFiltrarRut_Click);
             
             #line default
@@ -268,7 +268,7 @@ namespace Vista {
             case 11:
             this.btnFiltrarTipo = ((System.Windows.Controls.Button)(target));
             
-            #line 30 "..\..\WPFListarContrato.xaml"
+            #line 36 "..\..\WPFListarContrato.xaml"
             this.btnFiltrarTipo.Click += new System.Windows.RoutedEventHandler(this.btnFiltrarTipo_Click);
             
             #line default
@@ -280,7 +280,7 @@ namespace Vista {
             case 13:
             this.btnPasar = ((System.Windows.Controls.Button)(target));
             
-            #line 34 "..\..\WPFListarContrato.xaml"
+            #line 40 "..\..\WPFListarContrato.xaml"
             this.btnPasar.Click += new System.Windows.RoutedEventHandler(this.btnPasar_Click_1);
             
             #line default
@@ -289,7 +289,7 @@ namespace Vista {
             case 14:
             this.button = ((System.Windows.Controls.Button)(target));
             
-            #line 35 "..\..\WPFListarContrato.xaml"
+            #line 41 "..\..\WPFListarContrato.xaml"
             this.button.Click += new System.Windows.RoutedEventHandler(this.button_Click_1);
             
             #line default
@@ -304,7 +304,7 @@ namespace Vista {
             case 17:
             this.btnFiltrarModalidad = ((System.Windows.Controls.Button)(target));
             
-            #line 38 "..\..\WPFListarContrato.xaml"
+            #line 44 "..\..\WPFListarContrato.xaml"
             this.btnFiltrarModalidad.Click += new System.Windows.RoutedEventHandler(this.btnFiltrarModalidad_Click);
             
             #line default
@@ -313,7 +313,7 @@ namespace Vista {
             case 18:
             this.btnRefrescar = ((System.Windows.Controls.Button)(target));
             
-            #line 39 "..\..\WPFListarContrato.xaml"
+            #line 45 "..\..\WPFListarContrato.xaml"
             this.btnRefrescar.Click += new System.Windows.RoutedEventHandler(this.btnRefrescar_Click);
             
             #line default

@@ -44,15 +44,15 @@ namespace Vista {
     public partial class MainWindow : MahApps.Metro.Controls.MetroWindow, System.Windows.Markup.IComponentConnector {
         
         
-        #line 23 "..\..\MainWindow.xaml"
+        #line 21 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Image imgAdCliente;
+        internal System.Windows.Controls.Image image1;
         
         #line default
         #line hidden
         
         
-        #line 27 "..\..\MainWindow.xaml"
+        #line 22 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Image ingLogo;
         
@@ -60,7 +60,31 @@ namespace Vista {
         #line hidden
         
         
-        #line 31 "..\..\MainWindow.xaml"
+        #line 24 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal MahApps.Metro.Controls.Tile Tile_Cliente;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 26 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Image imgAdCliente;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 32 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal MahApps.Metro.Controls.Tile tile_lis_cliente;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 34 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Image imgListCliente;
         
@@ -68,7 +92,15 @@ namespace Vista {
         #line hidden
         
         
-        #line 37 "..\..\MainWindow.xaml"
+        #line 38 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal MahApps.Metro.Controls.Tile Tile_Contrato;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 40 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Image imgAdContrato;
         
@@ -76,9 +108,9 @@ namespace Vista {
         #line hidden
         
         
-        #line 42 "..\..\MainWindow.xaml"
+        #line 44 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Image image;
+        internal MahApps.Metro.Controls.Tile Tile_list_Contrato;
         
         #line default
         #line hidden
@@ -86,7 +118,47 @@ namespace Vista {
         
         #line 45 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Image image;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 48 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label label;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 49 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Label label1;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 50 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Label label1_Copy;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 51 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Label label1_Copy1;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 52 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Label label1_Copy2;
         
         #line default
         #line hidden
@@ -122,54 +194,73 @@ namespace Vista {
             switch (connectionId)
             {
             case 1:
-            
-            #line 21 "..\..\MainWindow.xaml"
-            ((MahApps.Metro.Controls.Tile)(target)).Click += new System.Windows.RoutedEventHandler(this.Tile_Click);
-            
-            #line default
-            #line hidden
+            this.image1 = ((System.Windows.Controls.Image)(target));
             return;
             case 2:
-            this.imgAdCliente = ((System.Windows.Controls.Image)(target));
-            return;
-            case 3:
             this.ingLogo = ((System.Windows.Controls.Image)(target));
             return;
-            case 4:
+            case 3:
+            this.Tile_Cliente = ((MahApps.Metro.Controls.Tile)(target));
             
-            #line 29 "..\..\MainWindow.xaml"
-            ((MahApps.Metro.Controls.Tile)(target)).Click += new System.Windows.RoutedEventHandler(this.Tile_Click_2);
+            #line 24 "..\..\MainWindow.xaml"
+            this.Tile_Cliente.Click += new System.Windows.RoutedEventHandler(this.Tile_Click);
             
             #line default
             #line hidden
+            return;
+            case 4:
+            this.imgAdCliente = ((System.Windows.Controls.Image)(target));
             return;
             case 5:
-            this.imgListCliente = ((System.Windows.Controls.Image)(target));
+            this.tile_lis_cliente = ((MahApps.Metro.Controls.Tile)(target));
+            
+            #line 32 "..\..\MainWindow.xaml"
+            this.tile_lis_cliente.Click += new System.Windows.RoutedEventHandler(this.Tile_Click_2);
+            
+            #line default
+            #line hidden
             return;
             case 6:
-            
-            #line 35 "..\..\MainWindow.xaml"
-            ((MahApps.Metro.Controls.Tile)(target)).Click += new System.Windows.RoutedEventHandler(this.Tile_Click_4);
-            
-            #line default
-            #line hidden
+            this.imgListCliente = ((System.Windows.Controls.Image)(target));
             return;
             case 7:
-            this.imgAdContrato = ((System.Windows.Controls.Image)(target));
-            return;
-            case 8:
+            this.Tile_Contrato = ((MahApps.Metro.Controls.Tile)(target));
             
-            #line 41 "..\..\MainWindow.xaml"
-            ((MahApps.Metro.Controls.Tile)(target)).Click += new System.Windows.RoutedEventHandler(this.Tile_Click_3);
+            #line 38 "..\..\MainWindow.xaml"
+            this.Tile_Contrato.Click += new System.Windows.RoutedEventHandler(this.Tile_Click_4);
             
             #line default
             #line hidden
             return;
+            case 8:
+            this.imgAdContrato = ((System.Windows.Controls.Image)(target));
+            return;
             case 9:
-            this.image = ((System.Windows.Controls.Image)(target));
+            this.Tile_list_Contrato = ((MahApps.Metro.Controls.Tile)(target));
+            
+            #line 44 "..\..\MainWindow.xaml"
+            this.Tile_list_Contrato.Click += new System.Windows.RoutedEventHandler(this.Tile_Click_3);
+            
+            #line default
+            #line hidden
             return;
             case 10:
+            this.image = ((System.Windows.Controls.Image)(target));
+            return;
+            case 11:
             this.label = ((System.Windows.Controls.Label)(target));
+            return;
+            case 12:
+            this.label1 = ((System.Windows.Controls.Label)(target));
+            return;
+            case 13:
+            this.label1_Copy = ((System.Windows.Controls.Label)(target));
+            return;
+            case 14:
+            this.label1_Copy1 = ((System.Windows.Controls.Label)(target));
+            return;
+            case 15:
+            this.label1_Copy2 = ((System.Windows.Controls.Label)(target));
             return;
             }
             this._contentLoaded = true;
