@@ -26,8 +26,23 @@ namespace Vista
     /// </summary>
     public partial class WpfCliente : MetroWindow
     {
-        
 
+        //PatronSingleton
+        //private static WpfCliente _instancia;
+
+
+        //public static WpfCliente ObtenerinstanciaCLI()
+        //{
+        //    if (_instancia == null|| _instancia.IsDiposed)
+        //    {
+        //        _instancia = new WpfCliente();
+        //    }
+        //    //_instancia.bringtoFront();
+        //    return _instancia;
+        //}
+
+
+        //el constructor debe ser pasado a privado en el momento que se usa el patron singleton
         public WpfCliente()
         {
             InitializeComponent();

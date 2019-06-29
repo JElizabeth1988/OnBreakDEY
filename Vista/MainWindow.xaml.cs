@@ -34,7 +34,7 @@ namespace Vista
         //BOTON ADMINISTRACION CLIENTE
         private void Tile_Click(object sender, RoutedEventArgs e)
         {
-            WpfCliente cliente = new WpfCliente();
+            WpfCliente cliente = WpfCliente.Obtenerinstancia();
             cliente.Show();
         }
         
@@ -78,4 +78,5 @@ namespace Vista
 
         }*/
     }
+
 }

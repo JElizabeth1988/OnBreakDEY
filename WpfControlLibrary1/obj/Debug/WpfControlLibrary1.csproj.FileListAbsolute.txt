@@ -106,3 +106,17 @@ C:\Users\chida\Desktop\Duplicado\OnBreakDEY\WpfControlLibrary1\obj\Debug\WpfCont
 C:\Users\chida\Desktop\Duplicado\OnBreakDEY\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.csproj.GenerateResource.Cache
 C:\Users\chida\Desktop\Duplicado\OnBreakDEY\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.dll
 C:\Users\chida\Desktop\Duplicado\OnBreakDEY\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.pdb
+C:\Users\bwd_w\Documents\GitHub\OnBreakDEY\WpfControlLibrary1\bin\Debug\WpfControlLibrary1.dll
+C:\Users\bwd_w\Documents\GitHub\OnBreakDEY\WpfControlLibrary1\bin\Debug\WpfControlLibrary1.pdb
+C:\Users\bwd_w\Documents\GitHub\OnBreakDEY\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.csprojResolveAssemblyReference.cache
+C:\Users\bwd_w\Documents\GitHub\OnBreakDEY\WpfControlLibrary1\obj\Debug\Page1.g.cs
+C:\Users\bwd_w\Documents\GitHub\OnBreakDEY\WpfControlLibrary1\obj\Debug\UserControl1.g.cs
+C:\Users\bwd_w\Documents\GitHub\OnBreakDEY\WpfControlLibrary1\obj\Debug\WpfControlLibrary1_MarkupCompile.cache
+C:\Users\bwd_w\Documents\GitHub\OnBreakDEY\WpfControlLibrary1\obj\Debug\WpfControlLibrary1_MarkupCompile.lref
+C:\Users\bwd_w\Documents\GitHub\OnBreakDEY\WpfControlLibrary1\obj\Debug\Page1.baml
+C:\Users\bwd_w\Documents\GitHub\OnBreakDEY\WpfControlLibrary1\obj\Debug\UserControl1.baml
+C:\Users\bwd_w\Documents\GitHub\OnBreakDEY\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.g.resources
+C:\Users\bwd_w\Documents\GitHub\OnBreakDEY\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.Properties.Resources.resources
+C:\Users\bwd_w\Documents\GitHub\OnBreakDEY\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.csproj.GenerateResource.Cache
+C:\Users\bwd_w\Documents\GitHub\OnBreakDEY\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.dll
+C:\Users\bwd_w\Documents\GitHub\OnBreakDEY\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.pdb

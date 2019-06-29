@@ -28,8 +28,21 @@ namespace Vista
         Crear_Contrato cc;//recibir a crear contrato
         WpfCliente cl;//recibir al Mantenedor de Cliente
 
-        private WpfCliente cli = new WpfCliente();
+        private WpfCliente cli = new WpfCliente(); //.ObtenerinstanciaCLI //para usar el patron singleton
 
+        //private static ListarContrato _instanciarLCR;
+        //public static ListarContrato ObtenerinstanciaLCR()
+        //{
+        //    if (_instanciarLCR == null || _instanciarLCR.isDisposed)
+        //    {
+        //        _instanciarLCR = new ListarContrato();
+        //    }
+        //    _instanciarLCR.bringtofrom();
+        //    return _instanciarLCR;
+        //}
+
+
+        //el constructor debe ser pasado a privado en el momento que se usa el patron singleton
         public ListarContrato()
         {
             InitializeComponent();

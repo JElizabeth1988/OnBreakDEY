@@ -32,7 +32,22 @@ namespace Vista
         ListarContrato lc;//Recibe al ListarContrato
         private ListarContrato listarContrato;
 
+        //private static wpfListadoCliente _instanciaLC;
+        //public static wpfListadoCliente ObtenerinstanciaLC()
+        //{
+        //    if (_instanciaLC == null || _instanciaLC.isDisposed)
+        //    {
+        //        _instanciaLC = new wpfListadoCliente();
+        //    }
+
+        //    _instanciaLC.bringtofront();
+        //    return _instanciaLC;
+        //}
+
+
+        /*-------------------------------------------------------------------------------*/
         //Llamado desde menú principal
+        //el constructor debe ser pasado a privado en el momento que se usa el patron singleton
         public wpfListadoCliente()
         {
             InitializeComponent();
@@ -407,7 +422,7 @@ namespace Vista
 
         private void btnCrear_Click(object sender, RoutedEventArgs e)
         {
-            WpfCliente cliente = new WpfCliente();
+            WpfCliente cliente = new WpfCliente(); /*.Obtenerinstancia*/ //para usar el patron singleton
             cliente.Show();
         }
     }

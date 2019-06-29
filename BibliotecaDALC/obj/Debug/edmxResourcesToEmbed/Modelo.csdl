@@ -152,7 +152,6 @@
     </AssociationSet>
     <EntitySet Name="Cenas" EntityType="OnBreakModel.Cenas" />
     <EntitySet Name="Cocktail" EntityType="OnBreakModel.Cocktail" />
-    <EntitySet Name="CoffeeBreak" EntityType="OnBreakModel.CoffeeBreak" />
     <EntitySet Name="TipoAmbientacion" EntityType="OnBreakModel.TipoAmbientacion" />
     <AssociationSet Name="Cena_TipoAmbientacion_FK1" Association="OnBreakModel.Cena_TipoAmbientacion_FK1">
       <End Role="TipoAmbientacion" EntitySet="TipoAmbientacion" />
@@ -170,14 +169,15 @@
       <End Role="Contrato" EntitySet="Contrato" />
       <End Role="Cocktail" EntitySet="Cocktail" />
     </AssociationSet>
-    <AssociationSet Name="Contrato_CoffeeBreak_FK1" Association="OnBreakModel.Contrato_CoffeeBreak_FK1">
-      <End Role="Contrato" EntitySet="Contrato" />
-      <End Role="CoffeeBreak" EntitySet="CoffeeBreak" />
-    </AssociationSet>
     <EntitySet Name="TipoEvento" EntityType="OnBreakModel.TipoEvento" />
     <AssociationSet Name="ModalidadServicio_TipoEvento_FK1" Association="OnBreakModel.ModalidadServicio_TipoEvento_FK1">
       <End Role="TipoEvento" EntitySet="TipoEvento" />
       <End Role="ModalidadServicio" EntitySet="ModalidadServicio" />
+    </AssociationSet>
+    <EntitySet Name="CoffeeBreak" EntityType="OnBreakModel.CoffeeBreak" />
+    <AssociationSet Name="Contrato_CoffeeBreak_FK1" Association="OnBreakModel.Contrato_CoffeeBreak_FK1">
+      <End Role="Contrato" EntitySet="Contrato" />
+      <End Role="CoffeeBreak" EntitySet="CoffeeBreak" />
     </AssociationSet>
   </EntityContainer>
   <ComplexType Name="sp_helpdiagramdefinition_Result">
@@ -236,14 +236,6 @@
     <NavigationProperty Name="TipoAmbientacion" Relationship="OnBreakModel.Cocktail_TipoAmbientacion_FK1" FromRole="Cocktail" ToRole="TipoAmbientacion" />
     <NavigationProperty Name="Contrato" Relationship="OnBreakModel.Contrato_Cocktail_FK1" FromRole="Cocktail" ToRole="Contrato" />
   </EntityType>
-  <EntityType Name="CoffeeBreak">
-    <Key>
-      <PropertyRef Name="Numero" />
-    </Key>
-    <Property Name="Numero" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="true" />
-    <Property Name="Vegetariana" Type="Boolean" Nullable="false" />
-    <NavigationProperty Name="Contrato" Relationship="OnBreakModel.Contrato_CoffeeBreak_FK1" FromRole="CoffeeBreak" ToRole="Contrato" />
-  </EntityType>
   <EntityType Name="TipoAmbientacion">
     <Key>
       <PropertyRef Name="IdTipoAmbientacion" />
@@ -301,18 +293,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="Contrato_CoffeeBreak_FK1">
-    <End Type="OnBreakModel.Contrato" Role="Contrato" Multiplicity="1" />
-    <End Type="OnBreakModel.CoffeeBreak" Role="CoffeeBreak" Multiplicity="0..1" />
-    <ReferentialConstraint>
-      <Principal Role="Contrato">
-        <PropertyRef Name="Numero" />
-      </Principal>
-      <Dependent Role="CoffeeBreak">
-        <PropertyRef Name="Numero" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <EntityType Name="TipoEvento">
     <Key>
       <PropertyRef Name="IdTipoEvento" />
@@ -330,6 +310,26 @@
       </Principal>
       <Dependent Role="ModalidadServicio">
         <PropertyRef Name="IdTipoEvento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="CoffeeBreak">
+    <Key>
+      <PropertyRef Name="Numero" />
+    </Key>
+    <Property Name="Numero" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Name="Vegetariana" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Contrato" Relationship="OnBreakModel.Contrato_CoffeeBreak_FK1" FromRole="CoffeeBreak" ToRole="Contrato" />
+  </EntityType>
+  <Association Name="Contrato_CoffeeBreak_FK1">
+    <End Type="OnBreakModel.Contrato" Role="Contrato" Multiplicity="1" />
+    <End Type="OnBreakModel.CoffeeBreak" Role="CoffeeBreak" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Contrato">
+        <PropertyRef Name="Numero" />
+      </Principal>
+      <Dependent Role="CoffeeBreak">
+        <PropertyRef Name="Numero" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

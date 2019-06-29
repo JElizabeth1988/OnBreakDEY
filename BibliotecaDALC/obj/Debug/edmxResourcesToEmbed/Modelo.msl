@@ -84,14 +84,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="CoffeeBreak">
-      <EntityTypeMapping TypeName="OnBreakModel.CoffeeBreak">
-        <MappingFragment StoreEntitySet="CoffeeBreak">
-          <ScalarProperty Name="Vegetariana" ColumnName="Vegetariana" />
-          <ScalarProperty Name="Numero" ColumnName="Numero" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="TipoAmbientacion">
       <EntityTypeMapping TypeName="OnBreakModel.TipoAmbientacion">
         <MappingFragment StoreEntitySet="TipoAmbientacion">
@@ -105,6 +97,14 @@
         <MappingFragment StoreEntitySet="TipoEvento">
           <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
           <ScalarProperty Name="IdTipoEvento" ColumnName="IdTipoEvento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CoffeeBreak">
+      <EntityTypeMapping TypeName="OnBreakModel.CoffeeBreak">
+        <MappingFragment StoreEntitySet="CoffeeBreak">
+          <ScalarProperty Name="Vegetariana" ColumnName="Vegetariana" />
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

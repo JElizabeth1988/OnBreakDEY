@@ -16,15 +16,15 @@
         <AssociationConnector Association="OnBreakModel.Cliente_ActividadEmpresa_FK1" />
         <EntityTypeShape EntityType="OnBreakModel.Cenas" Width="2.375" PointX="7.875" PointY="4.625" />
         <EntityTypeShape EntityType="OnBreakModel.Cocktail" Width="1.5" PointX="10.625" PointY="4.75" />
-        <EntityTypeShape EntityType="OnBreakModel.CoffeeBreak" Width="1.5" PointX="7.5" PointY="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="OnBreakModel.TipoAmbientacion" Width="1.5" PointX="5.375" PointY="9" />
         <AssociationConnector Association="OnBreakModel.Cena_TipoAmbientacion_FK1" />
         <AssociationConnector Association="OnBreakModel.Contrato_Cenas_FK1" />
         <AssociationConnector Association="OnBreakModel.Cocktail_TipoAmbientacion_FK1" />
         <AssociationConnector Association="OnBreakModel.Contrato_Cocktail_FK1" />
-        <AssociationConnector Association="OnBreakModel.Contrato_CoffeeBreak_FK1" />
         <EntityTypeShape EntityType="OnBreakModel.TipoEvento" Width="1.5" PointX="0.75" PointY="9.125" />
         <AssociationConnector Association="OnBreakModel.ModalidadServicio_TipoEvento_FK1" />
+        <EntityTypeShape EntityType="OnBreakModel.CoffeeBreak" Width="1.5" PointX="7.5" PointY="1.5" />
+        <AssociationConnector Association="OnBreakModel.Contrato_CoffeeBreak_FK1" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
