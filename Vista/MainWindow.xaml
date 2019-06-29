@@ -15,10 +15,13 @@
 
     <Grid Background="#FF129DDA" Margin="-6,0,-5.333,0">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="905*"/>
+            <ColumnDefinition Width="176*"/>
+            <ColumnDefinition Width="123*"/>
+            <ColumnDefinition Width="109*"/>
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
-        <Image x:Name="image1" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="701" Margin="0,0,-0.333,-0.333" VerticalAlignment="Top" Width="1315" Source="Imagenes/sparkling-glassware-stands-long-table-prepared-wedding-di_8353-688.jpg" Stretch="Fill"/>
+        <Image x:Name="image1" Grid.ColumnSpan="5" HorizontalAlignment="Left" Height="699" Margin="0,0,-73,0" VerticalAlignment="Top" Width="1386" Source="Imagenes/sparkling-glassware-stands-long-table-prepared-wedding-di_8353-688.jpg" Stretch="Fill"/>
         <Image x:Name="ingLogo" HorizontalAlignment="Left" Height="338" Margin="493,167,0,0" VerticalAlignment="Top" Width="349" Source="Imagenes/dark_logo_transparent_background.png"/>
 
         <Controls:Tile x:Name="Tile_Cliente" Click="Tile_Click" Margin="133,183,0,0" HorizontalAlignment="Left" Height="179" Width="195"  VerticalAlignment="Top" Background="{x:Null}"  >
@@ -35,21 +38,21 @@
             </Grid>
         </Controls:Tile>
 
-        <Controls:Tile x:Name="Tile_Contrato" Click="Tile_Click_4" Margin="1017,173,0,0" HorizontalAlignment="Left" Height="179" Width="195"  VerticalAlignment="Top" Background="{x:Null}"  >
+        <Controls:Tile x:Name="Tile_Contrato" Click="Tile_Click_4" Margin="112.113,173,0,0" HorizontalAlignment="Left" Height="179" Width="195"  VerticalAlignment="Top" Background="{x:Null}" Grid.ColumnSpan="3" Grid.Column="1"  >
             <Grid Width="136">
                 <Image x:Name="imgAdContrato"  Source="Imagenes/contrato.png" Margin="0,0,0,10"/>
             </Grid>
         </Controls:Tile>
 
-        <Controls:Tile x:Name="Tile_list_Contrato" Click="Tile_Click_3" Margin="891,453,0,0" HorizontalAlignment="Left" Height="179" Width="195"  VerticalAlignment="Top" Background="{x:Null}"  >
+        <Controls:Tile x:Name="Tile_list_Contrato" Click="Tile_Click_3" Margin="891,453,0,0" HorizontalAlignment="Left" Height="179" Width="195"  VerticalAlignment="Top" Background="{x:Null}" Grid.ColumnSpan="3"  >
             <Image x:Name="image" Height="140" Width="140" Source="Imagenes/lista-de-contrato.png"/>
         </Controls:Tile>
 
         <Label x:Name="label" Content="Bienvenido a OnBreak! &#xD;&#xA;  Escoja una Opción:" HorizontalAlignment="Left" Margin="539,32,0,0" VerticalAlignment="Top" FontSize="26.667" Foreground="#FF194490" HorizontalContentAlignment="Center" Height="81" Width="303" Background="{x:Null}"/>
         <Label x:Name="label1" Content="Administrar Clientes" HorizontalAlignment="Left" Margin="144,346,0,0" VerticalAlignment="Top" FontSize="18.667" Foreground="#FFFEFEFC" Background="#FF4CDBC4"/>
         <Label x:Name="label1_Copy" Content="Listado de Clientes" HorizontalAlignment="Left" Margin="225,622,0,0" VerticalAlignment="Top" FontSize="18.667" Foreground="#FFFEFEFC" Background="#FFD37C4B"/>
-        <Label x:Name="label1_Copy1" Content="Listado de Contratos" HorizontalAlignment="Left" Margin="894,622,0,0" VerticalAlignment="Top" FontSize="18.667" Foreground="#FFFEFEFC" Background="#FF9347B2"/>
-        <Label x:Name="label1_Copy2" Content="Administrar Contratos" HorizontalAlignment="Left" Margin="1020,337,0,0" VerticalAlignment="Top" FontSize="18.667" Foreground="#FFFEFEFC" Background="#FFDA6001"/>
+        <Label x:Name="label1_Copy1" Content="Listado de Contratos" HorizontalAlignment="Left" Margin="894,622,0,0" VerticalAlignment="Top" FontSize="18.667" Foreground="#FFFEFEFC" Background="#FF9347B2" Grid.ColumnSpan="3"/>
+        <Label x:Name="label1_Copy2" Content="Administrar Contratos" HorizontalAlignment="Left" Margin="115.113,337,0,0" VerticalAlignment="Top" FontSize="18.667" Foreground="#FFFEFEFC" Background="#FFDA6001" Grid.ColumnSpan="3" Grid.Column="1"/>
 
 
 
