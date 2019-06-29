@@ -29,7 +29,7 @@ namespace Vista
     {
       
         double uf = new Servicios.Service1().Uf();
-
+        Contrato con = new Contrato();
         public Crear_Contrato()
         {
 
@@ -39,7 +39,25 @@ namespace Vista
             this.cboTipo.SelectedItem = null;
             btnTerminar.Visibility = Visibility.Hidden;
             btnModificar.Visibility = Visibility.Hidden;
+            if (con.FechaHoraTermino>DateTime.Now)
+            {
 
+                //BLOQUEAR EDITAR EL CONTRATO
+                txtNumero.IsEnabled = false;
+                txtBuscarCliente.IsEnabled = false;
+                txtNumero.IsEnabled = false;
+                //Convert.ToDateTime(txtNumero).ToString("dd/MM/yyyy HH:mm")
+                txtNumero.IsEnabled = false;
+                txtBuscarCliente.IsEnabled = false;
+                lblNumero.IsEnabled = false;
+                cbModalidad.IsEnabled = false;
+                cboTipo.IsEnabled = false;
+                txtObservaciones.IsEnabled = false;
+                txtNumeroAsistentes.IsEnabled = false;
+                txtPersonalAdicional.IsEnabled = false;
+                dpFechaInicio1.bloquear();
+                dpFechaTermino.bloquear();
+            }
 
             //LLENAR COMBO BOX TIPO EVENTO
             foreach (TipoEvento item in new TipoEvento().ReadAll())
@@ -113,124 +131,134 @@ namespace Vista
         {
             try
             {
-                if (dpFechaInicio1.recuperar() <= dpFechaTermino.recuperar())
+                if (dpFechaInicio1.recuperar() >= DateTime.Now)
                 {
 
-                    if (dpFechaInicio1.recuperar() < DateTime.Now.AddMonths(10))
+
+                    if (dpFechaInicio1.recuperar() < dpFechaTermino.recuperar())
                     {
 
-                        if (dpFechaTermino.recuperar() < dpFechaInicio1.recuperar().AddHours(24))
+                        if (dpFechaInicio1.recuperar() < DateTime.Now.AddMonths(10))
                         {
 
-
-                            String numero = lblNumero.Content.ToString();
-                            DateTime creacion = fechac;
-                            bool realizado;
-                            DateTime termino;
-                            if (rbSi.IsChecked == true)
-                            {
-                                realizado = false;
-                                termino = dpFechaTermino.recuperarFecha();
-
-                            }
-                            else
-                            {
-                                realizado = true;
-                                termino = dpFechaTermino.recuperarFecha();
-
-                            }
-
-
-                            //EVENTO
-
-                            //inicio
-                            DateTime fechaHoraInicio = dpFechaInicio1.recuperar();
-
-                            DateTime fechaHoraTermino = dpFechaTermino.recuperar();
-
-
-                            //////
-
-                            int asistentes = 0;
-                            if (int.TryParse(txtNumeroAsistentes.Text, out asistentes))
+                            if (dpFechaTermino.recuperar() < dpFechaInicio1.recuperar().AddHours(24))
                             {
 
+
+                                String numero = lblNumero.Content.ToString();
+                                DateTime creacion = fechac;
+                                bool realizado;
+                                DateTime termino;
+                                if (rbSi.IsChecked == true)
+                                {
+                                    realizado = false;
+                                    termino = dpFechaTermino.recuperarFecha();
+
+                                }
+                                else
+                                {
+                                    realizado = true;
+                                    termino = dpFechaTermino.recuperarFecha();
+
+                                }
+
+
+                                //EVENTO
+
+                                //inicio
+                                DateTime fechaHoraInicio = dpFechaInicio1.recuperar();
+
+                                DateTime fechaHoraTermino = dpFechaTermino.recuperar();
+
+
+                                //////
+
+                                int asistentes = 0;
+                                if (int.TryParse(txtNumeroAsistentes.Text, out asistentes))
+                                {
+
+                                }
+                                else
+                                {
+                                    await this.ShowMessageAsync("Mensaje:",
+                                      string.Format("Ingrese sólo números"));
+                                    txtNumeroAsistentes.Focus();
+                                    return;
+                                }
+
+                                int personalAdicional = 0;
+                                if (int.TryParse(txtPersonalAdicional.Text, out personalAdicional))
+                                {
+
+                                }
+                                else
+                                {
+                                    await this.ShowMessageAsync("Mensaje:",
+                                      string.Format("Ingrese sólo números"));
+                                    txtPersonalAdicional.Focus();
+                                    return;
+                                }
+
+                                //CB
+                                int evento = ((comboBoxItem)cboTipo.SelectedItem).id;
+                                string idMod = ((comboBoxItem2)cbModalidad.SelectedItem).id;
+
+                                String observaciones = txtObservaciones.Text;
+                                double valorc = double.Parse(lblTotal.Content.ToString());
+                                String rutCliente = txtBuscarCliente.Text;
+
+                                Contrato con = new Contrato()
+                                {
+
+                                    Numero = numero,
+                                    Creacion = creacion,
+                                    Termino = termino,
+                                    RutCliente = rutCliente,
+                                    IdModalidad = idMod,
+                                    IdTipoEvento = evento,
+                                    FechaHoraInicio = fechaHoraInicio,
+                                    FechaHoraTermino = fechaHoraTermino,
+                                    Asistentes = asistentes,
+                                    PersonalAdicional = personalAdicional,
+                                    Realizado = realizado,
+                                    ValorTotalContrato = calculo(),
+                                    Observaciones = observaciones,
+
+                                };
+
+                                //METODO AGREGAR DEVUELVE BOOLEAN POR ESO SE CREA VARIABLE BOOLEANA resp
+                                bool resp = con.Grabar();
+                                await this.ShowMessageAsync("Mensaje:",
+                                      string.Format(resp ? "Guardado" : "No guardado"));
+                                /*MessageBox.Show(resp ? "Guardado" : "No Guardado");*/
+
                             }
+
                             else
                             {
                                 await this.ShowMessageAsync("Mensaje:",
-                                  string.Format("Ingrese sólo números"));
-                                txtNumeroAsistentes.Focus();
-                                return;
+                               string.Format("Error: Evento no puede durar más de 24 horas"));
                             }
-
-                            int personalAdicional = 0;
-                            if (int.TryParse(txtPersonalAdicional.Text, out personalAdicional))
-                            {
-
-                            }
-                            else
-                            {
-                                await this.ShowMessageAsync("Mensaje:",
-                                  string.Format("Ingrese sólo números"));
-                                txtPersonalAdicional.Focus();
-                                return;
-                            }
-
-                            //CB
-                            int evento = ((comboBoxItem)cboTipo.SelectedItem).id;
-                            string idMod = ((comboBoxItem2)cbModalidad.SelectedItem).id;
-
-                            String observaciones = txtObservaciones.Text;
-                            double valorc = double.Parse(lblTotal.Content.ToString());
-                            String rutCliente = txtBuscarCliente.Text;
-
-                            Contrato con = new Contrato()
-                            {
-
-                                Numero = numero,
-                                Creacion = creacion,
-                                Termino = termino,
-                                RutCliente = rutCliente,
-                                IdModalidad = idMod,
-                                IdTipoEvento = evento,
-                                FechaHoraInicio = fechaHoraInicio,
-                                FechaHoraTermino = fechaHoraTermino,
-                                Asistentes = asistentes,
-                                PersonalAdicional = personalAdicional,
-                                Realizado = realizado,
-                                ValorTotalContrato = calculo(),
-                                Observaciones = observaciones,
-
-                            };
-
-                            //METODO AGREGAR DEVUELVE BOOLEAN POR ESO SE CREA VARIABLE BOOLEANA resp
-                            bool resp = con.Grabar();
-                            await this.ShowMessageAsync("Mensaje:",
-                                  string.Format(resp ? "Guardado" : "No guardado"));
-                            /*MessageBox.Show(resp ? "Guardado" : "No Guardado");*/
 
                         }
-
                         else
                         {
                             await this.ShowMessageAsync("Mensaje:",
-                           string.Format("Error: Evento no puede durar más de 24 horas"));
+                          string.Format("Error: Fecha de Inicio no puede ser mayor a 10 meses desde fecha actual"));
                         }
 
                     }
                     else
                     {
                         await this.ShowMessageAsync("Mensaje:",
-                      string.Format("Error: Fecha de Inicio no puede ser mayor a 10 meses desde fecha actual"));
+                          string.Format("Error: Fecha de Termino es menor a Fecha de Inicio"));
                     }
-                    
                 }
                 else
                 {
                     await this.ShowMessageAsync("Mensaje:",
-                      string.Format("Error: Fecha de Termino es menor a Fecha de Inicio"));
-                }
+                        string.Format("Error: Fecha de inicio menor a fecha actual"));
+                }   
             }
             catch (ArgumentException exa) //catch excepciones hechas por el usuario
             {
@@ -398,9 +426,11 @@ namespace Vista
                 bool buscar = c.Buscar();
                 if (c.Realizado == true)
                 {
+
                     rbSi.IsChecked = false;
                     rbNo.IsChecked = true;
                     //BLOQUEAR EDITAR EL CONTRATO
+                    btnModificar.Visibility = Visibility.Hidden;
                     txtNumero.IsEnabled = false;
                     txtBuscarCliente.IsEnabled = false;
                     txtNumero.IsEnabled = false;
@@ -415,6 +445,7 @@ namespace Vista
                     txtPersonalAdicional.IsEnabled = false;
                     dpFechaInicio1.bloquear();
                     dpFechaTermino.bloquear();
+                  
 
                 }
                 else
@@ -828,7 +859,7 @@ namespace Vista
                     txtPersonalAdicional.IsEnabled = false;
                     dpFechaInicio1.bloquear();
                     dpFechaTermino.bloquear();
-
+                    btnModificar.Visibility = Visibility.Hidden;
                     /*EVENTO
 
                     //inicio
