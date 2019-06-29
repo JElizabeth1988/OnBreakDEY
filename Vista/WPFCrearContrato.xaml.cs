@@ -39,25 +39,7 @@ namespace Vista
             this.cboTipo.SelectedItem = null;
             btnTerminar.Visibility = Visibility.Hidden;
             btnModificar.Visibility = Visibility.Hidden;
-            if (con.FechaHoraTermino>DateTime.Now)
-            {
-
-                //BLOQUEAR EDITAR EL CONTRATO
-                txtNumero.IsEnabled = false;
-                txtBuscarCliente.IsEnabled = false;
-                txtNumero.IsEnabled = false;
-                //Convert.ToDateTime(txtNumero).ToString("dd/MM/yyyy HH:mm")
-                txtNumero.IsEnabled = false;
-                txtBuscarCliente.IsEnabled = false;
-                lblNumero.IsEnabled = false;
-                cbModalidad.IsEnabled = false;
-                cboTipo.IsEnabled = false;
-                txtObservaciones.IsEnabled = false;
-                txtNumeroAsistentes.IsEnabled = false;
-                txtPersonalAdicional.IsEnabled = false;
-                dpFechaInicio1.bloquear();
-                dpFechaTermino.bloquear();
-            }
+           
 
             //LLENAR COMBO BOX TIPO EVENTO
             foreach (TipoEvento item in new TipoEvento().ReadAll())
@@ -424,7 +406,7 @@ namespace Vista
                 Cliente clie = new Cliente();
                 c.Numero = txtNumero.Text;
                 bool buscar = c.Buscar();
-                if (c.Realizado == true)
+                if (c.Realizado == true )
                 {
 
                     rbSi.IsChecked = false;
@@ -450,21 +432,49 @@ namespace Vista
                 }
                 else
                 {
-                    rbSi.IsChecked = true;
-                    rbNo.IsChecked = false;
-                    //BLOQUEAR EDITAR EL CONTRATO
-                    txtNumero.IsEnabled = true;
-                    txtBuscarCliente.IsEnabled = true;
-                    txtNumero.IsEnabled = true;
-                    //Convert.ToDateTime(txtNumero).ToString("dd/MM/yyyy HH:mm")
-                    txtNumero.IsEnabled = true;
-                    txtBuscarCliente.IsEnabled = true;
-                    lblNumero.IsEnabled = true;
-                    cbModalidad.IsEnabled = true;
-                    cboTipo.IsEnabled = true;
-                    txtObservaciones.IsEnabled = true;
-                    txtNumeroAsistentes.IsEnabled = true;
-                    txtPersonalAdicional.IsEnabled = true;
+
+                    if (c.FechaHoraTermino>DateTime.Now)
+                    {
+                        rbSi.IsChecked = false;
+                        rbNo.IsChecked = true;
+                        //BLOQUEAR EDITAR EL CONTRATO
+                        btnModificar.Visibility = Visibility.Hidden;
+                        txtNumero.IsEnabled = false;
+                        txtBuscarCliente.IsEnabled = false;
+                        txtNumero.IsEnabled = false;
+                        //Convert.ToDateTime(txtNumero).ToString("dd/MM/yyyy HH:mm")
+                        txtNumero.IsEnabled = false;
+                        txtBuscarCliente.IsEnabled = false;
+                        lblNumero.IsEnabled = false;
+                        cbModalidad.IsEnabled = false;
+                        cboTipo.IsEnabled = false;
+                        txtObservaciones.IsEnabled = false;
+                        txtNumeroAsistentes.IsEnabled = false;
+                        txtPersonalAdicional.IsEnabled = false;
+                        dpFechaInicio1.bloquear();
+                        dpFechaTermino.bloquear();
+                        bool resp = con.Modificar();
+                    }
+                    else
+                    {
+
+                        rbSi.IsChecked = true;
+                        rbNo.IsChecked = false;
+                        //BLOQUEAR EDITAR EL CONTRATO
+                        txtNumero.IsEnabled = true;
+                        txtBuscarCliente.IsEnabled = true;
+                        txtNumero.IsEnabled = true;
+                        //Convert.ToDateTime(txtNumero).ToString("dd/MM/yyyy HH:mm")
+                        txtNumero.IsEnabled = true;
+                        txtBuscarCliente.IsEnabled = true;
+                        lblNumero.IsEnabled = true;
+                        cbModalidad.IsEnabled = true;
+                        cboTipo.IsEnabled = true;
+                        txtObservaciones.IsEnabled = true;
+                        txtNumeroAsistentes.IsEnabled = true;
+                        txtPersonalAdicional.IsEnabled = true;
+                    }
+
 
                 }
 
