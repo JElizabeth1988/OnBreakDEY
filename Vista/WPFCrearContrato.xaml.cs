@@ -656,7 +656,7 @@ namespace Vista
                 bool buscar = c.Buscar();
                 if (buscar)
                 {
-                    lblNombreCliente.Content = c.NombreContacto;
+                    lblNombreCliente.Content = c.RazonSocial;
                 }
                 else
                 {
