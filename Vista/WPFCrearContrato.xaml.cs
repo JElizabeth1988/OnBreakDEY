@@ -55,6 +55,30 @@ namespace Vista
             btnTerminar.Visibility = Visibility.Hidden;
             btnModificar.Visibility = Visibility.Hidden;
 
+            lbl_vegetariana.Visibility = Visibility.Hidden;
+            chb_vegetariana.Visibility = Visibility.Hidden;
+
+
+            cbAmbientacion.IsEnabled = false;
+
+            lblAmbientacion.Visibility = Visibility.Hidden;
+            chbAmbientación.Visibility = Visibility.Hidden;
+
+            lbl_musicaAmb.Visibility = Visibility.Hidden;
+            chb_musAmbiental.Visibility = Visibility.Hidden;
+
+            lbl_musicacli.Visibility = Visibility.Hidden;
+            chb_musicaCliente.Visibility = Visibility.Hidden;
+
+            lbl_local.Visibility = Visibility.Hidden;
+            chb_local.Visibility = Visibility.Hidden;
+
+            lbl_otro.Visibility = Visibility.Hidden;
+            chb_otro.Visibility = Visibility.Hidden;
+
+            lbl_peso.Visibility = Visibility.Hidden;
+            txt_arriendo.Visibility = Visibility.Hidden;
+
 
             //LLENAR COMBO BOX TIPO EVENTO
             foreach (TipoEvento item in new TipoEvento().ReadAll())
@@ -64,6 +88,16 @@ namespace Vista
                 cb.descripcion = item.Descripcion;
                 cboTipo.Items.Add(cb);
             }
+            //LLENAR COMBO BOX AMBIENTACION
+            foreach (TipoAmbientacion item in new TipoAmbientacion().ReadAll())
+            {
+                comboBoxItem cb = new comboBoxItem();
+                cb.id = item.IdTipoAmbientacion;
+                cb.descripcion = item.Descripcion;
+                cbAmbientacion.Items.Add(cb);
+            }
+
+
 
             //LLENAR CB MODALIDAD SERVICIO
 
@@ -77,7 +111,7 @@ namespace Vista
 
             cboTipo.SelectedIndex = 0;
             cbModalidad.SelectedIndex = 0;
-            
+            cbAmbientacion.SelectedIndex = 0;
             cbModalidad.IsEnabled = false;
 
 
@@ -1039,6 +1073,103 @@ namespace Vista
                 cbModalidad.Items.Add(cb);
             }
             cbModalidad.SelectedIndex = 0;
+
+            //Si es Coffe Break
+            if (contenido.Equals(10))
+            {
+                lbl_vegetariana.Visibility = Visibility.Visible;
+                chb_vegetariana.Visibility = Visibility.Visible;
+
+                //ESCONDER
+                cbAmbientacion.IsEnabled = false;
+                lblAmbientacion.Visibility = Visibility.Hidden;
+                chbAmbientación.Visibility = Visibility.Hidden;
+
+                lbl_musicaAmb.Visibility = Visibility.Hidden;
+                chb_musAmbiental.Visibility = Visibility.Hidden;
+
+                lbl_musicacli.Visibility = Visibility.Hidden;
+                chb_musicaCliente.Visibility = Visibility.Hidden;
+
+                lbl_local.Visibility = Visibility.Hidden;
+                chb_local.Visibility = Visibility.Hidden;
+
+                lbl_otro.Visibility = Visibility.Hidden;
+                chb_otro.Visibility = Visibility.Hidden;
+
+                lbl_peso.Visibility = Visibility.Hidden;
+                txt_arriendo.Visibility = Visibility.Hidden;
+            }
+
+            //Si es Cocktail
+            if (contenido.Equals(20))
+            {
+                lblAmbientacion.Visibility = Visibility.Visible;
+                chbAmbientación.Visibility = Visibility.Visible;
+                if (chbAmbientación.IsChecked==true)
+                {
+
+                    cbAmbientacion.IsEnabled = true;
+                }
+
+
+                lbl_musicaAmb.Visibility = Visibility.Visible;
+                chb_musAmbiental.Visibility = Visibility.Visible;
+
+                lbl_musicacli.Visibility = Visibility.Visible;
+                chb_musicaCliente.Visibility = Visibility.Visible;
+
+                //ESCONDER
+
+                lbl_vegetariana.Visibility = Visibility.Hidden;
+                chb_vegetariana.Visibility = Visibility.Hidden;
+
+                lbl_local.Visibility = Visibility.Hidden;
+                chb_local.Visibility = Visibility.Hidden;
+
+                lbl_otro.Visibility = Visibility.Hidden;
+                chb_otro.Visibility = Visibility.Hidden;
+
+                lbl_peso.Visibility = Visibility.Hidden;
+                txt_arriendo.Visibility = Visibility.Hidden;
+
+
+            }
+
+            //si es Cenas
+            if (contenido.Equals(30))
+            {
+                lbl_musicaAmb.Visibility = Visibility.Visible;
+                chb_musAmbiental.Visibility = Visibility.Visible;
+
+
+                lbl_local.Visibility = Visibility.Visible;
+                chb_local.Visibility = Visibility.Visible;
+
+                lbl_otro.Visibility = Visibility.Visible;
+                chb_otro.Visibility = Visibility.Visible;
+
+                lbl_peso.Visibility = Visibility.Visible;
+                txt_arriendo.Visibility = Visibility.Visible;
+
+
+                cbAmbientacion.IsEnabled = true;
+
+                //ESCONDER
+                lbl_vegetariana.Visibility = Visibility.Hidden;
+                chb_vegetariana.Visibility = Visibility.Hidden;
+
+                lblAmbientacion.Visibility = Visibility.Hidden;
+                chbAmbientación.Visibility = Visibility.Hidden;
+
+                lbl_musicacli.Visibility = Visibility.Hidden;
+                chb_musicaCliente.Visibility = Visibility.Hidden;
+
+
+            }
+          
+
+
         }
 
 
@@ -1089,5 +1220,6 @@ namespace Vista
             }   
 
         }
+
     }
 }
