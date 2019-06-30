@@ -24,6 +24,8 @@ namespace WpfControlLibrary1
         public UserControl1()
         {
             InitializeComponent();
+            txthora.Text= DateTime.Now.Hour.ToString();
+            txtminutos.Text = DateTime.Now.Minute.ToString();
         }
 
         private void btnmenoshora_Click(object sender, RoutedEventArgs e)
