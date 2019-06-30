@@ -256,7 +256,7 @@ namespace Vista
                     else
                     {
                         await this.ShowMessageAsync("Mensaje:",
-                            string.Format("Error: Fecha de inicio menor a fecha actual"));
+                            string.Format("Error: Fecha y hora de inicio menor a fecha y hora actual"));
                     }
                 
                     }
