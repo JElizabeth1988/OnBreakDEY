@@ -143,7 +143,7 @@ namespace Vista
 
                 cbMusica.Items.Add("Ambiental");
                 cbMusica.Items.Add("Cliente");
-  
+                
 
                 //LLENAR COMBO BOX TIPO EVENTO
                 foreach (TipoEvento item in new TipoEvento().ReadAll())
@@ -176,7 +176,7 @@ namespace Vista
 
                 cboTipo.SelectedIndex = 0;
                 cbModalidad.SelectedIndex = 0;
-                cbAmbientacion.SelectedIndex = 0;
+             
             // }
             //Falta timer!!!
             /*if (File.Exists(@"d:\copia.txt"))
