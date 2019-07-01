@@ -174,18 +174,9 @@
     <Resource Include="Imagenes\white_logo_dark_background.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Imagenes\Business-BLACK.png" />
-    <Resource Include="Imagenes\Business-WHITE.png" />
     <Resource Include="Imagenes\dark_logo_transparent_background.png" />
     <Resource Include="Imagenes\logo_transparent_background.png" />
     <Resource Include="Imagenes\white_logo_transparent_background.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Imagenes\AdmContrato.png" />
-    <Resource Include="Imagenes\Beverage-Wine copia.png" />
-    <Resource Include="Imagenes\Business-Man-Settings 02 copia.png" />
-    <Resource Include="Imagenes\LisCliente.png" />
-    <Resource Include="Imagenes\ListContrato.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Imagenes\Media-Start.png" />
@@ -197,23 +188,32 @@
     <Resource Include="Command-Refresh1.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Imagenes\eventos-sociales-2.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Imagenes\agregar-usuario.png" />
-    <Resource Include="Imagenes\coctel2.jpg" />
     <Resource Include="Imagenes\contrato.png" />
-    <Resource Include="Imagenes\fdi-origen-eventos.jpg" />
     <Resource Include="Imagenes\lista-de-contrato.png" />
     <Resource Include="Imagenes\lista-de-usuarios.png" />
-    <Resource Include="Imagenes\people-celebrating-night_23-2147651886.jpg" />
-    <Resource Include="Imagenes\rich-sunlight-outdoor-background-colorful_1304-1506.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Imagenes\sparkling-glassware-stands-long-table-prepared-wedding-di_8353-688.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Imagenes\Command-Refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\1f9cb2d18a9498cad97b4c34f91e4ac8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\9a9327cc81ea7cfd4f7ab7962ccd40f9.jpg" />
+    <Resource Include="Imagenes\dark_logo_white_background.jpg" />
+    <Resource Include="Imagenes\f805a09159706ec43dd1ea2faf4f836b.jpg" />
+    <Resource Include="Imagenes\lista-de-verificacion %281%29.png" />
+    <Resource Include="Imagenes\logo_white_background.jpg" />
+    <Resource Include="Imagenes\PicsArt_06-30-07.11.31.jpg" />
+    <Resource Include="Imagenes\PicsArt_06-30-07.14.19.jpg" />
+    <Resource Include="Imagenes\PicsArt_06-30-07.31.22.jpg" />
+    <Resource Include="Imagenes\portapapeles.png" />
+    <Resource Include="Imagenes\SANTANDER-18.jpg" />
+    <Resource Include="Imagenes\tareas.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

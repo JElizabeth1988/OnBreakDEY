@@ -1221,5 +1221,14 @@ namespace Vista
 
         }
 
+        private void btnRespaldar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnRecuperar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

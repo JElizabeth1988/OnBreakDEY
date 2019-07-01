@@ -10,7 +10,7 @@
                       
         xmlns:local="clr-namespace:Vista"
         mc:Ignorable="d"
-        Title="OnBreak - Lista de Clientes" Height="503.166" Width="573.667" WindowTitleBrush="Black" WindowStyle="ToolWindow" Background="#FF88D7F9" FontWeight="Bold" WindowStartupLocation="CenterScreen" Icon="Imagenes/white_logo_dark_background.jpg" ResizeMode="NoResize">
+        Title="OnBreak - Lista de Clientes" Height="503.166" Width="573.667" WindowTitleBrush="Black" WindowStyle="ToolWindow" Background="#FF88D7F9" FontWeight="Bold" WindowStartupLocation="CenterScreen" Icon="Imagenes/white_logo_dark_background.jpg" ResizeMode="NoResize" TitleCharacterCasing="Normal">
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">

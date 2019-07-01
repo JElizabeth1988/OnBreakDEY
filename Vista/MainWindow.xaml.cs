@@ -31,52 +31,57 @@ namespace Vista
 
         }
 
-        //BOTON ADMINISTRACION CLIENTE
-        private void Tile_Click(object sender, RoutedEventArgs e)
+        //Botón Menú
+        private void Tile_Click_Menu(object sender, RoutedEventArgs e)
         {
-            WpfCliente cliente =new  WpfCliente(); //.Obtenerinstancia
-            cliente.Show();
+            FlyoutMenu.IsOpen = true;
         }
-        
+        //Módulo Cliente
+        private void Tile_Click_cliente(object sender, RoutedEventArgs e)
+        {
+            WpfCliente cliente = new WpfCliente();
+            cliente.Show();
 
-        //boton listar cliente
-        private void Tile_Click_2(object sender, RoutedEventArgs e)
+        }
+        //Listar Cliente
+        private void Tile_Click_L_cliente(object sender, RoutedEventArgs e)
         {
             wpfListadoCliente listCliente = new wpfListadoCliente();
             listCliente.Show();
-        }
-        //boton administracion contrato
-        private void Tile_Click_4(object sender, RoutedEventArgs e)
-        {
 
+        }
+        //Módulo Contrato
+        private void Tile_Click_Contrato(object sender, RoutedEventArgs e)
+        {
             Crear_Contrato contrato = new Crear_Contrato();
             contrato.Show();
+
         }
-        //boton listar contrato
-        private void Tile_Click_3(object sender, RoutedEventArgs e)
+        //Listado de Contratos
+        private void Tile_Click_L_Contrato(object sender, RoutedEventArgs e)
         {
             ListarContrato listContrato = new ListarContrato();
             listContrato.Show();
         }
 
 
-       /* private async void Tile_Click_6(object sender, RoutedEventArgs e)
-        {
-            var x =
-            await this.ShowMessageAsync("Advertencia", "¿Desea cerrar sesión?", 
-                    MessageDialogStyle.AffirmativeAndNegative);
-            if (x == MessageDialogResult.Affirmative)
-            {
-                Login log = new Login();
-                this.Close();
-                log.ShowDialog();
-            }
-            else
-            {
-                
-            }
+        /* private async void Tile_Click_6(object sender, RoutedEventArgs e)
+         {
+             var x =
+             await this.ShowMessageAsync("Advertencia", "¿Desea cerrar sesión?", 
+                     MessageDialogStyle.AffirmativeAndNegative);
+             if (x == MessageDialogResult.Affirmative)
+             {
+                 Login log = new Login();
+                 this.Close();
+                 log.ShowDialog();
+             }
+             else
+             {
 
-        }*/
+             }
+
+         }*/
     }
 
 }
