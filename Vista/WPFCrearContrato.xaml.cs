@@ -12,6 +12,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+using System.Runtime.Caching;//para crear caché
+using System.Xml.Serialization;//serializar objetos
+using System.IO;//Entrada y salida de información
+
 using BibliotecaNegocio;
 
 using MahApps.Metro.Controls;
@@ -27,7 +31,7 @@ namespace Vista
     /// </summary>
     public partial class Crear_Contrato : MetroWindow
     {
-                //PatronSingleton
+        //PatronSingleton
 
         //private static Crear_Contrato _instanciaCr;
         //public static Crear_Contrato ObtenerinstanciaCr()
@@ -40,143 +44,162 @@ namespace Vista
         //    return _instanciaCr;
         //}
 
+        //Objeto que almacena los valores de caché
+        private ObjectCache cacheName = MemoryCache.Default;
 
 
-      
         double uf = new Servicios.Service1().Uf();
         //el constructor debe ser pasado a privado en el momento que se usa el patron singleton
         public Crear_Contrato()
         {
+            // if (!IsPostBack)
+            //{
 
-            InitializeComponent();
+                InitializeComponent();
 
 
-            //PENDIENTE
-            Contrato con = new Contrato();
+                //PENDIENTE
+                Contrato con = new Contrato();
 
-            foreach (Contrato item in new Contrato().ReadAll())
-            {
-                if (con.FechaHoraTermino >= DateTime.Now)
+                foreach (Contrato item in new Contrato().ReadAll())
                 {
-
-                    //MÉTODO TERMINAR
-                    String numero = lblNumero.Content.ToString();
-                    DateTime creacion = fechac;
-                    bool realizado = true;
-                    DateTime termino = DateTime.Now;
-
-
-                    //EVENTO
-
-                    //inicio
-                    DateTime fechaHoraInicio = dpFechaInicio1.recuperar();
-
-                    //termino
-                    DateTime fechaFinTermino = dpFechaTermino.recuperar();
-
-
-                    //////
-                    int asistentes = int.Parse(txtNumeroAsistentes.Text);
-                    int personalAdicional = int.Parse(txtPersonalAdicional.Text);
-
-                    int evento = ((comboBoxItem)cboTipo.SelectedItem).id;
-                    string idMod = ((comboBoxItem2)cbModalidad.SelectedItem).id;
-
-                    String observaciones = txtObservaciones.Text;
-                    double valorc = double.Parse(lblTotal.Content.ToString());
-                    String rutCliente = txtBuscarCliente.Text;
-
-                    Contrato con_mod = new Contrato()
+                    if (con.FechaHoraTermino >= DateTime.Now)
                     {
 
-
-                        Numero = numero,
-                        Creacion = creacion,
-                        Termino = termino,
-                        RutCliente = rutCliente,
-                        IdModalidad = idMod,
-                        IdTipoEvento = evento,
-                        FechaHoraInicio = fechaHoraInicio,
-                        FechaHoraTermino = fechaFinTermino,
-                        Asistentes = asistentes,
-                        PersonalAdicional = personalAdicional,
-                        Realizado = realizado,
-                        ValorTotalContrato = valorc,
-                        Observaciones = observaciones,
-                    };
+                        //MÉTODO TERMINAR
+                        String numero = lblNumero.Content.ToString();
+                        DateTime creacion = fechac;
+                        bool realizado = true;
+                        DateTime termino = DateTime.Now;
 
 
-                    //METODO AGREGAR DEVUELVE BOOLEAN POR ESO SE CREA VARIABLE BOOLEANA resp
-                    bool resp = con_mod.Modificar();
+                        //EVENTO
+
+                        //inicio
+                        DateTime fechaHoraInicio = dpFechaInicio1.recuperar();
+
+                        //termino
+                        DateTime fechaFinTermino = dpFechaTermino.recuperar();
+
+
+                        //////
+                        int asistentes = int.Parse(txtNumeroAsistentes.Text);
+                        int personalAdicional = int.Parse(txtPersonalAdicional.Text);
+
+                        int evento = ((comboBoxItem)cboTipo.SelectedItem).id;
+                        string idMod = ((comboBoxItem2)cbModalidad.SelectedItem).id;
+
+                        String observaciones = txtObservaciones.Text;
+                        double valorc = double.Parse(lblTotal.Content.ToString());
+                        String rutCliente = txtBuscarCliente.Text;
+
+                        Contrato con_mod = new Contrato()
+                        {
+
+
+                            Numero = numero,
+                            Creacion = creacion,
+                            Termino = termino,
+                            RutCliente = rutCliente,
+                            IdModalidad = idMod,
+                            IdTipoEvento = evento,
+                            FechaHoraInicio = fechaHoraInicio,
+                            FechaHoraTermino = fechaFinTermino,
+                            Asistentes = asistentes,
+                            PersonalAdicional = personalAdicional,
+                            Realizado = realizado,
+                            ValorTotalContrato = valorc,
+                            Observaciones = observaciones,
+                        };
+
+
+                        //METODO AGREGAR DEVUELVE BOOLEAN POR ESO SE CREA VARIABLE BOOLEANA resp
+                        bool resp = con_mod.Modificar();
+                    }
+
                 }
 
-            }
-
           
-            lblNumero.Content = DateTime.Now.ToString("yyyyMMddHHmm");
-            lblUf.Content = "$" + uf;
-            this.cboTipo.SelectedItem = null;
-            btnTerminar.Visibility = Visibility.Hidden;
-            btnModificar.Visibility = Visibility.Hidden;
+                lblNumero.Content = DateTime.Now.ToString("yyyyMMddHHmm");
+                lblUf.Content = "$" + uf;
+                this.cboTipo.SelectedItem = null;
+                btnTerminar.Visibility = Visibility.Hidden;
+                btnModificar.Visibility = Visibility.Hidden;
 
-            lbl_vegetariana.Visibility = Visibility.Hidden;
-            chb_vegetariana.Visibility = Visibility.Hidden;
-
-
-            cbAmbientacion.IsEnabled = false;
-
-            lblAmbientacion.Visibility = Visibility.Hidden;
-            chbAmbientación.Visibility = Visibility.Hidden;
-
-            lbl_musicaAmb.Visibility = Visibility.Hidden;
-            chb_musAmbiental.Visibility = Visibility.Hidden;
-
-            lbl_musicacli.Visibility = Visibility.Hidden;
-            chb_musicaCliente.Visibility = Visibility.Hidden;
-
-            lbl_local.Visibility = Visibility.Hidden;
-            chb_local.Visibility = Visibility.Hidden;
-
-            lbl_otro.Visibility = Visibility.Hidden;
-            chb_otro.Visibility = Visibility.Hidden;
-
-            lbl_peso.Visibility = Visibility.Hidden;
-            txt_arriendo.Visibility = Visibility.Hidden;
+                lbl_vegetariana.Visibility = Visibility.Hidden;
+                chb_vegetariana.Visibility = Visibility.Hidden;
 
 
-            //LLENAR COMBO BOX TIPO EVENTO
-            foreach (TipoEvento item in new TipoEvento().ReadAll())
-            {
-                comboBoxItem cb = new comboBoxItem();
-                cb.id = item.Id;
-                cb.descripcion = item.Descripcion;
-                cboTipo.Items.Add(cb);
-            }
-            //LLENAR COMBO BOX AMBIENTACION
-            foreach (TipoAmbientacion item in new TipoAmbientacion().ReadAll())
-            {
-                comboBoxItem cb = new comboBoxItem();
-                cb.id = item.IdTipoAmbientacion;
-                cb.descripcion = item.Descripcion;
-                cbAmbientacion.Items.Add(cb);
-            }
+                cbAmbientacion.IsEnabled = false;
+
+                lblAmbientacion.Visibility = Visibility.Hidden;
+                chbAmbientación.Visibility = Visibility.Hidden;
+
+                lbl_musicaAmb.Visibility = Visibility.Hidden;
+                chb_musAmbiental.Visibility = Visibility.Hidden;
+
+                lbl_musicacli.Visibility = Visibility.Hidden;
+                chb_musicaCliente.Visibility = Visibility.Hidden;
+
+                lbl_local.Visibility = Visibility.Hidden;
+                chb_local.Visibility = Visibility.Hidden;
+
+                lbl_otro.Visibility = Visibility.Hidden;
+                chb_otro.Visibility = Visibility.Hidden;
+
+                lbl_peso.Visibility = Visibility.Hidden;
+                txt_arriendo.Visibility = Visibility.Hidden;
+
+
+                //LLENAR COMBO BOX TIPO EVENTO
+                foreach (TipoEvento item in new TipoEvento().ReadAll())
+                {
+                    comboBoxItem cb = new comboBoxItem();
+                    cb.id = item.Id;
+                    cb.descripcion = item.Descripcion;
+                    cboTipo.Items.Add(cb);
+                }
+                //LLENAR COMBO BOX AMBIENTACION
+                foreach (TipoAmbientacion item in new TipoAmbientacion().ReadAll())
+                {
+                    comboBoxItem cb = new comboBoxItem();
+                    cb.id = item.IdTipoAmbientacion;
+                    cb.descripcion = item.Descripcion;
+                    cbAmbientacion.Items.Add(cb);
+                }
 
 
 
-            //LLENAR CB MODALIDAD SERVICIO
+                //LLENAR CB MODALIDAD SERVICIO
 
-            foreach (ModalidadServicio item in new ModalidadServicio().ReadAll())
-            {
-                comboBoxItem2 cb = new comboBoxItem2();
-                cb.id = item.Id;
-                cb.descripcion = item.Nombre;
-                cbModalidad.Items.Add(cb);
-            }
+                foreach (ModalidadServicio item in new ModalidadServicio().ReadAll())
+                {
+                    comboBoxItem2 cb = new comboBoxItem2();
+                    cb.id = item.Id;
+                    cb.descripcion = item.Nombre;
+                    cbModalidad.Items.Add(cb);
+                }
 
-            cboTipo.SelectedIndex = 0;
-            cbModalidad.SelectedIndex = 0;
-            cbAmbientacion.SelectedIndex = 0;
+                cboTipo.SelectedIndex = 0;
+                cbModalidad.SelectedIndex = 0;
+                cbAmbientacion.SelectedIndex = 0;
+            // }
+            //Falta timer!!!
+            /*if (File.Exists(@"d:\copia.txt"))
+             {
 
+                 lblMensasje.Text = "Existe copia previa";
+                 Timer1.Enabled = false;
+                 XmlSerializer se = new XmlSerializer(typeof(ClPersona));
+                 StringReader lector = new StringReader();
+                 ClPersona p = (ClPersona)se.Deserialize(lector);
+                 txtRut.Text = p.Rut;
+                 txtNombre.Text = p.Nombre;
+                 txtApellido.Text = p.Apellido;
+                 txtEdad.Text = p.Edad.ToString();
+                 cboEstadoCivil.Text = p.EstadoCivil;
+
+             }*/
 
         }
 
@@ -1293,14 +1316,164 @@ namespace Vista
 
         }
 
-        private void btnRespaldar_Click(object sender, RoutedEventArgs e)
+        protected void btnRespaldar_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                lblMensasje.Visibility = Visibility.Visible;
+                String numero = lblNumero.Content.ToString();
+                DateTime creacion = fechac;
+                bool realizado;
+                DateTime termino;
+                if (rbSi.IsChecked == true)
+                {
+                    realizado = false;
+                    termino = dpFechaTermino.recuperarFecha();
+
+                }
+                else
+                {
+                    realizado = true;
+                    termino = dpFechaTermino.recuperarFecha();
+
+                }
+
+
+                //EVENTO
+
+                //inicio
+                DateTime fechaHoraInicio = dpFechaInicio1.recuperar();
+
+                DateTime fechaHoraTermino = dpFechaTermino.recuperar();
+
+
+                //////
+                int asistentes = int.Parse(txtNumeroAsistentes.Text);
+                /*int asistentes = 0;
+                if (int.TryParse(txtNumeroAsistentes.Text, out asistentes))
+                {
+
+                }
+                else
+                {
+                    await this.ShowMessageAsync("Mensaje:",
+                      string.Format("Ingrese sólo números"));
+                    txtNumeroAsistentes.Focus();
+                    return;
+                }*/
+                int personalAdicional = int.Parse(txtPersonalAdicional.Text);
+                /*int personalAdicional = 0;
+                if (int.TryParse(txtPersonalAdicional.Text, out personalAdicional))
+                {
+
+                }
+                else
+                {
+                    await this.ShowMessageAsync("Mensaje:",
+                      string.Format("Ingrese sólo números"));
+                    txtPersonalAdicional.Focus();
+                    return;
+                }*/
+
+                //CB
+                int evento = ((comboBoxItem)cboTipo.SelectedItem).id;
+                string idMod = ((comboBoxItem2)cbModalidad.SelectedItem).id;
+
+                String observaciones = txtObservaciones.Text;
+                double valorc = double.Parse(lblTotal.Content.ToString());
+                String rutCliente = txtBuscarCliente.Text;
+
+                Contrato con = new Contrato()
+                {
+
+                    Numero = numero,
+                    Creacion = creacion,
+                    Termino = termino,
+                    RutCliente = rutCliente,
+                    IdModalidad = idMod,
+                    IdTipoEvento = evento,
+                    FechaHoraInicio = fechaHoraInicio,
+                    FechaHoraTermino = fechaHoraTermino,
+                    Asistentes = asistentes,
+                    PersonalAdicional = personalAdicional,
+                    Realizado = realizado,
+                    ValorTotalContrato = calculo(),
+                    Observaciones = observaciones,
+
+                };
+
+                CacheItemPolicy politica = new CacheItemPolicy();
+                politica.Priority = CacheItemPriority.Default;
+                politica.AbsoluteExpiration = DateTimeOffset.Now.AddMinutes(5);//cada 5 minutos borra la politica (el cache)
+                cacheName.Set("Contrato", con, politica);
+                lblMensasje.Visibility = Visibility.Visible;
+                lblMensasje.Content = "Almacenado en Cache";
+
+            }
+            catch (Exception ex)
+            {
+                // lblMensasje.Content = ex.Message;
+                lblMensasje.Content = "No Guardado";
+
+            }
+
 
         }
 
-        private void btnRecuperar_Click(object sender, RoutedEventArgs e)
+        protected void btnRecuperar_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                lblMensasje.Visibility = Visibility.Visible;
+                Contrato c = cacheName["Contrato"] as Contrato;
+                lblNumero.Content = c.Numero;
+                txtNumero.Text = c.Numero;
+                txtBuscarCliente.Text = c.RutCliente;
+                dpFechaInicio1.datos(c.FechaHoraInicio);
+                dpFechaTermino.datos(c.FechaHoraTermino);
+                dpFechaInicio1.datos(c.FechaHoraInicio);
+                dpFechaTermino.datos(c.FechaHoraTermino);
+                txtNumeroAsistentes.Text = c.Asistentes.ToString();
+                txtPersonalAdicional.Text = c.PersonalAdicional.ToString();
+                TipoEvento tip = new TipoEvento();
+                tip.Id = c.IdTipoEvento;
+                tip.Read();
+                cboTipo.Text = tip.Descripcion;//Cambiar a descripción
+
+                //PASAR nombre modalidad no id
+                ModalidadServicio mod = new ModalidadServicio();
+                mod.Id = c.IdModalidad;
+                mod.Read();
+                cbModalidad.Text = mod.Nombre;//Cambiar a descripción
+
+                // cbModalidad.Text = c.IdModalidad;
+                txtObservaciones.Text = c.Observaciones;
+
+                lblNombreCliente.Visibility = Visibility.Visible;//aparecer label
+                lblTotal.Content = calculo();
+
+
+                Cliente clie = new Cliente();
+                lblNombreCliente.Content = clie.RazonSocial;
+
+                lblMensasje.Content = "Cache Recuperado";
+
+            }
+            catch (Exception ex)
+            {
+                lblMensasje.Content = "Error al Cargar el cache";
+
+            }
 
         }
+
+        protected void btnLimpiarCache_Click(object sender, RoutedEventArgs e)
+        {
+            lblMensasje.Visibility = Visibility.Visible;
+            cacheName.Remove("Contrato", null);
+            lblMensasje.Content = "Eliminó cache";
+        }
+
+    }
     }
 }
