@@ -56,10 +56,10 @@ namespace Vista
             //{
 
                 InitializeComponent();
+           
 
-
-                //PENDIENTE
-                Contrato con = new Contrato();
+            //PENDIENTE
+            Contrato con = new Contrato();
 
                 foreach (Contrato item in new Contrato().ReadAll())
                 {
@@ -126,30 +126,24 @@ namespace Vista
                 btnTerminar.Visibility = Visibility.Hidden;
                 btnModificar.Visibility = Visibility.Hidden;
 
-                lbl_vegetariana.Visibility = Visibility.Hidden;
-                chb_vegetariana.Visibility = Visibility.Hidden;
-
-
+                cbVegetariana.IsEnabled = false;
                 cbAmbientacion.IsEnabled = false;
+                cbLocal.IsEnabled = false;
+                cbMusica.IsEnabled = false;
+                lbl_Arriendo.Visibility = Visibility.Hidden;
+                txtArriendo.Visibility = Visibility.Hidden;
 
-                lblAmbientacion.Visibility = Visibility.Hidden;
-                chbAmbientación.Visibility = Visibility.Hidden;
+                cbVegetariana.Items.Add("Si");
+                cbVegetariana.Items.Add("No");
+                
 
-                lbl_musicaAmb.Visibility = Visibility.Hidden;
-                chb_musAmbiental.Visibility = Visibility.Hidden;
+                cbLocal.Items.Add("OnBreak");
+                cbLocal.Items.Add("Otro");
+               
 
-                lbl_musicacli.Visibility = Visibility.Hidden;
-                chb_musicaCliente.Visibility = Visibility.Hidden;
-
-                lbl_local.Visibility = Visibility.Hidden;
-                chb_local.Visibility = Visibility.Hidden;
-
-                lbl_otro.Visibility = Visibility.Hidden;
-                chb_otro.Visibility = Visibility.Hidden;
-
-                lbl_peso.Visibility = Visibility.Hidden;
-                txt_arriendo.Visibility = Visibility.Hidden;
-
+                cbMusica.Items.Add("Ambiental");
+                cbMusica.Items.Add("Cliente");
+  
 
                 //LLENAR COMBO BOX TIPO EVENTO
                 foreach (TipoEvento item in new TipoEvento().ReadAll())
@@ -1172,93 +1166,40 @@ namespace Vista
             //Si es Coffe Break
             if (contenido.Equals(10))
             {
-                lbl_vegetariana.Visibility = Visibility.Visible;
-                chb_vegetariana.Visibility = Visibility.Visible;
-
-                //ESCONDER
+                cbVegetariana.IsEnabled = true;
                 cbAmbientacion.IsEnabled = false;
-                lblAmbientacion.Visibility = Visibility.Hidden;
-                chbAmbientación.Visibility = Visibility.Hidden;
-
-                lbl_musicaAmb.Visibility = Visibility.Hidden;
-                chb_musAmbiental.Visibility = Visibility.Hidden;
-
-                lbl_musicacli.Visibility = Visibility.Hidden;
-                chb_musicaCliente.Visibility = Visibility.Hidden;
-
-                lbl_local.Visibility = Visibility.Hidden;
-                chb_local.Visibility = Visibility.Hidden;
-
-                lbl_otro.Visibility = Visibility.Hidden;
-                chb_otro.Visibility = Visibility.Hidden;
-
-                lbl_peso.Visibility = Visibility.Hidden;
-                txt_arriendo.Visibility = Visibility.Hidden;
+                cbLocal.IsEnabled = false;
+                cbMusica.IsEnabled = false;
             }
 
             //Si es Cocktail
             if (contenido.Equals(20))
             {
-                lblAmbientacion.Visibility = Visibility.Visible;
-                chbAmbientación.Visibility = Visibility.Visible;
-                if (chbAmbientación.IsChecked==true)
-                {
+                cbAmbientacion.IsEnabled = true;
+                cbMusica.IsEnabled = true;
 
-                    cbAmbientacion.IsEnabled = true;
-                }
-
-
-                lbl_musicaAmb.Visibility = Visibility.Visible;
-                chb_musAmbiental.Visibility = Visibility.Visible;
-
-                lbl_musicacli.Visibility = Visibility.Visible;
-                chb_musicaCliente.Visibility = Visibility.Visible;
-
-                //ESCONDER
-
-                lbl_vegetariana.Visibility = Visibility.Hidden;
-                chb_vegetariana.Visibility = Visibility.Hidden;
-
-                lbl_local.Visibility = Visibility.Hidden;
-                chb_local.Visibility = Visibility.Hidden;
-
-                lbl_otro.Visibility = Visibility.Hidden;
-                chb_otro.Visibility = Visibility.Hidden;
-
-                lbl_peso.Visibility = Visibility.Hidden;
-                txt_arriendo.Visibility = Visibility.Hidden;
-
+                cbVegetariana.IsEnabled = false;
+                cbLocal.IsEnabled = false;
 
             }
 
             //si es Cenas
             if (contenido.Equals(30))
             {
-                lbl_musicaAmb.Visibility = Visibility.Visible;
-                chb_musAmbiental.Visibility = Visibility.Visible;
-
-
-                lbl_local.Visibility = Visibility.Visible;
-                chb_local.Visibility = Visibility.Visible;
-
-                lbl_otro.Visibility = Visibility.Visible;
-                chb_otro.Visibility = Visibility.Visible;
-
-                lbl_peso.Visibility = Visibility.Visible;
-                txt_arriendo.Visibility = Visibility.Visible;
 
 
                 cbAmbientacion.IsEnabled = true;
+                cbMusica.IsEnabled = true;
+                cbLocal.IsEnabled = true;
 
-                //ESCONDER
-                lbl_vegetariana.Visibility = Visibility.Hidden;
-                chb_vegetariana.Visibility = Visibility.Hidden;
+                if (cbLocal.Items.Equals("Otro"))
+                {
+                    lbl_Arriendo.Visibility = Visibility.Visible;
+                    txtArriendo.Visibility = Visibility.Visible;
+                }
 
-                lblAmbientacion.Visibility = Visibility.Hidden;
-                chbAmbientación.Visibility = Visibility.Hidden;
-
-                lbl_musicacli.Visibility = Visibility.Hidden;
-                chb_musicaCliente.Visibility = Visibility.Hidden;
+                cbVegetariana.IsEnabled = false;
+            
 
 
             }
@@ -1475,5 +1416,5 @@ namespace Vista
         }
 
     }
-    }
+    
 }
