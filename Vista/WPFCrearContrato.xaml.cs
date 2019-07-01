@@ -457,6 +457,7 @@ namespace Vista
                 Contrato c = new Contrato();
                 Cliente clie = new Cliente();
                 c.Numero = txtNumero.Text;
+                lblNombreCliente.Visibility = Visibility.Visible;//aparecer label
                 bool buscar = c.Buscar();
                 if (c.Realizado == true)
                 {
@@ -545,7 +546,11 @@ namespace Vista
                     btnCrear.Visibility = Visibility.Hidden;//Desaparece el btn crear
                     
                     
-                    lblNombreCliente.Content = clie.NombreContacto;
+                    lblNombreCliente.Content = clie.RazonSocial;
+                    
+                    
+                    
+                    
 
 
 
@@ -577,6 +582,7 @@ namespace Vista
             {
                 Contrato c = new Contrato();
                 c.Numero = txtNumero.Text;
+                lblNombreCliente.Visibility = Visibility.Visible;//aparecer label
                 bool buscar = c.Buscar();
                 if (buscar)
                 {
@@ -621,7 +627,8 @@ namespace Vista
                     btnCrear.Visibility = Visibility.Hidden;
 
                     Cliente cl = new Cliente();
-                    lblNombreCliente.Content = cl.NombreContacto;
+                    lblNombreCliente.Content = cl.RazonSocial;
+                    lblNombreCliente.Visibility = Visibility.Visible;
 
 
 
@@ -655,7 +662,7 @@ namespace Vista
                 if (buscar)
                 {
                    
-                    lblNombreCliente.Content = c.NombreContacto;
+                    lblNombreCliente.Content = c.RazonSocial;
 
                     lblNombreCliente.Visibility = Visibility.Visible;//aparecer label
 
@@ -691,6 +698,7 @@ namespace Vista
                 if (buscar)
                 {
                     lblNombreCliente.Content = c.RazonSocial;
+                    lblNombreCliente.Visibility = Visibility.Visible;
                 }
                 else
                 {
