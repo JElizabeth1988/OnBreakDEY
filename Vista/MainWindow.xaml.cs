@@ -43,7 +43,7 @@ namespace Vista
             cliente.Show();
 
         }
-        //Listar Cliente.....
+        //Listar Cliente.......
         private void Tile_Click_L_cliente(object sender, RoutedEventArgs e)
         {
             wpfListadoCliente listCliente = new wpfListadoCliente();
