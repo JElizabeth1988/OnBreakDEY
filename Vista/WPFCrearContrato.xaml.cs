@@ -49,6 +49,70 @@ namespace Vista
         {
 
             InitializeComponent();
+
+
+            //PENDIENTE
+            Contrato con = new Contrato();
+
+            foreach (Contrato item in new Contrato().ReadAll())
+            {
+                if (con.FechaHoraTermino >= DateTime.Now)
+                {
+
+                    //MÉTODO TERMINAR
+                    String numero = lblNumero.Content.ToString();
+                    DateTime creacion = fechac;
+                    bool realizado = true;
+                    DateTime termino = DateTime.Now;
+
+
+                    //EVENTO
+
+                    //inicio
+                    DateTime fechaHoraInicio = dpFechaInicio1.recuperar();
+
+                    //termino
+                    DateTime fechaFinTermino = dpFechaTermino.recuperar();
+
+
+                    //////
+                    int asistentes = int.Parse(txtNumeroAsistentes.Text);
+                    int personalAdicional = int.Parse(txtPersonalAdicional.Text);
+
+                    int evento = ((comboBoxItem)cboTipo.SelectedItem).id;
+                    string idMod = ((comboBoxItem2)cbModalidad.SelectedItem).id;
+
+                    String observaciones = txtObservaciones.Text;
+                    double valorc = double.Parse(lblTotal.Content.ToString());
+                    String rutCliente = txtBuscarCliente.Text;
+
+                    Contrato con_mod = new Contrato()
+                    {
+
+
+                        Numero = numero,
+                        Creacion = creacion,
+                        Termino = termino,
+                        RutCliente = rutCliente,
+                        IdModalidad = idMod,
+                        IdTipoEvento = evento,
+                        FechaHoraInicio = fechaHoraInicio,
+                        FechaHoraTermino = fechaFinTermino,
+                        Asistentes = asistentes,
+                        PersonalAdicional = personalAdicional,
+                        Realizado = realizado,
+                        ValorTotalContrato = valorc,
+                        Observaciones = observaciones,
+                    };
+
+
+                    //METODO AGREGAR DEVUELVE BOOLEAN POR ESO SE CREA VARIABLE BOOLEANA resp
+                    bool resp = con_mod.Modificar();
+                }
+
+            }
+
+          
             lblNumero.Content = DateTime.Now.ToString("yyyyMMddHHmm");
             lblUf.Content = "$" + uf;
             this.cboTipo.SelectedItem = null;
@@ -112,7 +176,6 @@ namespace Vista
             cboTipo.SelectedIndex = 0;
             cbModalidad.SelectedIndex = 0;
             cbAmbientacion.SelectedIndex = 0;
-            cbModalidad.IsEnabled = false;
 
 
         }
@@ -128,6 +191,7 @@ namespace Vista
             
             return valorc;
         }
+
 
     
         //BOTON CALCULO CONTRATO
