@@ -398,3 +398,6 @@ C:\Users\bwd_w\Documents\GitHub\OnBreakDEY\Vista\obj\Debug\WpfListadoCliente.bam
 C:\Users\bwd_w\Documents\GitHub\OnBreakDEY\Vista\obj\Debug\Vista.g.resources
 C:\Users\bwd_w\Documents\GitHub\OnBreakDEY\Vista\obj\Debug\Vista.Properties.Resources.resources
 C:\Users\bwd_w\Documents\GitHub\OnBreakDEY\Vista\obj\Debug\Vista.csproj.GenerateResource.Cache
+C:\Users\ASUS\Desktop\GitHub\OnBreakDEY\Vista\bin\Debug\Vista.exe.config
+C:\Users\ASUS\Desktop\GitHub\OnBreakDEY\Vista\obj\Debug\Vista.exe
+C:\Users\ASUS\Desktop\GitHub\OnBreakDEY\Vista\obj\Debug\Vista.pdb

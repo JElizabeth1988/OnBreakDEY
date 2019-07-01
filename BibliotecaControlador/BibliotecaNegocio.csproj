@@ -46,11 +46,13 @@
     <Compile Include="ActividadEmpresa.cs" />
     <Compile Include="Cenas.cs" />
     <Compile Include="Cliente.cs" />
+    <Compile Include="ClValorEvento.cs" />
     <Compile Include="Cocktail.cs" />
     <Compile Include="CofeeBreak.cs" />
     <Compile Include="CommonBC.cs" />
     <Compile Include="Contrato.cs" />
     <Compile Include="DaoErrores.cs" />
+    <Compile Include="IValorEvento.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="ModalidadServicio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

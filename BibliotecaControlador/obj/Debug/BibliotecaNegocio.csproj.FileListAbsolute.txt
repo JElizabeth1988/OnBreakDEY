@@ -70,3 +70,12 @@ C:\Users\bwd_w\Documents\GitHub\OnBreakDEY\BibliotecaControlador\bin\Debug\Entit
 C:\Users\bwd_w\Documents\GitHub\OnBreakDEY\BibliotecaControlador\obj\Debug\BibliotecaNegocio.csprojResolveAssemblyReference.cache
 C:\Users\bwd_w\Documents\GitHub\OnBreakDEY\BibliotecaControlador\obj\Debug\BibliotecaControlador.dll
 C:\Users\bwd_w\Documents\GitHub\OnBreakDEY\BibliotecaControlador\obj\Debug\BibliotecaControlador.pdb
+C:\Users\ASUS\Desktop\GitHub\OnBreakDEY\BibliotecaControlador\bin\Debug\BibliotecaControlador.dll
+C:\Users\ASUS\Desktop\GitHub\OnBreakDEY\BibliotecaControlador\bin\Debug\BibliotecaControlador.pdb
+C:\Users\ASUS\Desktop\GitHub\OnBreakDEY\BibliotecaControlador\bin\Debug\BibliotecaDALC.dll
+C:\Users\ASUS\Desktop\GitHub\OnBreakDEY\BibliotecaControlador\bin\Debug\EntityFramework.dll
+C:\Users\ASUS\Desktop\GitHub\OnBreakDEY\BibliotecaControlador\bin\Debug\BibliotecaDALC.pdb
+C:\Users\ASUS\Desktop\GitHub\OnBreakDEY\BibliotecaControlador\bin\Debug\EntityFramework.xml
+C:\Users\ASUS\Desktop\GitHub\OnBreakDEY\BibliotecaControlador\obj\Debug\BibliotecaNegocio.csprojResolveAssemblyReference.cache
+C:\Users\ASUS\Desktop\GitHub\OnBreakDEY\BibliotecaControlador\obj\Debug\BibliotecaControlador.dll
+C:\Users\ASUS\Desktop\GitHub\OnBreakDEY\BibliotecaControlador\obj\Debug\BibliotecaControlador.pdb
