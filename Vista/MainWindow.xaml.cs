@@ -39,28 +39,28 @@ namespace Vista
         //Módulo Cliente
         private void Tile_Click_cliente(object sender, RoutedEventArgs e)
         {
-            WpfCliente cliente = new WpfCliente();
+            WpfCliente cliente = WpfCliente.ObtenerinstanciaCLI();
             cliente.Show();
 
         }
         //Listar Cliente.......
         private void Tile_Click_L_cliente(object sender, RoutedEventArgs e)
         {
-            wpfListadoCliente listCliente = new wpfListadoCliente();
+            wpfListadoCliente listCliente = wpfListadoCliente.ObtenerinstanciaLC();
             listCliente.Show();
 
         }
         //Módulo Contrato
         private void Tile_Click_Contrato(object sender, RoutedEventArgs e)
         {
-            Crear_Contrato contrato = new Crear_Contrato();
+            Crear_Contrato contrato = Crear_Contrato.ObtenerinstanciaCr();
             contrato.Show();
 
         }
         //Listado de Contratos
         private void Tile_Click_L_Contrato(object sender, RoutedEventArgs e)
         {
-            ListarContrato listContrato = new ListarContrato();
+            ListarContrato listContrato = ListarContrato.ObtenerinstanciaLCR();
             listContrato.Show();
         }
 

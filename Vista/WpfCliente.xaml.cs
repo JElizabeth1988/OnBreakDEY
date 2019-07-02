@@ -28,22 +28,22 @@ namespace Vista
     {
 
         //PatronSingleton
-        //private static WpfCliente _instancia;
+        private static WpfCliente _instancia;
 
 
-        //public static WpfCliente ObtenerinstanciaCLI()
-        //{
-        //    if (_instancia == null|| _instancia.IsDiposed)
-        //    {
-        //        _instancia = new WpfCliente();
-        //    }
-        //    //_instancia.bringtoFront();
-        //    return _instancia;
-        //}
+        public static WpfCliente ObtenerinstanciaCLI()
+        {
+            if (_instancia == null)
+            {
+                _instancia = new WpfCliente();
+            }
+            
+            return _instancia;
+        }
 
 
         //el constructor debe ser pasado a privado en el momento que se usa el patron singleton
-        public WpfCliente()
+        private WpfCliente()
         {
             InitializeComponent();
 
@@ -434,6 +434,11 @@ namespace Vista
             {
                 txtRut.Text = "";
             }
+        }
+
+        private void MetroWindow_Closed(object sender, EventArgs e)
+        {
+            _instancia = null;
         }
 
 

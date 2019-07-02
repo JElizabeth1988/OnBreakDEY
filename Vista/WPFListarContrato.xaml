@@ -10,7 +10,7 @@
                       
         xmlns:local="clr-namespace:Vista"
         mc:Ignorable="d"
-        Title="OnBreak - Lista de Contratos" Height="516.473" Width="591.264" WindowStartupLocation="CenterScreen" WindowTitleBrush="Black" Icon="Imagenes/white_logo_dark_background.jpg" ResizeMode="NoResize" Background="#FF88D7F9" TitleCharacterCasing="Normal">
+        Title="OnBreak - Lista de Contratos" Height="516.473" Width="591.264" WindowStartupLocation="CenterScreen" WindowTitleBrush="Black" Icon="Imagenes/white_logo_dark_background.jpg" ResizeMode="NoResize" Background="#FF88D7F9" TitleCharacterCasing="Normal" Closed="MetroWindow_Closed">
     <Grid Margin="0,0,-5,-4.333">
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">

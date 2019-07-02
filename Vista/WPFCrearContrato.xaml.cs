@@ -33,16 +33,16 @@ namespace Vista
     {
         //PatronSingleton
 
-        //private static Crear_Contrato _instanciaCr;
-        //public static Crear_Contrato ObtenerinstanciaCr()
-        //{
-        //    if (_instanciaCr == null || _instanciaCr.isdisposed)
-        //    {
-        //        _instanciaCr = new Crear_Contrato();
-        //    }
-        //    _instanciaCr.bringtofront();
-        //    return _instanciaCr;
-        //}
+        private static Crear_Contrato _instanciaCr;
+        public static Crear_Contrato ObtenerinstanciaCr()
+        {
+            if (_instanciaCr == null )
+            {
+                _instanciaCr = new Crear_Contrato();
+            }
+            
+            return _instanciaCr;
+        }
 
         //Objeto que almacena los valores de caché
         private ObjectCache cacheName = MemoryCache.Default;
@@ -50,7 +50,7 @@ namespace Vista
 
         double uf = new Servicios.Service1().Uf();
         //el constructor debe ser pasado a privado en el momento que se usa el patron singleton
-        public Crear_Contrato()
+        private Crear_Contrato()
         {
             // if (!IsPostBack)
             //{
@@ -1422,6 +1422,10 @@ namespace Vista
             lblMensasje.Content = "Eliminó cache";
         }
 
+        private void MetroWindow_Closed(object sender, EventArgs e)
+        {
+            _instanciaCr = null;
+        }
     }
     
 }
