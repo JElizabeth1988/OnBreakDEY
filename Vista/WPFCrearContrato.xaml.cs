@@ -399,6 +399,7 @@ namespace Vista
             btnCrear.Visibility = Visibility.Visible;
             btnModificar.Visibility = Visibility.Hidden;
             btnTerminar.Visibility = Visibility.Hidden;
+            lblMensasje.Visibility = Visibility.Hidden;
 
             txtBuscarCliente.Clear();
             lblNombreCliente.Visibility = Visibility.Hidden;//desaparecer label
@@ -411,6 +412,11 @@ namespace Vista
             cboTipo.SelectedIndex = 0;
             cbModalidad.SelectedIndex = 0;
             cbModalidad.IsEnabled = false;
+
+            cbAmbientacion.SelectedIndex = 0;
+            cbLocal.SelectedIndex = 0;
+            cbMusica.SelectedIndex = 0;
+            cbVegetariana.SelectedIndex = 0;
             //dpFechaInicio.SelectedDate = null;
             //dpFechaFinEvento.SelectedDate = null;
             //dpFechaInicio1.ClearValue(DatePicker);
@@ -436,6 +442,7 @@ namespace Vista
                 btnCrear.Visibility = Visibility.Visible;
                 btnModificar.Visibility = Visibility.Hidden;
                 btnTerminar.Visibility = Visibility.Hidden;
+                
                 txtNumero.IsEnabled = true;
                 txtBuscarCliente.IsEnabled = true;
                 txtNumero.IsEnabled = true;
