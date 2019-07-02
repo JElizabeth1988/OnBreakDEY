@@ -41,19 +41,19 @@
 
 
 
-        <Button x:Name="btnModificar" Content="Modificar" HorizontalAlignment="Left" Margin="374,586,0,0" VerticalAlignment="Top" Width="82" FontWeight="Normal" Height="33" Click="btnModificar_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF0A5068"/>
+        <Button x:Name="btnModificar" Content="Modificar" HorizontalAlignment="Left" Margin="374,548,0,0" VerticalAlignment="Top" Width="82" FontWeight="Normal" Height="33" Click="btnModificar_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF0A5068"/>
 
-        <Button x:Name="btnLimpiar" Content="Limpiar" HorizontalAlignment="Left" Margin="112,587,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Click="btnLimpiar_Click" Height="33" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF0A5068"/>
+        <Button x:Name="btnLimpiar" Content="Limpiar" HorizontalAlignment="Left" Margin="112,545,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Click="btnLimpiar_Click" Height="33" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF0A5068"/>
 
-        <Button x:Name="button" Content="Cerrar" HorizontalAlignment="Left" Margin="856,544,0,0" VerticalAlignment="Top" Width="76" FontWeight="Normal" Height="33" Click="button_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF0A5068"/>
+        <Button x:Name="button" Content="Cerrar" HorizontalAlignment="Left" Margin="856,546,0,0" VerticalAlignment="Top" Width="76" FontWeight="Normal" Height="33" Click="button_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF0A5068"/>
         <Label x:Name="label5" Content="Contrato vigente:" Margin="753,-2,33,768" VerticalAlignment="Bottom" Height="33" BorderThickness="2"/>
         <RadioButton x:Name="rbSi" Content="Sí" HorizontalAlignment="Left" Margin="871,8,0,0" VerticalAlignment="Top" IsChecked="True" Height="18" Width="34" GroupName="vigente" IsEnabled="False"/>
         <RadioButton x:Name="rbNo" Content="No" HorizontalAlignment="Left" Margin="913,6,0,0" VerticalAlignment="Top" Height="22" Width="57" GroupName="vigente" IsEnabled="False" RenderTransformOrigin="0.296,0.864"/>
 
 
-        <Button x:Name="btnTerminar" Content="Terminar Contrato" HorizontalAlignment="Left" Margin="521,586,0,0" VerticalAlignment="Top" Width="145" Click="btnTerminar_Click" FontWeight="Normal" Height="33" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF0A5068"/>
-        <Image x:Name="image" HorizontalAlignment="Left" Height="112" Margin="776,68,0,0" VerticalAlignment="Top" Width="133" Source="Imagenes/white_logo_transparent_background.png"/>
-        <Button x:Name="btnCrear" Content="Crear" HorizontalAlignment="Left" Margin="243,587,0,0" VerticalAlignment="Top" Width="73" Click="btnCrear_Click" FontWeight="Normal" Height="33" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF0A5068"/>
+        <Button x:Name="btnTerminar" Content="Terminar Contrato" HorizontalAlignment="Left" Margin="521,546,0,0" VerticalAlignment="Top" Width="145" Click="btnTerminar_Click" FontWeight="Normal" Height="33" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF0A5068"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="112" Margin="776,54,0,0" VerticalAlignment="Top" Width="133" Source="Imagenes/white_logo_transparent_background.png"/>
+        <Button x:Name="btnCrear" Content="Crear" HorizontalAlignment="Left" Margin="243,547,0,0" VerticalAlignment="Top" Width="73" Click="btnCrear_Click" FontWeight="Normal" Height="33" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF0A5068"/>
         <Label x:Name="label1" Content="Número Contrato:" HorizontalAlignment="Left" Margin="125,2,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblNumero" Content="" HorizontalAlignment="Left" Margin="257,2,0,0" VerticalAlignment="Top" Width="166"/>
         <GroupBox x:Name="groupBox" Header="Buscar Información" HorizontalAlignment="Left" Margin="99,35,0,0" VerticalAlignment="Top" Height="145" Width="604" Background="#FF0A5068">
@@ -71,20 +71,20 @@
                 <Button x:Name="btnListadoCliente" Content="?" HorizontalAlignment="Left" Margin="342,38,0,0" VerticalAlignment="Top" Width="47" Height="30" Click="btnListadoCliente_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF0A5068"/>
             </Grid>
         </GroupBox>
-        <GroupBox x:Name="groupBox1" Header="Datos de evento" HorizontalAlignment="Left" Height="397" Margin="48,180,0,0" VerticalAlignment="Top" Width="898" Background="#FF0A5068">
+        <GroupBox x:Name="groupBox1" Header="Datos de evento" HorizontalAlignment="Left" Height="354" Margin="48,184,0,0" VerticalAlignment="Top" Width="898" Background="#FF0A5068">
             <Grid HorizontalAlignment="Left" Height="306" VerticalAlignment="Top" Width="860">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="148*"/>
                     <ColumnDefinition Width="67*"/>
                 </Grid.ColumnDefinitions>
-                <Label x:Name="label6" Content="Tipo Evento:" HorizontalAlignment="Left" Margin="12,7,0,0" VerticalAlignment="Top" Height="26" Width="82"/>
-                <ComboBox x:Name="cboTipo" HorizontalAlignment="Left" Margin="129,7,0,0" VerticalAlignment="Top" Width="133" AutomationProperties.IsOffscreenBehavior="Onscreen" Height="26" FontWeight="Bold" SelectionChanged="cboTipo_SelectionChanged"/>
-                <Label x:Name="label5_Copy" Content="N° Asistentes:" HorizontalAlignment="Left" Margin="13,169,0,0" VerticalAlignment="Top" Height="26" Width="88"/>
-                <TextBox x:Name="txtNumeroAsistentes" HorizontalAlignment="Left" Height="26" Margin="130,167,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="48" TextChanged="txtNumeroAsistentes_TextChanged_1" FontWeight="Bold"/>
-                <Label x:Name="label7" Content="Observaciones:" HorizontalAlignment="Left" Margin="12,305,0,-25" VerticalAlignment="Top" Height="26" Width="95"/>
-                <TextBox x:Name="txtObservaciones" HorizontalAlignment="Left" Height="52" Margin="130,301,0,-47" TextWrapping="Wrap" VerticalAlignment="Top" Width="292" FontWeight="Bold"/>
-                <Label x:Name="label5_Copy2" Content="N° Personal Adicional:" HorizontalAlignment="Left" Margin="303,168,0,0" VerticalAlignment="Top" Height="26" Width="136"/>
-                <TextBox x:Name="txtPersonalAdicional" HorizontalAlignment="Left" Height="26" Margin="441,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" TextChanged="txtPersonalAdicional_TextChanged_1"  FontWeight="Bold" RenderTransformOrigin="0.5,0.5">
+                <Label x:Name="label6" Content="Tipo Evento:" HorizontalAlignment="Left" Margin="12,1,0,0" VerticalAlignment="Top" Height="26" Width="82"/>
+                <ComboBox x:Name="cboTipo" HorizontalAlignment="Left" Margin="129,3,0,0" VerticalAlignment="Top" Width="133" AutomationProperties.IsOffscreenBehavior="Onscreen" Height="26" FontWeight="Bold" SelectionChanged="cboTipo_SelectionChanged"/>
+                <Label x:Name="label5_Copy" Content="N° Asistentes:" HorizontalAlignment="Left" Margin="13,143,0,0" VerticalAlignment="Top" Height="26" Width="88"/>
+                <TextBox x:Name="txtNumeroAsistentes" HorizontalAlignment="Left" Height="26" Margin="130,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="48" TextChanged="txtNumeroAsistentes_TextChanged_1" FontWeight="Bold"/>
+                <Label x:Name="label7" Content="Observaciones:" HorizontalAlignment="Left" Margin="12,261,0,0" VerticalAlignment="Top" Height="26" Width="95"/>
+                <TextBox x:Name="txtObservaciones" HorizontalAlignment="Left" Height="52" Margin="130,259,0,-5" TextWrapping="Wrap" VerticalAlignment="Top" Width="292" FontWeight="Bold"/>
+                <Label x:Name="label5_Copy2" Content="N° Personal Adicional:" HorizontalAlignment="Left" Margin="301,144,0,0" VerticalAlignment="Top" Height="26" Width="136"/>
+                <TextBox x:Name="txtPersonalAdicional" HorizontalAlignment="Left" Height="26" Margin="437,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" TextChanged="txtPersonalAdicional_TextChanged_1"  FontWeight="Bold" RenderTransformOrigin="0.5,0.5">
                     <TextBox.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -110,31 +110,31 @@
 
 
                 <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="156,-32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="16" Width="0"/>
-                <WpfControlLibrary1:UserControl1 x:Name="dpFechaInicio1" HorizontalAlignment="Left" Margin="102,204,0,0" VerticalAlignment="Top" Width="388"/>
-                <ComboBox x:Name="cbModalidad" HorizontalAlignment="Left" Margin="437,8,0,0" VerticalAlignment="Top" Width="138" SelectionChanged="cbModalidad_LostFocus"/>
-                <Label x:Name="label4" Content="Modalidad Servicio:" HorizontalAlignment="Left" Margin="308,8,0,0" VerticalAlignment="Top"/>
+                <WpfControlLibrary1:UserControl1 x:Name="dpFechaInicio1" HorizontalAlignment="Left" Margin="102,170,0,0" VerticalAlignment="Top" Width="388"/>
+                <ComboBox x:Name="cbModalidad" HorizontalAlignment="Left" Margin="437,2,0,0" VerticalAlignment="Top" Width="138" SelectionChanged="cbModalidad_LostFocus"/>
+                <Label x:Name="label4" Content="Modalidad Servicio:" HorizontalAlignment="Left" Margin="308,2,0,0" VerticalAlignment="Top"/>
                 <Label x:Name="lblValorBase" Content="" HorizontalAlignment="Left" Margin="213,74,0,0" VerticalAlignment="Top" Grid.Column="1"/>
-                <Label x:Name="lbl_cbAmbientacion" Content="Ambientación:" HorizontalAlignment="Left" Margin="309,45,0,0" VerticalAlignment="Top"/>
-                <Label x:Name="label3" Content="Inicio:" HorizontalAlignment="Left" Margin="12,216,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.471,-0.113"/>
-                <WpfControlLibrary1:UserControl1 x:Name="dpFechaTermino" HorizontalAlignment="Left" Margin="100,249,0,0" VerticalAlignment="Top" Width="390"/>
-                <Label x:Name="label3_Copy" Content="Término:" HorizontalAlignment="Left" Margin="12,262,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.471,-0.113"/>
-                <ComboBox x:Name="cbAmbientacion" HorizontalAlignment="Left" Margin="437,50,0,0" VerticalAlignment="Top" Width="138"/>
-                <TextBox x:Name="txtArriendo" HorizontalAlignment="Left" Height="23" Margin="439,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                <Label x:Name="lbl_cbAmbientacion" Content="Ambientación:" HorizontalAlignment="Left" Margin="309,35,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="label3" Content="Inicio:" HorizontalAlignment="Left" Margin="14,184,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.471,-0.113"/>
+                <WpfControlLibrary1:UserControl1 x:Name="dpFechaTermino" HorizontalAlignment="Left" Margin="102,207,0,0" VerticalAlignment="Top" Width="390"/>
+                <Label x:Name="label3_Copy" Content="Término:" HorizontalAlignment="Left" Margin="12,222,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.471,-0.113"/>
+                <ComboBox x:Name="cbAmbientacion" HorizontalAlignment="Left" Margin="437,36,0,0" VerticalAlignment="Top" Width="138"/>
+                <TextBox x:Name="txtArriendo" HorizontalAlignment="Left" Height="23" Margin="437,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                <Label x:Name="label8" Content="Vegetariana:" HorizontalAlignment="Left" Margin="12,36,0,0" VerticalAlignment="Top"/>
+                <ComboBox x:Name="cbVegetariana" HorizontalAlignment="Left" Margin="129,37,0,0" VerticalAlignment="Top" Width="133"/>
+                <Label x:Name="lbl_Arriendo" Content="Arriendo:" HorizontalAlignment="Left" Margin="311,108,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="label10" Content="Local:" HorizontalAlignment="Left" Margin="311,70,0,0" VerticalAlignment="Top"/>
+                <ComboBox x:Name="cbLocal" HorizontalAlignment="Left" Margin="438,71,0,0" VerticalAlignment="Top" Width="136"/>
+                <Label x:Name="label9" Content="Música:" HorizontalAlignment="Left" Margin="13,70,0,0" VerticalAlignment="Top" Width="92"/>
             </Grid>
         </GroupBox>
         <Label x:Name="label2" Content="Contrato Vigente" HorizontalAlignment="Left" Margin="762,4,0,0" VerticalAlignment="Top"/>
         <Button x:Name="btnCalculo" Content="Calcular" HorizontalAlignment="Left" Margin="778,453,0,0" VerticalAlignment="Top" Width="76" Height="33" Click="btnCalculo_Click" FontWeight="Normal" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF0A5068"/>
-        <Button x:Name="btnRespaldar" Content="Respaldar Cache" HorizontalAlignment="Left" Margin="112,630,0,0" VerticalAlignment="Top" Width="104" FontWeight="Normal" Click="btnRespaldar_Click" Height="30" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF0A5068"/>
-        <Label x:Name="lblMensasje" Content="" HorizontalAlignment="Left" Margin="114,661,0,-8" VerticalAlignment="Top" Width="157"/>
-        <Button x:Name="btnRecuperar" Content="Recuperar Cache" HorizontalAlignment="Left" Margin="243,630,0,0" VerticalAlignment="Top" Width="101" Click="btnRecuperar_Click" FontWeight="Normal" Height="30" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF0A5068"/>
-        <Button x:Name="btnLimpiarCache" Content="Limpiar Cache" HorizontalAlignment="Left" Margin="365,630,0,0" VerticalAlignment="Top" Width="101" Click="btnLimpiarCache_Click" FontWeight="Normal" Height="30" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF0A5068"/>
-        <ComboBox x:Name="cbVegetariana" HorizontalAlignment="Left" Margin="183,261,0,0" VerticalAlignment="Top" Width="133"/>
-        <Label x:Name="label8" Content="Vegetariana:" HorizontalAlignment="Left" Margin="66,261,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label9" Content="Música:" HorizontalAlignment="Left" Margin="66,305,0,0" VerticalAlignment="Top" Width="92"/>
-        <ComboBox x:Name="cbMusica" HorizontalAlignment="Left" Margin="183,305,0,0" VerticalAlignment="Top" Width="133"/>
-        <Label x:Name="label10" Content="Local:" HorizontalAlignment="Left" Margin="368,302,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="cbLocal" HorizontalAlignment="Left" Margin="492,303,0,0" VerticalAlignment="Top" Width="136"/>
-        <Label x:Name="lbl_Arriendo" Content="Arriendo:" HorizontalAlignment="Left" Margin="368,342,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnRespaldar" Content="Respaldar Cache" HorizontalAlignment="Left" Margin="112,590,0,0" VerticalAlignment="Top" Width="104" FontWeight="Normal" Click="btnRespaldar_Click" Height="30" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF0A5068"/>
+        <Label x:Name="lblMensasje" Content="" HorizontalAlignment="Left" Margin="114,629,0,0" VerticalAlignment="Top" Width="157"/>
+        <Button x:Name="btnRecuperar" Content="Recuperar Cache" HorizontalAlignment="Left" Margin="243,590,0,0" VerticalAlignment="Top" Width="101" Click="btnRecuperar_Click" FontWeight="Normal" Height="30" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF0A5068"/>
+        <Button x:Name="btnLimpiarCache" Content="Limpiar Cache" HorizontalAlignment="Left" Margin="365,592,0,0" VerticalAlignment="Top" Width="101" Click="btnLimpiarCache_Click" FontWeight="Normal" Height="30" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF0A5068"/>
+        <ComboBox x:Name="cbMusica" HorizontalAlignment="Left" Margin="183,284,0,0" VerticalAlignment="Top" Width="133"/>
 
     </Grid>
 </Controls:MetroWindow>
