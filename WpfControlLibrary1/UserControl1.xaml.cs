@@ -74,7 +74,7 @@ namespace WpfControlLibrary1
             int hora = int.Parse(txthora.Text);
             int min = int.Parse(txtminutos.Text);
 
-            return new DateTime(ano, dia, mes, hora, min, 0);
+            return new DateTime(ano, mes, dia, hora, min, 0);
 
         }
         public DateTime recuperarFecha()
