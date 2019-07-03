@@ -96,7 +96,7 @@ namespace Vista
         private void btnPregunta_Click(object sender, RoutedEventArgs e)
         {
             wpfListadoCliente list = new wpfListadoCliente(this);
-            list.Show();
+            list.ShowDialog();
             
 
 

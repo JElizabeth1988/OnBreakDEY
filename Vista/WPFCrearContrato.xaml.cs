@@ -481,7 +481,7 @@ namespace Vista
         private void btnListadoNum_Click(object sender, RoutedEventArgs e)
         {
             ListarContrato con = new ListarContrato(this);
-            con.Show();
+            con.ShowDialog();
            // btnTerminar.Visibility = Visibility.Visible;
 
 
@@ -491,7 +491,7 @@ namespace Vista
         private void btnListadoCliente_Click(object sender, RoutedEventArgs e)
         {
             wpfListadoCliente cli = new wpfListadoCliente(this);
-            cli.Show();
+            cli.ShowDialog();
 
         }
         
