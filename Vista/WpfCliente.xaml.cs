@@ -175,7 +175,7 @@ namespace Vista
             cbActividad.SelectedIndex = 0;
             cbTipo.SelectedIndex = 0;//Para que en el ComboBox no quede seleccionado nada
             txtRut.Focus();//Mover el cursor a la poscición Rut
-
+            label2.Visibility = Visibility.Hidden;
             btnModificar.Visibility = Visibility.Hidden;//botón modificar desaparece
             btnGuardar.Visibility = Visibility.Visible;//botón guardar aparece
             txtRut.IsEnabled = true;
