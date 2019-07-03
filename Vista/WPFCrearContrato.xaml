@@ -104,7 +104,7 @@
                 <Label x:Name="label_Copy6" Content="Valor Total : $" HorizontalAlignment="Left" Margin="84,181,0,0" VerticalAlignment="Top" Height="26" Width="77" Grid.Column="1"/>
                 <Label x:Name="lblAsistentes" Content="" HorizontalAlignment="Left" Margin="213,101,0,0" VerticalAlignment="Top" Grid.Column="1"/>
                 <Label x:Name="lblPersonalAdicional" Content="" HorizontalAlignment="Left" Margin="213,138,0,0" VerticalAlignment="Top" Grid.Column="1"/>
-                <Label x:Name="lblTotal" Content="" HorizontalAlignment="Left" Margin="182,181,-11,0" VerticalAlignment="Top" Width="97" FontWeight="Bold" Height="26" BorderBrush="Black" Grid.Column="1"/>
+                <Label x:Name="lblTotal" Content="" HorizontalAlignment="Left" Margin="183,181,-12,0" VerticalAlignment="Top" Width="97" FontWeight="Bold" Height="26" BorderBrush="Black" Grid.Column="1"/>
                 <Label x:Name="lblUf" Content="" HorizontalAlignment="Left" Margin="214,-2,0,0" VerticalAlignment="Top" Grid.Column="1"/>
                 <Label x:Name="label_Copy8" Content="Valor UF :" HorizontalAlignment="Left" Margin="84,-2,0,0" VerticalAlignment="Top" Height="26" Width="64" Grid.Column="1"/>
 

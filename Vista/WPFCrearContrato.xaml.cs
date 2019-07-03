@@ -1195,22 +1195,27 @@ namespace Vista
             {
 
 
+                cbVegetariana.IsEnabled = false;
                 cbAmbientacion.IsEnabled = true;
                 cbMusica.IsEnabled = true;
                 cbLocal.IsEnabled = true;
 
-                if (cbLocal.Items.Equals("Otro"))
+                lbl_Arriendo.Visibility = Visibility.Hidden;
+                txtArriendo.Visibility = Visibility.Hidden;
+
+                var item = cbLocal.SelectedItem = "Otro";
+                if (item != null)
                 {
                     lbl_Arriendo.Visibility = Visibility.Visible;
                     txtArriendo.Visibility = Visibility.Visible;
+
+
                 }
 
-                cbVegetariana.IsEnabled = false;
-            
 
 
             }
-          
+
 
 
         }
