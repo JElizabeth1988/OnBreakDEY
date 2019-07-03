@@ -22,7 +22,7 @@ using MahApps.Metro.Controls;
 using MahApps.Metro.Controls.Dialogs;
 using MahApps.Metro.Behaviours;
 using WpfControlLibrary1;
-
+using System.Windows.Threading;
 
 namespace Vista
 {
@@ -47,6 +47,111 @@ namespace Vista
         //Objeto que almacena los valores de caché
         private ObjectCache cacheName = MemoryCache.Default;
 
+        //Método Timer para guardar cache
+        void timer_Tick(object sender, EventArgs e)
+        {
+            try
+            {
+                lblMensasje.Visibility = Visibility.Visible;
+                String numero = lblNumero.Content.ToString();
+                DateTime creacion = fechac;
+                bool realizado;
+                DateTime termino;
+                if (rbSi.IsChecked == true)
+                {
+                    realizado = false;
+                    termino = dpFechaTermino.recuperarFecha();
+
+                }
+                else
+                {
+                    realizado = true;
+                    termino = dpFechaTermino.recuperarFecha();
+
+                }
+
+
+                //EVENTO
+
+                //inicio
+                DateTime fechaHoraInicio = dpFechaInicio1.recuperar();
+
+                DateTime fechaHoraTermino = dpFechaTermino.recuperar();
+
+
+                //////
+                int asistentes = int.Parse(txtNumeroAsistentes.Text);
+                /*int asistentes = 0;
+                if (int.TryParse(txtNumeroAsistentes.Text, out asistentes))
+                {
+
+                }
+                else
+                {
+                    await this.ShowMessageAsync("Mensaje:",
+                      string.Format("Ingrese sólo números"));
+                    txtNumeroAsistentes.Focus();
+                    return;
+                }*/
+                int personalAdicional = int.Parse(txtPersonalAdicional.Text);
+                /*int personalAdicional = 0;
+                if (int.TryParse(txtPersonalAdicional.Text, out personalAdicional))
+                {
+
+                }
+                else
+                {
+                    await this.ShowMessageAsync("Mensaje:",
+                      string.Format("Ingrese sólo números"));
+                    txtPersonalAdicional.Focus();
+                    return;
+                }*/
+
+                //CB
+                int evento = ((comboBoxItem)cboTipo.SelectedItem).id;
+                string idMod = ((comboBoxItem2)cbModalidad.SelectedItem).id;
+
+                String observaciones = txtObservaciones.Text;
+                double valorc = double.Parse(lblTotal.Content.ToString());
+                String rutCliente = txtBuscarCliente.Text;
+
+                Contrato con = new Contrato()
+                {
+
+                    Numero = numero,
+                    Creacion = creacion,
+                    Termino = termino,
+                    RutCliente = rutCliente,
+                    IdModalidad = idMod,
+                    IdTipoEvento = evento,
+                    FechaHoraInicio = fechaHoraInicio,
+                    FechaHoraTermino = fechaHoraTermino,
+                    Asistentes = asistentes,
+                    PersonalAdicional = personalAdicional,
+                    Realizado = realizado,
+                    ValorTotalContrato = calculo(),
+                    Observaciones = observaciones,
+
+                };
+
+                CacheItemPolicy politica = new CacheItemPolicy();
+                politica.Priority = CacheItemPriority.Default;
+                politica.AbsoluteExpiration = DateTimeOffset.Now.AddMinutes(5);//cada 5 minutos borra la politica (el cache)
+                cacheName.Set("Contrato", con, politica);
+                lblMensasje.Visibility = Visibility.Visible;
+                lblMensasje.Content = "Almacenado en Cache";
+
+            }
+            catch (Exception ex)
+            {
+                // lblMensasje.Content = ex.Message;
+                lblMensasje.Content = "No Guardado";
+
+            }
+
+
+        }
+
 
         double uf = new Servicios.Service1().Uf();
         //el constructor debe ser pasado a privado en el momento que se usa el patron singleton
@@ -56,7 +161,11 @@ namespace Vista
             //{
 
                 InitializeComponent();
-           
+
+            DispatcherTimer timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromMinutes(1);
+            timer.Tick += timer_Tick;
+            timer.Start();
 
             //PENDIENTE
             Contrato con = new Contrato();
@@ -1269,109 +1378,6 @@ namespace Vista
 
         }
 
-        protected void btnRespaldar_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                lblMensasje.Visibility = Visibility.Visible;
-                String numero = lblNumero.Content.ToString();
-                DateTime creacion = fechac;
-                bool realizado;
-                DateTime termino;
-                if (rbSi.IsChecked == true)
-                {
-                    realizado = false;
-                    termino = dpFechaTermino.recuperarFecha();
-
-                }
-                else
-                {
-                    realizado = true;
-                    termino = dpFechaTermino.recuperarFecha();
-
-                }
-
-
-                //EVENTO
-
-                //inicio
-                DateTime fechaHoraInicio = dpFechaInicio1.recuperar();
-
-                DateTime fechaHoraTermino = dpFechaTermino.recuperar();
-
-
-                //////
-                int asistentes = int.Parse(txtNumeroAsistentes.Text);
-                /*int asistentes = 0;
-                if (int.TryParse(txtNumeroAsistentes.Text, out asistentes))
-                {
-
-                }
-                else
-                {
-                    await this.ShowMessageAsync("Mensaje:",
-                      string.Format("Ingrese sólo números"));
-                    txtNumeroAsistentes.Focus();
-                    return;
-                }*/
-                int personalAdicional = int.Parse(txtPersonalAdicional.Text);
-                /*int personalAdicional = 0;
-                if (int.TryParse(txtPersonalAdicional.Text, out personalAdicional))
-                {
-
-                }
-                else
-                {
-                    await this.ShowMessageAsync("Mensaje:",
-                      string.Format("Ingrese sólo números"));
-                    txtPersonalAdicional.Focus();
-                    return;
-                }*/
-
-                //CB
-                int evento = ((comboBoxItem)cboTipo.SelectedItem).id;
-                string idMod = ((comboBoxItem2)cbModalidad.SelectedItem).id;
-
-                String observaciones = txtObservaciones.Text;
-                double valorc = double.Parse(lblTotal.Content.ToString());
-                String rutCliente = txtBuscarCliente.Text;
-
-                Contrato con = new Contrato()
-                {
-
-                    Numero = numero,
-                    Creacion = creacion,
-                    Termino = termino,
-                    RutCliente = rutCliente,
-                    IdModalidad = idMod,
-                    IdTipoEvento = evento,
-                    FechaHoraInicio = fechaHoraInicio,
-                    FechaHoraTermino = fechaHoraTermino,
-                    Asistentes = asistentes,
-                    PersonalAdicional = personalAdicional,
-                    Realizado = realizado,
-                    ValorTotalContrato = calculo(),
-                    Observaciones = observaciones,
-
-                };
-
-                CacheItemPolicy politica = new CacheItemPolicy();
-                politica.Priority = CacheItemPriority.Default;
-                politica.AbsoluteExpiration = DateTimeOffset.Now.AddMinutes(5);//cada 5 minutos borra la politica (el cache)
-                cacheName.Set("Contrato", con, politica);
-                lblMensasje.Visibility = Visibility.Visible;
-                lblMensasje.Content = "Almacenado en Cache";
-
-            }
-            catch (Exception ex)
-            {
-                // lblMensasje.Content = ex.Message;
-                lblMensasje.Content = "No Guardado";
-
-            }
-
-
-        }
 
         protected void btnRecuperar_Click(object sender, RoutedEventArgs e)
         {
@@ -1380,7 +1386,7 @@ namespace Vista
                 lblMensasje.Visibility = Visibility.Visible;
                 Contrato c = cacheName["Contrato"] as Contrato;
                 lblNumero.Content = c.Numero;
-                txtNumero.Text = c.Numero;
+                //txtNumero.Text = c.Numero;
                 txtBuscarCliente.Text = c.RutCliente;
                 dpFechaInicio1.datos(c.FechaHoraInicio);
                 dpFechaTermino.datos(c.FechaHoraTermino);

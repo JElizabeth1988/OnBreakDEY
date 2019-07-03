@@ -12,12 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+using System.Runtime.Caching;//para crear caché
+using System.Xml.Serialization;//serializar objetos
+using System.IO;//Entrada y salida de información
+
 using BibliotecaNegocio;
 
 
 using MahApps.Metro.Controls;
 using MahApps.Metro.Controls.Dialogs;
 using MahApps.Metro.Behaviours;
+using System.Windows.Threading;
 
 namespace Vista
 {
@@ -41,11 +46,55 @@ namespace Vista
             return _instancia;
         }
 
+        private ObjectCache cacheName = MemoryCache.Default;
+        //Método Timer para guardar cache
+        void timer_Tick(object sender, EventArgs e)
+        {
+            try
+            {
+                String rut = txtRut.Text + "-" + txtDV.Text;
+                if (rut.Length == 11)
+                {
+                    rut = "0" + txtRut.Text + "-" + txtDV.Text;
+                }
+                Cliente p = new Cliente()
+                {
+                    RutCliente = rut,
+                    NombreContacto = txtNombre.Text,
+                    RazonSocial = txtRazon.Text,
+
+                    MailContacto = txtEmail.Text,
+                    Direccion = txtDireccion.Text,
+                    Telefono = txtTelefono.Text,
+                    IdActividadEmpresa = ((comboBoxItem)cbActividad.SelectedItem).id,
+                    IdTipoEmpresa = ((comboBoxItem)cbTipo.SelectedItem).id,
+
+
+                };
+                CacheItemPolicy politica = new CacheItemPolicy();
+                politica.Priority = CacheItemPriority.Default;
+                politica.AbsoluteExpiration = DateTimeOffset.Now.AddMinutes(5);//cada 5 minutos borra la politica (el cache)
+                cacheName.Set("Cliente", p, politica);
+                label2.Visibility = Visibility.Visible;
+                label2.Content = "Almacenada en cache";
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Errorsillo");
+            }
+
+        }
 
         //el constructor debe ser pasado a privado en el momento que se usa el patron singleton
         private WpfCliente()
         {
             InitializeComponent();
+
+            DispatcherTimer timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromMinutes(1);
+            timer.Tick += timer_Tick;
+            timer.Start();
 
             txtDV.IsEnabled = false;
             btnModificar.Visibility = Visibility.Hidden;//el botón Modificar no se ve
@@ -69,6 +118,48 @@ namespace Vista
             cbTipo.SelectedIndex = 0;
             txtTelefono.Text = "0";
         }
+
+
+        private void Recuperar_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                label2.Visibility = Visibility.Visible;
+                Cliente c = cacheName["Cliente"] as Cliente;
+
+                txtRut.Text = c.RutCliente.Substring(0, 10);
+                txtDV.Text = c.RutCliente.Substring(11, 1);
+                txtRazon.Text = c.RazonSocial;
+                txtNombre.Text = c.NombreContacto;
+                txtEmail.Text = c.MailContacto;
+                txtDireccion.Text = c.Telefono;
+                txtTelefono.Text = c.Telefono;
+                ActividadEmpresa ac = new ActividadEmpresa();
+                ac.Id = c.IdActividadEmpresa;
+                ac.Read();
+                cbActividad.Text = ac.Descripcion;//Cambiar a descripción
+                TipoEmpresa te = new TipoEmpresa();
+                te.Id = c.IdTipoEmpresa;
+                te.Read();
+                cbTipo.Text = te.Descripcion;//Cambiar a descripción
+
+                label2.Content = "Cache Recuperado";
+
+            }
+            catch (Exception ex)
+            {
+                label2.Content = "Error al Cargar el cache";
+
+            }
+
+        }
+
+        private void LimpiarCache_Click(object sender, RoutedEventArgs e)
+        {
+            cacheName.Remove("Cliente", null);
+            label2.Content = "Eliminó cache";
+        }
+
 
         //Botón limpiar
         private void btnLimpiar_Click(object sender, RoutedEventArgs e)
