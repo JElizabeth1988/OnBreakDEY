@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BibliotecaDALC", "Bibliotec
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfControlLibrary1", "WpfControlLibrary1\WpfControlLibrary1.csproj", "{EBA24714-911A-4C39-B2EA-C9EA52C5DDD5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test", "test\test.csproj", "{181E78DB-4C83-48BB-A253-646A77769FC7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{EBA24714-911A-4C39-B2EA-C9EA52C5DDD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EBA24714-911A-4C39-B2EA-C9EA52C5DDD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EBA24714-911A-4C39-B2EA-C9EA52C5DDD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{181E78DB-4C83-48BB-A253-646A77769FC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{181E78DB-4C83-48BB-A253-646A77769FC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{181E78DB-4C83-48BB-A253-646A77769FC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{181E78DB-4C83-48BB-A253-646A77769FC7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

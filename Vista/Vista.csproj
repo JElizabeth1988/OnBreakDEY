@@ -69,8 +69,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ClValorEvento.cs" />
     <Compile Include="comboBoxItem.cs" />
     <Compile Include="comboBoxItem2.cs" />
+    <Compile Include="IValorEvento.cs" />
     <Compile Include="WpfCliente.xaml.cs">
       <DependentUpon>WpfCliente.xaml</DependentUpon>
     </Compile>

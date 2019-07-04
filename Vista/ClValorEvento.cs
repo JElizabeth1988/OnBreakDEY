@@ -3,22 +3,37 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-namespace BibliotecaNegocio
+using BibliotecaNegocio;
+namespace Vista
 {
-    public class ClValorEvento : IValorEvento
+    class ClValorEvento : IValorEvento
     {
-        private Contrato ContratoTemp;
 
-        private Cenas CenaTemp;
+        public int IdE;
 
-        private Cocktail CocktailTemp;
+        public String IdM;
 
-        public ClValorEvento(Contrato c, Cenas ce, Cocktail co)
+        public int asist;
+
+        public int personal;
+
+        public int IdA;
+
+        public int IdLocal;
+
+        public String musica;
+
+        public String local;
+
+        public ClValorEvento(int ideve, String idmod, int asis, int pers, int idam, String idlocal, String music, String establecimiento)
         {
-            ContratoTemp = c;
-            CenaTemp = ce;
-            CocktailTemp = co;
+            IdE = ideve;
+            IdM = idmod;
+            asist = asis;
+            personal = pers;
+            IdA = idam;
+            musica = music;
+            local = establecimiento;
         }
 
         public Double RecargoAsistentes()
@@ -26,59 +41,59 @@ namespace BibliotecaNegocio
             Double RecAsis = 0;
             try
             {
-                if (ContratoTemp.IdTipoEvento == 10)
+                if (IdE == 10)
                 {
-                    if (ContratoTemp.Asistentes >= 1 && ContratoTemp.Asistentes <= 20)
+                    if (asist >= 1 && asist <= 20)
                     {
                         RecAsis = 3;
                         return RecAsis;
                     }
-                    if (ContratoTemp.Asistentes >= 21 && ContratoTemp.Asistentes <= 50)
+                    if (asist >= 21 && asist <= 50)
                     {
                         RecAsis = 5;
                         return RecAsis;
                     }
-                    if (ContratoTemp.Asistentes >= 51)
+                    if (asist >= 51)
                     {
                         RecAsis = 5;
-                        int Adiconal = ((int)((ContratoTemp.Asistentes - 50) / 20)) * 2;
+                        int Adiconal = ((int)(asist - 50) / 20) * 2;
                         return RecAsis + Adiconal;
                     }
                 }
-                if (ContratoTemp.IdTipoEvento == 20)
+                if (IdE == 20)
                 {
-                    if (ContratoTemp.Asistentes >= 1 && ContratoTemp.Asistentes <= 20)
+                    if (asist >= 1 && asist <= 20)
                     {
                         RecAsis = 4;
                         return RecAsis;
                     }
-                    if (ContratoTemp.Asistentes >= 21 && ContratoTemp.Asistentes <= 50)
+                    if (asist >= 21 && asist <= 50)
                     {
                         RecAsis = 6;
                         return RecAsis;
                     }
-                    if (ContratoTemp.Asistentes >= 51)
+                    if (asist >= 51)
                     {
                         RecAsis = 6;
-                        int Adiconal = ((int)((ContratoTemp.Asistentes - 50) / 20)) * 2;
+                        int Adiconal = ((int)((asist - 50) / 20)) * 2;
                         return RecAsis + Adiconal;
                     }
                 }
-                if (ContratoTemp.IdTipoEvento == 30)
+                if (IdE == 30)
                 {
-                    if (ContratoTemp.Asistentes >= 1 && ContratoTemp.Asistentes <= 20)
+                    if (asist >= 1 && asist <= 20)
                     {
                         RecAsis = 1.5;
                         return RecAsis;
                     }
-                    if (ContratoTemp.Asistentes >= 21 && ContratoTemp.Asistentes <= 50)
+                    if (asist >= 21 && asist <= 50)
                     {
                         RecAsis = 1.2;
                         return RecAsis;
                     }
-                    if (ContratoTemp.Asistentes >= 51)
+                    if (asist >= 51)
                     {
-                        RecAsis = ContratoTemp.Asistentes;
+                        RecAsis = asist;
                         return RecAsis;
                     }
                 }
@@ -96,75 +111,75 @@ namespace BibliotecaNegocio
             Double RecPers = 0;
             try
             {
-                if (ContratoTemp.IdTipoEvento == 10)
+                if (IdE == 10)
                 {
-                    if (ContratoTemp.PersonalAdicional == 2)
+                    if (personal == 2)
                     {
                         RecPers = 2;
                         return RecPers;
                     }
-                    if (ContratoTemp.PersonalAdicional == 3)
+                    if (personal == 3)
                     {
                         RecPers = 3;
                         return RecPers;
                     }
-                    if (ContratoTemp.PersonalAdicional == 4)
+                    if (personal == 4)
                     {
                         RecPers = 3.5;
                         return RecPers;
                     }
-                    if (ContratoTemp.Asistentes >= 5)
+                    if (personal >= 5)
                     {
                         RecPers = 3.5;
-                        Double Adiconal = ((int)((ContratoTemp.Asistentes - 50) / 20)) * 0.5;
+                        Double Adiconal = ((int)((personal - 50) / 20)) * 0.5;
                         return RecPers + Adiconal;
                     }
                 }
-                if (ContratoTemp.IdTipoEvento == 20)
+                if (IdE == 20)
                 {
-                    if (ContratoTemp.PersonalAdicional == 2)
+                    if (personal == 2)
                     {
                         RecPers = 2;
                         return RecPers;
                     }
-                    if (ContratoTemp.PersonalAdicional == 3)
+                    if (personal == 3)
                     {
                         RecPers = 3;
                         return RecPers;
                     }
-                    if (ContratoTemp.PersonalAdicional == 4)
+                    if (personal == 4)
                     {
                         RecPers = 3.5;
                         return RecPers;
                     }
-                    if (ContratoTemp.Asistentes >= 5)
+                    if (personal >= 5)
                     {
                         RecPers = 3.5;
-                        Double Adiconal = ((int)((ContratoTemp.Asistentes - 50) / 20)) * 0.5;
+                        Double Adiconal = ((int)((personal - 50) / 20)) * 0.5;
                         return RecPers + Adiconal;
                     }
                 }
-                if (ContratoTemp.IdTipoEvento == 30)
+                if (IdE == 30)
                 {
-                    if (ContratoTemp.PersonalAdicional == 2)
+                    if (personal == 2)
                     {
                         RecPers = 2;
                         return RecPers;
                     }
-                    if (ContratoTemp.PersonalAdicional == 3)
+                    if (personal == 3)
                     {
                         RecPers = 3;
                         return RecPers;
                     }
-                    if (ContratoTemp.PersonalAdicional == 4)
+                    if (personal == 4)
                     {
                         RecPers = 5;
                         return RecPers;
                     }
-                    if (ContratoTemp.Asistentes >= 5)
+                    if (personal >= 5)
                     {
                         RecPers = 5;
-                        Double Adiconal = ((int)((ContratoTemp.Asistentes - 50) / 20)) * 0.5;
+                        Double Adiconal = ((int)((personal - 50) / 20)) * 0.5;
                         return RecPers + Adiconal;
                     }
                 }
@@ -182,45 +197,45 @@ namespace BibliotecaNegocio
             Double ValorBas = 0;
             try
             {
-                if (ContratoTemp.IdTipoEvento == 10)
+                if (IdE == 10)
                 {
-                    if (ContratoTemp.IdModalidad == "CB001")
+                    if (IdM == "CB001")
                     {
                         ValorBas = 3;
                         return ValorBas;
                     }
-                    if (ContratoTemp.IdModalidad == "CB002")
+                    if (IdM == "CB002")
                     {
                         ValorBas = 8;
                         return ValorBas;
                     }
-                    if (ContratoTemp.IdModalidad == "CB003")
+                    if (IdM == "CB003")
                     {
                         ValorBas = 12;
                         return ValorBas;
                     }
                 }
-                if (ContratoTemp.IdTipoEvento == 20)
+                if (IdE == 20)
                 {
-                    if (ContratoTemp.IdModalidad == "CO001")
+                    if (IdM == "CO001")
                     {
                         ValorBas = 6;
                         return ValorBas;
                     }
-                    if (ContratoTemp.IdModalidad == "CO002")
+                    if (IdM == "CO002")
                     {
                         ValorBas = 10;
                         return ValorBas;
                     }
                 }
-                if (ContratoTemp.IdTipoEvento == 30)
+                if (IdE == 30)
                 {
-                    if (ContratoTemp.IdModalidad == "CE001")
+                    if (IdM == "CE001")
                     {
                         ValorBas = 25;
                         return ValorBas;
                     }
-                    if (ContratoTemp.IdModalidad == "CE002")
+                    if (IdM == "CE002")
                     {
                         ValorBas = 35;
                         return ValorBas;
@@ -235,24 +250,37 @@ namespace BibliotecaNegocio
             }
         }
 
+        public Double ValorFinalCB()
+        {
+            Double CbParcial = 0;
+            try
+            {
+                CbParcial = ValorBaseEvento() + RecargoAsistentes() + RecargoPersonal();
+                return CbParcial;
+            }
+            catch (Exception exe)
+            {
+                return 0;
+            }
+        }
+
         public Double AmbientacionCo()
         {
             Double ValorAmb = 0;
             try
             {
-                if (CocktailTemp.Ambientacion != false)
+                if (IdA == 10)
                 {
-                    if (CocktailTemp.IdTipoAmbientacion == 10)
-                    {
-                        ValorAmb = 2;
-                        return ValorAmb;
-                    }
-                    if (CocktailTemp.IdTipoAmbientacion == 20)
-                    {
-                        ValorAmb = 5;
-                        return ValorAmb;
-                    }
+
+                    ValorAmb = 2;
+                    return ValorAmb;
                 }
+                if (IdA == 20)
+                {
+                    ValorAmb = 5;
+                    return ValorAmb;
+                }
+
                 return ValorAmb;
             }
             catch (Exception exe)
@@ -267,14 +295,14 @@ namespace BibliotecaNegocio
             Double ValMusic = 0;
             try
             {
-                if (CocktailTemp.MusicaAmbiental != false)
+                if (musica == "Ambiental" || musica == "Cliente")
                 {
                     ValMusic = 1;
                     return ValMusic;
                 }
                 return ValMusic;
             }
-            catch (Exception)
+            catch (Exception exe)
             {
 
                 return 0;
@@ -305,7 +333,7 @@ namespace BibliotecaNegocio
             try
             {
 
-                if (CenaTemp.MusicaAmbiental != false)
+                if (musica == "Ambiental" || musica == "Cliente")
                 {
                     ValorMusicCe = 1.5;
                     return ValorMusicCe;
@@ -313,7 +341,7 @@ namespace BibliotecaNegocio
 
                 return ValorMusicCe;
             }
-            catch (Exception)
+            catch (Exception exe)
             {
 
                 return 0;
@@ -325,18 +353,16 @@ namespace BibliotecaNegocio
             Double ValAmbCe = 0;
             try
             {
-                if (CenaTemp.MusicaAmbiental != false)
+                if (IdA == 10)
                 {
-                    if (CenaTemp.IdTipoAmbientacion == 10)
-                    {
-                        ValAmbCe = 3;
-                        return ValAmbCe;
-                    }
-                    if (CenaTemp.IdTipoAmbientacion == 20)
-                    {
-                        ValAmbCe = 5;
-                        return ValAmbCe;
-                    }
+
+                    ValAmbCe = 2;
+                    return ValAmbCe;
+                }
+                if (IdA == 20)
+                {
+                    ValAmbCe = 5;
+                    return ValAmbCe;
                 }
                 return ValAmbCe;
             }
@@ -352,14 +378,14 @@ namespace BibliotecaNegocio
             Double ValLoca = 0;
             try
             {
-                if (CenaTemp.LocalOnBreak != false && CenaTemp.OtroLocalOnBreak != true && ContratoTemp.Asistentes <= 50)
+                if (local == "OnBreak" && asist <= 50)
                 {
-                    ValLoca = 9 + (CenaTemp.ValorArriendo * 1.05);
+                    ValLoca = 9 + (0 * 1.05);
                     return ValLoca;
                 }
-                if (CenaTemp.LocalOnBreak != true && CenaTemp.OtroLocalOnBreak != false && ContratoTemp.Asistentes > 50)
+                if (local == "OnBreak" && asist <= 50)
                 {
-                    ValLoca = 0 + (CenaTemp.ValorArriendo * 1.05);
+                    ValLoca = 0 + (0 * 1.05);
                     return ValLoca;
                 }
                 return ValLoca;
@@ -379,5 +405,6 @@ namespace BibliotecaNegocio
                 + MusicaCe() + Local();
             return ValorParcialCe;
         }
+
     }
 }

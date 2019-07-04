@@ -4,13 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BibliotecaNegocio
+namespace Vista
 {
     interface IValorEvento
     {
+
         Double ValorBaseEvento();
         Double RecargoAsistentes();
         Double RecargoPersonal();
+        Double ValorFinalCB();
         Double MusicaCo();
         Double AmbientacionCo();
         Double ValorFinalCo();
@@ -18,5 +20,6 @@ namespace BibliotecaNegocio
         Double AmbientacionCe();
         Double Local();
         Double ValorFinalCe();
+
     }
 }

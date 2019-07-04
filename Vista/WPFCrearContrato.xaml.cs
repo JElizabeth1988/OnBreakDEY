@@ -61,7 +61,6 @@ namespace Vista
                 {
                     realizado = false;
                     termino = dpFechaTermino.recuperarFecha();
-
                 }
                 else
                 {
@@ -69,10 +68,7 @@ namespace Vista
                     termino = dpFechaTermino.recuperarFecha();
 
                 }
-
-
                 //EVENTO
-
                 //inicio
                 DateTime fechaHoraInicio = dpFechaInicio1.recuperar();
 
@@ -146,12 +142,8 @@ namespace Vista
             {
                 // lblMensasje.Content = ex.Message;
                 lblMensasje.Content = "No Guardado";
-
             }
-
-
         }
-
 
         double uf = new Servicios.Service1().Uf();
         //el constructor debe ser pasado a privado en el momento que se usa el patron singleton
@@ -160,7 +152,7 @@ namespace Vista
             // if (!IsPostBack)
             //{
 
-                InitializeComponent();
+            InitializeComponent();
 
             DispatcherTimer timer = new DispatcherTimer();
             timer.Interval = TimeSpan.FromMinutes(1);
@@ -181,7 +173,6 @@ namespace Vista
                         bool realizado = true;
                         DateTime termino = DateTime.Now;
 
-
                         //EVENTO
 
                         //inicio
@@ -189,8 +180,6 @@ namespace Vista
 
                         //termino
                         DateTime fechaFinTermino = dpFechaTermino.recuperar();
-
-
                         //////
                         int asistentes = int.Parse(txtNumeroAsistentes.Text);
                         int personalAdicional = int.Parse(txtPersonalAdicional.Text);
@@ -204,8 +193,6 @@ namespace Vista
 
                         Contrato con_mod = new Contrato()
                         {
-
-
                             Numero = numero,
                             Creacion = creacion,
                             Termino = termino,
@@ -221,13 +208,11 @@ namespace Vista
                             Observaciones = observaciones,
                         };
 
-
                         //METODO AGREGAR DEVUELVE BOOLEAN POR ESO SE CREA VARIABLE BOOLEANA resp
                         bool resp = con_mod.Modificar();
                     }
 
                 }
-
           
                 lblNumero.Content = DateTime.Now.ToString("yyyyMMddHHmm");
                 lblUf.Content = "$" + uf;
@@ -243,16 +228,12 @@ namespace Vista
                 txtArriendo.Visibility = Visibility.Hidden;
 
                 cbVegetariana.Items.Add("Si");
-                cbVegetariana.Items.Add("No");
-                
+                cbVegetariana.Items.Add("No");              
 
                 cbLocal.Items.Add("OnBreak");
-                cbLocal.Items.Add("Otro");
-               
-
+                cbLocal.Items.Add("Otro");               
                 cbMusica.Items.Add("Ambiental");
                 cbMusica.Items.Add("Cliente");
-                
 
                 //LLENAR COMBO BOX TIPO EVENTO
                 foreach (TipoEvento item in new TipoEvento().ReadAll())
@@ -270,9 +251,6 @@ namespace Vista
                     cb.descripcion = item.Descripcion;
                     cbAmbientacion.Items.Add(cb);
                 }
-
-
-
                 //LLENAR CB MODALIDAD SERVICIO
 
                 foreach (ModalidadServicio item in new ModalidadServicio().ReadAll())
@@ -319,15 +297,45 @@ namespace Vista
         }
 
 
-    
+
         //BOTON CALCULO CONTRATO
+
+        private comboBoxItem CombTipoEvento;
+        private comboBoxItem2 CombModServ;
+        private ClValorEvento CalculoEvento;
+        private Contrato contratito;
+        private Cenas ce;
+        private Cocktail co;
+        private CofeeBreak cb;
+
 
         private async void btnCalculo_Click(object sender, RoutedEventArgs e)
         {
             try
             {
- 
-                lblTotal.Content =calculo();
+                Servicios.Service1 WS = new Servicios.Service1();
+                Camilita();
+                CalculoEvento = new ClValorEvento(((comboBoxItem)cboTipo.SelectedItem).id,
+                                                   ((comboBoxItem2)cbModalidad.SelectedItem).id,
+                                                   int.Parse(txtNumeroAsistentes.Text),
+                                                   int.Parse(txtPersonalAdicional.Text),
+                                                   ((comboBoxItem)cbAmbientacion.SelectedItem).id,
+                                                   cbLocal.SelectedItem.ToString(),
+                                                   cbMusica.SelectedItem.ToString(),
+                                                   cbLocal.SelectedItem.ToString());
+
+                if (((comboBoxItem)cboTipo.SelectedItem).id == 10)
+                {
+                    lblTotal.Content = "$" + CalculoEvento.ValorFinalCB() * WS.Uf();
+                }
+                if (((comboBoxItem)cboTipo.SelectedItem).id == 20)
+                {
+                    lblTotal.Content = "$" + CalculoEvento.ValorFinalCe() * WS.Uf();
+                }
+                if (((comboBoxItem)cboTipo.SelectedItem).id == 30)
+                {
+                    lblTotal.Content = "$" + CalculoEvento.ValorFinalCo() * WS.Uf();
+                }
             }
             catch (Exception ex)
             {
@@ -336,7 +344,7 @@ namespace Vista
                      string.Format("Debe ingresar valor de asistentes"));
                 Logger.Mensaje(ex.Message);
             }
-           
+
         }
 
         //lblTotal.Content = calculo();
@@ -352,6 +360,7 @@ namespace Vista
         {
             try
             {
+                Camilita();
 
                 if (dpFechaInicio1.recuperar() >= DateTime.Now)
                 {
@@ -365,9 +374,6 @@ namespace Vista
 
                             if (dpFechaTermino.recuperar() < dpFechaInicio1.recuperar().AddHours(24))
                             {
-
-
-
                                 String numero = lblNumero.Content.ToString();
                                 DateTime creacion = fechac;
                                 bool realizado;
@@ -376,23 +382,18 @@ namespace Vista
                                 {
                                     realizado = false;
                                     termino = dpFechaTermino.recuperarFecha();
-
                                 }
                                 else
                                 {
                                     realizado = true;
                                     termino = dpFechaTermino.recuperarFecha();
-
                                 }
-
-
                                 //EVENTO
 
                                 //inicio
                                 DateTime fechaHoraInicio = dpFechaInicio1.recuperar();
 
                                 DateTime fechaHoraTermino = dpFechaTermino.recuperar();
-
 
                                 //////
 
@@ -495,16 +496,12 @@ namespace Vista
                 /*MessageBox.Show("Error de ingreso de datos");*/
                 Logger.Mensaje(ex.Message);
             }
-
-           
-
-
         }
-
        
         //limpiar
         private void btnLimpiar_Click(object sender, RoutedEventArgs e)
         {
+            Camilita();
             btnCrear.Visibility = Visibility.Visible;
             btnModificar.Visibility = Visibility.Hidden;
             btnTerminar.Visibility = Visibility.Hidden;
@@ -580,12 +577,7 @@ namespace Vista
                 txtObservaciones.IsEnabled = true;
                 txtBuscarCliente.IsEnabled = true;
             }
-
-
-
-
         }
-
         //listar numero contrato
         private void btnListadoNum_Click(object sender, RoutedEventArgs e)
         {
@@ -593,17 +585,13 @@ namespace Vista
             con.ShowDialog();
            // btnTerminar.Visibility = Visibility.Visible;
 
-
         }
-
         //listar cliente
         private void btnListadoCliente_Click(object sender, RoutedEventArgs e)
         {
             wpfListadoCliente cli = new wpfListadoCliente(this);
             cli.ShowDialog();
-
         }
-        
         //salir
         private void button_Click(object sender, RoutedEventArgs e)
         {
@@ -637,14 +625,9 @@ namespace Vista
                 cboTipo.IsEnabled = true;
                 txtObservaciones.IsEnabled = true;
                 txtBuscarCliente.IsEnabled = true;
-
-       
             }
             this.Close();
         }
-
-
-   
         //BUSCAR CONTRATO de traspasar
         private async void btnBuscarContrato_Click_2(object sender, RoutedEventArgs e)
         {
@@ -694,13 +677,9 @@ namespace Vista
                     txtObservaciones.IsEnabled = true;
                     txtNumeroAsistentes.IsEnabled = true;
                     txtPersonalAdicional.IsEnabled = true;
-
                 }
-
-
                 if (buscar)
                 {
-
                     txtBuscarCliente.Text = c.RutCliente;
                     //dpFechaInicio.Text = c.FechaHoraInicio.ToString();
                     //dpFechaFinEvento.Text = c.FechaHoraTermino.ToString();
@@ -708,30 +687,23 @@ namespace Vista
                     //txtMinutoInicio.Text = c.MinutoInicio.ToString();
                     //txtHoraTermino.Text = c.HoraTermino.ToString();
                     //txtMinutoTermino.Text = c.MinutoTermino.ToString();
-
                     dpFechaInicio1.datos(c.FechaHoraInicio);
                     dpFechaTermino.datos(c.FechaHoraTermino);
-
                     dpFechaInicio1.datos(c.FechaHoraInicio);
                     dpFechaTermino.datos(c.FechaHoraTermino);
-
                     txtNumeroAsistentes.Text = c.Asistentes.ToString();
                     txtPersonalAdicional.Text = c.PersonalAdicional.ToString();
-
                     TipoEvento tip = new TipoEvento();
                     tip.Id = c.IdTipoEvento;
                     tip.Read();
                     cboTipo.Text = tip.Descripcion;//Cambiar a descripción
-
                     //PASAR nombre modalidad no id
                     ModalidadServicio mod = new ModalidadServicio();
                     mod.Id = c.IdModalidad;
                     mod.Read();
                     cbModalidad.Text = mod.Nombre;//Cambiar a descripción
-
                     /*cboTipo.Text = c.IdTipoEvento.ToString();
                     cbModalidad.Text = c.IdModalidad.ToString();*/
-
                    // cbModalidad.Text = c.IdModalidad;
                     txtObservaciones.Text = c.Observaciones;
                     lblNumero.Content = txtNumero.Text; //IGUALAR CAMPOS 
@@ -742,16 +714,8 @@ namespace Vista
                     
                     btnCrear.Visibility = Visibility.Hidden;//Desaparece el btn crear
                     
-                    
                     lblNombreCliente.Content = clie.RazonSocial;
                     
-                    
-                    
-                    
-
-
-
-
                 }
                 else
                 {
@@ -1437,6 +1401,14 @@ namespace Vista
         {
             _instanciaCr = null;
         }
-    }
-    
+
+        public void Camilita()
+        {
+            contratito = new Contrato();
+            if (contratito.Termino >= DateTime.Now)
+            {
+                rbNo.IsChecked = true;
+            }
+        }
+    } 
 }
