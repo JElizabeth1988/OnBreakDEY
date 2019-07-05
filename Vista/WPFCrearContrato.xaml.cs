@@ -277,7 +277,6 @@ namespace Vista
                  cboEstadoCivil.Text = p.EstadoCivil;
 
              }*/
-
         }
 
         //METODO CALCULO
@@ -287,12 +286,8 @@ namespace Vista
             double valorc = double.Parse(lblValorBase.Content.ToString())
             + double.Parse(lblAsistentes.Content.ToString())
             + double.Parse(lblPersonalAdicional.Content.ToString());
-
-            
             return valorc;
         }
-
-
 
         //BOTON CALCULO CONTRATO
 
@@ -320,17 +315,24 @@ namespace Vista
                                                    cbMusica.SelectedItem.ToString(),
                                                    cbLocal.SelectedItem.ToString());
 
+                int arriendo = 0;
+
+                if(txtArriendo.Text=="")
+                {
+                    txtArriendo.Text = arriendo.ToString();
+                }
+
                 if (((comboBoxItem)cboTipo.SelectedItem).id == 10)
                 {
-                    lblTotal.Content = (int)(CalculoEvento.ValorFinalCB() * WS.Uf());
+                    lblTotal.Content = (int)(CalculoEvento.ValorFinalCB() * WS.Uf()) + int.Parse(txtArriendo.Text);
                 }
                 if (((comboBoxItem)cboTipo.SelectedItem).id == 20)
                 {
-                    lblTotal.Content = (int)(CalculoEvento.ValorFinalCB() * WS.Uf());
+                    lblTotal.Content = (int)(CalculoEvento.ValorFinalCB() * WS.Uf()) + int.Parse(txtArriendo.Text);
                 }
                 if (((comboBoxItem)cboTipo.SelectedItem).id == 30)
                 {
-                    lblTotal.Content = (int)(CalculoEvento.ValorFinalCB() * WS.Uf());
+                    lblTotal.Content = (int)(CalculoEvento.ValorFinalCB() * WS.Uf()) + int.Parse(txtArriendo.Text);
                 }
             }
             catch (Exception ex)
@@ -816,7 +818,7 @@ namespace Vista
                 Cliente c = new Cliente();
                 c.RutCliente = txtBuscarCliente.Text;
                 bool buscar = c.Buscar();
-                if (buscar)
+                if (buscar==true)
                 {
                    
                     lblNombreCliente.Content = c.RazonSocial;
@@ -873,8 +875,6 @@ namespace Vista
 
             }
         }
-
-
 
         //MODIFICAR
         private async void btnModificar_Click(object sender, RoutedEventArgs e)
@@ -1095,9 +1095,6 @@ namespace Vista
                         }
 
                     }
-        
-
-
 
         //valor evento base
 
@@ -1163,8 +1160,6 @@ namespace Vista
             //    Logger.Mensaje(ex.Message);
             //}
         }
-
-
 
         //valor personal adicional
         private async void txtPersonalAdicional_TextChanged_1(object sender, TextChangedEventArgs e)
@@ -1283,8 +1278,6 @@ namespace Vista
 
         }
 
-
-
         private void btnMasHoraInicio_Click(object sender, RoutedEventArgs e)
         {
             
@@ -1331,7 +1324,6 @@ namespace Vista
             }   
 
         }
-
 
         protected void btnRecuperar_Click(object sender, RoutedEventArgs e)
         {
