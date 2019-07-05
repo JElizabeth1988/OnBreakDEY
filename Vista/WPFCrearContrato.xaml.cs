@@ -53,6 +53,8 @@ namespace Vista
             try
             {
                 lblMensasje.Visibility = Visibility.Visible;
+                XmlSerializer se = new XmlSerializer(typeof(Contrato));
+                StringWriter escritor = new StringWriter();
                 String numero = lblNumero.Content.ToString();
                 DateTime creacion = fechac;
                 bool realizado;
@@ -77,29 +79,9 @@ namespace Vista
 
                 //////
                 int asistentes = int.Parse(txtNumeroAsistentes.Text);
-                /*int asistentes = 0;
-                if (int.TryParse(txtNumeroAsistentes.Text, out asistentes))
-                {
-                }
-                else
-                {
-                    await this.ShowMessageAsync("Mensaje:",
-                      string.Format("Ingrese sólo números"));
-                    txtNumeroAsistentes.Focus();
-                    return;
-                }*/
+                
                 int personalAdicional = int.Parse(txtPersonalAdicional.Text);
-                /*int personalAdicional = 0;
-                if (int.TryParse(txtPersonalAdicional.Text, out personalAdicional))
-                {
-                }
-                else
-                {
-                    await this.ShowMessageAsync("Mensaje:",
-                      string.Format("Ingrese sólo números"));
-                    txtPersonalAdicional.Focus();
-                    return;
-                }*/
+                
 
                 //CB
                 int evento = ((comboBoxItem)cboTipo.SelectedItem).id;
@@ -133,7 +115,20 @@ namespace Vista
                 politica.AbsoluteExpiration = DateTimeOffset.Now.AddMinutes(5);//cada 5 minutos borra la politica (el cache)
                 cacheName.Set("Contrato", con, politica);
                 lblMensasje.Visibility = Visibility.Visible;
-                lblMensasje.Content = "Almacenado en Cache";
+                //lblMensasje.Content = "Almacenado en Cache";
+                se.Serialize(escritor, con);
+                try
+                {
+                    File.Delete(@"d:\copia.txt");//Borra copia anterior
+
+                    File.AppendAllText(@"d:\copia.txt", escritor.ToString());//Guarda copia automaticamente en el disco d
+                    lblMensasje.Content = "Datos Respaldados!";
+                }
+                catch (Exception ex)
+                {
+                    lblMensasje.Content = ex.Message;
+                }
+
 
             }
             catch (Exception ex)
@@ -147,9 +142,7 @@ namespace Vista
         //el constructor debe ser pasado a privado en el momento que se usa el patron singleton
         private Crear_Contrato()
         {
-            // if (!IsPostBack)
-            //{
-
+            
             InitializeComponent();
 
             DispatcherTimer timer = new DispatcherTimer();
@@ -157,8 +150,10 @@ namespace Vista
             timer.Tick += timer_Tick;
             timer.Start();
 
-            //PENDIENTE
-            Contrato con = new Contrato();
+            if (!IsLoaded)
+            {
+                //PENDIENTE
+                Contrato con = new Contrato();
 
                 foreach (Contrato item in new Contrato().ReadAll())
                 {
@@ -210,78 +205,121 @@ namespace Vista
                         bool resp = con_mod.Modificar();
                     }
 
-                }
+                    }
           
-                lblNumero.Content = DateTime.Now.ToString("yyyyMMddHHmm");
-                lblUf.Content = "$" + (int)(uf);
-                this.cboTipo.SelectedItem = null;
-                btnTerminar.Visibility = Visibility.Hidden;
-                btnModificar.Visibility = Visibility.Hidden;
+                    lblNumero.Content = DateTime.Now.ToString("yyyyMMddHHmm");
+                    lblUf.Content = "$" + (int)(uf);
+                    this.cboTipo.SelectedItem = null;
+                    btnTerminar.Visibility = Visibility.Hidden;
+                    btnModificar.Visibility = Visibility.Hidden;
 
-                cbVegetariana.IsEnabled = false;
-                cbAmbientacion.IsEnabled = false;
-                cbLocal.IsEnabled = false;
-                cbMusica.IsEnabled = false;
-                lbl_Arriendo.Visibility = Visibility.Hidden;
-                txtArriendo.Visibility = Visibility.Hidden;
-                cbVegetariana.Items.Add("Si");
-                cbVegetariana.Items.Add("No");              
-                cbLocal.Items.Add("OnBreak");
-                cbLocal.Items.Add("Otro");               
-                cbMusica.Items.Add("Ambiental");
-                cbMusica.Items.Add("Cliente");
+                    cbVegetariana.IsEnabled = false;
+                    cbAmbientacion.IsEnabled = false;
+                    cbLocal.IsEnabled = false;
+                    cbMusica.IsEnabled = false;
+                    lbl_Arriendo.Visibility = Visibility.Hidden;
+                    txtArriendo.Visibility = Visibility.Hidden;
+                    cbVegetariana.Items.Add("Si");
+                    cbVegetariana.Items.Add("No");              
+                    cbLocal.Items.Add("OnBreak");
+                    cbLocal.Items.Add("Otro");               
+                    cbMusica.Items.Add("Ambiental");
+                    cbMusica.Items.Add("Cliente");
 
-                //LLENAR COMBO BOX TIPO EVENTO
-                foreach (TipoEvento item in new TipoEvento().ReadAll())
+                    //LLENAR COMBO BOX TIPO EVENTO
+                    foreach (TipoEvento item in new TipoEvento().ReadAll())
+                    {
+                        comboBoxItem cb = new comboBoxItem();
+                        cb.id = item.Id;
+                        cb.descripcion = item.Descripcion;
+                        cboTipo.Items.Add(cb);
+                    }
+                    //LLENAR COMBO BOX AMBIENTACION
+                    foreach (TipoAmbientacion item in new TipoAmbientacion().ReadAll())
+                    {
+                        comboBoxItem cb = new comboBoxItem();
+                        cb.id = item.IdTipoAmbientacion;
+                        cb.descripcion = item.Descripcion;
+                        cbAmbientacion.Items.Add(cb);
+                    }
+                    //LLENAR CB MODALIDAD SERVICIO
+
+                    foreach (ModalidadServicio item in new ModalidadServicio().ReadAll())
+                    {
+                        comboBoxItem2 cb = new comboBoxItem2();
+                        cb.id = item.Id;
+                        cb.descripcion = item.Nombre;
+                        cbModalidad.Items.Add(cb);
+                    }
+
+                    cboTipo.SelectedIndex = 0;
+                    cbModalidad.SelectedIndex = 0;
+                    cbAmbientacion.SelectedIndex = 0;
+                    cbLocal.SelectedIndex = 0;
+                    cbModalidad.SelectedIndex = 0;
+                    cbMusica.SelectedIndex = 0;
+                    cbVegetariana.SelectedIndex = 0;
+
+            }
+            if (File.Exists(@"d:\copia.txt"))
+            {
+                try
                 {
-                    comboBoxItem cb = new comboBoxItem();
-                    cb.id = item.Id;
-                    cb.descripcion = item.Descripcion;
-                    cboTipo.Items.Add(cb);
+                    string xml = @"d:\copia.txt";
+
+                    lblMensasje.Content = "Existe copia previa";
+                    timer.IsEnabled = false;
+                    XmlSerializer se = new XmlSerializer(typeof(Contrato));
+
+                    TextReader lector = new StreamReader(xml);
+
+                    Contrato c = cacheName["Contrato"] as Contrato;
+                    lblNumero.Content = c.Numero;
+                    //txtNumero.Text = c.Numero;
+                    txtBuscarCliente.Text = c.RutCliente;
+                    dpFechaInicio1.datos(c.FechaHoraInicio);
+                    dpFechaTermino.datos(c.FechaHoraTermino);
+                    dpFechaInicio1.datos(c.FechaHoraInicio);
+                    dpFechaTermino.datos(c.FechaHoraTermino);
+                    txtNumeroAsistentes.Text = c.Asistentes.ToString();
+                    txtPersonalAdicional.Text = c.PersonalAdicional.ToString();
+                    TipoEvento tip = new TipoEvento();
+                    tip.Id = c.IdTipoEvento;
+                    tip.Read();
+                    cboTipo.Text = tip.Descripcion;//Cambiar a descripción
+
+                    //PASAR nombre modalidad no id
+                    ModalidadServicio mod = new ModalidadServicio();
+                    mod.Id = c.IdModalidad;
+                    mod.Read();
+                    cbModalidad.Text = mod.Nombre;//Cambiar a descripción
+
+                    // cbModalidad.Text = c.IdModalidad;
+                    txtObservaciones.Text = c.Observaciones;
+
+                    lblNombreCliente.Visibility = Visibility.Visible;//aparecer label
+                    lblTotal.Content = calculo();
+
+
+                    Cliente clie = new Cliente();
+                    lblNombreCliente.Content = clie.RazonSocial;
+
+                    lblMensasje.Content = "Cache Recuperado";
+
                 }
-                //LLENAR COMBO BOX AMBIENTACION
-                foreach (TipoAmbientacion item in new TipoAmbientacion().ReadAll())
+                catch (Exception ex)
                 {
-                    comboBoxItem cb = new comboBoxItem();
-                    cb.id = item.IdTipoAmbientacion;
-                    cb.descripcion = item.Descripcion;
-                    cbAmbientacion.Items.Add(cb);
-                }
-                //LLENAR CB MODALIDAD SERVICIO
 
-                foreach (ModalidadServicio item in new ModalidadServicio().ReadAll())
-                {
-                    comboBoxItem2 cb = new comboBoxItem2();
-                    cb.id = item.Id;
-                    cb.descripcion = item.Nombre;
-                    cbModalidad.Items.Add(cb);
+                    lblMensasje.Content = "Problemas al Recuperar";
                 }
 
-                cboTipo.SelectedIndex = 0;
-                cbModalidad.SelectedIndex = 0;
-                cbAmbientacion.SelectedIndex = 0;
-                cbLocal.SelectedIndex = 0;
-                cbModalidad.SelectedIndex = 0;
-                cbMusica.SelectedIndex = 0;
-                cbVegetariana.SelectedIndex = 0;
 
-            // }
-            //Falta timer!!!
-            /*if (File.Exists(@"d:\copia.txt"))
-             {
-
-                 lblMensasje.Text = "Existe copia previa";
-                 Timer1.Enabled = false;
-                 XmlSerializer se = new XmlSerializer(typeof(ClPersona));
-                 StringReader lector = new StringReader();
-                 ClPersona p = (ClPersona)se.Deserialize(lector);
-                 txtRut.Text = p.Rut;
-                 txtNombre.Text = p.Nombre;
-                 txtApellido.Text = p.Apellido;
-                 txtEdad.Text = p.Edad.ToString();
-                 cboEstadoCivil.Text = p.EstadoCivil;
-
-             }*/
+            }
+            else
+            {
+                StringWriter escritor = new StringWriter();
+                File.AppendAllText(@"d:\copia.txt", escritor.ToString());
+            }
         }
 
         //METODO CALCULO
@@ -1384,8 +1422,20 @@ namespace Vista
         protected void btnLimpiarCache_Click(object sender, RoutedEventArgs e)
         {
             lblMensasje.Visibility = Visibility.Visible;
+
             cacheName.Remove("Contrato", null);
             lblMensasje.Content = "Eliminó cache";
+            try
+            {
+                File.Delete(@"d:\copia.txt");
+
+
+            }
+            catch (Exception ex)
+            {
+                lblMensasje.Content = ex.Message;
+            }
+            
         }
 
         private void MetroWindow_Closed(object sender, EventArgs e)
