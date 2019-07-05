@@ -52,6 +52,8 @@ namespace Vista
         {
             try
             {
+                XmlSerializer se = new XmlSerializer(typeof(Cliente));
+                StringWriter escritor = new StringWriter();
                 String rut = txtRut.Text + "-" + txtDV.Text;
                 if (rut.Length == 11)
                 {
@@ -76,7 +78,20 @@ namespace Vista
                 politica.AbsoluteExpiration = DateTimeOffset.Now.AddMinutes(5);//cada 5 minutos borra la politica (el cache)
                 cacheName.Set("Cliente", p, politica);
                 label2.Visibility = Visibility.Visible;
-                label2.Content = "Almacenada en cache";
+                //label2.Content = "Almacenada en cache";
+
+                se.Serialize(escritor, p);
+                try
+                {
+                    File.Delete(@"d:\copiaCliente.txt");//Borra copia anterior
+
+                    File.AppendAllText(@"d:\copiaCliente.txt", escritor.ToString());//Guarda copia automaticamente en el disco d
+                    label2.Content = "Datos Respaldados!";
+                }
+                catch (Exception ex)
+                {
+                    label2.Content = ex.Message;
+                }
             }
             catch (Exception ex)
             {
@@ -89,6 +104,7 @@ namespace Vista
         //el constructor debe ser pasado a privado en el momento que se usa el patron singleton
         private WpfCliente()
         {
+           
             InitializeComponent();
 
             DispatcherTimer timer = new DispatcherTimer();
@@ -96,27 +112,73 @@ namespace Vista
             timer.Tick += timer_Tick;
             timer.Start();
 
-            txtDV.IsEnabled = false;
-            btnModificar.Visibility = Visibility.Hidden;//el botón Modificar no se ve
+            if (!IsLoaded)
+            {
+                txtDV.IsEnabled = false;
+                btnModificar.Visibility = Visibility.Hidden;//el botón Modificar no se ve
 
-            //llenar el combo box con los datos del enumerador
-            foreach (ActividadEmpresa item in new ActividadEmpresa().ReadAll())
+                //llenar el combo box con los datos del enumerador
+                foreach (ActividadEmpresa item in new ActividadEmpresa().ReadAll())
+                {
+                    comboBoxItem cb = new comboBoxItem();
+                    cb.id = item.Id;
+                    cb.descripcion = item.Descripcion;
+                    cbActividad.Items.Add(cb);
+                }
+                foreach (TipoEmpresa item in new TipoEmpresa().ReadAll())
+                {
+                    comboBoxItem cb = new comboBoxItem();
+                    cb.id = item.Id;
+                    cb.descripcion = item.Descripcion;
+                    cbTipo.Items.Add(cb);
+                }
+                cbActividad.SelectedIndex = 0;
+                cbTipo.SelectedIndex = 0;
+                txtTelefono.Text = "0";
+
+           }
+            if (File.Exists(@"d:\copiaCliente.txt") )
             {
-                comboBoxItem cb = new comboBoxItem();
-                cb.id = item.Id;
-                cb.descripcion = item.Descripcion;
-                cbActividad.Items.Add(cb);
+                try
+                {
+                    string xml = @"d:\copiaCliente.txt";
+
+                    label2.Content = "Existe copia previa";
+                    timer.IsEnabled = false;
+                    XmlSerializer se = new XmlSerializer(typeof(Cliente));
+
+                    TextReader lector = new StreamReader(xml);
+                    Cliente c = (Cliente)se.Deserialize(lector);
+                    txtRut.Text = c.RutCliente.Substring(0, 10);
+                    txtDV.Text = c.RutCliente.Substring(11, 1);
+                    txtRazon.Text = c.RazonSocial;
+                    txtNombre.Text = c.NombreContacto;
+                    txtEmail.Text = c.MailContacto;
+                    txtDireccion.Text = c.Direccion;
+                    txtTelefono.Text = c.Telefono;
+                    ActividadEmpresa ac = new ActividadEmpresa();
+                    ac.Id = c.IdActividadEmpresa;
+                    ac.Read();
+                    cbActividad.Text = ac.Descripcion;//Cambiar a descripción
+                    TipoEmpresa te = new TipoEmpresa();
+                    te.Id = c.IdTipoEmpresa;
+                    te.Read();
+                    cbTipo.Text = te.Descripcion;//Cambiar a descripción
+
+                }
+                catch (Exception ex)
+                {
+
+                    label2.Content =ex;
+                }
+               
+
             }
-            foreach (TipoEmpresa item in new TipoEmpresa().ReadAll())
+            else
             {
-                comboBoxItem cb = new comboBoxItem();
-                cb.id = item.Id;
-                cb.descripcion = item.Descripcion;
-                cbTipo.Items.Add(cb);
+                StringWriter escritor = new StringWriter();
+                File.AppendAllText(@"d:\copiaCliente.txt", escritor.ToString());
             }
-            cbActividad.SelectedIndex = 0;
-            cbTipo.SelectedIndex = 0;
-            txtTelefono.Text = "0";
         }
 
 
@@ -132,7 +194,7 @@ namespace Vista
                 txtRazon.Text = c.RazonSocial;
                 txtNombre.Text = c.NombreContacto;
                 txtEmail.Text = c.MailContacto;
-                txtDireccion.Text = c.Telefono;
+                txtDireccion.Text = c.Direccion;
                 txtTelefono.Text = c.Telefono;
                 ActividadEmpresa ac = new ActividadEmpresa();
                 ac.Id = c.IdActividadEmpresa;
@@ -158,6 +220,16 @@ namespace Vista
         {
             cacheName.Remove("Cliente", null);
             label2.Content = "Eliminó cache";
+            try
+            {
+                File.Delete(@"d:\copiaCliente.txt");
+                
+
+            }
+            catch (Exception ex)
+            {
+                label2.Content = ex.Message;
+            }
         }
 
 
