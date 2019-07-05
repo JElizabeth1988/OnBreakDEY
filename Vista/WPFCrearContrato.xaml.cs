@@ -837,7 +837,7 @@ namespace Vista
                     /*MessageBox.Show("Cliente no Encontrado");*/
                 }
             }
-            catch (Exception ex)
+            catch (Exception ex) 
             {
                 await this.ShowMessageAsync("Mensaje:",
                       string.Format("Error al Buscar"));
