@@ -10,7 +10,7 @@
         
         xmlns:local="clr-namespace:Vista"
         mc:Ignorable="d"
-         Title="Bienvenido a OnBreak" Height="628.661" Width="1145.816" WindowTitleBrush="Black" Icon="Imagenes/white_logo_dark_background.jpg" WindowStartupLocation="CenterScreen" FontWeight="Bold" TitleCharacterCasing="Normal">
+         Title="Bienvenido a OnBreak" Height="628.661" Width="1145.816" WindowTitleBrush="Black" Icon="Imagenes/white_logo_dark_background.jpg" WindowStartupLocation="CenterScreen" FontWeight="Bold" TitleCharacterCasing="Normal" ResizeMode="NoResize">
 
 
     <Grid Margin="-6,0,-5.333,0">

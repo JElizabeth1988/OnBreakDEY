@@ -14,7 +14,7 @@
         xmlns:WpfControlLibrary1="clr-namespace:WpfControlLibrary1;assembly=WpfControlLibrary1" x:Class="Vista.Crear_Contrato"
         mc:Ignorable="d"
         Title="OnBreak - Administrar Contrato" Height="628.335" Width="1025.628" WindowStartupLocation="CenterScreen" FontWeight="Bold" WindowTitleBrush="Black" Icon="Imagenes/white_logo_dark_background.jpg" ResizeMode="NoResize" TitleCharacterCasing="Normal" Closed="MetroWindow_Closed">
-    <Grid Margin="0,-2,-3,-12.333" Height="679" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+    <Grid Margin="0,-2,-0.8,-2.6" Height="603" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="#FF17B3D6" Offset="0.017"/>
@@ -71,8 +71,8 @@
                 <Button x:Name="btnListadoCliente" Content="?" HorizontalAlignment="Left" Margin="342,38,0,0" VerticalAlignment="Top" Width="47" Height="30" Click="btnListadoCliente_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF0A5068"/>
             </Grid>
         </GroupBox>
-        <GroupBox x:Name="groupBox1" Header="Datos de evento" HorizontalAlignment="Left" Height="354" Margin="48,184,0,0" VerticalAlignment="Top" Width="898" Background="#FF0A5068" Grid.ColumnSpan="2">
-            <Grid HorizontalAlignment="Left" Height="306" VerticalAlignment="Top" Width="860">
+        <GroupBox x:Name="groupBox1" Header="Datos de evento" HorizontalAlignment="Left" Height="354" Margin="45,191,0,0" VerticalAlignment="Top" Width="898" Background="#FF0A5068" Grid.ColumnSpan="2">
+            <Grid HorizontalAlignment="Left" Height="306" VerticalAlignment="Top" Width="880">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="148*"/>
                     <ColumnDefinition Width="67*"/>
@@ -100,11 +100,11 @@
                 <Label x:Name="label_Copy5" HorizontalAlignment="Left" Margin="74,164,0,0" VerticalAlignment="Top" Width="194" Height="25" Grid.Column="1">
                     <Separator HorizontalAlignment="Left" Height="6" Margin="0" VerticalAlignment="Top" Width="567"/>
                 </Label>
-                <Label x:Name="label9_Copy1" Content="Valor Evento" HorizontalAlignment="Left" Margin="84,29,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="Black" Height="34" Width="121" FontSize="16" FontFamily="Segoe UI Historic" FontWeight="Bold" Grid.Column="1"/>
-                <Label x:Name="label_Copy6" Content="Valor Total : $" HorizontalAlignment="Left" Margin="84,181,0,0" VerticalAlignment="Top" Height="26" Width="77" Grid.Column="1"/>
-                <Label x:Name="lblAsistentes" Content="" HorizontalAlignment="Left" Margin="213,101,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                <Label x:Name="label9_Copy1" Content="Valor Evento" Margin="84.4,29,85,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="Black" Height="34" FontSize="16" FontFamily="Segoe UI Historic" FontWeight="Bold" Grid.Column="1"/>
+                <Label x:Name="label_Copy6" Content="Valor Total : $" HorizontalAlignment="Left" Margin="74,181,0,0" VerticalAlignment="Top" Height="26" Width="77" Grid.Column="1"/>
+                <Label x:Name="lblAsistentes" Content="" HorizontalAlignment="Left" Margin="213.4,105,0,0" VerticalAlignment="Top" Grid.Column="1"/>
                 <Label x:Name="lblPersonalAdicional" Content="" HorizontalAlignment="Left" Margin="213,138,0,0" VerticalAlignment="Top" Grid.Column="1"/>
-                <Label x:Name="lblTotal" Content="" HorizontalAlignment="Left" Margin="183,181,-12,0" VerticalAlignment="Top" Width="97" FontWeight="Bold" Height="26" BorderBrush="Black" Grid.Column="1"/>
+                <Label x:Name="lblTotal" Content="" HorizontalAlignment="Left" Margin="164,181,-7,0" VerticalAlignment="Top" Width="111" FontWeight="Bold" Height="26" BorderBrush="Black" Grid.Column="1"/>
                 <Label x:Name="lblUf" Content="" HorizontalAlignment="Left" Margin="214,-2,0,0" VerticalAlignment="Top" Grid.Column="1"/>
                 <Label x:Name="label_Copy8" Content="Valor UF :" HorizontalAlignment="Left" Margin="84,-2,0,0" VerticalAlignment="Top" Height="26" Width="64" Grid.Column="1"/>
 
@@ -113,7 +113,7 @@
                 <WpfControlLibrary1:UserControl1 x:Name="dpFechaInicio1" HorizontalAlignment="Left" Margin="102,170,0,0" VerticalAlignment="Top" Width="388"/>
                 <ComboBox x:Name="cbModalidad" HorizontalAlignment="Left" Margin="437,2,0,0" VerticalAlignment="Top" Width="138" SelectionChanged="cbModalidad_LostFocus"/>
                 <Label x:Name="label4" Content="Modalidad Servicio:" HorizontalAlignment="Left" Margin="308,2,0,0" VerticalAlignment="Top"/>
-                <Label x:Name="lblValorBase" Content="" HorizontalAlignment="Left" Margin="213,74,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                <Label x:Name="lblValorBase" Content="" HorizontalAlignment="Left" Margin="214.4,70,0,0" VerticalAlignment="Top" Grid.Column="1"/>
                 <Label x:Name="lbl_cbAmbientacion" Content="Ambientación:" HorizontalAlignment="Left" Margin="309,35,0,0" VerticalAlignment="Top"/>
                 <Label x:Name="label3" Content="Inicio:" HorizontalAlignment="Left" Margin="14,184,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.471,-0.113"/>
                 <WpfControlLibrary1:UserControl1 x:Name="dpFechaTermino" HorizontalAlignment="Left" Margin="102,207,0,0" VerticalAlignment="Top" Width="390"/>
@@ -131,7 +131,7 @@
         </GroupBox>
         <Label x:Name="label2" Content="Contrato Vigente" HorizontalAlignment="Left" Margin="83.332,4,0,0" VerticalAlignment="Top" Grid.Column="1"/>
         <Button x:Name="btnCalculo" Content="Calcular" HorizontalAlignment="Left" Margin="99.332,453,0,0" VerticalAlignment="Top" Width="76" Height="33" Click="btnCalculo_Click" FontWeight="Normal" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF0A5068" Grid.Column="1"/>
-        <ComboBox x:Name="cbMusica" HorizontalAlignment="Left" Margin="183,284,0,0" VerticalAlignment="Top" Width="133"/>
+        <ComboBox x:Name="cbMusica" HorizontalAlignment="Left" Margin="183,293,0,0" VerticalAlignment="Top" Width="133"/>
         <GroupBox x:Name="groupBox_Copy" Header="Opciones Cache" HorizontalAlignment="Left" Margin="36.332,45,0,0" VerticalAlignment="Top" Height="126" Width="261" BorderBrush="#FF0A5068" Background="#FF0A5068" Controls:ControlsHelper.ContentCharacterCasing="Normal" Grid.Column="1">
             <Grid HorizontalAlignment="Left" Height="100" Margin="5,-3,0,-6.333" VerticalAlignment="Top" Width="227">
                 <Grid.ColumnDefinitions>
@@ -143,6 +143,7 @@
                 <Label x:Name="lblMensasje" Content="" HorizontalAlignment="Left" Margin="10,62,0,-40" VerticalAlignment="Top" Width="157" Grid.ColumnSpan="2"/>
             </Grid>
         </GroupBox>
+        <Label x:Name="lblpeso" Content="$" Grid.Column="1" HorizontalAlignment="Left" Margin="125.4,402,0,0" VerticalAlignment="Top" Height="27" Width="20"/>
 
     </Grid>
 </Controls:MetroWindow>

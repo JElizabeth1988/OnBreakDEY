@@ -40,7 +40,7 @@ namespace Vista
             {
                 _instanciaCr = new Crear_Contrato();
             }
-            
+            lblPersonalAdicional:
             return _instanciaCr;
         }
 
@@ -80,7 +80,6 @@ namespace Vista
                 /*int asistentes = 0;
                 if (int.TryParse(txtNumeroAsistentes.Text, out asistentes))
                 {
-
                 }
                 else
                 {
@@ -93,7 +92,6 @@ namespace Vista
                 /*int personalAdicional = 0;
                 if (int.TryParse(txtPersonalAdicional.Text, out personalAdicional))
                 {
-
                 }
                 else
                 {
@@ -215,7 +213,7 @@ namespace Vista
                 }
           
                 lblNumero.Content = DateTime.Now.ToString("yyyyMMddHHmm");
-                lblUf.Content = "$" + uf;
+                lblUf.Content = "$" + (int)(uf);
                 this.cboTipo.SelectedItem = null;
                 btnTerminar.Visibility = Visibility.Hidden;
                 btnModificar.Visibility = Visibility.Hidden;
@@ -226,10 +224,8 @@ namespace Vista
                 cbMusica.IsEnabled = false;
                 lbl_Arriendo.Visibility = Visibility.Hidden;
                 txtArriendo.Visibility = Visibility.Hidden;
-
                 cbVegetariana.Items.Add("Si");
                 cbVegetariana.Items.Add("No");              
-
                 cbLocal.Items.Add("OnBreak");
                 cbLocal.Items.Add("Otro");               
                 cbMusica.Items.Add("Ambiental");
@@ -326,15 +322,15 @@ namespace Vista
 
                 if (((comboBoxItem)cboTipo.SelectedItem).id == 10)
                 {
-                    lblTotal.Content = "$" + CalculoEvento.ValorFinalCB() * WS.Uf();
+                    lblTotal.Content = (int)(CalculoEvento.ValorFinalCB() * WS.Uf());
                 }
                 if (((comboBoxItem)cboTipo.SelectedItem).id == 20)
                 {
-                    lblTotal.Content = "$" + CalculoEvento.ValorFinalCe() * WS.Uf();
+                    lblTotal.Content = (int)(CalculoEvento.ValorFinalCB() * WS.Uf());
                 }
                 if (((comboBoxItem)cboTipo.SelectedItem).id == 30)
                 {
-                    lblTotal.Content = "$" + CalculoEvento.ValorFinalCo() * WS.Uf();
+                    lblTotal.Content = (int)(CalculoEvento.ValorFinalCB() * WS.Uf());
                 }
             }
             catch (Exception ex)
@@ -902,14 +898,8 @@ namespace Vista
                     {
                         realizado = true;
                         termino = dpFechaTermino.recuperarFecha();
-
-
-
                     }
-
-
                     //////
-
                     int asistentes = 0;
                     if (int.TryParse(txtNumeroAsistentes.Text, out asistentes))
                     {
@@ -1123,8 +1113,8 @@ namespace Vista
                 double uf = WS.Uf();
 
              
-                double asi = 0;
-                if (double.TryParse(txtNumeroAsistentes.Text, out asi))
+                int asi = 0;
+                if (int.TryParse(txtNumeroAsistentes.Text, out asi))
                 {
 
                 }
@@ -1147,13 +1137,13 @@ namespace Vista
                 }
                 if (asi > 50)
                 {
-                    double c = asi - 50;
+                    int c = asi - 50;
                     n = 5;
-                    double r = (c / 20);
+                    int r = (int)(c / 20);
                     n = n + r;
 
                 }
-                double v = (n * uf);
+                int v = (int)((int)(n) * uf);
                lblAsistentes.Content = v.ToString();
             }
             else
@@ -1297,7 +1287,7 @@ namespace Vista
 
         private void btnMasHoraInicio_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         private void cbModalidad_LostFocus(object sender, SelectionChangedEventArgs e)
@@ -1336,7 +1326,7 @@ namespace Vista
                     cant = 10;
                 }
 
-                double valor = (double)(cant * uf);
+                int valor = (int)(cant * uf);
                 lblValorBase.Content = valor.ToString();
             }   
 
