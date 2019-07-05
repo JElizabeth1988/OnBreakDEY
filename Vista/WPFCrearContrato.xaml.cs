@@ -259,7 +259,12 @@ namespace Vista
 
                 cboTipo.SelectedIndex = 0;
                 cbModalidad.SelectedIndex = 0;
-             
+                cbAmbientacion.SelectedIndex = 0;
+                cbLocal.SelectedIndex = 0;
+                cbModalidad.SelectedIndex = 0;
+                cbMusica.SelectedIndex = 0;
+                cbVegetariana.SelectedIndex = 0;
+
             // }
             //Falta timer!!!
             /*if (File.Exists(@"d:\copia.txt"))
@@ -503,7 +508,11 @@ namespace Vista
             btnCrear.Visibility = Visibility.Visible;
             btnModificar.Visibility = Visibility.Hidden;
             btnTerminar.Visibility = Visibility.Hidden;
-            lblMensasje.Visibility = Visibility.Hidden;
+            lblAsistentes.Content = string.Empty;
+            lblMensasje.Content = string.Empty;
+            lblPersonalAdicional.Content = string.Empty;
+            lblTotal.Content = string.Empty;
+            txtArriendo.Clear();
 
             txtBuscarCliente.Clear();
             lblNombreCliente.Visibility = Visibility.Hidden;//desaparecer label
