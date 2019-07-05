@@ -1340,30 +1340,42 @@ namespace Vista
                 if (moda.Equals("CB001"))
                 {
                     cant = 3;
+                    dpFechaTermino.desbloquearHora();
                 }
                 if (moda.Equals("CB002"))
                 {
                     cant = 8;
+                    dpFechaTermino.recuperarHora(dpFechaInicio1.sacarHora(), 4);
+                    dpFechaTermino.bloquearHora();
                 }
                 if (moda.Equals("CB003"))
                 {
                     cant = 12;
+                    dpFechaTermino.recuperarHora(dpFechaInicio1.sacarHora(), 8);
+                    dpFechaTermino.bloquearHora();
                 }
                 if (moda.Equals("CE001"))
                 {
                     cant = 25;
+                    dpFechaTermino.desbloquearHora();
                 }
                 if (moda.Equals("CE002"))
                 {
                     cant = 35;
+                    dpFechaTermino.desbloquearHora();
                 }
                 if (moda.Equals("CO001"))
                 {
                     cant = 6;
+
+                    dpFechaTermino.recuperarMinuto(dpFechaInicio1.sacarMinuto(), 30);
+                    dpFechaTermino.bloquearHora();
                 }
                 if (moda.Equals("CO002"))
                 {
                     cant = 10;
+                    dpFechaTermino.recuperarHora(dpFechaInicio1.sacarHora(), 1);
+                    dpFechaTermino.bloquearHora();
                 }
 
                 int valor = (int)(cant * uf);

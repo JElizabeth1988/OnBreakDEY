@@ -77,6 +77,58 @@ namespace WpfControlLibrary1
             return new DateTime(ano, mes, dia, hora, min, 0);
 
         }
+
+        //Horas Según Modalidad
+        public void recuperarHora(int inicio, int mas)
+        {
+            int horas;
+            txthora.Text = DateTime.Now.Hour.ToString();
+
+            if (hora > 23)
+            {
+                hora = 0;
+            }
+            if (hora < 0)
+            {
+                hora = 23;
+            }
+
+            horas = inicio + mas;
+            txthora.Text = horas.ToString();
+
+            if (horas != 0)
+            {
+                horas = 0;
+            }
+
+
+        }
+
+        public void recuperarMinuto(int inicio, int mas)
+        {
+            int mi;
+            txtminutos.Text = DateTime.Now.Minute.ToString();
+
+            if (minutos > 59)
+            {
+                minutos = 0;
+            }
+            if (minutos < 0)
+            {
+                minutos = 59;
+            }
+
+            mi = inicio + mas;
+            txtminutos.Text = mi.ToString();
+
+            if (minutos != 0)
+            {
+                minutos = 0;
+            }
+
+        }
+        ////////
+
         public DateTime recuperarFecha()
         {
             int ano = ((DateTime)dtfecha.SelectedDate).Year;
@@ -114,6 +166,32 @@ namespace WpfControlLibrary1
             dtfecha.IsEnabled = false;
             txthora.IsEnabled = false;
             txtminutos.IsEnabled = false;
+        }
+
+        //
+        public void bloquearHora()
+        {
+            txthora.IsEnabled = false;
+            txtminutos.IsEnabled = false;
+        }
+
+        public void desbloquearHora()
+        {
+            txthora.IsEnabled = true;
+            txtminutos.IsEnabled = true;
+        }
+
+        /////////////////////////////////////
+        public int sacarHora()
+        {
+            int hora = int.Parse(txthora.Text);
+            return hora;
+        }
+
+        public int sacarMinuto()
+        {
+            int min = int.Parse(txtminutos.Text);
+            return min;
         }
 
     }
