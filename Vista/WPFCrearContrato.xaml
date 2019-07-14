@@ -71,7 +71,7 @@
                 <Button x:Name="btnListadoCliente" Content="?" HorizontalAlignment="Left" Margin="342,38,0,0" VerticalAlignment="Top" Width="47" Height="30" Click="btnListadoCliente_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF0A5068"/>
             </Grid>
         </GroupBox>
-        <GroupBox x:Name="groupBox1" Header="Datos de evento" HorizontalAlignment="Left" Height="354" Margin="10,184,0,0" VerticalAlignment="Top" Width="934" Background="#FF0A5068" Grid.ColumnSpan="2">
+        <GroupBox x:Name="groupBox1" Header="Datos de evento" HorizontalAlignment="Left" Height="354" Margin="10,185,0,0" VerticalAlignment="Top" Width="934" Background="#FF0A5068" Grid.ColumnSpan="2">
             <Grid HorizontalAlignment="Left" Height="306" VerticalAlignment="Top" Width="880">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="148*"/>
@@ -94,16 +94,16 @@
                         </TransformGroup>
                     </TextBox.RenderTransform>
                 </TextBox>
-                <Label x:Name="label" Content="SubTotal :" HorizontalAlignment="Left" Margin="84,74,0,0" VerticalAlignment="Top" Height="26" Width="66" Grid.Column="1"/>
-                <Label x:Name="label_Copy" Content="Asistentes :" HorizontalAlignment="Left" Margin="84,105,0,0" VerticalAlignment="Top" Height="26" Width="74" Grid.Column="1"/>
+                <Label x:Name="label" Content="SubTotal :" HorizontalAlignment="Left" Margin="84,79,0,0" VerticalAlignment="Top" Height="26" Width="66" Grid.Column="1"/>
+                <Label x:Name="label_Copy" Content="Asistentes :" HorizontalAlignment="Left" Margin="84,109,0,0" VerticalAlignment="Top" Height="26" Width="74" Grid.Column="1"/>
                 <Label x:Name="label_Copy3" Content="Personal Adicional :" HorizontalAlignment="Left" Margin="84,140,0,0" VerticalAlignment="Top" Height="26" Width="121" Grid.Column="1"/>
                 <Label x:Name="label_Copy5" HorizontalAlignment="Left" Margin="74,164,0,0" VerticalAlignment="Top" Width="194" Height="25" Grid.Column="1">
                     <Separator HorizontalAlignment="Left" Height="6" Margin="0" VerticalAlignment="Top" Width="567"/>
                 </Label>
-                <Label x:Name="label9_Copy1" Content="Valor Evento" Margin="84.4,29,85,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="Black" Height="34" FontSize="16" FontFamily="Segoe UI Historic" FontWeight="Bold" Grid.Column="1"/>
+                <Label x:Name="label9_Copy1" Content="Valor Evento" Margin="84,25,85,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="Black" Height="34" FontSize="16" FontFamily="Segoe UI Historic" FontWeight="Bold" Grid.Column="1"/>
                 <Label x:Name="label_Copy6" Content="Valor Total : $" HorizontalAlignment="Left" Margin="74,181,0,0" VerticalAlignment="Top" Height="26" Width="77" Grid.Column="1"/>
-                <Label x:Name="lblAsistentes" Content="" HorizontalAlignment="Left" Margin="213.4,105,0,0" VerticalAlignment="Top" Grid.Column="1"/>
-                <Label x:Name="lblPersonalAdicional" Content="" HorizontalAlignment="Left" Margin="213,138,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                <Label x:Name="lblAsistentes" Content="" HorizontalAlignment="Left" Margin="213,110,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                <Label x:Name="lblPersonalAdicional" Content="" HorizontalAlignment="Left" Margin="213,141,0,0" VerticalAlignment="Top" Grid.Column="1"/>
                 <Label x:Name="lblTotal" Content="" HorizontalAlignment="Left" Margin="166,184,-3,0" VerticalAlignment="Top" Width="111" FontWeight="Bold" Height="26" BorderBrush="Black" Grid.Column="1"/>
                 <Label x:Name="lblUf" Content="" HorizontalAlignment="Left" Margin="214,-2,0,0" VerticalAlignment="Top" Grid.Column="1"/>
                 <Label x:Name="label_Copy8" Content="Valor UF :" HorizontalAlignment="Left" Margin="84,-2,0,0" VerticalAlignment="Top" Height="26" Width="64" Grid.Column="1"/>
@@ -113,19 +113,19 @@
                 <WpfControlLibrary1:UserControl1 x:Name="dpFechaInicio1" HorizontalAlignment="Left" Margin="102,-13,0,0" VerticalAlignment="Top" Width="388"/>
                 <ComboBox x:Name="cbModalidad" HorizontalAlignment="Left" Margin="132,70,0,0" VerticalAlignment="Top" Width="133" SelectionChanged="cbModalidad_LostFocus"/>
                 <Label x:Name="label4" Content="Modalidad Servicio:" HorizontalAlignment="Left" Margin="10,75,0,0" VerticalAlignment="Top"/>
-                <Label x:Name="lblValorBase" Content="" HorizontalAlignment="Left" Margin="214.4,70,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                <Label x:Name="lblValorBase" Content="" HorizontalAlignment="Left" Margin="214,79,0,0" VerticalAlignment="Top" Grid.Column="1"/>
                 <Label x:Name="lbl_cbAmbientacion" Content="Ambientación:" HorizontalAlignment="Left" Margin="278,71,0,0" VerticalAlignment="Top"/>
                 <Label x:Name="label3" Content="Inicio:" HorizontalAlignment="Left" Margin="15,6,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.471,-0.113"/>
                 <WpfControlLibrary1:UserControl1 x:Name="dpFechaTermino" HorizontalAlignment="Left" Margin="102,207,0,0" VerticalAlignment="Top" Width="390"/>
                 <Label x:Name="label3_Copy" Content="Término:" HorizontalAlignment="Left" Margin="12,222,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.471,-0.113"/>
                 <ComboBox x:Name="cbAmbientacion" HorizontalAlignment="Left" Margin="375,71,0,0" VerticalAlignment="Top" Width="138"/>
-                <TextBox x:Name="txtArriendo" HorizontalAlignment="Left" Height="23" Margin="379,145,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                <TextBox x:Name="txtArriendo" HorizontalAlignment="Left" Height="23" Margin="379,145,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111"/>
                 <Label x:Name="label8" Content="Vegetariana:" HorizontalAlignment="Left" Margin="10,107,0,0" VerticalAlignment="Top"/>
                 <ComboBox x:Name="cbVegetariana" HorizontalAlignment="Left" Margin="132,106,0,0" VerticalAlignment="Top" Width="133"/>
-                <Label x:Name="lbl_Arriendo" Content="Arriendo:" HorizontalAlignment="Left" Margin="301,142,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="lbl_Arriendo" Content="Arriendo:" HorizontalAlignment="Left" Margin="307,142,0,0" VerticalAlignment="Top"/>
                 <Label x:Name="label10" Content="Local:" HorizontalAlignment="Left" Margin="308,108,0,0" VerticalAlignment="Top"/>
-                <ComboBox x:Name="cbLocal" HorizontalAlignment="Left" Margin="377,110,0,0" VerticalAlignment="Top" Width="136"/>
-                <Label x:Name="label9" Content="Música:" HorizontalAlignment="Left" Margin="15,138,0,0" VerticalAlignment="Top" Width="92"/>
+                <ComboBox x:Name="cbLocal" HorizontalAlignment="Left" Margin="377,110,0,0" VerticalAlignment="Top" Width="136" SelectionChanged="cbLocal_SelectionChanged"/>
+                <Label x:Name="label9" Content="Música:" HorizontalAlignment="Left" Margin="11,138,0,0" VerticalAlignment="Top" Width="92"/>
                 <Image x:Name="image" HorizontalAlignment="Left" Height="112" Margin="522,176,0,0" VerticalAlignment="Top" Width="133" Source="Imagenes/white_logo_transparent_background.png" Grid.ColumnSpan="2"/>
                 <ComboBox x:Name="cbMusica" HorizontalAlignment="Left" Margin="132,142,0,0" VerticalAlignment="Top" Width="133"/>
             </Grid>
@@ -144,6 +144,8 @@
             </Grid>
         </GroupBox>
         <Label x:Name="lblpeso" Content="$" Grid.Column="1" HorizontalAlignment="Left" Margin="94,397,0,0" VerticalAlignment="Top" Height="27" Width="20"/>
+        <Label x:Name="labelp" Content="Personal Base:" Grid.Column="1" HorizontalAlignment="Left" Margin="23,268,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblPersonalBase" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="152,268,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Controls:MetroWindow>

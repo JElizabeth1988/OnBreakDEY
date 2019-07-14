@@ -11,3 +11,16 @@ C:\Users\ASUS\Desktop\GitHub\OnBreakDEY\test\bin\Debug\Newtonsoft.Json.xml
 C:\Users\ASUS\Desktop\GitHub\OnBreakDEY\test\bin\Debug\es\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
 C:\Users\ASUS\Desktop\GitHub\OnBreakDEY\test\obj\Debug\test.dll
 C:\Users\ASUS\Desktop\GitHub\OnBreakDEY\test\obj\Debug\test.pdb
+C:\Users\chida\Desktop\Duplicado\OnBreakDEY\test\bin\Debug\ApplicationInsights.config
+C:\Users\chida\Desktop\Duplicado\OnBreakDEY\test\bin\Debug\test.dll.config
+C:\Users\chida\Desktop\Duplicado\OnBreakDEY\test\bin\Debug\test.dll
+C:\Users\chida\Desktop\Duplicado\OnBreakDEY\test\bin\Debug\test.pdb
+C:\Users\chida\Desktop\Duplicado\OnBreakDEY\test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\chida\Desktop\Duplicado\OnBreakDEY\test\bin\Debug\Servicios.dll
+C:\Users\chida\Desktop\Duplicado\OnBreakDEY\test\bin\Debug\Newtonsoft.Json.dll
+C:\Users\chida\Desktop\Duplicado\OnBreakDEY\test\bin\Debug\Servicios.pdb
+C:\Users\chida\Desktop\Duplicado\OnBreakDEY\test\bin\Debug\Newtonsoft.Json.xml
+C:\Users\chida\Desktop\Duplicado\OnBreakDEY\test\bin\Debug\es\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+C:\Users\chida\Desktop\Duplicado\OnBreakDEY\test\obj\Debug\test.csprojResolveAssemblyReference.cache
+C:\Users\chida\Desktop\Duplicado\OnBreakDEY\test\obj\Debug\test.dll
+C:\Users\chida\Desktop\Duplicado\OnBreakDEY\test\obj\Debug\test.pdb

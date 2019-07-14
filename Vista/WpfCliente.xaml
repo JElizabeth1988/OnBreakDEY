@@ -59,7 +59,7 @@
             </GroupBox>
             <Grid HorizontalAlignment="Left" Height="99" Margin="394,270,0,0" VerticalAlignment="Top" Width="159">
                 <Button x:Name="button" Content="Recuperar" HorizontalAlignment="Left" Margin="47,0,0,0" VerticalAlignment="Top" Width="75" Click="Recuperar_Click"  Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF0A5068"/>
-                <Label x:Name="label2" Content="" HorizontalAlignment="Left" Margin="14,69,0,0" VerticalAlignment="Top" Foreground="#FFF11F1F"/>
+                <Label x:Name="label2" Content="" HorizontalAlignment="Left" Margin="14,69,0,0" VerticalAlignment="Top" />
             </Grid>
         </Grid>
 

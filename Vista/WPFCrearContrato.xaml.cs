@@ -368,6 +368,7 @@ namespace Vista
                 if (((comboBoxItem)cboTipo.SelectedItem).id == 10)
                 {
                     lblTotal.Content = (int)(CalculoEvento.ValorFinalCB() * WS.Uf()) + int.Parse(txtArriendo.Text);
+
                 }
                 if (((comboBoxItem)cboTipo.SelectedItem).id == 20)
                 {
@@ -1297,25 +1298,14 @@ namespace Vista
 
             //si es Cenas
             if (contenido.Equals(30))
-            {
-
+            { 
+               
 
                 cbVegetariana.IsEnabled = false;
                 cbAmbientacion.IsEnabled = true;
                 cbMusica.IsEnabled = true;
                 cbLocal.IsEnabled = true;
 
-                lbl_Arriendo.Visibility = Visibility.Hidden;
-                txtArriendo.Visibility = Visibility.Hidden;
-
-                var item = cbLocal.SelectedItem = "Otro";
-                if (item != null)
-                {
-                    lbl_Arriendo.Visibility = Visibility.Visible;
-                    txtArriendo.Visibility = Visibility.Visible;
-
-
-                }
 
 
 
@@ -1368,6 +1358,7 @@ namespace Vista
                 {
                     cant = 6;
 
+                    dpFechaTermino.recuperarHora(dpFechaInicio1.sacarHora(), 0);
                     dpFechaTermino.recuperarMinuto(dpFechaInicio1.sacarMinuto(), 30);
                     dpFechaTermino.bloquearHora();
                 }
@@ -1375,6 +1366,7 @@ namespace Vista
                 {
                     cant = 10;
                     dpFechaTermino.recuperarHora(dpFechaInicio1.sacarHora(), 1);
+                    dpFechaTermino.recuperarMinuto(dpFechaInicio1.sacarMinuto(), 0);
                     dpFechaTermino.bloquearHora();
                 }
 
@@ -1461,6 +1453,23 @@ namespace Vista
             if (contratito.Termino >= DateTime.Now)
             {
                 rbNo.IsChecked = true;
+            }
+        }
+
+        private void cbLocal_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            string contenido = cbLocal.SelectedValue.ToString();
+
+            if (contenido == "Otro")
+            {
+                lbl_Arriendo.Visibility = Visibility.Visible;
+                txtArriendo.Visibility = Visibility.Visible;
+
+            }
+            else
+            {
+                lbl_Arriendo.Visibility = Visibility.Hidden;
+                txtArriendo.Visibility = Visibility.Hidden;
             }
         }
     } 
