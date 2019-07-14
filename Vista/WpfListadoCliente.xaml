@@ -14,15 +14,15 @@
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="#FF5ED9E5" Offset="0.003"/>
-                <GradientStop Color="#FFD8E3E9" Offset="0.948"/>
+                <GradientStop Color="#FF90DEFF" Offset="0.003"/>
+                <GradientStop Color="White" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="238*"/>
             <ColumnDefinition Width="15*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="btnPasar" Content="Traspasar" HorizontalAlignment="Left" Margin="68,402,0,0" VerticalAlignment="Top" Width="73" FontWeight="Normal" Click="btnPasar_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF0A5068"/>
+        <Button x:Name="btnPasar" Content="Traspasar" HorizontalAlignment="Left" Margin="68,402,0,0" VerticalAlignment="Top" Width="73" FontWeight="Normal" Click="btnPasar_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF01A0E2"/>
         <DataGrid x:Name="dgLista" HorizontalAlignment="Left" Margin="57,171,0,0" VerticalAlignment="Top" Height="173" Width="450" >
 
             <DataGrid.Resources>
@@ -36,8 +36,8 @@
                 </Style>
             </DataGrid.Resources>
         </DataGrid>
-        <Button x:Name="btnSalir" Content="Salir" HorizontalAlignment="Left" Margin="374,401,0,0" VerticalAlignment="Top" Width="75"  FontWeight="Normal" Click="btnSalir_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF0A5068"/>
-        <GroupBox x:Name="gbFiltrar" Header="Filtrar Información" HorizontalAlignment="Left" Margin="57,10,0,0" VerticalAlignment="Top" Height="144" Width="450" Background="#FF0A5068">
+        <Button x:Name="btnSalir" Content="Salir" HorizontalAlignment="Left" Margin="374,401,0,0" VerticalAlignment="Top" Width="75"  FontWeight="Normal" Click="btnSalir_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF01A0E2"/>
+        <GroupBox x:Name="gbFiltrar" Header="Filtrar Información" HorizontalAlignment="Left" Margin="57,10,0,0" VerticalAlignment="Top" Height="144" Width="450" Background="#FF01A0E2">
             <Grid HorizontalAlignment="Left" Height="110" Margin="10,4,0,-4.667" VerticalAlignment="Top" Width="416">
                 <Label x:Name="label" Content="Rut" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,1,0,0"/>
                 <Label x:Name="label1" Content="Tipo de Empresa" HorizontalAlignment="Left" Margin="10,32,0,0" VerticalAlignment="Top"/>
@@ -45,19 +45,19 @@
                 <TextBox x:Name="txtFiltroRut"  Controls:TextBoxHelper.Watermark="Ej. 11.111.111-1" HorizontalAlignment="Left" Height="23" Margin="140,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="137" FontWeight="Bold" Controls:TextBoxHelper.ClearTextButton="True"/>
                 <ComboBox x:Name="cbTipoEmp" HorizontalAlignment="Left" Margin="140,34,0,0" VerticalAlignment="Top" Width="138" Height="26" FontWeight="Bold"/>
                 <ComboBox x:Name="cbActiv" HorizontalAlignment="Left" Margin="140,71,0,0" VerticalAlignment="Top" Width="137" FontWeight="Bold"/>
-                <Button x:Name="btnFiltrarRut" Content="Filtrar" HorizontalAlignment="Left" Margin="313,0,-37,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Click="btnFiltrar_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF0A5068"/>
-                <Button x:Name="btnFiltrarTipo" Content="Filtrar" HorizontalAlignment="Left" Margin="313,34,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Click="btnFiltrarTipo_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF0A5068"/>
-                <Button x:Name="btnFiltrarAct" Content="Filtrar" HorizontalAlignment="Left" Margin="314,69,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Click="btnFiltrarAct_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF0A5068"/>
+                <Button x:Name="btnFiltrarRut" Content="Filtrar" HorizontalAlignment="Left" Margin="313,0,-37,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Click="btnFiltrar_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF01A0E2"/>
+                <Button x:Name="btnFiltrarTipo" Content="Filtrar" HorizontalAlignment="Left" Margin="313,34,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Click="btnFiltrarTipo_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF01A0E2"/>
+                <Button x:Name="btnFiltrarAct" Content="Filtrar" HorizontalAlignment="Left" Margin="314,69,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Click="btnFiltrarAct_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF01A0E2"/>
             </Grid>
         </GroupBox>
-        <Button x:Name="btnEliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="171,402,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal"  Click="btnEliminar_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF0A5068"/>
+        <Button x:Name="btnEliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="171,402,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal"  Click="btnEliminar_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF01A0E2"/>
         <Button x:Name="btnRefrescar" HorizontalAlignment="Left" Margin="471,394,0,0" VerticalAlignment="Top" Width="40" Click="btnRefresh_Click" Style="{DynamicResource MahApps.Metro.Styles.MetroCircleButtonStyle}" Height="39" BorderBrush="Black" >
             <Button.Background>
                 <ImageBrush ImageSource="Imagenes/Command-Refresh.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btnPasarAContrato" Content="Traspasar" HorizontalAlignment="Left" Margin="276,402,0,0" VerticalAlignment="Top" Width="73" FontWeight="Normal" Click="btnPasarContrato_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF0A5068"/>
-        <Button x:Name="btnCrear" Content="Nuevo cliente " HorizontalAlignment="Left" Margin="367,361,0,0" VerticalAlignment="Top" Width="91" FontWeight="Normal" Click="btnCrear_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF0A5068"/>
+        <Button x:Name="btnPasarAContrato" Content="Traspasar" HorizontalAlignment="Left" Margin="276,402,0,0" VerticalAlignment="Top" Width="73" FontWeight="Normal" Click="btnPasarContrato_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF01A0E2"/>
+        <Button x:Name="btnCrear" Content="Nuevo cliente " HorizontalAlignment="Left" Margin="367,361,0,0" VerticalAlignment="Top" Width="91" FontWeight="Normal" Click="btnCrear_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF01A0E2"/>
 
     </Grid>
 </Controls:MetroWindow>

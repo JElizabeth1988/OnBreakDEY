@@ -13,7 +13,7 @@
         Title="OnBreak - Administrar Cliente" Height="501.117" Width="616.458" WindowStartupLocation="CenterScreen" Cursor="Arrow" FontWeight="Bold" WindowTitleBrush="Black" Icon="Imagenes/white_logo_dark_background.jpg" ResizeMode="NoResize" TitleCharacterCasing="Normal" Closed="MetroWindow_Closed">
     <Controls:MetroWindow.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-            <GradientStop Color="#FF5ED9E5" Offset="0.003"/>
+            <GradientStop Color="#FF90DEFF"/>
             <GradientStop Color="#FFD8E3E9" Offset="0.948"/>
         </LinearGradientBrush>
     </Controls:MetroWindow.Background>
@@ -43,22 +43,22 @@
             <TextBox x:Name="txtTelefono" HorizontalAlignment="Left" Controls:TextBoxHelper.Watermark="Ej. 988888888" Height="8" Margin="187,228,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" FontWeight="Normal" Controls:TextBoxHelper.ClearTextButton="False"/>
             <ComboBox x:Name="cbActividad" HorizontalAlignment="Left" Margin="187,270,0,0" VerticalAlignment="Top" Width="170" FontWeight="Normal" />
             <ComboBox x:Name="cbTipo" HorizontalAlignment="Left" Margin="187,311,0,0" VerticalAlignment="Top" Width="170" FontWeight="Normal" />
-            <Button x:Name="btnGuardar" Content="Guardar" HorizontalAlignment="Left" Margin="153,390,0,0" VerticalAlignment="Top" Width="75" Cursor="Arrow" FontWeight="Normal" Controls:ButtonHelper.PreserveTextCase="True" Click="btnGuardar_Click" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF0A5068"/>
-            <Button x:Name="btnCancelar" Content="Salir" HorizontalAlignment="Left" Margin="408,390,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Cursor="Arrow" Click="btnCancelar_Click"  Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF0A5068"/>
-            <Button x:Name="btnPregunta" Content="?" HorizontalAlignment="Left" Margin="394,28,0,0" VerticalAlignment="Top" Width="33"  FontWeight="Normal" Height="25" Cursor="Arrow" Click="btnPregunta_Click"  Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF0A5068"/>
-            <Button x:Name="btnBuscar" Content="Buscar" HorizontalAlignment="Left" Margin="441,28,0,0" VerticalAlignment="Top" Width="75" Cursor="Arrow" FontWeight="Normal" Click="btnBuscar_Click"  Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF0A5068"/>
-            <Button x:Name="btnLimpiar" Content="Limpiar" HorizontalAlignment="Left" Margin="27,390,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Click="btnLimpiar_Click"  Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF0A5068"/>
-            <Button x:Name="btnModificar" Content="Actualizar" HorizontalAlignment="Left" Margin="272,390,0,0" VerticalAlignment="Top" Cursor="Arrow" Width="85" FontWeight="Normal"  Click="btnModificar_Click"  Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF0A5068" />
+            <Button x:Name="btnGuardar" Content="Guardar" HorizontalAlignment="Left" Margin="153,390,0,0" VerticalAlignment="Top" Width="75" Cursor="Arrow" FontWeight="Normal" Controls:ButtonHelper.PreserveTextCase="True" Click="btnGuardar_Click" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF01A0E2"/>
+            <Button x:Name="btnCancelar" Content="Salir" HorizontalAlignment="Left" Margin="408,390,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Cursor="Arrow" Click="btnCancelar_Click"  Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF01A0E2"/>
+            <Button x:Name="btnPregunta" Content="?" HorizontalAlignment="Left" Margin="394,28,0,0" VerticalAlignment="Top" Width="33"  FontWeight="Normal" Height="25" Cursor="Arrow" Click="btnPregunta_Click"  Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF01A0E2"/>
+            <Button x:Name="btnBuscar" Content="Buscar" HorizontalAlignment="Left" Margin="441,28,0,0" VerticalAlignment="Top" Width="75" Cursor="Arrow" FontWeight="Normal" Click="btnBuscar_Click"  Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF01A0E2"/>
+            <Button x:Name="btnLimpiar" Content="Limpiar" HorizontalAlignment="Left" Margin="27,390,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Click="btnLimpiar_Click"  Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF01A0E2"/>
+            <Button x:Name="btnModificar" Content="Actualizar" HorizontalAlignment="Left" Margin="272,390,0,0" VerticalAlignment="Top" Cursor="Arrow" Width="85" FontWeight="Normal"  Click="btnModificar_Click"  Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF01A0E2" />
             <Image x:Name="image" HorizontalAlignment="Left" Height="101" Margin="401,109,0,0" VerticalAlignment="Top" Width="113" Source="Imagenes/white_logo_transparent_background.png"/>
 
 
             <TextBox x:Name="txtDV" HorizontalAlignment="Left" Height="23" Margin="353,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" RenderTransformOrigin="0.422,0.462" FontWeight="Normal" IsEnabled="False"/>
             <Label x:Name="label1" Content="-" HorizontalAlignment="Left" Margin="334,27,0,0" VerticalAlignment="Top" Width="18"/>
-            <GroupBox x:Name="groupBox" Header="Opciones Cache" HorizontalAlignment="Left" Margin="391,236,0,0" VerticalAlignment="Top" Height="133" Width="183" BorderBrush="#FF0A5068" Background="#FF0A5068" Controls:ControlsHelper.ContentCharacterCasing="Normal">
-                <Button x:Name="btnLimpiarCache" Content="Limpiar" HorizontalAlignment="Left" Margin="45,42,0,0" VerticalAlignment="Top" Width="75" Click="LimpiarCache_Click"  Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF0A5068"/>
+            <GroupBox x:Name="groupBox" Header="Opciones Cache" HorizontalAlignment="Left" Margin="391,236,0,0" VerticalAlignment="Top" Height="133" Width="183" BorderBrush="#FF0A5068" Background="#FF01A0E2" Controls:ControlsHelper.ContentCharacterCasing="Normal">
+                <Button x:Name="btnLimpiarCache" Content="Limpiar" HorizontalAlignment="Left" Margin="45,42,0,0" VerticalAlignment="Top" Width="75" Click="LimpiarCache_Click"  Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF01A0E2"/>
             </GroupBox>
             <Grid HorizontalAlignment="Left" Height="99" Margin="394,270,0,0" VerticalAlignment="Top" Width="159">
-                <Button x:Name="button" Content="Recuperar" HorizontalAlignment="Left" Margin="47,0,0,0" VerticalAlignment="Top" Width="75" Click="Recuperar_Click"  Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF0A5068"/>
+                <Button x:Name="button" Content="Recuperar" HorizontalAlignment="Left" Margin="47,0,0,0" VerticalAlignment="Top" Width="75" Click="Recuperar_Click"  Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF01A0E2"/>
                 <Label x:Name="label2" Content="" HorizontalAlignment="Left" Margin="14,69,0,0" VerticalAlignment="Top" />
             </Grid>
         </Grid>
