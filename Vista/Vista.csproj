@@ -146,6 +146,7 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
+    <Resource Include="Imagenes\Command-Refresh.png" />
     <Resource Include="Resources\Entypo.ttf" />
   </ItemGroup>
   <ItemGroup>
@@ -199,9 +200,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Imagenes\sparkling-glassware-stands-long-table-prepared-wedding-di_8353-688.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Imagenes\Command-Refresh.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Imagenes\1f9cb2d18a9498cad97b4c34f91e4ac8.jpg" />

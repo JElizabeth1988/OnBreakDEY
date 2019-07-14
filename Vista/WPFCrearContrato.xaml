@@ -65,7 +65,7 @@
         <Button x:Name="btnCrear" Content="Crear" HorizontalAlignment="Left" Margin="243,554.719,0,0" VerticalAlignment="Top" Width="73" Click="btnCrear_Click" FontWeight="Normal" Height="33" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF01A0E2" Grid.Row="1"/>
         <Label x:Name="label1" Content="Número Contrato:" HorizontalAlignment="Left" Margin="125,1.719,0,0" VerticalAlignment="Top" Grid.Row="1"/>
         <Label x:Name="lblNumero" Content="" HorizontalAlignment="Left" Margin="257,1.719,0,0" VerticalAlignment="Top" Width="166" Grid.Row="1"/>
-        <GroupBox x:Name="groupBox" Header="Buscar Información" HorizontalAlignment="Left" Margin="99,34.719,0,0" VerticalAlignment="Top" Height="145" Width="604" Background="#FF01A0E2" Grid.Row="1">
+        <GroupBox x:Name="groupBox" Header="Buscar Información" HorizontalAlignment="Left" Margin="99,34.719,0,0" VerticalAlignment="Top" Height="145" Width="604" Background="#FF01A0E2" Grid.Row="1" Controls:ControlsHelper.ContentCharacterCasing="Normal">
             <Grid HorizontalAlignment="Left" Height="114" VerticalAlignment="Top" Width="594" Margin="0,-2,0,-1.333">
                 <Button x:Name="btnCliente" Content="Buscar" HorizontalAlignment="Left" Margin="414,39,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal" Click="btnCliente_Click" Height="30" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF01A0E2"/>
                 <Label x:Name="lblNombreCliente" Content="" HorizontalAlignment="Left" Margin="154,75,0,0" VerticalAlignment="Top" Width="310" FontWeight="Bold" Height="26"/>
@@ -80,7 +80,7 @@
                 <Button x:Name="btnListadoCliente" Content="?" HorizontalAlignment="Left" Margin="342,38,0,0" VerticalAlignment="Top" Width="47" Height="30" Click="btnListadoCliente_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF01A0E2"/>
             </Grid>
         </GroupBox>
-        <GroupBox x:Name="groupBox1" Header="Datos de evento" HorizontalAlignment="Left" Height="354" Margin="28,184.719,0,0" VerticalAlignment="Top" Width="965" Background="#FF01A0E2" Grid.Row="1">
+        <GroupBox x:Name="groupBox1" Header="Datos Del Evento" HorizontalAlignment="Left" Height="354" Margin="28,184.719,0,0" VerticalAlignment="Top" Width="965" Background="#FF01A0E2" Grid.Row="1" Controls:ControlsHelper.ContentCharacterCasing="Normal">
             <Grid HorizontalAlignment="Left" Height="317" VerticalAlignment="Top" Width="955">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
@@ -153,7 +153,7 @@
                 <Label x:Name="lblMensasje" Content="" HorizontalAlignment="Left" Margin="36,62,0,0" VerticalAlignment="Top" Width="157" Grid.ColumnSpan="2"/>
             </Grid>
         </GroupBox>
-        <Image x:Name="image1" HorizontalAlignment="Left" Height="100" Margin="603,231,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="100" Source="Imagenes/white_logo_transparent_background.png"/>
+        <Image x:Name="image1" HorizontalAlignment="Left" Height="100" Margin="603,231,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="100" Source="Imagenes/logo_transparent_background.png"/>
 
     </Grid>
 </Controls:MetroWindow>

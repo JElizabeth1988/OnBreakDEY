@@ -29,7 +29,7 @@
                 <Style TargetType="{x:Type DataGridCell}">
                     <Style.Triggers>
                         <Trigger Property="DataGridCell.IsSelected" Value="True">
-                            <Setter Property="Background" Value="#FF76B7F2" />
+                            <Setter Property="Background" Value="#FF01A0E2" />
                             <Setter Property="Foreground" Value="Black" />
                         </Trigger>
                     </Style.Triggers>
@@ -37,7 +37,7 @@
             </DataGrid.Resources>
         </DataGrid>
         <Button x:Name="btnSalir" Content="Salir" HorizontalAlignment="Left" Margin="374,401,0,0" VerticalAlignment="Top" Width="75"  FontWeight="Normal" Click="btnSalir_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF01A0E2"/>
-        <GroupBox x:Name="gbFiltrar" Header="Filtrar Información" HorizontalAlignment="Left" Margin="57,10,0,0" VerticalAlignment="Top" Height="144" Width="450" Background="#FF01A0E2">
+        <GroupBox x:Name="gbFiltrar" Header="Filtrar Información" HorizontalAlignment="Left" Margin="57,10,0,0" VerticalAlignment="Top" Height="144" Width="450" Background="#FF01A0E2" Controls:ControlsHelper.ContentCharacterCasing="Normal">
             <Grid HorizontalAlignment="Left" Height="110" Margin="10,4,0,-4.667" VerticalAlignment="Top" Width="416">
                 <Label x:Name="label" Content="Rut" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,1,0,0"/>
                 <Label x:Name="label1" Content="Tipo de Empresa" HorizontalAlignment="Left" Margin="10,32,0,0" VerticalAlignment="Top"/>
@@ -51,7 +51,7 @@
             </Grid>
         </GroupBox>
         <Button x:Name="btnEliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="171,402,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal"  Click="btnEliminar_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF01A0E2"/>
-        <Button x:Name="btnRefrescar" HorizontalAlignment="Left" Margin="471,394,0,0" VerticalAlignment="Top" Width="40" Click="btnRefresh_Click" Style="{DynamicResource MahApps.Metro.Styles.MetroCircleButtonStyle}" Height="39" BorderBrush="Black" >
+        <Button x:Name="btnRefrescar" HorizontalAlignment="Left" Margin="471,398,0,0" VerticalAlignment="Top" Width="36" Click="btnRefresh_Click" Style="{DynamicResource MahApps.Metro.Styles.MetroCircleButtonStyle}" Height="36" BorderBrush="Black" >
             <Button.Background>
                 <ImageBrush ImageSource="Imagenes/Command-Refresh.png"/>
             </Button.Background>
