@@ -13,8 +13,8 @@
         Title="OnBreak - Administrar Cliente" Height="501.117" Width="616.458" WindowStartupLocation="CenterScreen" Cursor="Arrow" FontWeight="Bold" WindowTitleBrush="Black" Icon="Imagenes/white_logo_dark_background.jpg" ResizeMode="NoResize" TitleCharacterCasing="Normal" Closed="MetroWindow_Closed">
     <Controls:MetroWindow.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-            <GradientStop Color="#FF17B3D6" Offset="0.017"/>
-            <GradientStop Color="#FFC2E1F0" Offset="0.863"/>
+            <GradientStop Color="#FF5ED9E5" Offset="0.003"/>
+            <GradientStop Color="#FFD8E3E9" Offset="0.948"/>
         </LinearGradientBrush>
     </Controls:MetroWindow.Background>
     <Grid>

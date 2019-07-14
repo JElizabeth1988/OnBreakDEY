@@ -26,9 +26,7 @@ using System.Windows.Threading;
 
 namespace Vista
 {
-    /// <summary>
-    /// Lógica de C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\BibliotecaControlador\Logger.csinteracción para WpfCliente.xaml
-    /// </summary>
+  
     public partial class WpfCliente : MetroWindow
     {
 
@@ -90,13 +88,15 @@ namespace Vista
                 }
                 catch (Exception ex)
                 {
-                    label2.Content = ex.Message;
+                    label2.Content = "Error al Recuperar!";
+                    Logger.Mensaje(ex.Message);
                 }
             }
             catch (Exception ex)
             {
 
-                MessageBox.Show("Errorsillo");
+                MessageBox.Show("Error!!");
+                Logger.Mensaje(ex.Message);
             }
 
         }
@@ -144,7 +144,7 @@ namespace Vista
                     string xml = @"d:\copiaCliente.txt";
 
                     label2.Content = "Existe copia previa";
-                    timer.IsEnabled = false;
+                    //timer.IsEnabled = false;
                     XmlSerializer se = new XmlSerializer(typeof(Cliente));
 
                     TextReader lector = new StreamReader(xml);
@@ -169,7 +169,8 @@ namespace Vista
                 catch (Exception ex)
                 {
 
-                    label2.Content =ex;
+                    label2.Content = "Error al Recuperar!";
+                    Logger.Mensaje(ex.Message);
                 }
                
 
@@ -211,6 +212,7 @@ namespace Vista
             catch (Exception ex)
             {
                 label2.Content = "Error al Cargar el cache";
+                Logger.Mensaje(ex.Message);
 
             }
 
@@ -228,7 +230,8 @@ namespace Vista
             }
             catch (Exception ex)
             {
-                label2.Content = ex.Message;
+                label2.Content = "Error al limpiar";
+                Logger.Mensaje(ex.Message);
             }
         }
 

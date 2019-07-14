@@ -40,7 +40,7 @@ namespace Vista
             {
                 _instanciaCr = new Crear_Contrato();
             }
-            lblPersonalAdicional:
+            //lblPersonalAdicional:
             return _instanciaCr;
         }
 
@@ -126,7 +126,8 @@ namespace Vista
                 }
                 catch (Exception ex)
                 {
-                    lblMensasje.Content = ex.Message;
+                    lblMensasje.Content = "Error al Respaldar Datos";
+                    Logger.Mensaje(ex.Message);
                 }
 
 
@@ -135,6 +136,7 @@ namespace Vista
             {
                 // lblMensasje.Content = ex.Message;
                 lblMensasje.Content = "No Guardado";
+                Logger.Mensaje(ex.Message);
             }
         }
 
@@ -311,6 +313,7 @@ namespace Vista
                 {
 
                     lblMensasje.Content = "Problemas al Recuperar";
+                    Logger.Mensaje(ex.Message);
                 }
 
 
@@ -1424,6 +1427,7 @@ namespace Vista
             catch (Exception ex)
             {
                 lblMensasje.Content = "Error al Cargar el cache";
+                Logger.Mensaje(ex.Message);
 
             }
 
@@ -1443,7 +1447,8 @@ namespace Vista
             }
             catch (Exception ex)
             {
-                lblMensasje.Content = ex.Message;
+                lblMensasje.Content = "Error al Limpiar Cache";
+                Logger.Mensaje(ex.Message);
             }
             
         }

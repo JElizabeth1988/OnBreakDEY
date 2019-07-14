@@ -14,8 +14,8 @@
     <Grid Margin="0,0,-5,-4.333">
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="#FF17B3D6" Offset="0.017"/>
-                <GradientStop Color="#FFC2E1F0" Offset="0.863"/>
+                <GradientStop Color="#FF5ED9E5" Offset="0.003"/>
+                <GradientStop Color="#FFD8E3E9" Offset="0.948"/>
             </LinearGradientBrush>
         </Grid.Background>
         <Grid.ColumnDefinitions>
@@ -23,7 +23,19 @@
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
         <Button x:Name="btnSalir" Content="Salir" HorizontalAlignment="Left" Margin="288,434,0,0" VerticalAlignment="Top" Width="75" Click="button_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF0A5068" Height="28"/>
-        <DataGrid x:Name="dgvLista" HorizontalAlignment="Left" Margin="68,201,0,0" VerticalAlignment="Top" Height="214" Width="451" FontWeight="Bold"/>
+        <DataGrid x:Name="dgvLista" HorizontalAlignment="Left" Margin="68,201,0,0" VerticalAlignment="Top" Height="214" Width="451" FontWeight="Bold">
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridCell}">
+                    <Style.Triggers>
+                        <Trigger Property="DataGridCell.IsSelected" Value="True">
+                            <Setter Property="Background" Value="#FF76B7F2" />
+                            <Setter Property="Foreground" Value="Black" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.Resources>
+        </DataGrid>
+
         <GroupBox x:Name="gbFiltrar" Header="Filtrar Información" HorizontalAlignment="Left" Margin="68,10,0,0" VerticalAlignment="Top" Height="175" Width="451" Background="#FF0A5068">
             <Grid HorizontalAlignment="Left" Height="140" Margin="10,4,0,-16" VerticalAlignment="Top" Width="351">
                 <Label x:Name="label" Content="Número Contrato" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,1,0,0" FontWeight="Bold"/>
