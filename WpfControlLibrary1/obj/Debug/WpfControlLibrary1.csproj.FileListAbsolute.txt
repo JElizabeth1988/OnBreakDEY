@@ -94,7 +94,6 @@ C:\Users\yobit\Desktop\Duplicado Onbreak\OnBreak2.0\WpfControlLibrary1\obj\Debug
 C:\Users\yobit\Desktop\Duplicado Onbreak\OnBreak2.0\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.pdb
 C:\Users\chida\Desktop\Duplicado\OnBreakDEY\WpfControlLibrary1\bin\Debug\WpfControlLibrary1.dll
 C:\Users\chida\Desktop\Duplicado\OnBreakDEY\WpfControlLibrary1\bin\Debug\WpfControlLibrary1.pdb
-C:\Users\chida\Desktop\Duplicado\OnBreakDEY\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.csprojResolveAssemblyReference.cache
 C:\Users\chida\Desktop\Duplicado\OnBreakDEY\WpfControlLibrary1\obj\Debug\Page1.g.cs
 C:\Users\chida\Desktop\Duplicado\OnBreakDEY\WpfControlLibrary1\obj\Debug\UserControl1.g.cs
 C:\Users\chida\Desktop\Duplicado\OnBreakDEY\WpfControlLibrary1\obj\Debug\WpfControlLibrary1_MarkupCompile.cache

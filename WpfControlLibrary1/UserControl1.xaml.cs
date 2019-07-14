@@ -146,9 +146,9 @@ namespace WpfControlLibrary1
 
         public bool limpiar()
         {
-            dtfecha.SelectedDate = null;
-            txthora.Clear();
-            txtminutos.Clear();
+            dtfecha.SelectedDate = DateTime.Now;
+            txthora.Text=DateTime.Now.Hour.ToString();
+            txtminutos.Text=DateTime.Now.Minute.ToString();
             return true;
         }
 
