@@ -71,12 +71,12 @@ namespace Vista
 
 
                 };
-                //CacheItemPolicy politica = new CacheItemPolicy();
-                //politica.Priority = CacheItemPriority.Default;
-                //politica.AbsoluteExpiration = DateTimeOffset.Now.AddMinutes(5);//cada 5 minutos borra la politica (el cache)
-                //cacheName.Set("Cliente", p, politica);
+                CacheItemPolicy politica = new CacheItemPolicy();
+                politica.Priority = CacheItemPriority.Default;
+                politica.AbsoluteExpiration = DateTimeOffset.Now.AddMinutes(5);//cada 5 minutos borra la politica (el cache)
+                cacheName.Set("Cliente", p, politica);
                 label2.Visibility = Visibility.Visible;
-                //label2.Content = "Almacenada en cache";
+                label2.Content = "Almacenada en cache";
 
                 se.Serialize(escritor, p);
                 try
@@ -231,11 +231,11 @@ namespace Vista
         private void LimpiarCache_Click(object sender, RoutedEventArgs e)
         {
             cacheName.Remove("Cliente", null);
-            label2.Content = "Eliminó cache";
+            label2.Content = "Eliminó cache1";
             try
             {
                 File.Delete(@"d:\copiaCliente.txt");
-                
+                label2.Content = "Eliminó cache";
 
             }
             catch (Exception ex)
@@ -260,7 +260,8 @@ namespace Vista
             cbActividad.SelectedIndex = 0;
             cbTipo.SelectedIndex = 0;//Para que en el ComboBox no quede seleccionado nada
             txtRut.Focus();//Mover el cursor a la poscición Rut
-            label2.Visibility = Visibility.Hidden;
+            label2.Content = string.Empty;
+            label2.Visibility = Visibility.Visible;
             btnModificar.Visibility = Visibility.Hidden;//botón modificar desaparece
             btnGuardar.Visibility = Visibility.Visible;//botón guardar aparece
             txtRut.IsEnabled = true;
