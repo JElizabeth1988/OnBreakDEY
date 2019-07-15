@@ -1,0 +1,3 @@
+  <connectionStrings>
+    <add name="OnBreakEntities" connectionString="metadata=res://*/Modelo.csdl|res://*/Modelo.ssdl|res://*/Modelo.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=LOCALHOST;initial catalog=OnBreak;integrated security=True;multipleactiveresultsets=True;application name=EntityFramework&quot;" providerName="System.Data.EntityClient" />
+  </connectionStrings>

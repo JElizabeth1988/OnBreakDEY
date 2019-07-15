@@ -1,6 +1,5 @@
 C:\Users\chida\Desktop\Duplicado\OnBreakDEY\WpfControlLibrary1\bin\Release\WpfControlLibrary1.dll
 C:\Users\chida\Desktop\Duplicado\OnBreakDEY\WpfControlLibrary1\bin\Release\WpfControlLibrary1.pdb
-C:\Users\chida\Desktop\Duplicado\OnBreakDEY\WpfControlLibrary1\obj\Release\WpfControlLibrary1.csprojResolveAssemblyReference.cache
 C:\Users\chida\Desktop\Duplicado\OnBreakDEY\WpfControlLibrary1\obj\Release\Page1.g.cs
 C:\Users\chida\Desktop\Duplicado\OnBreakDEY\WpfControlLibrary1\obj\Release\UserControl1.g.cs
 C:\Users\chida\Desktop\Duplicado\OnBreakDEY\WpfControlLibrary1\obj\Release\WpfControlLibrary1_MarkupCompile.cache

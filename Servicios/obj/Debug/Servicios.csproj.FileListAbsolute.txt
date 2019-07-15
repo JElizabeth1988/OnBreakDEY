@@ -195,7 +195,6 @@ C:\Users\chida\Desktop\Duplicado\OnBreakDEY\Servicios\bin\Microsoft.ApplicationI
 C:\Users\chida\Desktop\Duplicado\OnBreakDEY\Servicios\bin\Newtonsoft.Json.xml
 C:\Users\chida\Desktop\Duplicado\OnBreakDEY\Servicios\bin\System.Net.Http.Formatting.xml
 C:\Users\chida\Desktop\Duplicado\OnBreakDEY\Servicios\bin\WebApiRestService.WebApiClient.xml
-C:\Users\chida\Desktop\Duplicado\OnBreakDEY\Servicios\obj\Debug\Servicios.csprojResolveAssemblyReference.cache
 C:\Users\chida\Desktop\Duplicado\OnBreakDEY\Servicios\obj\Debug\Servicios.dll
 C:\Users\chida\Desktop\Duplicado\OnBreakDEY\Servicios\obj\Debug\Servicios.pdb
 C:\Users\bwd_w\Documents\GitHub\OnBreakDEY\Servicios\bin\ApplicationInsights.config

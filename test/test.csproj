@@ -36,6 +36,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml.Serialization" />
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -54,9 +60,21 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BibliotecaControlador\BibliotecaNegocio.csproj">
+      <Project>{5f5241b3-dbf9-4b09-b205-3efa19c66622}</Project>
+      <Name>BibliotecaNegocio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BibliotecaDALC\BibliotecaDALC.csproj">
+      <Project>{65c88204-185a-42dd-bb07-7b1363263b47}</Project>
+      <Name>BibliotecaDALC</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Servicios\Servicios.csproj">
       <Project>{900483e1-95ce-4e70-9f1d-e69c1bd828e3}</Project>
       <Name>Servicios</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vista\Vista.csproj">
+      <Project>{d30ac9f0-926e-4d69-84ee-8aaae9f095d5}</Project>
+      <Name>Vista</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

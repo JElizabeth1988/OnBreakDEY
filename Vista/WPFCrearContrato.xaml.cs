@@ -1108,6 +1108,11 @@ namespace Vista
                     txtPersonalAdicional.IsEnabled = false;
                     dpFechaInicio1.bloquear();
                     dpFechaTermino.bloquear();
+                    cbVegetariana.IsEnabled = false;
+                    cbAmbientacion.IsEnabled = false;
+                    cbLocal.IsEnabled = false;
+                    cbMusica.IsEnabled = false;
+                    txtArriendo.IsEnabled = false;
 
                     /*EVENTO
 

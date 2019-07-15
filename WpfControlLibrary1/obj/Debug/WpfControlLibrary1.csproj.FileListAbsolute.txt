@@ -133,4 +133,3 @@ C:\Users\ASUS\Desktop\GitHub\OnBreakDEY\WpfControlLibrary1\obj\Debug\WpfControlL
 C:\Users\ASUS\Desktop\GitHub\OnBreakDEY\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.csproj.GenerateResource.Cache
 C:\Users\ASUS\Desktop\GitHub\OnBreakDEY\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.dll
 C:\Users\ASUS\Desktop\GitHub\OnBreakDEY\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.pdb
-C:\Users\chida\Desktop\Duplicado\OnBreakDEY\WpfControlLibrary1\obj\Debug\WpfControlLibrary1.csprojResolveAssemblyReference.cache

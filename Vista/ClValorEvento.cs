@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using BibliotecaNegocio;
 namespace Vista
 {
-    class ClValorEvento : IValorEvento
+    public class ClValorEvento : IValorEvento
     {
 
         public int IdE;

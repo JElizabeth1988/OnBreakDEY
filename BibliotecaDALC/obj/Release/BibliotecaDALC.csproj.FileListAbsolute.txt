@@ -5,6 +5,5 @@ C:\Users\chida\Desktop\Duplicado\OnBreakDEY\BibliotecaDALC\bin\Release\Bibliotec
 C:\Users\chida\Desktop\Duplicado\OnBreakDEY\BibliotecaDALC\bin\Release\EntityFramework.dll
 C:\Users\chida\Desktop\Duplicado\OnBreakDEY\BibliotecaDALC\bin\Release\BibliotecaControlador.pdb
 C:\Users\chida\Desktop\Duplicado\OnBreakDEY\BibliotecaDALC\bin\Release\EntityFramework.xml
-C:\Users\chida\Desktop\Duplicado\OnBreakDEY\BibliotecaDALC\obj\Release\BibliotecaDALC.csprojResolveAssemblyReference.cache
 C:\Users\chida\Desktop\Duplicado\OnBreakDEY\BibliotecaDALC\obj\Release\BibliotecaDALC.dll
 C:\Users\chida\Desktop\Duplicado\OnBreakDEY\BibliotecaDALC\obj\Release\BibliotecaDALC.pdb
