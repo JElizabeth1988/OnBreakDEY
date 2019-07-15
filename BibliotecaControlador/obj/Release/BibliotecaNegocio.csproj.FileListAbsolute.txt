@@ -1,0 +1,9 @@
+C:\Users\chida\Desktop\Duplicado\OnBreakDEY\BibliotecaControlador\bin\Release\BibliotecaControlador.dll
+C:\Users\chida\Desktop\Duplicado\OnBreakDEY\BibliotecaControlador\bin\Release\BibliotecaControlador.pdb
+C:\Users\chida\Desktop\Duplicado\OnBreakDEY\BibliotecaControlador\bin\Release\BibliotecaDALC.dll
+C:\Users\chida\Desktop\Duplicado\OnBreakDEY\BibliotecaControlador\bin\Release\EntityFramework.dll
+C:\Users\chida\Desktop\Duplicado\OnBreakDEY\BibliotecaControlador\bin\Release\BibliotecaDALC.pdb
+C:\Users\chida\Desktop\Duplicado\OnBreakDEY\BibliotecaControlador\bin\Release\EntityFramework.xml
+C:\Users\chida\Desktop\Duplicado\OnBreakDEY\BibliotecaControlador\obj\Release\BibliotecaNegocio.csprojResolveAssemblyReference.cache
+C:\Users\chida\Desktop\Duplicado\OnBreakDEY\BibliotecaControlador\obj\Release\BibliotecaControlador.dll
+C:\Users\chida\Desktop\Duplicado\OnBreakDEY\BibliotecaControlador\obj\Release\BibliotecaControlador.pdb

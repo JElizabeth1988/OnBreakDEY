@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfControlLibrary1", "WpfCo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test", "test\test.csproj", "{181E78DB-4C83-48BB-A253-646A77769FC7}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "OnBreak", "OnBreak\OnBreak.vdproj", "{36975301-FA1B-40F4-B886-29E0C0F4D71A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,8 @@ Global
 		{181E78DB-4C83-48BB-A253-646A77769FC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{181E78DB-4C83-48BB-A253-646A77769FC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{181E78DB-4C83-48BB-A253-646A77769FC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36975301-FA1B-40F4-B886-29E0C0F4D71A}.Debug|Any CPU.ActiveCfg = Debug
+		{36975301-FA1B-40F4-B886-29E0C0F4D71A}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
