@@ -88,11 +88,11 @@
                 <Label x:Name="label6" Content="Tipo Evento:" HorizontalAlignment="Left" Margin="10,39,0,0" VerticalAlignment="Top" Height="26" Width="82"/>
                 <ComboBox x:Name="cboTipo" HorizontalAlignment="Left" Margin="132,37,0,0" VerticalAlignment="Top" Width="133" AutomationProperties.IsOffscreenBehavior="Onscreen" Height="26" FontWeight="Bold" SelectionChanged="cboTipo_SelectionChanged"/>
                 <Label x:Name="label5_Copy" Content="N° Asistentes:" HorizontalAlignment="Left" Margin="12,181,0,0" VerticalAlignment="Top" Height="26" Width="88"/>
-                <TextBox x:Name="txtNumeroAsistentes" Controls:TextBoxHelper.ClearTextButton="True" HorizontalAlignment="Left" Height="26" Margin="129,176,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="64" TextChanged="txtNumeroAsistentes_TextChanged_1" FontWeight="Bold"/>
+                <TextBox x:Name="txtNumeroAsistentes" Controls:TextBoxHelper.ClearTextButton="True" HorizontalAlignment="Left" Height="26" Margin="129,176,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="64" TextChanged="txtNumeroAsistentes_TextChanged_1" FontWeight="Bold" KeyDown="txtNumeroAsistentes_KeyDown"/>
                 <Label x:Name="label7" Content="Observaciones:" HorizontalAlignment="Left" Margin="12,261,0,0" VerticalAlignment="Top" Height="26" Width="95"/>
                 <TextBox x:Name="txtObservaciones" HorizontalAlignment="Left" Height="52" Margin="130,259,0,-5" TextWrapping="Wrap" VerticalAlignment="Top" Width="292" FontWeight="Bold"/>
                 <Label x:Name="label5_Copy2" Content="N° Personal Adicional:" HorizontalAlignment="Left" Margin="306,176,0,0" VerticalAlignment="Top" Height="26" Width="136"/>
-                <TextBox x:Name="txtPersonalAdicional" Controls:TextBoxHelper.ClearTextButton="True" HorizontalAlignment="Left" Height="26" Margin="442,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="64" TextChanged="txtPersonalAdicional_TextChanged_1"  FontWeight="Bold" RenderTransformOrigin="0.5,0.5">
+                <TextBox x:Name="txtPersonalAdicional" Controls:TextBoxHelper.ClearTextButton="True" HorizontalAlignment="Left" Height="26" Margin="442,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="64" TextChanged="txtPersonalAdicional_TextChanged_1"  FontWeight="Bold" RenderTransformOrigin="0.5,0.5" KeyDown="txtPersonalAdicional_KeyDown">
                     <TextBox.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -127,7 +127,7 @@
                 <WpfControlLibrary1:UserControl1 x:Name="dpFechaTermino" HorizontalAlignment="Left" Margin="102,207,0,0" VerticalAlignment="Top" Width="390"/>
                 <Label x:Name="label3_Copy" Content="Término:" HorizontalAlignment="Left" Margin="12,223,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.471,-0.113"/>
                 <ComboBox x:Name="cbAmbientacion" HorizontalAlignment="Left" Margin="406,73,0,0" VerticalAlignment="Top" Width="138"/>
-                <TextBox x:Name="txtArriendo" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark ="$" HorizontalAlignment="Left" Height="23" Margin="406,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111"/>
+                <TextBox x:Name="txtArriendo" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark ="$" HorizontalAlignment="Left" Height="23" Margin="406,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111" KeyDown="txtArriendo_KeyDown"/>
                 <Label x:Name="label8" Content="Vegetariana:" HorizontalAlignment="Left" Margin="10,107,0,0" VerticalAlignment="Top"/>
                 <ComboBox x:Name="cbVegetariana" HorizontalAlignment="Left" Margin="132,106,0,0" VerticalAlignment="Top" Width="133"/>
                 <Label x:Name="lbl_Arriendo" Content="Arriendo:" HorizontalAlignment="Left" Margin="307,142,0,0" VerticalAlignment="Top"/>

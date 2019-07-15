@@ -40,7 +40,7 @@
             <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Controls:TextBoxHelper.Watermark="Ingrese Nombre " Height="8" Margin="187,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" FontWeight="Normal" Controls:TextBoxHelper.ClearTextButton="True"/>
             <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Controls:TextBoxHelper.Watermark="Ingrese Email" Height="8" Margin="187,146,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" FontWeight="Normal" Controls:TextBoxHelper.ClearTextButton="True"/>
             <TextBox x:Name="txtDireccion" HorizontalAlignment="Left" Controls:TextBoxHelper.Watermark="Ingrese Dirección" Height="8" Margin="187,187,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" FontWeight="Normal" Controls:TextBoxHelper.ClearTextButton="True"/>
-            <TextBox x:Name="txtTelefono" HorizontalAlignment="Left" Controls:TextBoxHelper.Watermark="Ej. 988888888" Height="8" Margin="187,228,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" FontWeight="Normal" Controls:TextBoxHelper.ClearTextButton="False"/>
+            <TextBox x:Name="txtTelefono" HorizontalAlignment="Left" Controls:TextBoxHelper.Watermark="Ej. 988888888" Height="8" Margin="187,228,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" FontWeight="Normal" Controls:TextBoxHelper.ClearTextButton="False"  KeyDown="txtTelefono_KeyDown"  />
             <ComboBox x:Name="cbActividad" HorizontalAlignment="Left" Margin="187,270,0,0" VerticalAlignment="Top" Width="170" FontWeight="Normal" />
             <ComboBox x:Name="cbTipo" HorizontalAlignment="Left" Margin="187,311,0,0" VerticalAlignment="Top" Width="170" FontWeight="Normal" />
             <Button x:Name="btnGuardar" Content="Guardar" HorizontalAlignment="Left" Margin="153,390,0,0" VerticalAlignment="Top" Width="75" Cursor="Arrow" FontWeight="Normal" Controls:ButtonHelper.PreserveTextCase="True" Click="btnGuardar_Click" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF01A0E2"/>
@@ -59,7 +59,7 @@
             </GroupBox>
             <Grid HorizontalAlignment="Left" Height="99" Margin="394,270,0,0" VerticalAlignment="Top" Width="159">
                 <Button x:Name="button" Content="Recuperar" HorizontalAlignment="Left" Margin="47,0,0,0" VerticalAlignment="Top" Width="75" Click="Recuperar_Click"  Style="{StaticResource AccentedSquareButtonStyle}" Background="#FF01A0E2"/>
-                <Label x:Name="label2" Content="" HorizontalAlignment="Left" Margin="14,69,0,0" VerticalAlignment="Top" />
+                <Label x:Name="label2" Content="" HorizontalAlignment="Left" Margin="16,69,0,0" VerticalAlignment="Top" Width="135" />
             </Grid>
         </Grid>
 
