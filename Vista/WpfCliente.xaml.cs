@@ -71,10 +71,10 @@ namespace Vista
 
 
                 };
-                CacheItemPolicy politica = new CacheItemPolicy();
-                politica.Priority = CacheItemPriority.Default;
-                politica.AbsoluteExpiration = DateTimeOffset.Now.AddMinutes(5);//cada 5 minutos borra la politica (el cache)
-                cacheName.Set("Cliente", p, politica);
+                //CacheItemPolicy politica = new CacheItemPolicy();
+                //politica.Priority = CacheItemPriority.Default;
+                //politica.AbsoluteExpiration = DateTimeOffset.Now.AddMinutes(5);//cada 5 minutos borra la politica (el cache)
+                //cacheName.Set("Cliente", p, politica);
                 label2.Visibility = Visibility.Visible;
                 //label2.Content = "Almacenada en cache";
 
@@ -88,14 +88,14 @@ namespace Vista
                 }
                 catch (Exception ex)
                 {
-                    label2.Content = "Error al Recuperar!";
+                    label2.Content = "Error al Respaldar Datos!";
                     Logger.Mensaje(ex.Message);
                 }
             }
             catch (Exception ex)
             {
 
-                MessageBox.Show("Error!!");
+                //MessageBox.Show("Error!!");
                 Logger.Mensaje(ex.Message);
             }
 
@@ -137,51 +137,61 @@ namespace Vista
                 txtTelefono.Text = "0";
 
            }
-            if (File.Exists(@"d:\copiaCliente.txt") )
+            if (File.Exists(@"d:\copiaCliente.txt"))
             {
-                try
+
+                if (!String.IsNullOrEmpty(File.ReadAllText(@"d:\copiaCliente.txt")))
                 {
-                    string xml = @"d:\copiaCliente.txt";
+                    try
+                    {
+                        string xml = @"d:\copiaCliente.txt";
 
-                    label2.Content = "Existe copia previa";
-                    //timer.IsEnabled = false;
-                    XmlSerializer se = new XmlSerializer(typeof(Cliente));
+                        label2.Content = "Existe copia previa";
+                        //timer.IsEnabled = false;
+                        XmlSerializer se = new XmlSerializer(typeof(Cliente));
 
-                    TextReader lector = new StreamReader(xml);
-                    Cliente c = (Cliente)se.Deserialize(lector);
-                    txtRut.Text = c.RutCliente.Substring(0, 10);
-                    txtDV.Text = c.RutCliente.Substring(11, 1);
-                    txtRazon.Text = c.RazonSocial;
-                    txtNombre.Text = c.NombreContacto;
-                    txtEmail.Text = c.MailContacto;
-                    txtDireccion.Text = c.Direccion;
-                    txtTelefono.Text = c.Telefono;
-                    ActividadEmpresa ac = new ActividadEmpresa();
-                    ac.Id = c.IdActividadEmpresa;
-                    ac.Read();
-                    cbActividad.Text = ac.Descripcion;//Cambiar a descripción
-                    TipoEmpresa te = new TipoEmpresa();
-                    te.Id = c.IdTipoEmpresa;
-                    te.Read();
-                    cbTipo.Text = te.Descripcion;//Cambiar a descripción
+                        TextReader lector = new StreamReader(xml);
+                        Cliente c = (Cliente)se.Deserialize(lector);
+                        txtRut.Text = c.RutCliente.Substring(0, 10);
+                        txtDV.Text = c.RutCliente.Substring(11, 1);
+                        txtRazon.Text = c.RazonSocial;
+                        txtNombre.Text = c.NombreContacto;
+                        txtEmail.Text = c.MailContacto;
+                        txtDireccion.Text = c.Direccion;
+                        txtTelefono.Text = c.Telefono;
+                        ActividadEmpresa ac = new ActividadEmpresa();
+                        ac.Id = c.IdActividadEmpresa;
+                        ac.Read();
+                        cbActividad.Text = ac.Descripcion;//Cambiar a descripción
+                        TipoEmpresa te = new TipoEmpresa();
+                        te.Id = c.IdTipoEmpresa;
+                        te.Read();
+                        cbTipo.Text = te.Descripcion;//Cambiar a descripción
+
+                    }
+                    catch (Exception ex)
+                    {
+
+                        //label2.Content = "Error al Recuperar!";
+                        Logger.Mensaje(ex.Message);
+                    }
 
                 }
-                catch (Exception ex)
+                else
                 {
-
-                    label2.Content = "Error al Recuperar!";
-                    Logger.Mensaje(ex.Message);
+                    File.Delete(@"d:\copiaCliente.txt");//Borra copia anterior
+                    StringWriter escritor = new StringWriter();
+                    File.AppendAllText(@"d:\copiaCliente.txt", escritor.ToString());
                 }
-               
 
             }
             else
             {
+                //File.Delete(@"d:\copiaCliente.txt");//Borra copia anterior
                 StringWriter escritor = new StringWriter();
                 File.AppendAllText(@"d:\copiaCliente.txt", escritor.ToString());
             }
         }
-
 
         private void Recuperar_Click(object sender, RoutedEventArgs e)
         {

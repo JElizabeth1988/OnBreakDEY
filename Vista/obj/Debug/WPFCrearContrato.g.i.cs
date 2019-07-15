@@ -567,7 +567,7 @@ namespace Vista {
         
         #line 151 "..\..\WPFCrearContrato.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Button btnRecuperar;
+        internal System.Windows.Controls.Button btnLimpiarCache;
         
         #line default
         #line hidden
@@ -575,21 +575,13 @@ namespace Vista {
         
         #line 152 "..\..\WPFCrearContrato.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Button btnLimpiarCache;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 153 "..\..\WPFCrearContrato.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label lblMensasje;
         
         #line default
         #line hidden
         
         
-        #line 156 "..\..\WPFCrearContrato.xaml"
+        #line 155 "..\..\WPFCrearContrato.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Image image1;
         
@@ -938,27 +930,18 @@ namespace Vista {
             this.groupBox_Copy = ((System.Windows.Controls.GroupBox)(target));
             return;
             case 67:
-            this.btnRecuperar = ((System.Windows.Controls.Button)(target));
-            
-            #line 151 "..\..\WPFCrearContrato.xaml"
-            this.btnRecuperar.Click += new System.Windows.RoutedEventHandler(this.btnRecuperar_Click);
-            
-            #line default
-            #line hidden
-            return;
-            case 68:
             this.btnLimpiarCache = ((System.Windows.Controls.Button)(target));
             
-            #line 152 "..\..\WPFCrearContrato.xaml"
+            #line 151 "..\..\WPFCrearContrato.xaml"
             this.btnLimpiarCache.Click += new System.Windows.RoutedEventHandler(this.btnLimpiarCache_Click);
             
             #line default
             #line hidden
             return;
-            case 69:
+            case 68:
             this.lblMensasje = ((System.Windows.Controls.Label)(target));
             return;
-            case 70:
+            case 69:
             this.image1 = ((System.Windows.Controls.Image)(target));
             return;
             }

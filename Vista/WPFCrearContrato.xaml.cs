@@ -135,7 +135,7 @@ namespace Vista
             catch (Exception ex)
             {
                 // lblMensasje.Content = ex.Message;
-                lblMensasje.Content = "No Guardado";
+                //lblMensasje.Content = "No Guardado";
                 Logger.Mensaje(ex.Message);
             }
         }
@@ -265,57 +265,65 @@ namespace Vista
             }
             if (File.Exists(@"d:\copia.txt"))
             {
-                try
+                if (!String.IsNullOrEmpty(File.ReadAllText(@"d:\copia.txt")))
                 {
-                    string xml = @"d:\copia.txt";
+                        try
+                    {
+                        string xml = @"d:\copia.txt";
 
-                    lblMensasje.Content = "Existe copia previa";
-                    timer.IsEnabled = false;
-                    XmlSerializer se = new XmlSerializer(typeof(Contrato));
+                        lblMensasje.Content = "Existe copia previa";
+                        timer.IsEnabled = false;
+                        XmlSerializer se = new XmlSerializer(typeof(Contrato));
 
-                    TextReader lector = new StreamReader(xml);
+                        TextReader lector = new StreamReader(xml);
 
-                    Contrato c = cacheName["Contrato"] as Contrato;
-                    lblNumero.Content = c.Numero;
-                    //txtNumero.Text = c.Numero;
-                    txtBuscarCliente.Text = c.RutCliente;
-                    dpFechaInicio1.datos(c.FechaHoraInicio);
-                    dpFechaTermino.datos(c.FechaHoraTermino);
-                    dpFechaInicio1.datos(c.FechaHoraInicio);
-                    dpFechaTermino.datos(c.FechaHoraTermino);
-                    txtNumeroAsistentes.Text = c.Asistentes.ToString();
-                    txtPersonalAdicional.Text = c.PersonalAdicional.ToString();
-                    TipoEvento tip = new TipoEvento();
-                    tip.Id = c.IdTipoEvento;
-                    tip.Read();
-                    cboTipo.Text = tip.Descripcion;//Cambiar a descripción
+                        Contrato c = cacheName["Contrato"] as Contrato;
+                        lblNumero.Content = c.Numero;
+                        //txtNumero.Text = c.Numero;
+                        txtBuscarCliente.Text = c.RutCliente;
+                        dpFechaInicio1.datos(c.FechaHoraInicio);
+                        dpFechaTermino.datos(c.FechaHoraTermino);
+                        dpFechaInicio1.datos(c.FechaHoraInicio);
+                        dpFechaTermino.datos(c.FechaHoraTermino);
+                        txtNumeroAsistentes.Text = c.Asistentes.ToString();
+                        txtPersonalAdicional.Text = c.PersonalAdicional.ToString();
+                        TipoEvento tip = new TipoEvento();
+                        tip.Id = c.IdTipoEvento;
+                        tip.Read();
+                        cboTipo.Text = tip.Descripcion;//Cambiar a descripción
 
-                    //PASAR nombre modalidad no id
-                    ModalidadServicio mod = new ModalidadServicio();
-                    mod.Id = c.IdModalidad;
-                    mod.Read();
-                    cbModalidad.Text = mod.Nombre;//Cambiar a descripción
+                        //PASAR nombre modalidad no id
+                        ModalidadServicio mod = new ModalidadServicio();
+                        mod.Id = c.IdModalidad;
+                        mod.Read();
+                        cbModalidad.Text = mod.Nombre;//Cambiar a descripción
 
-                    // cbModalidad.Text = c.IdModalidad;
-                    txtObservaciones.Text = c.Observaciones;
+                        // cbModalidad.Text = c.IdModalidad;
+                        txtObservaciones.Text = c.Observaciones;
 
-                    lblNombreCliente.Visibility = Visibility.Visible;//aparecer label
-                    lblTotal.Content = calculo();
+                        lblNombreCliente.Visibility = Visibility.Visible;//aparecer label
+                        lblTotal.Content = calculo();
 
 
-                    Cliente clie = new Cliente();
-                    lblNombreCliente.Content = clie.RazonSocial;
+                        Cliente clie = new Cliente();
+                        lblNombreCliente.Content = clie.RazonSocial;
 
-                    lblMensasje.Content = "Cache Recuperado";
+                        lblMensasje.Content = "Datos Recuperados";
 
+                    }
+                    catch (Exception ex)
+                    {
+
+                        //lblMensasje.Content = "Error al Recuperar";
+                        Logger.Mensaje(ex.Message);
+                    }
                 }
-                catch (Exception ex)
+                else
                 {
-
-                    lblMensasje.Content = "Problemas al Recuperar";
-                    Logger.Mensaje(ex.Message);
+                    File.Delete(@"d:\copia.txt");//Borra copia anterior
+                    StringWriter escritor = new StringWriter();
+                    File.AppendAllText(@"d:\copia.txt", escritor.ToString());
                 }
-
 
             }
             else
