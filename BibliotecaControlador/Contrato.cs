@@ -33,7 +33,7 @@ namespace BibliotecaNegocio
             get { return _numero; }
             set {
 
-                if (value != "")
+                if (value != string.Empty)// cambio a string.Empty, porque es más estable que null o que ""
                 {
                     _numero = value;
                 }
@@ -85,7 +85,7 @@ namespace BibliotecaNegocio
             set
             {
 
-                if (value != "")
+                if (value != string.Empty)
                 {
                     _rutCliente = value;
                 }
@@ -180,7 +180,7 @@ namespace BibliotecaNegocio
         {
             get { return _observaciones; }
             set {
-                if (value != "")
+                if (value != string.Empty)
                 {
                     _observaciones = value;
                 }
